@@ -137,7 +137,7 @@
         const input = document.getElementById("input").value;
         const tags = document.getElementById("tags").checked;
 
-        const response = await fetch("http://localhost:3000/api/search", {
+        const response = await fetch("http://localhost:8080/api/search", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -147,18 +147,22 @@
 
         const data = await response.json();
 
+        if (data.length > 0) {
+          navigator.clipboard.writeText(stripHtmlTags(data[0].english).trim());
+        }
+
         let innerHTML = `<h2>Találatok (${data.length}): </h2>`;
         data.forEach((item) => {
           innerHTML += `
             <div class="item">
               <span>Angol:</span>
               <textarea rows="5">${
-                tags ? item.english : stripHtmlTags(item.english)
+                tags ? item.english : stripHtmlTags(item.english).trim()
               }</textarea>
 
               <span>Magyar:</span>
               <textarea rows="5">${
-                tags ? item.hungarian : stripHtmlTags(item.hungarian)
+                tags ? item.hungarian : stripHtmlTags(item.hungarian).trim()
               }</textarea>
 
               <span>Angol file neve/helye:</span>
