@@ -1,0 +1,67 @@
+<problem chapter='3' section='7' slide='1' problem='3' title='Lists in advanced applications ‒ Arrays'>
+
+<!--
+Update history:
+2020-08-12 Grzegorz (reviewed)
+-->
+
+<code>
+EMPTY = "-"
+ROOK = "ROOK"
+board = []
+
+for i in range(8):
+    row = [EMPTY for i in range(8)]
+    board.append(row)
+
+board[0][0] = ROOK
+board[0][7] = ROOK
+board[7][0] = ROOK
+board[7][7] = ROOK
+
+print(board)
+
+</code>
+
+<h1>Lists in lists: two-dimensional arrays ‒ continued</h1>
+
+<p>Access to the selected field of the board requires two indices ‒ the first selects the row; the second ‒ the field number inside the row, which is de facto a column number.</p>
+
+<p>Take a look at the chessboard. Every field contains a pair of indices which should be given to access the field's contents:</p>
+
+<center><img src="/uploads/media/default/0001/01/ccde8f0849e18f228580e0367f6239866bd93998.png" width="75%"></center>
+
+<br>
+<br>
+
+<p>Glancing at the figure shown above, let's set some chess pieces on the board. First, let's add all the rooks:</p>
+
+<codep class="syntax-color">board[0][0] = ROOK
+board[0][7] = ROOK
+board[7][0] = ROOK
+board[7][7] = ROOK
+</codep>
+
+<br>
+
+<p>If you want to add a knight to C4, you do it as follows:</p>
+
+<codep class="syntax-color">board[4][2] = KNIGHT
+</codep>
+
+<br>
+
+<p>And now a pawn to E5:</p>
+
+<codep class="syntax-color">board[3][4] = PAWN
+</codep>
+
+<br>
+
+<p>And now ‒ experiment with the code in the editor.</p>
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

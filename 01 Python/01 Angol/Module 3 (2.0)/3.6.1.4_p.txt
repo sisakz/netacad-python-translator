@@ -1,0 +1,79 @@
+<problem chapter='3' section='6' slide='1' problem='4' title='Operations on lists ‒ slices'>
+
+<!--
+Update history:
+2020-08-12 Grzegorz (reviewed, reformatted)
+-->
+
+<code>
+</code>
+
+
+
+<h1>Slices: continued</h1>
+
+<p>If you omit the <codel>start</codel> in your slice, it is assumed that you want to get a slice beginning at the element with index <codel>0</codel>.</p>
+
+<p>In other words, the slice of this form:</p>
+
+<codep>my_list[:end]
+
+</codep>
+<br>
+
+<p>is a more compact equivalent of:</p>
+
+<codep>my_list[0:end]
+
+</codep>
+<br>
+
+
+<p>Look at the snippet below:</p>
+
+<codep>my_list = [10, 8, 6, 4, 2]
+new_list = my_list[:3]
+print(new_list)
+
+</codep>
+
+<br>
+
+<p>This is why its output is: <codel>[10, 8, 6]</codel>.</p>
+
+<p>Similarly, if you omit the <codel>end</codel> in your slice, it is assumed that you want the slice to end at the element with the index <codel>len(my_list)</codel>.</p>
+
+<p>In other words, the slice of this form:</p>
+
+<codep>my_list[start:]
+
+</codep>
+<br>
+
+<p>is a more compact equivalent of:</p>
+
+<codep>my_list[start:len(my_list)]
+
+</codep>
+<br>
+
+<p>Look at the following snippet:</p>
+
+<codep>my_list = [10, 8, 6, 4, 2]
+new_list = my_list[3:]
+print(new_list)
+
+</codep>
+
+<br>
+
+Its output is therefore: <codel>[4, 2]</codel>.</p>
+
+
+<br>
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

@@ -1,0 +1,174 @@
+<problem chapter='4' section='5' slide='1' problem='2' title='Creating: two-parameter functions'>
+
+<!--
+Update history:
+2020-08-18 Grzegorz (reviewed, re-formatted, PEP-8 compliance check)
+-->
+
+<code>
+def bmi(weight, height):
+    if height < 1.0 or height > 2.5 or \
+    weight < 20 or weight > 200:
+        return None
+
+    return weight / height ** 2
+
+
+print(bmi(352.5, 1.65))
+
+</code>
+
+
+
+<h1>Some simple functions: evaluating BMI and converting imperial units to metric units</h1>
+
+<p>Look at the code in the editor. There are two things we need to pay attention to.</p>
+
+<p>First, the test invocation ensures that the <strong>protection</strong> works properly ‒ the output is:</p>
+
+<codep>None</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+<br>
+
+
+<p>Second, take a look at the way the <strong>backslash</strong> (<codel>\</codel>) symbol is used. If you use it in Python code and end a line with it, it will tell Python to continue the line of code in the next line of code.</p>
+
+<p>It can be particularly useful when you have to deal with long lines of code and you'd like to improve code readability.</p>
+
+<br>
+
+<p>Okay, but there's something we omitted too easily ‒ the imperial measurements. This function is not too useful for people accustomed to pounds, feet, and inches.</p>
+
+<p>What can be done for them?</p>
+
+<p>We can write two simple functions to <strong>convert imperial units to metric ones</strong>. Let's start with pounds.</p>
+
+<p>It is a well-known fact that <codel>1 lb = 0.45359237 kg</codel>. We'll use this in our new function.</p>
+
+<p>This is our helper function, named <codel>lb_to_kg</codel>:</p>
+
+<codep>def <mark style="background-color:#e6f2ff;">lb_to_kg</mark>(lb):
+    return lb * 0.45359237
+
+
+print(lb_to_kg(1))
+
+</codep>
+
+<br>
+
+
+<p>The result of the test invocation looks good:</p>
+
+<codep>0.45359237</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+<br>
+
+
+
+<p>And now it's time for feet and inches: <codel>1 ft = 0.3048 m</codel>, and <codel>1 in = 2.54 cm = 0.0254 m</codel>.</p>
+
+
+<p>The function we've written is named <codel>ft_and_inch_to_m</codel>:</p>
+
+<codep>def <mark style="background-color:#e6f2ff;">ft_and_inch_to_m</mark>(ft, inch):
+    return ft * 0.3048 + inch * 0.0254
+
+
+print(ft_and_inch_to_m(1, 1))
+
+</codep>
+
+<br>
+
+<p>The result of a quick test is:</p>
+
+<codep>0.3302</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+<br>
+
+<p>It looks as expected.</p>
+
+<p>Note: we wanted to name the second parameter just <codel>in</codel>, not <codel>inch</codel>, but we couldn't. Do you know why?</p>
+
+<p><codel>in</codel> is a Python <strong>keyword</strong> ‒ it cannot be used as a name.</p>
+
+<br>
+
+<p>Let's convert <i>six feet</i> into meters:</p>
+
+<codep class="syntax-color">print(ft_and_inch_to_m(6, 0))
+</codep>
+<br>
+
+<p>And this is the output:</p>
+
+<codep>1.8288000000000002</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+<br>
+
+
+<p>It's quite possible that sometimes you may want to use just feet without inches. Will Python help you? Of course it will.</p>
+
+<p>We've modified the code a bit:</p>
+
+<codep class="copy">def ft_and_inch_to_m(<mark style="background-color:#e6f2ff;">ft, inch = 0.0</mark>):
+    return ft * 0.3048 + inch * 0.0254
+
+
+print(ft_and_inch_to_m(6))
+
+</codep>
+
+<br>
+
+<p>Now the <codel>inch</codel> parameter has its default value equal to <codel>0.0</codel>.</p>
+
+<p>The code produces the following output ‒ this is what is expected:</p>
+
+<codep>1.8288000000000002</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+<br>
+
+
+<p>Finally, the code is able to answer the question: what is the BMI of a person 5'7" tall and weighing 176 lbs?</p>
+
+<p>This is the code we have built:</p>
+
+<codep class="syntax-color copy">def ft_and_inch_to_m(ft, inch = 0.0):
+    return ft * 0.3048 + inch * 0.0254
+
+
+def lb_to_kg(lb):
+    return lb * 0.45359237
+
+
+def bmi(weight, height):
+    if height < 1.0 or height > 2.5 or weight < 20 or weight > 200:
+        return None
+    
+    return weight / height ** 2
+
+
+print(bmi(weight = lb_to_kg(176), height = ft_and_inch_to_m(5, 7)))
+</codep>
+
+<br>
+
+<p>And the answer is:</p>
+
+<codep>27.565214082533313</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+<br>
+
+<p>Run the code and test it.</p>
+
+<br>
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

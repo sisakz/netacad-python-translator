@@ -1,0 +1,159 @@
+<problem chapter='3' section='3' slide='1' problem='5' title='Logikai és bitszintű műveletek | Bitléptetés'>
+
+<!--
+Update history:
+2020-07-21 Grzegorz (reviewed, reformatted)
+2020-08-26 Grzegorz (bit shifting examples redesigned)
+-->
+
+<code>
+var = 17
+var_right = var >> 1
+var_left = var << 2
+print(var, var_left, var_right)
+
+</code>
+
+<h1>Bináris balra tolás (left shift) és jobbra tolás (right shift) operátorok</h1>
+
+<p>A Python egy másik műveletet is kínál az egyes bitekkel kapcsolatban, a <strong>léptetést (shifting)</strong>. Ez csak <strong>egész számokra</strong> alkalmazható, nem használhatunk hozzá lebegőpontos számokat argumentumként.</p>
+
+<p>Ezt a műveletet már most is nagyon gyakran és teljesen öntudatlanul alkalmazod. Hogyan szorozhatsz meg egy tetszőleges számot tízzel? Nézd meg!</p>
+
+<p>12345 &times; 10 = 123450</p>
+
+<br>
+
+
+<p>Mint látható, a <strong>tízzel való szorzás valójában az összes számjegy balra tolását jelenti</strong>, és  az így keletkező rés kitöltését nullával.</p>
+
+<p>És a tízzel való osztás? Nézd meg:</p>
+
+<p>12340 &#247; 10 = 1234</p>
+
+<br>
+
+
+<p>A tízzel való osztás nem más, mint a számjegyek jobbra tolása.</p>
+
+<hr>
+
+<p>Ugyanezt a műveletet végzi a számítógép is, de egy különbséggel: mivel a bináris számok alapja kettő (nem 10), így <strong>egy érték egy bittel balra tolása megfelel a kettővel való szorzásnak</strong>; illetve <strong>egy érték egy bittel jobbra tolása megfelel a kettővel való osztásnak</strong> (vegyük észre, hogy a jobb szélső bit elvész).</p>
+
+<p>A Pythonban a <strong>léptető operátorokat</strong> egy pár <strong>digráf</strong> jelöli: <codel>&lt;&lt;</codel> és <codel>&gt;&gt;</codel>, egyértelműen jelezve, hogy az eltolás melyik irányba hat.</p>
+
+<codep class="syntax-color">value << bits
+value >> bits
+</codep>
+
+<br>
+
+<p><strong>Ezeknek az operátoroknak a bal oldali argumentuma egy egész érték, amelynek bitjei eltolódnak. A jobb oldali argumentum határozza meg az eltolás mértékét.</strong></p>
+
+<p>Ez azt mutatja, hogy ez a művelet biztosan nem kommutatív.</p>
+
+<p>Ezeknek az operátoroknak nagyon magas a prioritása. Ezt a prioritások frissített táblázatában láthatod majd, amelyet a szakasz végén mutatunk be.</p>
+
+<hr>
+
+<p>Nézd meg a szerkesztőablakban a léptető operátorok használatát!</p>
+
+<p>Az utolsó <codel>print()</codel> hívás a következő kimenetet eredményezi:</p>
+
+<codep>17 68 8</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+
+<p>Megjegyzés:</p>
+
+<ul>
+<li><codel>17 &gt;&gt; 1</codel> &rarr; <codel>17 // 2</codel> (<b>17</b> egész osztása <b>a 2 első hatványával</b>) &rarr; <codel>8</codel> (egy bittel jobbra tolva ugyanaz, mintha egész számot osztanánk kettővel)</li>
+<li><codel>17 &lt;&lt; 2</codel> &rarr; <codel>17 * 4</codel> (<b>17</b> szorozva <b>2 második hatványával</b>) &rarr; <codel>68</codel> (két bit balra tolása ugyanaz, mint az egész szám szorzása néggyel)
+________________________________________
+</li>
+</ul>
+
+<br>
+
+<hr>
+
+<p>És itt van a <strong>frissített prioritási táblázat</strong>, amely tartalmazza az összes eddig bevezetett operátort:</p>
+
+
+<table style="width:90%">
+
+<tr>
+<th>Prioritás</th>
+<th>Operátor</th>
+<th></th>
+</tr>
+
+<tr>
+<td>1</td>
+<td><codel>~</codel>, <codel>+</codel>, <codel>-</codel></td>
+<td>unáris</td>
+</tr>
+
+<tr>
+<td>2</td>
+<td><codel>**</codel></td>
+<td></td>
+</tr>
+
+<tr>
+<td>3</td>
+<td><codel>*</codel>, <codel>/</codel>, <codel>//</codel>, <codel>%</codel></td>
+<td></td>
+</tr>
+
+<tr>
+<td>4</td>
+<td><codel>+</codel>, <codel>-</codel></td>
+<td>bináris</td>
+</tr>
+
+<tr>
+<td>5</td>
+<td><codel>&lt;&lt;</codel>, <codel>&gt;&gt;</codel></td>
+<td></td>
+</tr>
+
+<tr>
+<td>6</td>
+<td><codel>&lt;</codel>, <codel>&lt;=</codel>, <codel>&gt;</codel>, <codel>&gt;=</codel></td>
+<td></td>
+</tr>
+
+<tr>
+<td>7</td>
+<td><codel>==</codel>, <codel>!=</codel></td>
+<td></td>
+</tr>
+
+<tr>
+<td>8</td>
+<td><codel>&amp;</codel></td>
+<td></td>
+</tr>
+
+<tr>
+<td>9</td>
+<td><codel>|</codel></td>
+<td></td>
+</tr>
+
+<tr>
+<td>10</td>
+<td><codel>=</codel>, <codel>+=</codel>, <codel>-=</codel>, <codel>*=</codel>, <codel>/=</codel>, <codel>%=</codel>, <codel>&amp;=</codel>, <codel>^=</codel>, <codel>|=</codel>, <codel>&gt;&gt;=</codel>, <codel>&lt;&lt;=</codel></td>
+<td></td>
+</tr>
+
+</table>
+
+<br>
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

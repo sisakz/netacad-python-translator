@@ -1,0 +1,78 @@
+<problem chapter='2' section='2' slide='1' problem='6' title='Literálok'>
+
+<!--
+Update history:
+2020-07-17 Grzegorz (reformatted)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<h1>Egész és lebegőpontos számok</h1>
+
+
+<p>A tizedespont alapvetően fontos a lebegőpontos számok felismerésében Pythonban.</p>
+
+<p>Nézd meg ezt a két számot:</p>
+
+<codep>4
+4.0</codep>
+
+<br>
+
+<p>Azt gondolhatod, hogy ezek pontosan ugyanazok, de a Python teljesen másképp látja őket.</p>
+
+<p>A <codel>4</codel> egy <strong>egész</strong> szám, míg a <codel>4.0</codel> egy <strong>lebegőpontos</strong> szám.</p>
+ 
+<p>A lényeg az, hogy a pont miatt lesz lebegőpontos egy szám.</p>
+
+<br>
+
+<p>Másrészt, nem csak a pontok tehetnek lebegőpontossá egy számot. Használhatod az <codel>e</codel> betűt is.</p>
+
+<p>Ha nagyon nagy vagy nagyon kicsi számokat akarsz használni, használhatod a <strong>tudományos jelölést</strong>.</p>
+
+<br>
+
+</div>
+
+<div class="small-12 large-6 columns">
+
+<h1></h1>
+
+
+<p>Vegyük például a fénysebességet, <i>méter/másodpercben</i> kifejezve. Közvetlenül leírva ez így nézne ki: <codel>300000000</codel>.</p>
+
+<p>A fizika tankönyvek a sok nulla kiírásának elkerülése érdekében rövidített formát használnak, amelyet valószínűleg már láttál: <codel>3 x 10<sup>8</sup></codel>.</p>
+
+<p>Ez így hangzik: háromszor tíz a nyolcadikon.</p>
+
+<p>Pythonban ugyanez a hatás kissé másképp érhető el - nézd csak:</p>
+
+<codep>3E8</codep>
+
+<br>
+ 
+<p>Az <codel>E</codel> betű (használhatjuk a kisbetűs <codel>e</codel> betűt is - ez az <strong>exponens</strong> szóból származik) után írjuk, hogy a <i>tíz hányadik hatványával kell szoroznunk</i> az E előtti számot.</p>
+
+<p>Megjegyzés:</p>
+
+<ul>
+<li>az <strong>exponensnek</strong> (az <i>E</i> utáni értéknek) egész számnak kell lennie;</li>
+<li>az <strong>alap</strong> (az <i>E</i> előtti érték) egész szám is lehet.</li>
+</ul>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

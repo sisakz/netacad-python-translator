@@ -1,0 +1,85 @@
+<problem chapter='3' section='6' slide='1' problem='5' title='Operations on lists ‒ slices, del'>
+
+<!--
+Update history:
+2020-08-12 Grzegorz (reviewed, reformatted)
+-->
+
+<code>
+</code>
+
+
+
+<h1>Slices: continued</h1>
+
+<p>As we've said before, omitting both <codel>start</codel> and <codel>end</codel> makes a <strong>copy of the whole list</strong>:</p>
+
+<codep>my_list = [10, 8, 6, 4, 2]
+new_list = my_list<mark style="background-color:#e6f2ff;">[:]</mark>
+print(new_list)
+
+</codep>
+
+<br>
+
+<p>The snippet's output is: <codel>[10, 8, 6, 4, 2]</codel>.</p>
+
+<hr>
+
+<p>The previously described <codel>del</codel> instruction is able to <strong>delete more than just a list's elements at once ‒ it can delete slices too</strong>:</p>
+
+<codep>my_list = [10, 8, 6, 4, 2]
+<mark style="background-color:#e6f2ff;">del my_list[1:3]</mark>
+print(my_list)
+
+</codep>
+
+<br>
+
+
+<p>Note: in this case, the slice <strong>doesn't produce any new list</strong>!</p>
+
+<p>The snippet's output is: <codel>[10, 4, 2]</codel>.</p>
+
+
+<br>
+
+
+<p>Deleting <strong>all the elements</strong> at once is possible too:</p>
+
+<codep>my_list = [10, 8, 6, 4, 2]
+<mark style="background-color:#e6f2ff;">del my_list[:]</mark>
+print(my_list)
+
+</codep>
+
+<br>
+
+<p>The list becomes empty, and the output is: <codel>[]</codel>.</p>
+
+
+<br>
+
+<p>Removing the slice from the code changes its meaning dramatically.</p>
+
+<p>Take a look:</p>
+
+<codep>my_list = [10, 8, 6, 4, 2]
+<mark style="background-color:#e6f2ff;">del my_list</mark>
+print(my_list)
+
+</codep>
+
+<br>
+
+<p>The <codel>del</codel> instruction will <strong>delete the list itself, not its content</strong>.</p>
+
+<p>The <codel>print()</codel> function invocation from the last line of the code will then cause a runtime error.</p>
+
+<br>
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

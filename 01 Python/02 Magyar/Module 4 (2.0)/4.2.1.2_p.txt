@@ -1,0 +1,91 @@
+<problem chapter='4' section='2' slide='1' problem='2' title='Hogyan kommunikálnak a függvények a környezetükkel?'>
+
+<!--
+Update history:
+2020-08-13 Grzegorz (reviewed, re-formatted)
+-->
+
+<code>
+def message(number):
+    print("Enter a number:", number)
+
+message()
+
+</code>
+
+
+
+<h1>Paraméteres függvények: folytatás</h1>
+
+
+<p>Próbáld meg futtatni a kódot a szerkesztőprogramban.</p>
+
+<p>Ezt látod a konzolon:</p>
+
+<codep>TypeError: message() missing 1 required positional argument: 'number'</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+<br>
+
+<p>A következő kiegészítéssel már jobban néz ki:</p>
+
+<codep>def message(number):
+    print("Enter a number:", number)
+
+<mark style="background-color:#e6f2ff;">message(1)</mark>
+
+</codep>
+
+<br>
+
+
+
+<p>Ráadásul jóbban is viselkedik. A kód a következő kimenetet produkálja:</p>
+
+<codep>Enter a number: 1</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+<br>
+
+<p>Ugye látod hogyan működik? A meghívás során használt argumentum (<codel>1</codel>) értéke átadásra került a függvénybe, így beállítva a <codel>number</codel> nevű paraméter kezdeti értékét.</p>
+
+<hr>
+
+<p>Itt egy fontos körülményre kell felhívnunk a figyelmet:</p>
+
+<p>Lehetséges és szabályos, hogy egy <strong>változó neve megegyezik egy függvény paraméterének nevével</strong>.</p>
+
+<p>A kódrészlet jól szemlélteti a jelenséget:</p>
+
+<codep>def message(<mark style="background-color:#e6f2ff;">number</mark>):
+    print("Enter a number:", number)
+
+<mark style="background-color:#e6f2ff;">number</mark> = 1234
+message(1)
+print(number)
+
+</codep>
+
+<br>
+
+
+<p>Egy ilyen helyzet aktiválja az <strong>árnyékolásnak</strong> nevezett mechanizmust:</p>
+
+<ul>
+<li>Az <codel>x</codel> paraméter árnyékolja bármely azonos nevű változót, de ...</li>
+<li>... csak a paramétert meghatározó függvényen belül.</li>
+</ul>
+
+<p>A <codel>number</codel> nevű paraméter teljesen más, mint a <codel>number</codel> nevű változó.</p>
+
+<p>Ez azt jelenti, hogy a fenti kód a következő kimenetet fogja eredményezni:</p>
+
+<codep>Enter a number: 1
+1234</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

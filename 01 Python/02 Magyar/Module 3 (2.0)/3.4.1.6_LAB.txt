@@ -1,0 +1,91 @@
+<problem chapter='3' section='4' slide='1' problem='6' title='LAB: Listák'>
+
+<!--
+Update history:
+2020-08-11 Grzegorz (reviewed), code formatting
+-->
+
+<code>
+hat_list = [1, 2, 3, 4, 5]  # This is an existing list of numbers hidden in the hat.
+
+# Step 1: write a line of code that prompts the user
+# to replace the middle number with an integer number entered by the user.
+
+# Step 2: write a line of code that removes the last element from the list.
+
+# Step 3: write a line of code that prints the length of the existing list.
+
+print(hat_list)
+
+</code>
+
+<span class="label" style="background-color:rgb(205, 168, 105);"><strong>LABORGYAKORLAT</strong></span>
+
+<br><br>
+
+<h2>Becsült idő</h2>
+<p>5 perc</p>
+
+<h2>Nehézségi szint</h2>
+<p>Nagyon könnyű</p>
+
+
+<h2>Célok</h2>
+
+<p>Ismerkedjen meg a tanuló a következőkkel:</p>
+
+<ul>
+<li>listákkal kapcsolatos alapvető utasítások használata;</li>
+<li>listák létrehozása és módosítása.</li>
+</ul>
+
+<h2>Feladatleírás</h2>
+
+<p>Volt egyszer egy kalap. A kalapban nem volt nyúl, csak egy öt számot tartalmazó lista: <codel>1</codel>, <codel>2</codel>, <codel>3</codel>, <codel>4</codel> és <codel>5</codel>.</p>
+
+<p>A feladatod:</p>
+
+<ul>
+<li>Írj egy kódsort, amely kéri a felhasználót, hogy a listában a középső számot helyettesítse az általa megadott egész számmal. (1. lépés)</li>
+<li>Írj egy kódsort, amely eltávolítja az utolsó elemet a listából. (2. lépés)</li>
+<li>Írj egy kódsort, amely kiírja a meglévő lista hosszát. (3. lépés)</li>
+</ul>
+
+<p>Készen állsz erre a kihívásra?</p>
+
+<br>
+
+<studyMode>false</studyMode>
+<labMode>true</labMode>
+
+<hint>
+hat_list = [1, 2, 3, 4, 5]
+
+# Step 1
+hat_list[2] = int(input("Enter an integer number: "))
+
+# Step 2: write a line of code that removes the last element from the list.
+
+# Step 3: write a line of code that prints the length of the existing list.
+
+print(hat_list)
+
+</hint>
+
+
+<sampleSolution>
+hat_list = [1, 2, 3, 4, 5]
+
+# Step 1
+hat_list[2] = int(input("Enter an integer number: "))
+
+# Step 2
+del hat_list[-1]
+
+# Step 3
+print(len(hat_list))
+
+</sampleSolution>
+
+
+</problem>

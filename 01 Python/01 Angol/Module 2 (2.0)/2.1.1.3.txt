@@ -1,0 +1,65 @@
+<problem chapter='2' section='1' slide='1' problem='3' title='Your very first program'>
+
+<!--
+Update history:
+2020-07-17 Grzegorz (format and page number change)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<h1>The <span style="font-family:courier new;">print()</span> function</h1>
+
+<p>As we said before, a function may have:</p>
+<ul>
+<li>an <strong>effect</strong>;</li>
+<li>a <strong>result</strong>.</li>
+</ul>
+ 
+
+<p>There's also a third, very important, function component ‒ the <strong>argument</strong>(s).
+
+<p>Mathematical functions usually take one argument (e.g., sin(x) takes an x, which is the measure of an angle.)</p>
+
+<p>Python functions, on the other hand, are more versatile. Depending on the individual needs, they may accept any number of arguments ‒ as many as necessary to perform their tasks. Note: When we said <i>any number</i>, that includes zero ‒ some Python functions don't need any argument.</p>
+
+<codep>print<mark style="background-color:#e6f2ff;">(</mark>"Hello, World!"<mark style="background-color:#e6f2ff;">)</mark>
+
+</codep>
+<br>
+
+<p>In spite of the number of needed/provided arguments, Python functions strongly demand the presence of <strong>a pair of parentheses</strong> ‒ opening and closing ones, respectively.</p>
+
+</div>
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+<p>If you want to deliver one or more arguments to a function, you place them <strong>inside the parentheses</strong>. If you're going to use a function which doesn't take any argument, you still have to have the parentheses.</p>
+
+<p>Note: to distinguish ordinary words from function names, place <strong>a pair of empty parentheses</strong> after their names, even if the corresponding function wants one or more arguments. This is a standard convention.</p>
+
+<p>The function we're talking about here is <codel>print()</codel>.</p>
+
+<p>Does the <codel>print()</codel> function in our example have any arguments?</p>
+
+<p>Of course it does, but what are they?</p>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

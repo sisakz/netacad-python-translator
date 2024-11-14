@@ -1,0 +1,218 @@
+<problem chapter='2' section='4' slide='1' problem='11' title='SZAKASZ ÖSSZEFOGLALÁS'>
+
+<!--
+Update history:
+2020-07-17 Grzegorz (reviewed, code - blank lines added to the bottom of the snippet, syntax-color)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<h1>A legfontosabb tudnivalók</h1>
+
+<br>
+
+
+<p>1. A <strong>változó</strong> egy adatok tárolására lefoglalt hely a memóriában, amire névvel hivatkozhatunk. A változó automatikusan létrejön (inicializálódik), amikor először rendelünk hozzá értéket. (2.1.4.1)</p>
+
+<p>2. Minden változónak egyedi névvel, egy <strong>azonosítóval</strong>kell rendelkeznie. Az érvényes azonosító névnek aláhúzással (<codel>_</codel>), vagy betűvel kell kezdődnie, nem lehet üres karaktersorozat és nem lehet Python kulcsszó. Az első karaktert alulvonások, betűk és számjegyek követhetik. A Pythonban az azonosítók esetében a nagy- és kisbetűket megkülönböztetjük. (2.1.4.1)</p>
+
+<p>3. A Python <strong>dinamikusan tipusos nyelv</strong>, ami azt jelenti, hogy nem kell változókat létrehozni (<i>deklarálni</i>) benne. (2.1.4.3) A változókhoz értékeket rendelhetünk egy egyszerű hozzárendelési operátorral, amely az egyenlőség (<codel>=</codel>) jel, például: <codel>var <mark style="background-color:#e6f2ff;">=</mark> 1</codel>.</p>
+
+
+<p>4. A változókhoz rendelt értékek módosítására <strong>összetett értékadó operátorokat</strong> (gyorsító operátorokat) is használhatunk, például: <codel>var <mark style="background-color:#e6f2ff;">+=</mark> 1</codel>, or <codel>var <mark style="background-color:#e6f2ff;">/=</mark> 5 * 2</codel>. (2.1.4.8)</p>
+
+<p>5. A már létező változókhoz új értékeket rendelhetünk az értékadó operátorokkal vagy az összetett operátorok egyikével. (2.1.4.5)</p>
+
+<codep class="syntax-color">var = 2
+print(var)
+
+var = 3
+print(var)
+
+var += 1
+print(var)
+</codep>
+<br>
+
+<p>6. Szövegeket és változókat kombinálhatsz a <codel>+</codel> operátorral, és a <codel>print()</codel> függvényt használhatod a karakterláncok és változók kiírására. (2.1.4.4)</p>
+<codep class="syntax-color">var = "007"
+print("Agent " + var)
+</codep>
+<br>
+
+<br>
+<br>
+
+</div>
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+
+<p><strong>1. gyakorlat</strong></p>
+<p>Mi a kimenete a következő kódrészletnek?</p>
+
+<codep class="syntax-color">var = 2
+var = 3
+print(var)
+</codep>
+
+<br>
+
+<button class="button tiny" onclick="solution('sol')">Ellenőrzés</button>
+
+<p id="sol" style="display: none;">
+<codep>3</codep>
+</p>
+
+<script>
+function solution (id) {
+    var element = document.getElementById(id);
+    
+if (element.style.display === "none") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
+    }
+}
+</script>
+
+<br>
+
+
+
+<p><strong>2. gyakorlat</strong></p>
+<p>Az alábbi változónevek közül melyik <u>nem használható</u> a Pythonban?</p>
+
+<codep>my_var
+m
+101
+averylongvariablename
+m101
+m 101
+Del
+del</codep>
+
+<br>
+
+
+<button class="button tiny" onclick="solution('sol2')">Ellenőrzés</button>
+
+<p id="sol2" style="display: none;">
+<codep>my_var
+m
+<font style="color:red;">101</font> # hibás (számmal kezdődik)
+averylongvariablename
+m101
+<font style="color:red;">m 101</font> # hibás (szóközt tartalmaz)
+Del
+<font style="color:red;">del</font> # hibás (kulcsszó)</codep>
+</p>
+
+
+<script>
+function solution (id) {
+    var element = document.getElementById(id);
+    
+if (element.style.display === "none") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
+    }
+}
+</script>
+
+<br>
+
+
+
+
+<p><strong>3. gyakorlat</strong></p>
+<p>Mi a kimenete a következő kódrészletnek??</p>
+
+<codep class="syntax-color">a = '1'
+b = "1"
+print(a + b)
+</codep>
+
+<br>
+
+<button class="button tiny" onclick="solution('sol3')">Ellenőrzés</button>
+
+<p id="sol3" style="display: none;">
+<codep>11</codep>
+</p>
+
+<script>
+function solution (id) {
+    var element = document.getElementById(id);
+    
+if (element.style.display === "none") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
+    }
+}
+</script>
+
+
+<br>
+
+
+
+
+<p><strong>4. gyakorlat</strong></p>
+<p>Mi a kimenete a következő kódrészletnek?</p>
+
+<codep class="syntax-color">a = 6
+b = 3
+a /= 2 * b
+print(a)
+</codep>
+
+<br>
+
+<button class="button tiny" onclick="solution('sol4')">Ellenőrzés</button>
+
+<p id="sol4" style="display: none;">
+<codep>1.0</codep>
+<br>
+2 * b = 6<br>
+a = 6 &rarr; 6 / 6 = 1.0
+
+</p>
+
+<script>
+function solution (id) {
+    var element = document.getElementById(id);
+    
+if (element.style.display === "none") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
+    }
+}
+</script>
+
+
+<br>
+
+
+
+</div>
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

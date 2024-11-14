@@ -1,0 +1,74 @@
+<problem chapter='3' section='6' slide='1' problem='3' title='Operations on lists ‒ slices'>
+
+<!--
+Update history:
+2020-08-12 Grzegorz (reviewed, reformatted)
+-->
+
+<code>
+</code>
+
+
+
+<h1>Slices ‒ negative indices</h1>
+
+<p>Look at the snippet below:</p>
+
+<codep>my_list[start:end]
+
+</codep>
+
+<br>
+
+<p>To repeat:</p>
+
+<ul>
+<li><codel>start</codel> is the index of the first element <strong>included in the slice</strong>;</li>
+<li><codel>end</codel> is the index of the first element <strong>not included in the slice.</strong></li>
+</ul>
+
+
+<br>
+
+
+<p>This is how <strong>negative indices</strong> work with the slice:</p>
+
+<codep>my_list = [10, 8, 6, 4, 2]
+new_list = my_list<mark style="background-color:#e6f2ff;">[1:-1]</mark>
+print(new_list)
+
+</codep>
+
+<br>
+
+
+<p>The snippet's output is:</p>
+
+<codep>[8, 6, 4]</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+<br>
+
+<p>If the <codel>start</codel> specifies an element lying further than the one described by the <codel>end</codel> (from the list's beginning), the slice will be <strong>empty</strong>:</p>
+
+<codep>my_list = [10, 8, 6, 4, 2]
+new_list = my_list<mark style="background-color:#e6f2ff;">[-1:1]</mark>
+print(new_list)
+
+</codep>
+
+<br>
+
+<p>The snippet's output is:</p>
+
+<codep>[]</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+
+<br>
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

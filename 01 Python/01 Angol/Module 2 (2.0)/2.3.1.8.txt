@@ -1,0 +1,42 @@
+<problem chapter='2' section='3' slide='1' problem='8' title='Operators ‒ data manipulation tools'>
+
+<!--
+Update history:
+2020-07-17 Grzegorz (reformatted; code - syntax-color and blank lines added;)
+-->
+
+<code>
+</code>
+
+<h1>Operators and their bindings: exponentiation</h1>
+
+
+
+<p>Repeat the experiment, but now with exponentiation.</p>
+
+<p>Use this snippet of code:</p>
+
+<codep class="syntax-color">print(2 ** 2 ** 3)
+</codep>
+ 
+<br>
+
+<p>The two possible results are:</p>
+
+<ul>
+<li><codel>2 ** 2</codel> &rarr; <codel>4</codel>; <codel>4 ** 3</codel> &rarr; <codel>64</codel></li>
+<li><codel>2 ** 3</codel> &rarr; <codel>8</codel>; <codel>2 ** 8</codel> &rarr; <codel>256</codel></li>
+</ul>
+
+<br>
+
+<p>Run the code. What do you see?</p>
+
+<p>The result clearly shows that <strong>the exponentiation operator uses right-sided binding</strong>.</p>
+
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

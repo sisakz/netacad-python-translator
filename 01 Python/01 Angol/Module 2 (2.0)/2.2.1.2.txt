@@ -1,0 +1,47 @@
+<problem chapter='2' section='2' slide='1' problem='2' title='Python literals'>
+
+<!--
+Update history:
+2020-07-17 Grzegorz (code change - blank line added)
+-->
+
+<code>
+print("2")
+print(2)
+
+</code>
+
+<h1>Literals ‒ the data in itself</h1>
+
+<p>Let's start with a simple experiment ‒ take a look at the snippet in the editor.</p>
+ 
+<p>The first line looks familiar. The second seems to be erroneous due to the visible lack of quotes.</p>
+
+<p>Try to run it.</p>
+
+
+<p>If everything goes okay, you'll now see two identical lines.</p>
+
+<p>What happened? What does it mean?</p>
+
+<p>Through this example, you encounter two different types of literals:</p>
+
+<ul>
+
+<li>a <strong>string</strong>, which you already know,</li>
+<li>and an <strong>integer</strong> number, something completely new.</li>
+
+</ul>
+
+<p>The <codel>print()</codel> function presents them in exactly the same way ‒ this example is obvious, as their human-readable representation is also the same. Internally, in the computer's memory, these two values are stored in completely different ways ‒ the string exists as just a string ‒ a series of letters.</p>
+
+<p>The number is converted into machine representation (a set of bits). The <codel>print()</codel> function is able to show them both in a form readable to humans.</p>
+
+<p>We're now going to be spending some time discussing numeric literals and their internal life.</p>
+
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

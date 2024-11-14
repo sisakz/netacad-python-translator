@@ -1,0 +1,74 @@
+﻿<problem chapter='2' section='6' slide='1' problem='9' title='LAB: Adatok beolvasása és kiírása'>
+
+<!--
+Update history:
+2020-07-17 Grzegorz (reviewed; code - blank lines added to editor, hint, sample solution)
+-->
+
+<code>
+# input a float value for variable a here
+# input a float value for variable b here
+
+# output the result of addition here
+# output the result of subtraction here
+# output the result of multiplication here
+# output the result of division here
+
+print("\nThat's all, folks!")
+
+</code>
+
+<span class="label" style="background-color:rgb(205, 168, 105);"><strong>LABORGYAKORLAT</strong></span>
+
+<br><br>
+
+<h2>Becsült idő</h2>
+<p>5-10 perc</p>
+
+<h2>Nehézségi szint</h2>
+<p>Könnyű</p>
+
+<h2>Célok</h2>
+<ul>
+<li>az adatok Pythonban történő beolvasásának és kiírásának megismerése;</li>
+<li>egyszerű kifejezések kiszámítása.</li>
+</ul>
+
+
+<h2>Feladatleírás</h2>
+<p>A feladatod a négy alapvető aritmetikai alapművelet eredményének kiszámítását végző programkód befejezése. </p>
+<p>Az eredményeket ki kell írni a konzolra.</p>
+<p>Nem biztos, hogy meg tudod védeni a kódot egy olyan felhasználótól, aki nullával akar osztani. Ez rendben van, egyelőre ne aggódj emiatt.</p>
+<p>Teszteld a kódodat! A várt eredményeket produkálja?</p>
+
+<p>Nem mutatunk tesztadatokat, az túl egyszerű lenne.</p>
+<br>
+
+<labMode>true</labMode>
+
+
+
+<hint>a = float(input("Enter first value: "))
+b = float(input("Enter second value: "))
+
+# output the result of addition here
+# output the result of subtraction here
+# output the result of multiplication here
+# output the result of division here
+
+print("\nThat's all, folks!")
+
+</hint>
+
+
+<sampleSolution>a = float(input("Enter first value: "))
+b = float(input("Enter second value: "))
+print("Addition:", a + b)
+print("Subtraction:", a - b)
+print("Multiplication:", a * b)
+print("Division:", a / b)
+print("\nThat's all, folks!")
+
+</sampleSolution>
+
+</problem>

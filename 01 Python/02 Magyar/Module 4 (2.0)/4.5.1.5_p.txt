@@ -1,0 +1,98 @@
+<problem chapter='4' section='5' slide='1' problem='5' title='Függvények | A háromszög területe'>
+
+<!--
+Update history:
+2020-08-18 Grzegorz (reviewed, re-formatted, PEP-8 compliance check)
+-->
+
+<code>def is_a_triangle(a, b, c):
+    return a + b > c and b + c > a and c + a > b
+
+
+a = float(input('Enter the first side\'s length: '))
+b = float(input('Enter the second side\'s length: '))
+c = float(input('Enter the third side\'s length: '))
+
+if is_a_triangle(a, b, c):
+    print('Yes, it can be a triangle.')
+else:
+    print('No, it can\'t be a triangle.')
+
+</code>
+
+
+
+<h1>Egyszerű függvények: egy háromszög területének kiszámítása</h1>
+
+<p>Ki tudjuk azámítani egy háromszög területét is. Ebben a <strong>Heron-képlet</strong> lesz a segítségünkre:</p>
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<img src="/uploads/media/default/0001/01/06d4ed184333e2f6def5b2ffcac9435c18fc325d.png" width="75%" alt="s = (a + b + c) / 2">
+
+</div>
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+<img src="/uploads/media/default/0001/01/aac88ace1ce483bdbc5543fc19a29655e470b4f1.png" width="95%" alt="A = the square root of s(s - a)(s - b)(s - c)">
+
+</div>
+</div>
+</div>
+
+<br>
+
+<p>Az exponenciálás operátort fogjuk használni a négyzetgyökvonáshoz. Furcsának tűnhet, de működik:</p>
+
+<img src="/uploads/media/default/0001/01/1ba2517baae100429f0217f536819939b481cdb7.png" width="35%" alt="The square root of x = x to the power of 1/2">
+
+<br>
+<br>
+
+<p>Ez az eredményt kiszámító kód:</p>
+
+<codep class="copy">def is_a_triangle(a, b, c):
+    return a + b > c and b + c > a and c + a > b
+
+
+def heron(a, b, c):
+    p = (a + b + c) / 2
+    return (p * (p - a) * (p - b) * (p - c)) ** 0.5
+
+
+<mark style="background-color:#e6f2ff;">def area_of_triangle(a, b, c):</mark>
+    if not is_a_triangle(a, b, c):
+        return None
+    return heron(a, b, c)
+
+
+print(area_of_triangle(1., 1., 2. ** .5))
+
+</codep>
+
+<br>
+
+<p>Próbáljuk ki egy derékszögű háromszöggel, mint egy fél négyzettel, amelynek egyik oldala 1 egységnyi. Ez azt jelenti, hogy a területének egyenlőnek kell lennie 0,5-tel.</p>
+
+<p>Ez furcsa - a kód a következő kimenetet produkálja:</p>
+
+<codep>0.49999999999999983</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+<br>
+
+<p>Nagyon közel van a 0,5-höz, de nem pontosan 0,5. Mit jelent ez? Hiba?</p>
+
+<p>Nem, nem az. Ez a <strong>lebegőpontos számítások sajátossága</strong>. Erről hamarosan többet is elárulunk.</p>
+
+
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

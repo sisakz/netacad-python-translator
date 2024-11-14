@@ -1,0 +1,55 @@
+<problem chapter='3' section='4' slide='1' problem='5' title='Lists ‒ collections of data | Operations on lists'>
+
+<!--
+Update history:
+2020-08-03 Grzegorz (reviewed)
+-->
+
+<code>
+numbers = [111, 7, 2, 1]
+print(numbers[-1])
+print(numbers[-2])
+
+</code>
+
+
+
+<h1>Negative indices are legal</h1>
+
+<p>It may look strange, but negative indices are legal, and can be very useful.</p>
+
+<p>An element with an index equal to <codel>-1</codel> is <strong>the last one in the list</strong>.</p>
+
+<codep>print(numbers<mark style="background-color:#e6f2ff;">[-1]</mark>)
+
+</codep>
+
+<br>
+
+
+<p>The example snippet will output <codel>1</codel>. Run the program and check.</p>
+
+
+<br>
+
+<p>Similarly, the element with an index equal to <codel>-2</codel> is <strong>the one before last in the list</strong>.</p>
+
+<codep>print(numbers<mark style="background-color:#e6f2ff;">[-2]</mark>)
+
+</codep>
+
+<br>
+
+<p>The example snippet will output <codel>2</codel>.</p>
+
+<p>The last accessible element in our list is <codel>numbers[-4]</codel> (the first one) ‒ don't try to go any further!</p>
+
+
+<br>
+
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

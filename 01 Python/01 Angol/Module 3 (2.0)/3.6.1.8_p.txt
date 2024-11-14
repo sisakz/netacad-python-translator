@@ -1,0 +1,83 @@
+<problem chapter='3' section='6' slide='1' problem='8' title='Lists ‒ more details'>
+
+<!--
+Update history:
+2020-08-12 Grzegorz (reviewed, reformatted)
+-->
+
+<code>
+</code>
+
+
+
+<h1>Lists ‒ some simple programs</h1>
+
+
+<p>Now let's find the location of a given element inside a list:</p>
+
+<codep class="syntax-color copy">my_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+to_find = 5
+found = False
+
+for i in range(len(my_list)):
+    found = my_list[i] == to_find
+    if found:
+        break
+
+if found:
+    print("Element found at index", i)
+else:
+    print("absent")
+</codep>
+
+<br>
+
+<p>Note:</p>
+
+<ul>
+<li>the target value is stored in the <codel>to_find</codel> variable;</li>
+<li>the current status of the search is stored in the <codel>found</codel> variable (<codel>True</codel>/<codel>False</codel>)</li>
+<li>when <codel>found</codel> becomes <codel>True</codel>, the <codel>for</codel> loop is exited.</li>
+</ul>
+
+<hr>
+
+<p>Let's assume that you've chosen the following numbers in the lottery: <codel>3</codel>, <codel>7</codel>, <codel>11</codel>, <codel>42</codel>, <codel>34</codel>, <codel>49</codel>.</p>
+
+<p>The numbers that have been drawn are: <codel>5</codel>, <codel>11</codel>, <codel>9</codel>, <codel>42</codel>, <codel>3</codel>, <codel>49</codel>.</p>
+
+<p>The question is: how many numbers have you hit?</p>
+
+
+<p>This program will give you the answer:</p>
+
+<codep class="syntax-color copy">drawn = [5, 11, 9, 42, 3, 49]
+bets = [3, 7, 11, 42, 34, 49]
+hits = 0
+
+for number in bets:
+    if number in drawn:
+        hits += 1
+
+print(hits)
+</codep>
+
+<br>
+
+<p>Note:</p>
+
+<ul>
+<li>the <codel>drawn</codel> list stores all the drawn numbers;</li>
+<li>the <codel>bets</codel> list stores your bets;</li>
+<li>the <codel>hits</codel> variable counts your hits.</li>
+</ul>
+
+<p>The program output is: <codel>4</codel>.</p>
+
+<br>
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

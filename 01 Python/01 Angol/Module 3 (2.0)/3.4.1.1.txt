@@ -1,0 +1,91 @@
+<problem chapter='3' section='4' slide='1' problem='1' title='Lists ‒ collections of data'>
+
+<!--
+Update history:
+2020-07-21 Grzegorz (reviewed)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h1>Why do we need lists?</h1>
+
+<p>It may happen that you have to read, store, process, and finally, print dozens, maybe hundreds, perhaps even thousands of numbers. What then? Do you need to create a separate variable for each value? Will you have to spend long hours writing statements like the one below?</p>
+
+<codep>var1 = int(input())
+var2 = int(input())
+var3 = int(input())
+var4 = int(input())
+var5 = int(input())
+var6 = int(input())
+:
+:
+
+</codep>
+
+<br>
+
+<p>If you don't think that this is a complicated task, then take a piece of paper and write a program that:</p>
+
+<ul>
+<li>reads five numbers;</li>
+<li>prints them in order from the smallest to the largest (NB, this kind of processing is called <strong>sorting</strong>).</li>
+</ul>
+
+<p>You should find that you don't even have enough paper to complete the task.</p>
+
+
+<p>So far, you've learned how to declare variables that are able to store exactly one given value at a time. Such variables are sometimes called <strong>scalars</strong> by analogy with mathematics. All the variables you've used so far are actually scalars.</p>
+
+<p>Think of how convenient it would be to declare a variable that could <strong>store more than one value</strong>. For example, a hundred, or a thousand or even ten thousand. It would still be one and the same variable, but very wide and capacious. Sounds appealing? Perhaps, but how would it handle such a container full of different values? How would it choose just the one you need?</p>
+
+
+</div>
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+<p>What if you could just number them? And then say: <i>give me the value number 2; assign the value number 15; increase the value number 10000</i>.</p>
+
+<p>We'll show you how to declare such <strong>multi-value variables</strong>. We'll do this with the example we just suggested. We'll write a <strong>program that sorts a sequence of numbers</strong>. We won't be particularly ambitious ‒ we'll assume that there are exactly five numbers.</p>
+
+<p>Let's create a variable called <codel>numbers</codel>; it's assigned with not just one number, but is filled with a list consisting of five values (note: the <strong>list starts with an open square bracket and ends with a closed square bracket</strong>; the space between the brackets is filled with five numbers separated by commas).</p>
+
+<codep>numbers = <mark style="background-color:#e6f2ff;">[</mark>10, 5, 7, 2, 1<mark style="background-color:#e6f2ff;">]</mark>
+
+</codep>
+
+<br>
+
+<p>Let's say the same thing using adequate terminology: <strong><codel>numbers</codel> is a list consisting of five values, all of them numbers</strong>. We can also say that this statement creates a list of length equal to five (as in there are five elements inside it).</p>
+
+<p>The elements inside a list <strong>may have different types</strong>. Some of them may be integers, others floats, and yet others may be lists.</p>
+
+<p>Python has adopted a convention stating that the elements in a list are <strong>always numbered starting from zero</strong>. This means that the item stored at the beginning of the list will have the number zero. Since there are five elements in our list, the last of them is assigned the number four. Don't forget this.</p>
+
+<p>You'll soon get used to it, and it'll become second nature.</p>
+
+<p>Before we go any further in our discussion, we have to state the following: our <strong>list is a collection of elements, but each element is a scalar</strong>.</p>
+
+
+<br>
+
+
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

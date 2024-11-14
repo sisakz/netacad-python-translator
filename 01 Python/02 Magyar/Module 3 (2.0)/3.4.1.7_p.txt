@@ -1,0 +1,87 @@
+<problem chapter='3' section='4' slide='1' problem='7' title='Listák | Függvények és tagfüggvények'>
+
+<!--
+Update history:
+2020-08-11 Grzegorz (reviewed), code formatting
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h1>Függvények vs. tagfüggvények</h1>
+
+<p>A <strong>tagfüggvény (metódus) a függvények egy speciális fajtája</strong>. Úgy viselkedik, mint egy függvény, és úgy is néz ki, mint egy függvény, de különbözik a működésének és meghívásának módjában.</p>
+
+<p>Egy <strong>függvény nem tartozik semmilyen adathoz</strong>, adatokat kap, új adatokat hozhat létre, és (általában) eredményt produkál.</p>
+
+<p>Egy tagfüggvény mindezeket a dolgokat elvégzi, de képes <strong>megváltoztatni egy kiválasztott entitás állapotát is</strong>.</p>
+
+<p><strong>Egy tagfüggvény az adatokhoz tartozik, amelyeken dolgozik, míg egy függvény a teljes kódhoz</strong>.</p>
+
+<br>
+
+
+<p>Ez azt is jelenti, hogy egy tagfüggvény meghívása megköveteli annak az adatnak a megadását, amelyből a tagfüggvény meghívásra kerül.</p>
+
+<p>Ez így rejtélyesnek tűnhet, de majd akkor foglalkozunk vele részletesen, amikor az objektumorientált programozásba vetjük bele magunkat.</p>
+
+<p>Általában egy tipikus függvényhívás így néz ki:</p>
+
+<codep>result = <mark style="background-color:#e6f2ff;">function(arg)</mark>
+
+</codep>
+
+<br>
+
+
+<p>A függvény elfogad egy argumentumot, csinál valamit, és visszaad egy eredményt.</p>
+
+<br>
+
+
+</div>
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+<p>Egy tipikus tagfüggvényhívás általában így néz ki:</p>
+
+<codep>result = <mark style="background-color:#e6f2ff;">data.method(arg)</mark>
+
+</codep>
+
+<br>
+
+<p>Megjegyzés: a tagfüggvény neve előtt a tagfüggvényt birtokló adat neve szerepel. Ezután egy <strong>pontot</strong>, majd a <strong>tagfüggvény nevét</strong> és az <strong>argumentumokat körülvevő zárójelpárt</strong> kell hozzáadni.</p>
+
+<p>A tagfüggvény úgy viselkedik, mint egy függvény, de ennél többre képes. <strong>Megváltoztathatja az adat belső állapotát</strong>, amelyből meghívták.</p>
+
+
+<hr>
+
+<p>Felmerülhet benned a kérdés: miért a tagfüggvényekről beszélünk, miért nem a listákról?</p>
+
+<p>Ez most egy lényeges témakör, mert megmutatjuk, hogyan lehet új elemeket hozzáadni egy meglévő listához. Ezt nem függvényekkel, hanem az összes lista által birtokolt tagfüggvényekkel lehet megtenni.</p>
+
+
+<br>
+
+
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

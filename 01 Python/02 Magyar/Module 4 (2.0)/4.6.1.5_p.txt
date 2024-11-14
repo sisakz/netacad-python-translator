@@ -1,0 +1,105 @@
+<problem chapter='4' section='6' slide='1' problem='5' title='A tuple és szótár adattípus'>
+
+<!--
+Update history:
+2020-08-18 Grzegorz (reviewed, re-formatted, PEP-8 compliance check)
+-->
+
+<code>
+dictionary = {"cat": "chat", "dog": "chien", "horse": "cheval"}
+phone_numbers = {'boss' : 5551234567, 'Suzy' : 22657854310}
+empty_dictionary = {}
+
+# Print the values here.
+
+</code>
+
+
+
+<h1>Hogyan használjuk a szótárt?</h1>
+
+
+<p>Ha bármelyik értéket meg akarod kapni, akkor érvényes kulcsot kell megadnod:</p>
+
+<codep class="syntax-color">print(dictionary['cat'])
+print(phone_numbers['Suzy'])
+</codep>
+<br>
+
+<p>A szótár értékének lekérdezése hasonlít az indexeléshez, különösen a kulcs értékét körülvevő zárójeleknek köszönhetően.</p>
+
+<p>Megjegyzés:</p>
+
+<ul>
+<li>ha a kulcs egy karakterlánc, akkor azt karakterláncként kell megadni;</li>
+<li><strong>a kulcsok a nagy- és kisbetűket megkülönböztetik</strong>: a <codel>'Suzy'</codel> más, mint a <codel>'suzy'</codel>.</li>
+</ul>
+
+<p>A fenti kódrészlet két sornyi szöveget ad eredményül:</p>
+
+<codep>chat
+5557654321</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+<br>
+
+<p>Következzék most egy fontos szabály: <strong>Ne használj nem létező kulcsot</strong>! Az alábbi kulccsal próbálkozva:</p>
+
+<codep class="syntax-color">print(phone_numbers['president'])
+</codep>
+<br>
+
+<p>futásidejű hibát kapunk. Próbáld ki!</p>
+
+
+<br>
+<p>Szerencsére van egy egyszerű módja annak, hogy elkerüljük az ilyen helyzetet. Az <codel>in</codel> operátor, valamint a hozzá tartozó <codel>not in</codel> operátor segít ebben.</p>
+
+<p>A következő kód biztonságosan keres néhány francia szót:</p>
+
+<codep class="syntax-color copy">dictionary = {"cat": "chat", "dog": "chien", "horse": "cheval"}
+words = ['cat', 'lion', 'horse']
+
+for word in words:
+    if word in dictionary:
+        print(word, "->", dictionary[word])
+    else:
+        print(word, "is not in dictionary")
+</codep>
+
+<br>
+
+<p>A kód kimenete a következőképpen néz ki:</p>
+
+<codep>cat -> chat
+lion is not in dictionary
+horse -> cheval</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+
+<p><span class="label" style="background-color:orange;">MEGJEGYZÉS</span></p>
+
+<p>Ha nagy vagy hosszú kifejezést írunk, érdemes lehet függőlegesen igazítani azokat. Így olvashatóbbá és programozóbarátabbá tehetjük a kódunkat, pl.:</p>
+
+<codep class="syntax-color copy"># Example 1:
+dictionary = {
+              "cat": "chat",
+              "dog": "chien",
+              "horse": "cheval"
+              }
+
+# Example 2:
+phone_numbers = {'boss': 5551234567,
+                 'Suzy': 22657854310
+				 }
+</codep>
+<br>
+
+<p>A kód formázásának ilyen módját <strong>függő behúzásnak</strong> nevezik.</p>
+
+<br>
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

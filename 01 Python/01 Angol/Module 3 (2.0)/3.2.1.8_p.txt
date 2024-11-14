@@ -1,0 +1,76 @@
+<problem chapter='3' section='2' slide='1' problem='8' title='Loop control in Python | break and continue'>
+
+<!--
+Update history:
+2020-08-26 Grzegorz (Tip added on the bottom: "Look carefully...")
+-->
+
+<h1>The <font face="courier new">break</font> and <font face="courier new">continue</font> statements: more examples</h1>
+
+
+<p>Let's return to our program that recognizes the largest among the entered numbers. We'll convert it twice, using the <codel>break</codel> and <codel>continue</codel> instructions.</p>
+
+<p>Analyze the code, and judge whether and how you would use either of them.</p>
+
+<p>The <codel>break</codel> variant goes here:</p>
+
+<codep class="copy syntax-color">largest_number = -99999999
+counter = 0
+
+while True:
+    number = int(input("Enter a number or type -1 to end the program: "))
+    if number == -1:
+        break
+    counter += 1
+    if number > largest_number:
+        largest_number = number
+
+if counter != 0:
+    print("The largest number is", largest_number)
+else:
+    print("You haven't entered any number.")
+</codep>
+
+<br>
+
+<p>Run it, test it, and experiment with it.</p>
+
+
+<hr>
+
+
+<p>And now the <codel>continue</codel> variant:</p>
+
+<codep class="copy syntax-color">largest_number = -99999999
+counter = 0
+
+number = int(input("Enter a number or type -1 to end program: "))
+
+while number != -1:
+    if number == -1:
+        continue
+    counter += 1
+
+    if number > largest_number:
+        largest_number = number
+    number = int(input("Enter a number or type -1 to end the program: "))
+
+if counter:
+    print("The largest number is", largest_number)
+else:
+    print("You haven't entered any number.")
+</codep>
+
+<br>
+
+<p>Look carefully, the user enters the first number <b>before</b> the program enters the <codel>while</codel> loop. The subsequent number is entered when the program is <b>already in the loop</b>.</p>
+
+<p>Again – run the program, test it, and experiment with it.</p>
+
+<br>
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

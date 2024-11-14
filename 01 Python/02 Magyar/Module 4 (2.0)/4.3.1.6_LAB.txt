@@ -1,0 +1,111 @@
+<problem chapter='4' section='3' slide='1' problem='6' title="LAB: Saját függvény írása - Szökőév">
+
+<!--
+Update history:
+2020-08-14 Grzegorz (reviewed, re-formatted)
+-->
+
+<code>
+def is_year_leap(year):
+#
+# Write your code here.
+#
+
+test_data = [1900, 2000, 2016, 1987]
+test_results = [False, True, True, False]
+for i in range(len(test_data)):
+	yr = test_data[i]
+	print(yr,"->",end="")
+	result = is_year_leap(yr)
+	if result == test_results[i]:
+		print("OK")
+	else:
+		print("Failed")
+
+</code>
+
+<span class="label" style="background-color:rgb(205, 168, 105);"><strong>LABORGYAKORLAT</strong></span>
+
+<br><br>
+
+<h2>Becsült idő</h2>
+<p>10-15 perc</p>
+
+<h2>Nehézségi szint</h2>
+<p>Könnyű</p>
+
+
+<h2>Célok</h2>
+
+<p>Ismerkedjen meg a tanuló a következőkkel:</p>
+<ul>
+<li>paraméterezett függvények tervezése és írása;</li>
+<li>a <font face="courier new">return</font> utasítás használata;</li>
+<li>a függvények tesztelése.</li>
+</ul>
+
+
+<h2>Feladatleírás</h2>
+
+<p>Feladatod egy olyan függvény megírása és tesztelése, amely egy argumentumot (egy évszámot) vár, és <codel>True</codel> értéket ad vissza, ha az évszám <i>szökőév</i>, <codel>False</codel> értéket, ha nem.</p>
+
+<p>A függvény alapja már látszódik a kódszerkesztőben.</p>
+
+<p>Megjegyzés: készítettünk egy rövid tesztelési kódot is, amellyel tesztelheted a függvényt.</p>
+
+<p>A kód két listát használ, az egyik a tesztadatokat, a másik pedig a várható eredményeket tartalmazza. A kód megmondja, ha valamelyik eredmény érvénytelen.</p>
+
+<br>
+
+<studyMode>false</studyMode>
+<labMode>true</labMode>
+
+<hint>
+def is_year_leap(year):
+	if year % 4 != 0:
+		# 
+	# elif statement
+		#
+	# elif statement
+		#
+	# else statement
+
+test_data = [1900, 2000, 2016, 1987]
+test_results = [False, True, True, False]
+for i in range(len(test_data)):
+	yr = test_data[i]
+	print(yr,"-> ",end="")
+	result = is_year_leap(yr)
+	if result == test_results[i]:
+		print("OK")
+	else:
+		print("Failed")
+
+</hint>
+
+
+<sampleSolution>
+def is_year_leap(year):
+	if year % 4 != 0:
+		return False
+	elif year % 100 != 0:
+		return True
+	elif year % 400 != 0:
+		return False
+	else:
+		return True
+
+test_data = [1900, 2000, 2016, 1987]
+test_results = [False, True, True, False]
+for i in range(len(test_data)):
+	yr = test_data[i]
+	print(yr,"-> ",end="")
+	result = is_year_leap(yr)
+	if result == test_results[i]:
+		print("OK")
+	else:
+		print("Failed")
+
+</sampleSolution>
+
+</problem>

@@ -1,0 +1,88 @@
+<problem chapter='0' section='0' slide='0' problem='2' title='Tananyag | Miért érdemes PYTHON-t tanulnod?'>
+
+<!--
+Update history:
+2020-07-06 Grzegorz (created)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+
+<h1>A kurzus tananyaga</h1>
+
+<p>A tanfolyam során megtanulhatod:</p>
+
+<ul>
+<li>a számítógépes programozás általános alapfogalmait;</li>
+<li>a Python nyelv szintaxisát és szemantikáját;</li>
+<li>az alkalmazott fogásokat a tipikus implementációs kihívások megoldására;</li>
+<li>hogyan használd a Python beépített szabványos programkönyvtárának legfontosabb elemeit;</li>
+<li>hogyan telepítsd a futtatókörnyezetet;</li>
+<li>hogyan tervezd, írd, teszteld és debuggold saját Python programjaidat.</li>
+</ul>
+
+
+<br>
+
+<p>A tanfolyam 4 modulból áll:</p>
+
+<ol>
+<li>modul
+<br>Bevezetés a Python és a számítógép programozás világába;</li>
+
+
+<li>modul
+<br>Adattípusok, változók, egyszerű input-output műveletek, alapműveletek;</li>
+
+
+<li>modul
+<br>Logikai értékek, elágazások, ciklusok, listák és listafeldolgozás, logikai és bitwise műveletek;</li>
+
+<li>modul
+<br>Függvények, sokaságok, szótárak és adatfeldolgozás.</li>
+
+</ol>
+
+<br>
+
+</div>
+
+
+
+
+<div class="small-12 large-6 columns">
+<br>
+
+
+<h1>Miért érdemes PYTHON-t tanulnod?</h1>
+
+<p>A Python mindenütt jelen van, az emberek számos Python-alapú eszközt használnak nap mint nap, akár észreveszik, akár nem. Több millió (nos, valójában milliárd) kódsort írtak már Pythonban, ami szinte korlátlan lehetőséget biztosít a kód újrahasznosítására és a jó példákból való tanulásra. Sőt, mi több, van egy nagy és nagyon aktív Python közösség, akik mindig szívesen segítenek.</p>
+
+<p>Néhány további tényező, ami miatt a Python kiválóan alkalmas a tanulásra:</p>
+
+<ul>
+<li>Könnyen tanulható - A Python megtanulása rövidebb időt vesz igénybe, mint sok más nyelvé. Ez azt is jelenti, hogy használatával gyorsabban el lehet kezdeni a tényleges programozást.</li>
+<li>Könnyen használható új szoftverek írásához - Python használatával gyakran gyorsabban lehet kódot írni.</li>
+<li>Könnyen beszerezhető, telepíthető és használható - A Python ingyenes, nyílt és multiplatformos, amivel nem minden nyelv büszkélkedhet.</li>
+</ul>
+
+<p>A kurzus elvégzése ugródeszkaként szolgálhat bármely más programozási nyelv elsajátításához, valamint a Python-alapú technológiák (pl. Django) felfedezéséhez. A tanfolyamot a barátságos hangvétel és a diákokkal szembeni nyitottság jellemzi.</p>
+
+<p>Az első rész az alapoktól indul, és lépésről lépésre vezet el a második részben kifejtett összetett problémákhoz, így olyan felelős szoftverfejlesztővé válhatsz, aki az IT-ipar számos pozíciójában képes a különböző kihívásoknak megfelelni.</p>
+
+<br>
+
+</div>
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

@@ -1,0 +1,65 @@
+<problem chapter='3' section='1' slide='1' problem='0' title='Python alapok 1: 3. modul'>
+
+<!--
+Update history:
+2020-07-07 Grzegorz (formatted)
+2020-07-20 Grzegorz (module picture changed, editing content)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-4 columns">
+
+<br>
+
+<h1>Python alapok 1: 
+<br>3. modul</h1>
+
+<p><strong>Logikai értékek, elágazások, ciklusok, listák és listafeldolgozás, logikai és bitwise műveletek</strong></p>
+
+<p>Ebben a modulban a következő témakörökkel foglalkozunk:</p>
+
+<ul>
+<li>logikai (Boolean) adattípus;</li>
+
+<li>relációs operátorok;</li>
+
+<li>döntéshozatal a Pythonban (if, if-else, if-elif, else);</li>
+
+<li>hogyan ismételjük meg a kód végrehajtását ciklusok (while, for) segítségével;</li>
+
+<li>hogyan kell logikai és bitwise (bitenkénti) műveleteket végezni a Pythonban;</li>
+
+<li>listák a Pythonban (építés, indexelés és szeletelés; tartalommanipuláció);</li>
+
+<li>hogyan rendezhetünk egy listát buborékos rendezési algoritmusok segítségével;</li>
+
+<li>többdimenziós listák és alkalmazásuk.</li>
+
+</ul>
+
+<br>
+
+
+</div>
+
+
+<div class="small-12 large-8 columns">
+
+<br>
+
+<center><img src="/uploads/media/default/0001/02/10d98105c86749a15ea2711f1de7c51346cf394e.png" alt="Module 3 Title Page" width="70%"></center>
+
+<br>
+
+
+</div>
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

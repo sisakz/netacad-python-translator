@@ -1,0 +1,159 @@
+<problem chapter='0' section='0' slide='0' problem='3' title='Python Essentials v1.1 - Course Syllabus'>
+
+<div class="container">
+<div class="row">
+<div class="small-12 large-6 columns">
+
+<h2>Course syllabus: Python Essentials 1 (PE1 &ndash; v.2.0)</h1>
+
+
+
+<p><strong>PE1 Module 1 &ndash; Introduction to Python and Computer Programming</strong></p>
+<ul>
+<li>Python as a modern, universal and growing programming language;</li>
+<li>Python versions and language development;</li>
+<li>Brief review of tools and environments needed to start programming in Python.</li>
+
+</ul>
+
+
+
+<p><strong>PE1 Module 2 &ndash; Data Types, Variables, Basic Input-Output Operations, Basic Operators</strong></p>
+
+<ul>
+<li>How to write and run the very first Python program;</li>
+<li>Python literals;</li>
+<li>Python operators and expressions;</li>
+<li>Variables &ndash; naming and using;</li>
+<li>Basic input/output operations in Python.</li>
+
+</ul>
+
+
+<p><strong>PE1 Module 3 &ndash; Boolean Values, Conditional Execution, Loops, Lists and List Processing, Logical and Bitwise Operations</strong></p>
+
+<ul>
+<li>Boolean data type;</li>
+<li>Relational operators in Python;</li>
+<li>Decision-making in Python: <i>if</i>, <i>if-else</i>, <i>if-elif-else</i>;</li>
+<li>Repeating code execution using loops: <i>while</i> and <i>for</i>;</li>
+<li>Logic and bit-wise operations in Python;</li>
+<li>Lists in Python: constructing, indexing, slicing and content manipulation;</li>
+<li>How to sort a list using a <i>bubble-sort</i> algorithm;</li>
+<li>Multidimensional lists and their applications.</li>
+
+</ul>
+
+
+
+<p><strong>PE1 Module 4 &ndash; Functions, Tuples, Dictionaries, and Data Processing</strong></p>
+
+<ul>
+<li>Code structuring and the concept of functions;</li>
+<li>Function invocation and returning a result from a function;</li>
+<li>Name scopes and variable shadowing;</li>
+<li>Tuples &ndash; purpose, constructing and using;</li>
+<li>Dictionaries &ndash; purpose, constructing and using.</li>
+
+</ul>
+
+<p><strong>Python Essentials 1 &ndash; Summary Test</strong></p>
+<ul>
+<li>PE1 Modules 1-4;</li>
+<li>score 70% or more to unlock Python Essentials 2.</li>
+</ul>
+
+
+
+
+<br><br>
+
+</div>
+
+<div class="small-12 large-6 columns">
+
+
+
+<h2>Course syllabus: Python Essentials 2 (PE2 &ndash; v.2.0)</h1>
+
+<p><strong>PE2 Module 1 &ndash; Modules, Packages and PIP</strong></p>
+
+
+<ul>
+<li>What is module and why do we need it?</li>
+<li>Importing and using modules;</li>
+<li>Review of selected useful Python modules;</li>
+<li>What is a package and how it differs from a module?</li>
+<li>Constructing and using packages;</li>
+<li>PIP – Swiss army knife for package maintenance.</li>
+
+</ul>
+
+
+
+<p><strong>PE2 Module 2 &ndash; Exceptions, Strings, String and List Methods</strong></p>
+
+<ul>
+<li>Characters, strings and coding standards;</li>
+<li>Strings vs. lists &ndash; similarities and differences;</li>
+<li>Lists methods;</li>
+<li>String methods;</li>
+<li>Python's way of handling runtime errors;</li>
+<li>Controlling the flow of errors using <i>try</i> and <i>except</i>;</li>
+<li>The hierarchy of exceptions.</li>
+
+</ul>
+
+
+
+<p><strong>PE2 Module 3 &ndash; Object-Oriented Programming in Python (OOP)</strong></p>
+
+<ul>
+<li>Basic concepts of object-oriented programming;</li>
+<li>From procedural to object approach &ndash; motivations and benefits;</li>
+<li>Classes, objects, properties and methods;</li>
+<li>Inheritance and polymorphism;</li>
+<li>Exception as an object.</li>
+
+</ul>
+
+
+
+<p><strong>PE2 Module 4 &ndash; Miscellaneous</strong></p>
+
+<ul>
+<li>Generators, iterators and closures;</li>
+<li>Working with file-system, directory tree and files;</li>
+<li>Selected Python Standard Library modules (os, datetime, time, and calendar).</li>
+
+</ul>
+
+<p><strong>Python Essentials 2 &ndash; Summary Test</strong></p>
+<ul>
+<li>PE2 Modules 1-4;</li>
+<li>score 70% or more to unlock the Final Test.</li>
+</ul>
+
+<br>
+
+<p><strong><u>Python Essentials &ndash; Final Test</u></strong></p>
+<ul>
+<li>PE1 Modules 1-4;</li>
+<li>PE2 Modules 1-4;</li>
+<li>score 70% or more to be eligible for a 50% discount code (PCAP &ndash; Certified Associate in Python Programming certification exam).</li>
+</ul>
+
+<br><br>
+
+</div>
+</div>
+</div>
+
+
+
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

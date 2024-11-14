@@ -1,0 +1,84 @@
+<problem chapter='4' section='4' slide='1' problem='2' title='Scopes in Python'>
+
+<!--
+Update history:
+2020-08-18 Grzegorz (reviewed, re-formatted)
+-->
+
+<code>def my_function():
+    print("Do I know that variable?", var)
+
+
+var = 1
+my_function()
+print(var)
+
+</code>
+
+
+
+<h1>Functions and scopes: continued</h1>
+
+<p>Let's start by checking whether or not a variable created outside any function is visible inside the functions. In other words, does a variable's name propagate into a function's body?</p>
+
+<p>Look at the code in the editor. Our guinea pig is there.</p>
+
+<p>The result of the test is positive ‒ the code outputs:</p>
+
+<codep>Do I know that variable? 1
+1</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+
+<p>The answer is: <strong>a variable existing outside a function has scope inside the function's body</strong>.</p>
+
+<p>This rule has a very important exception. Let's try to find it.</p>
+
+<br>
+
+<p>Let's make a small change to the code:</p>
+
+<codep class="copy">def my_function():
+    <mark style="background-color:#e6f2ff;">var = 2</mark>
+    print("Do I know that variable?", var)
+
+
+<mark style="background-color:#e6f2ff;">var = 1</mark>
+my_function()
+print(var)
+
+</codep>
+
+<br>
+
+<p>The result has changed, too ‒ the code produces a slightly different output now:</p>
+
+<codep>Do I know that variable? 2
+1</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+<br>
+
+<p>What's happened?</p>
+
+<ul>
+<li>the <codel>var</codel> variable created inside the function is not the same as when defined outside it ‒ it seems that there two different variables of the same name;</li>
+
+<li>moreover, the function's variable shadows the variable coming from the outside world.</li>
+</ul>
+
+<p>We can make the previous rule more precise and adequate:</p>
+
+<p><strong>A variable existing outside a function has scope inside the function's body, excluding those which define a variable of the same name.</strong></p>
+
+<p>It also means that the <strong>scope of a variable existing outside a function is supported only when getting its value</strong> (reading). Assigning a value forces the creation of the function's own variable.</p>
+
+<p>Make sure you understand this well and carry out your own experiments.</p>
+
+<br>
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

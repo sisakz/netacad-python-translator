@@ -1,0 +1,75 @@
+<problem chapter='2' section='4' slide='1' problem='6' title='Variables ‒ data-shaped boxes'>
+
+<!--
+Update history:
+2020-07-17 Grzegorz (re-formatted; code - syntax-color, blank line added)
+-->
+
+<code>
+a = 3.0
+b = 4.0
+c = (a ** 2 + b ** 2) ** 0.5
+print("c =", c)
+
+</code>
+
+<h1>Solving simple mathematical problems</h1>
+
+<p>Now you should be able to construct a short program solving simple mathematical problems such as the Pythagorean theorem:</p>
+
+<p><i>The square of the hypotenuse is equal to the sum of the squares of the other two sides.</i></p>
+
+
+<p>The following code evaluates the length of the hypotenuse (i.e., the longest side of a right-angled triangle, the one opposite of the right angle) using the Pythagorean theorem:</p>
+
+<codep class="syntax-color">a = 3.0
+b = 4.0
+c = (a ** 2 + b ** 2) ** 0.5
+print("c =", c)
+</codep>
+
+<br>
+
+<p>Note: we need to make use of the <codel>**</codel> operator to evaluate the square root as:</p>
+
+<p><font size="+2">
+&radic;<span style="text-decoration:overline;">&nbsp;(x)&nbsp;</span> = x<sup>(&frac12;)</sup>
+</font></p>
+
+<p>and</p>
+
+<p><font size="+2">
+c = &radic;<span style="text-decoration:overline;">&nbsp;a<sup>2</sup> + b<sup>2</sup>&nbsp;</span>
+</font></p>
+
+
+
+<p>Can you guess the output of the code?</p>
+<p>Check below and run the code in the editor to confirm your predictions.</p>
+
+<button class="button tiny" onclick="solution('sol')">Check</button>
+
+<p id="sol" style="display: none;">
+<codep>c = 5.0</codep>
+</p>
+
+<script>
+function solution (id) {
+    var element = document.getElementById(id);
+    
+if (element.style.display === "none") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
+    }
+}
+</script>
+
+
+<br>
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

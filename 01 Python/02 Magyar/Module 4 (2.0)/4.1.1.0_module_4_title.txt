@@ -1,0 +1,59 @@
+<problem chapter='4' section='1' slide='1' problem='0' title='Python alapok 1: 4. modul'>
+
+<!--
+Update history:
+2020-07-07 Grzegorz (formatted)
+2020-08-13 Grzegorz (module picture changed, editing content)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-4 columns">
+
+<br>
+
+<h1>Python alapok 1:
+<br>4. modul</h1>
+
+<p><strong>Függvények, sokaságok, szótárak és adatfeldolgozás</strong></p>
+
+<p>Ebben a modulban a következő témakörökkel foglalkozunk:</p>
+
+<ul>
+<li>kód strukturálása és a függvény fogalma;</li>
+
+<li>függvényhívás és egy függvény eredményének visszaadása;</li>
+
+<li>hatókörök és változóelfedés;</li>
+
+<li>tuple és célja, a tuple felépítése és használata;</li>
+
+<li>szótárak és céljaik, szótárak készítése és használata.</li>
+
+</ul>
+
+<br>
+
+
+</div>
+
+
+<div class="small-12 large-8 columns">
+
+<br>
+
+<center><img src="/uploads/media/default/0001/02/0125994c23973687cb3951d2e7b8d54f08bcf6f1.png" alt="Module 4 Title Page" width="70%"></center>
+
+<br>
+
+
+</div>
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

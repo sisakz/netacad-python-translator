@@ -1,0 +1,73 @@
+﻿<problem chapter='1' section='2' slide='1' problem='5' title='Kezdjünk bele a Python programozásba!'>
+
+<!--
+Update history:
+2020-07-07 Grzegorz (formatted)
+2020-08-25 Grzegorz (added a sentence)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<h1>Írd meg és futtasd az első programodat!</h1>
+
+<p>Írj egyetlen sort az újonnan megnyitott és elnevezett szerkesztőablakba.</p>
+
+<p>A sor így nézzen ki:</p>
+
+<codep class="syntax-color">print("Hisssssss...")
+</codep>
+
+<br>
+
+<p>Használhatod a vágólapot a szöveg fájlba másolásához.</p>
+
+<p>Most nem részletezzük a program jelentését, de a következő fejezetben mindenre kiterjedő magyarázatot találsz.</p>
+
+<p>Nézd meg közelebbről az idézőjeleket. Ezek az idézőjel legegyszerűbb formái (egyszerű, semleges, egyenes stb.), amelyeket általában a forrásfájlokban használnak. Ne használd a professzionális szövegszerkesztők által használt tipográfiai idézőjeleket (girbegurba, ferde, díszes stb.), mivel a Python ezeket nem fogadja el.</p>
+
+<center><img class="lightbox" src="/uploads/media/default/0001/01/0830563fa18ea8138503c208eb9514af574d7a2c.png" alt="Python 3.7.0 IDLE - Running a program" width="80%"></center>
+
+<br>
+
+<p>Mentsd el a fájlt (<i>Fájl</i> -> <i>Mentés</i>) és futtasd a programot (<i>Futtatás</i> -> <i>Modul futtatása</i>).</p>
+
+<br>
+<br>
+
+</div>
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+<p>Ha minden rendben megy, és nincsenek hibák a kódban, a konzol ablakban láthatod a program futtatásának eredményét.</p>
+
+<p>Ebben az esetben a program <b>sziszeg</b>, azaz kiírja, hogy „Hissss”.</p>
+
+<p>Próbáld meg még egyszer lefuttatni. És még egyszer.</p>
+
+<p>Végül zárd be mindkét ablakot, és térj vissza az Asztalra.</p>
+
+<center><img class="lightbox" src="/uploads/media/default/0001/01/0ced7f0e762ae8260831e994370b1ff2b8b7fd7b.png" alt="Python 3.7.0 IDLE - Running a program - Concole Output" width="80%"></center>
+
+<br>
+<br>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

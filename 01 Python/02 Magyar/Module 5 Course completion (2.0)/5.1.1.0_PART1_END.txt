@@ -1,0 +1,70 @@
+<problem chapter='5' section='1' slide='1' problem='0' title='Python alapok 1 - Gratulálunk!'>
+
+<!--
+Update history:
+2020-08-18 Grzegorz (reviewed, re-formatted, PEP-8 compliance check)
+2020-08-21 Grzegorz (restructurng information)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<h1>Gratulálunk!</h1>
+
+<h2>Elvégezted a <i>Python alapok 1</i> tanfolyamot</h2>
+
+<br>
+
+
+<p>Szép munka! Elértél a <b>Python alapok 1</b> tanfolyam végére, és ezzel egy fontos mérföldkövet teljesítettél a Python programozási tanulmányaidban.</p>
+
+<img src="/uploads/media/default/0001/01/eaa7921c017b3ff2e826ac822b50354a757605f3.png" width="60%" alt="Part 1: Basics completion - congratulations" style="float:right; padding:20px;">
+
+Ezennel készen állsz az utolsó kihívásra, az <b>Összefoglaló tesztre</b>, amely segít áttekinteni az eddig tanultakat, és teszteli a tanfolyam során megszerzett ismereteidet.
+
+<br><br>
+
+
+A tanfolyam elvégzésével felkészültél a <a href="https://pythoninstitute.org/pcep-certification-entry-level/" target="_blank">PCEP - Certified Entry-Level Python Programmer</a> minősítő vizsgára, amely a <i>PCAP - Certified Associate in Python Programming</i> minősítéshez vezető lépés, és a szoftverfejlesztői, Python-programozói, valamint a kapcsolódó technológiák területén való karrier elindításának kiindulópontja.
+
+<br><br>Készen állsz?
+
+
+<div style="clear: both;"></div>
+
+
+<br>
+<br>
+
+</div>
+
+
+
+
+<div class="small-12 large-6 columns">
+
+
+<br>
+<center><img src="/uploads/media/default/0001/02/e16946f52a4b455482a337df16f78b1131ae7a05.png" width="85%" class="lightbox" alt="The hierarchy of OpenEDG Python Institute certifications"></center>
+<br>
+
+
+
+
+
+
+
+<br>
+
+</div>
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

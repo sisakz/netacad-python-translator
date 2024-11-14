@@ -1,0 +1,101 @@
+<problem chapter='2' section='4' slide='1' problem='3' title='Változók'>
+
+<!--
+Update history:
+2020-07-17 Grzegorz (re-formatted; code - syntax-color, blank line added)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<h1>Változók létrehozása</h1>
+
+
+
+<p>Mit tehetünk egy változó belsejébe?</p>
+
+<p>Bármit.</p>
+
+<p>Egy változót használhatsz a már bemutatott bármelyik típus értékének tárolására, és még sok, eddig nem látott érték tárolására is.</p>
+
+<p>Egy változó értéke az, amit beleteszel. Annyiszor változhat, ahányszor csak akarod vagy szükséged van rá. Lehet az egyik pillanatban egész szám, a másikban lebegőpontos, végül pedig karakterlánc lesz belőle.</p>
+
+<p>Beszéljünk most két fontos dologról: <strong>hogyan jönnek létre a változók</strong> és <strong>hogyan tehetünk értékeket beléjük<strong> (vagy inkább hogyan <strong>adhatunk át értékeket</strong> nekik)?</p>
+
+<p><span class="label" style="background-color:orange"><b>JÓL JEGYEZD MEG</b></span></p>
+
+<p><strong>Egy változó egy érték hozzárendelésével jön létre</strong>. Más nyelvekkel ellentétben itt nem kell külön deklarálni, azaz létrehozni.</p>
+
+<p>Ha egy nem létező változóhoz bármilyen értéket rendelsz, a változó <strong>automatikusan létrejön</strong>. Semmi mást nem kell tenned.</p>
+
+<p>A létrehozás (vagy másképp - a létrehozás szintaxisa) rendkívül egyszerű: <strong>csak használd a kívánt változó nevét, majd az egyenlőségjelet (=) és a változónak adandó értéket.</strong></p>
+
+
+<br>
+
+</div>
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+<center><img src="/uploads/media/default/0001/01/f7ebeb6e99f0eba00f1359ca15a7d5ea441e347b.png" width="60%" alt="The concept of 'you can put anything inside a variable'"></center>
+
+<br>
+
+<p>Nézd meg az alábbi kódrészletet:</p>
+
+<codep class="syntax-color">var = 1
+print(var)
+</codep>
+
+<br>
+
+<p>Két egyszerű utasításból áll:</p>
+
+<ul>
+<li>Az első ezek közül létrehoz egy <codel>var</codel> nevű változót, és hozzárendel egy <codel>1</codel>-es egész értékű literált.</li>
+<li>A második kiírja az újonnan létrehozott változó értékét a konzolra.</li>
+</ul>
+
+<br>
+
+<p>Megjegyzés: a <codel>print()</codel> függvénynek van még egy másik képessége is – változókat is képes kezelni. Tudod, hogy mi lesz a kódrészlet kimenete?</p>
+
+
+<button class="button tiny" onclick="solution('sol')">Ellenőrzés</button>
+
+<p id="sol" style="display: none;">
+<codep>1</codep>
+</p>
+
+<script>
+function solution (id) {
+    var element = document.getElementById(id);
+    
+if (element.style.display === "none") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
+    }
+}
+</script>
+
+<br>
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

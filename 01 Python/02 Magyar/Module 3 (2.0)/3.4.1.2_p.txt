@@ -1,0 +1,62 @@
+<problem chapter='3' section='4' slide='1' problem='2' title='Listák | Indexelés'>
+
+<!--
+Update history:
+2020-08-03 Grzegorz (reviewed)
+-->
+
+<code>
+numbers = [10, 5, 7, 2, 1]
+print("List contents:", numbers)  # Printing original list contents.
+
+</code>
+
+<h1>Indexelő listák</h1>
+
+<p>Hogyan változtathatod meg a lista egy kiválasztott elemének értékét?</p>
+
+<p><strong>Adjunk egy új, <codel>111</codel>-es értéket a lista első elemének</strong>. Ezt így tesszük meg:</p>
+
+<codep>numbers = [10, 5, 7, 2, 1]
+print("Original list contents:", numbers)  # Printing original list contents.
+
+<mark style="background-color:#e6f2ff;">numbers[0] = 111</mark>
+print("New list contents: ", numbers)  # Current list contents.
+
+</codep>
+
+<br>
+
+<hr>
+
+<p>Most pedig azt szeretnénk, hogy az <strong>ötödik elem értékét átmásoljuk a második elembe</strong>. Kitalálod, hogyan csináljuk?</p>
+
+<codep>numbers = [10, 5, 7, 2, 1]
+print("Original list contents:", numbers)  # Printing original list contents.
+
+numbers[0] = 111
+print("\nPrevious list contents:", numbers)  # Printing previous list contents.
+
+<mark style="background-color:#e6f2ff;">numbers[1] = numbers[4]</mark>  # Copying value of the fifth element to the second.
+print("New list contents:", numbers)  # Printing current list contents.
+
+</codep>
+
+<br>
+
+<p>A zárójelben lévő értéket, amely a lista egy elemét választja ki, <strong>indexnek</strong> nevezzük, míg a listából való kiválasztás műveletét <strong>indexelésnek</strong>.</p>
+
+<p>A <codel>print()</codel> függvényt fogjuk használni a lista tartalmának kiíratására minden egyes módosításkor. Ez segít nekünk abban, hogy az egyes lépéseket pontosabban követhessük, és láthassuk, mi történik egy adott listamódosítás után.</p>
+
+<p>Megjegyzés: az eddig használt összes index literál. Értékeik futásidőben rögzítettek, de <strong>bármilyen kifejezés lehet index</strong>. Ez rengeteg lehetőséget biztosít.</p>
+
+
+
+<br>
+
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

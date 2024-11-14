@@ -1,0 +1,64 @@
+<problem chapter='1' section='1' slide='2' problem='3' title='Python, a programozási nyelv | Miért pont a Python?'>
+
+<!--
+Update history:
+2020-07-07 Grzegorz (formatted)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+<h1>Mitől különleges a Python?</h1>
+
+<p>Hogyan lehetséges, hogy a programozók, fiatalok és idősek, tapasztaltak és kezdők egyaránt használni akarják? Hogyan történt, hogy a nagyvállalatok átvették a Pythont, és a Python segítségével valósították meg a legfontosabb termékeiket?</p>
+
+<p>Ennek számos oka van - néhányat már felsoroltunk, de soroljuk fel őket még egyszer gyakorlatiasabban:</p>
+
+<ul>
+<li><strong>könnyen tanulható</strong> - a Python megtanulásához szükséges idő rövidebb, mint sok más nyelv esetében; ez azt jelenti, hogy gyorsabban el lehet kezdeni a tényleges programozást;</li>
+<li><strong>könnyen tanítható</strong> - a tanítási munka kevesebb, mint más nyelvek esetében; ez azt jelenti, hogy a tanár nagyobb hangsúlyt fektethet az általános (nyelvfüggetlen) programozási technikákra, és nem pazarolja energiáit egzotikus trükkökre, furcsa kivételekre és érthetetlen szabályokra;</li>
+<li><strong>könnyen használható</strong> új szoftverek írásához - Python használatával gyakran gyorsabban lehet kódot írni;</li>
+<li><strong>könnyen érthető</strong> - gyakran könnyebb és gyorsabb megérteni másvalaki kódját, ha az Pythonban van írva;</li>
+<li><strong>könnyen beszerezhető, telepíthető és terjeszthető</strong> - a Python ingyenes, nyílt és multiplatformos; ezzel nem minden nyelv büszkélkedhet.</li>
+</ul>
+
+<p>Természetesen a Pythonnak is megvannak a maga hátrányai:</p>
+<ul>
+<li>nem különösebben gyors - a Python nem nyújt kivételes teljesítményt;</li>
+<li>bizonyos esetekben ellenállhat néhány egyszerűbb tesztelési technikának - ez azt jelentheti, hogy a Python kódjának hibakeresése nehezebb lehet, mint más nyelvek esetében; szerencsére a Pythonban mindig nehezebb hibázni.</li>
+</ul>
+
+<br>
+
+</div>
+
+
+<div class="small-12 large-6 columns">
+<br>
+
+<center><img src="/uploads/media/default/0001/01/a1ee4bc97677a1acf93078f175a5fee938e016fd.png" alt="The advantages to using Python" width="55%"></center>
+<br>
+
+<br>
+
+<p>Azt is meg kell jegyezni, hogy a Python nem az egyetlen ilyen jellegű megoldás az informatikai piacon.</p>
+
+<p>Sok követője van, de sokan vannak, akik más nyelveket részesítenek előnyben, és a Pythont nem is fontolgatják projektjeikhez.</p>
+
+<br>
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

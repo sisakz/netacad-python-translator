@@ -1,0 +1,162 @@
+<problem chapter='3' section='3' slide='1' problem='3' title='Logic and bit operations in Python'>
+
+<!--
+Update history:
+2020-07-21 Grzegorz (reviewed, reformatted)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h1>Logic vs. bit operations: continued</h1>
+
+
+<p>We'll now show you an example of the difference in operation between the logic and bit operations. Let's assume that the following assignments have been performed:</p>
+
+<codep class="syntax-color">i = 15
+j = 22
+</codep>
+
+<br>
+
+<p>If we assume that the integers are stored with 32 bits, the bitwise image of the two variables will be as follows:</p>
+
+<codep>i: 00000000000000000000000000001111
+j: 00000000000000000000000000010110</codep>
+
+
+<br>
+
+
+<p>The assignment is given:</p>
+
+<codep class="syntax-color">log = i and j
+</codep>
+
+<br>
+
+<p>We are dealing with a logical conjunction here. Let's trace the course of the calculations. Both variables <codel>i</codel> and <codel>j</codel> are not zeros, so will be deemed to represent <codel>True</codel>. Consulting the truth table for the <codel>and</codel> operator, we can see that the result will be <codel>True</codel>. No other operations are performed.</p>
+
+<codep>log: True</codep>
+
+<br>
+
+<p>Now the bitwise operation ‒ here it is:</p>
+
+<codep class="syntax-color">bit = i & j
+</codep>
+
+<br>
+
+<p>The <codel>&amp;</codel> operator will operate with each pair of corresponding bits separately, producing the values of the relevant bits of the result. Therefore, the result will be as follows:</p>
+
+<table width="90%">
+
+<tr>
+<td><codel>i</codel></td>
+<td><codel>000000000000000000000000000<mark style="background-color:#e6f2ff;">01111</mark></codel></td>
+</tr>
+
+<tr>
+<td><codel>j</codel></td>
+<td><codel>000000000000000000000000000<mark style="background-color:#e6f2ff;">10110</mark></codel></td>
+</tr>
+
+<tr>
+<td><codel>bit = i &amp; j</codel></td>
+<td><codel>000000000000000000000000000<mark style="background-color:#e6f2ff;">00110</mark></codel></td>
+</tr>
+
+</table>
+
+<p>These bits correspond to the integer value of six.</p>
+
+<br>
+
+
+</div>
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+
+<p>Let's look at the negation operators now. First the logical one:</p>
+
+<codep class="syntax-color">logneg = not i
+</codep>
+
+<br>
+
+
+<p>The <codel>logneg</codel> variable will be set to <codel>False</codel> ‒ nothing more needs to be done.</p>
+
+
+
+<p>The bitwise negation goes like this:</p>
+
+<codep class="syntax-color">bitneg = ~i
+</codep>
+
+<br>
+
+<p>It may be a bit surprising: the <codel>bitneg</codel> variable value is <codel>-16</codel>. This may seem strange, but isn't at all. If you wish to learn more, you should check out the binary numeral system and the rules governing two's complement numbers.</p>
+
+<table width="90%">
+
+<tr>
+<td><codel>i</codel></td>
+<td><codel>0000000000000000000000000000<mark style="background-color:#e6f2ff;">1111</mark></codel></td>
+</tr>
+
+<tr>
+<td><codel>bitneg = ~i</codel></td>
+<td><codel>1111111111111111111111111111<mark style="background-color:#e6f2ff;">0000</mark></codel></td>
+</tr>
+
+</table>
+
+
+<hr>
+
+<p>Each of these two-argument operators can be used in <strong>abbreviated form</strong>. These are the examples of their equivalent notations:</p>
+
+<table width="45%">
+
+<tr>
+<td><codel>x = x &amp; y</codel></td>
+<td><codel>x <mark style="background-color:#e6f2ff;">&amp;=</mark> y</codel></td>
+</tr>
+
+<tr>
+<td><codel>x = x | y</codel></td>
+<td><codel>x <mark style="background-color:#e6f2ff;">|=</mark> y</codel></td>
+</tr>
+
+<tr>
+<td><codel>x = x ^ y</codel></td>
+<td><codel>x <mark style="background-color:#e6f2ff;">^=</mark> y</codel></td>
+</tr>
+
+</table>
+
+<br>
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

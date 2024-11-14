@@ -1,0 +1,56 @@
+<problem chapter='3' section='4' slide='1' problem='9' title='Listák | Tagfüggvények'>
+
+<!--
+Update history:
+2020-08-11 Grzegorz (reviewed), code formatting
+-->
+
+<code>
+my_list = []  # Creating an empty list.
+
+for i in range(5):
+    my_list.append(i + 1)
+
+print(my_list)
+
+</code>
+
+
+
+<h1>Elemek hozzáadása egy listához: folytatás</h1>
+
+<p><strong>Egy lista élete kezdődhet úgy, hogy üresen hozzuk létre</strong> (ezt egy üres szögletes zárójelpárral jelöljük), majd szükség szerint új elemeket adunk hozzá.</p>
+
+<p>Nézd meg a szerkesztőben lévő kódrészletet! Próbáld meg kitalálni a <codel>for</codel> ciklus végrehajtása utáni kimenetét. Futtasd le a programot, és ellenőrizd, hogy igazad volt-e!</p>
+
+
+<p>A kimenet egymást követő egész számok sorozata lesz <codel>1</codel>-től (ekkor az összes hozzáfűzött értékhez hozzáadsz egyet) <codel>5</codel>-ig.</p>
+
+<br>
+
+<p>Kicsit módosítottuk a kódrészletet:</p>
+
+<codep class="copy">my_list = []  # Creating an empty list.
+
+for i in range(5):
+    <mark style="background-color:#e6f2ff;">my_list.insert(0, i + 1)</mark>
+
+print(my_list)
+
+</codep>
+
+<br>
+
+<p>Mi fog most történni? Futtasd le a programot és ellenőrizd, hogy ezúttal is igazad volt-e!</p>
+
+<br>
+
+<p>Ugyanazt a sorozatot kell kapnod, csak <strong>fordított sorrendben</strong> (ez az <codel>insert()</codel> tagfüggvény használatának előnye).</p>
+
+
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

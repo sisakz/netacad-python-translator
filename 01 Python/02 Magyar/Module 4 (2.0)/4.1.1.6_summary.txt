@@ -1,0 +1,191 @@
+<problem chapter='4' section='1' slide='1' problem='6' title='SZAKASZ ÖSSZEFOGLALÁS'>
+
+<!--
+Update history:
+2020-08-13 Grzegorz (reviewed, re-formatted)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<h1>A legfontosabb tudnivalók</h1>
+
+<br>
+
+
+<p>1. A <strong>függvény</strong> egy olyan kódblokk, amely a függvény meghívásakor egy adott feladatot hajt végre. A függvények segítségével újra felhasználhatóvá, jobban szervezetté és olvashatóbbá tehető a kód. A függvényeknek lehetnek paraméterei és visszatérési értékei.</p>
+
+<p>2. A Pythonban legalább négy alapvető függvénytípus létezik:</p>
+
+<ul>
+<li><strong>beépített függvények</strong>, amelyek a Python szerves részét képezik (mint például a <codel>print()</codel> függvény). A Python beépített függvényeinek teljes listája a <a href="https://docs.python.org/3/library/functions.html" target="_blank">https://docs.python.org/3/library/functions.html</a> oldalon található;</li>
+
+<li>az <strong>előre telepített modulokból</strong> származó függvények (ezekről a <i>Python alapok 2</i> tanfolyamon fogsz tanulni);</li>
+
+<li><strong>felhasználó által definiált függvények</strong>, amelyeket felhasználók írtak felhasználóknak. Írhatsz saját függvényeket és szabadon használhatod őket a kódodban;</li>
+
+<li>a <codel>lambda</codel> függvények (ezekről a <i>Python alapok 2</i> tanfolyamon fogsz tanulni).</li>
+
+</ul>
+
+<p>3. Saját függvényt a <codel>def</codel> kulcsszóval és a következő szintaxissal definiálhatsz:</p>
+
+<codep>def your_function(optional parameters):
+    # the body of the function
+
+</codep>
+
+<br>
+
+<p>Definiálhatsz olyan függvényt, amely nem fogad el argumentumokat, pl.:</p>
+
+<codep>def message():    # defining a function
+    print("Hello")    # body of the function
+
+message()    # calling the function
+
+</codep>
+<br>
+
+<p>Olyan függvényt is definiálhatsz, amely argumentumokat is elfogad, mint az alábbi egyparaméteres függvény:</p>
+
+<codep>def hello(name):    # defining a function
+    print("Hello,", name)    # body of the function
+
+
+name = input("Enter your name: ")
+
+hello(name)    # calling the function
+
+</codep>
+
+<br>
+
+<p>Ne aggódj, a paraméterezett függvényekkel a következő részben részletesebben foglalkozunk majd.</p>
+
+
+
+<br>
+<br>
+
+</div>
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+
+<p><strong>1. gyakorlat</strong></p>
+<p>Az <codel>input()</codel> függvény egy példa a ...
+<br><br>
+a) felhasználó által definiált függvényre.<br>
+b) beépített függvényre.<br></p>
+
+
+<button class="button tiny" onclick="solution('sol')">Ellenőrzés</button>
+
+<p id="sol" style="display: none;">
+<strong>b</strong> ‒ Az input() egy beépített függvény.
+</p>
+
+<script>
+function solution (id) {
+    var element = document.getElementById(id);
+    
+if (element.style.display === "none") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
+    }
+}
+</script>
+
+<br>
+
+
+
+<p><strong>2. gyakorlat</strong></p>
+<p>Mi történik, ha megpróbálunk egy függvényt hamarabb meghívni, mint ahogy definiálnánk? Például:</p>
+
+<codep>hi()
+
+def hi():
+    print("hi!")
+
+</codep>
+
+<br>
+
+
+<button class="button tiny" onclick="solution('sol2')">Ellenőrzés</button>
+
+<p id="sol2" style="display: none;">
+Hiba történik, egész pontosan <codel>NameError</codel> kivételt fog kiváltani.
+</p>
+
+
+<script>
+function solution (id) {
+    var element = document.getElementById(id);
+    
+if (element.style.display === "none") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
+    }
+}
+</script>
+
+<br>
+
+
+
+
+<p><strong>3. gyakorlat</strong></p>
+<p>Mi fog történni, ha az alábbi kódot futtatjuk?</p>
+
+<codep>def hi():
+    print("hi")
+
+hi(5)
+
+</codep>
+
+<br>
+
+<button class="button tiny" onclick="solution('sol3')">Check</button>
+
+<p id="sol3" style="display: none;">
+Hiba történik, egész pontosan <codel>TypeError</codel> kivételt fog kiváltani. A <codel>hi()</codel> függvény nem fogad argumentumokat.
+</p>
+
+<script>
+function solution (id) {
+    var element = document.getElementById(id);
+    
+if (element.style.display === "none") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
+    }
+}
+</script>
+
+
+<br>
+
+</div>
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

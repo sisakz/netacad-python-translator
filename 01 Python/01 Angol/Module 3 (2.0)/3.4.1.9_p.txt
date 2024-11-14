@@ -1,0 +1,56 @@
+<problem chapter='3' section='4' slide='1' problem='9' title='Lists ‒ collections of data | list methods'>
+
+<!--
+Update history:
+2020-08-11 Grzegorz (reviewed), code formatting
+-->
+
+<code>
+my_list = []  # Creating an empty list.
+
+for i in range(5):
+    my_list.append(i + 1)
+
+print(my_list)
+
+</code>
+
+
+
+<h1>Adding elements to a list: continued</h1>
+
+<p>You can <strong>start a list's life by making it empty</strong> (this is done with an empty pair of square brackets) and then adding new elements to it as needed.</p>
+
+<p>Take a look at the snippet in the editor. Try to guess its output after the <codel>for</codel> loop execution. Run the program to check if you were right.</p>
+
+
+<p>It'll be a sequence of consecutive integer numbers from <codel>1</codel> (you then add one to all the appended values) to <codel>5</codel>.</p>
+
+<br>
+
+<p>We've modified the snippet a bit:</p>
+
+<codep class="copy">my_list = []  # Creating an empty list.
+
+for i in range(5):
+    <mark style="background-color:#e6f2ff;">my_list.insert(0, i + 1)</mark>
+
+print(my_list)
+
+</codep>
+
+<br>
+
+<p>What happens now? Run the program and check if this time you're right, too.</p>
+
+<br>
+
+<p>You should get the same sequence, but in <strong>reverse order</strong> (this is the merit of using the <codel>insert()</codel> method).
+
+
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

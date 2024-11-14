@@ -1,0 +1,365 @@
+<problem chapter='3' section='2' slide='1' problem='17' title='SECTION SUMMARY (2/2)'>
+
+
+<!--
+Update history:
+2020-07-21 Grzegorz (reviewed, re-formatted)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<h1>Key takeaways: continued</h1>
+
+
+<p><strong>Exercise 1</strong></p>
+<p>Create a <codel>for</codel> loop that counts from 0 to 10, and prints odd numbers to the screen. Use the skeleton below:</p>
+
+<codep>for i in range(1, 11):
+    # Line of code.
+        # Line of code.
+
+</codep>
+
+<br>
+
+<button class="button tiny" onclick="solution('sol')">Check</button>
+
+<p id="sol" style="display: none;">
+
+Sample solution:
+<br>
+
+<codep>for i in range(0, 11):
+    if i % 2 != 0:
+        print(i)
+
+</codep>
+</p>
+
+<script>
+function solution (id) {
+    var element = document.getElementById(id);
+    
+if (element.style.display === "none") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
+    }
+}
+</script>
+
+<br>
+
+
+
+
+
+
+
+
+
+<p><strong>Exercise 2</strong></p>
+<p>Create a <codel>while</codel> loop that counts from 0 to 10, and prints odd numbers to the screen. Use the skeleton below:</p>
+
+<codep>x = 1
+while x < 11:
+    # Line of code.
+        # Line of code.
+    # Line of code.
+
+</codep>
+<br>
+
+
+<button class="button tiny" onclick="solution('sol2')">Check</button>
+
+<p id="sol2" style="display: none;">
+
+Sample solution:
+<br>
+
+<codep>x = 1
+while x < 11:
+    if x % 2 != 0:
+        print(x)
+    x += 1
+
+</codep>
+</p>
+
+
+<script>
+function solution (id) {
+    var element = document.getElementById(id);
+    
+if (element.style.display === "none") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
+    }
+}
+</script>
+
+<br>
+
+
+
+
+
+
+
+
+<p><strong>Exercise 3</strong></p>
+<p>Create a program with a <codel>for</codel> loop and a <codel>break</codel> statement. The program should iterate over characters in an email address, exit the loop when it reaches the <codel>@</codel> symbol, and print the part before <codel>@</codel> on one line. Use the skeleton below:</p>
+
+<codep>for ch in "john.smith@pythoninstitute.org":
+    if ch == "@":
+        # Line of code.
+    # Line of code.
+
+</codep>
+<br>
+
+<button class="button tiny" onclick="solution('sol3')">Check</button>
+
+<p id="sol3" style="display: none;">
+
+Sample solution:
+<br>
+
+<codep>for ch in "john.smith@pythoninstitute.org":
+    if ch == "@":
+        break
+    print(ch, end="")
+
+</codep>
+</p>
+
+<script>
+function solution (id) {
+    var element = document.getElementById(id);
+    
+if (element.style.display === "none") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
+    }
+}
+</script>
+
+
+<br>
+
+
+
+
+
+
+
+
+<p><strong>Exercise 4</strong></p>
+<p>Create a program with a <codel>for</codel> loop and a <codel>continue</codel> statement. The program should iterate over a string of digits, replace each <codel>0</codel> with <codel>x</codel>, and print the modified string to the screen. Use the skeleton below:</p>
+
+<codep>for digit in "0165031806510":
+    if digit == "0":
+        # Line of code.
+        # Line of code.
+    # Line of code.
+
+</codep>
+
+
+<br>
+
+<button class="button tiny" onclick="solution('sol4')">Check</button>
+
+<p id="sol4" style="display: none;">
+
+Sample solution:
+<br>
+
+<codep>for digit in "0165031806510":
+    if digit == "0":
+        print("x", end="")
+        continue
+    print(digit, end="")
+
+</codep>
+
+</p>
+
+<script>
+function solution (id) {
+    var element = document.getElementById(id);
+    
+if (element.style.display === "none") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
+    }
+}
+</script>
+
+<br>
+<br>
+
+</div>
+
+
+
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+
+<p><strong>Exercise 5</strong></p>
+<p>What is the output of the following code?</p>
+
+<codep>n = 3
+
+while n > 0:
+    print(n + 1)
+    n -= 1
+else:
+    print(n)
+
+</codep>
+
+
+<br>
+
+<button class="button tiny" onclick="solution('sol5')">Check</button>
+
+<p id="sol5" style="display: none;">
+
+
+<codep>4
+3
+2
+0</codep>
+
+</p>
+
+<script>
+function solution (id) {
+    var element = document.getElementById(id);
+    
+if (element.style.display === "none") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
+    }
+}
+</script>
+
+
+
+<br>
+
+
+
+
+
+
+
+
+
+
+<p><strong>Exercise 6</strong></p>
+<p>What is the output of the following code?</p>
+
+<codep>n = range(4)
+
+for num in n:
+    print(num - 1)
+else:
+    print(num)
+
+</codep>
+
+
+<br>
+
+<button class="button tiny" onclick="solution('sol6')">Check</button>
+
+<p id="sol6" style="display: none;">
+
+
+<codep>-1
+0
+1
+2
+3</codep>
+
+</p>
+
+<script>
+function solution (id) {
+    var element = document.getElementById(id);
+    
+if (element.style.display === "none") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
+    }
+}
+</script>
+
+
+
+
+<p><strong>Exercise 7</strong></p>
+<p>What is the output of the following code?</p>
+
+<codep>for i in range(0, 6, 3):
+    print(i)
+
+</codep>
+
+
+<br>
+
+<button class="button tiny" onclick="solution('sol7')">Check</button>
+
+<p id="sol7" style="display: none;">
+
+
+<codep>0
+3</codep>
+
+</p>
+
+<script>
+function solution (id) {
+    var element = document.getElementById(id);
+    
+if (element.style.display === "none") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
+    }
+}
+</script>
+
+
+<br>
+
+</div>
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

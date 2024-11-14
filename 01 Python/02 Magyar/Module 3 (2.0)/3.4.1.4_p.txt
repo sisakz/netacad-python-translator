@@ -1,0 +1,72 @@
+<problem chapter='3' section='4' slide='1' problem='4' title='Listák | Műveletek'>
+
+<!--
+Update history:
+2020-08-03 Grzegorz (reviewed)
+-->
+
+<code>
+numbers = [10, 5, 7, 2, 1]
+print("Original list contents:", numbers)  # Printing original list contents.
+
+numbers[0] = 111
+print("\nPrevious list contents:", numbers)  # Printing previous list contents.
+
+numbers[1] = numbers[4]  # Copying value of the fifth element to the second.
+print("Previous list contents:", numbers)  # Printing previous list contents.
+
+print("\nList's length:", len(numbers))  # Printing previous list length.
+
+###
+
+del numbers[1]  # Removing the second element from the list.
+print("New list's length:", len(numbers))  # Printing new list length.
+print("\nNew list contents:", numbers)  # Printing current list contents.
+
+###
+
+</code>
+
+
+
+<h1>Elemek eltávolítása egy listából</h1>
+
+<p>A lista bármelyik eleme bármikor <strong>eltávolítható</strong>. Ez a <codel>del</codel> (delete) nevű utasítással történik. Megjegyzés: ez egy <strong>utasítás</strong>, nem függvény.</p>
+
+<p>Törléshez az eltávolítandó elemre kell mutatnod. Az elem eltűnik a listából, és a lista hossza eggyel csökken.</p>
+
+<p>Nézd meg az alábbi kódrészletet! Kitalálod, milyen kimenetet fog produkálni? Futtasd le a programot a szerkesztőprogramban és ellenőrizd!</p>
+
+<codep><mark style="background-color:#e6f2ff;">del numbers[1]</mark>
+print(len(numbers))
+print(numbers)
+
+</codep> 
+
+<br>
+
+<hr>
+
+<p><strong>Egy nem létező elemhez nem lehet hozzáférni!</strong> Nem lehet sem az értékét kiírni, sem értéket rendelni hozzá. Mindkét utasítás futásidejű hibát fog okozni:</p>
+
+<codep style="color:red;">print(numbers[4])
+numbers[4] = 1
+
+</codep>
+
+<br>
+
+<p>Add hozzá a fenti kódrészletet a szerkesztőprogramban lévő kódhoz (az utolsó kódsor után), futtasd le a programot és ellenőrizd, mi történik!</p>
+
+<p>Megjegyzés: Eltávolítottuk a lista egyik elemét, így már csak négy elem van a listában. Ez azt jelenti, hogy a négyes számú elem nem létezik.</p>
+
+
+
+<br>
+
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

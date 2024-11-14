@@ -1,0 +1,152 @@
+<problem chapter='2' section='3' slide='1' problem='10' title='SECTION SUMMARY'>
+
+<!--
+Update history:
+2020-07-17 Grzegorz (reformatted; code - syntax-color and blank lines added)
+2020-08-25 Grzegorz (the classic division returns always a float)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<h1>Key takeaways</h1>
+
+
+<p>1. An <strong>expression</strong> is a combination of values (or variables, operators, calls to functions ‒ you will learn about them soon) which evaluates to a certain value, e.g., <codel>1 + 2</codel>.</p>
+
+<p>2. <strong>Operators</strong> are special symbols or keywords which are able to operate on the values and perform (mathematical) operations, e.g., the <codel>*</codel> operator multiplies two values: <codel>x * y</codel>.</p>
+
+<p>3. Arithmetic operators in Python: <codel>+</codel> (addition), <codel>-</codel> (subtraction), <codel>*</codel> (multiplication), <codel>/</codel> (classic division ‒ always returns a float), <codel>%</codel> (modulus ‒ divides left operand by right operand and returns the remainder of the operation, e.g., <codel>5 % 2 = 1</codel>), <codel>**</codel> (exponentiation ‒ left operand raised to the power of right operand, e.g., <codel>2 ** 3 = 2 * 2 * 2 = 8</codel>), <codel>//</codel> (floor/integer division ‒ returns a number resulting from division, but rounded down to the nearest whole number, e.g., <codel>3 // 2.0 = 1.0</codel>)</p>
+
+<p>4. A <strong>unary</strong> operator is an operator with only one operand, e.g., <codel>-1</codel>, or <codel>+3</codel>.</p>
+
+<p>5. A <strong>binary</strong> operator is an operator with two operands, e.g., <codel>4 + 5</codel>, or <codel>12 % 5</codel>.</p>
+
+<p>6. Some operators act before others - <strong>the hierarchy of priorities</strong>:</p>
+<ul> 
+<li>unary <codel>+</codel> and <codel>-</codel> have the highest priority</li>
+<li>then: <codel>**</codel>, then: <codel>*</codel>, <codel>/</codel>, and <codel>%</codel>, and then the lowest priority: binary <codel>+</codel> and <codel>-</codel>.</li>
+</li>
+</ul>
+
+<p>7. Subexpressions in <strong>parentheses</strong> are always calculated first, e.g., <codel>15 - 1 * (5 * (1 + 2)) = 0</codel>.</p>
+
+<p>8. The <strong>exponentiation</strong> operator uses <strong>right-sided binding</strong>, e.g., <codel>2 ** 2 ** 3 = 256</codel>.</p>
+
+<br>
+<br>
+
+</div>
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+
+<p><strong>Exercise 1</strong></p>
+<p>What is the output of the following snippet?</p>
+
+<codep class="syntax-color">print((2 ** 4), (2 * 4.), (2 * 4))
+</codep>
+
+<br>
+
+<button class="button tiny" onclick="solution('sol')">Check</button>
+
+<p id="sol" style="display: none;">
+<codep>16 8.0 8</codep>
+</p>
+
+<script>
+function solution (id) {
+    var element = document.getElementById(id);
+    
+if (element.style.display === "none") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
+    }
+}
+</script>
+
+<br>
+
+
+
+<p><strong>Exercise 2</strong></p>
+<p>What is the output of the following snippet?</p>
+
+<codep class="syntax-color">print((-2 / 4), (2 / 4), (2 // 4), (-2 // 4))
+</codep>
+
+<br>
+
+
+<button class="button tiny" onclick="solution('sol2')">Check</button>
+
+<p id="sol2" style="display: none;">
+<codep>-0.5 0.5 0 -1</codep>
+</p>
+
+
+<script>
+function solution (id) {
+    var element = document.getElementById(id);
+    
+if (element.style.display === "none") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
+    }
+}
+</script>
+
+<br>
+
+
+
+
+<p><strong>Exercise 3</strong></p>
+<p>What is the output of the following snippet?</p>
+
+<codep class="syntax-color">print((2 % -4), (2 % 4), (2 ** 3 ** 2))
+</codep>
+
+<br>
+
+<button class="button tiny" onclick="solution('sol3')">Check</button>
+
+<p id="sol3" style="display: none;">
+<codep>-2 2 512</codep>
+</p>
+
+<script>
+function solution (id) {
+    var element = document.getElementById(id);
+    
+if (element.style.display === "none") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
+    }
+}
+</script>
+
+
+<br>
+
+</div>
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

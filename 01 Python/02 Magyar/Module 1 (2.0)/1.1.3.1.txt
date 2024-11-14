@@ -1,0 +1,70 @@
+<problem chapter='1' section='1' slide='3' problem='1' title='Python 2 vs. Python 3'>
+
+<!--
+Update history:
+2020-07-07 Grzegorz (formatted, text added)
+2020-08-25 Grzegorz (deleting a sentence)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+<h1>Többféle Python van</h1>
+
+<p>A Pythonnak két fő verziója van, a Python 2 és a Python 3.</p>
+
+<p>A Python 2 az eredeti Python egy régebbi változata. Fejlesztését szándékosan leállították, bár ez nem jelenti azt, hogy nincsenek hozzá frissítések. Ellenkezőleg, rendszeresen adnak ki frissítéseket hozzá, de ezek jelentős újításokat nem tartalmaznak, inkább csak kijavítják a frissen felfedezett hibákat és biztonsági réseket. A Python 2 fejlesztése már életciklusa végéhez ért, de maga a Python 2 még nagyon is él.</p>
+
+<p><strong>A Python 3 a nyelv újabb (pontosabban az aktuális) verziója. Saját fejlődési útját járja, saját szabványokat és megoldásokat hoz létre.</strong></p>
+
+<p>A Python e két verziója nem kompatibilis egymással. A Python 2 szkriptek nem fognak futni Python 3 környezetben és fordítva. Így, ha azt szeretnéd, hogy a régi Python 2 kódod egy Python 3 értelmező futtassa, az egyetlen megoldás, hogy át kell írni azt. Persze nem kell nulláról kezdeni mindent, hiszen a kód nagy része érintetlen maradhat, de az összes kódot át kell vizsgálni, hogy megtaláljuk az összes lehetséges inkompatibilitást. Sajnos ezt a folyamatot nem lehet teljesen automatizálni.</p>
+
+<p>Túl nehéz, túl időigényes, túl drága és túl kockázatos egy régi Python 2 alkalmazást új platformra migrálni. Lehetséges, hogy a kód újraírása új hibákat fog bevinni a kódba. Egyszerűbb és észszerűbb ezeket a rendszereket békén hagyni, és a meglévő értelmezőt fejleszteni, ahelyett, hogy a már működő forráskódon belül próbálnánk dolgozni.</p>
+
+
+
+<br>
+
+</div>
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+<img src="/uploads/media/default/0001/01/9538f792069e7d28228c24ecc058fbff88c653b0.png" width="30%" alt="Python 2 vs. Python 3 concept" style="float:right">
+
+A Python 3 nem egyszerűen a Python 2 jobb változata - ez egy teljesen más nyelv, bár nagyon hasonlít az elődjére. Ha távolról nézzük őket, ugyanolyannak tűnnek, de ha közelebbről megnézzük, akkor azonban rengeteg különbséget veszünk észre.
+
+<br><br>
+
+Ha egy régi, meglévő Python megoldást módosítasz, azt nagy valószínűséggel Python 2-ben kódolták. Ez az oka annak, hogy a Python 2 még mindig használatban van. Túl sok meglévő Python 2 alkalmazás van ahhoz, hogy egyszerűen kidobjuk azokat.
+
+<div style="clear: both;"></div>
+<br>
+
+<p><span class="label" style="background-color:orange;"><b>MEGJEGYZÉS</b></span></p>
+
+<p>Ha új Python projektet indítasz, akkor <strong>a Python 3-at használd! Ez az a Python verzió, amelyet a tanfolyam során is használni fogsz.</strong></p>
+
+<p>Fontos megjegyezni, hogy a Python 3 kiadásai között is lehetnek kisebb-nagyobb különbségek (pl. a Python 3.6 alapértelmezetten bevezette a rendezett szótárkulcsokat a CPython implementációban) - a jó hír azonban az, hogy a Python 3 minden újabb verziója <strong>visszafelé kompatibilis</strong> a Python 3 korábbi verzióival. Ahol van értelme és fontos, a tanfolyamon mindig igyekszünk kiemelni ezeket a különbségeket.</p>
+
+<p>A tanfolyam anyagában található összes kódrészletet teszteltük a Python 3.4, Python 3.6, Python 3.7 és Python 3.8 verziókkal.</p>
+
+<br>
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

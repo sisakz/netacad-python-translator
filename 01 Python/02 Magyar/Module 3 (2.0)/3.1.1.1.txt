@@ -1,0 +1,139 @@
+<problem chapter='3' section='1' slide='1' problem='1' title='Döntéshozatal Pythonban'>
+
+<!--
+Update history:
+2020-07-20 Grzegorz (reviewed)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<h1>Kérdések és válaszok</h1>
+
+<p>Egy programozó megír egy programot, <strong>a program pedig kérdéseket tesz fel</strong>.</p>
+
+<p>A számítógép végrehajtja a programot, és <strong>megadja a válaszokat</strong>. A programnak képesnek kell lennie arra, hogy <strong>a kapott válaszoknak megfelelően reagáljon</strong>.</p>
+
+<p>Szerencsére a számítógép csak kétféle választ ismer:</p>
+
+<ul>
+<li>igen, ez igaz;</li>
+<li>nem, ez hamis.</li>
+</ul>
+ 
+
+<p>Soha nem fogsz olyan választ kapni, hogy <i>Hadd gondolkozzam....</i>, <i>Nem tudom</i>, vagy <i>Valószínűleg igen, de nem tudom biztosan</i>.</p>
+
+ 
+<p><strong>A kérdések feltevéséhez a Python egy sor nagyon speciális operátort használ</strong>. Vegyük sorra ezeket, néhány egyszerű példán szemléltetve a hatásukat.</p>
+
+<br>
+
+<h2>Összehasonlítás: egyenlőségi operátor</h2>
+
+
+<p>Kérdés: <strong>két érték egyenlő</strong>?</p>
+
+<p>A kérdés feltevéséhez az <codel>==</codel> (egyenlő) operátort használhatod.</p>
+
+<p>Ne feledkezz meg az alábbi fontos különbségről:</p>
+
+<ul>
+<li>Az <codel><mark style="background-color:#e6f2ff;">=</mark></codel> egy <strong>értékadási operátor</strong>, pl.: <codel>a = b</codel> hozzárendeli az <codel>a</codel> értéket a <codel>b</codel> értékhez;</li>
+<li>Az <codel><mark style="background-color:#e6f2ff;">==</mark></codel> egy kérdés, hogy<i> az értékek egyenlőek-e? </i> Az <codel>a == b</codel> <strong>összehasonlítja</strong> az <codel>a</codel> és <codel>b</codel> értékeket.</li>
+</ul>
+
+<p>Ez egy <strong>balról jobbra kiértékelődő bináris operátor</strong>. Két argumentumra van szüksége, és <strong>ellenőrzi, hogy azok egyenlőek-e</strong>.</p>
+
+<br>
+
+
+</div>
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<h2>Gyakorlatok</h2>
+
+
+<p>Most felteszünk néhány kérdést. Próbáld meg kitalálni a válaszokat.</p>
+
+<hr>
+
+<p><strong>1. kérdés</strong>: Mi az eredménye a következő összehasonlításnak?</p>
+<p><codel>2 == 2</codel>&nbsp;&nbsp;&nbsp; <button class="button tiny" onclick="solution('sol')">Ellenőrzés</button></p>
+
+
+<p id="sol" style="display: none;"><codel>True</codel> - természetesen 2 egyenlő 2-vel. A Python válasza: <codel>True</codel> (emlékezzünk az előre definiált literálpárra, a <codel>True</codel> és <codel>False</codel> értékekre, amik egyben Python kulcsszavak is).</p>
+
+<script>
+function solution (id) {
+    var element = document.getElementById(id);
+    
+if (element.style.display === "none") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
+    }
+}
+</script>
+
+<hr>
+
+
+<p><strong>2. kérdés</strong>: Mi az eredménye a következő összehasonlításnak?</p>
+<p><codel>2 == 2.</codel>&nbsp;&nbsp;&nbsp; <button class="button tiny" onclick="solution('sol2')">Ellenőrzés</button></p>
+
+
+<p id="sol2" style="display: none;">Ez a kérdés már nem annyira könnyű, mint az előző. Szerencsére a Python képes az egész szám értéket valós értékké alakítani, így a válasz <codel>True</codel>.</p>
+
+<script>
+function solution (id) {
+    var element = document.getElementById(id);
+    
+if (element.style.display === "none") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
+    }
+}
+</script>
+
+<hr>
+
+<p><strong>3. kérdés</strong>: Mi az eredménye a következő összehasonlításnak?</p>
+<p><codel>1 == 2</codel>&nbsp;&nbsp;&nbsp; <button class="button tiny" onclick="solution('sol3')">Ellenőrzés</button></p>
+
+
+<p id="sol3" style="display: none;">Ez könnyű. A válasz: <codel>False</codel>.</p>
+
+<script>
+function solution (id) {
+    var element = document.getElementById(id);
+    
+if (element.style.display === "none") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
+    }
+}
+</script>
+
+<br>
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

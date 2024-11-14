@@ -1,0 +1,66 @@
+<problem chapter='2' section='2' slide='1' problem='7' title='Literálok'>
+
+<!--
+Update history:
+2020-07-17 Grzegorz (reformatted; code - syntax-color class, blank line added)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<h1>Lebegőpontos számok kódolása</h1>
+
+
+<p>Vizsgáljuk meg a nagyon kis abszolút értékű (nullához közeli) számok tárolására vonatkozó szabályokat.</p>
+
+<p>A <i>Planck-állandónak</i> nevezett (és <i>h</i>-val jelölt) fizikai állandó értéke a tankönyvek szerint: <b>6.62607 x 10<sup>-34</sup></b>.</p>
+
+<p>Ha egy programban szeretnéd használni, akkor így kell beírni:</p>
+
+<codep>6.62607E-34</codep>
+
+<br>
+
+<p>Megjegyzés: az, hogy a lebegőpontos értékek leírásának egyik lehetséges formáját választottad, nem jelenti azt, hogy a Python ugyanúgy fogja megjeleníteni.</p>
+
+<p>A Python néha <strong>más jelölést</strong> választ, mint te.</p>
+
+<br>
+
+</div>
+
+<div class="small-12 large-6 columns">
+
+<h1></h1>
+
+<p>Tegyük fel például, hogy a következő lebegőpontos literált akarod használni:</p>
+
+<codep>0.0000000000000000000001</codep>
+
+<br>
+
+<p>Ha ezt a literál értéket írod be a Pythonban:</p>
+
+<codep class="syntax-color">print(0.0000000000000000000001)
+</codep>
+
+<br>
+
+<p>ez lesz az eredmény:</p>
+
+<codep>1e-22</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+<p>A Python mindig a <strong>számok legrövidebb megjelenítési formáját</strong> választja, és erre figyelemmel kell lennünk a literálok létrehozásakor.</p>
+
+</div>
+
+</div>
+</div>
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

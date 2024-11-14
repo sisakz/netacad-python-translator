@@ -1,0 +1,101 @@
+<problem chapter='2' section='4' slide='1' problem='2' title='Változók'>
+
+<!--
+Update history:
+2020-07-17 Grzegorz (re-formatted)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<h1>Helyes és helytelen változónevek</h1>
+
+
+<p>Ne feledd, hogy ugyanezek a korlátozások vonatkoznak a függvénynevekre is.</p>
+
+<p>A Python nem ír elő korlátozásokat a változónevek hosszára, de ez nem jelenti azt, hogy a hosszú változónév mindig jobb, mint a rövid.</p>
+
+<p>Íme néhány helyes, de nem mindig kényelmes változónév:<p>
+
+<p><codel>MyVariable</codel>, <codel>i</codel>, <codel>t34</codel>, <codel>Exchange_Rate</codel>, <codel>counter</codel>, <codel>days_to_christmas</codel>, <codel>TheNameIsSoLongThatYouWillMakeMistakesWithIt</codel>, <codel>_</codel>.</p>
+
+<br>
+
+<p>Ráadásul a Pythonban nemcsak a latin betűk, hanem más ábécét használó nyelvek sajátos karakterei is használhatók.</p>
+
+<p>Ezek a változónevek is helyesek:</p>
+
+<p><codel>Adi&#xF3;s_Se&#xF1;ora</codel>, <codel>s&#xFB;r_la_mer</codel>, <codel>Einbahnstra&#xDF;e</codel>, <codel>&#x43F;&#x435;&#x440;&#x435;&#x43C;&#x435;&#x43D;&#x43D;&#x430;&#x44F;</codel>.</p>
+
+
+<p>És most néhány <strong>helytelen név</strong>:</p>
+
+<p><codel style="color:red;">10t</codel> (nem kezdődik betűvel), <codel style="color:red;">Exchange Rate</codel> (szóközt tartalmaz)</p>
+
+<br>
+
+<p><span class="label" style="background-color:orange"><b>MEGJEGYZÉS</b></span></p>
+
+<p>A <a href="https://www.python.org/dev/peps/pep-0008/" target="_blank">PEP 8 -- Style Guide for Python Code</a> a következő elnevezési gyakorlatot ajánlja a változók és függvények elnevezésére a Pythonban:</p>
+
+<ul>
+<li>a változók neveit kisbetűvel kell írni, a szavakat aláhúzással elválasztva az olvashatóság javítása érdekében (pl.: <codel>var</codel>, <codel>my_variable</codel>)</li>
+<li>a függvénynevek a változónevekkel megegyező gyakorlatot kövessék (pl.: <codel>fun</codel>, <codel>my_function</codel>)</li>
+<li>lehetséges a vegyes betűállások használata is (pl.: <codel>myVariable</codel>), de csak olyan környezetben, ahol már ez az uralkodó stílus, hogy megmaradjon a visszafelé kompatibilitás az elfogadott gyakorlattal.</li>
+</ul>
+
+<br>
+
+</div>
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<h1>Kulcsszavak</h1>
+
+
+<p>Íme azon szavak listája, amelyek minden Python programban különleges szerepet játszanak.</p>
+
+<codep>['False', 'None', 'True', 'and', 'as', 'assert', 'break', 'class', 'continue', 'def', 'del', 'elif', 'else', 'except', 'finally', 'for', 'from', 'global', 'if', 'import', 'in', 'is', 'lambda', 'nonlocal', 'not', 'or', 'pass', 'raise', 'return', 'try', 'while', 'with', 'yield']</codep>
+
+<br>
+
+<p>Ezeket <strong>kulcsszavaknak</strong> vagy (pontosabban) <strong>foglalt kulcsszavaknak</strong> nevezzük. Azért vannak fenntartva, mert <strong>nem használhatod őket névként</strong> sem a változók, sem a függvények, sem bármilyen más nevesített entitáshoz, amit létre akarsz hozni.</p>
+
+<p>A fenntartott szó jelentése <strong>előre meghatározott</strong>, és semmilyen módon nem változtatható meg.</p>
+
+<p>Szerencsére, mivel a Python nagy- és kisbetű-érzékeny, bármelyik szót módosíthatjuk úgy, hogy bármelyik betűjének nagyságát megváltoztatjuk, és így egy új szót hozunk létre, amely már nem foglalt.</p>
+
+<p>Például <strong>nem nevezheted el</strong> így a változódat:</p>
+
+<p style="background-color:white;"><font face="Courier New" color="red">
+import
+</font></p>
+
+<p>Nem szabad, hogy egy változót így nevezz el, ez tilos! De helyette megteheted ezt:</p>
+
+<p style="background-color:white;"><font face="Courier New" color="green">
+Import
+</font></p>
+ 
+
+<p>Lehet, hogy ezek a szavak most még rejtélyesek számodra, de hamarosan meg fogod tanulni a jelentésüket.</p>
+
+
+<br>
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

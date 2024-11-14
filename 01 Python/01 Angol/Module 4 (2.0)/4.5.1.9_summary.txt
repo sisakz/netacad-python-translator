@@ -1,0 +1,139 @@
+<problem chapter='4' section='5' slide='1' problem='9' title='SECTION SUMMARY'>
+
+<!--
+Update history:
+2020-08-18 Grzegorz (reviewed, re-formatted, PEP-8 compliance check)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<h1>Key takeaways</h1>
+
+
+<p>1. A function can call other functions, or even itself. When a function calls itself, this situation is known as <strong>recursion</strong>, and the function which calls itself and contains a specified termination condition (i.e., the base case − a condition which doesn't tell the function to make any further calls to that function) is called a <strong>recursive</strong> function.</p>
+
+<p>2. You can use recursive functions in Python to write <strong>clean, elegant code, and divide it into smaller, organized chunks</strong>. On the other hand, you need to be very careful as it might be <strong>easy to make a mistake and create a function which never terminates</strong>. You also need to remember that <strong>recursive calls consume a lot of memory</strong>, and therefore may sometimes be inefficient.</p>
+
+<p>When using recursion, you need to take all its advantages and disadvantages into consideration.</p>
+
+<p>The factorial function is a classic example of how the concept of recursion can be put in practice:<p>
+
+<codep class="copy"># Recursive implementation of the factorial function.
+
+def <mark style="background-color:#e6f2ff;">factorial(n)</mark>:
+    if n == 1:    # The base case (termination condition.)
+        return 1
+    else:
+        return n * <mark style="background-color:#e6f2ff;">factorial(n - 1)</mark>
+
+
+print(factorial(4)) # 4 * 3 * 2 * 1 = 24
+
+</codep>
+<br>
+
+<br>
+<br>
+
+</div>
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+
+<p><strong>Exercise 1</strong></p>
+<p>What will happen when you attempt to run the following snippet and why?</p>
+
+<codep>def factorial(n):
+    return n * factorial(n - 1)
+
+
+print(factorial(4))
+
+</codep>
+
+<br>
+
+<div align="right">
+<button class="button tiny" onclick="solution('sol')">Check</button>
+</div>
+
+<p id="sol" style="display: none;">
+The factorial function has no termination condition (no base case) so Python will raise an exception (<codel>RecursionError: maximum recursion depth exceeded</codel>)
+</p>
+
+<script>
+function solution (id) {
+    var element = document.getElementById(id);
+    
+if (element.style.display === "none") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
+    }
+}
+</script>
+
+<br>
+
+
+
+<p><strong>Exercise 2</strong></p>
+<p>What is the output of the following snippet?</p>
+
+<codep>def fun(a):
+    if a > 30:
+        return 3
+    else:
+        return a + fun(a + 3)
+
+
+print(fun(25))
+
+</codep>
+
+<br>
+
+<div align="right">
+<button class="button tiny" onclick="solution('sol2')">Check</button>
+</div>
+
+<p id="sol2" style="display: none;">
+<codep>56</codep>
+</p>
+
+
+<script>
+function solution (id) {
+    var element = document.getElementById(id);
+    
+if (element.style.display === "none") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
+    }
+}
+</script>
+
+<br>
+
+
+<br>
+
+</div>
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

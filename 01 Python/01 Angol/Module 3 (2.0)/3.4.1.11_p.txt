@@ -1,0 +1,67 @@
+<problem chapter='3' section='4' slide='1' problem='11' title='Lists ‒ collections of data | lists and loops'>
+
+<!--
+Update history:
+2020-08-11 Grzegorz (reviewed), code formatting
+-->
+
+<code>
+</code>
+
+
+
+<h1>Lists in action</h1>
+
+<p>Let's leave lists aside for a short moment and look at one intriguing issue.</p>
+
+<p>Imagine that you need to rearrange the elements of a list, i.e., reverse the order of the elements: the first and the fifth as well as the second and fourth elements will be swapped. The third one will remain untouched.</p>
+
+<br>
+
+<p>Question: how can you swap the values of two variables?</p>
+
+<p>Take a look at the snippet:</p>
+
+<codep class="syntax-color">variable_1 = 1
+variable_2 = 2
+
+variable_2 = variable_1
+variable_1 = variable_2
+</codep>
+
+<br>
+
+<p>If you do something like this, you would <strong>lose the value previously stored</strong> in <codel>variable_2</codel>. Changing the order of the assignments will not help. You need a <strong>third variable that serves as an auxiliary storage</strong>.</p>
+
+<p>This is how you can do it:</p>
+
+<codep>variable_1 = 1
+variable_2 = 2
+
+<mark style="background-color:#e6f2ff;">auxiliary</mark> = variable_1
+variable_1 = variable_2
+variable_2 = <mark style="background-color:#e6f2ff;">auxiliary</mark>
+
+</codep>
+
+<br>
+
+<p>Python offers a more convenient way of doing the swap ‒ take a look:</p>
+
+<codep>variable_1 = 1
+variable_2 = 2
+
+variable_1, variable_2 = variable_2, variable_1
+
+</codep>
+
+<br>
+
+<p>Clear, effective and elegant ‒ isn't it?</p>
+
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

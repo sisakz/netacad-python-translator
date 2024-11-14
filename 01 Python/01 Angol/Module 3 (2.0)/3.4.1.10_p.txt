@@ -1,0 +1,81 @@
+<problem chapter='3' section='4' slide='1' problem='10' title='Lists ‒ collections of data | lists and loops'>
+
+<!--
+Update history:
+2020-08-11 Grzegorz (reviewed), code formatting
+-->
+
+<code>
+my_list = [10, 1, 8, 3, 5]
+total = 0
+
+for i in range(len(my_list)):
+    total += my_list[i]
+
+print(total)
+
+</code>
+
+
+
+<h1>Making use of lists</h1>
+
+<p>The <codel>for</codel> loop has a special variant that can <strong>process lists</strong> very effectively ‒ let's take a look at that.</p>
+
+<p>Let's assume that you want to <strong>calculate the sum of all the values stored in the <codel>my_list</codel> list</strong>.</p>
+
+<p>You need a variable whose sum will be stored and initially assigned a value of <codel>0</codel> ‒ its name will be <codel>total</codel>. (Note: we're not going to name it <codel>sum</codel> as Python uses the same name for one of its built-in functions: <codel>sum()</codel>. <b>Using the same name would generally be considered bad practice</b>.) Then you add to it all the elements of the list using the <codel>for</codel> loop. Take a look at the snippet in the editor.</p>
+
+<p>Let's comment on this example:</p>
+
+<ul>
+<li>the list is assigned a sequence of five integer values;</li>
+
+<li>the <codel>i</codel> variable takes the values <codel>0</codel>, <codel>1</codel>, <codel>2</codel>, <codel>3</codel>, and <codel>4</codel>, and then it indexes the list, selecting the subsequent elements: the first, second, third, fourth and fifth;</li>
+
+<li>each of these elements is added together by the <codel>+=</codel> operator to the <codel>total</codel> variable, giving the final result at the end of the loop;</li>
+
+<li>note the way in which the <codel>len()</codel> function has been employed ‒ it makes the code independent of any possible changes in the list's contents.</li>
+
+</ul>
+
+<br>
+
+<h2>The second aspect of the <font face="courier new">for</font> loop</h2>
+
+<p>But the <codel>for</codel> loop can do much more. It can hide all the actions connected to the list's indexing, and deliver all the list's elements in a handy way.</p>
+
+<p>This modified snippet shows how it works:</p>
+
+<codep class="syntax-color copy line-numbers">my_list = [10, 1, 8, 3, 5]
+total = 0
+
+for i in my_list:
+    total += i
+
+print(total)
+</codep>
+
+<br>
+
+<p>What happens here?</p>
+
+<ul>
+
+<li>the <codel>for</codel> instruction specifies the variable used to browse the list (<codel>i</codel> here) followed by the <codel>in</codel> keyword and the name of the list being processed (<codel>my_list</codel> here)</li>
+
+<li>the <codel>i</codel> variable is assigned the values of all the subsequent list's elements, and the process occurs as many times as there are elements in the list;</li>
+
+<li>this means that you use the <codel>i</codel> variable as a copy of the elements' values, and you don't need to use indices;</li>
+
+<li>the <codel>len()</codel> function is not needed here, either.</li>
+
+</ul>
+
+
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

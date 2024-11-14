@@ -1,0 +1,88 @@
+<problem chapter='2' section='3' slide='1' problem='5' title='Operátorok'>
+
+<!--
+Update history:
+2020-07-17 Grzegorz (reformatted; code - syntax-color and blank lines added;)
+-->
+
+<h1>Operátorok: maradék (modulo)</h1>
+
+
+<p>A következő operátor elég különös, mert a hagyományos aritmetikai operátorok között nincs megfelelője.</p>
+
+<p>Jelölésére Pythonban a <codel>%</codel> (százalék) karaktert használjuk, ami kissé furcsának tűnhet.</p>
+
+<p>Próbálj meg úgy gondolni rá, mint egy perjelre (mint az osztás műveleti jelére), amelyet két vicces kis kör vesz körül.</p>
+
+<p>A művelet eredménye az <strong>egészosztás után megmaradt maradék</strong>.</p>
+
+<p>Más szóval, ez az az érték, ami megmarad, miután egy értéket úgy osztottunk egy másikkal, hogy egy egész szám hányadost kaptunk.</p>
+
+<p>Megjegyzés: ezt a műveleti jelet más programozási nyelveken néha <strong>modulo</strong> néven nevezik.</p>
+
+<p>Nézd meg az alábbi kódrészletet, próbáld meg előtte megtippelni az eredményt, majd futtasd is le:</p>
+
+<codep class="syntax-color">print(14 % 4)
+</codep>
+
+<br>
+
+
+<p>Amint láthatod, az eredmény kettő. Ezt így kapjuk meg:
+<ul>
+<li><codel>14 // 4</codel>  eredménye <codel>3</codel> &rarr; ez az egész számok <strong>hányadosa</strong>;</li>
+<li><codel>3 * 4</codel>  eredménye  <codel>12</codel> &rarr; a <strong>hányados és az osztó szorzásának eredménye</strong>;</li>
+<li><codel>14 - 12</codel>  eredménye  <codel>2</codel> &rarr; ez a <strong>maradék</strong>.</li>
+</ul>
+
+<br>
+
+<p>Ez a példa valamivel bonyolultabb:</p>
+
+<codep class="syntax-color">print(12 % 4.5)
+</codep>
+
+<br>
+
+<p>Mi az eredmény?</p>
+
+<button class="button tiny" onclick="solution('sol')">Ellenőrzés</button>
+
+<br>
+
+<p id="sol" style="display: none;"><codel style="color:green;">3.0</codel> - nem <codel>3</codel>, hanem <codel>3.0</codel> (Levezetés: <codel>12 // 4.5</codel> eredménye <codel>2.0</codel>; <codel>2.0 * 4.5</codel> eredménye <codel>9.0</codel>; <codel>12 - 9.0</codel> eredménye <codel>3.0</codel>)</p>
+
+
+<script>
+function solution (id) {
+    var element = document.getElementById(id);
+    
+if (element.style.display === "none") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
+    }
+}
+</script>
+
+
+<br>
+<h1>Operátorok: hogyan ne osszunk!</h1>
+
+
+<p>Mint valószínűleg tudod, a <strong>nullával való osztás tilos</strong>!</p>
+
+<p><b>Ne</b> próbáld meg:</p>
+
+<ul>
+<li>a nullával való osztást;</li>
+<li>a nullával való egészosztást;</li>
+<li>megtalálni a nullával való osztás maradékát.</li>
+</ul>
+
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

@@ -1,0 +1,72 @@
+<problem chapter='3' section='7' slide='1' problem='5' title='Listák fejlett alkalmazásokban ‒ Tömbök'>
+
+<!--
+Update history:
+2020-08-12 Grzegorz (reviewed)
+-->
+
+<code>
+rooms = [[[False for r in range(20)] for f in range(15)] for t in range(3)]
+
+</code>
+
+<h1>Háromdimenziós tömbök</h1>
+
+<p>A Python nem korlátozza az egymásba áűgyazott listák mélységét. Nézzünk egy példát egy háromdimenziós tömbre:</p>
+
+
+<p>Képzelj el egy szállodát. Egy hatalmas szálloda, amely három épületből áll, mindegyik 15 emeletes. Minden emeleten 20 szoba van. Ehhez szükség van egy tömbre, amely képes összegyűjteni és feldolgozni a foglalt/szabad szobákra vonatkozó információkat.</p>
+
+<p>Első lépés: a tömbelemek típusának meghatározása. Ebben az esetben egy logikai érték (<codel>True</codel>/<codel>False</codel>) megfelelő.</p>
+
+<p>Második lépés: a helyzet higgadt elemzése. Foglald össze a rendelkezésre álló információkat: három épület, 15 emelet, 20 szoba.</p>
+
+
+<p>Most már létrehozhatod a tömböt:</p>
+
+<codep class="syntax-color">rooms = [[[False for r in range(20)] for f in range(15)] for t in range(3)]
+</codep>
+
+<br>
+
+
+<p>Az első index (<codel>0</codel>-tól <codel>2</codel>-ig) az épületet, a második (<codel>0</codel>-tól <codel>14</codel>-ig) az emeletet, a harmadik (<codel>0</codel>-tól <codel>19</codel>-ig) a szobaszámot jelöli ki. Kezdetben minden szoba szabad.</p>
+
+<p>Most két ifjú pár számára foglalhatsz szobát: a második épület tizedik emeletén található 14-es szobát:</p>
+
+<codep class="syntax-color">rooms[1][9][13] = True
+</codep>
+<br>
+
+<p>és az első épület ötödik emeletén található második szobát:</p>
+
+<codep class="syntax-color">rooms[0][4][1] = True
+</codep>
+<br>
+
+<p>Ellenőrizd, hogy a harmadik épület 15. emeletén van-e üres szoba!</p>
+
+<codep class="syntax-color">vacancy = 0
+
+for room_number in range(20):
+    if not rooms[2][14][room_number]:
+        vacancy += 1
+</codep>
+
+<br>
+
+<p>A <codel>vacancy</codel> változó <codel>0</codel>, ha az összes szoba foglalt, egyébként pedig a rendelkezésre álló szobák számát tartalmazza.</p>
+
+<br>
+
+<p>Gratulálunk! Eljutottál a modul végére. További jó munkát!</p>
+
+
+
+<br>
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

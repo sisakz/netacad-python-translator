@@ -1,0 +1,81 @@
+﻿<problem chapter='3' section='6' slide='1' problem='9' title="LAB: Operating with lists ‒ basics">
+
+<!--
+Update history:
+2020-08-12 Grzegorz (reviewed, reformatted)
+-->
+
+<code>
+my_list = [1, 2, 4, 4, 1, 4, 2, 6, 2, 9]
+#
+# Write your code here.
+#
+print("The list with unique elements only:")
+print(my_list)
+
+</code>
+
+<span class="label" style="background-color:rgb(205, 168, 105);"><strong>LAB</strong></span>
+
+<br><br>
+
+<h2>Estimated time</h2>
+<p>10-15 minutes</p>
+
+<h2>Level of difficulty</h2>
+<p>Easy</p>
+
+
+<h2>Objectives</h2>
+
+<p>Familiarize the student with:</p>
+
+<ul>
+<li>list indexing;</li>
+<li>utilizing the <codel>in</codel> and <codel>not in</codel> operators.</li>
+</ul>
+
+
+<h2>Scenario</h2>
+
+<p>Imagine a list ‒ not very long, not very complicated, just a simple list containing some integer numbers. Some of these numbers may be repeated, and this is the clue. We don't want any repetitions. We want them to be removed.</p>
+
+<p>Your task is to write a program which removes all the number repetitions from the list. The goal is to have a list in which all the numbers appear not more than once.</p>
+
+<p>Note: assume that the source list is hard-coded inside the code ‒ you don't have to enter it from the keyboard. Of course, you can improve the code and add a part that can carry out a conversation with the user and obtain all the data from her/him.</p>
+
+<p>Hint: we encourage you to create a new list as a temporary work area ‒ you don't need to update the list in situ.</p>
+<p>We've provided no test data, as that would be too easy. You can use our skeleton instead.</p>
+
+<br>
+
+
+<studyMode>false</studyMode>
+<labMode>true</labMode>
+
+<hint>
+my_list = [1, 2, 4, 4, 1, 4, 2, 6, 2, 9]
+new_list = []
+# Browse all numbers from the source list.
+    # If the number doesn't appear within the new list...
+        # ...append it here.
+# Make a copy of new_list.
+print("The list with unique elements only:")
+print(my_list)
+
+</hint>
+
+
+<sampleSolution>
+my_list = [1, 2, 4, 4, 1, 4, 2, 6, 2, 9]
+new_list = []
+for number in my_list:  # Browse all numbers from the source list.
+	if number not in new_list:  # If the number doesn't appear within the new list...
+		new_list.append(number)  # ...append it here.
+my_list = new_list[:]  # Make a copy of new_list.
+print("The list with unique elements only:")
+print(my_list)
+
+</sampleSolution>
+
+</problem>

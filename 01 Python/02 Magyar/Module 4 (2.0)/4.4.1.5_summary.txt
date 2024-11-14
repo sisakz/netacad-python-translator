@@ -1,0 +1,291 @@
+<problem chapter='4' section='4' slide='1' problem='5' title='SZAKASZ ÖSSZEFOGLALÁS'>
+
+<!--
+Update history:
+2020-08-18 Grzegorz (reviewed, re-formatted)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<h1>A legfontosabb tudnivalók</h1>
+
+<br>
+
+
+<p>1. Egy függvényen kívüli változónak a függvénytestben van hatóköre (1. példa), kivéve, ha a függvény definiál egy azonos nevű változót (2. példa és 3. példa).</p>
+
+<p>1. példa</p>
+
+<codep class="copy"><mark style="background-color:#e6f2ff;">var = 2</mark>
+
+
+def mult_by_var(x):
+    return x * <mark style="background-color:#e6f2ff;">var</mark>
+
+
+print(mult_by_var(7))    # outputs: 14
+
+</codep>
+<br>
+
+<p>2. példa:</p>
+
+<codep>def mult(x):
+    <mark style="background-color:#e6f2ff;">var = 5</mark>
+    return x * <mark style="background-color:#e6f2ff;">var</mark>
+
+
+print(mult(7))    # outputs: 35
+
+</codep>
+<br>
+
+<p>3. példa:</p>
+
+<codep class="copy">def mult(x):
+    <mark style="background-color:#e6f2ff;">var = 7</mark>
+    return x * <mark style="background-color:#e6f2ff;">var</mark>
+
+
+<mark style="background-color:#e6f2ff;">var = 3</mark>
+print(mult(7))    # outputs: 49
+
+</codep>
+
+<br>
+
+
+
+<p>2. Egy függvényen belül létrehozott változó hatóköre a függvénytörzsre korlátozódik (4. példa).</p>
+
+<p>4. példa:</p>
+
+<codep class="copy">def adding(x):
+    var = 7
+    return x + var
+
+
+print(adding(4))    # outputs: 11
+<font style="color:red;">print(var)    # NameError</font>
+
+</codep>
+<br>
+
+
+<p>3. A változó hatókörének globálissá tételéhez használjuk a <codel>global</codel> kulcsszót a változó neve előtt, pl: </p>
+
+<codep class="syntax-color copy">var = 2
+print(var)    # outputs: 2
+
+
+def return_var():
+    global var
+    var = 5
+    return var
+
+
+print(return_var())    # outputs: 5
+print(var)    # outputs: 5
+</codep>
+
+<br>
+<br>
+
+</div>
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+
+<p><strong>1. gyakorlat</strong></p>
+<p>Mi történik, ha futtatod a következő kódot?</p>
+
+<codep>def message():
+    alt = 1
+    print("Hello, World!")
+
+
+print(alt)
+
+</codep>
+
+<br>
+
+<div align="right">
+<button class="button tiny" onclick="solution('sol')">Ellenőrzés</button>
+</div>
+
+<p id="sol" style="display: none;">
+<codel>NameError</codel> kivételt vált ki (<codel>NameError: name 'alt' is not defined</codel>)
+</p>
+
+<script>
+function solution (id) {
+    var element = document.getElementById(id);
+    
+if (element.style.display === "none") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
+    }
+}
+</script>
+
+<br>
+
+
+
+<p><strong>2. gyakorlat</strong></p>
+<p>Mi a kimenete a következő kódrészletnek?</p>
+
+<codep>a = 1
+
+
+def fun():
+    a = 2
+    print(a)
+
+
+fun()
+print(a)
+
+</codep>
+
+<br>
+
+<div align="right">
+<button class="button tiny" onclick="solution('sol2')">Ellenőrzés</button>
+</div>
+
+<p id="sol2" style="display: none;">
+<codep>2
+1</codep>
+</p>
+
+
+<script>
+function solution (id) {
+    var element = document.getElementById(id);
+    
+if (element.style.display === "none") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
+    }
+}
+</script>
+
+<br>
+
+
+
+
+<p><strong>3. gyakorlat</strong></p>
+<p>Mi a kimenete a következő kódrészletnek?</p>
+
+<codep>a = 1
+
+
+def fun():
+    global a
+    a = 2
+    print(a)
+
+
+fun()
+a = 3
+print(a)
+
+</codep>
+
+<br>
+
+<div align="right">
+<button class="button tiny" onclick="solution('sol3')">Ellenőrzés</button>
+</div>
+
+<p id="sol3" style="display: none;">
+<codep>2
+3</codep>
+</p>
+
+<script>
+function solution (id) {
+    var element = document.getElementById(id);
+    
+if (element.style.display === "none") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
+    }
+}
+</script>
+
+
+<br>
+
+
+
+
+
+<p><strong>4. gyakorlat</strong></p>
+<p>Mi a kimenete a következő kódrészletnek?</p>
+
+<codep>a = 1
+
+
+def fun():
+    global a
+    a = 2
+    print(a)
+
+
+a = 3
+fun()
+print(a)
+
+</codep>
+
+<br>
+
+<div align="right">
+<button class="button tiny" onclick="solution('sol4')">Ellenőrzés</button>
+</div>
+
+<p id="sol4" style="display: none;">
+<codep>2
+2</codep>
+</p>
+
+<script>
+function solution (id) {
+    var element = document.getElementById(id);
+    
+if (element.style.display === "none") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
+    }
+}
+</script>
+
+
+<br>
+
+</div>
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

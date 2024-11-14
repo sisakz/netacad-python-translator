@@ -1,0 +1,42 @@
+<problem chapter='2' section='2' slide='1' problem='4' title='Literálok'>
+
+<!--
+Update history:
+2020-07-17 Grzegorz (code format change - syntax-color)
+-->
+
+<code>
+</code>
+
+<h1>Egész számok: oktális és hexadecimális számok</h1>
+
+
+<p>A Pythonban van két további szabály, amelyek ismeretlenek a matematika világában. Az első lehetővé teszi számok használatát <strong>oktális (nyolcas számrendszerű)</strong> ábrázolásban.</p>
+
+<p>Ha egy egész számot <codel>0O</codel> vagy <codel>0o</codel> előtag (nulla-o) előz meg, akkor azt oktális számként értelmezzük. Ez azt is jelenti, hogy a szám csak a [0..7] tartományból származó számjegyeket tartalmazhat.</p>
+
+<p>A <codel>0o123</codel> egy <strong>nyolcas számrendszerű</strong> szám, amelynek (decimális) értéke <codel>83</codel>.</p>
+
+
+<p>A <codel>print()</codel> függvény automatikusan elvégzi az átalakítást. Próbáld ki ezt:</p>
+
+<codep class="syntax-color">print(0o123)
+</codep>
+
+<br>
+
+
+<p>A második írásmód lehetővé teszi a <strong>hexadecimális</strong> számok használatát. Az ilyen számok előtt a <codel>0x</codel> vagy <codel>0X</codel> (nulla-x) előtagot kell feltüntetni.</p>
+
+
+<p>A <codel>0x123</codel> egy <strong>hexadecimális</strong> szám, amelynek (decimális) értéke <codel>291</codel>. A print() függvény ezeket az értékeket is tudja kezelni. Próbáld ki ezt:</p>
+
+<codep class="syntax-color">print(0x123)
+</codep>
+
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

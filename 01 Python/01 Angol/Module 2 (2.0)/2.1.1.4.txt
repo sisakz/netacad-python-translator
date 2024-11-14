@@ -1,0 +1,63 @@
+<problem chapter='2' section='1' slide='1' problem='4' title='Your very first program'>
+
+<!--
+Update history:
+2020-07-17 Grzegorz (format and page number change)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<h1>The <span style="font-family:courier new;">print()</span> function</h1>
+
+<p>The only argument delivered to the <codel>print()</codel> function in this example is a <strong>string</strong>:</p>
+
+<codep>print(<mark style="background-color:#e6f2ff;">"Hello, World!"</mark>)
+
+</codep>
+<br>
+
+<p>As you can see, the <strong>string is delimited with quotes</strong> ‒ in fact, the quotes make the string ‒ they cut out a part of the code and assign a different meaning to it.</p>
+
+<p>You can imagine that the quotes say something like: the text between us is not code. It isn't intended to be executed, and you should take it as is.</p>
+
+<p>Almost anything you put inside the quotes will be taken literally, not as code, but as <strong>data</strong>. Try to play with this particular string ‒ modify it, enter some new content, delete some of the existing content.</p>
+
+
+</div>
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+
+<p>There's more than one way to specify a string inside Python's code, but for now, though, this one is enough.</p>
+
+<br>
+
+<center><img src="/uploads/media/default/0001/01/e5d1166e2e712f8c01f520f65d73aa8dc57ae01a.png" width="50%" alt="The concept of the 'Hello, World!' string"></center>
+
+<br>
+<br>
+
+<p>So far, you have learned about two important parts of the code: the function and the string. We've talked about them in terms of syntax, but now it's time to discuss them in terms of semantics.</p>
+
+<br>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

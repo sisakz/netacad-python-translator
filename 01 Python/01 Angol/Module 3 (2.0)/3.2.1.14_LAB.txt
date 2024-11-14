@@ -1,0 +1,119 @@
+<problem chapter='3' section='2' slide='1' problem='14' title='LAB: Essentials of the while loop'>
+
+<!--
+Update history:
+2020-07-21 Grzegorz (reviewed, re-formatted)
+-->
+
+<span class="label" style="background-color:rgb(205, 168, 105);"><strong>LAB</strong></span>
+
+<br><br>
+
+<code>
+
+blocks = int(input("Enter the number of blocks: "))
+
+#
+# Write your code here.
+#	
+
+print("The height of the pyramid:", height)
+
+</code>
+
+<h2>Estimated time</h2>
+<p>20-30 minutes</p>
+
+<h2>Level of difficulty</h2>
+<p>Medium</p>
+
+
+<h2>Objectives</h2>
+
+<p>Familiarize the student with:</p>
+<ul>
+<li>using the <codel>while</codel> loop;</li>
+<li>finding the proper implementation of verbally defined rules;</li>
+<li>reflecting real-life situations in computer code.</li>
+</ul>
+
+
+<h2>Scenario</h2>
+
+<p>Listen to this story: a boy and his father, a computer programmer, are playing with wooden blocks. They are building a pyramid.</p>
+
+<p>Their pyramid is a bit weird, as it is actually a pyramid-shaped wall – it's flat. The pyramid is stacked according to one simple principle: each lower layer contains one block more than the layer above.<p>
+
+<p>The figure illustrates the rule used by the builders:</p> 
+
+<img width='300' src='/uploads/media/default/0001/01/26238ebafe7c913f177040785f30d7dde4a1c69a.png'/>
+
+<br>
+<br>
+
+<p>Your task is to write a program which reads the number of blocks the builders have, and outputs the height of the pyramid that can be built using these blocks.</p>
+
+<p>Note: the height is measured by the number of <strong>fully completed layers</strong> – if the builders don't have a sufficient number of blocks and cannot complete the next layer, they finish their work immediately.</p>
+
+<p>Test your code using the data we've provided.</p>
+
+<br>
+
+
+<h2>Test Data</h2>
+
+<br>
+
+<p>Sample input: <codel>6</codel></p>
+<p>Expected output: <codel>The height of the pyramid: 3</codel></p>
+
+<hr>
+
+<p>Sample input: <codel>20</codel></p>
+<p>Expected output: <codel>The height of the pyramid: 5</codel></p>
+
+<hr>
+
+<p>Sample input: <codel>1000</codel></p>
+<p>Expected output: <codel>The height of the pyramid: 44</codel></p>
+
+<hr>
+
+<p>Sample input: <codel>2</codel></p>
+<p>Expected output: <codel>The height of the pyramid: 1</codel></p>
+
+
+<br>
+
+<studyMode>false</studyMode>
+<labMode>true</labMode>
+
+
+<hint>
+blocks = int(input("Enter the number of blocks: "))
+
+height = 0
+in_layer = 1
+while in_layer <= blocks:
+    # The body of the while loop.
+
+print("The height of the pyramid:", height)
+
+</hint>
+
+<sampleSolution>
+blocks = int(input("Enter the number of blocks: "))
+
+height = 0
+in_layer = 1
+while in_layer <= blocks:
+    height += 1
+    blocks -= in_layer
+    in_layer += 1
+
+print("The height of the pyramid:", height)
+
+</sampleSolution>
+
+</output>
+</problem>

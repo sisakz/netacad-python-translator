@@ -1,0 +1,131 @@
+<problem chapter='2' section='5' slide='1' problem='3' title='SZAKASZ ÖSSZEFOGLALÁS'>
+
+<!--
+Update history:
+2020-07-17 Grzegorz (reviewed; code formatting)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<h1>A legfontosabb tudnivalók</h1>
+
+<br>
+
+
+<p>1. A kommentek segítségével megjegyzéseket hagyhatunk a kódban, ezeket az interpreter nem veszi figyelembe. A forráskódban hagyott megjegyzések a kódot olvasó embereknek szólnak. Pythonban a kommentet egy <codel>#</codel> jellel kell kezdeni, aminek a hatása a sor végéig terjed.</p>
+
+<p>2.  Ha több soros megjegyzést szeretnénk írni, akkor az összes sor elé <codel>#</codel> jelet kell tenni. Ezen kívül használhatunk megjegyzést akkor is, ha egy kódrészletre pillanatnyilag nincs szükségünk (lásd az alábbi részlet utolsó sorát), pl:</p>
+
+<codep><mark style="background-color:#e6f2ff;"># This program prints</mark>
+<mark style="background-color:#e6f2ff;"># an introduction to the screen.</mark>
+print("Hello!")  <mark style="background-color:#e6f2ff;"># Invoking the print() function</mark>
+<mark style="background-color:#e6f2ff;"># print("I'm Python.")</mark>
+
+</codep>
+<br>
+
+<p>3. Amikor csak indokolt és megoldható, adjunk <strong>öndokumentáló neveket</strong> a változóknak. Ha például két változót használsz egy dolog hosszának és szélességének tárolására, a <codel>length</codel> és a <codel>width</codel> név jobb választás, mint a <codel>myvar1</codel> és a <codel>myvar2</codel>.</p>
+
+<p>4. Fontos, hogy a megjegyzések használatával tedd érthetőbbé a programodat. Használj jól olvasható, magától értetődő változóneveket a kódban. Ugyanilyen fontos azonban, hogy <strong>ne használj</strong> megtévesztő változóneveket, és ne hagyj olyan megjegyzéseket, amelyek téves vagy helytelen információkat tartalmaznak!</p>
+
+<p>5. A megjegyzések fontossá válhatnak, amikor egy kis idő elteltével <i>te magad</i> olvasod a saját kódod. Hidd el, a fejlesztők idővel elfelejtik, mit csinál a kódjuk. Hasonlóképpen amikor <i>mások</i> olvassák a Te kódodat, segíthet nekik hamarabb megérteni, mit és hogyan csinál a programod.</p>
+
+
+<br>
+<br>
+
+</div>
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+
+<p><strong>1. gyakorlat</strong></p>
+<p>Mi a kimenete a következő kódrészletnek?</p>
+
+<codep># print("String #1")
+print("String #2")
+
+</codep>
+
+<br>
+
+<button class="button tiny" onclick="solution('sol')">Ellenőrzés</button>
+
+<p id="sol" style="display: none;">
+<codep>String #2</codep>
+</p>
+
+<script>
+function solution (id) {
+    var element = document.getElementById(id);
+    
+if (element.style.display === "none") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
+    }
+}
+</script>
+
+<br>
+
+
+
+<p><strong>2. gyakorlat</strong></p>
+<p>Mi történik, ha a következő kódot futtatod?</p>
+
+<codep># This is
+a multiline
+comment. #
+
+print("Hello!")
+
+</codep>
+
+<br>
+
+
+<button class="button tiny" onclick="solution('sol2')">Ellenőrzés</button>
+
+<p id="sol2" style="display: none;">
+<codep>SyntaxError: invalid syntax</codep>
+</p>
+
+
+<script>
+function solution (id) {
+    var element = document.getElementById(id);
+    
+if (element.style.display === "none") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
+    }
+}
+</script>
+
+<br>
+
+
+
+
+<br>
+
+</div>
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

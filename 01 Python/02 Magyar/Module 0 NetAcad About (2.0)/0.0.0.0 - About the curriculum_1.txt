@@ -1,0 +1,66 @@
+<problem chapter='0' section='0' slide='0' problem='0' title='Python alapok 2.0 - A tananyag'>
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h1>Python alapok (v.2.0) &ndash; A tanfolyam tananyagáról</h1>
+
+<br>
+
+<p>A <strong>PCAP: Programozási alapok Pythonban</strong> (rövidítve: Python alapok) egy két tanfolyamból álló sorozat, amely a Python programozás alapjait, az általános számítógépes programozási ismereteket és technikákat, illetve az objektumorientált megközelítést fedi le.</p>
+
+<p>A Python alapok tanfolyamsorozat két részből áll:</p>
+<ul>
+<li><b>Python alapok 1 (PE1): Alapismeretek</b>, - négy modul;</li>
+<li><b>Python alapok 2 (PE2): Középszint</b>, - négy modul.</li>
+</ul>
+
+<p>Minden hallgató hozzáférhet <strong>gyakorló tananyagokhoz</strong>, <strong>labor feladatokhoz</strong>, <strong>kvízekhez</strong>, és <strong>tesztekhez</strong>, hogy megtanulja, hogyan használhatja a tanfolyamon szerzett készségeit és ismereteit <strong>való életből vett programozási feladatokban és szituációkban</strong>.</p>
+
+<p>A kurzust elvégző hallgatók képesek lesznek egyszerű kódolási feladatok elvégzésére Python nyelven, valamint az objektumorientált programozásban használt alapvető fogalmak és technikák megértésére.</p>
+
+<p>Továbbá, készen állnak arra, hogy megszerezzék a következő képesítéseket:</p>
+
+<ul>
+<li><a href="https://pythoninstitute.org/certification/pcep-certification-entry-level/" target="_blank">PCEP - Certified Entry-Level Python Programmer</a> (a Python alapok 1 elvégzése után)</li>
+<li><a href="https://pythoninstitute.org/certification/pcap-certification-associate/" target="_blank">PCAP - Python Certified Associate Programmer</a> (a Python alapok 2 elvégzése után)</li>
+</ul>
+
+<p>az <a href="https://pythoninstitute.org" target="_blank">OpenEDG Python Institute</a>-tól.</p>
+
+<br>
+
+</div>
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+
+
+<center><img class="lightbox" src="/uploads/media/default/0001/02/89bd3d3ac100d819bef7c542d510e5e22ff5ba79.png" width="65%" alt="Python Essentials - Course Modules"></center>
+<p><center>Két részből álló Python alapok (v.2.0) tanfolyamsorozat</center></p>
+<br>
+<br>
+
+
+
+
+</div>
+
+</div>
+</div>
+
+
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

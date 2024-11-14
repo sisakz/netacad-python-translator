@@ -1,0 +1,73 @@
+<problem chapter='4' section='2' slide='1' problem='4' title='How functions communicate with their environment'>
+
+<!--
+Update history:
+2020-08-13 Grzegorz (reviewed, re-formatted)
+-->
+
+<code>
+</code>
+
+
+
+<h1>Positional parameter passing</h1>
+
+<p>A technique which assigns the i<sup>th</sup> (first, second, and so on) argument to the i<sup>th</sup> (first, second, and so on) function parameter is called <strong>positional parameter passing</strong>, while arguments passed in this way are named <strong>positional arguments</strong>.</p>
+
+<p>You've used it already, but Python can offer a lot more. We're going to tell you about it now.</p>
+
+<codep class="syntax-color">def my_function(a, b, c):
+    print(a, b, c)
+
+my_function(1, 2, 3)
+</codep>
+
+<br>
+
+<p>Note: positional parameter passing is intuitively used by people in many social occasions. For example, it may be generally accepted that when we introduce ourselves we mention our first name(s) before our last name, e.g., "My name's John Doe."</p>
+
+<p>Incidentally, Hungarians do it in reverse order.</p>
+
+<hr>
+
+<p>Let's implement that social custom in Python. The following function will be responsible for introducing somebody:</p>
+
+<codep class="syntax-color">def introduction(first_name, last_name):
+    print("Hello, my name is", first_name, last_name)
+
+introduction("Luke", "Skywalker")
+introduction("Jesse", "Quick")
+introduction("Clark", "Kent")
+</codep>
+
+<br>
+
+<p>Can you guess the output? Run the code and find out if you're right.</p>
+
+
+<br>
+
+Now imagine that the same function is being used in Hungary. In this case, the code would look like this:</p>
+
+<codep class="syntax-color copy">def introduction(first_name, last_name):
+    print("Hello, my name is", first_name, last_name)
+
+introduction("Skywalker", "Luke")
+introduction("Quick", "Jesse")
+introduction("Kent", "Clark")
+</codep>
+
+<br>
+
+<p>The output will look different. Can you guess it?</p>
+<p>Run the code to see if you're right here, too. Are you surprised?</p>
+
+
+<p>Can you make the function more culture-independent?</p>
+
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

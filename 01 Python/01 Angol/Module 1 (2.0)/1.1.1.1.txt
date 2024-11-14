@@ -1,0 +1,61 @@
+<problem chapter='1' section='1' slide='1' problem='1' title='Programming - absolute basics'>
+
+<!--
+Update history:
+2020-07-07 Grzegorz (formatted)
+2020-07-16 Grzegorz (picture formatting)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+<h1>How does a computer program work?</h1>
+
+
+<p>This course aims to show you what the Python language is and what it is used for. Let's start from the absolute basics.</p>
+
+<p>A program makes a computer usable. Without a program, a computer, even the most powerful one, is nothing more than an object. Similarly, without a player, a piano is nothing more than a wooden box.</p>
+
+<img src="/uploads/media/default/0001/01/a6f86eeafbf2653bab00f26324da7e234a69c039.png" alt="A computer screen with Python logo" width="60%" align="left">
+
+<p>Computers are able to perform very complex tasks, but this ability is not innate. A computer's nature is quite different.</p>
+
+<p>It can execute only extremely simple operations. For example, a computer cannot understand the value of a complicated mathematical function by itself, although this isn't beyond the realms of possibility in the near future.</p>
+
+<p>Contemporary computers can only evaluate the results of very fundamental operations, like adding or dividing, but they can do it very fast, and can repeat these actions virtually any number of times.</p>
+
+
+</div>
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+<p>Imagine that you want to know the average speed you've reached during a long journey. You know the distance, you know the time, you need the speed.</p>
+
+<p>Naturally, the computer will be able to compute this, but the computer is not aware of such things as distance, speed, or time. Therefore, it is necessary to instruct the computer to:</p>
+<ul>
+<li>accept a number representing the distance;</li>
+<li>accept a number representing the travel time;</li>
+<li>divide the former value by the latter and store the result in the memory;</li>
+<li>display the result (representing the average speed) in a readable format.</li>
+</ul>
+
+<p>These four simple actions form a <strong>program</strong>. Of course, these examples are not formalized, and they are very far from what the computer can understand, but they are good enough to be translated into a language the computer can accept.</p>
+
+<p><strong>Language</strong> is the keyword.</p>
+
+</div>
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

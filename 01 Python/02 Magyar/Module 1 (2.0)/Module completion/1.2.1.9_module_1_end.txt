@@ -1,0 +1,68 @@
+<problem chapter='1' section='2' slide='1' problem='9' title='Modul zárás'>
+
+<!--
+Update history:
+2020-07-07 Grzegorz (formatted)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<h1>Gratulálunk!
+<br>Befejezted az 1. modult.</h1>
+
+<br>
+
+
+<p>Szép munka! Elérted az 1. modul végét, ami egy fontos mérföldkő a Python programozási tanulmányaidban. Íme egy rövid összefoglaló az 1. modulban tárgyalt és megismert célokról:</p>
+
+<ul>
+<li>a számítógépes programozás alapjai, azaz a számítógép működése, a program futtatása, a programozási nyelv meghatározása és felépítése;</li>
+
+<li>a fordítás és az értelmezés közötti különbség;</li>
+
+<li>mi a Python, hol helyezkedik el a programozási nyelvek között, és mi különbözteti meg a Python különböző verzióit;</li>
+
+<li>a tanuláshoz használt eszközök és a különböző típusú felületek megismerése, amelyeket a kurzus során használni fogsz.</li>
+
+</ul>
+
+<br>
+
+<p>Most már készen állsz a modul ellenőrző kérdéssorának kitöltésére, amely segít felmérni, hogy mit tanultál eddig.</p>
+
+
+<br>
+<br>
+
+</div>
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+
+
+<center><img src="/uploads/media/default/0001/01/29ed2aa31a1a26221e4eac3b69d973a33cbf562e.png" width="65%" alt="Module completion - congratulations"></center>
+<br>
+
+
+
+
+<br>
+
+</div>
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

@@ -1,0 +1,86 @@
+<problem chapter='3' section='1' slide='1' problem='2' title='Making decisions in Python'>
+
+<!--
+Update history:
+2020-07-20 Grzegorz (reviewed)
+-->
+
+<h1>Equality: the <i>equal to</i> operator (<font face="Courier New">==</font>)</h1>
+
+<p>The <codel>==</codel> (equal to) operator compares the values of two operands. If they are equal, the result of the comparison is <codel>True</codel>. If they are not equal, the result of the comparison is <codel>False</codel>.</p>
+
+<p>Look at the equality comparison below – what is the result of this operation?</p>
+
+<codep>var <mark style="background-color:#e6f2ff;">==</mark> 0
+
+</codep>
+
+<br>
+
+<p>Note that we cannot find the answer if we do not know what value is currently stored in the variable <codel>var</codel>.</p>
+
+<p>If the variable has been changed many times during the execution of your program, or its initial value is entered from the console, the answer to this question can be given only by Python and only at runtime.</p>
+
+
+<p>Now imagine a programmer who suffers from insomnia, and has to count black and white sheep separately as long as there are exactly twice as many black sheep as white ones.</p>
+
+<p>The question will be as follows:</p>
+
+<codep>black_sheep <mark style="background-color:#e6f2ff;">==</mark> 2 * white_sheep
+
+</codep>
+
+<br>
+
+<p>Due to the low priority of the <codel>==</codel> operator, the question shall be treated as equivalent to this one:</p>
+
+<codep>black_sheep <mark style="background-color:#e6f2ff;">==</mark> (2 * white_sheep)
+
+</codep>
+
+<br>
+<hr>
+
+<p>So, let's practice your understanding of the <codel>==</codel> operator now – can you guess the output of the code below?</p>
+
+<codep>var = 0  # Assigning 0 to var
+print(var <mark style="background-color:#e6f2ff;">==</mark> 0)
+
+var = 1  # Assigning 1 to var
+print(var <mark style="background-color:#e6f2ff;">==</mark> 0)
+
+</codep>
+
+<br>
+
+<p>Run the code and check if you're right.</p>
+
+
+
+<h2>Inequality: the <i>not equal to</i> operator (<font face="Courier New">!=</font>)</h2>
+
+<p>The <codel>!=</codel> (not equal to) operator compares the values of two operands, too. Here is the difference: if they are equal, the result of the comparison is <codel>False</codel>. If they are not equal, the result of the comparison is <codel>True</codel>.</p>
+
+<p>Now take a look at the inequality comparison below – can you guess the result of this operation?</p>
+
+<codep>var = 0  # Assigning 0 to var
+print(var <mark class="mark-background">!=</mark> 0)
+
+var = 1  # Assigning 1 to var
+print(var <mark class="mark-background">!=</mark> 0)
+
+</codep>
+
+<br>
+
+<p>Run the code and check if you're right.</p>
+
+<br>
+
+
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

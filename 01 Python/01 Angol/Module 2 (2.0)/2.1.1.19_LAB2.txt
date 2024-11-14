@@ -1,0 +1,120 @@
+<problem chapter='2' section='1' slide='1' problem='19' title='LAB: Formatting the output'>
+
+<!--
+Update history:
+2020-07-17 Grzegorz (code format and page number change, sample solution change, length of the lab change)
+-->
+
+<code>
+
+print("    *")
+print("   * *")
+print("  *   *")
+print(" *     *")
+print("***   ***")
+print("  *   *")
+print("  *   *")
+print("  *****")
+
+</code>
+
+<span class="label" style="background-color:rgb(205, 168, 105);"><strong>LAB</strong></span>
+
+<br><br>
+
+
+<h2>Estimated time</h2>
+<p>5-15 minutes</p>
+
+<h2>Level of difficulty</h2>
+<p>Easy</p>
+
+
+<h2>Objectives</h2>
+
+<ul>
+<li>experimenting with existing Python code;</li>
+<li>discovering and fixing basic syntax errors;</li>
+<li>becoming familiar with the <codel>print()</codel> function and its formatting capabilities.</li>
+</ul>
+
+
+<h2>Scenario</h2>
+
+<p>We strongly encourage you to <strong>play with the code</strong> we've written for you, and make some (maybe even destructive) amendments. Feel free to modify any part of the code, but there is one condition ‒ learn from your mistakes and draw your own conclusions.</p>
+
+<p>Try to:</p>
+
+<ul>
+<li>minimize the number of <codel>print()</codel> function invocations by inserting the <codel>\n</codel> sequence into the strings;</li>
+<li>make the arrow twice as large (but keep the proportions)</li>
+<li>duplicate the arrow, placing both arrows side by side; note: a string may be multiplied by using the following trick: <codel>"string" * 2</codel> will produce <codel>"stringstring"</codel> (we'll tell you more about it soon)</li>
+<li>remove any of the quotes, and look carefully at Python's response; pay attention to where Python sees an error ‒ is this the place where the error really exists?</li>
+<li>do the same with some of the parentheses;</li>
+<li>change any of the <codel>print</codel> words into something else, differing only in case (e.g., <codel>Print</codel>) ‒ what happens now?</li>
+<li>replace some of the quotes with apostrophes; watch what happens carefully.</li>
+</ul>
+
+<labMode>true</labMode>
+
+
+<sampleSolution># Sample Solution
+
+###################
+print("original version:")
+###################
+print("    *")
+print("   * *")
+print("  *   *")
+print(" *     *")
+print("***   ***")
+print("  *   *")
+print("  *   *")
+print("  *****")
+###################
+print("with fewer 'print()' invocations:")
+###################
+print("    *\n   * *\n  *   *\n *     *\n***   ***")
+print("  *   *\n  *   *\n  *****")
+###################
+print("higher:")
+###################
+print("        *")
+print("       * *")
+print("      *   *")
+print("     *     *")
+print("    *       *")
+print("   *         *")
+print("  *           *")
+print(" *             *")
+print("******     ******")
+print("     *     *")
+print("     *     *")
+print("     *     *")
+print("     *     *")
+print("     *     *")
+print("     *     *")
+print("     *******")
+###################
+print("doubled:")
+###################
+print("        *        "*2)
+print("       * *       "*2)
+print("      *   *      "*2)
+print("     *     *     "*2)
+print("    *       *    "*2)
+print("   *         *   "*2)
+print("  *           *  "*2)
+print(" *             * "*2)
+print("******     ******"*2)
+print("     *     *     "*2)
+print("     *     *     "*2)
+print("     *     *     "*2)
+print("     *     *     "*2)
+print("     *     *     "*2)
+print("     *     *     "*2)
+print("     *******     "*2)
+
+</sampleSolution>
+
+</problem>

@@ -1,0 +1,61 @@
+<problem chapter='2' section='6' slide='1' problem='6' title='How to talk to a computer: string operators'>
+
+<!--
+Update history:
+2020-07-17 Grzegorz (reviewed; code - blank lines and syntax-color class added)
+-->
+
+<h1>String operators - introduction</h1>
+
+
+<p>It's time to return to these two arithmetic operators: <codel>+</codel> and <codel>*</codel>.</p>
+
+<p>We want to show you that they have a second function. They are able to do something more than just <strong>add</strong> and <strong>multiply</strong>.</p>
+
+<p>We've seen them in action where their arguments are numbers (floats or integers, it doesn't matter).</p>
+
+<p>Now we're going to show you that they can handle strings, too, albeit in a very specific way.</p>
+
+
+<br>
+
+<h1>Concatenation</h1>
+
+
+
+<p>The <codel>+</codel> (plus) sign, when applied to two strings, becomes a <strong>concatenation operator</strong>:</p>
+
+<codep>string + string</codep>
+
+<br>
+
+<p>It simply <strong>concatenates</strong> (glues) two strings into one. Of course, like its arithmetic sibling, it can be used more than once in one expression, and in such a context it behaves according to left-sided binding.</p>
+
+<p>In contrast to its arithmetic sibling, the concatenation operator is <strong>not commutative</strong>, i.e., <codel>"ab" + "ba"</codel> is not the same as <codel>"ba" + "ab"</codel>.</p>
+
+<p>Don't forget ‒ if you want the <codel>+</codel> sign to be a <strong>concatenator</strong>, not an adder, you must ensure that <strong>both its arguments are strings</strong>.</p>
+
+<p>You cannot mix types here.</p>
+
+<hr>
+
+<p>This simple program shows the <codel>+</codel> sign in its second use:</p>
+
+<codep class="syntax-color">fnam = input("May I have your first name, please? ")
+lnam = input("May I have your last name, please? ")
+print("Thank you.")
+print("\nYour name is " + fnam + " " + lnam + ".")
+</codep>
+
+<br>
+
+<p>Note: using <codel>+</codel> to concatenate strings lets you construct the output in a more precise way than with a pure <codel>print()</codel> function, even if enriched with the <codel>end=</codel> and <codel>sep=</codel> keyword arguments.</p>
+
+<p>Run the code and see if the output matches your predictions.</p>
+
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

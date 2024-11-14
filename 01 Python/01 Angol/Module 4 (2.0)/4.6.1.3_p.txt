@@ -1,0 +1,76 @@
+<problem chapter='4' section='6' slide='1' problem='3' title='Tuples and dictionaries'>
+
+<!--
+Update history:
+2020-08-18 Grzegorz (reviewed, re-formatted, PEP-8 compliance check)
+-->
+
+<code>
+my_tuple = (1, 10, 100)
+
+t1 = my_tuple + (1000, 10000)
+t2 = my_tuple * 3
+
+print(len(t2))
+print(t1)
+print(t2)
+print(10 in my_tuple)
+print(-10 not in my_tuple)
+
+</code>
+
+
+
+<h1>How to use a tuple: continued</h1>
+
+
+<p>What else can tuples do for you?</p>
+
+<ul>
+<li>the <codel>len()</codel> function accepts tuples, and returns the number of elements contained inside;</li>
+<li>the <codel>+</codel> operator can join tuples together (we've shown you this already)</li>
+<li>the <codel>*</codel> operator can multiply tuples, just like lists;</li>
+<li>the <codel>in</codel> and <codel>not in</codel> operators work in the same way as in lists.</li>
+</ul>
+
+<p>The snippet in the editor presents them all.</p>
+
+<p>The output should look as follows:</p>
+
+<codep>9
+(1, 10, 100, 1000, 10000)
+(1, 10, 100, 1, 10, 100, 1, 10, 100)
+True
+True</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+<br>
+
+<p>One of the most useful tuple properties is their ability to <strong>appear on the left side of the assignment operator</strong>. You saw this phenomenon some time ago, when it was necessary to find an elegant tool to swap two variables' values.</p>
+
+<p>Take a look at the snippet below:</p>
+
+<codep class="syntax-color">var = 123
+
+t1 = (1, )
+t2 = (2, )
+t3 = (3, var)
+
+t1, t2, t3 = t2, t3, t1
+
+print(t1, t2, t3)
+</codep>
+
+<br>
+
+<p>It shows three tuples interacting − in effect, the values stored in them "circulate" − <codel>t1</codel> becomes <codel>t2</codel>, <codel>t2</codel> becomes <codel>t3</codel>, and <codel>t3</codel> becomes <codel>t1</codel>.</p>
+
+<p>Note: the example presents one more important fact: a <strong>tuple's elements can be variables</strong>, not only literals. Moreover, they can be expressions if they're on the right side of the assignment operator.</p>
+
+<br>
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

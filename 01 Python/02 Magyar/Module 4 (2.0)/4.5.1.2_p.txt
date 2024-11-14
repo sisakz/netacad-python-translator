@@ -1,0 +1,174 @@
+<problem chapter='4' section='5' slide='1' problem='2' title='Függvények két paraméterrel'>
+
+<!--
+Update history:
+2020-08-18 Grzegorz (reviewed, re-formatted, PEP-8 compliance check)
+-->
+
+<code>
+def bmi(weight, height):
+    if height < 1.0 or height > 2.5 or \
+    weight < 20 or weight > 200:
+        return None
+
+    return weight / height ** 2
+
+
+print(bmi(352.5, 1.65))
+
+</code>
+
+
+
+<h1>Egyszerű függvényekek: a BMI kiszámítása mértékegység váltással</h1>
+
+<p>Vizsgáljuk meg a kódot a szerkesztőben! Két dologra kell figyelnünk.</p>
+
+<p>Először is a teszthívás biztosítja, hogy a <strong>védelem</strong> megfelelően működik. A kimenet:</p>
+
+<codep>None</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+<br>
+
+
+<p>Másodszor figyeljük meg, hogyan használjuk a <strong>backslash</strong> (<codel>\</codel>) szimbólumot. Ha egy Python kódban egy sort backslash-sel fejezünk be, akkor a Pythonnak azt mondjuk, hogy a kódsor a következő sorban folytatódik.</p>
+
+<p>Különösen hasznos ez, amikor hosszú kódsorokkal dolgozunk, és szeretnénk javítani a kód olvashatóságát.</p>
+
+<br>
+
+<p>Rendben is van, de van valami, amit kihagytunk a számításból – az angolszász mértékegységeket. Ez a jelenlegi függvény nem túl hasznos a fonthoz, lábhoz és hüvelykhez szokott emberek számára.</p>
+
+<p>Mit tehetünk ez ügyben?</p>
+
+<p>Két egyszerű függvényt írhatunk, amelyekkel az <strong>angolszász mértékegységeket metrikusra alakítjuk át</strong>. Kezdjük a fonttal (lb).</p>
+
+<p>Közismert tény, hogy <codel>1 font = 0.45359237 kg</codel>. Ezt fogjuk használni az új függvényünkben.</p>
+
+<p>Ez a segédfüggvényünk, amelynek neve <codel>lb_to_kg</codel>:</p>
+
+<codep>def <mark style="background-color:#e6f2ff;">lb_to_kg</mark>(lb):
+    return lb * 0.45359237
+
+
+print(lb_to_kg(1))
+
+</codep>
+
+<br>
+
+
+<p>A teszthívás eredménye jónak tűnik:</p>
+
+<codep>0.45359237</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+<br>
+
+
+
+<p>Eljött az ideje, hogy foglalkozzunk a lábbal (ft) és a hüvelykkel (in) is: <codel>1 láb = 0.3048 m</codel> és <codel>1 hüvelyk = 2.54 cm = 0.0254 m</codel>.</p>
+
+
+<p>Az általunk írt függvény neve <codel>ft_and_inch_to_m</codel>:</p>
+
+<codep>def <mark style="background-color:#e6f2ff;">ft_and_inch_to_m</mark>(ft, inch):
+    return ft * 0.3048 + inch * 0.0254
+
+
+print(ft_and_inch_to_m(1, 1))
+
+</codep>
+
+<br>
+
+<p>Egy gyors teszt eredménye:</p>
+
+<codep>0.3302</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+<br>
+
+<p>A várakozásoknak megfelelően néz ki.</p>
+
+<p>Megjegyzés: a második paramétert csak <codel>in</codel>-nek akartuk nevezni, nem <codel>inch</codel>-nek, de nem tudtuk. Tudod, hogy miért?</p>
+
+<p>Az <codel>in</codel> egy Python <strong>kulcsszó</strong>, nem használható változó neveként.</p>
+
+<br>
+
+<p>Számítsuk át a <i>hat lábat</i> méterbe:</p>
+
+<codep class="syntax-color">print(ft_and_inch_to_m(6, 0))
+</codep>
+<br>
+
+<p>A kimenet a következő:</p>
+
+<codep>1.8288000000000002</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+<br>
+
+
+<p>Előfordulhat, hogy néha csak lábat szeretnénk használni hüvelyk nélkül. A Python segíteni fog ebben? Természetesen igen.</p>
+
+<p>Kicsit módosítottuk a kódot:</p>
+
+<codep class="copy">def ft_and_inch_to_m(<mark style="background-color:#e6f2ff;">ft, inch = 0.0</mark>):
+    return ft * 0.3048 + inch * 0.0254
+
+
+print(ft_and_inch_to_m(6))
+
+</codep>
+
+<br>
+
+<p>Most az <codel>inch</codel> paraméter alapértelmezett értéke <codel>0.0</codel>.</p>
+
+<p>A kód az elvárt kimenetet produkálja:</p>
+
+<codep>1.8288000000000002</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+<br>
+
+
+<p>Vajon a kód képes megválaszolni a kérdést: mennyi a testtömegindexe egy 5 láb 7 hüvelyk (170 centiméter) magas , 176 font (80 kg) súlyú személynek?</p>
+
+<p>Ezt a kódot hoztuk létre:</p>
+
+<codep class="syntax-color copy">def ft_and_inch_to_m(ft, inch = 0.0):
+    return ft * 0.3048 + inch * 0.0254
+
+
+def lb_to_kg(lb):
+    return lb * 0.45359237
+
+
+def bmi(weight, height):
+    if height < 1.0 or height > 2.5 or weight < 20 or weight > 200:
+        return None
+    
+    return weight / height ** 2
+
+
+print(bmi(weight = lb_to_kg(176), height = ft_and_inch_to_m(5, 7)))
+</codep>
+
+<br>
+
+<p>A válasz pedig a következő:</p>
+
+<codep>27.565214082533313</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+<br>
+
+<p>Futtasd a kódot és teszteld az eredményt!</p>
+
+<br>
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

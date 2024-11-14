@@ -1,0 +1,45 @@
+<problem chapter='2' section='1' slide='1' problem='1' title='Az első programod'>
+
+<!--
+Update history:
+2020-07-17 Grzegorz (format and page number change)
+2020-08-25 Grzegorz (sentence changed: If everything goes okay, you'll see the text contained within the quotation marks in the IDLE console window.)
+-->
+
+<code>
+print("Hello, World!")
+
+</code>
+
+<h1>Helló világ!</h1>
+
+<p>Itt az ideje, hogy <strong>valódi, működő Python kódot </strong>írjunk. Ez kezdetben nagyon egyszerű lesz.</p>
+
+<p>Mivel néhány alapvető fogalmat és kifejezést fogunk bemutatni, ezek a kódrészletek nem lesznek sem nehezek, sem bonyolultak.</p>
+
+<p>Futtasd a kódot a jobb oldali szerkesztőablakban! Ha itt minden rendben megy, akkor a konzol ablakban látni fogsz <strong>egy sornyi szöveget</strong>.</p>
+
+<p>Másik lehetőséged, hogy indítsd el az IDLE-t, hozz létre egy új Python forrásfájlt, írd bele ezt a kódot, nevezd el a fájlt és mentsd el. Ezután futtasd a kódot! Ha minden rendben megy, akkor az IDLE konzolablakában látni fogod az üdvözlő sort. A lefuttatott kódnak ismerősnek kell lennie. Valami nagyon hasonlót láttál, amikor végigvezettünk az IDLE környezet beállításán.</p>
+
+<p>Most egy kis időt azzal töltünk, hogy megmutassuk és elmagyarázzuk, hogy mit is látsz valójában, és miért néz ki így.</p>
+
+<p>Mint látható, az első program a következő részekből áll:</p>
+
+<ul>
+<li>a <codel>print</codel> (kiírás) szó;</li>
+<li>nyitó zárójel;</li>
+<li>idézőjel;</li>
+<li>üdvözlő szöveg: <codel>Hello, World!</codel>;</li>
+<li>másik idézőjel;</li>
+<li>záró zárójel.</li>
+</ul>
+ 
+
+<p>A fentiek mindegyike nagyon fontos szerepet játszik a kódban.</p>
+
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

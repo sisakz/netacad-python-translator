@@ -1,0 +1,111 @@
+<problem chapter='4' section='3' slide='1' problem='6' title="LAB: A leap year: writing your own functions">
+
+<!--
+Update history:
+2020-08-14 Grzegorz (reviewed, re-formatted)
+-->
+
+<code>
+def is_year_leap(year):
+#
+# Write your code here.
+#
+
+test_data = [1900, 2000, 2016, 1987]
+test_results = [False, True, True, False]
+for i in range(len(test_data)):
+	yr = test_data[i]
+	print(yr,"->",end="")
+	result = is_year_leap(yr)
+	if result == test_results[i]:
+		print("OK")
+	else:
+		print("Failed")
+
+</code>
+
+<span class="label" style="background-color:rgb(205, 168, 105);"><strong>LAB</strong></span>
+
+<br><br>
+
+<h2>Estimated time</h2>
+<p>10-15 minutes</p>
+
+<h2>Level of difficulty</h2>
+<p>Easy</p>
+
+
+<h2>Objectives</h2>
+
+<p>Familiarize the student with:</p>
+<ul>
+<li>projecting and writing parameterized functions;</li>
+<li>utilizing the <font face="courier new">return</font> statement;</li>
+<li>testing the functions.</li>
+</ul>
+
+
+<h2>Scenario</h2>
+
+<p>Your task is to write and test a function which takes one argument (a year) and returns <codel>True</codel> if the year is a <i>leap year</i>, or <codel>False</codel> otherwise.</p>
+
+<p>The seed of the function is already sown in the skeleton code in the editor.</p>
+
+<p>Note: we've also prepared a short testing code, which you can use to test your function.</p>
+
+<p>The code uses two lists ‒ one with the test data, and the other containing the expected results. The code will tell you if any of your results are invalid.</p>
+
+<br>
+
+<studyMode>false</studyMode>
+<labMode>true</labMode>
+
+<hint>
+def is_year_leap(year):
+	if year % 4 != 0:
+		# 
+	# elif statement
+		#
+	# elif statement
+		#
+	# else statement
+
+test_data = [1900, 2000, 2016, 1987]
+test_results = [False, True, True, False]
+for i in range(len(test_data)):
+	yr = test_data[i]
+	print(yr,"-> ",end="")
+	result = is_year_leap(yr)
+	if result == test_results[i]:
+		print("OK")
+	else:
+		print("Failed")
+
+</hint>
+
+
+<sampleSolution>
+def is_year_leap(year):
+	if year % 4 != 0:
+		return False
+	elif year % 100 != 0:
+		return True
+	elif year % 400 != 0:
+		return False
+	else:
+		return True
+
+test_data = [1900, 2000, 2016, 1987]
+test_results = [False, True, True, False]
+for i in range(len(test_data)):
+	yr = test_data[i]
+	print(yr,"-> ",end="")
+	result = is_year_leap(yr)
+	if result == test_results[i]:
+		print("OK")
+	else:
+		print("Failed")
+
+</sampleSolution>
+
+</problem>

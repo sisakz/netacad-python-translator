@@ -1,0 +1,51 @@
+<problem chapter='0' section='0' slide='0' problem='2' title='Python Essentials - Alignment with Certifications'>
+
+<div class="container">
+<div class="row">
+<div class="small-12 large-6 columns">
+
+<h1>Associate-Level Certification: PCAP &ndash; Python Certified Associate Programmer</h1>
+
+<p><i>Python Essentials 2</i> (PE2) is aligned with the <i>PCAP &ndash; Python Certified Associate Programmer</i> certification.</p>
+
+
+<p><a href="https://pythoninstitute.org/pcap-certification-associate/" target="_blank">PCAP &ndash; Python Certified Associate Programmer</a> certification is a professional credential that measures the test-taker's ability to accomplish coding tasks related to <b>the more advanced aspects of programming</b> in the Python language, including the fundamental notions and techniques used in <b>object-oriented programming</b>.</p>
+
+<p><i>PCAP &ndash; Certified Associate in Python Programming</i> certification shows that the individual is familiar with all the programming concepts covered by the <i>PCEP &ndash; Certified Entry-Level Python Programmer</i> certification, as well as with such concepts as <b>modules and packages, string and string methods, list methods, exceptions, object-oriented programming, generators, lambdas, file processing, and working with selected Python STL modules</b>.</p>
+
+<p>Becoming PCAP certified ensures that the individual is fully acquainted with <b>all the primary means provided by Python 3<b> to enable her/him to start her/his own studies, and to open a path to <b>the developer's career</b>.</p>
+
+<br>
+
+
+</div>
+
+
+
+
+<div class="small-12 large-6 columns">
+<br>
+
+<center><img class="lightbox" src="/uploads/media/default/0001/02/70a673eb34a17f07560a7a07a7a3b66bd9337ae3.png" width="85%" alt="Python Essentials - Course Modules mapped with Certifications"></center>
+
+<br>
+
+<center><p>Course modules mapped with PCEP and PCAP certifications</p></center>
+
+
+
+
+
+<br>
+
+</div>
+</div>
+</div>
+
+
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

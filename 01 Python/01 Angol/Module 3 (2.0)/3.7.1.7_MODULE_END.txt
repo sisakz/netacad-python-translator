@@ -1,0 +1,70 @@
+<problem chapter='3' section='7' slide='1' problem='7' title='Module Completion'>
+
+<!--
+Update history:
+2020-08-12 Grzegorz (reviewed)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<h1>Congratulations! You have completed Module 3.</h1>
+
+<br>
+
+
+<p>Well done! You've reached the end of Module 3 and completed a major milestone in your Python programming education. Here's a short summary of the objectives you've covered and become familiar with in Module 3:</p>
+
+<ul>
+<li>Boolean values to compare different values and control the execution paths using the <codel>if</codel> and <codel>if-else</codel> instructions;</li>
+
+<li>the utilization of loops (<codel>while</codel> and <codel>for</codel>) and how to control their behavior using the <codel>break</codel> and <codel>continue</codel> instructions;</li>
+
+<li>the difference between logical and bitwise operations;</li>
+
+<li>the concept of lists and list processing, including the iteration provided by the <codel>for</codel> loop, and slicing;</li>
+
+<li>the idea of multi-dimensional arrays.</li>
+
+
+</ul>
+
+<br>
+
+<p>You are now ready to take the module quiz and attempt the final challenge: Module 3 Test, which will help you gauge what you've learned so far.</p>
+
+
+<br>
+<br>
+
+</div>
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+
+
+<center><img src="/uploads/media/default/0001/01/29ed2aa31a1a26221e4eac3b69d973a33cbf562e.png" width="65%" alt="Module completion - congratulations"></center>
+<br>
+
+
+
+
+<br>
+
+</div>
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

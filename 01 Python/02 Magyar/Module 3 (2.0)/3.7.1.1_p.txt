@@ -1,0 +1,96 @@
+<problem chapter='3' section='7' slide='1' problem='1' title='Listák fejlett alkalmazásokban'>
+
+<!--
+Update history:
+2020-08-12 Grzegorz (reviewed)
+2020-08-27 Grzegorz (right corner changed to left)
+-->
+
+<code>
+</code>
+
+<h1>Listák a listákban</h1>
+
+
+<p>A listák állhatnak skalárokból (nevezetesen számokból) és ennél sokkal összetettebb szerkezetű elemekből (az előző szakaszok összefoglaló leckéiben már láthattál ilyen példákat, mint a karakterláncok, a logikai értékek vagy akár más listák). Nézzük meg közelebbről azt az esetet, amikor egy <strong>lista elemei csak listák</strong>.</p>
+
+<p>Gyakran találunk ilyen <strong>tömböket (arrays)</strong> az életünkben. A legjobb példa erre talán a <strong>sakktábla</strong>.</p>
+
+<p>A sakktábla sorokból és oszlopokból áll. Nyolc sor és nyolc oszlop van. Minden oszlopot az A-tól H-ig terjedő betűkkel jelölünk. Minden soron egy szám van feltüntetve egytől nyolcig.</p>
+
+<p>Az egyes mezők helyét betű-szám párosok azonosítják. Így tudjuk, hogy a tábla bal alsó sarka (ahol a fehér bástya van) az A1, míg a szemközti sarok a H8.</p>
+
+<br>
+
+<p>Tegyük fel, hogy a kiválasztott számokkal bármelyik sakkfigurát ábrázolni tudjuk. Azt is feltételezhetjük, hogy a <strong>sakktábla minden sora egy lista</strong>.</p>
+
+<p>Nézd meg az alábbi kódot:</p>
+
+<codep class="syntax-color">row = []
+
+for i in range(8):
+    row.append(WHITE_PAWN)
+</codep>
+
+<br>
+
+
+
+<p>Ez egy nyolc elemet tartalmazó listát készít, amely a sakktábla második sorát – a gyalogokkal teli sort – jelképezi (feltételezzük, hogy a <codel>WHITE_PAWN</codel> egy <strong>előre definiált szimbólum</strong>, amely a fehér gyalogot jelképezi).</p>
+
+<hr>
+
+<p>Ugyanezt a hatást elérhetjük a <strong>listaleképezéssel (list comprehension)</strong>, a Python által használt speciális szintaxissal, amelyet a hatalmas listák kitöltésére használunk.</p>
+
+<p>A listaleképezés valójában egy lista, de <strong>a program végrehajtása közben jön létre, és nem statikusan van leírva</strong>.</p>
+
+<p>Nézd meg a kódrészletet:</p>
+
+<codep class="syntax-color">row = [WHITE_PAWN for i in range(8)]
+</codep>
+
+<br>
+
+
+<p>A kód zárójelben lévő része adja meg:</p>
+
+<ul>
+<li>a lista kitöltéséhez használandó adatokat (<codel>WHITE_PAWN</codel>);</li>
+<li>a záradékot, amely meghatározza, hogy az adat hányszor fordul elő a listán belül (<codel>for i in range(8)</codel>).</li>
+</ul>
+
+<hr>
+
+<p>Hadd mutassunk néhány további <strong>példát a listaleképezésre</strong>:</p>
+
+<p>1. példa:</p>
+<codep class="syntax-color">squares = [x ** 2 for x in range(10)]
+</codep>
+<br>
+
+<p>A kódrészlet egy tízelemű listát állít elő, amely tíz egész szám négyzeteivel van kitöltve, nullától kezdve (0, 1, 4, 9, 16, 25, 36, 49, 64, 81).</p>
+
+<p>2. példa:</p>
+<codep class="syntax-color">twos = [2 ** i for i in range(8)]
+</codep>
+<br>
+
+<p>A kódrészlet egy nyolc elemű tömböt hoz létre, amely a kettes szám első nyolc hatványát tartalmazza (1, 2, 4, 8, 16, 32, 64, 128).</p>
+
+<p>3. példa:</p>
+<codep class="syntax-color">odds = [x for x in squares if x % 2 != 0 ]
+</codep>
+
+<br>
+
+<p>A kódrészlet egy olyan listát készít, amely csak a <codel>squares</codel> lista páratlan elemeit tartalmazza.</p>
+
+<br>
+
+
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

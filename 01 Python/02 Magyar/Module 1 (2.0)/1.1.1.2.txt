@@ -1,0 +1,53 @@
+<problem chapter='1' section='1' slide='1' problem='2' title='Programozási alapok'>
+
+<!--
+Update history:
+2020-07-07 Grzegorz (formatted)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+<br>
+
+<h1>Természetes nyelvek vs. programozási nyelvek</h1>
+
+<p>A nyelv a gondolatok kifejezésének és rögzítésének eszköze. Sok nyelv van körülöttünk, némelyikhez nem kell sem beszélni, sem írni. Ilyen a testbeszéd; a legmélyebb érzéseinket nagyon pontosan tudjuk kifejezni anélkül, hogy egy szót is szólnánk.</p>
+
+<p>Egy másik nyelv, amelyet minden nap használsz, az anyanyelved. Ez az, amit az akaratod kinyilvánítására és a valóságról való gondolkodásra használsz. A számítógépeknek is megvan a saját nyelvük, amit <strong>gépi</strong> nyelvnek vagy gépi kódnak hívnak. A gépi kód nagyon alapszintű nyelv.</p>
+
+<p>Egy számítógép, még a technikailag legfejlettebb is, az intelligencia legcsekélyebb szikráját sem mutatja. Úgy is mondhatnánk, hogy olyan, mint egy jól idomított kutya - csak előre meghatározott, ismert parancsokra reagál.</p>
+
+<p>Az általa felismert parancsok nagyon egyszerűek. Képzeld el, a számítógép olyan parancsokat képes végrehajtani csak, mint "vedd ezt a számot, oszd el egy másikkal, és mentsd el az eredményt".</p>
+
+<p>A számítógép által ismert parancsok teljes készletét <strong>utasításlistának</strong> (instruction list) nevezzük, vagy röviden <strong>IL</strong>. A különböző számítógép-típusok az IL-ek méretétől függően eltérhetnek egymástól, és az utasítások teljesen különbözőek lehetnek a különböző modellekben.</p>
+
+<p>Megjegyzés: a gépi nyelveket emberek fejlesztik.</p>
+
+</div>
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+<p>Jelenleg egyetlen számítógép sem képes új nyelvet létrehozni, bár ez a közeljövőben megváltozhat. Ugyanakkor az emberek is számos nagyon különböző nyelvet használnak, de ezek a nyelvek természetes módon alakultak ki. Sőt, még mindig fejlődnek.</p>
+
+<p>Minden nap új szavak jönnek létre, és régi szavak tűnnek el. Ezeket a nyelveket <strong>természetes nyelveknek</strong> nevezzük.</p>
+
+
+<center><img src="/uploads/media/default/0001/01/dbbf39457b4d5aed83090b1f92d9c79770c2faeb.png" width="50%" alt="The concept of compilation"></center>
+
+<br><br>
+
+</div>
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

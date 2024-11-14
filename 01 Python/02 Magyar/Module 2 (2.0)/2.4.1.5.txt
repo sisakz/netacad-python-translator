@@ -1,0 +1,120 @@
+<problem chapter='2' section='4' slide='1' problem='5' title='Változók'>
+
+<!--
+Update history:
+2020-07-17 Grzegorz (re-formatted; code - syntax-color, blank line added)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<h1>Értékadás már létező változóhoz</h1>
+
+
+<p>Hogyan rendelhetünk új értéket egy már létrehozott változóhoz? A korábbiakkal megegyező módon. Csak az egyenlőségjelet kell használnod.<p>
+
+ 
+<p>Az egyenlőségjel valójában az <strong>értékadás operátora</strong>. Bár ez meglepő lehet, de a művelet szintaxisa egyszerű és félreérthetetlen.</p>
+
+<p>A jobb oldali argumentum értékét a bal oldali argumentumhoz rendeli. A jobb oldali argumentum egy tetszőlegesen összetett kifejezés lehet, amely literálokat, operátorokat és már definiált változókat tartalmazhat.</p>
+
+<p>Nézd meg az alábbi kódot:</p>
+
+<codep class="syntax-color">var = 1
+print(var)
+var = var + 1
+print(var)
+</codep>
+
+
+<br>
+
+
+<p>A kód két sort küld a konzolra:</p>
+
+<codep>1
+2
+</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+<br>
+
+<p>A kód első sora <strong>létrehoz egy új</strong>, <codel>var</codel> nevű <strong>változót</strong> és <codel>1</codel>-et rendel hozzá.</p>
+
+<br>
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+
+
+
+<p>Az utasítás így szól: adjunk <codel>1</codel> értéket a <codel>var</codel> nevű változónak.</p>
+
+<p>Mondhatjuk rövidebben is: rendeljünk <codel>1</codel>-et a <codel>var</codel> változóhoz.</p>
+
+<p>Egyesek inkább így olvassák az ilyen utasítást: <codel>var</codel> legyen <codel>1</codel>.</p>
+
+ 
+<p>A harmadik sor <strong>ugyanannak a változónak ad új értéket</strong>. Ehhez a változó jelenlegi értékét veszi és hozzáad <codel>1</codel>-et. Egy ilyen sort látva egy matematikus valószínűleg tiltakozna - egyetlen érték sem lehet egyenlő önmaga plusz eggyel. Ez egy ellentmondás. De a Python a <codel>=</codel> jelet nem az <i>egyenlőség</i>, hanem az <i>értékadás jelének</i> tekinti.</p>
+
+ 
+<p>Hogyan kell olvasni egy ilyen sort a programban?</p>
+
+<p>Vegyük a <codel>var</codel> változó aktuális értékét, adjunk hozzá <codel>1</codel>-et, és az eredményt tároljuk a <codel>var</codel> változóban.</p>
+
+<p>Valójában a <codel>var</codel> változó értéke eggyel <strong>növekszik</strong>, aminek semmi köze a változó bármilyen értékkel való összehasonlításához.</p>
+
+<br>
+
+<p>Tudod, hogy mi lesz a következő kódrészlet kimenete?</p>
+
+<codep class="syntax-color">var = 100
+var = 200 + 300
+print(var)
+</codep>
+
+<br>
+
+<button class="button tiny" onclick="solution('sol')">Ellenőrzés</button>
+
+<p id="sol" style="display: none;"><codel>500</codel> ‒ Miért is? Az első lépésben létrejön a <codel>var</codel> változó és az értéke 100 lesz. Ezt követően a változó új értéket kap: 200+300=500.</p>
+
+<script>
+function solution (id) {
+    var element = document.getElementById(id);
+    
+if (element.style.display === "none") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
+    }
+}
+</script>
+
+
+
+<br>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

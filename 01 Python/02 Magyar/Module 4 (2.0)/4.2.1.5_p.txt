@@ -1,0 +1,64 @@
+<problem chapter='4' section='2' slide='1' problem='5' title='Hogyan kommunikálnak a függvények a környezetükkel?'>
+
+<!--
+Update history:
+2020-08-13 Grzegorz (reviewed, re-formatted)
+-->
+
+<code>
+</code>
+
+
+
+<h1>Kulcsszó argumentum átadása</h1>
+
+<p>A Python egy másik lehetőséget is kínál az argumentumok átadására, ahol az <strong>argumentum jelentését a neve határozza meg</strong>, nem pedig a pozíciója. Ezt hívják <strong>kulcsszavas argumentumátadásnak</strong>.</p>
+
+<p>Nézd meg a következő kódrészletet:</p>
+
+<codep class="syntax-color">def introduction(first_name, last_name):
+    print("Hello, my name is", first_name, last_name)
+
+introduction(first_name = "James", last_name = "Bond")
+introduction(last_name = "Skywalker", first_name = "Luke")
+</codep>
+
+<br>
+
+<p>A koncepció egyértelmű, a paraméterekhez átadott értékek előtt a célparaméterek neve áll, amelyet az <codel>=</codel> jel követ.</p>
+
+<p>Az argumentum helye itt nem számít, minden argumentum értéke a név alapján találja meg a rendeltetési helyét.</p>
+
+<p>Vajon mi lesz a kimenet? Futtasd le a kódot, és ellenőrizd!</p>
+
+<hr>
+
+<p>Természetesen <strong>tilos nem létező paraméternevet használni!</strong></p>
+
+<p>A következő kódrészlet futási hibát okoz:</p>
+
+<codep style="color:red;" class="copy">def introduction(first_name, last_name):
+    print("Hello, my name is", first_name, last_name)
+
+introduction(<mark style="background-color:#e6f2ff;color:red;">surname</mark>="Skywalker", first_name="Luke")
+
+</codep>
+
+<br>
+
+<p>Ez az, amit a Python válaszol:</p>
+
+<codep>TypeError: introduction() got an unexpected keyword argument 'surname'</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+
+<br>
+
+<p>Próbáld ki te is!</p>
+
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

@@ -1,0 +1,64 @@
+<problem chapter='4' section='3' slide='1' problem='2' title='Függvény visszatérési értéke'>
+
+<!--
+Update history:
+2020-08-14 Grzegorz (reviewed, re-formatted)
+-->
+
+<code>
+
+</code>
+
+
+
+<h1>Néhány szó a <font face="courier new">None</font> értékről</h1>
+
+
+<p>Hadd mutassunk be neked egy nagyon furcsa (valójában egy semmi értékű) <codel>None</codel> nevű értéket.</p>
+
+<p>Az adatai nem képviselnek semmilyen észszerű értéket - valójában egyáltalán nem is érték, ezért <strong>nem vehet részt semmilyen kifejezésben</strong>.</p>
+
+<p>Például egy ilyen kódrészlet:</p>
+
+<codep style="color:red;">print(None + 2)
+
+</codep>
+
+<br>
+
+ 
+<p>futásidejű hibát okoz, amelyet a következő diagnosztikai üzenet ír le:</p>
+
+<codep>TypeError: unsupported operand type(s) for +: 'NoneType' and 'int'</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+<br>
+ 
+
+<p>Megjegyzés: A <codel>None</codel> egy <strong>kulcsszó</strong>.</p>
+
+
+<p>Csak két olyan eset van, amikor a <codel>None</codel> nyugodtan használható:</p>
+
+<ul>
+<li>amikor <strong>hozzárendeljük egy változóhoz</strong>, vagy visszaadjuk egy <strong>függvény eredményeként</strong>);</li>
+
+<li>amikor <strong>összehasonlítjuk egy változóval</strong>, hogy megvizsgáljuk annak belső állapotát.</li>
+</ul>
+
+<p>Mint például itt:</p>
+
+<codep class="syntax-color">value = None
+if value is None:
+    print("Sorry, you don't carry any value")
+</codep>
+
+<br>
+
+<p>Ne felejtsük el: ha egy függvény nem ad vissza egy bizonyos értéket a <codel>return</codel> utasítás segítségével, akkor feltételezhetjük, hogy <strong>implicit módon a <codel>None</codel> értéket adja vissza</strong>.</p>
+
+<p>Teszteld le!</p>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

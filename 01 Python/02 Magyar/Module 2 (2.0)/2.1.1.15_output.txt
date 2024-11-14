@@ -1,0 +1,40 @@
+<problem chapter='2' section='1' slide='1' problem='15' title='Az első programod'>
+
+<!--
+Update history:
+2020-07-17 Grzegorz (code format and page number change)
+-->
+
+<code>print("My name is ", end="")
+print("Monty Python.")
+
+</code>
+
+<h1>A <span style="font-family:courier new;">print()</span> függvény - a kulcsszó argumentumok</h1>
+
+
+<p>És most itt az ideje, hogy megpróbáljunk valami nehezebbet.</p>
+
+<p>Ha figyelmesen megnézzük, láthatjuk, hogy az <codel>end</codel> argumentumot használtuk, de a hozzá rendelt karakterlánc üres (egyáltalán nem tartalmaz karaktereket).</p>
+
+<p>Mi fog most történni? Futtasd szerkesztőablakban lévő programot, és nézd meg az eredményt!</p>
+
+
+<p>Mivel az <codel>end</codel> argumentumot a semmire állítottuk, a <codel>print()</codel> függvény sem ad ki semmi egyebet, miután a pozicionális argumentumait feldolgozta.</p>
+
+<p>A konzolon most a következő szövegnek kell megjelennie:</p>
+
+<codep>My name is Monty Python.</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+<p>Megjegyzés: <strong>a kimenetre nem kerültek újsorok</strong>.</p>
+
+<p>Az <codel>end</codel> kulcsszó argumentumhoz rendelt karakterlánc tetszőleges hosszúságú lehet. Kísérletezz vele!</p>
+
+
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

@@ -1,0 +1,51 @@
+<problem chapter='2' section='1' slide='1' problem='6' title='LAB: A print() függvény'>
+
+<!--
+Update history:
+2020-07-17 Grzegorz (format and page number change)
+-->
+
+<code>
+</code>
+
+<span class="label" style="background-color:rgb(205, 168, 105);"><strong>LABORGYAKORLAT</strong></span>
+
+<br><br>
+
+<h2>Becsült idő</h2>
+<p>5-10 perc</p>
+
+<h2>Nehézségi szint</h2>
+<p>Nagyon könnyű</p>
+
+<h2>Célok</h2>
+<ul>
+<li>a <codel>print()</codel> függvény és annak formázási lehetőségeinek megismerése;</li>
+<li>kísérletezés a Python kóddal.</li>
+</ul>
+
+<h2>Feladatleírás</h2>
+<p>A <codel>print()</codel> parancs, amely az egyik legegyszerűbb utasítás a Pythonban, egyszerűen kiír egy sort a képernyőre.</p>
+<p>Az első laborgyakorlatban::</p>
+
+<ul>
+<li>Használd a <codel>print()</codel> függvényt, hogy a <codel>Hello, Python!</codel> sort kiírd a képernyőre. Használj idézőjeleket a karakterlánc körül.</li>
+<li>Miután ezt megtetted, használd újra a <codel>print()</codel> függvényt, de ezúttal a keresztnevedet írasd ki.</li>
+<li>Távolítsd el a kettős idézőjeleket, és futtasd a kódot. Mit csinál a Python? Milyen hibaüzenetet kapunk?</li>
+<li>Ezt követően távolítsd el a zárójeleket, tedd vissza a kettős idézőjeleket és futtasd le újra a kódot. Milyen hibaüzenetet küld ezúttal?</li>
+<li>Kísérletezz, amennyit csak tudsz! Cseréld le a kettős idézőjeleket szimpla idézőjelekre, használj több <codel>print()</codel> függvényt egy sorban, majd különböző sorokban. Nézd meg, mi történik.</li>
+</ul>
+
+<labMode>true</labMode>
+
+<sampleSolution># Sample Solution
+
+print("Hello, Python!")
+# print("Greg")
+# print(Greg)
+# print"Greg"
+# print('Greg')
+# print("Greg") print("Python")
+# ...</sampleSolution>
+
+</problem>

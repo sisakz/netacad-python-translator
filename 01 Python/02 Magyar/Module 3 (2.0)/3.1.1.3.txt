@@ -1,0 +1,163 @@
+<problem chapter='3' section='1' slide='1' problem='3' title='Döntéshozatal Pythonban'>
+
+<!--
+Update history:
+2020-07-20 Grzegorz (reviewed)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<h1>Összehasonlító operátorok: nagyobb, mint</h1>
+
+
+<p>A <codel>&gt;</codel> (nagyobb, mint) operátorral összehasonlító kérdést tehetünk fel.</p>
+
+<p>Ha azt szeretnénk tudni, hogy több-e a fekete bárány, mint a fehér, akkor ezt a következőképpen írhatjuk le:</p>
+
+<codep>black_sheep <mark style="background-color:#e6f2ff;">&gt;</mark> white_sheep  # Greater than
+
+</codep>
+
+<br>
+
+
+<p>A <codel>True</codel> megerősíti, a <codel>False</codel> pedig tagadja az állítást.</p>
+
+
+<br>
+
+
+
+<h2>Összehasonlító operátorok: nagyobb vagy egyenlő</h2>
+
+<p>A <i>nagyobb, mint</i> operátornak van egy másik speciális, <strong>nem szigorú</strong> változata is, de ezt másképp jelöljük, mint a klasszikus aritmetikai jelölésben: <codel>>=</codel> (nagyobb vagy egyenlő).</p>
+
+<p>Két egymást követő jel van, nem egy.</p>
+
+<p>Mindkét operátor (szigorú és nem szigorú), valamint a következő szakaszban tárgyalt két másik operátor is <strong>balról jobbra kiértékelődő irányú bináris operátor</strong>, és a <strong>prioritásuk nagyobb, mint az <codel>==</codel> és <codel>!=</codel></strong> által mutatott prioritás.</p>
+
+<p>Ha azt szeretnénk megtudni, hogy kell-e meleg sapkát viselnünk, akkor a következő kérdést tesszük fel:</p>
+
+<codep>centigrade_outside <mark style="background-color:#e6f2ff;">&ge;</mark> 0.0  # Greater than or equal to
+
+</codep>
+
+<br>
+
+
+<h2>Összehasonlító operátorok: kisebb vagy egyenlő</h2>
+
+
+<p>Ahogy azt már valószínűleg kitaláltad, az ebben az esetben használt operátorok a következők: <codel><</codel> (kisebb, mint) operátor és annak nem szigorú testvére: <codel><=</codel> (kisebb vagy egyenlő).</p>
+
+<p>Nézzük meg ezt az egyszerű példát:</p>
+
+<codep>current_velocity_mph <mark style="background-color:#e6f2ff;">&lt;</mark> 85  # Less than
+current_velocity_mph <mark style="background-color:#e6f2ff;">&le;</mark> 85  # Less than or equal to
+
+</codep>
+
+<br>
+
+ 
+<p>Ellenőrizzük, hogy fennáll-e a veszélye annak, hogy az autópálya-rendőrség megbírságol (az első kérdés szigorú, a második nem)!</p>
+
+<br>
+
+
+
+</div>
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+
+
+<h2>A válaszok felhasználása</h2>
+
+<p>Mit kezdhetsz a számítógéptől kapott válasszal (azaz az összehasonlítási művelet eredményével)?</p>
+
+<p>Legalább két lehetőséged van: először is, megjegyezheted (<strong>egy változóban tárolhatod</strong>) és később felhasználhatod. Hogyan teheted ezt meg? Nos, használhatsz egy tetszőleges változót, például így:</p>
+
+<codep><mark style="background-color:#e6f2ff;">answer</mark> = number_of_lions >= number_of_lionesses
+
+</codep>
+
+<br>
+
+<p>A változó tartalmából megtudhatod a feltett kérdésre adott választ.</p>
+
+<br>
+
+<p>A második lehetőség kényelmesebb és sokkal gyakoribb: a kapott válasz alapján <strong>dönthetsz a program jövőjéről</strong>.</p>
+
+<p>Erre a célra külön utasításra van szükséged, amit hamarosan megtárgyalunk.</p>
+
+<p>Most frissítenünk kell a <strong>prioritási táblázatunkat</strong>, és az összes új operátort bele kell tennünk. Ez most a következőképpen néz ki:</p>
+
+<table style="width:75%">
+
+<tr>
+<th>Prioritás</th>
+<th>Operátor</th>
+<th></th>
+</tr>
+
+<tr>
+<td>1</td>
+<td><codel>+</codel>, <codel>-</codel></td>
+<td>unáris</td>
+</tr>
+
+<tr>
+<td>2</td>
+<td><codel>**</codel></td>
+<td></td>
+</tr>
+
+<tr>
+<td>3</td>
+<td><codel>*</codel>, <codel>/</codel>, <codel>//</codel>, <codel>%</codel></td>
+<td></td>
+</tr>
+
+<tr>
+<td>4</td>
+<td><codel>+</codel>, <codel>-</codel></td>
+<td>bináris</td>
+</tr>
+
+<tr>
+<td>5</td>
+<td><codel>&lt;</codel>, <codel>&lt;=</codel>, <codel>&gt;</codel>, <codel>&gt;=</codel></td>
+<td></td>
+</tr>
+
+<tr>
+<td>6</td>
+<td><codel>==</codel>, <codel>!=</codel></td>
+<td></td>
+</tr>
+
+</table>
+
+<br>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

@@ -1,0 +1,68 @@
+<problem chapter='5' section='1' slide='1' problem='3' title='Earn PCEP certification'>
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h2>How to take PCEP exam?</h2>
+
+
+<p>Taking the exam requires that you have an <b>exam voucher</b>. You can purchase an exam voucher at OpenEDG Voucher Store and assign it to your Test Candidate Account.</p>
+
+<p><b>Purchase exam voucher</b></p>
+
+<p>To purchase an exam voucher, you should go to <a href="https://ums.edube.org/store" target="_blank">OpenEDG Voucher Store</a>, add a PCEP voucher to the cart, and place an order.</p>
+
+<p>During the process you be requested to provide billing information (invoice details and the email address where the invoice should be sent), shipping information (email address where the voucher should be sent) and read and accept the Voucher Policies.</p>
+
+<p>In the final stage of the order placement process, you will be requested to make payment (PayPal/Credit card, or Wire Transfer based on a Pro Forma Invoice issued).</p>
+
+<p>You can pay for the exam by all major credit cards (i.e., Visa, MasterCard, American Express), Debit Cards or via PayPal account.</p>
+
+
+
+
+
+
+<br>
+
+</div>
+
+<div class="small-12 large-6 columns">
+
+<p><b>Assign voucher to your account</b></p>
+
+<p>Test candidates who already have an exam voucher can assign it to their User Account before taking the exam. The exam vouchers assigned are displayed on the Test Candidate Account and may be used to launch exams via OpenEDG Testing Service.</p>
+
+<p>You can also assign the voucher to your account during order placement. The voucher will be linked with your account as soon as we receive the payment.</p>
+
+<p><b>Take the exam</b></p>
+
+<p>After logging in at <a href="https://edube.org/login" target="_blank">https://edube.org/login</a>, you can launch your exam session by:</p>
+<ul>
+<li>clicking Take Exam (if you have an exam voucher and wish to begin your exam session immediately) or by</li>
+<li>clicking Launch Exam next to the voucher assigned to the OpenEDG User Account (if the voucher has already been assigned to your account.)</li>
+</ul>
+
+<p>For more information about the technical requirements, code of honor, and exam policies, go to <a href="https://pythoninstitute.org/pcep-testing-policies/" target="_blank">https://pythoninstitute.org/pcep-testing-policies/</a>.</p>
+
+
+
+
+
+<br>
+<br>
+
+</div>
+</div>
+</div>
+
+
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

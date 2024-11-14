@@ -1,0 +1,152 @@
+<problem chapter='2' section='3' slide='1' problem='10' title='SZAKASZ ÖSSZEFOGLALÁS'>
+
+<!--
+Update history:
+2020-07-17 Grzegorz (reformatted; code - syntax-color and blank lines added)
+2020-08-25 Grzegorz (the classic division returns always a float)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<h1>A legfontosabb tudnivalók</h1>
+
+
+<p>1. Egy <strong>kifejezés</strong> értékek (vagy változók, operátorok, függvényhívások - hamarosan megismered őket) kombinációja, amely a kiértékelése után egy értéket eredményez, pl. <codel>1 + 2</codel>.</p>
+
+<p>2. A <strong>műveleti jelek (operátorok)</strong> olyan speciális szimbólumok vagy kulcsszavak, amelyek képesek értékeket felhasználni és (matematikai) műveleteket végezni, pl. a <codel>*</codel> operátor két értéket szoroz meg: <codel>x * y</codel>.</p>
+
+<p>3. Aritmetikai operátorok Pythonban: <codel>+</codel> (összeadás), <codel>-</codel> (kivonás), <codel>*</codel> (szorzás), <codel>/</codel> (klasszikus osztás - mindig egy lebegőpontos számot ad vissza), <codel>%</codel> (maradék - a bal oldali osztandót osztja a jobb oldali osztóval, és a művelet maradékát adja vissza, pl.: <codel>5 % 2 = 1</codel>), <codel>**</codel> (hatványozás: a bal oldali operandus a jobb oldali operandus hatványára emelve, pl. <codel>2 ** 3 = 2 * 2 * 2 = 8</codel>), <codel>//</codel> (egész vagy maradékos osztás - az osztás eredményeként kapott számot adja vissza, de a legközelebbi egész számra lefelé kerekítve, pl. <codel>3 // 2.0 = 1.0</codel>)</p>
+
+<p>4. Az <strong>unáris</strong> operátor olyan műveleti jel, amelynek csak egy operandusa van, pl. <codel>-1</codel> vagy <codel>+3</codel>.</p>
+
+<p>5. A <strong>bináris</strong> operátor olyan műveleti jel, amelynek két operandusa van, pl. <codel>4 + 5</codel> vagy <codel>12 % 5</codel>.</p>
+
+<p>6. Egyes műveleteket előbb kell elvégezni, mint másokat - ez a <strong>műveletek prioritásától</strong> függ:</p>
+<ul> 
+<li>az unáris <codel>+</codel> és <codel>-</codel> a legmagasabb prioritású</li>
+<li>majd a <codel>**</codel>, aztán a <codel>*</codel>, <codel>/</codel> és <codel>%</codel>, végül a legalacsonyabb prioritású a bináris <codel>+</codel> és <codel>-</codel>.</li>
+</li>
+</ul>
+
+<p>7. A <strong>zárójelben</strong> lévő részkifejezések mindig először kerülnek kiszámításra, pl.: <codel>15 - 1 * (5 * (1 + 2)) = 0</codel>.</p>
+
+<p>8. A <strong>hatványozást jobbról balra kell kiértékelni</strong>, pl.: <codel>2 ** 2 ** 3 = 256</codel>.</p>
+
+<br>
+<br>
+
+</div>
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+
+<p><strong>1. gyakorlat</strong></p>
+<p>Mi a kimenete a következő kódrészletnek?</p>
+
+<codep class="syntax-color">print((2 ** 4), (2 * 4.), (2 * 4))
+</codep>
+
+<br>
+
+<button class="button tiny" onclick="solution('sol')">Ellenőrzés</button>
+
+<p id="sol" style="display: none;">
+<codep>16 8.0 8</codep>
+</p>
+
+<script>
+function solution (id) {
+    var element = document.getElementById(id);
+    
+if (element.style.display === "none") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
+    }
+}
+</script>
+
+<br>
+
+
+
+<p><strong>2. gyakorlat</strong></p>
+<p>Mi a kimenete a következő kódrészletnek?</p>
+
+<codep class="syntax-color">print((-2 / 4), (2 / 4), (2 // 4), (-2 // 4))
+</codep>
+
+<br>
+
+
+<button class="button tiny" onclick="solution('sol2')">Ellenőrzés</button>
+
+<p id="sol2" style="display: none;">
+<codep>-0.5 0.5 0 -1</codep>
+</p>
+
+
+<script>
+function solution (id) {
+    var element = document.getElementById(id);
+    
+if (element.style.display === "none") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
+    }
+}
+</script>
+
+<br>
+
+
+
+
+<p><strong>3. gyakorlat</strong></p>
+<p>Mi a kimenete a következő kódrészletnek?</p>
+
+<codep class="syntax-color">print((2 % -4), (2 % 4), (2 ** 3 ** 2))
+</codep>
+
+<br>
+
+<button class="button tiny" onclick="solution('sol3')">Ellenőrzés</button>
+
+<p id="sol3" style="display: none;">
+<codep>-2 2 512</codep>
+</p>
+
+<script>
+function solution (id) {
+    var element = document.getElementById(id);
+    
+if (element.style.display === "none") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
+    }
+}
+</script>
+
+
+<br>
+
+</div>
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

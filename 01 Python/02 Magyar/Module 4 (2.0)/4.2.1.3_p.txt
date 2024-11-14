@@ -1,0 +1,69 @@
+<problem chapter='4' section='2' slide='1' problem='3' title='Hogyan kommunikálnak a függvények a környezetükkel?'>
+
+<!--
+Update history:
+2020-08-13 Grzegorz (reviewed, re-formatted)
+-->
+
+<code>
+def message(what, number):
+    print("Enter", what, "number", number)
+
+# invoke the function
+
+</code>
+
+
+
+<h1>Paraméteres függvények: folytatás</h1>
+
+<p>Egy függvénynek <strong>annyi paramétere lehet, amennyit csak szeretnél</strong>, de minél több paraméterünk van, annál nehezebb megjegyezni a szerepüket és céljukat.</p>
+
+<img src="/uploads/media/default/0001/01/3f669e94f4b46f75a09e31ba0925063ea2097a85.png" width="70%" alt="Functions as a black box concept">
+<br>
+<br>
+
+<p>Módosítsuk a függvényt, most már <strong>két paramétere</strong> lesz:</p>
+
+<codep>def message(<mark style="background-color:#e6f2ff;">what</mark>, <mark style="background-color:#e6f2ff;">number</mark>):
+    print("Enter", what, "number", number)
+
+</codep>
+
+<br>
+
+<p>Ez azt is jelenti, hogy a függvény meghívásához <strong>két argumentumra</strong> van szükség.</p>
+
+<p>Az első új paraméter a kívánt érték nevét hivatott hordozni.</p>
+
+<p>Itt is van:</p>
+
+<codep class="syntax-color">def message(what, number):
+    print("Enter", what, "number", number)
+
+message("telephone", 11)
+message("price", 5)
+message("number", "number")
+
+</codep>
+
+<br>
+
+<p>Ezt a kimenetet fogod látni:</p>
+
+<codep>Enter telephone number 11
+Enter price number 5
+Enter number number number</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+<br>
+
+<p>Teszteld a kódot, módosítsd, adj hozzá további paramétereket, és nézd meg, hogy ez hogyan befolyásolja a kimenetet!</p>
+
+
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

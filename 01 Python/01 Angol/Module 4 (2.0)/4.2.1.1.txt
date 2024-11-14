@@ -1,0 +1,102 @@
+<problem chapter='4' section='2' slide='1' problem='1' title='How functions communicate with their environment'>
+
+<!--
+Update history:
+2020-08-13 Grzegorz (reviewed, re-formatted)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<h1>Parameterized functions</h1>
+
+<p>The function's full power reveals itself when it can be equipped with an interface that is able to accept data provided by the invoker. Such data can modify the function's behavior, making it more flexible and adaptable to changing conditions.</p>
+
+<p>A parameter is actually a variable, but there are two important factors that make parameters different and special:</p>
+
+<ul>
+<li><strong>parameters exist only inside functions in which they have been defined</strong>, and the only place where the parameter can be defined is a space between a pair of parentheses in the <codel>def</codel> statement;</li>
+
+<li><strong>assigning a value to the parameter is done at the time of the function's invocation</strong>, by specifying the corresponding argument.</li>
+</ul>
+
+<codep>def function(<mark style="background-color:#e6f2ff;">parameter</mark>):
+    ###
+
+</codep>
+
+<br>
+
+<p>Don't forget:</p>
+
+<ul>
+<li><strong>parameters live inside functions</strong> (this is their natural environment)</li>
+<li><strong>arguments exist outside functions</strong>, and are carriers of values passed to corresponding parameters.</li>
+</ul>
+
+<p>There is a clear and unambiguous frontier between these two worlds.</p>
+
+<br>
+
+<p>Let's enrich the function above with just one parameter ‒ we're going to use it to show the user the number of a value the function asks for.</p>
+
+
+<br>
+
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+<p>We have to rebuild the <codel>def</codel> statement ‒ this is what it looks like now:</p>
+
+<codep>def message(<mark style="background-color:#e6f2ff;">number</mark>):
+    ###
+
+</codep>
+
+<br>
+
+<p>The definition specifies that our function operates on just one parameter named <codel>number</codel>. You can use it as an ordinary variable, but <strong>only inside the function</strong> ‒ it isn't visible anywhere else.</p>
+
+<p>Let's now improve the function's body:</p>
+
+<codep class="syntax-color">def message(number):
+    print("Enter a number:", number)
+</codep>
+
+<br>
+
+<p>We've made use of the parameter. Note: we haven't assigned the parameter with any value. Is it correct?</p>
+
+<p>Yes, it is.</p>
+
+<p>A value for the parameter will arrive from the function's environment.</p>
+
+<p>Remember: <strong>specifying one or more parameters in a function's definition</strong> is also a requirement, and you have to fulfil it during invocation. You must <strong>provide as many arguments as there are defined parameters</strong>.</p>
+
+<p>Failure to do so will cause an error.</p>
+
+<br>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

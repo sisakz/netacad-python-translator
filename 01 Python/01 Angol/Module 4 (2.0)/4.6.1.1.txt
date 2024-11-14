@@ -1,0 +1,132 @@
+<problem chapter='4' section='6' slide='1' problem='1' title='Tuples and dictionaries − (im)mutability'>
+
+<!--
+Update history:
+2020-08-18 Grzegorz (reviewed, re-formatted, PEP-8 compliance check)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h1>Sequence types and mutability</h1>
+
+
+<p>Before we start talking about <strong>tuples</strong> and <strong>dictionaries</strong>, we have to introduce two important concepts: <strong>sequence types</strong> and <strong>mutability</strong>.</p>
+
+<p>A <strong>sequence type is a type of data in Python which is able to store more than one value (or less than one, as a sequence may be empty), and these values can be sequentially (hence the name) browsed</strong>, element by element.</p>
+
+<p>As the <codel>for</codel> loop is a tool especially designed to iterate through sequences, we can express the definition as: <strong>a sequence is data which can be scanned by the <codel>for</codel> loop</strong>.</p>
+
+<p>You've encountered one Python sequence so far − the list. The list is a classic example of a Python sequence, although there are some other sequences worth mentioning, and we're going to present them to you now.</p>
+
+<br>
+
+<p>The second notion − <strong>mutability</strong> − is a property of any Python data that describes its readiness to be freely changed during program execution. There are two kinds of Python data: <strong>mutable</strong> and <strong>immutable</strong>.</p>
+
+<p><strong>Mutable data can be freely updated at any time</strong> − we call such an operation in situ.</p>
+<p><strong>Mutable data can be freely updated at any time</strong> − we call such an operation in situ.</p>
+
+<p><i>In situ</i> is a Latin phrase that translates as literally <i>in position</i>. For example, the following instruction modifies the data in situ:</p>
+
+
+<codep class="syntax-color">list.append(1)
+</codep>
+<br>
+
+<p><strong>Immutable data cannot be modified in this way</strong>.</p>
+
+<p>Imagine that a list can only be assigned and read over. You would be able neither to append an element to it, nor remove any element from it. This means that appending an element to the end of the list would require the recreation of the list from scratch.</p>
+
+<p>You would have to build a completely new list, consisting of the all elements of the already existing list, plus the new element.</p>
+
+<p>The data type we want to tell you about now is a <strong>tuple</strong>. <strong>A tuple is an immutable sequence type</strong>. It can behave like a list, but it can't be modified in situ.</p>
+
+
+<br>
+
+</div>
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+
+<h2>What is a tuple?</h2>
+
+<p>The first and the clearest distinction between lists and tuples is the syntax used to create them - <strong>tuples prefer to use parenthesis</strong>, whereas lists like to see brackets, although it's also <strong>possible to create a tuple just from a set of values separated by commas</strong>.</p>
+
+<p>Look at the example:</p>
+
+<codep class="syntax-color">tuple_1 = (1, 2, 4, 8)
+tuple_2 = 1., .5, .25, .125
+</codep>
+
+<br>
+
+<p>There are two tuples, both containing <strong>four elements</strong>.</p>
+
+<p>Let's print them:</p>
+
+<codep class="syntax-color">tuple_1 = (1, 2, 4, 8)
+tuple_2 = 1., .5, .25, .125
+
+print(tuple_1)
+print(tuple_2)
+</codep>
+
+
+<br>
+
+<p>This is what you should see in the console:</p>
+
+<codep>(1, 2, 4, 8)
+(1.0, 0.5, 0.25, 0.125)</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+<br>
+
+<p>Note: <strong>each tuple element may be of a different type</strong> (floating-point, integer, or any other not-as-yet-introduced kind of data).</p>
+
+
+
+<h2>How to create a tuple?</h2>
+
+<p>It is possible to create an empty tuple - parentheses are required then:</p>
+
+<codep class="syntax-color">empty_tuple = ()
+</codep>
+<br>
+
+<p>If you want to create a <strong>one-element tuple</strong>, you have to take into consideration the fact that, due to syntax reasons (a tuple has to be distinguishable from an ordinary, single value), you must end the value with a comma:</p>
+
+<codep>one_element_tuple_1 = (1<mark style="background-color:#e6f2ff;">,</mark> )
+one_element_tuple_2 = 1.<mark style="background-color:#e6f2ff;">,</mark>
+
+</codep>
+
+<br>
+
+
+<p>Removing the commas won't spoil the program in any syntactical sense, but you will instead get two single variables, not tuples.</p>
+
+
+
+<br>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

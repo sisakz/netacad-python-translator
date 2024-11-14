@@ -1,0 +1,56 @@
+<problem chapter='2' section='1' slide='1' problem='14' title='Your very first program'>
+
+<!--
+Update history:
+2020-07-17 Grzegorz (code format and page number change)
+-->
+
+<code>print("My name is", "Python.", end=" ")
+print("Monty Python.")
+
+</code>
+
+<h1>The <span style="font-family:courier new;">print()</span> function ‒ keyword arguments</h1>
+
+
+<p>Python offers another mechanism for the passing of arguments, which can be helpful when you want to convince the <codel>print()</codel> function to change its behavior a bit.</p>
+
+<p>We aren't going to explain it in depth right now. We plan to do this when we talk about functions. For now, we simply want to show you how it works. Feel free to use it in your own programs.</p>
+
+<p>The mechanism is called <strong>keyword arguments</strong>. The name stems from the fact that the meaning of these arguments is taken not from its location (position) but from the special word (keyword) used to identify them.</p>
+
+<p>The <codel>print()</codel> function has two keyword arguments that you can use for your purposes. The first is called <codel>end</codel>.</p>
+ 
+<p>In the editor window you can see a very simple example how to use a keyword argument.</p>
+
+<p>In order to use it, it is necessary to know some rules:</p>
+
+<ul>
+<li>a keyword argument consists of three elements: a <strong>keyword</strong> identifying the argument (<codel><mark style="background-color:white;">end</mark></codel> here); an <strong>equal sign</strong> (<codel>=</codel>); and a <strong>value</strong> assigned to that argument;</li>
+<li>any keyword arguments have to be put <strong>after the last positional argument</strong> (this is very important)</li>
+</ul>
+
+<br>
+
+<p>In our example, we have made use of the <codel><mark style="background-color:white;">end</mark></codel> keyword argument, and set it to a string containing one space.</p>
+
+<p>Run the code to see how it works.</p>
+
+
+<p>The console should now be showing the following text:</p>
+
+<codep>My name is Python. Monty Python.</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+
+<p>As you can see, the <codel><mark style="background-color:white;">end</mark></codel> keyword argument determines the characters the print() function sends to the output once it reaches the end of its positional arguments.</p>
+
+<p>The default behavior reflects the situation where the <codel><mark style="background-color:white;">end</mark></codel> keyword argument is <strong>implicitly</strong> used in the following way: <codel>end="\n"</codel>.</p>
+
+
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

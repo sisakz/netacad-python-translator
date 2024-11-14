@@ -1,0 +1,393 @@
+<problem chapter='4' section='6' slide='1' problem='12' title='SZAKASZ ÖSSZEFOGLALÓ  (3/3)'>
+
+<!--
+Update history:
+2020-08-18 Grzegorz (reviewed, re-formatted, PEP-8 compliance check)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<h1>A legfontosabb tudnivalók: tuple-k és szótárak</h1>
+
+<br>
+
+<p><strong>1. gyakorlat</strong></p>
+<p>Mi történik, ha futtatod a következő kódrészletet?</p>
+
+<codep>my_tup = (1, 2, 3)
+print(my_tup[2])
+
+</codep>
+
+<br>
+
+<div align="right">
+<button class="button tiny" onclick="solution('sol1')">Ellenőrzés</button>
+</div>
+
+<p id="sol1" style="display: none;">
+A program a <codel>3</codel> értéket írja ki a képernyőre.
+</p>
+
+
+<script>
+function solution (id) {
+    var element = document.getElementById(id);
+    
+if (element.style.display === "none") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
+    }
+}
+</script>
+
+<br>
+
+
+
+
+
+
+
+
+
+<p><strong>2. gyakorlat</strong></p>
+<p>Mi a kimenete a következő kódrészletnek?</p>
+
+<codep>tup = 1, 2, 3
+a, b, c = tup
+
+print(a * b * c)
+
+</codep>
+
+<br>
+
+<div align="right">
+<button class="button tiny" onclick="solution('sol2')">Ellenőrzés</button>
+</div>
+
+<p id="sol2" style="display: none;">
+A program a <codel>6</codel> értéket írja ki a képernyőre. A <codel>tup</codel> nevű tuple elemeit "kicsomagolja" az <codel>a</codel>, <codel>b</codel>, és <codel>c</codel> változókba.
+</p>
+
+
+<script>
+function solution (id) {
+    var element = document.getElementById(id);
+    
+if (element.style.display === "none") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
+    }
+}
+</script>
+
+<br>
+
+
+
+
+
+<p><strong>3. gyakorlat</strong></p>
+<p>Egészítsd ki a kódot a <codel>count()</codel> metódus helyes használatával a <codel>2</codel> előfordulásainak meghatározásához!</p>
+
+<codep>tup = 1, 2, 3, 2, 4, 5, 6, 2, 7, 2, 8, 9
+duplicates = # Write your code here.
+
+print(duplicates)    # outputs: 4
+
+</codep>
+
+<br>
+
+<div align="right">
+<button class="button tiny" onclick="solution('sol3')">Ellenőrzés</button>
+</div>
+
+<p id="sol3" style="display: none;">
+<codep>tup = 1, 2, 3, 2, 4, 5, 6, 2, 7, 2, 8, 9
+<mark style="background-color:#e6f2ff;">duplicates = tup.count(2)</mark>
+
+print(duplicates)    # outputs: 4
+
+</codep>
+</p>
+
+
+<script>
+function solution (id) {
+    var element = document.getElementById(id);
+    
+if (element.style.display === "none") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
+    }
+}
+</script>
+
+<br>
+
+
+
+
+
+<p><strong>4. gyakorlat</strong></p>
+<p>Írj egy programot, amely "összeragasztja" a két szótárat (<codel>d1</codel> és <codel>d2</codel>), valamint létrehoz egy újat (<codel>d3</codel>)!</p>
+
+<codep>d1 = {'Adam Smith': 'A', 'Judy Paxton': 'B+'}
+d2 = {'Mary Louis': 'A', 'Patrick White': 'C'}
+d3 = {}
+
+for item in (d1, d2):
+    # Write your code here.
+
+print(d3)
+
+</codep>
+<br>
+
+<div align="right">
+<button class="button tiny" onclick="solution('sol4')">Ellenőrzés</button>
+</div>
+
+<p id="sol4" style="display: none;">
+Példa megoldás:</br>
+<codep>d1 = {'Adam Smith': 'A', 'Judy Paxton': 'B+'}
+d2 = {'Mary Louis': 'A', 'Patrick White': 'C'}
+d3 = {}
+
+for item in (d1, d2):
+    d3.update(item)
+
+print(d3)
+
+</codep>
+</p>
+
+
+<script>
+function solution (id) {
+    var element = document.getElementById(id);
+    
+if (element.style.display === "none") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
+    }
+}
+</script>
+
+<br>
+
+
+
+
+
+
+
+
+
+
+<br>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+
+
+<p><strong>5. gyakorlat</strong></p>
+<p>Írj programot, amely a <codel>my_list</codel> listát tuple-vé alakítja!</p>
+
+<codep>my_list = ["car", "Ford", "flower", "Tulip"]
+
+t =  # Write your code here.
+print(t)
+
+</codep>
+<br>
+
+<div align="right">
+<button class="button tiny" onclick="solution('sol5')">Ellenőrzés</button>
+</div>
+
+<p id="sol5" style="display: none;">
+Példa megoldás:</br>
+<codep>my_list = ["car", "Ford", "flower", "Tulip"]
+
+t = tuple(my_list)
+print(t)
+
+</codep>
+</p>
+
+
+<script>
+function solution (id) {
+    var element = document.getElementById(id);
+    
+if (element.style.display === "none") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
+    }
+}
+</script>
+
+
+<br>
+
+<p><strong>6. gyakorlat</strong></p>
+<p>Írj egy programot, amely a <codel>colors</codel> tuple-t szótárrá alakítja!</p>
+
+<codep>colors = (("green", "#008000"), ("blue", "#0000FF"))
+
+# Write your code here.
+
+print(colors_dictionary)
+
+</codep>
+<br>
+
+<div align="right">
+<button class="button tiny" onclick="solution('sol6')">Ellenőrzés</button>
+</div>
+
+<p id="sol6" style="display: none;">
+Példa megoldás:</br>
+<codep>colors = (("green", "#008000"), ("blue", "#0000FF"))
+
+colors_dictionary = dict(colors)
+print(colors_dictionary)
+
+</codep>
+</p>
+
+
+<script>
+function solution (id) {
+    var element = document.getElementById(id);
+    
+if (element.style.display === "none") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
+    }
+}
+</script>
+
+
+<br>
+
+
+
+
+
+<p><strong>7. gyakorlat</strong></p>
+<p>Mi történik, ha a következő kódot futtatjuk?</p>
+
+<codep>my_dictionary = {"A": 1, "B": 2}
+copy_my_dictionary = my_dictionary.copy()
+my_dictionary.clear()
+
+print(copy_my_dictionary)
+
+</codep>
+<br>
+
+<div align="right">
+<button class="button tiny" onclick="solution('sol7')">Ellenőrzés</button>
+</div>
+
+<p id="sol7" style="display: none;">
+A program ezt írja ki a képernyőre: <codel>{'A': 1, 'B': 2}</codel>.
+</p>
+
+
+<script>
+function solution (id) {
+    var element = document.getElementById(id);
+    
+if (element.style.display === "none") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
+    }
+}
+</script>
+<br>
+
+
+
+
+<p><strong>8. gyakorlat</strong></p>
+<p>Mi a következő program kimenete?</p>
+
+<codep>colors = {
+    "white": (255, 255, 255),
+    "grey": (128, 128, 128),
+    "red": (255, 0, 0),
+    "green": (0, 128, 0)
+    }
+
+for col, rgb in colors.items():
+    print(col, ":", rgb)
+
+</codep>
+<br>
+
+<div align="right">
+<button class="button tiny" onclick="solution('sol8')">Ellenőrzés</button>
+</div>
+
+<p id="sol8" style="display: none;">
+<codep>white : (255, 255, 255)
+grey : (128, 128, 128)
+red : (255, 0, 0)
+green : (0, 128, 0)</codep>
+</p>
+
+
+<script>
+function solution (id) {
+    var element = document.getElementById(id);
+    
+if (element.style.display === "none") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
+    }
+}
+</script>
+
+
+
+</div>
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

@@ -1,0 +1,78 @@
+<problem chapter='3' section='6' slide='1' problem='7' title='Lists ‒ more details'>
+
+<!--
+Update history:
+2020-08-12 Grzegorz (reviewed, reformatted)
+-->
+
+<code>
+my_list = [17, 3, 11, 5, 1, 9, 7, 15, 13]
+largest = my_list[0]
+
+for i in range(1, len(my_list)):
+    if my_list[i] > largest:
+        largest = my_list[i]
+
+print(largest)
+
+</code>
+
+
+
+<h1>Lists - some simple programs</h1>
+
+
+<p>Now we want to show you some simple programs utilizing lists.</p>
+
+<p>The first of them tries to find the greater value in the list. Look at the code in the editor.</p>
+
+<p>The concept is rather simple ‒ we temporarily assume that the first element is the largest one, and check the hypothesis against all the remaining elements in the list.</p>
+
+<p>The code outputs <codel>17</codel> (as expected).</p>
+
+<hr>
+
+<p>The code may be rewritten to make use of the newly introduced form of the <codel>for</codel> loop:</p>
+
+<codep class="syntax-color copy">my_list = [17, 3, 11, 5, 1, 9, 7, 15, 13]
+largest = my_list[0]
+
+for i in my_list:
+    if i > largest:
+        largest = i
+
+print(largest)
+</codep>
+
+<br>
+
+<p>The program above performs one unnecessary comparison, when the first element is compared with itself, but this isn't a problem at all.</p>
+
+<p>The code outputs <codel>17</codel>, too (nothing unusual).</p>
+
+
+<hr>
+
+<p>If you need to save computer power, you can use a slice:</p>
+
+<codep class="syntax-color copy">my_list = [17, 3, 11, 5, 1, 9, 7, 15, 13]
+largest = my_list[0]
+
+for i in my_list[1:]:
+    if i > largest:
+        largest = i
+
+print(largest)
+</codep>
+
+<br>
+
+<p>The question is: which of these two actions consumes more computer resources ‒ just one comparison, or slicing almost all of a list's elements?</p>
+
+<br>
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

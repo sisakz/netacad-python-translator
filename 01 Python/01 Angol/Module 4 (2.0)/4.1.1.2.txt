@@ -1,0 +1,81 @@
+<problem chapter='4' section='1' slide='1' problem='2' title='Functions'>
+
+<!--
+Update history:
+2020-08-13 Grzegorz (reviewed, re-formatted)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h1>Decomposition</h1>
+
+<p>It often happens that the problem is so large and complex that it cannot be assigned to a single developer, and a <strong>team of developers</strong> have to work on it. The problem must be split between several developers in a way that ensures their efficient and seamless cooperation.</p>
+
+<center><img src="/uploads/media/default/0001/01/519a2445bd5a82681c91651aab5bd668bdac992a.png" width="60%" alt="The concept of sharing the work/working together"></center>
+
+<br>
+<br>
+
+
+<p>It seems inconceivable that more than one programmer should write the same piece of code at the same time, so the job has to be dispersed among all the team members.</p>
+
+<p>This kind of decomposition has a different purpose to the one described previously ‒ it's not only about <strong>sharing the work</strong>, but also about <strong>sharing the responsibility</strong> among many developers.</p>
+
+<p>Each of them writes a clearly defined and described set of functions, which when <strong>combined into the module</strong> (we'll tell you about this a bit later) will give the final product.</p>
+
+
+<br> 
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+<p>This leads us directly to the third condition: if you're going to divide the work among multiple programmers, <strong>decompose the problem to allow the product to be implemented as a set of separately written functions packed together in different modules</strong>.</p>
+
+
+
+<h2>Where do functions come from?</h2>
+
+
+<p>In general, functions come from at least three places:</p>
+
+<ul>
+<li>from Python itself ‒ numerous functions (like <codel>print()</codel>) are an <strong>integral part of Python</strong>, and are always available without any additional effort on behalf of the programmer; we call these functions <strong>built-in functions</strong>;</li>
+
+<li>from Python's <strong>preinstalled modules</strong> ‒ a lot of functions, very useful ones, but used significantly less often than built-in ones, are available in a number of modules installed together with Python; the use of these functions requires some additional steps from the programmer in order to make them fully accessible (we'll tell you about this in a while);</li>
+
+<li><strong>directly from your code</strong> ‒ you can write your own functions, place them inside your code, and use them freely;</li>
+
+<li>there is one other possibility, but it's connected with classes, so we'll omit it for now.</li>
+</ul>
+
+
+<center><img src="/uploads/media/default/0001/01/0dc6293734f2ffe6848d97d12a91280ecb7ab3f1.png" width="80%" alt="Functions come from Python, modules, code"></center>
+
+<br>
+
+<br>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

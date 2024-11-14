@@ -1,0 +1,49 @@
+<problem chapter='2' section='6' slide='1' problem='3' title='How to talk to a computer'>
+
+<!--
+Update history:
+2020-07-17 Grzegorz (reviewed; code - blank lines added; 'output' added to the output screen; adding full stop to the comment in code)
+-->
+
+<h1>The <span style="font-family:courier new;">input()</span> function - prohibited operations</h1>
+
+
+<p>Look at the code in the editor. Run it, enter any number, and press <i>Enter</i>.</p>
+
+<code># Testing TypeError message.
+
+anything = input("Enter a number: ")
+something = anything ** 2.0
+print(anything, "to the power of 2 is", something)
+
+</code>
+
+<p>What happens?</p>
+
+<p>Python should have given you the following output:</p>
+
+<codep>Traceback (most recent call last):
+File ".main.py", line 4, in &lt;module&gt;
+something = anything ** 2.0
+TypeError: unsupported operand type(s) for ** or pow(): 'str' and 'float'</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+<br> 
+
+<p>The last line of the sentence explains everything ‒ you tried to apply the <codel>**</codel> operator to <codel>'str'</codel> (string) accompanied with <codel>'float'</codel>.</p>
+
+<p>This is prohibited.</p>
+
+ 
+<p>This should be obvious - can you predict the value of <codel>"to be or not to be"</codel> raised to the power of <codel>2</codel>?
+
+<p>We can't. Python can't, either.</p>
+
+<p>Have we fallen into a deadlock? Is there a solution to this issue? Of course there is.</p>
+
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

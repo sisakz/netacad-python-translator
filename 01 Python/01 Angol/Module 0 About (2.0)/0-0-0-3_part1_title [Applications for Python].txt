@@ -1,0 +1,72 @@
+<problem chapter='0' section='0' slide='0' problem='3' title='Applications for Python'>
+
+<!--
+Update history:
+2020-07-06 Grzegorz (created)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+
+<h1>Where do you use Python?</h1>
+
+<p>Do you remember Battlefield 2, Battlefield 2142 and Battlefield Heroes- strategy and first-person shooter games from EA DICE? All the games use Python for logic and server controls. Python is frequently used for creating open-source, free games, e.g., OpenRTS, PySol, Metin 2, or Frets On Fire - famous Guitar Hero-like games written in pygame.</p>
+
+<p>And what about the major websites and services? Dropbox? UBER? Spotify? Pintrest? BuzzFeed? Yes. They were all written, to a greater or lesser extent, in Python. Other examples?</p>
+
+<ul>
+<li>Internet Applications (BitTorrent, Jogger Publishing Assistant, TheCircle, TwistedMatrix)</li>
+<li>3D CAD/CAM (FreeCAD, Fandango, Blender, Vintech RCAM)</li>
+<li>Enterprise Applications (Odoo, Tryton, Picalo, LinOTP 2, RESTx)</li>
+<li>Image Applications (Gnofract 4D, Gogh, imgSeek, MayaVi, VPython)</li>
+<li>Mobile Applications (Aarlogic C05/3, AppBackup, Pyroute)</li>
+<li>Office Applications (calibre, faces, Notalon, pyspread)</li>
+<li>Personal Information Managers (BitPim, Narval, Prioritise, Task Coach, WikidPad) 
+<br>(Source: <a href="https://wiki.python.org/moin/PythonProjects" target="_blank">https://wiki.python.org/moin/PythonProjects</a>)</li> 
+</ul>
+
+
+<br>
+
+
+
+</div>
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+
+<p>Generally, Python is a great choice for:</p>
+
+<ul>
+<li>Web and Internet development (e.g., Django and Pyramid frameworks, Flask and Bottle micro-frameworks)</li>
+<li>Scientific and numeric computing (e.g., SciPy - a collection of packages for the purposes of mathematics, science, and engineering; Ipython - an interactive shell that features editing and recording of work sessions)</li>
+<li>Education (it's a brilliant language for teaching programming. And that's why we're offering this course to you!)</li>
+<li>Desktop GUIs (e.g., wxWidgets, Kivy, Qt)</li>
+<li>Software Development (build control, management, and testing - Scons, Buildbot, Apache Gump, Roundup, Trac)</li>
+<li>Business applications (ERP and e-commerce systems - Odoo, Tryton)
+<br>(Source: <a href="https://www.python.org/about/apps" target="_blank">https://www.python.org/about/apps</a>)</li>
+</ul>
+
+<p>And many, many other projects and development tools.</p>
+
+<br>
+
+</div>
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

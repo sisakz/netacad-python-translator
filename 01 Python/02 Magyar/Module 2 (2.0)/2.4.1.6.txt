@@ -1,0 +1,75 @@
+<problem chapter='2' section='4' slide='1' problem='6' title='Változók'>
+
+<!--
+Update history:
+2020-07-17 Grzegorz (re-formatted; code - syntax-color, blank line added)
+-->
+
+<code>
+a = 3.0
+b = 4.0
+c = (a ** 2 + b ** 2) ** 0.5
+print("c =", c)
+
+</code>
+
+<h1>Egyszerű matematikai problémák megoldása</h1>
+
+<p>Mostanra képes vagy olyan programot írni, amelyik egyszerű matematikai problémákat old meg, például a Pitagorasz-tételt:</p>
+
+<p><i>Az átfogó négyzete egyenlő a másik két oldal négyzetének összegével.</i></p>
+
+
+<p>A következő kód a Pitagorasz-tétel segítségével kiszámítja az átfogó (azaz a derékszögű háromszög leghosszabb oldala, a derékszöggel ellentétes oldal) hosszát:</p>
+
+<codep class="syntax-color">a = 3.0
+b = 4.0
+c = (a ** 2 + b ** 2) ** 0.5
+print("c =", c)
+</codep>
+
+<br>
+
+<p>Megjegyzés: a <codel>**</codel> operátort kell használnunk a négyzetgyök számításhoz:</p>
+
+<p><font size="+2">
+&radic;<span style="text-decoration:overline;">&nbsp;(x)&nbsp;</span> = x<sup>(&frac12;)</sup>
+</font></p>
+
+<p>és</p>
+
+<p><font size="+2">
+c = &radic;<span style="text-decoration:overline;">&nbsp;a<sup>2</sup> + b<sup>2</sup>&nbsp;</span>
+</font></p>
+
+
+
+<p>Ki tudod találni a kód kimenetét?</p>
+<p>Ellenőrizd a sejtésedet az alábbiakban és futtasd a kódot a szerkesztőprogramban!</p>
+
+<button class="button tiny" onclick="solution('sol')">Ellenőrzés</button>
+
+<p id="sol" style="display: none;">
+<codep>c = 5.0</codep>
+</p>
+
+<script>
+function solution (id) {
+    var element = document.getElementById(id);
+    
+if (element.style.display === "none") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
+    }
+}
+</script>
+
+
+<br>
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

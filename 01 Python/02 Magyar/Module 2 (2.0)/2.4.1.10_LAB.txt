@@ -1,0 +1,101 @@
+﻿<problem chapter='2' section='4' slide='1' problem='10' title='LAB: Operátorok és kifejezések'>
+
+<!--
+Update history:
+2020-07-17 Grzegorz (reviewed, code - blank lines added to the bottom of the snippet - editor, hint, sample solution)
+-->
+
+<code>x =  # hardcode your test data here
+x = float(x)
+# write your code here
+print("y =", y)
+
+</code>
+
+<span class="label" style="background-color:rgb(205, 168, 105);"><strong>LABORGYAKORLAT</strong></span>
+
+<br><br>
+
+<h2>Becsült idő</h2>
+<p>10-15 perc</p>
+
+<h2>Nehézségi szint</h2>
+<p>Könnyű</p>
+
+<h2>Célok</h2>
+<ul>
+<li>a számok, operátorok és számtani műveletek fogalmának megismerése Pythonban;</li>
+<li>alapvető számítások elvégzése.</li>
+</ul>
+
+
+<h2>Feladatleírás</h2>
+
+<p>Nézd meg a kódot a szerkesztőben: beolvas egy <codel>float</codel> (lebegőpontos) értéket, beteszi egy <codel>x</codel> nevű változóba, és kiírja egy <codel>y</codel> nevű változó értékét. A feladatod az, hogy kiegészítsd a kódot úgy, hogy az kiszámítsa a következő kifejezést:</p>
+
+<p><font size="+1"> 3x<sup>3</sup> - 2x<sup>2</sup> + 3x - 1 </font></p>
+
+
+<p>Az eredményt az <codel>y</codel> változóban kell tárolni.</p>
+
+<p>Ne feledd, hogy a klasszikus algebrai jelölés szereti kihagyni a szorzás műveleti jelét, neked viszont be kell írnod a kifejezésbe. Figyeld meg, hogyan változtatjuk meg az adattípust, hogy <codel>x</codel> <codel>float</codel> (lebegőpontos) típusú legyen.</p>
+
+<p>Tartsd a kódot tisztán és olvashatóan, és teszteld a programot, az adatokat közvetlenül az x változóhoz rendelve! Ne keseredj el a kezdeti hibák miatt! Legyél kitartó és kíváncsi!</p>
+
+<br>
+
+<h2>Tesztadatok</h2>
+
+
+<p>Minta bemenet</p>
+
+<codep>x = 0
+x = 1
+x = -1</codep>
+
+<br>
+
+<p>Elvárt kimenet</p>
+
+<codep>y = -1.0
+y = 3.0
+y = -9.0</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+<br>
+
+<labMode>true</labMode>
+
+<hint>x = 0
+x = float(x)
+y =  # write the notion here
+print("y =", y)
+
+x = 1
+x = float(x)
+y =  # write the notion here
+print("y =", y)
+
+# write the rest of your code here
+
+</hint>
+
+
+<sampleSolution>x = 0
+x = float(x)
+y = 3 * x**3 - 2 * x**2 + 3 * x - 1
+print("y =", y)
+
+x = 1
+x = float(x)
+y = 3 * x**3 - 2 * x**2 + 3 * x - 1
+print("y =", y)
+
+x = -1
+x = float(x)
+y = 3 * x**3 - 2 * x**2 + 3 * x - 1
+print("y =", y)
+
+</sampleSolution>
+
+</problem>

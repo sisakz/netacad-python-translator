@@ -1,0 +1,61 @@
+<problem chapter='1' section='1' slide='1' problem='1' title='Programozási alapok'>
+
+<!--
+Update history:
+2020-07-07 Grzegorz (formatted)
+2020-07-16 Grzegorz (picture formatting)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+<h1>Hogyan működik egy számítógép program?</h1>
+
+
+<p>A tanfolyam célja, hogy bemutassa Neked a Python nyelvet és azt, hogy mire való. Kezdjük a legelején!</p>
+
+<p>A program teszi a számítógépet használhatóvá. Program nélkül a számítógép – még a legerősebb is – nem több, mint egy darab vas.  Hasonlóképpen, zongorista nélkül a zongora is csak egy fából készült doboz.</p>
+
+<img src="/uploads/media/default/0001/01/a6f86eeafbf2653bab00f26324da7e234a69c039.png" alt="A computer screen with Python logo" width="60%" align="left">
+
+<p>A számítógépek nagyon összetett feladatok elvégzésére alkalmasak, pedig a számítógép alaptermészete egészen másmilyen.</p>
+
+<p>A számítógép egészen egyszerű műveletek végrehajtására képes. Például nem képes önállóan kiértékelni egy bonyolult matematikai függvényt, ámbár ez sem mutat túl a közeljövőben elérhető lehetőségek határán.</p>
+
+<p>A mai számítógépek csak nagyon alapvető műveletek eredményeit képesek kiszámolni. Például összeadnak és osztanak. Ezt viszont nagyon gyorsan teszik, és majdhogynem bárhányszor képesek megismételni ezeket a műveleteket.</p>
+
+
+</div>
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+<p>Képzeld el, szeretnéd meghatározni egy hosszú út végén az átlagsebességedet. Adott a távolság és az idő, és ki kell számítanod a sebességet.</p>
+
+<p>Természetesen a géped képes lesz kiszámítani ezt, pedig a számítógép nincs tisztában olyan fogalmakkal, mint a távolság, a sebesség vagy az idő. Ezért utasítanod kell, hogy:</p>
+<ul>
+<li>olvasson be egy a távolságot jelentő számot;</li>
+<li>olvassa be az utazás időtartamát jelző számot;</li>
+<li>ossza el az elsőnek beolvasott értéket a másodikkal, és az eredményt tárolja el a memóriájában;</li>
+<li>jelenítse meg az (átlagsebességet jelentő) eredményt olvasható formában.</li>
+</ul>
+
+<p>Ez a négy egyszerű művelet egy <strong>programot</strong> alkot. Természetesen ezek az utasítások nem formalizáltak, és nagyon messze vannak attól, amit egy számítógép megért. De elég jók arra, hogy átalakítsuk őket egy olyan nyelvre, amit a gép már képes értelmezni.</p>
+
+<p>És itt a <strong>nyelv</strong> a kulcsszó.</p>
+
+</div>
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

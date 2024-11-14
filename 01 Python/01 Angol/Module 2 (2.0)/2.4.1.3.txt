@@ -1,0 +1,101 @@
+<problem chapter='2' section='4' slide='1' problem='3' title='Variables ‒ data-shaped boxes'>
+
+<!--
+Update history:
+2020-07-17 Grzegorz (re-formatted; code - syntax-color, blank line added)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<h1>Creating variables</h1>
+
+
+
+<p>What can you put inside a variable?</p>
+
+<p>Anything.</p>
+
+<p>You can use a variable to store any value of any of the already presented kinds, and many more of the ones we haven't shown you yet.</p>
+
+<p>The value of a variable is what you have put into it. It can vary as often as you need or want. It can be an integer one moment, and a float a moment later, eventually becoming a string.</p>
+
+<p>Let's talk now about two important things ‒ <strong>how variables are created</strong>, and <strong>how to put values inside them</strong> (or rather ‒ how to give or <strong>pass values</strong> to them).</p>
+
+<p><span class="label" style="background-color:orange"><b>REMEMBER</b></span></p>
+
+<p><strong>A variable comes into existence as a result of assigning a value to it</strong>. Unlike in other languages, you don't need to declare it in any special way.</p>
+
+<p>If you assign any value to a nonexistent variable, the variable will be <strong>automatically created</strong>. You don't need to do anything else.</p>
+
+<p>The creation (in other words, its syntax) is extremely simple: <strong>just use the name of the desired variable, then the equal sign (=) and the value you want to put into the variable.</strong></p>
+
+
+<br>
+
+</div>
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+<center><img src="/uploads/media/default/0001/01/f7ebeb6e99f0eba00f1359ca15a7d5ea441e347b.png" width="60%" alt="The concept of 'you can put anything inside a variable'"></center>
+
+<br>
+
+<p>Take a look at the snippet:</p>
+
+<codep class="syntax-color">var = 1
+print(var)
+</codep>
+
+<br>
+
+<p>It consists of two simple instructions:</p>
+
+<ul>
+<li>The first of them creates a variable named <codel>var</codel>, and assigns a literal with an integer value equal to <codel>1</codel>.</li>
+<li>The second prints the value of the newly created variable to the console.</li>
+</ul>
+
+<br>
+
+<p>Note: <codel>print()</codel> has yet another side to it ‒ it can handle variables too. Do you know what the output of the snippet will be?</p>
+
+
+<button class="button tiny" onclick="solution('sol')">Check</button>
+
+<p id="sol" style="display: none;">
+<codep>1</codep>
+</p>
+
+<script>
+function solution (id) {
+    var element = document.getElementById(id);
+    
+if (element.style.display === "none") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
+    }
+}
+</script>
+
+<br>
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

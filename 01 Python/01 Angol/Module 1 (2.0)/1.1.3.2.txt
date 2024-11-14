@@ -1,0 +1,70 @@
+<problem chapter='1' section='1' slide='3' problem='2' title='There is more than one Python: CPython and Cython'>
+
+<!--
+Update history:
+2020-07-07 Grzegorz (formatted, text added)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+<h1>Python aka CPython</h1>
+
+<p>In addition to Python 2 and Python 3, there is more than one version of each.</p>
+
+<img src="/uploads/media/default/0001/01/c5fcf01b0078c8c99d004c969424bfae3acf67eb.png" width="40%" alt="Python Software Foundation logo" style="float:left">
+
+First of all, there are the Pythons which are maintained by the people gathered around the PSF (<a href="https://www.python.org/psf-landing/" target="_blank">Python Software Foundation</a>), a community that aims to develop, improve, expand, and popularize Python and its environment. The PSF's president is Guido von Rossum himself, and for this reason, these Pythons are called <strong>canonical</strong>. They are also considered to be <strong>reference Pythons</strong>, as any other implementation of the language should follow all standards established by the PSF.
+
+
+<div style="clear: both;"></div>
+<br>
+
+<p>Guido van Rossum used the "C" programming language to implement the very first version of his language and this decision is still in force. All Pythons coming from the PSF are written in the "C" language. There are many reasons for this approach. One of them (probably the most important) is that thanks to it, Python may be easily ported and migrated to all platforms with the ability to compile and run "C" language programs (virtually all platforms have this feature, which opens up many expansion opportunities for Python).</p>
+
+<p>This is why the PSF implementation is often referred to as <strong>CPython</strong>. This is the most influential Python among all the Pythons in the world.</p>
+
+<br>
+
+</div>
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+<h1>Cython</h1>
+
+<p>Another Python family member is <strong>Cython</strong>.</p>
+
+<img src="/uploads/media/default/0001/01/d0938abad33db7e330d86e72cd5ddcc75f711bc0.png" width="40%" alt="Cython logo" style="float:left">
+
+Cython is one of a possible number of solutions to the most painful of Python's traits &ndash; the lack of efficiency. Large and complex mathematical calculations may be easily coded in Python (much easier than in "C" or any other traditional language), but the resulting code execution may be extremely time-consuming.
+
+
+<div style="clear: both;"></div>
+<br>
+
+<p>How are these two contradictions reconciled? One solution is to write your mathematical ideas using Python, and when you're absolutely sure that your code is correct and produces valid results, you can translate it into "C". Certainly, "C" will run much faster than pure Python.</p>
+
+<p>This is what Cython is intended to do &ndash; to automatically translate the Python code (clean and clear, but not too swift) into "C" code (complicated and talkative, but agile).</p>
+
+
+<br>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

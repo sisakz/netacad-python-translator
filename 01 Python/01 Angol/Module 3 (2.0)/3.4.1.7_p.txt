@@ -1,0 +1,87 @@
+<problem chapter='3' section='4' slide='1' problem='7' title='Lists ‒ collections of data | Functions and methods'>
+
+<!--
+Update history:
+2020-08-11 Grzegorz (reviewed), code formatting
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h1>Functions vs. methods</h1>
+
+<p>A <strong>method is a specific kind of function</strong> ‒ it behaves like a function and looks like a function, but differs in the way in which it acts, and in its invocation style.</p>
+
+<p>A <strong>function doesn't belong to any data</strong> ‒ it gets data, it may create new data and it (generally) produces a result.</p>
+
+<p>A method does all these things, but is also able to <strong>change the state of a selected entity</strong>.</p>
+
+<p><strong>A method is owned by the data it works for, while a function is owned by the whole code</strong>.</p>
+
+<br>
+
+
+<p>This also means that invoking a method requires some specification of the data from which the method is invoked.</p>
+
+<p>It may sound puzzling here, but we'll deal with it in depth when we delve into object-oriented programming.</p>
+
+<p>In general, a typical function invocation may look like this:</p>
+
+<codep>result = <mark style="background-color:#e6f2ff;">function(arg)</mark>
+
+</codep>
+
+<br>
+
+
+<p>The function takes an argument, does something, and returns a result.</p>
+
+<br>
+
+
+</div>
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+<p>A typical method invocation usually looks like this:</p>
+
+<codep>result = <mark style="background-color:#e6f2ff;">data.method(arg)</mark>
+
+</codep>
+
+<br>
+
+<p>Note: the name of the method is preceded by the name of the data which owns the method. Next, you add a <strong>dot</strong>, followed by the <strong>method name</strong>, and a pair of <strong>parenthesis enclosing the arguments</strong>.</p>
+
+<p>The method will behave like a function, but can do something more ‒ it can <strong>change the internal state of the data</strong> from which it has been invoked.</p>
+
+
+<hr>
+
+<p>You may ask: why are we talking about methods, not about lists?</p>
+
+<p>This is an essential issue right now, as we're going to show you how to add new elements to an existing list. This can be done with methods owned by all the lists, not by functions.</p>
+
+
+<br>
+
+
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

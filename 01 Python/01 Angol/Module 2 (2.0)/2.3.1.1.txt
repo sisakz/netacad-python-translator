@@ -1,0 +1,53 @@
+<problem chapter='2' section='3' slide='1' problem='1' title='Operators ‒ data manipulation tools'>
+
+<!--
+Update history:
+2020-07-17 Grzegorz (reformatted; code - syntax-color and blank lines added;)
+-->
+
+<h1>Python as a calculator</h1>
+
+
+<p>Now, we're going to show you a completely new side of the print() function. You already know that the function is able to show you the values of the literals passed to it by arguments.</p>
+
+<p>In fact, it can do something more. Take a look at the snippet:</p>
+
+<codep class="syntax-color">print(2+2)
+</codep>
+
+<br>
+
+<p>Retype the code in the editor and run it. Can you guess the output?</p>
+
+<p>You should see the number four. Feel free to experiment with other operators.</p>
+
+<p>Without taking this too seriously, you've just discovered that Python can be used as a calculator. Not a very handy one, and definitely not a pocket one, but a calculator nonetheless.</p>
+
+<p>Taking it more seriously, we are now entering the province of <strong>operators</strong> and <strong>expressions</strong>.</p>
+
+<br>
+
+<h1>Basic operators</h1>
+
+<p>An <strong>operator</strong> is a symbol of the programming language, which is able to operate on the values.</p>
+
+<p>For example, just as in arithmetic, the <codel>+</codel> (plus) sign is the operator which is able to <strong>add</strong> two numbers, giving the result of the addition.</p>
+
+<p>Not all Python operators are as obvious as the plus sign, though, so let's go through some of the operators available in Python, and we'll explain which rules govern their use, and how to interpret the operations they perform.</p>
+
+<p>We'll begin with the operators which are associated with the most widely recognizable arithmetic operations:</p>
+
+<p><codel>+</codel>, <codel>-</codel>, <codel>*</codel>, <codel>/</codel>, <codel>//</codel>, <codel>%</codel>, <codel>**</codel></p>
+
+<br>
+
+<p>The order of their appearance is not accidental. We'll talk more about it once we've gone through them all.</p>
+
+<p><strong>Remember</strong>: Data and operators when connected together form <strong>expressions</strong>. The simplest expression is a literal itself.</p>
+
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

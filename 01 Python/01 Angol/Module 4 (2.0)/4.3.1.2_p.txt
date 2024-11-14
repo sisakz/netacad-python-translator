@@ -1,0 +1,64 @@
+<problem chapter='4' section='3' slide='1' problem='2' title='Returning a result from a function'>
+
+<!--
+Update history:
+2020-08-14 Grzegorz (reviewed, re-formatted)
+-->
+
+<code>
+
+</code>
+
+
+
+<h1>A few words about <font face="courier new">None</font></h1>
+
+
+<p>Let us introduce you to a very curious value (to be honest, a none value) named <codel>None</codel>.</p>
+
+<p>Its data doesn't represent any reasonable value ‒ actually, it's not a value at all; hence, it <strong>mustn't take part in any expressions</strong>.</p>
+
+<p>For example, a snippet like this:</p>
+
+<codep style="color:red;">print(None + 2)
+
+</codep>
+
+<br>
+
+ 
+<p>will cause a runtime error, described by the following diagnostic message:</p>
+
+<codep>TypeError: unsupported operand type(s) for +: 'NoneType' and 'int'</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+<br>
+ 
+
+<p>Note: <codel>None</codel> is a <strong>keyword</strong>.</p>
+
+
+<p>There are only two kinds of circumstances when <codel>None</codel> can be safely used:</p>
+
+<ul>
+<li>when you <strong>assign it to a variable</strong> (or return it as a<strong> function's result</strong>)</li>
+
+<li>when you <strong>compare it with a variable</strong> to diagnose its internal state.</li>
+</ul>
+
+<p>Just like here:</p>
+
+<codep class="syntax-color">value = None
+if value is None:
+    print("Sorry, you don't carry any value")
+</codep>
+
+<br>
+
+<p>Don't forget this: if a function doesn't return a certain value using a <codel>return</codel> expression clause, it is assumed that it <strong>implicitly returns <codel>None</codel></strong>.</p>
+
+<p>Let's test it.</p>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

@@ -1,0 +1,92 @@
+<problem chapter='3' section='2' slide='1' problem='2' title='Loops in Python | while'>
+
+<!--
+Update history:
+2020-07-20 Grzegorz (reviewed, re-formatted)
+-->
+
+<h1>The <font face="Courier New">while</font> loop: more examples</h1>
+
+<br>
+
+<p>Let's look at another example employing the <codel>while</codel> loop. Follow the comments to find out the idea and the solution.</p>
+
+<codep class="copy line-numbers syntax-color"># A program that reads a sequence of numbers
+# and counts how many numbers are even and how many are odd.
+# The program terminates when zero is entered.
+
+odd_numbers = 0
+even_numbers = 0
+
+# Read the first number.
+number = int(input("Enter a number or type 0 to stop: "))
+
+# 0 terminates execution.
+while number != 0:
+    # Check if the number is odd.
+    if number % 2 == 1:
+        # Increase the odd_numbers counter.
+        odd_numbers += 1
+    else:
+        # Increase the even_numbers counter.
+        even_numbers += 1
+    # Read the next number.
+    number = int(input("Enter a number or type 0 to stop: "))
+
+# Print results.
+print("Odd numbers count:", odd_numbers)
+print("Even numbers count:", even_numbers)
+</codep>
+
+<br>
+
+<p>Certain expressions can be simplified without changing the program's behavior.</p>
+
+<p>Try to recall how Python interprets the truth of a condition, and note that these two forms are equivalent:</p>
+<p><codel>while number != 0:</codel> and <codel>while number:</codel>.</p>
+
+<p>The condition that checks if a number is odd can be coded in these equivalent forms, too:</p>
+<p><codel>if number % 2 == 1:</codel> and <codel>if number % 2:</codel>.</p>
+
+<br>
+
+<h2>Using a <font face="courier new">counter</font> variable to exit a loop</h2>
+
+<p>Look at the snippet below:</p>
+
+<codep class="copy line-numbers syntax-color">counter = 5
+while counter != 0:
+    print("Inside the loop.", counter)
+    counter -= 1
+print("Outside the loop.", counter)
+</codep>
+
+<br>
+
+<p>This code is intended to print the string <codel>"Inside the loop."</codel> and the value stored in the <codel>counter</codel> variable during a given loop exactly five times. Once the condition has not been met (the <codel>counter</codel> variable has reached <codel>0</codel>), the loop is exited, and the message <codel>"Outside the loop."</codel> as well as the value stored in <codel>counter</codel> is printed.</p>
+
+<p>But there's one thing that can be written more compactly – the condition of the <codel>while</codel> loop.</p>
+
+<p>Can you see the difference?</p>
+
+<codep class="copy line-numbers syntax-color">counter = 5
+while counter:
+    print("Inside the loop.", counter)
+    counter -= 1
+print("Outside the loop.", counter)
+</codep>
+
+<br>
+
+<p>Is it more compact than previously? A bit. Is it more legible? That's disputable.</p>
+
+<p><span class="label" style="background-color:orange;"><b>REMEMBER</b></span></p>
+<p>Don't feel obliged to code your programs in a way that is always the shortest and the most compact. Readability may be a more important factor. Keep your code ready for a new programmer.</p>
+
+<br>
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

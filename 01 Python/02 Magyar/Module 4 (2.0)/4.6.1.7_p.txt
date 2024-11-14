@@ -1,0 +1,72 @@
+<problem chapter='4' section='6' slide='1' problem='7' title='A tuple és szótár adattípus | tagfüggvények'>
+
+<!--
+Update history:
+2020-08-18 Grzegorz (reviewed, re-formatted, PEP-8 compliance check)
+-->
+
+<code>
+dictionary = {"cat": "chat", "dog": "chien", "horse": "cheval"}
+
+for english, french in dictionary.items():
+    print(english, "->", french)
+
+</code>
+
+
+<h1>Hogyan használjuk a szótárt: az <font face="courier new">items()</font> és <font face="courier new">values()</font> tagfüggvények</h1>
+
+<p>Egy másik módszer a szótár <codel>items()</codel> nevű tagfüggvényének használatán alapul. A tagfüggvény olyan <strong>tuple szekvenciát ad vissza</strong> (itt egy példa a tuple valódi használatára), <strong>ahol minden tuple egy kulcs-érték pár</strong>.</p>
+
+<p>Ez így működik:</p>
+
+<codep>dictionary = {"cat": "chat", "dog": "chien", "horse": "cheval"}
+
+for english, french in <mark style="background-color:#e6f2ff;">dictionary.items()</mark>:
+    print(english, "-&gt;", french)
+
+</codep>
+
+<br>
+
+<p>Figyeljük meg, hogyan használtuk a tuple-t a <codel>for</codel> ciklus ciklusváltozójaként.</p>
+
+<p>A példa eredménye:</p>
+
+<codep>cat -&gt; chat
+dog -&gt; chien
+horse -&gt; cheval</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+<br>
+
+<p>Van egy <codel>values()</codel> nevű metódus is, amely hasonlóan működik, mint a <codel>keys()</codel>, de az <strong>értékeket adja vissza</strong>.</p>
+
+<p>Íme egy egyszerű példa erre:</p>
+
+<codep>dictionary = {"cat": "chat", "dog": "chien", "horse": "cheval"}
+
+for french in <mark style="background-color:#e6f2ff;">dictionary.values()</mark>:
+    print(french)
+
+</codep>
+
+<br>
+
+
+<p>Mivel a szótár nem képes automatikusan megtalálni a kulcsot egy adott értékhez, ezért ennek a metódusnak a lehetősége meglehetősen korlátozott.</p>
+
+<p>Íme a várható kimenet:</p>
+
+<codep>cheval
+chien
+chat</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+<br>
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

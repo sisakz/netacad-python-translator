@@ -1,0 +1,69 @@
+<problem chapter='2' section='2' slide='1' problem='9' title='Literálok'>
+
+<!--
+Update history:
+2020-07-17 Grzegorz (reformatted)
+-->
+
+<code>
+</code>
+
+<h1>Karakterláncok kódolása</h1>
+
+
+<p>A következő kérdés: hogyan lehet aposztrófot írni az aposztrófok közé helyezett karakterláncba?</p>
+
+<p>A választ, pontosabban a két lehetséges választ már tudod.</p>
+
+<p>Próbálj kiírni egy karakterláncot, amely a következő üzenetet tartalmazza:</p>
+
+
+<codep>I'm Monty Python.</codep>
+
+<br>
+
+
+<p>Tudod, hogy kell ezt csinálni? Kattints az alábbi <i>Ellenőrzés</i> gombra, hogy megtudd, igazad volt-e!</p>
+
+<div>
+<button class="button tiny" onclick="solution('sol1')">Ellenőrzés</button>
+
+<p id="sol1" style="display: none;">
+<codep>print('I\'m Monty Python.')</codep>
+<br>
+or
+<br>
+<br>
+<codep>print("I'm Monty Python.")</codep>
+</p>
+
+<script>
+function solution (id) {
+    var element = document.getElementById(id);
+    
+if (element.style.display === "none") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
+    }
+}
+</script>
+
+</div>
+
+
+<p>Amint láthatod, a backslash egy nagyon hasznos eszköz, nemcsak az idézőjelek, hanem az aposztrófok esetén is használható.</p>
+
+<p>Már mutattuk, de még egyszer hangsúlyozzuk ezt az esetet: <strong>egy karakterlánc lehet üres</strong>, azaz lehet, hogy egyáltalán nem tartalmaz karaktereket.</p>
+
+<p>Az üres karakterlánc továbbra is karakterlánc marad:</p>
+
+<codep>''
+""</codep>
+
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

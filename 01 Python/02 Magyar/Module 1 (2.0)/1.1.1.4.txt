@@ -1,0 +1,65 @@
+<problem chapter='1' section='1' slide='1' problem='4' title='Programozási alapok | Fordítás vs. értelmezés'>
+
+<!--
+Update history:
+2020-07-07 Grzegorz (formatted)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+<h1>Fordítás vs. értelmezés</h1>
+
+<p>A számítógépes programozás a kiválasztott programozási nyelv elemeinek oly sorrendben történő összeállítása, amely a kívánt hatást éri el. A hatás minden egyes esetben más és más - ez a programozó fantáziájától, tudásától és tapasztalatától függ.</p>
+
+<p>Természetesen egy ilyen összeállításnak többféle értelemben is helyesnek kell lennie:</p>
+
+<ul>
+<li><strong>ábécé szempontból </strong> &ndash; a programot felismerhető betűkkel kell leírni, például római, cirill stb.</li>
+
+<li><strong>lexikálisan</strong> &ndash; minden programozási nyelvnek megvan a maga szótára, és ezt kell elsajátítanod; szerencsére ez sokkal egyszerűbb és kisebb, mint bármely természetes nyelv szótára;</li>
+
+<li><strong>szintaktikailag</strong> &ndash; minden nyelvnek megvannak a maga szabályai, és ezeket be kell tartani;</li>
+
+<li><strong>szemantikailag</strong> &ndash; a programnak értelmesnek kell lennie.</li>
+</ul>
+
+<p>Sajnos a programozó a fenti négy szempont bármelyikével szemben követhet el hibát, és ezek a hibák a programot teljesen használhatatlanná tudják tenni.</p>
+
+<p>Tegyük fel, hogy sikeresen megírtál egy programot. Hogyan győzheted meg a számítógépet, hogy végrehajtsa azt? A programot gépi kódra kell átültetni. Szerencsére a transzformációt maga a számítógép is elvégezheti, így az egész folyamat gyors és hatékony.</p>
+
+<br>
+
+</div>
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+<p>Egy <strong>program magas szintű programozási nyelvről gépi kódra történő átalakításának</strong> két különböző módja van:</p>
+
+<p><span class="label" style="background-color:#2f4050;"><strong>FORDÍTÁS (compilation)</strong></span> - a forrásprogramot egyszer lefordítjuk (bár ezt a műveletet minden alkalommal meg kell ismételni, amikor módosítjuk a forráskódot), és kapunk egy futtatható állományt (pl. egy .exe fájlt, ha MS Windows alatt szeretnénk használni), amely tartalmazza a gépi kódot. Ezek után ezt az alkalmazást szerte a világban terjeszthetjük. A programot, amely ezt a fordítást elvégzi compiler-nek vagy fordítóprogramnak nevezzük;</p>
+
+<p><span class="label" style="background-color:#2f4050;"><strong>ÉRTELMEZÉS (interpretation)</strong></span> - azt jelenti, hogy Te (vagy a program használója) lefordíthatja a forrásprogramot minden egyes futtatáskor. Az ilyen átalakítást végző programot értelmezőnek nevezzük, mivel minden egyes futtatáskor értelmezi a kódot. Ez azt is jelenti, hogy nem elég csak a forráskódot terjeszteni, mert a végfelhasználónak is szüksége van az értelmezőre a végrehajtáshoz.</p>
+
+<p>Néhány alapvető okból kifolyólag minden magas szintű programozási nyelvet úgy terveznek, hogy e két kategória valamelyikébe essen.</p>
+
+<p>Nagyon kevés olyan nyelv van, amely egyszerre fordítható és értelmezhető. Általában egy programozási nyelvet úgy terveznek meg az alkotói, hogy mindvégig szem előtt tartják ezt a tényezőt: fordított vagy értelmezett nyelv lesz?</p>
+
+<br>
+
+</div>
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

@@ -1,0 +1,53 @@
+<problem chapter='1' section='1' slide='1' problem='2' title='Programming - absolute basics'>
+
+<!--
+Update history:
+2020-07-07 Grzegorz (formatted)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+<br>
+
+<h1>Natural languages vs. programming languages</h1>
+
+<p>A language is a means (and a tool) for expressing and recording thoughts. There are many languages all around us. Some of them require neither speaking nor writing, such as body language; it's possible to express your deepest feelings very precisely without saying a word.</p>
+
+<p>Another language you use each day is your mother tongue, which you use to manifest your will and to ponder reality. Computers have their own language, too, called <strong>machine </strong>language, which is very rudimentary.</p>
+
+<p>A computer, even the most technically sophisticated, is devoid of even a trace of intelligence. You could say that it is like a well-trained dog - it responds only to a predetermined set of known commands.</p>
+
+<p>The commands it recognizes are very simple. We can imagine that the computer responds to orders like "take that number, divide by another and save the result".</p>
+
+<p>A complete set of known commands is called an <strong>instruction list</strong>, sometimes abbreviated to <strong>IL</strong>. Different types of computers may vary depending on the size of their ILs, and the instructions could be completely different in different models.</p>
+
+<p>Note: machine languages are developed by humans.</p>
+
+</div>
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+<p>No computer is currently capable of creating a new language. However, that may change soon. Just as people use a number of very different languages, machines have many different languages, too. The difference, though, is that human languages developed naturally.</p>
+
+<p>Moreover, they are still evolving, and new words are created every day as old words disappear. These languages are called <strong>natural languages</strong>.</p>
+
+
+<center><img src="/uploads/media/default/0001/01/dbbf39457b4d5aed83090b1f92d9c79770c2faeb.png" width="50%" alt="The concept of compilation"></center>
+
+<br><br>
+
+</div>
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

@@ -1,0 +1,122 @@
+<problem chapter='4' section='6' slide='1' problem='8' title='Tuples and dictionaries'>
+
+<!--
+Update history:
+2020-08-18 Grzegorz (reviewed, re-formatted, PEP-8 compliance check)
+-->
+
+<code>
+dictionary = {"cat": "chat", "dog": "chien", "horse": "cheval"}
+
+dictionary['cat'] = 'minou'
+print(dictionary)
+
+</code>
+
+
+<h1>How to use a dictionary: modifying and adding values</h1>
+
+<p>Assigning a new value to an existing key is simple − as dictionaries are fully <strong>mutable</strong>, there are no obstacles to modifying them.</p>
+
+<p>We're going to replace the value <codel>"chat"</codel> with <codel>"minou"</codel>, which is not very accurate, but it will work well with our example.</p>
+
+<p>Look:</p>
+
+<codep>dictionary = {"cat": "chat", "dog": "chien", "horse": "cheval"}
+
+<mark style="background-color:#e6f2ff;">dictionary['cat'] = 'minou'</mark>
+print(dictionary)
+
+</codep>
+
+<br>
+
+<p>The output is:</p>
+
+<codep>{'cat': 'minou', 'dog': 'chien', 'horse': 'cheval'}</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+<br>
+
+<h2>Adding a new key</h2>
+
+<p>Adding a new key-value pair to a dictionary is as simple as changing a value − you only have to assign a value to a new, <strong>previously non-existent key</strong>.</p>
+
+<p>Note: this is very different behavior compared to lists, which don't allow you to assign values to non-existing indices.</p>
+
+<p>Let's add a new pair of words to the dictionary − a bit weird, but still valid:</p>
+
+<codep>dictionary = {"cat": "chat", "dog": "chien", "horse": "cheval"}
+
+<mark style="background-color:#e6f2ff;">dictionary['swan'] = 'cygne'</mark>
+print(dictionary)
+
+</codep>
+
+<br>
+
+<p>The example outputs:</p>
+
+<codep>{'cat': 'chat', 'dog': 'chien', 'horse': 'cheval', 'swan': 'cygne'}</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+<br>
+
+<p><span class="label" style="background-color:orange;"><b>EXTRA</b></span></p>
+
+<p>You can also insert an item to a dictionary by using the <codel>update()</codel> method, e.g.:</p>
+
+<codep>dictionary = {"cat": "chat", "dog": "chien", "horse": "cheval"}
+
+<mark style="background-color:#e6f2ff;">dictionary.update({"duck": "canard"})</mark>
+print(dictionary)
+
+</codep>
+<br>
+
+
+<h2>Removing a key</h2>
+
+<p>Can you guess how to remove a key from a dictionary?</p>
+
+<p>Note: removing a key will always cause the <strong>removal of the associated value</strong>. <strong>Values cannot exist without their keys</strong>.</p>
+
+<p>This is done with the <codel>del</codel> instruction.</p>
+
+<p>Here's the example:</p>
+
+<codep>dictionary = {"cat": "chat", "dog": "chien", "horse": "cheval"}
+
+<mark style="background-color:#e6f2ff;">del dictionary['dog']</mark>
+print(dictionary)
+
+</codep>
+
+<br>
+
+<p>Note: <strong>removing a non-existing key causes an error</strong>.</p>
+
+<p>The example outputs:</p>
+
+<codep>{'cat': 'chat', 'horse': 'cheval'}</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+<br>
+
+<p><span class="label" style="background-color:orange;"><b>EXTRA</b></span></p>
+
+<p>To remove the last item in a dictionary, you can use the <codel>popitem()</codel> method:</p>
+
+<codep>dictionary = {"cat": "chat", "dog": "chien", "horse": "cheval"}
+
+<mark style="background-color:#e6f2ff;">dictionary.popitem()</mark>
+print(dictionary)    # outputs: {'cat': 'chat', 'dog': 'chien'}
+
+</codep>
+<br>
+
+<p>In the older versions of Python, i.e., before 3.6.7, the <codel>popitem()</codel> method removes a random item from a dictionary.</p>
+
+<br>
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

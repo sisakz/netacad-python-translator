@@ -1,0 +1,102 @@
+<problem chapter='4' section='2' slide='1' problem='1' title='Hogyan kommunikálnak a függvények a környezetükkel?'>
+
+<!--
+Update history:
+2020-08-13 Grzegorz (reviewed, re-formatted)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<h1>Paraméteres függvények</h1>
+
+<p>A függvények valódi haszna akkor mutatkozik meg, amikor olyan interfésszel látjuk el őket, amely képes fogadni a hívó által megadott adatokat. Az ilyen adatok módosíthatják a függvények viselkedését, rugalmasabbá és a változó körülményekhez alkalmazkodóvá téve azt.</p>
+
+<p>A paraméter tulajdonképpen egy változó, de van két fontos kitétel, amely a paramétereket mássá és különlegessé teszi:</p>
+
+<ul>
+<li><strong>a paraméter csak azon a függvényen belül létezik, amelyben definiálták őt</strong>. Az egyetlen hely pedig, ahol a paramétereket definiálni lehet, a <codel>def</codel> utasításban szereplő zárójelek között van;</li>
+
+<li><strong>a paraméter értékének hozzárendelése a függvény meghívásakor történik</strong> a megfelelő argumentum megadásával.</li>
+</ul>
+
+<codep>def function(<mark style="background-color:#e6f2ff;">parameter</mark>):
+    ###
+
+</codep>
+
+<br>
+
+<p>Ne felejtsd el:</p>
+
+<ul>
+<li><strong>a paraméterek a függvényeken belül élnek</strong> (ez a természetes környezetük);</li>
+<li><strong>az argumentumok a függvényeken kívül léteznek</strong>, ők a megfelelő paramétereknek átadott értékek hordozói.</li>
+</ul>
+
+<p>E két világ között világos és egyértelmű határvonal húzódik.</p>
+
+<br>
+
+<p>Bővítsük a fenti függvényt egyetlen paraméterrel. Ezt arra fogjuk használni, hogy megmutassuk a felhasználónak a függvény által kért értéket.</p>
+
+
+<br>
+
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+<p>Át kell írjuk a <codel>def</codel> utasítást - most így néz ki:</p>
+
+<codep>def message(<mark style="background-color:#e6f2ff;">number</mark>):
+    ###
+
+</codep>
+
+<br>
+
+<p>A függvénydefiníció szerint a függvényünk egyetlen paraméterrel, a <codel>number</codel> nevűvel dolgozik. Ezt közönséges változóként használhatjuk, de <strong>csak a függvényen belül</strong> ‒ máshol nem használható.</p>
+
+<p>Alakítsuk át most a függvény testét:</p>
+
+<codep class="syntax-color">def message(number):
+    print("Enter a number:", number)
+</codep>
+
+<br>
+
+<p>Használtuk a paramétert, de nem rendeltünk hozzá semmilyen értéket. Helyes ez így vajon?</p>
+
+<p>Igen, helyes.</p>
+
+<p>A paraméter értéke a függvény környezetéből érkezik.</p>
+
+<p>Ne felejtsük el: <strong>egy függvény definíciójában egy vagy több paraméter megadása </strong>egyben feltétel is, amit a függvényhívás során teljesíteni kell! <strong>Annyi argumentumot kell megadni, ahány paramétert definiáltunk</strong>.</p>
+
+<p>Ennek elmulasztása hibát okoz!</p>
+
+<br>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

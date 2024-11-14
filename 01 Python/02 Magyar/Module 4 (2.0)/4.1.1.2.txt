@@ -1,0 +1,81 @@
+<problem chapter='4' section='1' slide='1' problem='2' title='Függvények'>
+
+<!--
+Update history:
+2020-08-13 Grzegorz (reviewed, re-formatted)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h1>Dekompozíció</h1>
+
+<p>Gyakran előfordul, hogy a probléma olyan nagy és összetett, hogy nem lehet egyetlen fejlesztőre bízni, és egy <strong>fejlesztőcsapatnak</strong> kell rajta dolgoznia. A problémát több fejlesztő között kell felosztani oly módon, hogy a hatékony és zökkenőmentes együttműködésük biztosított legyen.</p>
+
+<center><img src="/uploads/media/default/0001/01/519a2445bd5a82681c91651aab5bd668bdac992a.png" width="60%" alt="The concept of sharing the work/working together"></center>
+
+<br>
+<br>
+
+
+<p>Elképzelhetetlennek tűnik, hogy egynél több programozó egyszerre írja ugyanazt a kódot, ezért a munkát szét kell osztani a csapat összes tagja között.</p>
+
+<p>Ez a fajta dekompozíció más célt szolgál, mint a korábban leírtak - nem csak <strong>a munka megosztásáról<strong> van szó, hanem a <strong>felelősség megosztásáról</strong> is több fejlesztő között.</p>
+
+<p>Mindegyikük egy jól körülhatárolt és világosan definiált függvénykészletet ír, amelyek a <strong>modulba illesztve</strong> (erről később lesz szó) adják a végterméket.</p>
+
+
+<br> 
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+<p>Ez egyenesen elvezet minket a harmadik feltételhez: ha a munkát több programozó között akarjuk megosztani, <strong>bontsuk fel a problémát úgy, hogy a termék különböző modulokba csomagolt, egymástól elkülönítve megírt függvények halmazaként valósuljon meg</strong>!</p>
+
+
+
+<h2>Honnan származnak a függvények?</h2>
+
+
+<p>A függvények legalább három helyről származhatnak:</p>
+
+<ul>
+<li>magából a Pythonból - számos függvény (mint például a <codel>print()</codel>) a <strong>Python szerves része</strong>, és minden további erőfeszítés nélkül mindig a programozó rendelkezésére áll. Ezeket a függvényeket <strong>beépített függvényeknek</strong> nevezzük;</li>
+
+<li>a Python <strong>előre telepített moduljaiból</strong> - számos nagyon hasznos, de a beépített függvényeknél lényegesen ritkábban használt függvény a Pythonnal együtt telepített modulokból érhető el. Az, hogy az ilyen függvények elérhetővé váljanak a kódban, további lépéseket kíván a programozótól (erre még visszatérünk);</li>
+
+<li><strong>közvetlenül a kódból </strong>- megírhatjuk a saját függvényeinket, elhelyezhetjük a kódban, és szabadon használhatjuk azokat;</li>
+
+<li>van még egy lehetőség, ami az osztályokhoz kapcsolódik, ezt egyelőre nem részletezzük.</li>
+</ul>
+
+
+<center><img src="/uploads/media/default/0001/01/0dc6293734f2ffe6848d97d12a91280ecb7ab3f1.png" width="80%" alt="Functions come from Python, modules, code"></center>
+
+<br>
+
+<br>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

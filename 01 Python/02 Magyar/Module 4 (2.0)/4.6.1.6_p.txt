@@ -1,0 +1,70 @@
+<problem chapter='4' section='6' slide='1' problem='6' title='A tuple és szótár adattípus | tagfüggvények'>
+
+<!--
+Update history:
+2020-08-18 Grzegorz (reviewed, re-formatted, PEP-8 compliance check)
+-->
+
+<code>
+dictionary = {"cat": "chat", "dog": "chien", "horse": "cheval"}
+
+for key in dictionary.keys():
+    print(key, "->", dictionary[key])
+
+</code>
+
+
+<h1>Hogyan használjuk a szótárt: a <font face="courier new">keys()</font></h1>
+
+<p>Lehet a szótárakat a listához vagy tuple-hez hasonóan <strong>böngészni</strong> a <codel>for</codel> ciklus segítségével?</p>
+
+<p>A válasz annak ellenére igen, hogy a szótár klasszikus értelemben <strong>nem szekvencia típus</strong> − az elemek helyét nem indexek jelölik.</p>
+
+<p>Ugyanakkor léteznek egyszerű és nagyon hatékony eszközök, amelyek <strong>bármilyen szótárat hozzáigazítanak a <codel>for</codel> ciklus követelményeihez</strong> (más szóval, egy köztes kapcsolatot hoznak létre a szótár és egy ideiglenes szekvencia-egység között).</p>
+
+<p>Az első ezek közül egy <codel>keys()</codel> nevű metódus, amellyel minden szótár rendelkezik. Ez a tagfüggvény <strong>egy iterálható objektumot ad vissza, amely a szótárban összegyűjtött összes kulcsot tartalmazza</strong>. A kulcsok csoportjának birtokában a teljes szótárat könnyen és praktikusan elérhetjük.</p>
+
+
+<p>Mint itt:</p>
+
+<codep>dictionary = {"cat": "chat", "dog": "chien", "horse": "cheval"}
+
+for key in <mark style="background-color:#e6f2ff;">dictionary.keys()</mark>:
+    print(key, "->", dictionary[key]
+
+</codep>
+
+<br>
+
+<p>A kód kimenete a következőképpen néz ki:</p>
+
+<codep>horse -> cheval
+dog -> chien
+cat -> chat</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+<br>
+
+<h2>A <font face="courier new">sorted()</font> függvény</h2>
+
+<p>Szeretnél <strong>sorba rendezést</strong> használni? Nincs más teendőd, mint bővíteni a <codel>for</codel> ciklust az alábbiak szerint:</p>
+
+<codep>for key in <mark style="background-color:#e6f2ff;">sorted(dictionary.keys())</mark>:
+
+</codep>
+<br>
+
+<p>A <codel>sorted()</codel> függvény megteszi hatását, a kimenet így néz ki:</p>
+
+<codep>cat -> chat
+dog -> chien
+horse -> cheval</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+<br>
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

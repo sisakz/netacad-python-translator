@@ -1,0 +1,59 @@
+<problem chapter='3' section='2' slide='1' problem='12' title='Python loops | else'>
+
+<!--
+Update history:
+2020-07-21 Grzegorz (reviewed, re-formatted)
+-->
+
+<code>i = 1
+while i < 5:
+    print(i)
+    i += 1
+else:
+    print("else:", i)
+
+</code>
+
+
+<h1>The <font face="courier new">while</font> loop and the <font face="courier new">else</font> branch</h1>
+
+
+<p>Both loops, <codel>while</codel> and <codel>for</codel>, have one interesting (and rarely used) feature.</p>
+
+<p>We'll show you how it works – try to judge for yourself if it's usable and whether you can live without it or not.</p>
+
+<p>In other words, try to convince yourself if the feature is valuable and useful, or is just syntactic sugar.</p>
+
+<p>Take a look at the snippet in the editor. There's something strange at the end – the <codel>else</codel> keyword.</p>
+
+<p>As you may have suspected, <strong>loops may have the <codel>else</codel> branch too, like <codel>if</codel>s</strong>.</p>
+
+<p>The loop's <codel>else</codel> branch is <strong>always executed once, regardless of whether the loop has entered its body or not</strong>.</p>
+
+<p>Can you guess the output? Run the program to check if you were right.</p>
+
+
+<p>Modify the snippet a bit so that the loop has no chance to execute its body even once:</p>
+
+<codep class="syntax-color">i = 5
+while i < 5:
+    print(i)
+    i += 1
+else:
+    print("else:", i)
+</codep>
+
+<br>
+
+
+<p>The <codel>while</codel>'s condition is <codel>False</codel> at the beginning – can you see it?</p>
+
+<p>Run and test the program, and check whether the <codel>else</codel> branch has been executed or not.</p>
+
+<br>
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

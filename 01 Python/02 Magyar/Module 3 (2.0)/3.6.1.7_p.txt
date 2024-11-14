@@ -1,0 +1,78 @@
+<problem chapter='3' section='6' slide='1' problem='7' title='Listák | további részletek'>
+
+<!--
+Update history:
+2020-08-12 Grzegorz (reviewed, reformatted)
+-->
+
+<code>
+my_list = [17, 3, 11, 5, 1, 9, 7, 15, 13]
+largest = my_list[0]
+
+for i in range(1, len(my_list)):
+    if my_list[i] > largest:
+        largest = my_list[i]
+
+print(largest)
+
+</code>
+
+
+
+<h1>Listák – néhány egyszerű program</h1>
+
+
+<p>Most néhány egyszerű, listákat használó programot mutatunk.</p>
+
+<p>Az első megpróbálja megtalálni a legnagyobb értéket a listában. Nézd meg a kódot a szerkesztőben!</p>
+
+<p>A koncepció meglehetősen egyszerű. Átmenetileg feltételezzük, hogy az első elem a legnagyobb, és a hipotézist a lista összes többi elemére ellenőrizzük.</p>
+
+<p>A kód kimenete: <codel>17</codel> (a várakozásoknak megfelelően).</p>
+
+<hr>
+
+<p>A kód átírható úgy, hogy a <codel>for</codel> ciklus újonnan bevezetett formáját használja:</p>
+
+<codep class="syntax-color copy">my_list = [17, 3, 11, 5, 1, 9, 7, 15, 13]
+largest = my_list[0]
+
+for i in my_list:
+    if i > largest:
+        largest = i
+
+print(largest)
+</codep>
+
+<br>
+
+<p>A fenti program egy felesleges összehasonlítást végez, amikor az első elemet önmagával hasonlítja össze, de ez egyáltalán nem probléma.</p>
+
+<p>A kód kimenete: <codel>17</codel> (semmi szokatlan).</p>
+
+
+<hr>
+
+<p>Ha takarékoskodnod kell a számítógép kapacitásával, használhatsz egy szeletet:</p>
+
+<codep class="syntax-color copy">my_list = [17, 3, 11, 5, 1, 9, 7, 15, 13]
+largest = my_list[0]
+
+for i in my_list[1:]:
+    if i > largest:
+        largest = i
+
+print(largest)
+</codep>
+
+<br>
+
+<p>A kérdés persze az, hogy e két művelet közül melyik fogyaszt több számítógép erőforrást? Egyetlen összehasonlítás, vagy a lista szinte összes elemének felszeletelése?</p>
+
+<br>
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

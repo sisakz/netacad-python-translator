@@ -1,0 +1,348 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+PE1 - Module 2 Quiz
+
+Update history:
+2020-07-17 Grzegorz (review, reformatting, checking PEP-8 compliance)
+2020-08-19 Grzegorz (reformatting, checking PEP-8 compliance, PE1_Q2_ITEM_9 becomes multiple-choice)
+-->
+
+<questionPool>
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE1_Q2_ITEM_1">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p>Az <strong>escape karakter</strong> azért nevezetes, mert ...</p>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>megváltoztatja a mellette lévő karakter jelentését.</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>nagy sebességének köszönhetően nem lehet elkapni.</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>a forrásfájlokból a számítógép memóriájába menekül.</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE1_Q2_ITEM_2"> 
+
+<instructions>
+<![CDATA[
+
+<p>A <strong>pozicionális paraméterek</strong> jelentését határozza meg:</p>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>hely</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>megjelenés</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>név</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE1_Q2_ITEM_3">  
+
+<instructions>
+<![CDATA[
+
+<p>Az egész és a lebegőpontos számok közötti legfontosabb különbség abban rejlik, hogy ...</p>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>másképp tárolódnak a számítógép memóriájában.</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>nem lehet őket egyszerre használni.</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>az egész számok nem lehetnek literálok, míg a lebegőpontos számok igen.</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE1_Q2_ITEM_4">  
+
+<instructions>
+<![CDATA[
+
+<p>A <codel>0x</codel> előtag azt jelenti, hogy az utána következő szám ...</p>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>hexadecimális.</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>oktális.</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>tizedes tört.</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE1_Q2_ITEM_5">  
+
+<instructions>
+<![CDATA[
+
+<p>A <codel>//</codel> műveletjel ...</p>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>egészosztást végez.</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>szabályos osztást végez.</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>nem létezik.</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE1_Q2_ITEM_6">  
+
+<instructions>
+<![CDATA[
+
+<p>A következő összeadás eredménye ...</p>
+<codel>123 + 0.0</codel>
+<br>
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p><codel>123.0</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>123</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>nem kiszámítható.</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE1_Q2_ITEM_7">  
+
+<instructions>
+<![CDATA[
+
+<p>Az alábbi állítások közül csak az egyik <u>igaz</u> - melyik?</p>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>A szorzást előbb kell elvégezni, mint az összeadást.</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>Az összeadást előbb kell elvégezni, mint a szorzást.</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>Egyik állítás sem helyes.</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE1_Q2_ITEM_8">  
+
+<instructions>
+<![CDATA[
+
+<p>A jobbról-balra haladó értelmezés szerint a <codel>1 ** 2 ** 3</codel> kifejezés kiértékelési sorrendje ...</p>
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>jobbról balra történik.</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>balról jobbra történik.</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>véletlenszerű sorrendben történik.</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="2" scoringType="1" points="1" customId="PE1_Q2_ITEM_9">  <!-- Multiple-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p>A <strong>kulcsszó</strong> olyan szó, amely ... (<u>Két</u> helyes válasz van!)</p>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>nem használható változónévként.</p> ]]>
+</option>
+
+<option isCorrect="true">
+<![CDATA[ <p>nem használható függvénynévként.</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>a legfontosabb szó az egész programban.</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE1_Q2_ITEM_10">  
+
+<instructions>
+<![CDATA[
+
+<p>A <codel>input()</codel> függvény által visszaadott érték ...</p>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>egy karakterlánc.</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>egy egész szám.</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>egy lebegőpontos szám.</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+<!-- ######################################################################################################################## -->
+
+</questionPool>

@@ -1,0 +1,211 @@
+<problem chapter='4' section='3' slide='1' problem='1' title='Függvény visszatérési értéke'>
+
+<!--
+Update history:
+2020-08-14 Grzegorz (reviewed, re-formatted)
+2020-08-27 Grzegorz (typos corrected)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<h1>Hatások és eredmények: a <font face="courier new">return</font> utasítás</h1>
+
+<p>Az összes korábban bemutatott függvénynek van valamilyen hatása - létrehoznak egy szöveget és elküldik a konzol kimenetre.</p>
+
+<p>Természetesen a függvényeknek - matematikai testvéreikhez hasonlóan - lehetnek eredményei is.</p>
+
+
+<p>Ahhoz, hogy a <strong>függvények visszaadjanak egy értéket</strong> (de nem csak erre a célra), a <codel>return</codel> utasítást használjuk.</p>
+
+<p>Az elnevezése sokat elárul a képességeiről. Megjegyzés: ez egy Python <strong>kulcsszó</strong>.</p>
+
+
+<br>
+
+<p>A <codel>return</codel> utasításnak <strong>két különböző változata</strong> van - nézzük meg ezeket külön-külön.</p>
+
+
+
+
+<h2>A <font face="courier new">return</font> kifejezés nélkül</h2>
+
+<p>Az első magából a kulcsszóból áll, anélkül, hogy bármi is követné.</p>
+
+<p>Ha egy függvényen belül használjuk, akkor a <strong>függvény végrehajtásának azonnali befejezését és azonnali visszatérést (innen a neve) okoz a meghívás helyére</strong>.</p>
+
+<p>Megjegyzés: ha egy függvénynek nem célja, hogy eredményt adjon, a <strong><codel>return</codel> utasítás használata nem kötelező</strong>, a függvény végén implicit módon végrehajtódik.</p>
+
+<p>Arra is használható, hogy <strong>igény szerint befejezze egy függvény futását</strong>, mielőtt a vezérlés elérné annak utolsó sorát.</p>
+
+<hr>
+
+<p>Nézzük a következő függvényt:</p>
+
+<codep class="syntax-color copy">def happy_new_year(wishes = True):
+    print("Three...")
+    print("Two...")
+    print("One...")
+    if not wishes:
+        return
+    
+    print("Happy New Year!")
+</codep>
+
+<br>
+
+<p>Ha argumentumok nélkül hívjuk meg:</p>
+
+<codep class="syntax-color">happy_new_year()
+</codep>
+
+<br> 
+
+<p>a kimenet így fog kinézni:</p>
+
+<codep>Three...
+Two...
+One...
+Happy New Year!</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+<br> 
+
+<p>Ha argumentumként a <codel>False</codel> értéket adjuk meg:</p>
+
+<codep class="syntax-color">happy_new_year(False)
+</codep>
+
+<br> 
+
+<p>akkor megváltozik a függvény viselkedése. A <codel>return</codel> utasítás az újévi kívánság kiírása előtt közvetlenül a függvény befejezését okozza, ez lesz a kimenet:</p>
+
+<codep>Three...
+Two...
+One...</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+<br>
+<br>
+
+</div>
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+
+<h2>A <font face="courier new">return</font> egy kifejezéssel használva</h2>
+
+
+<p>A második <codel>return</codel> változat egy <strong>kifejezéssel bővül</strong>:</p>
+
+<codep>def function():
+    return <mark style="background-color:#e6f2ff;">expression</mark>
+
+</codep>
+<br>
+
+
+
+<p>Használatának két következménye van:</p>
+
+<ul>
+<li><strong>a függvény végrehajtásának azonnali befejezését</strong> okozza (semmi újdonság az első változathoz képest);</li>
+
+<li>a függvény <strong>kiértékeli a kifejezés értékét, és azt adja vissza (innen a név ismét), mint a függvény eredménye</strong>.</li>
+</ul>
+
+
+<p>Nézzük meg ezt a példát:</p>
+
+<codep class="syntax-color">def boring_function():
+    return 123
+
+x = boring_function()
+
+print("The boring_function has returned its result. It's:", x)
+</codep>
+
+<br> 
+
+<p>A kódrészlet a következő szöveget írja a konzolra:</p>
+
+<codep>The boring_function has returned its result. It's: 123</codep>
+
+<br> 
+
+<p>Elemezzük egy picit!</p>
+
+
+<p>Nézzük meg a következő ábrát:</>
+
+<img src="/uploads/media/default/0001/02/4.1.3.1.png" alt="Assigning the value returned by function to a variable">
+
+<br>
+<br>
+
+<p>A kifejezéssel ellátott <codel>return</codel> utasítás (a kifejezés itt most egyszerű) "szállítja" a kifejezés értékét arra a helyre, ahol a függvényt meghívták.</p>
+
+
+<p>Az eredmény itt szabadon felhasználható, például egy változóhoz rendelhető.</p>
+
+<p>Az is előfordulhat, hogy teljesen figyelmen kívül hagyjuk és nyomtalanul eltűnik.</p>
+
+<br>
+
+<p>Megjegyezzük, hogy ez nem túl elegáns - a függvény ugyan visszaad egy értéket, de mi figyelmen kívül hagyjuk azt (nem használjuk fel semmilyen módon):</p>
+
+<codep class="syntax-color">def boring_function():
+    print("'Boredom Mode' ON.")
+    return 123
+
+print("This lesson is interesting!")
+boring_function()
+print("This lesson is boring...")
+</codep>
+
+<br>
+
+<p>A program a következő kimenetet eredményezi:</p>
+
+<codep>This lesson is interesting!
+'Boredom Mode' ON.
+This lesson is boring...</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+<br> 
+
+<p>Probléma van ezzel? Egyáltalán nem. </p>
+
+<p>Az egyetlen hátránya az, hogy az eredmény visszavonhatatlanul elveszett.</p>
+
+<p>Ne felejtsd el:</p>
+
+<ul>
+<li>mindig <strong>figyelmen kívül hagyhatjuk a függvény eredményét</strong>, és beérhetjük a függvény hatásával (ha a függvénynek van hatása);</li>
+
+<li>ha egy függvénynek eredményt kell visszaadnia, akkor alkalmaznunk kell a <codel>return</codel> utasítás második változatát.</li>
+</ul>
+
+<p>Várjunk csak, ez azt jelenti, hogy vannak haszontalan eredmények is? Igen, bizonyos értelemben.</p>
+
+
+<br>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

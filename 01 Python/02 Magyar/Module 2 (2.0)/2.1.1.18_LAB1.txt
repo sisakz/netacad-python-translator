@@ -1,0 +1,61 @@
+<problem chapter='2' section='1' slide='1' problem='18' title='LAB: A print() függvény'>
+
+<!--
+Update history:
+2020-07-17 Grzegorz (code format and page number change, length of lab change, hint and sample solution format)
+-->
+
+<code>
+print("Programming","Essentials","in")
+print("Python")
+
+</code>
+
+<span class="label" style="background-color:rgb(205, 168, 105);"><strong>LABORGYAKORLAT</strong></span>
+
+<br><br>
+
+<h2>Becsült idő</h2>
+<p>5-10 perc</p>
+
+<h2>Nehézségi szint</h2>
+<p>Nagyon könnyű</p>
+
+<h2>Célok</h2>
+<ul>
+<li>a <codel>print()</codel> függvény és formázási lehetőségeinek megismerése;</li>
+<li>tapasztalat gyűjtése a Python kódolásban.</li>
+</ul>
+
+<h2>Feladatleírás</h2>
+<p>Módosítsd a kód első sorát a szerkesztőben a <codel>sep</codel> és <codel>end</codel> kulcsszó-paraméter használatával, hogy megfeleljen a várt kimenetnek. Használd a szerkesztő két <codel>print()</codel> függvényét.</p>
+
+<p>A második <codel>print()</codel> meghívásban ne változtass semmit!</p>
+
+
+<h2>Várható kimenet</h2>
+
+<codep>Programming***Essentials***in...Python</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+<br>
+<br>
+
+<labMode>true</labMode>
+
+
+
+<hint>print("Programming","Essentials","in", sep="", end="")
+print("Python")
+
+</hint>
+
+
+
+
+<sampleSolution>print("Programming","Essentials","in", sep="***", end="...")
+print("Python")
+
+</sampleSolution>
+
+</problem>

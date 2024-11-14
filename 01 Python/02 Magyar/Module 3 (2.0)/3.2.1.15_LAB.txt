@@ -1,0 +1,205 @@
+﻿<problem chapter='3' section='2' slide='1' problem='15' title="LAB: Collatz-hipotézis">
+
+<!--
+Update history:
+2020-07-21 Grzegorz (reviewed, re-formatted)
+-->
+
+<span class="label" style="background-color:rgb(205, 168, 105);"><strong>LABORGYAKORLAT</strong></span>
+
+<br><br>
+
+<h2>Becsült idő</h2>
+<p>20 perc</p>
+
+<h2>Nehézségi szint</h2>
+<p>Közepes</p>
+
+
+<h2>Célok</h2>
+
+<p>Ismerkedjen meg a tanuló a következőkkel:</p>
+<ul>
+<li>a <codel>while</codel> ciklus használata;</li>
+<li>a szóban meghatározott ciklusok átalakítása tényleges Python-kóddá.</li>
+</ul>
+
+
+<h2>Feladatleírás</h2>
+
+<p>1937-ben egy Lothar Collatz nevű német matematikus egy érdekes hipotézist fogalmazott meg (a mai napig nem bizonyított), amely a következőképpen írható le:</p>
+
+<ol>
+<li>vegyünk egy tetszőleges nem negatív és nem nulla egész számot, és nevezzük el <codel>c0</codel>-nak;</li>
+<li>ha páros, akkor az új <codel>c0</codel> legyen <codel>c0 ÷ 2</codel>;</li>
+<li>egyébként, ha páratlan, akkor az új <codel>c0</codel> legyen <codel>3 × c0 + 1</codel>;</li>
+<li>ha <codel>c0 ≠ 1</codel>, ugorjunk a 2. pontra.</li>
+</ol>
+
+<p>A hipotézis szerint a <codel>c0</codel> a kezdeti értékétől függetlenül mindig 1 lesz.</p>
+
+<p>Természetesen rendkívül összetett feladat számítógép segítségével bármely természetes szám hipotézisének bizonyítása (akár mesterséges intelligenciát is igényelhet), de néhány egyedi szám ellenőrzésére a Pythont is használhatjuk. Talán még azt is megtalálod, amelyik megcáfolná a hipotézist.</p>
+
+<br>
+
+<p>Írj egy programot, amely beolvas egy természetes számot, és végrehajtja a fenti lépéseket mindaddig, amíg <codel>c0</codel> nem egyenlő 1-gyel. Azt is szeretnénk, ha megszámolnád a cél eléréséhez szükséges lépéseket. A kódodnak ki kell adnia <codel>c0</codel> összes közbenső értékét is.</p>
+
+<p>Tipp: A probléma legfontosabb része az, hogyan alakítsuk át Collatz ötletét <codel>while</codel> ciklussá – ez a siker kulcsa!</p>
+
+<p>Teszteld a kódot az általunk megadott adatokkal!</p>
+
+
+<h2>Tesztadatok</h2>
+
+<br>
+
+
+
+<p>Mintabemenet: <codel>15</codel></p>
+<p>Várható kimenet:</p>
+<codep>46
+23
+70
+35
+106
+53
+160
+80
+40
+20
+10
+5
+16
+8
+4
+2
+1
+steps = 17</codep>
+
+<hr>
+
+<p>Mintabemenet: <codel>16</codel></p>
+<p>Várható kimenet</p>
+<codep>8
+4
+2
+1
+steps = 4</codep>
+
+<hr>
+
+<p>Mintabemenet: <codel>1023</codel></p>
+<p>Várható kimenet:</p>
+<codep>3070
+1535
+4606
+2303
+6910
+3455
+10366
+5183
+15550
+7775
+23326
+11663
+34990
+17495
+52486
+26243
+78730
+39365
+118096
+59048
+29524
+14762
+7381
+22144
+11072
+5536
+2768
+1384
+692
+346
+173
+520
+260
+130
+65
+196
+98
+49
+148
+74
+37
+112
+56
+28
+14
+7
+22
+11
+34
+17
+52
+26
+13
+40
+20
+10
+5
+16
+8
+4
+2
+1
+steps = 62</codep>
+
+<br>
+
+<studyMode>false</studyMode>
+<labMode>true</labMode>
+
+<hint>
+
+c0 = int(input("Enter c0: "))
+
+if c0 > 1:
+	steps = 0
+	# The while loop goes here.
+		if c0 %2 != 0:
+			# Write your code here.
+		else:
+			cnew = c0 // 2
+		# 
+		# Write your code here.
+		# 
+	print("steps =",steps)
+else:
+	print("Bad c0 value")
+
+</hint>
+
+
+<sampleSolution>
+c0 = int(input("Enter c0: "))
+
+if c0 > 1:
+	steps = 0
+	while c0 != 1:
+		if c0 %2 != 0:
+			cnew = 3 * c0 + 1
+		else:
+			cnew = c0 // 2
+		print(c0)
+		c0 = cnew
+		steps += 1
+	print("steps =",steps)
+else:
+	print("Bad c0 value")
+	
+</sampleSolution>
+
+
+
+
+</problem>

@@ -1,0 +1,63 @@
+<problem chapter='2' section='1' slide='1' problem='4' title='Az első programod'>
+
+<!--
+Update history:
+2020-07-17 Grzegorz (format and page number change)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<h1>A <span style="font-family:courier new;">print()</span> függvény</h1>
+
+<p>Ebben a példában a <codel>print()</codel> függvény egyetlen argumentuma egy <strong>karakterlánc</strong>:</p>
+
+<codep>print(<mark style="background-color:#e6f2ff;">"Hello, World!"</mark>)
+
+</codep>
+<br>
+
+<p>Mint látható, a <strong>karakterláncot idézőjelek közé írtuk</strong> ‒ valójában az idézőjelek miatt lesz a kód ezen része karakterlánc - , az idézőjelek elkülönítik a kód egy részét, és más jelentéssel ruházzák fel azt.</p>
+
+<p>Azt is gondolhatod, hogy az idézőjelek valami ilyesmit mondanak: a köztünk lévő szöveg nem kód. Nem arra való, hogy végrehajtsuk, úgy kell venni, ahogy van.</p>
+
+<p>Szinte mindent, amit idézőjelek közé teszel, karakterek soraként kezelnek, tehát nem kódként, hanem  <strong>adatként</strong>. Próbálj meg játszani ezzel a bizonyos karakterlánccal, módosítsd, írj be új betűket, vagy törölj ki néhányat a meglévők közül!</p>
+
+
+</div>
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+
+<p>A Python kódon belül többféleképpen is megadhatunk egy karakterláncot, de egyelőre ez az egy is elég.</p>
+
+<br>
+
+<center><img src="/uploads/media/default/0001/01/e5d1166e2e712f8c01f520f65d73aa8dc57ae01a.png" width="50%" alt="The concept of the 'Hello, World!' string"></center>
+
+<br>
+<br>
+
+<p>Eddig a kód két fontos részét ismerted meg: a függvényt és a karakterláncot. Beszéltünk róluk a szintaxis (nyelvtan) szempontjából, de most itt az ideje, hogy a szemantika (jelentés) szempontjából is megvitassuk őket.</p>
+
+<br>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

@@ -1,0 +1,54 @@
+<problem chapter='2' section='3' slide='1' problem='3' title='Operators ‒ data manipulation tools'>
+
+<!--
+Update history:
+2020-07-17 Grzegorz (reformatted; code - syntax-color and blank lines added;)
+-->
+
+<h1>Arithmetic operators: multiplication</h1>
+
+
+<p>An <codel>*</codel> (asterisk) sign is a <strong>multiplication</strong> operator.</p>
+
+<p>Run the code below and check if our <i>integer vs. float</i> rule is still working.<p>
+
+<codep class="syntax-color">print(2 * 3)
+print(2 * 3.)
+print(2. * 3)
+print(2. * 3.)
+</codep>
+
+
+<br>
+
+<h1>Arithmetic operators: division</h1>
+
+
+<p>A <codel>/</codel> (slash) sign is a <strong>division</strong> operator.</p>
+
+<p>The value in front of the slash is a <strong>dividend</strong>, the value behind the slash, a <strong>divisor</strong>.<p>
+
+<p>Run the code below and analyze the results.</p>
+
+<codep class="syntax-color">print(6 / 3)
+print(6 / 3.)
+print(6. / 3)
+print(6. / 3.)
+</codep>
+
+<br>
+
+<p>You should see that there is an exception to the rule.</p>
+
+<p><strong>The result produced by the division operator is always a float</strong>, regardless of whether or not the result seems to be a float at first glance: <codel>1 / 2</codel>, or if it looks like a pure integer: <codel>2 / 1</codel>.</p>
+
+<p>Is this a problem? Yes, it is. It happens sometimes that you really need a division that provides an integer value, not a float.</p>
+
+<p>Fortunately, Python can help you with that.</p>
+
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

@@ -1,0 +1,70 @@
+<problem chapter='5' section='1' slide='1' problem='2' title='Szerezz PCEP tanúsítványt!'>
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h2>Mi az a PCEP tanúsítvány?</h2>
+
+
+<p>A <i>PCEP − Certified Entry-Level Python Programmer</i> tanúsítvány megmutatja, hogy ismered az olyan univerzális számítógép-programozási fogalmakat, mint az adattípusok, adatszerkezetek, függvények, elágazások és ciklusok, valamint a Python programozási nyelv szintaxisát, szemantikáját és a futási környezetét.</p>
+
+
+<img src="/uploads/media/default/0001/02/23021d04887ddd6b79d34f0cab969d758b17295a.png" width="40%" alt="PCEP badge" style="float:left; padding:20px;">
+
+A PCEP tanúsítvány megszerzése bizonyítja, hogy megismerkedtél a Python 3 által biztosított legalapvetőbb eszközökkel, amelyek lehetővé teszik, hogy középhaladó szinten kezdd meg tanulmányaidat, és folytasd szakmai fejlődésedet.
+<br><br>
+
+A PCEP-tanúsítvány segítségével bizonyíthatod, nemcsak naprakész vagy a Pythonhoz kapcsolódó témákban, hanem hozzáértően tudod kezelni is azokat.
+
+<br><br>
+Ezenkívül az OpenEDG Python Institute révén hozzáférhetsz a Python programozással foglalkozó szakemberek kiterjedt hálózatához, amely értékes erőforrás a Pythonnal kapcsolatos problémákhoz és az innovatív megoldások kidolgozásához.
+<br><br>
+
+Vesd meg a lábad a <i>PCEP − Certified Entry-Level Python Programmer</i> tanúsítvánnyal. Szerezz belépő szintű programozói állást, törj be a szakmába, és szerezz a szakmai előmeneteledhez szükséges képességeket, tudást és tapasztalatot.
+
+<br><br>
+
+<div style="clear: both;"></div>
+
+<br>
+
+</div>
+
+<div class="small-12 large-6 columns">
+
+<h2>Hogyan lehet megszerezni a PCEP tanúsítványt?</h2>
+
+
+<p>A <i>Python alapok 1</i> elvégzésével felkészültél a <a href="https://pythoninstitute.org/pcep-certification-entry-level/" target="_blank">PCEP - Certified Entry-Level Python Programmer</a> képesítés megszerzésére.</p>
+
+<p><b>Regisztráció</b></p>
+<p>Az OpenEDG Python Institute tesztjére jelentkezők a <a href="https://edube.org" target="_blank">https://edube.org</a> oldalon regisztrálhatnak, és ugyanitt tehetik le az on-line PCEP-vizsgát az <strong>OpenEDG Testing Service Platformon</strong>.</p>
+
+<p>Az OpenEDG Python Institute PCEP-vizsgára nem kell előre bejelentkezni, és a vizsgázó akár a jelentkezés napján már vizsgát is tehet (nem felügyelt vizsgák).</p>
+
+<p><b>Felhasználói fiók</b></p>
+
+<p>A vizsga letétele előtt a jelöltnek létre kell hoznia egy <b>felhasználói fiókot</b> a <a href="https://edube.org/registration" target="_blank">https://edube.org/registration</a> oldalon. A vizsgázónak meg kell adnia személyes adatait, címét, és be kell állítania egy jelszót, valamint el kell olvasnia és el kell fogadnia a szolgáltatási feltételeket. Ha a <i>Python alapok 1</i> tanfolyamot közvetlenül az <b>Edube Interactive</b>-on keresztül végezted, akkor már rendelkezel vizsgázói fiókkal, és semmi mást nem kell tenned.</p>
+
+<p>Kérjük, vedd figyelembe, hogy miután a fiókodat létrehoztad, többé nem lesz lehetőséged a profilhoz kapcsolódó egyes adatok (pl. név, e-mail cím és születési dátum) szerkesztésére, ezért kérünk, győződj meg arról, hogy a regisztrációs űrlapon megadott adatok helyesek.</p>
+
+
+
+
+<br>
+<br>
+
+</div>
+</div>
+</div>
+
+
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

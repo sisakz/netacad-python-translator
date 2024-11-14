@@ -1,0 +1,83 @@
+<problem chapter='3' section='2' slide='1' problem='5' title='Ciklusok | for'>
+
+<!--
+Update history:
+2020-07-20 Grzegorz (reviewed, re-formatted)
+-->
+
+<code>for i in range(2, 8, 3):
+    print("The value of i is currently", i)
+
+</code>
+
+<h1>Bővebben a <font face="Courier New">for</font> ciklusról és a <font face="Courier New">range()</font> függvényről három argumentummal</h1>
+
+<p>A <codel>range()</codel> függvény <strong>három argumentumot</strong> is elfogadhat. Nézd meg a kódot a szerkesztőben!</p>
+
+<p>A harmadik argumentum egy <strong>növekmény</strong>, amellyel minden iterációnál megnöveljük a ciklusváltozó értékét. (Ahogy azt már sejtheted, <strong>a növekmény alapértelmezett értéke 1</strong>)</p>
+
+<p>Meg tudnád mondani, hogy hány sor jelenik meg a konzolon, és milyen értékeket tartalmaznak?</p>
+
+<p>Futtasd le a programot, és ellenőrizd, hogy igazad volt-e!</p>
+
+<br>
+
+<p>A konzolablakban a következő sorokat kell látnod:</p>
+
+<codep>The value of i is currently 2
+The value of i is currently 5</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+<br>
+
+<p>Tudod miért? A <codel>range()</codel> függvénynek átadott első argumentum megmondja, hogy mi a sorozat <strong>kezdőszáma</strong>. (Ezért szerepel a kimenetben a <codel>2</codel>. A második argumentum megmondja a függvénynek, hogy hol <strong>állítsa le</strong> a sorozatot (a függvény a második argumentum által megadott számig generál számokat, de nem tartalmazza azt). Végül a harmadik argumentum a <strong>lépésközt</strong> adja meg, ami valójában a függvény által generált számsorozat egyes számai közötti különbséget jelenti.</p>
+
+<p><codel>2</codel> (kezdőszám) &rarr; <codel>5</codel> (a <codel>2</codel> 3-mal megnövelve <codel>5</codel>-öt eredményez – a szám a 2 és 8 közötti tartományban van) &rarr; <codel>8</codel> (az <codel>5</codel> 3-mal megnövelve <codel>8</codel>-at eredményez – a szám nem a 2 és 8 közötti tartományban van, mert a megállító paraméter nem szerepel a függvény által generált számsorozatban.)</p>
+
+<hr>
+
+<p>Megjegyzés: Ha a <codel>range()</codel> függvény által generált halmaz üres, a ciklus egyáltalán nem hajtja végre a törzsét.</p>
+
+<p>Csakúgy, mint itt, nem lesz kimenet:</p>
+
+<codep class="syntax-color">for i in range(1, 1):
+    print("The value of i is currently", i)
+</codep>
+
+<br>
+
+<hr>
+
+<p>Megjegyzés: A <codel>range()</codel> által generált számsor <strong>növekvő sorrendű</strong> lesz. Nincs mód arra, hogy a <codel>range()</codel> függvényt arra kényszerítsük, hogy más formában hozzon létre egy számsort, ha a <codel>range()</codel> függvény pontosan két argumentumot fogad el. Ez azt jelenti, hogy a <codel>range()</codel> második argumentumának nagyobbnak kell lennie, mint az elsőnek.</p>
+
+<p>Így itt sem lesz kimenet:</p>
+
+<codep class="syntax-color">for i in range(2, 1):
+    print("The value of i is currently", i)
+</codep>
+
+<br>
+
+<hr>
+
+<p>Nézzünk meg egy rövid programot, amelynek az a feladata, hogy kiírjon néhányat a kettő első hatványai közül:</p>
+
+<codep class="syntax-color copy">power = 1
+for expo in range(16):
+    print("2 to the power of", expo, "is", power)
+    power *= 2
+</codep>
+
+<br>
+
+<p>Az <codel>expo</codel> változót ciklusváltozóként használjuk, és a <i>kitevő</i> aktuális értékét jelzi. Magát a hatványozást kettővel való szorzással helyettesítjük. Mivel 2<sup>0</sup> egyenlő 1, így 2 &times; 1 egyenlő 2<sup>1</sup>, 2 &times; 2<sup>1</sup> egyenlő 2<sup>2</sup>, és így tovább. Mi a legnagyobb olyan kitevő, amelynél a programunk még kiírja az eredményt?</p>
+
+</p>Futtasd le a kódot, és ellenőrizd, hogy a kimenet megfelel-e az elvárásaidnak!</p>
+
+<br>
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

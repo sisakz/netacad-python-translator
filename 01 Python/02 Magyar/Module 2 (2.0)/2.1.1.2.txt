@@ -1,0 +1,67 @@
+<problem chapter='2' section='1' slide='1' problem='2' title='Az első programod'>
+
+<!--
+Update history:
+2020-07-17 Grzegorz (format and page number change)
+2020-08-26 Grzegorz (second bullet point, amendment)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<h1>A <span style="font-family:courier new;">print()</span> függvény</h1>
+
+<p>Tekintsük az alábbi kódsort:</p>
+
+<codep><mark style="background-color:#e6f2ff;">print</mark>("Hello, World!")
+
+</codep>
+<br>
+
+<p>Az itt látható </i><strong>print</strong></i> szó egy <strong>függvénynév</strong>. Ez nem jelenti azt, hogy bárhol is jelenik meg ez a szó, az mindig függvényt jelöl. Egy szó jelentése attól a környezettől függ, amelyben a szót használod.</p>
+
+<p>Valószínűleg már sokszor találkoztál a függvény kifejezéssel a matematika órákon. Minden bizonnyal több matematikai függvény nevét is fel tudod sorolni, függvény például a szinusz vagy a logaritmus.</p>
+
+<p>A Python függvények azonban rugalmasabbak, és többfélék lehetnek, mint matematikai testvéreik.</p>
+
+<p>A függvény (ebben az összefüggésben) a számítógépes kód egy különálló része, amely:</p>
+
+<ul>
+<li><strong>valamilyen hatást vált ki</strong> (pl. szöveget küld a terminálra, létrehoz egy fájlt, rajzol egy képet, lejátszik egy hangot stb.). Ez teljesen ismeretlen a matematika világában;</li>
+<li><strong>kiértékel egy kifejezést</strong> (pl. egy érték négyzetgyökét vagy egy adott szöveg hosszát), és <b>azt adja vissza a függvény eredményeként</b>. Az ilyen Python függvények megfelelnek a matematikai rokonaiknak.</li>
+</ul>
+
+<p>Sőt, a Python függvények közül sokan egy időben is képesek a fenti két dologra.</p>
+
+</div>
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+<p>Honnan származnak a függvények?</p>
+
+<ul>
+<li>Egyrészt <strong>érkezhetnek a Pythonnal együtt</strong>, mint például a print függvény. Az ilyen függvény a Python fejlesztő környezetével együtt kapott (<strong>beépített</strong>) függvény, nem kell semmi különöset tenned (pl. bárkitől bármit kérned), ha használni akarod.</li>
+<li>Származhatnak a Python egy vagy több <strong>modulnak</strong> nevezett kiegészítőjével. Egyes modulok a Pythonnal együtt érkeznek, mások külön telepítést igényelnek. Bármi is legyen a helyzet, ilyenkor a modult össze kell kapcsolni a kódoddal (hamarosan megmutatjuk, ezt hogyan lehet megtenni).</li>
+<li>A függvényeket <strong>megírhatod saját magad</strong>. Annyi függvényt helyezhetsz el a programodon belül, amennyit csak akarsz, illetve amennyire szükséged van, hogy egyszerűbbé, világosabbá és elegánsabbá tedd a kódodat.</li>
+</ul>
+
+<p>A függvény nevét <strong>kifejezőnek</strong> célszerű választani (a print függvény neve is magától értetődő).</p>
+
+<p>Természetesen, ha egy már létező függvényt használsz, akkor nincs befolyásod a nevére, de ha saját függvényeket kezdesz írni, akkor érdemes alaposan megfontolnod a névválasztást.</p>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

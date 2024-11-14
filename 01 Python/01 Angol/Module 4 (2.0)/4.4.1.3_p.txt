@@ -1,0 +1,67 @@
+<problem chapter='4' section='4' slide='1' problem='3' title='Scopes in Python ‒ global'>
+
+<!--
+Update history:
+2020-08-18 Grzegorz (reviewed, re-formatted)
+-->
+
+<code>
+def my_function():
+    global var
+    var = 2
+    print("Do I know that variable?", var)
+
+
+var = 1
+my_function()
+print(var)
+
+</code>
+
+
+
+<h1>Functions and scopes: the <font face="courier new">global</font> keyword</h1>
+
+<p>Hopefully, you should now have arrived at the following question: does this mean that a function is not able to modify a variable defined outside it? This would create a lot of discomfort.</p>
+
+<p>Fortunately, the answer is <i>no</i>.</p>
+
+<p>There's a special Python method which can <strong>extend a variable's scope in a way which includes the function's body</strong> (even if you want not only to read the values, but also to modify them).</p>
+
+<p>Such an effect is caused by a keyword named <codel>global</codel>:</p>
+
+<codep class="syntax-color">global name
+global name1, name2, ...
+</codep>
+
+
+<br>
+
+
+<p>Using this keyword inside a function with the name (or names separated with commas) of a variable (or variables), forces Python to refrain from creating a new variable inside the function ‒ the one accessible from outside will be used instead.</p>
+
+<p>In other words, this name becomes global (it has <strong>global scope</strong>, and it doesn't matter whether it's the subject of read or assign).</p>
+
+<br>
+
+<p>Look at the code in the editor.</p>
+
+<p>We've added <codel>global</codel> to the function.</p>
+
+<p>The code now outputs:</p>
+
+<codep>Do I know that variable? 2
+2</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+<br>
+
+<p>This should be sufficient evidence to show that the <codel>global</codel> keyword does what it promises.</p>
+
+<br>
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

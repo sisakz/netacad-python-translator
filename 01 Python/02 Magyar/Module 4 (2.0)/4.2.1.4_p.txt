@@ -1,0 +1,73 @@
+<problem chapter='4' section='2' slide='1' problem='4' title='Hogyan kommunikálnak a függvények a környezetükkel?'>
+
+<!--
+Update history:
+2020-08-13 Grzegorz (reviewed, re-formatted)
+-->
+
+<code>
+</code>
+
+
+
+<h1>Pozicionális paraméterátadás</h1>
+
+<p>Azt a technikát, amely az i-edik (első, második stb.) argumentumot az i-edik (első, második stb.) függvényparaméterhez rendeli <strong>pozicionális paraméterátadásnak</strong>, míg az így átadott argumentumokat <strong>pozicionális argumentumoknak</strong> nevezzük.</p>
+
+<p>Korábban már használtad ugyan, de a Python sokkal többet kínál. Ezt fogjuk most bemutatni.</p>
+
+<codep class="syntax-color">def my_function(a, b, c):
+    print(a, b, c)
+
+my_function(1, 2, 3)
+</codep>
+
+<br>
+
+<p>Megjegyzés: a pozicionális paraméterátadást az emberek intuitív módon használják számos társadalmi helyzetben. Például általánosan elfogadott lehet, hogy amikor bemutatkozunk, a vezetéknevünk után a keresztnevünket mondjuk, például: "A nevem Kiss János".</p>
+
+<p>A világ nagy részén egyébként ezt pontosan fordítva teszik.</p>
+
+<hr>
+
+<p>Kódoljuk le ezt a társadalmi szokást - az angol vááltozatot - a Pythonban. A következő függvény lesz felelős valaki bemutatásáért:</p>
+
+<codep class="syntax-color">def introduction(first_name, last_name):
+    print("Hello, my name is", first_name, last_name)
+
+introduction("Luke", "Skywalker")
+introduction("Jesse", "Quick")
+introduction("Clark", "Kent")
+</codep>
+
+<br>
+
+<p>Ki tudod találni a kimenetet? Futtasd le a kódot, és nézd meg, hogy igazad volt-e!</p>
+
+
+<br>
+
+Most képzeld el, hogy ugyanezt a függvényt használják Magyarországon. Ebben az esetben a kód így nézne ki:</p>
+
+<codep class="syntax-color copy">def introduction(first_name, last_name):
+    print("Hello, my name is", first_name, last_name)
+
+introduction("Skywalker", "Luke")
+introduction("Quick", "Jesse")
+introduction("Kent", "Clark")
+</codep>
+
+<br>
+
+<p>A kimenet várhatóan másképp fog kinézni. Ki tudod találni?</p>
+<p>Futtasd le a kódot! Igazad volt? Meglepődtél?</p>
+
+
+<p>Lehetne a függvényt kultúra függetlenné tenni?</p>
+
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

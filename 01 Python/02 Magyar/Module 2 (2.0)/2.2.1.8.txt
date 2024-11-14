@@ -1,0 +1,79 @@
+<problem chapter='2' section='2' slide='1' problem='8' title='Literálok'>
+
+<!--
+Update history:
+2020-07-17 Grzegorz (code format change - syntax-color)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<h1>Karakterláncok</h1>
+
+
+<p>A karakterláncokat akkor használjuk, ha szöveget kell feldolgozni (például mindenféle nevet, címeket, regényeket stb.), nem pedig számokat.</p>
+
+<p>Egy kicsit már beszéltünk róluk, például, hogy <strong>a karakterláncoknak ugyanúgy szükségük van idézőjelekre</strong>, mint a lebegőpontos számoknak pontokra.</p>
+
+<p>Ez egy nagyon tipikus karakterlánc: <codel>"I am a string."</codel></p>
+
+<br>
+
+
+<p>Van azonban egy bökkenő. Mégpedig az, hogy hogyan kódoljunk idézőjelet egy olyan karakterlánc belsejében, amelyet már idézőjelek határolnak.</p>
+
+<p>Tegyük fel, hogy egy nagyon egyszerű üzenetet szeretnénk kiírni:</p>
+
+<codep>I like "Monty Python"</codep>
+
+<br>
+
+<p>Hogyan csináljuk ezt anélkül, hogy hibát kapnánk? Két lehetséges megoldás létezik.</p>
+
+
+
+
+<br>
+
+</div>
+
+
+<div class="small-12 large-6 columns">
+
+<p>Az első a már ismert <strong>escape karakter</strong> használatán alapul, amelyet, mint emlékezhetsz, a <strong>backslash</strong> karakter képvisel. A backslash az idézőjelek értelmezését is megváltoztatja. A backslash által megelőzött idézőjel megváltoztatja a jelentését: ez nem egy elválasztójel, hanem csak egy idézőjel karakter. Így már működni fog:</p>
+
+<codep class="syntax-color">print("I like \"Monty Python\"")
+</codep>
+
+<br>
+
+<p>Megjegyzés: két módosított értelmezésű idézőjel van a karakterláncban - mindkettőt megtaláltad?</p>
+
+
+<p>A második megoldás kissé meglepő lehet. A Python <strong>idézőjel helyett aposztrófot</strong> is használhat. Bármelyik karakterrel el lehet határolni a karakterláncokat, de <strong>következetesnek</strong> kell lenni.</p>
+
+<p>Ha egy karakterláncot idézőjellel nyitsz, akkor azt idézőjellel kell zárnod.</p>
+
+<p>Ha egy karakterláncot aposztróffal kezdesz, akkor aposztróffal kell befejezned.</p>
+
+<p>Ez a példa is működik:</p>
+
+
+<codep class="syntax-color">print('I like "Monty Python"')
+</codep>
+ 
+<br>
+
+<p>Megjegyzés: itt nem kell semmilyen escape karaktert használni.</p>
+
+</div>
+
+</div>
+</div>
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

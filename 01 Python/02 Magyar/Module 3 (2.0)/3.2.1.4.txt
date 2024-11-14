@@ -1,0 +1,136 @@
+<problem chapter='3' section='2' slide='1' problem='4' title='Ciklusok | for'>
+
+<!--
+Update history:
+2020-07-20 Grzegorz (reviewed, re-formatted)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<h1>Ciklus kódolása <font face="Courier New">for</font> ciklussal</h1>
+
+<p>A Pythonban elérhető másik fajta ciklus abból a megfigyelésből ered, hogy néha fontosabb a <strong>ciklus "fordulatait" számolni</strong>, mint a feltételeket ellenőrizni.</p>
+
+<p>Képzeljük el, hogy egy ciklus törzsét pontosan százszor kell végrehajtani. Ha ezt a <codel>while</codel> ciklus segítségével szeretnénk elvégezni, akkor ez így nézhet ki:</p>
+
+<codep class="syntax-color">i = 0
+while i < 100:
+    # do_something()
+    i += 1
+</codep>
+
+<br>
+
+<p>Jó lenne, ha valaki elvégezné helyetted ezt az unalmas számolást. Lehetséges ez?</p>
+
+<p>Persze, hogy az! Van egy speciális ciklus az ilyen jellegű feladatokra, és ez a <codel>for</codel> ciklus.</p>
+
+<p>Valójában a <codel>for</codel> ciklust bonyolultabb feladatok elvégzésére tervezték, <strong>nagy adatgyűjteményeket képes elemenként "átböngészni"</strong>. Hamarosan megmutatjuk, hogyan kell ezt megtenni, de most az alkalmazásának egy egyszerűbb változatát mutatjuk be.</p>
+
+<hr>
+
+<p>Nézd meg a kódrészletet:</p>
+
+<codep><mark style="background-color:#e6f2ff;">for</mark> i in range(100):
+    # do_something()
+    pass
+
+</codep>
+
+<br>
+
+<p>Van néhány új elem. Hadd meséljünk róluk:</p>
+
+<ul>
+
+<li>a <i>for</i> kulcsszó megnyitja a <codel>for</codel> ciklust. Figyelj, nincs feltétel utána! Nem kell a feltételeken gondolkodnod, mivel azok belsőleg, mindenféle beavatkozás nélkül ellenőrzésre kerülnek;</li>
+
+<li>a <i>for</i> kulcsszó utáni bármelyik változó az ún. <strong>ciklusváltozó</strong>, ez számolja (méghozzá automatikusan) a ciklus fordulatait;</li>
+
+<li>az <i>in</i> kulcsszó egy olyan szintaxiselem, amely a ciklusváltozóhoz rendelt lehetséges értékek tartományát írja le;</li>
+
+<li>a <codel>range()</codel> függvény (ez egy nagyon speciális függvény) felelős a ciklusváltozó összes kívánt értékének létrehozásáért. Példánkban a függvény a soron következő értékeket ebből a halmazból fogja létrehozni (mondhatjuk azt is, hogy <strong>táplálja</strong> a ciklust): 0, 1, 2 .. 97, 98, 99. Megjegyzés: ebben az esetben a <codel>range()</codel> függvény 0-tól kezdi meg a működését, és egy lépéssel (egy egész számmal) az argumentumának értéke előtt fejezi be;</li>
+
+<li>figyeljük meg a <i>pass</i> kulcsszót a ciklus törzsén belül. Egyáltalán nem csinál semmit, ez egy <strong>üres utasítás</strong>. Azért tettük ide, mert a <codel>for</codel> ciklus szintaxisa megköveteli, hogy legalább egy utasítás legyen a törzsben (mellesleg az <codel>if</codel>, <codel>elif</codel>, <codel>else</codel> és <codel>while</codel> ugyanazt fejezi ki).</li>
+
+</ul>
+
+<p>A következő példáink kicsit szerényebbek lesznek az ismétlések számát illetően.</p>
+
+
+<br>
+
+
+</div>
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+<p>Nézd meg az alábbi részletet! Meg tudod jósolni a kimenetét?</p>
+
+<codep class="copy syntax-color">for i in range(10):
+    print("The value of i is currently", i)
+</codep>
+
+<br>
+
+<p>Futtasd le a kódot, és ellenőrizd, hogy igazad volt-e!</p>
+
+
+<p>Megjegyzés:</p>
+
+<ul>
+
+<li>a ciklus tízszer futott le (ez a <codel>range()</codel> függvény argumentuma);</li>
+
+<li>a ciklusváltozó utolsó értéke <codel>9</codel> (nem <codel>10</codel>, mivel <strong><codel>0</codel>-ról indul</strong>, nem pedig <codel>1</codel>-ről).</li>
+
+</ul>
+
+<hr>
+
+<p>A <codel>range()</codel> függvényhívás nem csak egy, hanem két argumentummal is rendelkezhet:</p>
+
+<codep>for i in range(<mark style="background-color:#e6f2ff;">2, 8</mark>):
+    print("The value of i is currently", i)
+
+</codep>
+
+<br>
+
+<p>Ebben az esetben az első argumentum határozza meg a ciklusváltozó kezdeti (első) értékét.<p>
+
+<p>Az utolsó argumentum az első olyan értéket mutatja, amelyet a ciklusváltozó nem vesz fel.</p>
+
+<p>Megjegyzés: a <codel>range()</codel> függvény <strong>csak egész számokat fogad el argumentumként</strong>, és egész számok sorozatát generálja.</p>
+
+<p>Kitalálod a program kimenetét? Futtasd le, és ellenőrizd, hogy most is igazad volt-e!</p>
+
+<p>Az első megjelenített érték a <codel>2</codel> (a <codel>range()</codel> első argumentumából származik).</p>
+
+<p>Az utolsó pedig a <codel>7</codel> (bár a <codel>range()</codel> második argumentuma <codel>8</codel>).</p>
+
+
+
+
+<br>
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

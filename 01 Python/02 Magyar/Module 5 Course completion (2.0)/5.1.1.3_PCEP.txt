@@ -1,0 +1,68 @@
+<problem chapter='5' section='1' slide='1' problem='3' title='Szerezz PCEP tanúsítványt!'>
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h2>Hogyan kell PCEP vizsgát tenni?</h2>
+
+
+<p>A vizsga letételéhez <b>vizsga voucherre</b> (vizsgautalványra) van szükséged, amit a OpenEDG Voucher Store-ban vásárolhatsz. Az utalványt hozzá kell rendelned a vizsga fiókodhoz.</p>
+
+<p><b>Vizsga voucher vásárlása</b></p>
+
+<p>A vizsga voucher megvásárlásához lépj be az <a href="https://ums.edube.org/store" target="_blank">OpenEDG Voucher Store-ba</a>, tegyél egy PCEP-utalványt a kosaradba, és add le a megrendelést.</p>
+
+<p>A folyamat során meg kell adnod a számlázási információkat (a vevő adatait és az e-mail címet, ahová a számlát küldeni kell), a szállítási adatokat (e-mail címet, ahová az utalványt küldeni kell), valamint el kell olvasnod és el kell fogadnod az utalványra vonatkozó szabályzatot.</p>
+
+<p>A megrendelési folyamat utolsó szakaszában a fizetésre (PayPal/hitelkártya vagy átutalás a kiállított Pro Forma számla alapján) kerül sor.</p>
+
+<p>A vizsga díját minden jelentősebb hitelkártyával (pl. Visa, MasterCard, American Express), bankkártyával vagy PayPal-fiókon keresztül fizetheted.</p>
+
+
+
+
+
+
+<br>
+
+</div>
+
+<div class="small-12 large-6 columns">
+
+<p><b>Voucher hozzárendelése a vizsgafiókhoz</b></p>
+
+<p>Azok a vizsgázók, akik már rendelkeznek vizsgautalvánnyal, a vizsga előtt hozzárendelhetik azt a felhasználói fiókjukhoz. A hozzárendelt vizsgautalványok megjelennek a vizsgázó fiókjában, és felhasználhatók az OpenEDG Testing Service-en keresztül történő vizsgák indításához.</p>
+
+<p>Az utalványt a megrendelés leadása során is hozzárendelheted a fiókodhoz. Az utalványt összekapcsoljuk a vizsgafiókkal, amint megkapjuk a fizetést.</p>
+
+<p><b>A vizsga letétele</b></p>
+
+<p>Miután bejelentkeztél a <a href="https://edube.org/login" target="_blank">https://edube.org/login</a> oldalon, az alábbi módokon indíthatod el a vizsgát:</p>
+<ul>
+<li>a Take Exam (Vizsga letétele) gombra kattintva (ha van vizsga vouchered, és azonnal el szeretnéd kezdeni a vizsgát), vagy</li>
+<li>az OpenEDG felhasználói fiókjához rendelt utalvány mellett a Lunch Exam (Vizsga indítása) gombra kattintva (ha az utalványt már hozzárendelted a fiókodhoz).</li>
+</ul>
+
+<p>A technikai követelményekről, a becsületkódexről és a vizsgaszabályzatról további információkat a <a href="https://pythoninstitute.org/pcep-testing-policies/" target="_blank">https://pythoninstitute.org/pcep-testing-policies/</a> oldalon találsz.</p>
+
+
+
+
+
+<br>
+<br>
+
+</div>
+</div>
+</div>
+
+
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

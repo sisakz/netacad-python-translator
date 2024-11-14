@@ -1,0 +1,352 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+PE1 - Module 2 Quiz
+
+Update history:
+2020-07-17 Grzegorz (review, reformatting, checking PEP-8 compliance)
+2020-08-19 Grzegorz (reformatting, checking PEP-8 compliance, PE1_Q2_ITEM_9 becomes multiple-choice)
+-->
+
+<questionPool>
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE1_Q2_ITEM_1">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p>The <strong>escape character</strong> owes its name to the fact that it:</p>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>changes the meaning of the character next to it</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>cannot be caught due to its high speed</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>escapes from source files into the computer memory</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE1_Q2_ITEM_2"> 
+
+<instructions>
+<![CDATA[
+
+<p>The meaning of the <strong>positional parameter</strong> is determined by its:</p>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>position</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>appearance</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>name</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE1_Q2_ITEM_3">  
+
+<instructions>
+<![CDATA[
+
+<p>The most important difference between integer and floating-point numbers lies in the fact that:</p>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>they are stored differently in the computer memory</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>they cannot be used simultaneously</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>integers cannot be literals, while floats can</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE1_Q2_ITEM_4">  
+
+<instructions>
+<![CDATA[
+
+<p>The <codel>0x</codel> prefix means that the number after it is denoted as:</p>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>a hexadecimal</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>an octal</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>a decimal</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE1_Q2_ITEM_5">  
+
+<instructions>
+<![CDATA[
+
+<p>The <codel>//</codel> operator:</p>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>performs integer division</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>performs regular division</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>does not exist</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE1_Q2_ITEM_6">  
+
+<instructions>
+<![CDATA[
+
+<p>The result of the following addition:</p>
+<codel>123 + 0.0</codel>
+<br>
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>is equal to <codel>123.0</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>is equal to <codel>123</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>cannot be evaluated</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE1_Q2_ITEM_7">  
+
+<instructions>
+<![CDATA[
+
+<p>Only one of the following statements is <u>true</u> - which one?</p>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>multiplication precedes addition</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>addition precedes multiplication</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>neither statement can be evaluated</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE1_Q2_ITEM_8">  
+
+<instructions>
+<![CDATA[
+
+<p>Right-sided binding means that the following expression:</p>
+<codel>1 ** 2 ** 3</codel>
+<br>
+<br>
+<p>will be evaluated:</p>
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>from right to left</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>from left to right</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>in random order</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="2" scoringType="1" points="1" customId="PE1_Q2_ITEM_9">  <!-- Multiple-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p>A <strong>keyword</strong> is a word that:  (Select <u>two</u> answers)</p>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>cannot be used as a variable name</p> ]]>
+</option>
+
+<option isCorrect="true">
+<![CDATA[ <p>cannot be used as a function name</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>is the most important word in the whole program</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE1_Q2_ITEM_10">  
+
+<instructions>
+<![CDATA[
+
+<p>A value returned by the <codel>input()</codel> function is:</p>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>a string</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>an integer</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>a float</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+<!-- ######################################################################################################################## -->
+
+</questionPool>

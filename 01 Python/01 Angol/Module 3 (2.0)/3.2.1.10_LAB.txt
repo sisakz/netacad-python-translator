@@ -1,0 +1,133 @@
+<problem chapter='3' section='2' slide='1' problem='10' title='LAB: The continue statement – the Ugly Vowel Eater'>
+
+<!--
+Update history:
+2020-07-20 Grzegorz (reviewed, re-formatted)
+-->
+
+<code>
+# Prompt the user to enter a word
+# and assign it to the user_word variable.
+
+for letter in user_word:
+    # Complete the body of the for loop.
+
+</code>
+
+<span class="label" style="background-color:rgb(205, 168, 105);"><strong>LAB</strong></span>
+
+<br><br>
+
+<h2>Estimated time</h2>
+<p>10-20 minutes</p>
+
+<h2>Level of difficulty</h2>
+<p>Easy</p>
+
+
+<h2>Objectives</h2>
+
+<p>Familiarize the student with:</p>
+
+<ul>
+<li>using the <codel>continue</codel> statement in loops;</li>
+<li>reflecting real-life situations in computer code.</li>
+</ul>
+
+
+<h2>Scenario</h2>
+
+<p>The <codel>continue</codel> statement is used to skip the current block and move ahead to the next iteration, without executing the statements inside the loop.</p>
+
+<p>It can be used with both the <font face="courier new">while</font> and <font face="courier new">for</font> loops.</p>
+
+<p>Your task here is very special: you must design a vowel eater! Write a program that uses:</p>
+
+<ul>
+<li>a <codel>for</codel> loop;</li>
+<li>the concept of conditional execution (<i>if-elif-else</i>)</li>
+<li>the <codel>continue</codel> statement.</li>
+</ul>
+
+<p>Your program must:</p>
+
+<ul>
+<li>ask the user to enter a word;</li>
+<li>use <codel><mark style="background-color:#e6f2ff;">user_word = user_word.upper()</mark></codel> to convert the word entered by the user to upper case; we'll talk about <strong>string methods</strong> and the <codel>upper()</codel> method very soon – don't worry;</li>
+<li>use conditional execution and the <codel>continue</codel> statement to "eat" the following vowels <i>A</i>, <i>E</i>, <i>I</i>, <i>O</i>, <i>U</i> from the inputted word;</li>
+<li>print the uneaten letters to the screen, each one of them on a separate line.</li>
+</ul>
+
+<p>Test your program with the data we've provided for you.</p>
+
+<br>
+
+<h2>Test data</h2>
+
+<p>Sample input: <codel>Gregory</codel></p>
+<p>Expected output: </p>
+<codep>G
+R
+G
+R
+Y</codep>
+
+<hr>
+
+<p>Sample input: <codel>abstemious</codel></p>
+<p>Expected output: </p>
+<codep>B
+S
+T
+M
+S</codep>
+
+<hr>
+
+<p>Sample input: <codel>IOUEA</codel></p>
+<p>Expected output: </p>
+<codep> </codep>
+
+<br>
+
+
+<studyMode>false</studyMode>
+<labMode>true</labMode>
+
+
+<hint>
+user_word = input("Enter your word: ")
+user_word = user_word.upper()
+
+for letter in user_word:
+    # if-elif-else block, nest continue statements
+    # ...
+    # ...
+    # ...
+    else:
+        print(letter)
+
+</hint>
+
+
+<sampleSolution>
+user_word = input("Enter your word: ")
+user_word = user_word.upper()
+
+for letter in user_word:
+    if letter == "A":
+        continue
+    elif letter == "E":
+        continue
+    elif letter == "I":
+        continue
+    elif letter == "O":
+        continue
+    elif letter == "U":
+        continue
+    else:
+        print(letter)
+
+</sampleSolution>
+
+</problem>

@@ -1,0 +1,105 @@
+<problem chapter='4' section='6' slide='1' problem='5' title='Tuples and dictionaries'>
+
+<!--
+Update history:
+2020-08-18 Grzegorz (reviewed, re-formatted, PEP-8 compliance check)
+-->
+
+<code>
+dictionary = {"cat": "chat", "dog": "chien", "horse": "cheval"}
+phone_numbers = {'boss' : 5551234567, 'Suzy' : 22657854310}
+empty_dictionary = {}
+
+# Print the values here.
+
+</code>
+
+
+
+<h1>How to use a dictionary?</h1>
+
+
+<p>If you want to get any of the values, you have to deliver a valid key value:</p>
+
+<codep class="syntax-color">print(dictionary['cat'])
+print(phone_numbers['Suzy'])
+</codep>
+<br>
+
+<p>Getting a dictionary's value resembles indexing, especially thanks to the brackets surrounding the key's value.</p>
+
+<p>Note:</p>
+
+<ul>
+<li>if the key is a string, you have to specify it as a string;</li>
+<li><strong>keys are case-sensitive</strong>: <codel>'Suzy'</codel> is something different from <codel>'suzy'</codel>.</li>
+</ul>
+
+<p>The snippet outputs two lines of text:</p>
+
+<codep>chat
+5557654321</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+<br>
+
+<p>And now the most important news: you <strong>mustn't use a non-existent key</strong>. Trying something like this:</p>
+
+<codep class="syntax-color">print(phone_numbers['president'])
+</codep>
+<br>
+
+<p>will cause a runtime error. Try to do it.</p>
+
+
+<br>
+<p>Fortunately, there's a simple way to avoid such a situation. The <codel>in</codel> operator, together with its companion, <codel>not in</codel>, can salvage this situation.</p>
+
+<p>The following code safely searches for some French words:</p>
+
+<codep class="syntax-color copy">dictionary = {"cat": "chat", "dog": "chien", "horse": "cheval"}
+words = ['cat', 'lion', 'horse']
+
+for word in words:
+    if word in dictionary:
+        print(word, "->", dictionary[word])
+    else:
+        print(word, "is not in dictionary")
+</codep>
+
+<br>
+
+<p>The code's output looks as follows:</p>
+
+<codep>cat -> chat
+lion is not in dictionary
+horse -> cheval</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+
+<p><span class="label" style="background-color:orange;">NOTE</span></p>
+
+<p>When you write a big or lengthy expression, it may be a good idea to keep it vertically aligned. This is how you can make your code more readable and more programmer-friendly, e.g.:</p>
+
+<codep class="syntax-color copy"># Example 1:
+dictionary = {
+              "cat": "chat",
+              "dog": "chien",
+              "horse": "cheval"
+              }
+
+# Example 2:
+phone_numbers = {'boss': 5551234567,
+                 'Suzy': 22657854310
+				 }
+</codep>
+<br>
+
+<p>This kind of formatting is called a <strong>hanging indent</strong>.</p>
+
+<br>
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

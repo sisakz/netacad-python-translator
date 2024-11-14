@@ -1,0 +1,120 @@
+<problem chapter='2' section='4' slide='1' problem='5' title='Variables ‒ data-shaped boxes'>
+
+<!--
+Update history:
+2020-07-17 Grzegorz (re-formatted; code - syntax-color, blank line added)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<h1>Assigning a new value to an already existing variable</h1>
+
+
+<p>How do you assign a new value to a variable that already exists? In the same way. You just need to use the equal sign.<p>
+
+ 
+<p>The equal sign is in fact an <strong>assignment operator</strong>. Although this may sound strange, the operator has a simple syntax and unambiguous interpretation.</p>
+
+<p>It assigns the value of its right argument to the left, while the right argument may be an arbitrarily complex expression involving literals, operators and already defined variables.</p>
+
+<p>Look at the code below:</p>
+
+<codep class="syntax-color">var = 1
+print(var)
+var = var + 1
+print(var)
+</codep>
+
+
+<br>
+
+
+<p>The code sends two lines to the console:</p>
+
+<codep>1
+2
+</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+<br>
+
+<p>The first line of the snippet <strong>creates a new variable</strong> named <codel>var</codel> and assigns <codel>1</codel> to it.</p>
+
+<br>
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+
+
+
+<p>The statement reads: assign a value of <codel>1</codel> to a variable named <codel>var</codel>.</p>
+
+<p>We can say it shorter: assign <codel>1</codel> to <codel>var</codel>.</p>
+
+<p>Some prefer to read such a statement as: <codel>var</codel> becomes <codel>1</codel>.</p>
+
+ 
+<p>The third line <strong>assigns the same variable with the new value</strong> taken from the variable itself, summed with <codel>1</codel>. Seeing a record like that, a mathematician would probably protest ‒ no value may be equal to itself plus one. This is a contradiction. But Python treats the sign <codel>=</codel> not as <i>equal to</i>, but as <i>assign a value</i>.</p>
+
+ 
+<p>So how do you read such a record in the program?</p>
+
+<p>Take the current value of the variable <codel>var</codel>, add <codel>1</codel> to it and store the result in the variable <codel>var</codel>.</p>
+
+<p>In effect, the value of variable <codel>var</codel> has been <strong>incremented</strong> by one, which has nothing to do with comparing the variable with any value.</p>
+
+<br>
+
+<p>Do you know what the output of the following snippet will be?</p>
+
+<codep class="syntax-color">var = 100
+var = 200 + 300
+print(var)
+</codep>
+
+<br>
+
+<button class="button tiny" onclick="solution('sol')">Check</button>
+
+<p id="sol" style="display: none;"><codel>500</codel> ‒ why? Well, first, the <codel>var</codel> variable is created and assigned a value of 100. Then, the same variable is assigned a new value: the result of adding 200 to 300, which is 500.</p>
+
+<script>
+function solution (id) {
+    var element = document.getElementById(id);
+    
+if (element.style.display === "none") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
+    }
+}
+</script>
+
+
+
+<br>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

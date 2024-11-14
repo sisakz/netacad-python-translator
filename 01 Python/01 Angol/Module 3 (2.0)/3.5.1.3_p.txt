@@ -1,0 +1,68 @@
+<problem chapter='3' section='5' slide='1' problem='3' title='Sorting simple lists ‒ the bubble sort algorithm'>
+
+<!--
+Update history:
+2020-08-11 Grzegorz (reviewed, re-formatted)
+-->
+
+<code>
+my_list = []
+swapped = True
+num = int(input("How many elements do you want to sort: "))
+
+for i in range(num):
+    val = float(input("Enter a list element: "))
+    my_list.append(val)
+
+while swapped:
+    swapped = False
+    for i in range(len(my_list) - 1):
+        if my_list[i] > my_list[i + 1]:
+            swapped = True
+            my_list[i], my_list[i + 1] = my_list[i + 1], my_list[i]
+
+print("\nSorted:")
+print(my_list)
+
+</code>
+
+
+
+<h1>The bubble sort ‒ interactive version</h1>
+
+<p>In the editor you can see a complete program, enriched by a conversation with the user, and allowing the user to enter and to print elements from the list: <strong>The bubble sort ‒ final interactive version</strong>.</p>
+
+<p>Python, however, has its own sorting mechanisms. No one needs to write their own sorts, as there is a sufficient number of <strong>ready-to-use tools</strong>.</p>
+
+<p>We explained this sorting system to you because it's important to learn how to process a list's contents, and to show you how real sorting may work.</p>
+
+
+<p>If you want Python to sort your list, you can do it like this:</p>
+
+<codep>my_list = [8, 10, 6, 2, 4]
+<mark style="background-color:#e6f2ff;">my_list.sort()</mark>
+print(my_list)
+
+</codep>
+
+<br>
+
+<p>It is as simple as that.</p>
+
+<p>The snippet's output is as follows:</p>
+
+<codep>[2, 4, 6, 8, 10]</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+<br>
+
+<p>As you can see, all the lists have a method named <codel>sort()</codel>, which sorts them as fast as possible. You've already learned about some of the list methods before, and you're going to learn more about others very soon.</p>
+
+<br>
+
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

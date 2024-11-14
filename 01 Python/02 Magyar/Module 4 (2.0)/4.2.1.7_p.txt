@@ -1,0 +1,117 @@
+<problem chapter='4' section='2' slide='1' problem='7' title='Hogyan kommunikálnak a függvények a környezetükkel?'>
+
+<!--
+Update history:
+2020-08-13 Grzegorz (reviewed, re-formatted)
+-->
+
+<code>
+def introduction(first_name, last_name="Smith"):
+    print("Hello, my name is", first_name, last_name)
+
+# Call the function here.
+
+</code>
+
+
+
+<h1>Paraméteres függvények - további részletek</h1>
+
+<p>Előfordul, hogy egy paraméter adott értékei gyakrabban használatosak, mint a többi értékek. Ilyenkor az argumentumoknak lehet <strong>alapértelmezett (előre definiált) értéke</strong>, amit figyelembe lehet venni, ha a megfelelő paramétereket kihagytuk a függvényhíváskor.<p>
+
+<p>Azt mondják, hogy a leggyakoribb angol vezetéknév a <i>Smith</i>. Próbáljuk meg ezt figyelembe venni.</p>
+
+<p>Az alapértelmezett paraméter értékét egyértelmű és szemléletes szintaxissal állítjuk be:</p>
+
+<codep>def introduction(first_name, <mark style="background-color:#e6f2ff;">last_name="Smith"</mark>):
+    print("Hello, my name is", first_name, last_name)
+
+</codep>
+
+<br>
+
+<p>Csak a paraméter nevét kell kibővítened az <codel>=</codel> jellel, majd az alapértelmezett értékkel.</p>
+
+<p>Hívd meg a függvényt a szokásos módon!</p>
+
+<codep class="syntax-color">introduction("James", "Doe")
+</codep>
+<br>
+
+<p>Ki tudod találni a program kimenetét? Futtasd le, és ellenőrizd!</p>
+
+
+<p>Ha a függvényt más, első ránézésre kissé furcsa módon hívjuk meg, például így:</p>
+
+<codep class="syntax-color">introduction("Henry")
+</codep>
+
+<br>
+
+<p>vagy így:</p>
+
+<codep class="syntax-color">introduction(first_name="William")
+</codep>
+<br>
+
+<p>akkor nem ad hibát. Mindkét meghívás sikeres lesz, míg a konzol a következő kimenetet fogja mutatni:</p>
+
+<codep>Hello, my name is Henry Smith
+Hello, my name is William Smith</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+
+<br>
+
+<p>Teszteld le!</p>
+
+<hr>
+
+<p>Ez hasznosnak tűnik, tovább is gondolhatjuk. Most mindkét paraméter alapértelmezett értékkel rendelkezik, nézzük meg az alábbi kódot:</p>
+
+<codep class="syntax-color">def introduction(first_name="John", last_name="Smith"):
+    print("Hello, my name is", first_name, last_name)
+</codep>
+
+<br>
+
+
+<p>Ezáltal a következő meghívás teljesen érvényes:</p>
+
+<codep class="syntax-color">introduction()
+</codep>
+<br>
+
+<p>És ez a várható kimenet:</p>
+
+<codep>Hello, my name is John Smith</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+<br>
+
+<hr>
+
+<p>Ha egy kulcsszavas argumentumot használunk, akkor a fennmaradó argumentum az alapértelmezett értéket veszi fel:</p>
+
+<codep class="syntax-color">introduction(last_name="Hopkins")
+</codep>
+<br>
+
+<p>A kimenet:</p>
+
+<codep>Hello, my name is John Hopkins</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+<br>
+
+<p>Teszteld le!</p>
+
+<br>
+
+<p>Gratulálok! Most tanultad meg a függvényekkel való kommunikáció alapvető módjait.</p>
+
+<br>
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

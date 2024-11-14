@@ -1,0 +1,91 @@
+<problem chapter='3' section='4' slide='1' problem='6' title='LAB: The basics of lists'>
+
+<!--
+Update history:
+2020-08-11 Grzegorz (reviewed), code formatting
+-->
+
+<code>
+hat_list = [1, 2, 3, 4, 5]  # This is an existing list of numbers hidden in the hat.
+
+# Step 1: write a line of code that prompts the user
+# to replace the middle number with an integer number entered by the user.
+
+# Step 2: write a line of code that removes the last element from the list.
+
+# Step 3: write a line of code that prints the length of the existing list.
+
+print(hat_list)
+
+</code>
+
+<span class="label" style="background-color:rgb(205, 168, 105);"><strong>LAB</strong></span>
+
+<br><br>
+
+<h2>Estimated time</h2>
+<p>5 minutes</p>
+
+<h2>Level of difficulty</h2>
+<p>Very easy</p>
+
+
+<h2>Objectives</h2>
+
+<p>Familiarize the student with:</p>
+
+<ul>
+<li>using basic instructions related to lists;</li>
+<li>creating and modifying lists.</li>
+</ul>
+
+<h2>Scenario</h2>
+
+<p>There once was a hat. The hat contained no rabbit, but a list of five numbers: <codel>1</codel>, <codel>2</codel>, <codel>3</codel>, <codel>4</codel>, and <codel>5</codel>.</p>
+
+<p>Your task is to:</p>
+
+<ul>
+<li>write a line of code that prompts the user to replace the middle number in the list with an integer number entered by the user (Step 1)</li>
+<li>write a line of code that removes the last element from the list (Step 2)</li>
+<li>write a line of code that prints the length of the existing list (Step 3).</li>
+</ul>
+
+<p>Ready for this challenge?</p>
+
+<br>
+
+<studyMode>false</studyMode>
+<labMode>true</labMode>
+
+<hint>
+hat_list = [1, 2, 3, 4, 5]
+
+# Step 1
+hat_list[2] = int(input("Enter an integer number: "))
+
+# Step 2: write a line of code that removes the last element from the list.
+
+# Step 3: write a line of code that prints the length of the existing list.
+
+print(hat_list)
+
+</hint>
+
+
+<sampleSolution>
+hat_list = [1, 2, 3, 4, 5]
+
+# Step 1
+hat_list[2] = int(input("Enter an integer number: "))
+
+# Step 2
+del hat_list[-1]
+
+# Step 3
+print(len(hat_list))
+
+</sampleSolution>
+
+
+</problem>

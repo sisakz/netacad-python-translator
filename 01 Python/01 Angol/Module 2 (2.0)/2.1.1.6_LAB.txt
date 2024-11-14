@@ -1,0 +1,51 @@
+<problem chapter='2' section='1' slide='1' problem='6' title='LAB: The print() function'>
+
+<!--
+Update history:
+2020-07-17 Grzegorz (format and page number change)
+-->
+
+<code>
+</code>
+
+<span class="label" style="background-color:rgb(205, 168, 105);"><strong>LAB</strong></span>
+
+<br><br>
+
+<h2>Estimated time</h2>
+<p>5-10 minutes</p>
+
+<h2>Level of difficulty</h2>
+<p>Very easy</p>
+
+<h2>Objectives</h2>
+<ul>
+<li>becoming familiar with the <codel>print()</codel> function and its formatting capabilities;</li>
+<li>experimenting with Python code.</li>
+</ul>
+
+<h2>Scenario</h2>
+<p>The <codel>print()</codel> command, which is one of the easiest directives in Python, simply prints out a line to the screen.</p>
+<p>In your first lab:</p>
+
+<ul>
+<li>use the <codel>print()</codel> function to print the line <codel>Hello, Python!</codel> to the screen. Use double quotes around the string;</li>
+<li>having done that, use the <codel>print()</codel> function again, but this time print your first name;</li>
+<li>remove the double quotes and run your code. Watch Python's reaction. What kind of error is thrown?</li>
+<li>then, remove the parentheses, put back the double quotes, and run your code again. What kind of error is thrown this time?</li>
+<li>experiment as much as you can. Change double quotes to single quotes, use multiple <codel>print()</codel> functions on the same line, and then on different lines. See what happens.</li>
+</ul>
+
+<labMode>true</labMode>
+
+<sampleSolution># Sample Solution
+
+print("Hello, Python!")
+# print("Greg")
+# print(Greg)
+# print"Greg"
+# print('Greg')
+# print("Greg") print("Python")
+# ...</sampleSolution>
+
+</problem>

@@ -1,0 +1,58 @@
+<problem chapter='2' section='6' slide='1' problem='7' title='Adatbevitel | karakterlánc műveletek'>
+
+<!--
+Update history:
+2020-07-17 Grzegorz (reviewed; code - blank lines and syntax-color class added)
+-->
+
+<h1>Többszörözés</h1>
+
+
+<p>A <codel>*</codel> (csillag) jel, ha egy karakterláncra és egy számra (vagy egy számra és egy karakterláncra, mivel ebben a helyzetben a művelet kommutatív marad) alkalmazzuk, <strong>többszöröző műveleti jellé</strong> válik:</p>
+
+<codep class="syntax-color">string * number
+number * string
+</codep>
+
+<br>
+
+<p>A karakterláncot annyiszor ismétli meg, amennyit a szám változó tartalmaz.</p>
+
+<p>Például:</p>
+
+<ul>
+<li><codel>"James" * 3</codel> eredménye <codel>"JamesJamesJames"</codel></li>
+
+<li><codel>3 * "an"</codel> eredménye <codel>"ananan"</codel></li>
+
+<li><codel>5 * "2"</codel> (vagy <codel>"2" * 5</codel>) eredménye <codel>"22222"</codel> (nem <codel style="color:red;">10</codel>!)
+
+</ul>
+ 
+<br>
+
+<p><span class="label" style="background-color:orange;">JÓL JEGYEZD MEG!</span></p>
+
+<p>A nullánál kisebb vagy azzal egyenlő szám <strong>üres karakterláncot</strong> eredményez.</p>
+<br>
+
+
+<p>Ez az egyszerű program egy téglalapot "rajzol", egy régi operátort (<codel>+</codel>) használva új szerepben:</p>
+
+<codep class="syntax-color">print("+" + 10 * "-" + "+")
+print(("|" + " " * 10 + "|\n") * 5, end="")
+print("+" + 10 * "-" + "+")
+</codep>
+
+<br> 
+
+<p>Figyeld meg, hogyan használtuk a zárójeleket a kód második sorában.</p>
+
+<p>Próbálj más formákat vagy alakzatokat is létrehozni!</p>
+
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

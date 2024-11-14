@@ -1,0 +1,47 @@
+<problem chapter='2' section='2' slide='1' problem='2' title='Literálok'>
+
+<!--
+Update history:
+2020-07-17 Grzegorz (code change - blank line added)
+-->
+
+<code>
+print("2")
+print(2)
+
+</code>
+
+<h1>Literálok - az adatok önmagukban</h1>
+
+<p>Kezdjük egy egyszerű kísérlettel. Vess egy pillantást a szerkesztőben lévő kódrészletre.</p>
+ 
+<p>Az első sor ismerős. A második hibásnak tűnik az idézőjelek látható hiánya miatt.</p>
+
+<p>Próbáld meg lefuttatni!</p>
+
+
+<p>Ha minden rendben ment, akkor most két azonos sort kell látnod.</p>
+
+<p>Mi történt? Mit jelent ez?</p>
+
+<p>Ebben a példában két különböző típusú literállal találkozhatunk:</p>
+
+<ul>
+
+<li>egy <strong>karakterlánccal</strong>, amit már ismersz,</li>
+<li>és egy <strong>egész</strong> számmal, ami teljesen más.</li>
+
+</ul>
+
+<p>A <codel>print()</codel> függvény pontosan ugyanúgy írja ki őket. Ez a példa nyilvánvaló, mivel az ember által olvasható ábrázolásuk is ugyanaz. Belsőleg, a számítógép memóriájában ez a két érték teljesen másképp tárolódik A karakterlánc csak karakterláncként - betűk sorozataként - létezik.</p>
+
+<p>A számítógép memóriájában mindkét érték bitekként tárolódik. A <codel>print()</codel> függvény képes mindkettőt ember számára olvasható formában megjeleníteni.</p>
+
+<p>Szánjunk egy kis időt a numerikus literálokra és a működésük tárgyalására.</p>
+
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

@@ -1,0 +1,88 @@
+﻿<problem chapter='2' section='6' slide='1' problem='10' title='LAB: Operators and expressions'>
+
+<!--
+Update history:
+2020-07-17 Grzegorz (reviewed; code - blank lines added to editor, sample solution; comment change)
+-->
+
+<code>
+x = float(input("Enter value for x: "))
+
+# Write your code here.
+
+print("y =", y)
+
+</code>
+
+<span class="label" style="background-color:rgb(205, 168, 105);"><strong>LAB</strong></span>
+
+<br><br>
+
+<h2>Estimated time</h2>
+<p>20 minutes</p>
+
+<h2>Level of difficulty</h2>
+<p>Intermediate</p>
+
+<h2>Objectives</h2>
+<ul>
+<li>becoming familiar with the concept of numbers, operators and arithmetic operations in Python;</li>
+<li>understanding the precedence and associativity of Python operators, as well as the proper use of parentheses.</li>
+</ul>
+
+
+<h2>Scenario</h2>
+<p>Your task is to complete the code in order to evaluate the following expression:</p>
+<img width='225' src='/uploads/media/default/0001/01/b28be61cd2ada9483ab1e86e8be7b0b797d24674.png'>
+
+<br>
+
+<p>The result should be assigned to <codel>y</codel>. Be careful ‒ watch the operators and keep their priorities in mind. Don't hesitate to use as many parentheses as you need.</p>
+<p>You can use additional variables to shorten the expression (but it's not necessary). Test your code carefully.</p>
+
+<br>
+
+
+<h2>Test Data</h2>
+
+<p>Sample input: <codel>1</codel></p>
+<p>Expected output:</p>
+
+<codep>y = 0.6000000000000001</codep>
+
+<br>
+
+
+<p>Sample input: <codel>10</codel></p>
+<p>Expected output:</p>
+
+<codep>y = 0.09901951266867294</codep>
+
+<br>
+
+<p>Sample input: <codel>100</codel></p>
+<p>Expected output:</p>
+
+<codep>y = 0.009999000199950014</codep>
+
+<br>
+
+<p>Sample input: <codel>-5</codel></p>
+<p>Expected output:</p>
+
+<codep>y = -0.19258202567760344</codep>
+
+<br>
+
+
+<studyMode>false</studyMode>
+<labMode>true</labMode>
+
+
+<sampleSolution>x = float(input("Enter value for x: "))
+y = 1./(x + 1./(x + 1./(x + 1./x)))
+print("y =", y)
+
+</sampleSolution>
+
+</problem>

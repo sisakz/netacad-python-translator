@@ -1,0 +1,77 @@
+<problem chapter='3' section='4' slide='1' problem='12' title='Lists ‒ collections of data | lists and loops'>
+
+<!--
+Update history:
+2020-08-03 Grzegorz (reviewed)
+-->
+
+<code>
+</code>
+
+
+
+<h1>Lists in action</h1>
+
+<p>Now you can easily <strong>swap</strong> the list's elements to <strong>reverse their order</strong>:</p>
+
+<codep class="syntax-color">my_list = [10, 1, 8, 3, 5]
+
+my_list[0], my_list[4] = my_list[4], my_list[0]
+my_list[1], my_list[3] = my_list[3], my_list[1]
+
+print(my_list)
+</codep>
+
+<br>
+
+<p>Run the snippet. Its output should look like this:</p>
+
+<codep>[5, 3, 8, 1, 10]</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+<br>
+
+<p>It looks fine with five elements.</p>
+
+<br>
+
+<p>Will it still be acceptable with a list containing 100 elements? No, it won't.</p>
+
+<p>Can you use the <codel>for</codel> loop to do the same thing automatically, irrespective of the list's length? Yes, you can.</p>
+
+<hr>
+
+<p>This is how we've done it:</p>
+
+<codep>my_list = [10, 1, 8, 3, 5]
+length = len(my_list)
+
+<mark style="background-color:#e6f2ff;">for i in range(length // 2):
+    my_list[i], my_list[length - i - 1] = my_list[length - i - 1], my_list[i]</mark>
+
+print(my_list)
+
+</codep>
+
+<br>
+
+<p>Note:</p>
+
+<ul>
+<li>we've assigned the <codel>length</codel> variable with the current list's length (this makes our code a bit clearer and shorter)</li>
+
+<li>we've launched the <codel>for</codel> loop to run through its body <codel>length // 2</codel> times (this works well for lists with both even and odd lengths, because when the list contains an odd number of elements, the middle one remains untouched)</li>
+
+<li>we've swapped the i<sup>th</sup> element (from the beginning of the list) with the one with an index equal to <codel>(length - i - 1)</codel> (from the end of the list); in our example, for <codel>i</codel> equal to <codel>0</codel> the <codel>(length - i - 1)</codel> gives <codel>4</codel>; for <codel>i</codel> equal to <codel>1</codel>, it gives <codel>3</codel> ‒ this is exactly what we needed.</li>
+
+</ul>
+
+<p>Lists are extremely useful, and you'll encounter them very often.</p>
+
+<br>
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

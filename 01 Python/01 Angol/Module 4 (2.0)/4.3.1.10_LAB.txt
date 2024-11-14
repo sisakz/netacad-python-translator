@@ -1,0 +1,136 @@
+<problem chapter='4' section='3' slide='1' problem='10' title='LAB: Converting fuel consumption'>
+
+<!--
+Update history:
+2020-08-14 Grzegorz (reviewed, re-formatted)
+-->
+
+<code>
+
+def liters_100km_to_miles_gallon(liters):
+#
+# Write your code here.
+#
+
+def miles_gallon_to_liters_100km(miles):
+#
+# Write your code here.
+#
+
+print(liters_100km_to_miles_gallon(3.9))
+print(liters_100km_to_miles_gallon(7.5))
+print(liters_100km_to_miles_gallon(10.))
+print(miles_gallon_to_liters_100km(60.3))
+print(miles_gallon_to_liters_100km(31.4))
+print(miles_gallon_to_liters_100km(23.5))
+
+</code>
+
+<span class="label" style="background-color:rgb(205, 168, 105);"><strong>LAB</strong></span>
+
+<br><br>
+
+
+<h2>Estimated time</h2>
+<p>10-15 minutes</p>
+
+
+<h2>Level of difficulty</h2>
+<p>Easy</p>
+
+
+<h2>Objectives</h2>
+
+<ul>
+<li>improving the student's skills in defining, using, and testing functions.</li>
+</ul>
+
+
+<h2>Scenario</h2>
+<p>A car's fuel consumption may be expressed in many different ways. For example, in Europe, it is shown as the amount of fuel consumed per 100 kilometers.</p>
+
+<p>In the USA, it is shown as the number of miles traveled by a car using one gallon of fuel.</p>
+
+<p>Your task is to write a pair of functions converting l/100km into mpg, and vice versa.</p>
+
+<p>The functions:</p>
+<ul>
+<li>are named <codel>liters_100km_to_miles_gallon</codel> and <codel>miles_gallon_to_liters_100km</codel> respectively;</li>
+<li>take one argument (the value corresponding to their names)</li>
+</ul>
+
+<p>Complete the code in the editor.</p>
+
+<p>Run your code and check whether your output is the same as ours.</p>
+
+<p>Here is some information to help you:</p>
+<ul>
+<li>1 American mile = 1609.344 metres;
+<li>1 American gallon = 3.785411784 litres.
+</ul>
+
+
+<h2>Expected output</h2>
+
+<p><codep>60.31143162393162
+31.36194444444444
+23.52145833333333
+3.9007393587617467
+7.490910297239916
+10.009131205673757</codep></p>
+
+
+<br>
+
+<studyMode>false</studyMode>
+<labMode>true</labMode>
+
+
+<hint>
+# 1 American mile = 1609.344 metres
+# 1 American gallon = 3.785411784 litres
+
+def liters_100km_to_miles_gallon(litres):
+    gallons = litres / 3.785411784
+    miles = 100 * 1000 / 1609.344
+    return miles / gallons
+
+def miles_gallon_to_liters_100km(miles):
+    # ...
+    # ...
+    # ...
+
+print(liters_100km_to_miles_gallon(3.9))
+print(liters_100km_to_miles_gallon(7.5))
+print(liters_100km_to_miles_gallon(10.))
+print(miles_gallon_to_liters_100km(60.3))
+print(miles_gallon_to_liters_100km(31.4))
+print(miles_gallon_to_liters_100km(23.5))
+
+</hint>
+
+
+<sampleSolution>
+# 1 American mile = 1609.344 metres
+# 1 American gallon = 3.785411784 litres
+
+def liters_100km_to_miles_gallon(litres):
+    gallons = litres / 3.785411784
+    miles = 100 * 1000 / 1609.344
+    return miles / gallons
+
+def miles_gallon_to_liters_100km(miles):
+    km100 = miles * 1609.344 / 1000 / 100
+    litres = 3.785411784
+    return litres / km100
+
+print(liters_100km_to_miles_gallon(3.9))
+print(liters_100km_to_miles_gallon(7.5))
+print(liters_100km_to_miles_gallon(10.))
+print(miles_gallon_to_liters_100km(60.3))
+print(miles_gallon_to_liters_100km(31.4))
+print(miles_gallon_to_liters_100km(23.5))
+
+</sampleSolution>
+
+</problem>

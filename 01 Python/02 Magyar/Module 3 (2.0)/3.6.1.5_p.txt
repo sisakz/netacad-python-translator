@@ -1,0 +1,85 @@
+<problem chapter='3' section='6' slide='1' problem='5' title='Műveletek listákkal | szelet, del'>
+
+<!--
+Update history:
+2020-08-12 Grzegorz (reviewed, reformatted)
+-->
+
+<code>
+</code>
+
+
+
+<h1>Szeletek: folytatás</h1>
+
+<p>Mint már korábban említettük, a <codel>start</codel> és <codel>end</codel> elhagyásával a <strong>teljes lista másolatát</strong> készíthetjük el:</p>
+
+<codep>my_list = [10, 8, 6, 4, 2]
+new_list = my_list<mark style="background-color:#e6f2ff;">[:]</mark>
+print(new_list)
+
+</codep>
+
+<br>
+
+<p>A kódrészlet kimenete a következő: <codel>[10, 8, 6, 4, 2]</codel>.</p>
+
+<hr>
+
+<p>A korábban ismertetett <codel>del</codel> utasítás <strong>nem csak egy listaelemet képes egyszerre törölni, hanem szeleteket is</strong>:</p>
+
+<codep>my_list = [10, 8, 6, 4, 2]
+<mark style="background-color:#e6f2ff;">del my_list[1:3]</mark>
+print(my_list)
+
+</codep>
+
+<br>
+
+
+<p>Megjegyzés: ebben az esetben a szelet <strong>nem hoz létre új listát</strong>!</p>
+
+<p>A kódrészlet kimenete a következő: <codel>[10, 4, 2]</codel>.</p>
+
+
+<br>
+
+
+<p>Az <strong>összes elem</strong> egyszerre történő törlése is lehetséges:</p>
+
+<codep>my_list = [10, 8, 6, 4, 2]
+<mark style="background-color:#e6f2ff;">del my_list[:]</mark>
+print(my_list)
+
+</codep>
+
+<br>
+
+<p>A lista üres lesz, és a kimenet a következő: <codel>[]</codel>.</p>
+
+
+<br>
+
+<p>A szelet eltávolítása a kódból drámaian megváltoztatja annak jelentését.</p>
+
+<p>Nézd meg:</p>
+
+<codep>my_list = [10, 8, 6, 4, 2]
+<mark style="background-color:#e6f2ff;">del my_list</mark>
+print(my_list)
+
+</codep>
+
+<br>
+
+<p>A <codel>del</codel> utasítás <strong>magát a listát törli, nem pedig a tartalmát</strong>.</p>
+
+<p>A kód utolsó sorában lévő <codel>print()</codel> függvényhívás ekkor futásidejű hibát okoz.</p>
+
+<br>
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

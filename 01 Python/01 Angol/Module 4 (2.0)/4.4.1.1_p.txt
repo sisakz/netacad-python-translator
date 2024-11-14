@@ -1,0 +1,47 @@
+<problem chapter='4' section='4' slide='1' problem='1' title='Scopes in Python'>
+
+<!--
+Update history:
+2020-08-18 Grzegorz (reviewed, re-formatted)
+-->
+
+<code>def scope_test():
+    x = 123
+
+
+scope_test()
+print(x)
+
+</code>
+
+
+
+<h1>Functions and scopes</h1>
+
+<p>Let's start with a definition:</p>
+
+<p>The <strong>scope of a name</strong> (e.g., a variable name) is the part of a code where the name is properly recognizable.</p>
+
+<p>For example, the scope of a function's parameter is the function itself. The parameter is inaccessible outside the function.</p>
+
+<br>
+
+<p>Let's check it. Look at the code in the editor. What will happen when you run it?</p>
+
+<p>The program will fail when run. The error message will read:</p>
+
+<codep>NameError: name 'x' is not defined</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+<br>
+
+<p>This is to be expected.</p>
+
+<p>We're going to conduct some experiments with you to show you how Python constructs scopes, and how you can use these to your benefit.</p>
+
+<br>
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

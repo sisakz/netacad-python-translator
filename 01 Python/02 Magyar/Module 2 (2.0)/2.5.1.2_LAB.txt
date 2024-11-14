@@ -1,0 +1,57 @@
+<problem chapter='2' section='5' slide='1' problem='2' title='LAB: Megjegyzések'>
+
+<!--
+Update history:
+2020-07-17 Grzegorz (reviewed; blank line added to code)
+-->
+
+<code>#this program computes the number of seconds in a given number of hours
+# this program has been written two days ago
+
+a = 2 # number of hours
+seconds = 3600 # number of seconds in 1 hour
+
+print("Hours: ", a) #printing the number of hours
+# print("Seconds in Hours: ", a * seconds) # printing the number of seconds in a given number of hours
+
+#here we should also print "Goodbye", but a programmer didn't have time to write any code
+#this is the end of the program that computes the number of seconds in 3 hour
+
+</code>
+
+<span class="label" style="background-color:rgb(205, 168, 105);"><strong>LABORGYAKORLAT</strong></span>
+
+<br><br>
+
+<h2>Becsült idő</h2>
+<p>5 perc</p>
+
+<h2>Nehézségi szint</h2>
+<p>Nagyon könnyű</p>
+
+<h2>Célok</h2>
+<ul>
+<li>a Pythonban a megjegyzések fogalmának megismerése;</li>
+<li>a megjegyzések használata és eltávolítása;</li>
+<li>a megjegyzések kóddal való helyettesítése;</li>
+<li>kísérletezés a Python kóddal.</li>
+</ul>
+
+<h2>Feladatleírás</h2>
+
+<p>A szerkesztőben lévő kód megjegyzéseket tartalmaz. Próbálj javítani rajta: adj hozzá vagy távolíts el megjegyzéseket ott, ahol ezt jónak látod. Néha bizony egy-egy megjegyzés eltávolítása olvashatóbbá teheti a kódot. Ezután változtasd meg a változók nevét ott, ahol úgy gondold, hogy ez javítja a kód érthetőségét.</p>
+
+
+
+<p><span class="label" style="background-color:orange;"><b>MEGJEGYZÉS</b></span></p>
+
+<p>A megjegyzések nagyon fontosak. Nemcsak arra jók, hogy a programjaidat <strong>érthetővé</strong> tedd, hanem arra is, hogy <strong>letiltsd azokat a kódrészeket, amelyekre épp nincs szükséged</strong> (pl. amikor a kódnak csak bizonyos részeit kell tesztelned, és más részeket figyelmen kívül akarsz hagyni). A jó programozók minden fontos kódrészletet <strong>leírnak</strong>, és <strong>magától értetődő neveket</strong> adnak a változóknak. Néha egyszerűen sokkal jobb, ha az információt a kódban hagyjuk.</p>
+
+<p>Jó, ha <strong>"beszédes"</strong> változóneveket használunk, és még jobb, ha a <strong>kódot</strong> nevesített részekre (pl. függvényekre) <strong>osztjuk</strong>. Időnként érdemes a számítások lépéseit érthetőbben leírni.</p>
+<p>Még egy dolog: előfordulhat, hogy egy megjegyzés téves vagy helytelen információt tartalmaz. Soha ne írj ilyet szándékosan!</p>
+
+<br>
+
+<labMode>true</labMode>
+
+</problem>

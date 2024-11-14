@@ -1,0 +1,47 @@
+<problem chapter='4' section='4' slide='1' problem='1' title='Hatókörök'>
+
+<!--
+Update history:
+2020-08-18 Grzegorz (reviewed, re-formatted)
+-->
+
+<code>def scope_test():
+    x = 123
+
+
+scope_test()
+print(x)
+
+</code>
+
+
+
+<h1>Függvények és hatókörök</h1>
+
+<p>Kezdjük egy definícióval:</p>
+
+<p><strong>Egy név (pl. egy változó nevének) hatóköre </strong> a kód azon része, ahol a név megfelelően elérhető, használható.</p>
+
+<p>Például egy függvény paraméterének hatóköre maga a függvény. A paraméter a függvényen kívül nem érhető el.</p>
+
+<br>
+
+<p>Ellenőrizd le! Nézd meg a kódot a szerkesztőben! Mi történik, ha futtatod?</p>
+
+<p>A program futtatása sikertelen lesz. A hibaüzenet a következő:</p>
+
+<codep>NameError: name 'x' is not defined</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+<br>
+
+<p>Ez azért várható volt.</p>
+
+<p>Néhány tesztet végzünk a következőkben, hogy megmutassuk neked, hogyan építi fel a Python a hatóköröket, valamint hogyan fordíthatod ezt a saját hasznodra.</p>
+
+<br>
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

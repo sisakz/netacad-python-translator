@@ -1,0 +1,92 @@
+<problem chapter='4' section='5' slide='1' problem='3' title='Creating: three-parameter functions'>
+
+<!--
+Update history:
+2020-08-18 Grzegorz (reviewed, re-formatted, PEP-8 compliance check)
+-->
+
+<code>def is_a_triangle(a, b, c):
+    if a + b <= c:
+        return False
+    if b + c <= a:
+        return False
+    if c + a <= b:
+        return False
+    return True
+
+
+print(is_a_triangle(1, 1, 1))
+print(is_a_triangle(1, 1, 3))
+
+</code>
+
+
+
+<h1>Some simple functions: continued</h1>
+
+<p>Let's play with triangles now. We'll start with a function to check whether three sides of given lengths can build a triangle.</p>
+
+<img src="/uploads/media/default/0001/01/9688d65ce90b1ae12501b6a6a4f8e8914032069e.png" width="60%" alt="A triangle with equal sides">
+
+<br>
+<br>
+
+<p>We know from school that <i>the sum of two arbitrary sides has to be longer than the third side</i>.</p>
+
+<p>It won't be a hard challenge. The function will have <strong>three parameters</strong> ‒ one for each side.</p>
+
+<p>It will return <codel>True</codel> if the sides can build a triangle, and <codel>False</codel> otherwise. In this case, <codel>is_a_triangle</codel> is a good name for such a function.</p>
+
+<br>
+
+<p>Look at the code in the editor. You can find our function there. Run the program.</p>
+
+<p>It seems that it works well ‒ these are the results:</p>
+
+<codep>True
+False</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+<br>
+
+<p>Can we make it more compact? It looks a bit wordy.</p>
+
+
+<p>This is a more compact version:</p>
+
+<codep class="syntax-color copy">def is_a_triangle(a, b, c):
+    if a + b <= c or b + c <= a or c + a <= b:
+        return False
+    return True
+
+
+print(is_a_triangle(1, 1, 1))
+print(is_a_triangle(1, 1, 3))
+</codep>
+
+<br>
+
+<p>Can we compact it even more?</p>
+
+<p>Yes, we can - look:</p>
+
+<codep class="syntax-color copy">def is_a_triangle(a, b, c):
+    return a + b > c and b + c > a and c + a > b
+
+
+print(is_a_triangle(1, 1, 1))
+print(is_a_triangle(1, 1, 3))
+</codep>
+
+<br>
+
+<p>We've negated the condition (reversed the relational operators and replaced <codel>or</codel>s with <codel>and</codel>s, receiving a <strong>universal expression for testing triangles</strong>).</p>
+
+<p>Let's install the function in a larger program. It'll ask the user for three values and make use of the function.</p>
+
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

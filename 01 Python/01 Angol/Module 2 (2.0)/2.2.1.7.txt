@@ -1,0 +1,66 @@
+<problem chapter='2' section='2' slide='1' problem='7' title='Python literals'>
+
+<!--
+Update history:
+2020-07-17 Grzegorz (reformatted; code - syntax-color class, blank line added)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<h1>Coding floats</h1>
+
+
+<p>Let's see how this convention is used to record numbers that are very small (in the sense of their absolute value, which is close to zero).</p>
+
+<p>A physical constant called <i>Planck's constant</i> (and denoted as <i>h</i>), according to the textbooks, has the value of: <b>6.62607 x 10<sup>-34</sup></b>.</p>
+
+<p>If you would like to use it in a program, you should write it this way:</p>
+
+<codep>6.62607E-34</codep>
+
+<br>
+
+<p>Note: the fact that you've chosen one of the possible forms of coding float values doesn't mean that Python will present it the same way.</p>
+
+<p>Python may sometimes choose <strong>different notation</strong> than you.</p>
+
+<br>
+
+</div>
+
+<div class="small-12 large-6 columns">
+
+<h1></h1>
+
+<p>For example, let's say you've decided to use the following float literal:</p>
+
+<codep>0.0000000000000000000001</codep>
+
+<br>
+
+<p>When you run this literal through Python:</p>
+
+<codep class="syntax-color">print(0.0000000000000000000001)
+</codep>
+
+<br>
+
+<p>this is the result:</p>
+
+<codep>1e-22</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+<p>Python always chooses <strong>the more economical form of the number's presentation</strong>, and you should take this into consideration when creating literals.</p>
+
+</div>
+
+</div>
+</div>
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

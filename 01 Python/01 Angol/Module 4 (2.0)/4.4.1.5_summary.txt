@@ -1,0 +1,291 @@
+<problem chapter='4' section='4' slide='1' problem='5' title='SECTION SUMMARY'>
+
+<!--
+Update history:
+2020-08-18 Grzegorz (reviewed, re-formatted)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<h1>Key takeaways</h1>
+
+<br>
+
+
+<p>1. A variable that exists outside a function has scope inside the function body (Example 1) unless the function defines a variable of the same name (Example 2, and Example 3), e.g.:</p>
+
+<p>Example 1:</p>
+
+<codep class="copy"><mark style="background-color:#e6f2ff;">var = 2</mark>
+
+
+def mult_by_var(x):
+    return x * <mark style="background-color:#e6f2ff;">var</mark>
+
+
+print(mult_by_var(7))    # outputs: 14
+
+</codep>
+<br>
+
+<p>Example 2:</p>
+
+<codep>def mult(x):
+    <mark style="background-color:#e6f2ff;">var = 5</mark>
+    return x * <mark style="background-color:#e6f2ff;">var</mark>
+
+
+print(mult(7))    # outputs: 35
+
+</codep>
+<br>
+
+<p>Example 3:</p>
+
+<codep class="copy">def mult(x):
+    <mark style="background-color:#e6f2ff;">var = 7</mark>
+    return x * <mark style="background-color:#e6f2ff;">var</mark>
+
+
+<mark style="background-color:#e6f2ff;">var = 3</mark>
+print(mult(7))    # outputs: 49
+
+</codep>
+
+<br>
+
+
+
+<p>2. A variable that exists inside a function has scope inside the function body (Example 4), e.g.:</p>
+
+<p>Example 4:</p>
+
+<codep class="copy">def adding(x):
+    var = 7
+    return x + var
+
+
+print(adding(4))    # outputs: 11
+<font style="color:red;">print(var)    # NameError</font>
+
+</codep>
+<br>
+
+
+<p>3. You can use the <codel>global</codel> keyword followed by a variable name to make the variable's scope global, e.g.:</p>
+
+<codep class="syntax-color copy">var = 2
+print(var)    # outputs: 2
+
+
+def return_var():
+    global var
+    var = 5
+    return var
+
+
+print(return_var())    # outputs: 5
+print(var)    # outputs: 5
+</codep>
+
+<br>
+<br>
+
+</div>
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+
+<p><strong>Exercise 1</strong></p>
+<p>What will happen when you try to run the following code?</p>
+
+<codep>def message():
+    alt = 1
+    print("Hello, World!")
+
+
+print(alt)
+
+</codep>
+
+<br>
+
+<div align="right">
+<button class="button tiny" onclick="solution('sol')">Check</button>
+</div>
+
+<p id="sol" style="display: none;">
+The <codel>NameError</codel> exception will be thrown (<codel>NameError: name 'alt' is not defined</codel>)
+</p>
+
+<script>
+function solution (id) {
+    var element = document.getElementById(id);
+    
+if (element.style.display === "none") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
+    }
+}
+</script>
+
+<br>
+
+
+
+<p><strong>Exercise 2</strong></p>
+<p>What is the output of the following snippet?</p>
+
+<codep>a = 1
+
+
+def fun():
+    a = 2
+    print(a)
+
+
+fun()
+print(a)
+
+</codep>
+
+<br>
+
+<div align="right">
+<button class="button tiny" onclick="solution('sol2')">Check</button>
+</div>
+
+<p id="sol2" style="display: none;">
+<codep>2
+1</codep>
+</p>
+
+
+<script>
+function solution (id) {
+    var element = document.getElementById(id);
+    
+if (element.style.display === "none") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
+    }
+}
+</script>
+
+<br>
+
+
+
+
+<p><strong>Exercise 3</strong></p>
+<p>What is the output of the following snippet?</p>
+
+<codep>a = 1
+
+
+def fun():
+    global a
+    a = 2
+    print(a)
+
+
+fun()
+a = 3
+print(a)
+
+</codep>
+
+<br>
+
+<div align="right">
+<button class="button tiny" onclick="solution('sol3')">Check</button>
+</div>
+
+<p id="sol3" style="display: none;">
+<codep>2
+3</codep>
+</p>
+
+<script>
+function solution (id) {
+    var element = document.getElementById(id);
+    
+if (element.style.display === "none") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
+    }
+}
+</script>
+
+
+<br>
+
+
+
+
+
+<p><strong>Exercise 4</strong></p>
+<p>What is the output of the following snippet?</p>
+
+<codep>a = 1
+
+
+def fun():
+    global a
+    a = 2
+    print(a)
+
+
+a = 3
+fun()
+print(a)
+
+</codep>
+
+<br>
+
+<div align="right">
+<button class="button tiny" onclick="solution('sol4')">Check</button>
+</div>
+
+<p id="sol4" style="display: none;">
+<codep>2
+2</codep>
+</p>
+
+<script>
+function solution (id) {
+    var element = document.getElementById(id);
+    
+if (element.style.display === "none") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
+    }
+}
+</script>
+
+
+<br>
+
+</div>
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

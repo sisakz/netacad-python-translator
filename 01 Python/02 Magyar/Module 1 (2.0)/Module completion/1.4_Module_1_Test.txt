@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+PE1 - Module 1 Test
+
+Update history:
+2020-11-05 Grzegorz (file created)
+-->
+
+<questionPool>
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE1_T1_ITEM_1">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p>Mi a gépi kód?</p>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>Bináris számjegyekből, bitekből álló alacsony szintű programozási nyelv, amelyet a számítógép olvas és megért.</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>Egy alacsony szintű programozási nyelv, amely magas szintű nyelvi utasításokat hoz létre hexadecimális számjegyek használatával.</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>Egy középszintű programozási nyelv, amely a számítógép processzora számára tervezett assembly utasításokból áll.</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>Egy magas szintű programozási nyelv, amely az emberek által olvasható és érthető utasításlistákból áll.</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+<question type="1" scoringType="1" points="1" customId="PE1_T1_ITEM_2">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p>Melyik négy alapelem alkotja a nyelvet?</p>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>ábécé, szókészlet, szintaxis és szemantika</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>ábécé, szókészlet, fonetika és szemantika</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>ábécé, fonetika, fonológia és szemantika</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>ábécé, morfológia, fonetika és szemantika</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+<question type="1" scoringType="1" points="1" customId="PE1_T1_ITEM_3">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p>Mi a neve annak a fájlnak, amely egy magas szintű programozási nyelven írt programot tartalmaz?</p>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>forrásfájl</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>gépi kód</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>kódfájl</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>célfájl</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+<question type="2" scoringType="1" points="1" customId="PE1_T1_ITEM_4">  <!-- Multiple-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p>Mi <u>igaz</u> a fordítással kapcsolatban? (Válassz <u>két</u> lehetőséget!)</p>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>A kódot közvetlenül a processzor által futtatható gépi kóddá alakítjuk.</p> ]]>
+</option>
+
+<option isCorrect="true">
+<![CDATA[ <p>Általában gyorsabb, mint az értelmezés.</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>Általában lassabb, mint az értelmezés.</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>A kód futtatásához mind a programozónak, mind a végfelhasználónak rendelkeznie kell a fordítóprogrammal.</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+<question type="1" scoringType="1" points="1" customId="PE1_T1_ITEM_5">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p>Melyik a <i>script</i> legjobb definíciója?</p>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>Egy szövegfájl, amely Pythonban írt utasításokat, programot tartalmaz.</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>A fordítóprogram által létrehozott hibaüzenet.</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>A parancsértelmező által létrehozott hibaüzenet.</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>Egy olyan szöveges fájl, melyet nullák és egyesek sorozata alkot.</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+<question type="2" scoringType="1" points="1" customId="PE1_T1_ITEM_6">  <!-- Multiple-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p>Válaszd ki az <u>igaz</u> állításokat! (<u>Két</u> helyes válasz van!)</p>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>A Python jó választás alkalmazások tesztjeinek létrehozására és futtatására.</p> ]]>
+</option>
+
+<option isCorrect="true">
+<![CDATA[ <p>A Python ingyenes, nyílt forráskódú és többplatformos.</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>A Python jó választás alacsony szintű programozáshoz, például ha egy hatékony driver-programot szeretnénk készíteni.</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>A Python 3 visszafelé kompatibilis a Python 2-vel.</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+<!-- ######################################################################################################################## -->
+
+<question type="1" scoringType="1" points="1" customId="PE1_T1_ITEM_7">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p>Mi a <i>CPython</i>?</p>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>A Python alapértelmezett, referencia implementációja, amely C nyelven lett megírva</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>Egy programozási nyelv, amely a Python egy szuperkészlete, és úgy tervezték, hogy a Pythonban írt kóddal C-hez hasonló teljesítményt érhessenek el.</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>Egy programozási nyelv, amely a C nyelv egy szuperhalmaza, és amelyet úgy terveztek, hogy a Pythonhoz hasonló teljesítményt nyújtson a C nyelven írt kóddal.</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>A C nyelv alapértelmezett, referencia implementációja, ami Python nyelven van megírva.</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+<question type="1" scoringType="1" points="1" customId="PE1_T1_ITEM_8">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p>Mi a neve annak a parancssori értelmezőnek, amely lehetővé teszi az operációs rendszerrel való interakciót, valamint Python parancsok és szkriptek futtatását?</p>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>console / konzol</</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>editor / szerkesztő</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>Jython</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>compiler / fordító</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+<question type="1" scoringType="1" points="1" customId="PE1_T1_ITEM_9">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p>Mit csinál a következő program?</p>
+
+<codep>print("Hello!")
+
+</codep>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>A program a <codel>Hello!</codel> üzenetet írja ki a képernyőre.</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>A program  a <codel>"Hello!"</codel> üzenetet írja ki a képernyőre.</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>A program a <codel>("Hello!")</codel> üzenetet írja ki a képernyőre.</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>A program hibaüzenetet ír ki a képernyőre.</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+<question type="1" scoringType="1" points="1" customId="PE1_T1_ITEM_10">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p>Mit csinál a következő program?</p>
+
+<codep>prin("Goodbye!")
+
+</codep>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option>
+<![CDATA[ <p>A program a <codel>Goodbye!</codel> üzenetet írja ki a képernyőre.</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>A program a <codel>"Goodbye!"</codel> üzenetet írja ki a képernyőre.</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>A program a <codel>("Goodbye!")</codel> üzenetet írja ki a képernyőre.</p> ]]>
+</option>
+
+<option isCorrect="true">
+<![CDATA[ <p>A program hibaüzenetet ír ki a képernyőre.</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+</questionPool>

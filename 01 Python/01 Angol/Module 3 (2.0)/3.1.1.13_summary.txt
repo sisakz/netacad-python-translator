@@ -1,0 +1,219 @@
+<problem chapter='3' section='1' slide='1' problem='13' title='SECTION SUMMARY (1/2)'>
+
+<!--
+Update history:
+2020-07-20 Grzegorz (reviewed)
+2020-08-20 Konrad (fixed the first position in the table)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<h1>Key takeaways</h1>
+
+<br>
+
+
+<p>1. The <strong>comparison</strong> (otherwise known as <i>relational</i>) operators are used to compare values. The table below illustrates how the comparison operators work, assuming that <codel>x = 0</codel>, <codel>y = 1</codel>, and <codel>z = 0</codel>:</p>
+
+
+<table style="width:100%">
+
+<tr>
+<th style="width:15%">Operator</th>
+<th style="width:40%">Description</th>
+<th style="width:35%">Example</th>
+</tr>
+
+<tr>
+<td><code>==</code></td>
+<td>returns <code>True</code> if operands' values are equal, and <code>False</code> otherwise</td>
+<td><code class="codep syntax-color">x == y  # False
+x == z  # True
+</code></td>
+</tr>
+
+<tr>
+<td><code>!=</code></td>
+<td>returns <code>True</code> if operands' values are not equal, and <code>False</code> otherwise</td>
+<td><code class="codep syntax-color">x != y  # True
+x != z  # False
+</code></td>
+</tr>
+
+<tr>
+<td><code>&gt;</code></td>
+<td><code>True</code> if the left operand's value is greater than the right operand's value, and <code>False</code> otherwise</td>
+<td><code class="codep syntax-color">x > y  # False
+y > z  # True
+</code></td>
+</tr>
+
+<tr>
+<td><code>&lt;</code></td>
+<td><code>True</code> if the left operand's value is less than the right operand's value, and <code>False</code> otherwise</td>
+<td><code class="codep syntax-color">x < y  # True
+y < z  # False
+</code></td>
+</tr>
+
+<tr>
+<td><code>&ge;</code></td>
+<td><code>True</code> if the left operand's value is greater than or equal to the right operand's value, and <code>False</code> otherwise</td>
+<td><code class="codep syntax-color">x >= y  # False
+x >= z  # True
+y >= z  # True
+</code></td>
+</tr>
+
+<tr>
+<td><code>&le;</code></td>
+<td><code>True</code> if the left operand's value is less than or equal to the right operand's value, and <code>False</code> otherwise</td>
+<td><code class="codep syntax-color">x <= y  # True
+x <= z  # True
+y <= z  # False
+</code></td>
+</tr>
+
+</table>
+
+<p>2. When you want to execute some code only if a certain condition is met, you can use a <strong>conditional statement</strong>:</p>
+
+<ul>
+<li>a single <code>if</code> statement, e.g.:</li>
+<br>
+<code class="codep copy syntax-color">x = 10
+
+if x == 10: # condition
+    print("x is equal to 10")  # Executed if the condition is True.
+</code>
+<br>
+
+<li>a series of <code>if</code> statements, e.g.:</li>
+<br>
+<code class="codep copy syntax-color">x = 10
+
+if x > 5: # condition one
+    print("x is greater than 5")  # Executed if condition one is True.
+
+if x < 10: # condition two
+    print("x is less than 10")  # Executed if condition two is True.
+
+if x == 10: # condition three
+    print("x is equal to 10")  # Executed if condition three is True.
+	</code>
+
+<br>
+
+<p>Each <code>if</code> statement is tested separately.</p>
+
+</ul>
+
+<br>
+<br>
+
+</div>
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+
+<ul>
+
+<li>an <code>if-else</code> statement, e.g.:</li>
+<br>
+<code class="codep copy syntax-color">x = 10
+
+if x < 10:  # Condition
+    print("x is less than 10")  # Executed if the condition is True.
+
+else:
+    print("x is greater than or equal to 10")  # Executed if the condition is False.
+</code>
+<br>
+
+<li>a series of <code>if</code> statements followed by an <code>else</code>, e.g.:</li>
+<br>
+
+<code class="codep copy syntax-color">x = 10
+
+if x > 5:  # True
+    print("x > 5")
+
+if x > 8:  # True
+    print("x > 8")
+
+if x > 10:  # False
+    print("x > 10")
+
+else:
+    print("else will be executed")
+</code>
+
+<br>
+
+<p>Each <code>if</code> is tested separately. The body of <code>else</code> is executed if the last <code>if</code> is <code>False</code>.</p>
+
+<li>The <code>if-elif-else</code> statement, e.g.:</li>
+
+<br>
+<code class="codep copy syntax-color">x = 10
+
+if x == 10:  # True
+    print("x == 10")
+
+if x > 15:  # False
+    print("x > 15")
+
+elif x > 10:  # False
+    print("x > 10")
+
+elif x > 5:  # True
+    print("x > 5")
+
+else:
+    print("else will not be executed")
+</code>
+
+<br>
+
+<p>If the condition for <code>if</code> is <code>False</code>, the program checks the conditions of the subsequent <code>elif</code> blocks – the first <code>elif</code> block that is <code>True</code> is executed. If all the conditions are <code>False</code>, the <code>else</code> block will be executed.</p>
+
+<li>Nested conditional statements, e.g.:</li>
+
+<br>
+<code class="codep copy syntax-color">x = 10
+
+if x > 5:  # True
+    if x == 6:  # False
+        print("nested: x == 6")
+    elif x == 10:  # True
+        print("nested: x == 10")
+    else:
+        print("nested: else")
+else:
+    print("else")
+</code>
+<br>
+
+</ul>
+
+
+<br>
+
+</div>
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

@@ -1,0 +1,93 @@
+<problem chapter='1' section='1' slide='1' problem='6' title='Programozási alapok | Fordítás vs. értelmezés'>
+
+<!--
+Update history:
+2020-07-07 Grzegorz (formatted)
+-->
+
+<div class="container">
+<div class="row">
+
+
+<div class="small-12 large-12 columns">
+
+<br>
+
+<center><h1>Fordítás vs. értelmezés - előnyök és hátrányok</h1></center>
+
+<br>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th><center>FORDÍTÁS</center></th>
+<th><center>ÉRTELMEZÉS</center></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><center><p><span class="success label"><strong>ELŐNYÖK</strong></span></p></center></td>
+<td>
+<ul>
+<li>a lefordított kód végrehajtása általában gyorsabb;</li>
+<li>csak a programozónak kell rendelkeznie a fordítóval - a végfelhasználó anélkül is használhatja a kódot;</li>
+<li>a lefordított programot gépikódban tároljuk - mivel ezt nagyon nehéz megérteni, a saját találmányok és programozási trükkök valószínűleg az te titkaid maradnak.</li>
+</ul>
+</td>
+<td>
+<ul>
+<li>a kódot azonnal futtathatod, amint elkészült - nincsenek további fordítási fázisok;</li>
+<li>a kódot nem a gépi, hanem a programozási nyelven tároljuk - ez azt jelenti, hogy különböző utasításkészletű számítógépeken is  futtatható; nem kell külön-külön lefordítani a kódot minden egyes architektúrára.</li>
+</ul>
+</td>
+</tr>
+
+<tr>
+<td><center><p><span class="alert label"><strong>HÁTRÁNYOK</strong></span></p></center></td>
+<td>
+<ul>
+<li>maga a fordítás nagyon időigényes folyamat lehet - előfordulhat, hogy nem tudod azonnal futtatni a kódot a módosítás után;</li>
+<li>annyi fordítóprogrammal kell rendelkezned, ahány hardverplatformon szeretnéd a kódot futtatni.</li>
+</ul>
+</td>
+<td>
+<ul>
+<li>ne várd, hogy az értelmező nagy sebességre gyorsítja a kódodat - a kódodnak meg kell osztania a számítógép erőforrásait az értelmezővel, így nem lehet igazán gyors;</li>
+<li>mind neked, mind a végfelhasználónak rendelkeznie kell a futtató-környezettel a kód futtatásához.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="small-12 large-12 columns">
+
+
+<p><b>Mit jelent mindez számodra?</b>
+
+
+<ul>
+<li>A Python egy <strong>értelmezett (interpretált) nyelv</strong>. Ez azt jelenti, hogy a leírt előnyök és hátrányok mindegyikét örökli. Természetesen mindkét halmazhoz hozzáad némi egyedi tulajdonságot.</li>
+
+<li>Ha Pythonban akarsz programozni, szükséged lesz a <strong>Python értelmezőre</strong>. Enélkül nem fogod tudni futtatni a kódodat. Szerencsére a <strong>Python ingyenes</strong>. Ez az egyik legfontosabb előnye.</li>
+</ul>
+
+<p>Történelmi okból az interpretált nyelveket gyakran nevezik <strong>szkriptnyelveknek</strong>, a velük kódolt forrásprogramokat pedig <strong>szkripteknek</strong>.</p>
+
+<br>
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

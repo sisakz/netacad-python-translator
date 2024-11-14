@@ -1,0 +1,74 @@
+﻿<problem chapter='1' section='2' slide='1' problem='6' title='Kezdjünk bele a Python programozásba!'>
+
+<!--
+Update history:
+2020-07-07 Grzegorz (formatted)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<h1>Hibák és javításuk</h1>
+
+<p>Most indítsd el újra az IDLE-t.</p>
+
+<ul>
+<li>Kattints a <i>Fájl</i>, <i>Megnyitás</i> gombra, mutass a korábban elmentett fájlra, és engedd, hogy az IDLE beolvassa.</li>
+<li>Próbáld meg újra futtatni az <i>F5</i> billentyű lenyomásával, amikor a szerkesztőablak aktív.</li>
+</ul>
+
+<p>Amint láthatod, az IDLE képes elmenteni a kódodat, és előhívni, amikor újra szükséged van rá.</p>
+
+<p>Az IDLE tartalmaz még egy hasznos funkciót.</p>
+
+<ul>
+<li>Először is távolítsd el a záró zárójelet.</li>
+<li>Ezután ismét írd be a zárójelet.</li>
+</ul>
+
+<p>A kód kimenetének úgy kell kinéznie, mint itt lent:</p>
+
+<codep>Hisssssss...</codep>
+
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+
+
+<br>
+
+
+</div>
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+
+
+<img class="lightbox" src="/uploads/media/default/0001/01/ed47c4a8c77b4dd27800cb500f5f412c1fcb12fd.png" alt="Python 3.7.0 IDLE - Running a program after removing parenthesis from the print() function" width="80%">
+
+<br><br>
+
+<p>Minden alkalommal, amikor záró zárójelet írsz a programba, az IDLE megjeleníti a kódnak a megfelelő zárójelpárral határolt részét. Ez segít emlékezni arra, hogy <strong>párban helyezd el őket.</strong></p>
+
+<p>Vedd ki ismét a záró zárójelet. A kód hibás lesz, most már szintaktikai hibát tartalmaz. A program nem tud lefutni.
+</p>
+
+
+
+<br>
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

@@ -1,0 +1,113 @@
+<problem chapter='4' section='5' slide='1' problem='8' title='Creating functions − recursion'>
+
+<!--
+Update history:
+2020-08-18 Grzegorz (reviewed, re-formatted, PEP-8 compliance check)
+-->
+
+<code>
+
+def fib(n):
+    if n < 1:
+         return None
+    if n < 3:
+        return 1
+
+    elem_1 = elem_2 = 1
+    the_sum = 0
+    for i in range(3, n + 1):
+        the_sum = elem_1 + elem_2
+        elem_1, elem_2 = elem_2, the_sum
+    return the_sum
+
+
+for n in range(1, 10):
+    print(n, "->", fib(n))
+
+</code>
+
+
+
+<h1>Some simple functions: recursion</h1>
+
+<p>There's one more thing we want to show you to make everything complete − it's <strong>recursion</strong>.</p>
+
+<p>This term may describe many different concepts, but one of them is especially interesting − the one referring to computer programming.</p>
+
+<p>In this field, recursion is a <strong>technique where a function invokes itself</strong>.</p>
+
+<p>These two cases seem to be the best to illustrate the phenomenon − factorials and Fibonacci numbers. Especially the latter.</p>
+
+<p><strong>The Fibonacci numbers definition is a clear example of recursion</strong>. We already told you that:</p>
+
+
+<p><font size="+1"><strong>Fib<sub>i</sub> = Fib<sub>i-1</sub> + Fib<sub>i-2</sub></strong></font></p>
+
+
+<p>The definition of the i<sup>th</sup> number refers to the i-1 number, and so on, till you reach the first two.</p>
+
+<p>Can it be used in the code? Yes, it can. It can also make the code shorter and clearer.</p>
+
+
+<p>The second version of our <codel>fib()</codel> function makes direct use of this definition:</p>
+
+<codep class="syntax-color copy">def fib(n):
+    if n < 1:
+        return None
+    if n < 3:
+        return 1
+    return fib(n - 1) + fib(n - 2)
+</codep>
+
+<br>
+
+<p>The code is much clearer now.</p>
+
+<p>But is it really safe? Does it entail any risk?</p>
+
+<p>Yes, there is a little risk indeed. <strong>If you forget to consider the conditions which can stop the chain of recursive invocations, the program may enter an infinite loop</strong>. You have to be careful.</p>
+
+
+<p>The factorial has a second, <strong>recursive</strong> side too. Look:</p>
+
+<p style="font-family:courier new;">n! = 1 &times; 2 &times; 3 &times; ... &times; n-1 &times; n</p>
+<br>
+
+<p>It's obvious that:</p>
+
+<p style="font-family:courier new;">1 &times; 2 &times; 3 &times; ... &times; n-1 = (n-1)!</p>
+
+<br>
+
+<p>So, finally, the result is:</p>
+
+<p style="font-family:courier new;">n! = (n-1)! &times; n</p
+<br>
+
+<p>This is in fact a ready recipe for our new solution.</p>
+
+<br>
+
+<p>Here it is:</p>
+
+<codep class="syntax-color copy">def factorial_function(n):
+    if n < 0:
+        return None
+    if n < 2:
+        return 1
+    return n * factorial_function(n - 1)
+</codep>
+
+<br>
+
+<p>Does it work? Yes, it does. Try it for yourself.</p>
+
+<p>Our short <i>functional</i> journey is almost over. The next section will take care of two curious Python data types: tuples and dictionaries.</p>
+
+
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

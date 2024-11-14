@@ -1,0 +1,98 @@
+<problem chapter='2' section='4' slide='1' problem='4' title='Variables ‒ data-shaped boxes'>
+
+<!--
+Update history:
+2020-07-17 Grzegorz (re-formatted; code - syntax-color, blank line added)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<h1>Using variables</h1>
+
+<p>You're allowed to use as many variable declarations as you need to achieve your goal, like this:</p>
+
+<codep class="syntax-color">var = 1
+account_balance = 1000.0
+client_name = 'John Doe'
+print(var, account_balance, client_name)
+print(var)
+</codep>
+
+<br>
+
+<p>You're <b>not allowed to use a variable which doesn't exist</b> (in other words, a variable that was not assigned a value).</p>
+
+<p>This example will <strong>cause an error</strong>:</p>
+
+<codep><mark style="background-color:#e6f2ff;">v</mark>ar = 1
+print(<mark style="background-color:#e6f2ff;">V</mark>ar)
+
+</codep>
+
+
+<br>
+
+<p>We've tried to use a variable named <codel>Var</codel>, which doesn't have any value (note: <codel>var</codel> and <codel>Var</codel> are different entities, and have nothing in common as far as Python's concerned).</p>
+
+<br>
+
+</div>
+
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<h1></h1>
+
+
+<p><span class="label" style="background-color:orange"><b>REMEMBER</b></span></p>
+
+<p>You can use the <codel>print()</codel> function and combine text and variables using the <codel>+</codel> operator to output strings and variables, e.g.:</p>
+
+<codep>var = "3.8.5"
+print("Python version: " <mark style="background-color:#e6f2ff;">+</mark> var)
+
+</codep>
+
+<br>
+
+<p>Can you guess the output of the snippet above?</p>
+
+<button class="button tiny" onclick="solution('sol')">Check</button>
+
+<p id="sol" style="display: none;">
+<codep>Python version: 3.8.5</codep>
+</p>
+
+<script>
+function solution (id) {
+    var element = document.getElementById(id);
+    
+if (element.style.display === "none") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
+    }
+}
+</script>
+
+<br>
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

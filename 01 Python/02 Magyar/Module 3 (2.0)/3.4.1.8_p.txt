@@ -1,0 +1,89 @@
+<problem chapter='3' section='4' slide='1' problem='8' title='Listák | Tagfüggvények'>
+
+<!--
+Update history:
+2020-08-11 Grzegorz (reviewed), code formatting
+-->
+
+<code>
+numbers = [111, 7, 2, 1]
+print(len(numbers))
+print(numbers)
+
+###
+
+numbers.append(4)
+
+print(len(numbers))
+print(numbers)
+
+###
+
+numbers.insert(0, 222)
+print(len(numbers))
+print(numbers)
+
+#
+
+</code>
+
+
+
+<h1>Elemek hozzáadása egy listához: <font face="courier new">append()</font> és <font face="courier new">insert()</font></h1>
+
+<p>Egy új elemet a meglévő lista végére lehet <i>ragasztani</i>:</p>
+
+<codep>list<mark style="background-color:#e6f2ff;">.append(value)</mark>
+
+</codep>
+
+<br>
+
+
+
+<p>Az ilyen műveletet az <codel>append()</codel> nevű metódus végzi. A tagfüggvény átveszi az argumentum értékét, és a tagfüggvényt birtokló <strong>lista végére</strong> helyezi.</p>
+
+<p>A lista hossza ekkor eggyel nő.</p>
+
+
+<hr>
+
+<p>Az <codel>insert()</codel> metódus egy kicsit okosabb. A <strong>lista bármelyik pontján</strong> hozzá tud adni egy új elemet, nem csupán a végén.</p>
+
+<codep>list<mark style="background-color:#e6f2ff;">.insert(location, value)</mark>
+
+</codep>
+
+<br>
+
+<p>Két argumentumot fogad el:</p>
+
+<ul>
+<li>az első mutatja a beillesztendő elem kívánt helyét. Megjegyzés: Az összes meglévő elem, amely az új elemtől jobbra helyezkedik el (beleértve a jelzett helyen lévő elemet is), jobbra tolódik, hogy helyet csináljon az új elemnek;</li>
+
+<li>a második a beillesztendő elem.</li>
+</ul>
+
+Nézd meg a kódot a szerkesztőben! Nézd meg, hogyan használjuk az <codel>append()</codel> és <codel>insert()</codel> tagfüggvényeket. Figyelj arra, hogy mi történik az <codel>insert()</codel> használata után: a korábbi első elem most a második, a második a harmadik, és így tovább.</p>
+
+
+<hr>
+
+
+<p>A szerkesztő utolsó kódsora után add hozzá a következő kódrészletet:</p>
+
+<codep class="syntax-color">numbers.insert(1, 333)
+</codep>
+
+<br>
+
+<p>Írasd ki a végleges lista tartalmát a képernyőre és nézd meg, mi történik! A fenti kódrészlet a <codel>333</codel>-at illeszti be a listába, így az lesz a második elem. A korábbi második elem lesz a harmadik, a harmadik a negyedik, és így tovább.</p>
+
+
+
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

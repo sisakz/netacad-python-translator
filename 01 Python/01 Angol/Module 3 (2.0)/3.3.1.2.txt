@@ -1,0 +1,204 @@
+<problem chapter='3' section='3' slide='1' problem='2' title='Logic and bit operations in Python | and, or, not'>
+
+<!--
+Update history:
+2020-07-21 Grzegorz (reviewed, reformatted)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-4 columns">
+
+
+<h1>Logical expressions</h1>
+
+<p>Let's create a variable named <codel>var</codel> and assign <codel>1</codel> to it. The following conditions are <strong>pairwise equivalent</strong>:</p>
+
+<codep># Example 1:
+print(<mark style="background-color:#e6f2ff;">var > 0</mark>)
+print(<mark style="background-color:#e6f2ff;">not (var <= 0)</mark>)
+
+
+# Example 2:
+print(<mark style="background-color:#e6f2ff;">var != 0</mark>)
+print(<mark style="background-color:#e6f2ff;">not (var == 0)</mark>)
+
+</codep>
+
+<br>
+
+<hr>
+
+<p>You may be familiar with De Morgan's laws. They say that:</p>
+
+<p><i>The negation of a conjunction is the disjunction of the negations.</i></p>
+
+<p><i>The negation of a disjunction is the conjunction of the negations.</i></p>
+
+<br>
+
+<p>Let's write the same thing using Python:</p>
+
+<codep class="syntax-color">not (p and q) == (not p) or (not q)
+not (p or q) == (not p) and (not q)
+</codep>
+
+<br>
+
+
+<p>Note how the parentheses have been used to code the expressions ‒ we put them there to improve readability.</p>
+
+<p>We should add that none of these two-argument operators can be used in the abbreviated form known as <codel>op=</codel>. This exception is worth remembering.</p>
+
+
+<h2>Logical values vs. single bits</h2>
+
+
+<p>Logical operators take their arguments as a whole regardless of how many bits they contain. The operators are aware only of the value: zero (when all the bits are reset) means <codel>False</codel>; not zero (when at least one bit is set) means <codel>True</codel>.</p>
+
+<p>The result of their operations is one of these values: <codel>False</codel> or <codel>True</codel>. This means that this snippet will assign the value <codel>True</codel> to the <codel>j</codel> variable if <codel>i</codel> is not zero; otherwise, it will be <codel>False</codel>.</p>
+
+<codep class="syntax-color">i = 1
+j = not not i
+</codep>
+
+<br>
+
+
+
+
+
+</div>
+
+
+
+
+
+<div class="small-12 large-8 columns">
+
+<h1>Bitwise operators</h1>
+
+<p>However, there are four operators that allow you to <strong>manipulate single bits of data</strong>. They are called <strong>bitwise operators</strong>.</p>
+
+<p>They cover all the operations we mentioned before in the logical context, and one additional operator. This is the <codel>xor</codel> (as in <strong>exclusive or</strong>) operator, and is denoted as <codel>^</codel> (caret).</p>
+
+<p>Here are all of them:</p>
+
+<ul>
+<li><codel>&amp;</codel> (ampersand) ‒ bitwise conjunction;</li>
+<li><codel>|</codel> (bar) ‒ bitwise disjunction;</li>
+<li><codel>~</codel> (tilde) ‒ bitwise negation;</li>
+<li><codel>^</codel> (caret) ‒ bitwise exclusive or (xor).</li>
+</ul>
+
+<br>
+
+
+
+<table style="width:98%" align="middle">
+<caption>Bitwise operations (<codel>&amp;</codel>, <codel>|</codel>, and <codel>^</codel>)</caption>
+
+<tr>
+<th>Argument <codel>A</codel></th>
+<th>Argument <codel>B</codel></th>
+<th><codel>A &amp; B</codel></th>
+<th><codel> A | B</codel></th>
+<th><codel>A ^ B</codel></th>
+</tr>
+
+<tr>
+<td><codel>0</codel></td>
+<td><codel>0</codel></td>
+<td><codel>0</codel></td>
+<td><codel>0</codel></td>
+<td><codel>0</codel></td>
+</tr>
+
+<tr>
+<td><codel>0</codel></td>
+<td><codel>1</codel></td>
+<td><codel>0</codel></td>
+<td><codel>1</codel></td>
+<td><codel>1</codel></td>
+</tr>
+
+<tr>
+<td><codel>1</codel></td>
+<td><codel>0</codel></td>
+<td><codel>0</codel></td>
+<td><codel>1</codel></td>
+<td><codel>1</codel></td>
+</tr>
+
+<tr>
+<td><codel>1</codel></td>
+<td><codel>1</codel></td>
+<td><codel>1</codel></td>
+<td><codel>1</codel></td>
+<td><codel>0</codel></td>
+</tr>
+
+</table>
+
+
+<br>
+
+<table style="width:45%" align="middle">
+<caption>Bitwise operations (~)</caption>
+
+<tr>
+<th>Argument</th>
+<th><codel>~</codel> Argument</th>
+
+</tr>
+
+<tr>
+<td><codel>0</codel></td>
+<td><codel>1</codel></td>
+
+</tr>
+
+<tr>
+<td><codel>1</codel></td>
+<td><codel>0</codel></td>
+
+</tr>
+</table>
+
+<br>
+
+<p>Let's make it easier:</p>
+
+<ul>
+<li><codel>&</codel> requires exactly two <codel>1</codel>s to provide <codel>1</codel> as the result;</li>
+<li><codel>|</codel> requires at least one <codel>1</codel> to provide <codel>1</codel> as the result;</li>
+<li><codel>^</codel> requires exactly one <codel>1</codel> to provide <codel>1</codel> as the result.</li>
+</ul>
+
+<br>
+
+<hr>
+
+<p>Let us add an important remark: the arguments of these operators <strong>must be integers</strong>; we must not use floats here.</p>
+
+<p>The difference in the operation of the logical and bit operators is important: <strong>the logical operators do not penetrate into the bit level of its argument</strong>. They're only interested in the final integer value.</p>
+
+<p>Bitwise operators are stricter: they deal with <strong>every bit separately</strong>. If we assume that the integer variable occupies 64 bits (which is common in modern computer systems), you can imagine the bitwise operation as a 64-fold evaluation of the logical operator for each pair of bits of the arguments. This analogy is obviously imperfect, as in the real world all these 64 operations are performed at the same time (simultaneously).</p>
+
+
+
+<br>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

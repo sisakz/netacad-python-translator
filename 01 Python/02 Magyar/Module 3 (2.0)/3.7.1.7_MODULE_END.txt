@@ -1,0 +1,70 @@
+<problem chapter='3' section='7' slide='1' problem='7' title='Modul zárás'>
+
+<!--
+Update history:
+2020-08-12 Grzegorz (reviewed)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<h1>Gratulálunk! Befejezted a 3. modult.</h1>
+
+<br>
+
+
+<p>Szép munka! Elérted a 3. modul végét, és egy fontos mérföldkövet teljesítettél a Python programozási tanulmányaidban. Íme egy rövid összefoglaló a 3. modulban tárgyalt és megismert célokról:</p>
+
+<ul>
+<li>Logikai értékek alkalmazása a különböző értékek összehasonlítására és a végrehajtási ágak vezérlésére az <codel>if</codel> és <codel>if-else</codel> kifejezések segítségével;</li>
+
+<li>a ciklusok (<codel>while</codel> és <codel>for</codel>) használata, valamint a viselkedésük szabályozása a <codel>break</codel> és <codel>continue</codel> utasítások segítségével;</li>
+
+<li>a logikai és a bitwise (bitenkénti) műveletek közötti különbség;</li>
+
+<li>a listák és a listafeldolgozás fogalma, beleértve a <codel>for</codel> ciklus által biztosított bejárást (iterációt) és a szeletelést;</li>
+
+<li>a többdimenziós tömbök fogalma.</li>
+
+
+</ul>
+
+<br>
+
+<p>Most már készen állsz a modul ellenőrző kérdéssorának kitöltésére és a 3. modulzáró teszt teljesítésére, amely segít felmérni, hogy mit tanultál eddig.</p>
+
+
+<br>
+<br>
+
+</div>
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+
+
+<center><img src="/uploads/media/default/0001/01/29ed2aa31a1a26221e4eac3b69d973a33cbf562e.png" width="65%" alt="Module completion - congratulations"></center>
+<br>
+
+
+
+
+<br>
+
+</div>
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

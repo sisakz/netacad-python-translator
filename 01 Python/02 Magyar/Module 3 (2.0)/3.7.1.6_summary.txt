@@ -1,0 +1,112 @@
+<problem chapter='3' section='7' slide='1' problem='6' title='SZAKASZ ÖSSZEFOGLALÁS'>
+
+<!--
+Update history:
+2020-08-12 Grzegorz (reviewed)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<h1>A legfontosabb tudnivalók</h1>
+
+<br>
+
+
+<p>1. A <strong>listaleképezés (list comprehension)</strong> lehetővé teszi, hogy új listákat hozz létre a meglévőkből, tömör és elegáns módon. A listaleképezés szintaxisa a következőképpen néz ki:</p>
+
+<codep>[expression <mark style="background-color:#e6f2ff;">for</mark> element <mark style="background-color:#e6f2ff;">in</mark> list <mark style="background-color:#e6f2ff;">if</mark> conditional]
+
+</codep>
+<br>
+
+<p>ami tulajdonképpen a következő kódnak felel meg:</p>
+
+<codep><mark style="background-color:#e6f2ff;">for</mark> element <mark style="background-color:#e6f2ff;">in</mark> list:
+    <mark style="background-color:#e6f2ff;">if</mark> conditional:
+        expression
+
+</codep>
+<br>
+
+<p>Íme egy példa egy listaleképezésre. A kód egy öt elemű listát hoz létre, amely az első öt természetes szám 3. hatványával van feltöltve:</p>
+
+<codep class="syntax-color">cubed = [num ** 3 for num in range(5)]
+print(cubed)  # outputs: [0, 1, 8, 27, 64]
+</codep>
+<br>
+
+
+<p>2. A Pythonban <strong>egymásba ágyazott listákat</strong> használhatunk <strong>mátrixok</strong> (azaz kétdimenziós listák) létrehozására. Például:</p>
+
+<img class="lightbox" src="/uploads/media/default/0001/01/9c20da970fc3b140efa05e507050d181482477ab.png" alt="Table - a two-dimensional array" width="65%">
+<br><br>
+
+<codep class="syntax-color"># A four-column/four-row table ‒ a two dimensional array (4x4)
+
+table = [[":(", ":)", ":(", ":)"],
+         [":)", ":(", ":)", ":)"],
+         [":(", ":)", ":)", ":("],
+         [":)", ":)", ":)", ":("]]
+
+print(table)
+print(table[0][0])  # outputs: ':('
+print(table[0][3])  # outputs: ':)'
+</codep>
+
+<br>
+
+
+
+<br>
+
+</div>
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+
+<p>3. Annyi listát ágyazhatunk listákba, amennyit csak akarunk, és így n-dimenziós listákat hozhatunk létre, pl. három-, négy- vagy akár hatvannégydimenziós tömböket. Például:</p>
+
+<img class="lightbox" src="/uploads/media/default/0001/01/c2db5fba6dddfb6606c305c21a0445c516c99a7f.png" alt="Cube - a three-dimensional array" width="65%">
+<br><br>
+
+<codep class="syntax-color"># Cube - a three-dimensional array (3x3x3)
+
+cube = [[[':(', 'x', 'x'],
+         [':)', 'x', 'x'],
+         [':(', 'x', 'x']],
+
+        [[':)', 'x', 'x'],
+         [':(', 'x', 'x'],
+         [':)', 'x', 'x']],
+
+        [[':(', 'x', 'x'],
+         [':)', 'x', 'x'],
+         [':)', 'x', 'x']]]
+
+print(cube)
+print(cube[0][0][0])  # outputs: ':('
+print(cube[2][2][0])  # outputs: ':)'
+</codep>
+<br>
+
+
+<br>
+
+</div>
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

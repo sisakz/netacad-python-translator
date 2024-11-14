@@ -1,0 +1,69 @@
+<problem chapter='3' section='2' slide='1' problem='7' title='Ciklusvezérlés | break, continue'>
+
+<!--
+Update history:
+2020-07-20 Grzegorz (reviewed, re-formatted)
+-->
+
+<code>
+# break - example
+
+print("The break instruction:")
+for i in range(1, 6):
+    if i == 3:
+        break
+    print("Inside the loop.", i)
+print("Outside the loop.")
+
+
+# continue - example
+
+print("\nThe continue instruction:")
+for i in range(1, 6):
+    if i == 3:
+        continue
+    print("Inside the loop.", i)
+print("Outside the loop.")
+
+</code>
+
+
+<h1>A <font face="courier new">break</font> és <font face="courier new">continue</font> kifejezések</h1>
+
+
+<p>Eddig úgy kezeltük a ciklus törzsét, mint egy oszthatatlan és elválaszthatatlan utasítássorozatot, amelyet a ciklus minden egyes iterációjánál teljes egészében végrehajtunk. Fejlesztőként azonban a következő lehetőségeid vannak:</p>
+
+<ul>
+
+<li>a ciklus egészét nem szükséges folytatni, így a program befejezi a ciklus törzsének további végrehajtását, és továbbmegy;</li>
+
+<li>a ciklus következő iterációját a jelenlegi iteráció végrehajtásának befejezése nélkül kell elindítani.</li>
+
+</ul>
+
+
+<p>A Python két speciális utasítást biztosít mindkét feladat végrehajtásához. A pontosság kedvéért meg kell jegyeznünk, hogy ezek egyike sem nélkülözhetetlen a nyelvben. Egy tapasztalt programozó képes bármely algoritmust ezen utasítások nélkül is kódolni. Az ilyen kiegészítéseket, amelyek nem javítják a nyelv kifejezőerejét, hanem csak megkönnyítik a fejlesztő munkáját, szokták <strong>szintaktikai édességnek</strong>, vagy szintaktikai cukorkának nevezni.</p>
+
+<p>Ez a két utasítás a következő:</p>
+
+<ul>
+
+<li><codel>break</codel> – azonnal kilép a ciklusból, és feltétel nélkül befejezi a ciklus működését. A program a ciklus törzse után a legközelebbi utasítás végrehajtását kezdi el;</li>
+<li><codel>continue</codel> – úgy viselkedik, mintha a program hirtelen elérte volna a ciklus törzs végét. A következő iteráció elindul, és a feltétel kiértékelése azonnal megtörténik.</li>
+
+</ul>
+
+
+<p>Mindkét szó <strong>kulcsszó</strong>.</p>
+
+<p>Most két egyszerű példán keresztül mutatjuk be, hogyan működik a két utasítás. Nézd meg a kódot a szerkesztőben! Futtasd le a programot, és vizsgáld a kimenetet! Módosítsd a kódot és kísérletezz!</p>
+
+
+<br>
+
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

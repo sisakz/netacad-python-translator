@@ -1,0 +1,71 @@
+<problem chapter='2' section='4' slide='1' problem='7' title='LAB: Változók'>
+
+<!--
+Update history:
+2020-07-17 Grzegorz (re-formatted; code in hint and sample solution- syntax-color, blank line added; variables change)
+-->
+
+<span class="label" style="background-color:rgb(205, 168, 105);"><strong>LABORGYAKORLAT</strong></span>
+
+<br><br>
+
+<h2>Becsült idő</h2>
+<p>10 perc</p>
+
+<h2>Nehézségi szint</h2>
+<p>Könnyű</p>
+
+<h2>Célok</h2>
+<ul>
+<li>ismerkedés a különböző adattípusok tárolásának és kezelésének módszereivel Pythonban;</li>
+<li>tapasztalat gyűjtése a Python kódolásban.</li>
+</ul>
+
+<h2>Feladatleírás</h2>
+<p>Íme egy rövid történet:</p>
+<p>Egyszer volt, hol nem volt, Almaországban Jánosnak volt három almája, Máriának öt almája, Ádámnak pedig hat almája. Mindannyian nagyon boldogok voltak és sokáig éltek.</p>
+<p>A feladatod:</p>
+<ul>
+<li>hozd létre a következő változókat: <codel>john</codel>, <codel>mary</codel>, és <codel>adam</codel>;</li>
+<li>rendelj értékeket a változókhoz. Az értékeknek meg kell egyezniük a János (john), Mária (mary) és Ádám (adam) által birtokolt gyümölcsök számával;</li>
+<li>miután a számokat a változókban tároltad, írd ki a változókat egy sorba, és válaszd el őket vesszővel;</li>
+<li>hozz létre egy új, <codel>total_apples</codel> nevű változót, amelynek értéke a három korábbi változó összeadásával jön létre;</li>
+<li>a <codel>total_apples</codel> változóban tárolt értéket írasd ki a konzolra;</li>
+<li><strong>kísérletezz a kódoddal</strong>: hozz létre új változókat, rendelj hozzájuk különböző értékeket, és végezz velük különböző aritmetikai műveleteket (pl. +, -, *, /, // stb.). Próbálj meg egy karakterláncot és egy egész számot együtt kiírni egy sorba, pl.: <codel>"Total number of apples:"</codel> és <codel>total_apples</codel>.</li>
+</ul>
+
+<br>
+
+<labMode>true</labMode>
+
+
+<hint>john = 3
+mary = 5
+adam = 6
+
+print(john, mary, adam, sep=',')
+
+# Put the rest of your code here.
+
+</hint>
+
+
+
+<sampleSolution>
+john = 3
+mary = 5
+adam = 6
+
+print(john, mary, adam, sep=',')
+
+total_apples = john + mary + adam
+print(total_apples)
+
+# peter = 12.5
+# suzy = 2
+# print(peter / suzy)
+# print("Total number of apples:", total_apples)
+
+</sampleSolution>
+
+</problem>

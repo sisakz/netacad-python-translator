@@ -1,0 +1,105 @@
+﻿<problem chapter='2' section='6' slide='1' problem='11' title='LAB: Operátorok és kifejezések'>
+
+<!--
+Update history:
+2020-07-17 Grzegorz (reviewed; code - blank lines added to editor, hint, sample solution)
+-->
+
+<code>
+
+hour = int(input("Starting time (hours): "))
+mins = int(input("Starting time (minutes): "))
+dura = int(input("Event duration (minutes): "))
+
+# Write your code here.
+
+</code>
+
+<span class="label" style="background-color:rgb(205, 168, 105);"><strong>LABORGYAKORLAT</strong></span>
+
+<br><br>
+
+<h2>Becsült idő</h2>
+<p>15-20 perc</p>
+
+<h2>Nehézségi szint</h2>
+<p>Könnyű</p>
+
+<h2>Célok</h2>
+<ul>
+<li>fejleszteni a számok, operátorok és aritmetikai műveletek használatának módját Pythonban;</li>
+<li>használni a <codel>print()</codel> függvény formázási képességeit;</li>
+<li>megtanulni a mindennapi élet jelenségeinek programozási nyelven történő kifejezését.</li>
+</ul>
+
+
+<h2>Feladatleírás</h2>
+<p>A feladatod, hogy készíts egy egyszerű programot, amely képes kiszámítani egy percekben megadott (tetszőlegesen nagy) időszak <strong>végét</strong>. 
+A kezdési idő az órák (0..23) és a percek (0..59) számpárjaként van megadva. 
+Az eredményt a konzolra kell kiírni.</p>
+
+<p>Ha például egy esemény <strong>12:17</strong>-kor kezdődik és <strong>59 percig</strong> tart, akkor <strong>13:16</strong>-kor ér véget.</p>
+
+<p>Ne aggódj a kódod tökéletlenségei miatt. Nem baj, ha érvénytelen időt fogad el, a legfontosabb dolog az, hogy a kód érvényes eredményeket adjon érvényes bemeneti adatokra.</p>
+
+<p>Alaposan teszteld a kódot! Tipp: a <codel>%</codel> operátor használata lehet a siker kulcsa.</p>
+
+
+<h2>Tesztadatok</h2>
+
+<p>Minta bemenet:
+<codep>12
+17
+59</codep></p>
+
+<p>Elvárt kimenet: <codel>13:16</codel></p>
+
+<br>
+
+<p>Minta bemenet:
+<codep>23
+58
+642</codep></p>
+
+<p>Elvárt kimenet: <codel>10:40</codel></p>
+
+<br>
+
+<p>Minta bemenet:
+<codep>0
+1
+2939</codep></p>
+
+<p>Elvárt kimenet: <codel>1:0</codel></p>
+
+<br>
+
+<studyMode>false</studyMode>
+<labMode>true</labMode>
+
+
+
+<hint>hour = int(input("Starting time (hours): "))
+mins = int(input("Starting time (minutes): "))
+dura = int(input("Event duration (minutes): "))
+# find a total of all minutes
+# find a number of hours hidden in minutes and update the hour
+# correct minutes to fall in the (0..59) range
+# correct hours to fall in the (0..23) range
+print(hour, ":", mins, sep='')
+
+</hint>
+
+
+<sampleSolution>hour = int(input("Starting time (hours): "))
+mins = int(input("Starting time (minutes): "))
+dura = int(input("Event duration (minutes): "))
+mins = mins + dura # find a total of all minutes
+hour = hour + mins // 60 # find a number of hours hidden in minutes and update the hour
+mins = mins % 60 # correct minutes to fall in the (0..59) range
+hour = hour % 24 # correct hours to fall in the (0..23) range
+print(hour, ":", mins, sep='')
+
+</sampleSolution>
+
+</problem>

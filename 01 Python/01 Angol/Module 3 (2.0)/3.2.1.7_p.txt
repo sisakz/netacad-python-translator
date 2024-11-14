@@ -1,0 +1,69 @@
+<problem chapter='3' section='2' slide='1' problem='7' title='Loop control in Python | break and continue'>
+
+<!--
+Update history:
+2020-07-20 Grzegorz (reviewed, re-formatted)
+-->
+
+<code>
+# break - example
+
+print("The break instruction:")
+for i in range(1, 6):
+    if i == 3:
+        break
+    print("Inside the loop.", i)
+print("Outside the loop.")
+
+
+# continue - example
+
+print("\nThe continue instruction:")
+for i in range(1, 6):
+    if i == 3:
+        continue
+    print("Inside the loop.", i)
+print("Outside the loop.")
+
+</code>
+
+
+<h1>The <font face="courier new">break</font> and <font face="courier new">continue</font> statements</h1>
+
+
+<p>So far, we've treated the body of the loop as an indivisible and inseparable sequence of instructions that are performed completely at every turn of the loop. However, as a developer, you could be faced with the following choices:</p>
+
+<ul>
+
+<li>it appears that it's unnecessary to continue the loop as a whole; you should refrain from further execution of the loop's body and go further;</li>
+
+<li>it appears that you need to start the next turn of the loop without completing the execution of the current turn.</li>
+
+</ul>
+
+
+<p>Python provides two special instructions for the implementation of both these tasks. Let's say for the sake of accuracy that their existence in the language is not necessary – an experienced programmer is able to code any algorithm without these instructions. Such additions, which don't improve the language's expressive power, but only simplify the developer's work, are sometimes called <strong>syntactic candy</strong>, or syntactic sugar.</p>
+
+<p>These two instructions are:</p>
+
+<ul>
+
+<li><codel>break</codel> – exits the loop immediately, and unconditionally ends the loop's operation; the program begins to execute the nearest instruction after the loop's body;</li>
+<li><codel>continue</codel> – behaves as if the program has suddenly reached the end of the body; the next turn is started and the condition expression is tested immediately.</li>
+
+</ul>
+
+
+<p>Both these words are <strong>keywords</strong>.</p>
+
+<p>Now we'll show you two simple examples to illustrate how the two instructions work. Look at the code in the editor. Run the program and analyze the output. Modify the code and experiment.</p>
+
+
+<br>
+
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

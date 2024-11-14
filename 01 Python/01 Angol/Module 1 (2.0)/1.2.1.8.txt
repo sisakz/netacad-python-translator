@@ -1,0 +1,60 @@
+﻿<problem chapter='1' section='2' slide='1' problem='8' title='Begin your Python journey'>
+
+<!--
+Update history:
+2020-07-07 Grzegorz (formatted)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<h1>How to spoil and fix your code</h1>
+
+<p>You may have noticed that the error message generated for the previous error is quite different from the first one.</p>
+
+<img class="lightbox" src="/uploads/media/default/0001/01/9e63a9fdc2ed8afae211381c57ccd02967eb4ebc.png" alt="Python 3.7.0 IDLE - Console error message after running a program with removed letter t from the print() function" width="90%">
+
+<br>
+<br>
+
+<p>This is because the nature of the error is <strong>different</strong> and the error is discovered at a <strong>different stage</strong> of interpretation.</p>
+
+<br>
+
+</div>
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+<p>The editor window will not provide any useful information regarding the error, but the console windows might.</p>
+
+<p>The message (<font color="red">in red</font>) shows (in the subsequent lines):</p>
+
+<ul>
+<li>the <strong>traceback</strong> (which is the path that the code traverses through different parts of the program - you can ignore it for now, as it is empty in such a simple code);</li>
+<li>the <strong>location of the error</strong> (the name of the file containing the error, line number and module name); note: the number may be misleading, as Python usually shows the place where it first notices the effects of the error, not necessarily the error itself;</li>
+<li>the <strong>content of the erroneous line</strong>; note: IDLE’s editor window doesn’t show line numbers, but it displays the current cursor location at the bottom-right corner; use it to locate the erroneous line in a long source code;</li>
+<li>the <strong>name of the error</strong> and a short explanation.</li>
+</ul>
+
+<br>
+
+<p>Experiment with creating new files and running your code. Try to output a different message to the screen, e.g., <codel>roar!</codel>, <codel>meow</codel>, or even maybe an <codel>oink!</codel>. Try to spoil and fix your code - see what happens.</p>
+
+<br>
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

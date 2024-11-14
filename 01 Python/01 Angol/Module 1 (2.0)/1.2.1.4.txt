@@ -1,0 +1,65 @@
+﻿<problem chapter='1' section='2' slide='1' problem='4' title='Begin your Python journey'>
+
+<!--
+Update history:
+2020-07-07 Grzegorz (formatted)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h1>How to write and run your very first program</h1>
+
+<p>It is now time to write and run your first Python 3 program. It will be very simple, for now.</p>
+
+<p>The first step is to create a new source file and fill it with code. Click <i>File</i> in the IDLE menu and choose <i>New file</i>.</p>
+
+
+<center><img class="lightbox" src="/uploads/media/default/0001/01/9c47dcbd53615728044a921159aef565968d7f3c.png" alt="Python 3.7.0 Shell - New File" width="80%"></center>
+
+<br>
+<br>
+
+<p>As you can see, IDLE opens a new window for you. You can use it to write and amend your code.</p>
+
+<p>This is the <strong>editor window</strong>. Its only purpose is to be a workplace in which your source code is treated. Do not confuse the editor window with the shell window. They perform different functions.</p>
+
+<br>
+
+
+</div>
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+
+<p>The editor window is currently untitled, but it's good practice to start work by naming the source file.</p>
+
+<p>Click <i>File</i> (in the new window), then click <i>Save as...</i>, select a folder for the new file (the desktop is a good place for your first programming attempts) and chose a name for the new file.</p>
+
+<center><img class="lightbox" src="/uploads/media/default/0001/01/ed0d023d260245eecd1be0f4b0ff02fec660b9da.png" alt="Python 3.7.0 Shell - Saving a new file: snake.py" width="80%"></center>
+
+<br>
+<br>
+
+<p>Note: don't set any extension for the file name you are going to use. Python needs its files to have the <i>.py</i> extension, so you should rely on the dialog window's defaults. Using the standard </i>.py</i> extension enables the OS to properly open these files.</p>
+
+<br>
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

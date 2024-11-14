@@ -1,0 +1,88 @@
+<problem chapter='0' section='0' slide='0' problem='2' title='Syllabus | Why learn Python?'>
+
+<!--
+Update history:
+2020-07-06 Grzegorz (created)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+
+<h1>Course Syllabus</h1>
+
+<p>In this course you will learn:</p>
+
+<ul>
+<li>the universal concepts of computer programming;</li>
+<li>the syntax and semantics of the Python language;</li>
+<li>practical skills in resolving typical implementation challenges;</li>
+<li>how to use the most important elements of the Python Standard Library;</li>
+<li>how to install your runtime environment;</li>
+<li>how to design, write, test, and debug your own Python programs.</li>
+</ul>
+
+
+<br>
+
+<p>The course is divided into 4 modules:</p>
+
+<ol>
+<li><strong>Module 1</strong>
+<br>Introduction to Python and computer programming;</li>
+
+
+<li><strong>Module 2</strong>
+<br>Data types, variables, basic input-output operations, and basic operators;</li>
+
+
+<li><strong>Module 3</strong>
+<br>Boolean values, conditional execution, loops, lists and list processing, logical and bitwise operations;</li>
+
+<li><strong>Module 4</strong>
+<br>Functions, tuples, dictionaries, and data processing.</li>
+
+</ol>
+
+<br>
+
+</div>
+
+
+
+
+<div class="small-12 large-6 columns">
+<br>
+
+
+<h1>Why should you learn PYTHON?</h1>
+
+<p>Python is omnipresent, and many people use numerous Python-powered devices on a daily basis, whether they realize it or not. There have been millions (well, actually billions) of lines of code written in Python, which means almost unlimited opportunities for code reuse and learning from well-crafted examples. What's more, there is a large and very active Python community, always happy to help.</p>
+
+<p>There are also a couple of factors that make Python great for learning:</p>
+
+<ul>
+<li>It is easy to learn - the time needed to learn Python is shorter than for many other languages; this means that it's possible to start the actual programming faster;</li>
+<li>It is easy to use for writing new software - it's often possible to write code faster when using Python;</li>
+<li>It is easy to obtain, install and deploy - Python is free, open and multiplatform; not all languages can boast that.</li>
+</ul>
+
+<p>Completing this course can be a stepping-stone to learning any other programming language, and to exploring technologies using Python as a foundation (e.g., Django). The course is distinguished by its affordability, friendliness, and openness to the student.</p>
+
+<p>The first part starts from the absolute basics, guiding you step-by-step to complex problems explained in part 2, making you a responsible software creator able to take on different challenges in many positions in the IT industry.</p>
+
+<br>
+
+</div>
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

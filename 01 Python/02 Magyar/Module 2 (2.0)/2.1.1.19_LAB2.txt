@@ -1,0 +1,120 @@
+<problem chapter='2' section='1' slide='1' problem='19' title='LAB: A kimenet formázása'>
+
+<!--
+Update history:
+2020-07-17 Grzegorz (code format and page number change, sample solution change, length of the lab change)
+-->
+
+<code>
+
+print("    *")
+print("   * *")
+print("  *   *")
+print(" *     *")
+print("***   ***")
+print("  *   *")
+print("  *   *")
+print("  *****")
+
+</code>
+
+<span class="label" style="background-color:rgb(205, 168, 105);"><strong>LABORGYAKORLAT</strong></span>
+
+<br><br>
+
+
+<h2>Becsült idő</h2>
+<p>5-15 perc</p>
+
+<h2>Nehézségi szint</h2>
+<p>Könnyű</p>
+
+
+<h2>Célok</h2>
+
+<ul>
+<li>kísérletezés meglévő Python kóddal;</li>
+<li>alapvető szintaktikai hibák felfedezése és javítása;</li>
+<li>a <codel>print()</codel> függvény és formázási lehetőségeinek megismerése.</li>
+</ul>
+
+
+<h2>Feladatleírás</h2>
+
+<p>Azt javasoljuk, hogy <strong>játssz az általunk írt kóddal</strong>, és végezz néhány (akár hibát okozó) módosítást. Nyugodtan módosítsd a kód bármelyik részét, de van egy feltétel. Tanulj a hibáidból, és vond le a saját következtetéseidet!</p>
+
+<p>Próbáld meg:</p>
+
+<ul>
+<li>a <codel>print()</codel> függvényhívások számát minimalizálni a <codel>\n</codel> szekvencia karakterláncokba való beillesztésével;</li>
+<li>a nyílat kétszer akkorára változtatni (de az arányok maradjanak meg);</li>
+<li>a két nyilat egymás mellé helyezve duplikálni a nyilat; Megjegyzés: egy sztringet a következő trükkel lehet megsokszorozni: <codel>"string" * 2</codel>-ből <codel>"stringstring"</codel> lesz (erről hamarosan többet mondunk)</li>
+<li>eltávolítani az idézőjeleket, és megfigyelni a Python válaszát. Figyelj arra, hogy a Python hol lát hibát - ez az a hely, ahol a hiba valóban létezik?</li>
+<li>megtenni ugyanezt a zárójelek némelyikével;</li>
+<li>bármelyik <codel>print</codel> szó kis- és nagybetűs írásmódját megváltoztatni (pl. <codel>Print</codel>) ‒ mi történik?</li>
+<li>kicserélni néhány idézőjelet aposztrófra és megfigyelni, mi történik.</li>
+</ul>
+
+<labMode>true</labMode>
+
+
+<sampleSolution># Sample Solution
+
+###################
+print("original version:")
+###################
+print("    *")
+print("   * *")
+print("  *   *")
+print(" *     *")
+print("***   ***")
+print("  *   *")
+print("  *   *")
+print("  *****")
+###################
+print("with fewer 'print()' invocations:")
+###################
+print("    *\n   * *\n  *   *\n *     *\n***   ***")
+print("  *   *\n  *   *\n  *****")
+###################
+print("higher:")
+###################
+print("        *")
+print("       * *")
+print("      *   *")
+print("     *     *")
+print("    *       *")
+print("   *         *")
+print("  *           *")
+print(" *             *")
+print("******     ******")
+print("     *     *")
+print("     *     *")
+print("     *     *")
+print("     *     *")
+print("     *     *")
+print("     *     *")
+print("     *******")
+###################
+print("doubled:")
+###################
+print("        *        "*2)
+print("       * *       "*2)
+print("      *   *      "*2)
+print("     *     *     "*2)
+print("    *       *    "*2)
+print("   *         *   "*2)
+print("  *           *  "*2)
+print(" *             * "*2)
+print("******     ******"*2)
+print("     *     *     "*2)
+print("     *     *     "*2)
+print("     *     *     "*2)
+print("     *     *     "*2)
+print("     *     *     "*2)
+print("     *     *     "*2)
+print("     *******     "*2)
+
+</sampleSolution>
+
+</problem>

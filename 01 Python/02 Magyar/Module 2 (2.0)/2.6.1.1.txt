@@ -1,0 +1,80 @@
+<problem chapter='2' section='6' slide='1' problem='1' title='Adatbevitel'>
+
+<!--
+Update history:
+2020-07-17 Grzegorz (reviewed; code - class syntax-color and blank lines added)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<h1>Az <span style="font-family:courier new;">input()</span> függvény</h1>
+
+
+<p>Most egy teljesen új függvénnyel ismerkedünk megnk be, amely a jó öreg <codel>print()</codel> függvény ellentétének tűnhet.</p>
+
+<p>Miért? Nos, a <codel>print()</codel> adatokat küld a konzolra.</p>
+
+<p>Az új függvény adatokat kap onnan.</p>
+
+
+<p>A <codel>print()</codel> nem ad vissza felhasználható értéket, az új függvény ellenben <strong>egy nagyon jól használható értékkel tér vissza</strong>.</p>
+
+ 
+<p>A függvény neve <codel>input()</codep>, ami sokat elárul róla.</p>
+
+
+<p>Az <codel>input()</codep> függvény képes beolvasni a felhasználó által megadott adatokat, és ugyanezeket az adatokat visszaadni a futó programnak.</p>
+
+<p>A program manipulálhatja az adatokat, így a kód valóban interaktívvá válik.</p>
+
+<p>Gyakorlatilag minden program <strong>adatokat olvas és dolgoz fel</strong>. Az a program, amely nem kap a felhasználótól bejövő adatot, egy <strong>süket program</strong>.</p>
+
+<p>Nézd meg a példánkat:</p>
+
+<codep class="syntax-color">print("Tell me anything...")
+anything = input()
+print("Hmm...", anything, "... Really?")
+</codep>
+
+<br>
+
+<p>A példa az <codel>input()</codel> függvény használatának egy nagyon egyszerű esetét mutatja be.</p>
+
+</div>
+
+
+<div class="small-12 large-6 columns">
+
+<h1></h1>
+
+<p>Megjegyzés:</p>
+
+<ul>
+<li>a program <strong>arra kéri a felhasználót, hogy adjon meg valamilyen adatot</strong> a konzolról (valószínűleg billentyűzet segítségével, bár lehetséges az adatok hanggal vagy képpel történő bevitele is);</li>
+<li>az <codel>input()</codel> függvényt argumentumok nélkül hívjuk meg (ez a legegyszerűbb módja a függvény használatának). A függvény a <strong>konzolt beviteli módba kapcsolja</strong>. Egy villogó kurzort fogunk látni, ahova néhány billentyűleütést vihetünk be, amit az <i>Enter</i> billentyű lenyomásával zárunk. Az összes beírt adatot a függvény eredményén keresztül <strong>küldjük el a programunknak</strong>;</li>
+<li>az eredményt egy változóhoz kell rendelni. Ez kulcsfontosságú, ha kihagyod ezt a lépést, a beírt adatok elvesznek;</li>
+<li>végül a <codel>print()</codel> függvényt használjuk a kapott adatok kiadására, néhány további megjegyzéssel együtt.</li>
+</ul>
+
+<p>Próbáld meg futtatni a kódot, és hagyd, hogy a függvény megmutassa, mire lehet használni a programodban!</p>
+
+
+<br>
+
+<center><img src="/uploads/media/default/0001/01/8a65a4a463dd843c841024c5a9eab156a6695453.png"></center>
+
+<br>
+
+</div>
+
+
+</div>
+</div>
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

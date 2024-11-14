@@ -1,0 +1,65 @@
+<problem chapter='2' section='1' slide='1' problem='3' title='Az első programod'>
+
+<!--
+Update history:
+2020-07-17 Grzegorz (format and page number change)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<h1>A <span style="font-family:courier new;">print()</span> függvény</h1>
+
+<p>Mint már említettük, egy függvénynek lehet:</p>
+<ul>
+<li><strong>hatása</strong>, és</li>
+<li><strong>eredménye</strong>.</li>
+</ul>
+ 
+
+<p>A függvényeknek van még egy harmadik, nagyon fontos alkotóeleme. A változó vagy változók, amivel a függvény dolgozik, idegen szóval az <strong>argumentum</strong>(ok).
+
+<p>A matematikai függvények általában egy argumentumot használnak, például a sin(x) esetében x egy szög mértéke.</p>
+
+<p>A Python függvények viszont sokoldalúbbak. A feladatuk elvégzéséhez szükséges számú argumentumot várnak. Megjegyzés: ez a szám lehet nulla is. Néhány Python függvénynek nincs szüksége egyetlen argumentumra sem.</p>
+
+<codep>print<mark style="background-color:#e6f2ff;">(</mark>"Hello, World!"<mark style="background-color:#e6f2ff;">)</mark>
+
+</codep>
+<br>
+
+<p>Az argumentumok számától függetlenül a Python függvények megkövetelik a <strong>zárójelpár</strong> ‒ nyitó és záró kerek zárójelek - kiírását.</p>
+
+</div>
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+<p>Ha egy vagy több argumentumot akarsz átadni egy függvénynek, akkor azokat a <strong>zárójelek közé</strong> helyezd el. Ha olyan függvényt akarsz használni, amely nem vár argumentumot, a zárójeleket akkor is ki kell írnod.</p>
+
+<p>Megjegyzés: hogy megkülönböztesd a közönséges szavakat a függvénynevektől, a nevük után tegyél <strong>egy pár üres zárójelpárt</strong>, még akkor is, ha az adott függvény nem vár argumentumot. Ez az egyezményes jelölése a függvényeknek.</p>
+
+<p>A függvény, amiről itt beszélünk, a <codel>print()</codel>.</p>
+
+<p>A példánkban szereplő <codel>print()</codel> függvénynek van valamilyen argumentuma?</p>
+
+<p>Persze, hogy van, de mik ezek?</p>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

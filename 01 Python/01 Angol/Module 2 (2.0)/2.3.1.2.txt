@@ -1,0 +1,51 @@
+<problem chapter='2' section='3' slide='1' problem='2' title='Operators ‒ data manipulation tools'>
+
+<!--
+Update history:
+2020-07-17 Grzegorz (reformatted; code - syntax-color and blank lines added;)
+-->
+
+<code>
+print(2 ** 3)
+print(2 ** 3.)
+print(2. ** 3)
+print(2. ** 3.)
+
+</code>
+
+<h1>Arithmetic operators: exponentiation</h1>
+
+
+<p>A <codel>**</codel> (double asterisk) sign is an <strong>exponentiation</strong> (power) operator. Its left argument is the <strong>base</strong>, its right, the <strong>exponent</strong>.</p>
+
+
+<p>Classical mathematics prefers notation with superscripts, just like this: <strong>2<sup>3</sup></strong>. Pure text editors don't accept that, so Python uses <codel>**</codel> instead, e.g., <codel>2 ** 3</codel>.</p>
+
+
+<p>Take a look at our examples in the editor window.</p>
+
+<br>
+
+<p>Note: we've surrounded the double asterisks with spaces in our examples. It's not compulsory, but it improves the <strong>readability</strong> of the code.</p>
+
+<p>The examples show a very important feature of virtually all Python <strong>numerical operators</strong>.</p>
+
+<p>Run the code and look carefully at the results it produces. Can you see any regularity here?</p>
+
+<br>
+
+<p><strong>Remember</strong>: It's possible to formulate the following rules based on this result:</p>
+
+<ul>
+<li>when <strong>both</strong> <codel>**</codel> arguments are integers, the result is an integer, too;</li>
+<li>when <strong>at least one</strong> <codel>**</codel> argument is a float, the result is a float, too.</li>
+</ul>
+
+<p>This is an important distinction to remember.</p>
+
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

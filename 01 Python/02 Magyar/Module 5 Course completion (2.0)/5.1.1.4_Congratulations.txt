@@ -1,0 +1,27 @@
+<problem chapter='5' section='1' slide='1' problem='4' title='Gratulálunk!'>
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-12 columns">
+
+<br>
+<br>
+
+<center><img src="/uploads/media/default/0001/02/8048d51a7d1f93784492b47ba07c669af8857c70.png" alt="Gratulálunk! Elvégezted a tanfolyamot!" width="35%"></center>
+
+
+<br>
+<br>
+
+</div>
+</div>
+</div>
+
+
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

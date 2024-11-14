@@ -1,0 +1,73 @@
+<problem chapter='0' section='0' slide='0' problem='4' title='Earn PCEP certification'>
+
+<!--
+Update history:
+2021-01-27 Grzegorz (created)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h2>Get PCEP certified</h2>
+
+<p>Upon completion of <i>Python Essentials 1</i>, you will be prepared to attempt the qualification <a href="https://pythoninstitute.org/pcep-certification-entry-level/" target="_blank">PCEP &ndash; Certified Entry-Level Python Programmer</a>.</p>
+
+
+<p><i>PCEP &ndash; Certified Entry-Level Python Programmer</i> certification shows that you are familiar with universal computer programming concepts like <b>data types</b>, <b>containers</b>, <b>functions</b>, <b>conditions</b>, and <b>loops</b>, as well as the most important aspects of the Python programming language <b>syntax</b>, <b>semantics</b>, and the <b>runtime environment</b>.</p>
+
+
+<img class="lightbox" src="/uploads/media/default/0001/02/23021d04887ddd6b79d34f0cab969d758b17295a.png" width="30%" alt="PCEP badge" style="float:left; padding:20px;">
+
+Becoming PCEP certified ensures that you are <b>acquainted with the most essential means provided by Python 3</b>, which enable you to start your own studies at an intermediate level and to continue your professional development.
+
+<br><br>
+
+PCEP certification allows you to demonstrate that not only are you up to date with Python-related issues, but also that you can competently deal with them.
+
+<br><br>
+Furthermore, with the OpenEDG Python Institute, you gain access to a large network of Python programming professionals, a valuable resource for solving Python-related problems, and for developing innovative solutions.
+
+
+
+<br><br>
+
+<div style="clear: both;"></div>
+
+<br>
+
+</div>
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+<p><i>PCEP &ndash; Certified Entry-Level Python Programmer</i> certification is <b>an interim step</b> to the <i>PCAP &ndash; Certified Associate in Python Programming</i> certification and <b>the starting point</b> to launch a career in software development, Python programming, and related technologies.</p>
+
+<p>Becoming PCEP certified will help the certificate holder stand out from other candidates and get their foot in the door.</p>
+
+<br>
+
+<figure>
+<img class="lightbox" src="/uploads/media/default/0001/02/9e660a5fa76bff47a35f21395db29e143798d8e0.png" width="100%" alt="Python Institute Certification Roadmap">
+<br><br>
+<figcaption><center>OpenEDG Python Institute Certification Roadmap</center></figcaption>
+</figure>
+
+
+<br>
+<br>
+
+</div>
+</div>
+</div>
+
+
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

@@ -1,0 +1,108 @@
+<problem chapter='3' section='1' slide='1' problem='6' title='Döntéshozatal Pythonban'>
+
+<!--
+Update history:
+2020-07-20 Grzegorz (reviewed)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<h1>Elágazás: az <font face="Courier New">if</font> kifejezés</h1>
+
+
+<p>Ha egy bizonyos álmatlan Python-fejlesztő akkor alszik el, ha megszámol 120 bárányt, és az altató eljárás egy speciális, <codel>sleep_and_dream()</codel> nevű függvényként valósítható meg, akkor az egész kód a következőképpen néz ki:</p>
+
+<codep>if sheep_counter >= 120: # Evaluate a test expression
+    sleep_and_dream() # Execute if test expression is True
+	
+</codep>
+
+<br>
+
+<p>Ezt így is olvashatod: ha a <codel>sheep_counter</codel> nagyobb vagy egyenlő <codel>120</codel>-nál, akkor aludj el és álmodj (azaz hajtsd végre a <codel>sleep_and_dream</codel> függvényt)!</p>
+
+<hr>
+
+<p>Azt mondtuk, hogy a <strong>feltételesen végrehajtott utasításokat be kell húzni</strong>. Ez egy nagyon jól olvasható struktúrát hoz létre, amely világosan megmutatja a kód összes lehetséges végrehajtási ágát.</p>
+
+<p>Nézzük meg a következő kódot:</p>
+
+<codep>if sheep_counter >= 120:
+    make_a_bed()
+    take_a_shower()
+    sleep_and_dream()
+feed_the_sheepdogs()
+
+</codep>
+
+
+<br>
+
+<p>Mint látható, az ágyazás, a zuhanyzás, az elalvás és az álmodás mind <strong>feltételesen történik</strong>, amikor a <codel>sheep_counter</codel> eléri a kívánt határértéket.</p>
+
+<p>A juhászkutyák etetése azonban <strong>mindig megtörténik</strong> (azaz a <codel>feed_the_sheepdogs()</codel> függvény nincs behúzva, és nem tartozik az <codel>if</codel> blokkba, ami azt jelenti, hogy mindig végrehajtásra kerül).</p>
+
+<p>Most a feltételes utasítás egy másik változatát fogjuk tárgyalni, amely szintén lehetővé teszi egy további művelet végrehajtását, ha a feltétel nem teljesül.</p>
+
+<br>
+
+</div>
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+
+<h1>Elágazás: az <font face="Courier New">if-else</font> kifejezés</h1>
+
+<p>Egy egyszerű mondattal kezdtük, amely így szólt: <i>Ha jó idő lesz, elmegyünk sétálni</i>.</p>
+ 
+<p>Megjegyzés: nincs szó arról, hogy mi történik, ha rossz az időjárás. Csak azt tudjuk, hogy nem megyünk ki a szabadba, de hogy mit tehetnénk helyette, azt nem tudjuk. Lehet, hogy rossz idő esetén is tervezünk valamit.</p>
+
+<p>Mondhatjuk például: <i>Ha jó idő van, elmegyünk sétálni, máskülönben színházba megyünk</i>.</p>
+
+<p>Most már tudjuk, mit fogunk tenni, <strong>ha a feltételek teljesülnek</strong>, és tudjuk, mit fogunk tenni, <strong>ha nem minden úgy alakul, ahogy szeretnénk</strong>. Más szóval, van egy "B tervünk".</p>
+
+<p>A Python lehetővé teszi, hogy ilyen alternatív terveket fejezzünk ki. Ezt a feltételes utasítás egy második, kissé bonyolultabb formájával, az <i>if-else</i> kifejezéssel tehetjük meg:</p>
+
+<codep>if true_or_false_condition:
+    perform_if_condition_true
+<mark style="background-color:#e6f2ff;">else:</mark>
+    perform_if_condition_false
+
+</codep>
+
+
+<br>
+
+<p>Előkerült egy új szó: az <codel>else</codel> <strong>kulcsszó</strong>.</p>
+
+<p>A kód <codel>else</codel> kulcsszóval kezdődő része azt mondja meg, hogy mit tegyünk, ha az <codel>if</codel>-ben megadott feltétel nem teljesül (figyeljük meg a <strong>kettőspontot</strong> a szó után).</p>
+
+<p>Az <i>if-else</i> végrehajtás a következőképpen zajlik:<p>
+
+<ul>
+<li>ha a feltétel értéke <strong>True</strong> (értéke nem egyenlő nullával), akkor a <codel>perform_if_condition_true</codel> utasítás végrehajtásra kerül, és a feltételes utasítás véget ér;</li>
+
+<li>ha a feltétel értéke <strong>False</strong> (egyenlő nullával), akkor a <codel>perform_if_condition_false</codel> utasítás végrehajtásra kerül, és a feltételes utasítás véget ér.</li>
+</ul>
+
+<br>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

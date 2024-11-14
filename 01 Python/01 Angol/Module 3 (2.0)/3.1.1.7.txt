@@ -1,0 +1,156 @@
+<problem chapter='3' section='1' slide='1' problem='7' title='Making decisions in Python'>
+
+<!--
+Update history:
+2020-07-20 Grzegorz (reviewed)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<h1>The <font face="Courier New">if-else</font> statement: more conditional execution</h1>
+
+
+<p>By using this form of conditional statement, we can describe our plans as follows:</p>
+
+<codep>if the_weather_is_good:
+    go_for_a_walk()
+else:
+    go_to_a_theater()
+have_lunch()
+
+</codep>
+
+<br>
+
+<p>If the weather is good, we'll go for a walk. Otherwise, we'll go to a theater. No matter if the weather is good or bad, we'll have lunch afterwards (after the walk or after going to the theater).</p>
+
+<p>Everything we've said about indentation works in the same manner inside <strong>the <i>else</i> branch</strong>:</p>
+
+<codep>if the_weather_is_good:
+    go_for_a_walk()
+    have_fun()
+else:
+<mark style="background-color:#e6f2ff;">    </mark>go_to_a_theater()
+<mark style="background-color:#e6f2ff;">    </mark>enjoy_the_movie()
+have_lunch()
+
+</codep>
+
+<br>
+
+
+<h2>Nested <font face="Courier New">if-else</font> statements</h2>
+
+<p>Now let's discuss two special cases of the conditional statement.</p>
+
+<p>First, consider the case where the <strong>instruction placed after the <codel>if</codel> is another <codel>if</codel></strong>.</p>
+
+<p>Read what we have planned for this Sunday. If the weather is fine, we'll go for a walk. If we find a nice restaurant, we'll have lunch there. Otherwise, we'll eat a sandwich. If the weather is poor, we'll go to the theater. If there are no tickets, we'll go shopping in the nearest mall.</p>
+
+<p>Let's write the same in Python. Consider carefully the code here:</p>
+
+<codep>if the_weather_is_good:
+<mark class="mark-background">    if nice_restaurant_is_found:
+        have_lunch()
+    else:
+        eat_a_sandwich()</mark>
+else:
+<mark class="mark-background">    if tickets_are_available:
+        go_to_the_theater()
+    else:
+        go_shopping()</mark>
+
+</codep>
+
+<br>
+
+
+</div>
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+
+<p>Here are two important points:</p>
+
+<ul>
+
+<li>this use of the <codel>if</codel> statement is known as <strong>nesting</strong>; remember that every <codel>else</codel> refers to the <codel>if</codel> which lies <strong>at the same indentation level</strong>; you need to know this to determine how the <i>if</i>s and <i>else</i>s pair up;</li>
+
+<li>consider how the <strong>indentation improves readability</strong>, and makes the code easier to understand and trace.</li>
+
+</ul>
+
+
+<h2>The <font face="Courier New">elif</font> statement</h2>
+
+<p>The second special case introduces another new Python keyword: <strong>elif</strong>. As you probably suspect, it's a shorter form of <strong>else if</strong>.</p>
+
+<p><codel>elif</codel> is used to <strong>check more than just one condition</strong>, and to <strong>stop</strong> when the first statement which is true is found.</p>
+
+<p>Our next example resembles nesting, but the similarities are very slight. Again, we'll change our plans and express them as follows: If the weather is fine, we'll go for a walk, otherwise if we get tickets, we'll go to the theater, otherwise if there are free tables at the restaurant, we'll go for lunch; if all else fails, we'll stay home and play chess.</p>
+
+<p>Have you noticed how many times we've used the word <i>otherwise</i>? This is the stage where the <codel>elif</codel> keyword plays its role.</p>
+
+<p>Let's write the same scenario using Python:</p>
+
+<codep>if the_weather_is_good:
+    go_for_a_walk()
+<mark style="background-color:#e6f2ff;">elif</mark> tickets_are_available:
+    go_to_the_theater()
+<mark style="background-color:#e6f2ff;">elif</mark> table_is_available:
+    go_for_lunch()
+else:
+    play_chess_at_home()
+
+</codep>
+
+
+<br>
+
+<p>The way to assemble subsequent <i>if-elif-else</i> statements is sometimes called a <strong>cascade</strong>.</p>
+
+<p>Notice again how the indentation improves the readability of the code.</p>
+
+<p>Some additional attention has to be paid in this case:</p>
+
+<ul>
+
+<li>you <strong>mustn't use <codel>else</codel> without a preceding <codel>if</codel></strong>;</li>
+
+<li><codel>else</codel> is always the <strong>last branch of the cascade</strong>, regardless of whether you've used <codel>elif</codel> or not;</li>
+
+<li><codel>else</codel> is an <strong>optional</strong> part of the cascade, and may be omitted;</li>
+
+<li>if there is an <coel>else</codel> branch in the cascade, only one of all the branches is executed;</li>
+
+<li>if there is no <codl>else</codel> branch, it's possible that none of the available branches is executed.</li>
+
+</ul>
+
+<br> 
+
+<p>This may sound a little puzzling, but hopefully some simple examples will help shed more light.</p>
+
+<br>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

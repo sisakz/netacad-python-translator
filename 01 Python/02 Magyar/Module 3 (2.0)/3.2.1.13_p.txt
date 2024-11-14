@@ -1,0 +1,62 @@
+<problem chapter='3' section='2' slide='1' problem='13' title='Ciklusok | else'>
+
+<!--
+Update history:
+2020-07-21 Grzegorz (reviewed, re-formatted)
+-->
+
+<code>for i in range(5):
+    print(i)
+else:
+    print("else:", i)
+
+</code>
+
+
+<h1>A <font face="courier new">for</font> ciklus és az <font face="courier new">else</font> ág</h1>
+
+
+<p>A <codel>for</codel> ciklus egy kicsit másképp viselkedik. Nézd meg a szerkesztőben a kódrészletet, és futtasd le!</p>
+
+<p>A kimenet kissé meglepő lehet.</p>
+
+<p>Az <codel>i</codel> változó megtartja az utolsó értékét.</p>
+
+<br>
+
+<p>Módosítsuk egy kicsit a kódot, hogy elvégezhessünk még egy kísérletet.</p>
+
+<codep class="copy syntax-color">i = 111
+for i in range(2, 1):
+    print(i)
+else:
+    print("else:", i)
+</codep>
+
+<br>
+
+<p>Ki tudod találni a kimenetet?</p>
+
+<p>A ciklus törzse itt egyáltalán nem kerül végrehajtásra. Megjegyzés: Az <codel>i</codel> változónak a ciklus előtt adtunk értéket.</p>
+
+<p>Futtasd le a programot, és ellenőrizd a kimenetét!</p>
+
+<p>Amikor a ciklus törzse nem kerül végrehajtásra, a ciklusváltozó megtartja a ciklus előtti értékét.</p>
+
+<p>Megjegyzés: <strong>Ha a ciklusváltozó nem létezik a ciklus kezdete előtt, akkor szintén nem fog létezni, amikor a végrehajtás eléri az <codel>else</codel> ágat</strong>.</p>
+
+<p>Mit gondolsz az <codel>else</codel> ezen változatáról?</p>
+
+<br>
+
+<p>Most néhány másfajta változóról fogunk beszélni. A jelenlegi változóink egyszerre csak <strong>egy értéket tudnak tárolni</strong>, de vannak olyan változók, amelyek sokkal többre képesek, és <strong>annyi értéket tudnak tárolni, amennyit csak szeretnénk</strong>.</p>
+
+
+
+<br>
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

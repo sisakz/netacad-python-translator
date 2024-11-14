@@ -1,0 +1,153 @@
+<problem chapter='4' section='6' slide='1' problem='10' title='SZAKASZ ÖSSZEFOGLALÓ (1/3)'>
+
+<!--
+Update history:
+2020-08-18 Grzegorz (reviewed, re-formatted, PEP-8 compliance check)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<h1>A legfontosabb tudnivalók: tuple-k </h1>
+
+<br>
+
+
+<p>1. A <strong>tuple-k</strong> rendezett és megváltoztathatatlan adatgyűjtemények. Úgy is elképzelhetők, mint megváltoztathatatlan listák. Kerek zárójelben soroljuk fel az elemeit:</p>
+
+<codep class="syntax-color copy">my_tuple = (1, 2, True, "a string", (3, 4), [5, 6], None)
+print(my_tuple)
+
+my_list = [1, 2, True, "a string", (3, 4), [5, 6], None]
+print(my_list)
+</codep>
+<br>
+
+
+<p>2. Üres tuple-t így hozhatunk létre:</p>
+
+<codep class="copy"><mark style="background-color:#e6f2ff;">empty_tuple = ()</mark>
+print(type(empty_tuple))    # outputs: &lt;class 'tuple'&gt;
+
+</codep>
+<br>
+
+<p>3. Egy egyelemű tuple a következőképpen hozható létre:</p>
+
+<codep class="syntax-color copy">one_elem_tuple_1 = ("one", )    # Brackets and a comma.
+one_elem_tuple_2 = "one",       # No brackets, just a comma.
+</codep>
+<br>
+
+<p>Ha elhagyjuk a vesszőt, akkor a Pythonnak azt mondjuk, hogy egy <b>változót</b> hozzon létre, ne pedig egy tuple-t:</p>
+
+<codep class="syntax-color copy">my_tuple_1 = 1, 
+print(type(my_tuple_1))    # outputs: &lt;class 'tuple'&gt;
+
+my_tuple_2 = 1             # This is not a tuple.
+print(type(my_tuple_2))    # outputs: &lt;class 'int'&gt;
+</codep>
+<br>
+
+<p>4. A tuple elemeit indexeléssel érhetjük el:</p>
+
+<codep class="syntax-color copy">my_tuple = (1, 2.0, "string", [3, 4], (5, ), True)
+print(my_tuple[3])    # outputs: [3, 4]
+</codep>
+<br>
+
+<p>5. A tuple-k <b>nem módosíthatóak</b>, ami azt jelenti, hogy nem lehet megváltoztatni az elemeiket (nem lehet a tuple elemeit bővíteni, módosítani vagy eltávolítani). A következő kódrészlet hibát okoz:</p>
+
+<codep class="syntax-color copy">my_tuple = (1, 2.0, "string", [3, 4], (5, ), True)
+my_tuple[2] = "guitar"    # The TypeError exception will be raised.
+</codep>
+<br>
+
+<p>Ugyanakkor az egész tuple-t törölhetjük:<p>
+
+<codep class="syntax-color copy">my_tuple = 1, 2, 3, 
+del my_tuple
+print(my_tuple)    # NameError: name 'my_tuple' is not defined
+</codep>
+<br>
+
+
+
+
+
+<br>
+<br>
+
+</div>
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+
+<p>6. Végigmehetünk egy tuple elemein (1. példa); ellenőrizhetjük, hogy egy adott elem szerepel-e benne vagy nem (2. példa); a <codel>len()</codel> függvény segítségével ellenőrizhetjük, hogy hány elem van egy tuple-ben (3. példa), vagy akár össze is illeszthetünk/többszörözhetünk tuple-ket (4. példa):</p>
+
+<codep class="syntax-color copy"># Example 1
+tuple_1 = (1, 2, 3)
+for elem in tuple_1:
+    print(elem)
+
+# Example 2
+tuple_2 = (1, 2, 3, 4)
+print(5 in tuple_2)
+print(5 not in tuple_2)
+
+# Example 3
+tuple_3 = (1, 2, 3, 5)
+print(len(tuple_3))
+
+# Example 4
+tuple_4 = tuple_1 + tuple_2
+tuple_5 = tuple_3 * 2
+
+print(tuple_4)
+print(tuple_5)
+</codep>
+<br>
+
+<p><span class="label" style="background-color:orange;"><b>EXTRA</b></span></p>
+<p>Egy tuple-t a Python beépített <codel>tuple()</codel> függvényével is létrehozhatunk. Ez különösen akkor hasznos, ha egy bizonyos bejárható objektumot (pl. listát, tartományt, karakterláncot stb.) szeretnénk tuple-vá alakítani:</p>
+
+<codep class="syntax-color copy">my_tuple = tuple((1, 2, "string"))
+print(my_tuple)
+
+my_list = [2, 4, 6]
+print(my_list)    # outputs: [2, 4, 6]
+print(type(my_list))    # outputs: &lt;class 'list'&gt;
+tup = tuple(my_list)
+print(tup)    # outputs: (2, 4, 6)
+print(type(tup))    # outputs: &lt;class 'tuple'&gt;
+</codep>
+<br>
+
+<p>Ugyanígy, amikor egy bejárható objektumot listává akarsz alakítani, használhatod a Python beépített <codel>list()</codel> függvényét:</p>
+
+<codep class="syntax-color copy">tup = 1, 2, 3, 
+my_list = list(tup)
+print(type(my_list))    # outputs: &lt;class 'list'&gt;
+</codep>
+<br>
+
+
+<br>
+
+</div>
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

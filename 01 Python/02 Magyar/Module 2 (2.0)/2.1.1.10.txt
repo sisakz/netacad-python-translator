@@ -1,0 +1,54 @@
+<problem chapter='2' section='1' slide='1' problem='10' title='Az első programod'>
+
+<!--
+Update history:
+2020-07-17 Grzegorz (format and page number change)
+-->
+
+<code>
+print("The itsy bitsy spider\nclimbed up the waterspout.")
+print()
+print("Down came the rain\nand washed the spider out.")
+
+</code>
+
+<h1>A <span style="font-family:courier new;">print()</span> függvény - az escape és az újsor karakterek</h1>
+
+<p>Ismét módosítottuk a kódot. Nézd meg figyelmesen!</p>
+
+<p>Két nagyon finom változtatás történt, egy furcsa karakterpárt illesztettünk be a verssorok közé. Így néznek ki: <codel>\n</codel>.</p>
+
+<br>
+
+<p>Érdekes módon, míg <strong>te két karaktert látsz, a Python csak egyet.</strong></p>
+
+<p>A backslash (<codel>\</codel>) jel a karakterláncokon belül nagyon különleges jelentéssel bír, <strong>fedőkarakternek (escape-karakternek)</strong> hívják.
+
+<p>Az <i>escape</i> (szökés) szót konkrétan kell érteni. Azt jelenti, hogy a karakterlánc feldolgozása egy pillanatra (egy nagyon rövid pillanatra) kilép a karakterláncból, hogy egy speciális állapotot idézzen elő.</p>
+
+<p>Más szóval a backslash önmagában nem jelent semmit, hanem csak egyfajta jelzés, hogy a backslash utáni következő karakter más jelentést kap.</p>
+
+<p>A backslash után elhelyezett <codel>n</codel> betű a <i>newline</i> szóból származik.</p>
+
+<p>A backslash és az <i>n</i> egy speciális szimbólumot alkot, amelyet <strong>újsor karakternek</strong> neveznek, és amely arra készteti a konzolt, hogy <strong>új kimeneti sort</strong> kezdjen.</p>
+
+
+<p>Futtasd a kódot! A konzolodnak így kell kinéznie:</p>
+
+<codep>The itsy bitsy spider
+climbed up the waterspout.
+
+Down came the rain
+and washed the spider out.</codep>
+
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+<p>Mint látható, a gyermekversben két újsor jelenik meg azokon a helyeken, ahol a karakterláncban <codel>\n</codel> van.</p>
+
+<br>
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

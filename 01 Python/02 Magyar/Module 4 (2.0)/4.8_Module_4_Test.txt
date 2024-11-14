@@ -1,0 +1,918 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+PE1 - Module 4 Test
+
+Update history:
+2020-08-19 Grzegorz (review, reformatting, checking PEP-8 compliance, PE1_T4_ITEM_2 made multiple-choice, PE1_T4_ITEM_11 made multiple-choice)
+
+-->
+
+<questionPool>
+
+<!-- ######################################################################################################################## -->
+
+<question type="1" scoringType="1" points="1" customId="PE1_T4_ITEM_1">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p>Az alábbi sorok közül melyik indít megfelelően egy paraméter nélküli függvénydefiníciót?</p>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p><codel>def fun():</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>def fun:</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>function fun():</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>fun function():</codel></p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="2" scoringType="1" points="1" customId="PE1_T4_ITEM_2"> <!-- Multiple-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p>Egy függvény, amely a következőképpen kerül definiálásra: (<u>Két</u> helyes válasz van!)</p>
+
+<codep>def function(x=0):
+    return x
+
+</codep>
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>argumentum nélkül is meghívható.</p>  ]]>
+</option>
+
+<option>
+<![CDATA[ <p>pontosan egy argumentummal kell meghívni.</p> ]]>
+</option>
+
+<option isCorrect="true">
+<![CDATA[ <p>meghívható egy argumentummal is.</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>argumentum nélkül kell meghívni.</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE1_T4_ITEM_3">  
+
+<instructions>
+<![CDATA[
+
+<p>A beépített függvény olyan függvény, …</p>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>amely a Pythonhoz tartozik, és a Python szerves részét képezi.</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>amelyet egy másik programozó helyezett el a kódunkban.</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>amelyet a használat előtt be kell importálni.</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>amely rejtett a programozók elől.</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE1_T4_ITEM_4">  
+
+<instructions>
+<![CDATA[
+
+<p>Az a tény, hogy a tuple-k a szekvencia típusokhoz tartoznak, azt jelenti, hogy …</p>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>a listákhoz hasonlóan indexelhetők és szeletelhetők.</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>a <codel>.append()</codel> metódus segítségével kiterjeszthetők.</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>módosíthatók a <codel>del</codel> utasítással.</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>valójában listák.</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE1_T4_ITEM_5">  
+
+<instructions>
+<![CDATA[
+
+<p>Milyen kimenete van a következő kódrészletnek?</p>
+
+<codep>def f(x):
+    if x == 0:
+    	return 0
+    return x + f(x - 1)
+    
+	
+print(f(3))
+
+</codep>
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p><codel>6</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>3</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>1</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>a kódrészlet hibás</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE1_T4_ITEM_6">  
+
+<instructions>
+<![CDATA[
+
+<p>Milyen kimenete van a következő kódrészletnek?</p>
+
+<codep>def fun(x):
+    x += 1
+    return x
+
+
+x = 2
+x = fun(x + 1)
+print(x)
+
+</codep>
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p><codel>4</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>5</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>3</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>a kódrészlet hibás</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE1_T4_ITEM_7">  
+
+<instructions>
+<![CDATA[
+
+<p>Milyen kódot kell beilleszteni a megjegyzés helyére, hogy a várt kimenetet kapjuk?</</p>
+
+<p>Várt kimenet:</p>
+<codep>a
+b
+c</codep>
+<br>
+
+<p>Code:</p>
+
+<codep>dictionary = {}
+my_list = ['a', 'b', 'c', 'd']
+
+for i in range(len(my_list) - 1):
+    dictionary[my_list[i]] = (my_list[i], )
+
+for i in sorted(dictionary.keys()):
+    k = dictionary[i]
+    <mark style="background-color:#e6f2ff;"># Insert your code here.</mark>
+
+</codep>
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p><codel>print(k[0])</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>print(k['0'])</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>print(k)</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>print(k["0"])</codel></p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE1_T4_ITEM_8">  
+
+<instructions>
+<![CDATA[
+
+<p>A következő kódrészlet …</p>
+
+<codep>def func(a, b):
+    return a ** a
+
+
+print(func(2))
+
+</codep>
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>hibás.</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>kimenete <codel>4</codel> lesz.</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>kimenete <codel>2</codel> lesz.</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>kimenete <codel>None</codel> lesz.</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE1_T4_ITEM_9">  
+
+<instructions>
+<![CDATA[
+
+<p>A következő kódrészlet …</p>
+
+<codep>def func_1(a):
+    return a ** a
+
+
+def func_2(a):
+    return func_1(a) * func_1(a)
+
+
+print(func_2(2))
+
+</codep>
+<br>
+
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>kimenete <codel>16</codel> lesz.</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>kimenete <codel>4</codel> lesz.</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>kimenete <codel>2</codel> lesz.</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>hibás.</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE1_T4_ITEM_10">  
+
+<instructions>
+<![CDATA[
+
+<p>Az alábbi sorok közül melyik egy helyes függvénykezdet, amely két alapértelmezetten nullás értékű paramétert használ?</p>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p><codel>def fun(a=0, b=0):</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>def fun(a=b=0):</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>fun fun(a=0, b):</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>fun fun(a, b=0):</codel></p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="2" scoringType="1" points="1" customId="PE1_T4_ITEM_11">  <!-- Multiple-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p>Az alábbi állítások közül melyik <u>igaz</u>? &nbsp;&nbsp;(<u>Két</u> helyes válasz van!)</p>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option>
+<![CDATA[ <p>A <codel>None</codel> érték nem használható függvényeken kívül.</p> ]]>
+</option>
+
+<option isCorrect="true">
+<![CDATA[ <p>A <codel>None</codel> érték változóhoz rendelhető.</p> ]]>
+</option>
+
+<option isCorrect="true">
+<![CDATA[ <p>A <codel>None</codel> érték összehasonlítható változókkal.</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>A <codel>None</codel> érték aritmetikai operátorok argumentumaként használható.</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE1_T4_ITEM_12">  
+
+<instructions>
+<![CDATA[
+
+<p>Milyen kimenete van a következő kódrészletnek?</p>
+
+<codep>def fun(x):
+    if x % 2 == 0:
+    	return 1
+    else:
+    	return
+
+
+print(fun(fun(2)) + 1)
+
+</codep>
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>a kód runtime error hibát okoz</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>1</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>2</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>None</codel></p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE1_T4_ITEM_13">  
+
+<instructions>
+<![CDATA[
+
+<p>Milyen kimeneti eredményt ad a következő kódrészlet?</p>
+
+<codep>def fun(x):
+    global y
+    y = x * x
+    return y
+
+
+fun(2)
+print(y)
+
+</codep>
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p><codel>4</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>2</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>None</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>a kód runtime error hibát okoz</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE1_T4_ITEM_14">  
+
+<instructions>
+<![CDATA[
+
+<p>Milyen kimeneti eredményt ad a következő kódrészlet?</p>
+
+<codep>def any():
+    print(var + 1, end='')
+
+
+var = 1
+any()
+print(var)
+
+</codep>
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p><codel>21</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>12</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>11</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>22</codel></p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE1_T4_ITEM_15">  
+
+<instructions>
+<![CDATA[
+
+<p>Feltételezve, hogy a <codel>my_tuple</codel> egy helyesen létrehozott tuple, az a tény, hogy a tuple-k megváltoztathatatlanok azt jelenti, hogy a következő utasítás:</p>
+
+<codep>my_tuple[1] = my_tuple[1] + my_tuple[0]
+
+</codep>
+<br>
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>nem megengedett.</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>csak akkor, és csakis akkor hajtható végre, ha a tuple legalább két elemet tartalmaz.</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>teljesen helyes.</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>lehet illegális, ha a tuple karakterláncot tartalmaz.</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE1_T4_ITEM_16">  
+
+<instructions>
+<![CDATA[
+
+<p>Milyen kimeneti eredményt ad a következő kódrészlet?</p>
+
+<codep>my_list =  ['Mary', 'had', 'a', 'little', 'lamb']
+
+
+def my_list(my_list):
+    del my_list[3]
+    my_list[3] = 'ram'
+
+
+print(my_list(my_list))
+
+</codep>
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>nincs kimenet, a kódrészlet hibás</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>['Mary', 'had', 'a', 'little', 'lamb']</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>['Mary', 'had', 'a', 'lamb']</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>['Mary', 'had', 'a', 'ram']</codel></p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE1_T4_ITEM_17">  
+
+<instructions>
+<![CDATA[
+
+<p>Milyen kimeneti eredményt ad a következő kódrészlet?</p>
+
+<codep>def fun(x, y, z):
+    return x + 2 * y + 3 * z
+
+
+print(fun(0, z=1, y=3))
+
+</codep>
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p><codel>9</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>0</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>3</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>a kódrészlet hibás</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE1_T4_ITEM_18">  
+
+<instructions>
+<![CDATA[
+
+<p>Milyen kimenete lesz az alábbi kódrészletnek?</p>
+
+<codep>def fun(inp=2, out=3):
+    return inp * out
+
+
+print(fun(out=2))
+
+</codep>
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p><codel>4</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>6</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>2</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>a kódrészlet hibás</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE1_T4_ITEM_19">  
+
+<instructions>
+<![CDATA[
+
+<p>Milyen kimenete lesz az alábbi kódrészletnek?</p>
+
+<codep>dictionary = {'one': 'two', 'three': 'one', 'two': 'three'}
+v = dictionary['one']
+
+for k in range(len(dictionary)):
+    v = dictionary[v]
+
+print(v)
+
+</codep>
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p><codel>two</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>three</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>one</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>('one', 'two', 'three')</codel></p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE1_T4_ITEM_20">  
+
+<instructions>
+<![CDATA[
+
+<p>Milyen kimeneti eredményt ad a következő kódrészlet?</p>
+
+<codep>tup = (1, 2, 4, 8)
+tup = tup[1:-1]
+tup = tup[0]
+print(tup)
+
+</codep>
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p><codel>2</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>(2)</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>(2, )</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>a kódrészlet hibás</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+<!-- ######################################################################################################################## -->
+
+
+</questionPool>

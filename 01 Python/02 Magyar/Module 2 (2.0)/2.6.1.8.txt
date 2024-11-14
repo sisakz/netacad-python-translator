@@ -1,0 +1,56 @@
+<problem chapter='2' section='6' slide='1' problem='8' title='Adatbevitel | karakterlánc műveletek'>
+
+<!--
+Update history:
+2020-07-17 Grzegorz (reviewed; code - blank lines and syntax-color class added)
+-->
+
+<h1>Típuskonverzió: <span style="font-family:courier new;">str()</span></h1>
+
+
+<p>Már tudod, hogyan használhatod az <codel>int()</codel> és <codel>float()</codel> függvényeket egy karakterlánc számmá alakítására.</p>
+
+<p>Ez a fajta átalakítás nem egyirányú. <strong>Egy számot karakterlánccá is konvertálhatsz</strong>, ami sokkal egyszerűbb és biztonságosabb - ez a művelet mindig lehetséges.</p>
+
+<p>Az erre alkalmas függvény neve <codel>str()</codel>.</p>
+
+<codep class="syntax-color">str(number)
+</codep>
+
+<br>
+
+
+<p>Igazság szerint a függvény sokkal többre képes, mint számokat karakterláncokká alakítani, de erről később lesz szó.</p>
+
+<br>
+
+
+
+<h1>Ismét a "derékszögű háromszög"</h1>
+
+
+<p>Itt van újra a "derékszögű háromszög" programunk:</p>
+
+<codep>leg_a = float(input("Input first leg length: "))
+leg_b = float(input("Input second leg length: "))
+print("Hypotenuse length is " + <mark style="background-color:#e6f2ff;">str((leg_a**2 + leg_b**2)</mark> ** .5))
+
+</codep>
+
+<br>
+
+<p>Kicsit módosítottuk, hogy megmutassuk, hogyan működik a <codel>str()</codel> függvény. Ennek köszönhetően a <strong><codel>print()</codel> függvénynek a teljes eredményt egyetlen karakterláncként adhatjuk át</strong>, így elhagyhatjuk a vesszőket.</p>
+
+<br>
+
+<p>Komoly lépéseket tettél a Python programozás felé vezető úton.</p>
+
+<p>Már ismered az alapvető adattípusokat és az alapvető operátorokat. Tudod, hogyan alakítsd ki a kimenetet, és hogyan olvass be adatokat a felhasználótól. Ezek nagyon fontos alapokat jelentenek a 3. modulhoz. Mielőtt azonban áttérnénk a következő modulra, végezzünk el néhány gyakorlatot, és foglaljuk össze mindazt, amit ebben a részben tanultál.</p>
+
+
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

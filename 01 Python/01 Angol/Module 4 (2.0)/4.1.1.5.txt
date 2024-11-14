@@ -1,0 +1,151 @@
+<problem chapter='4' section='1' slide='1' problem='5' title='Analyzing functions'>
+
+<!--
+Update history:
+2020-08-13 Grzegorz (reviewed, re-formatted)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h1>How functions work</h1>
+
+<p>Look at the picture below:</p>
+
+<center><img src="/uploads/media/default/0001/01/f3a3fa6991f0ecb817a2a09c1aac0b45dba5579a.png" width="90%" alt="Explaining how functions work"></center>
+
+<br>
+<br>
+
+<p>It tries to show you the whole process:</p>
+
+<ul>
+<li>when you <strong>invoke</strong> a function, Python remembers the place where it happened and <i>jumps</i> into the invoked function;</li>
+<li>the body of the function is then <strong>executed</strong>;</li>
+<li>reaching the end of the function forces Python to <strong>return</strong> to the place directly after the point of invocation.</li>
+</ul>
+
+
+<br> 
+
+
+<p>There are two, very important, catches. Here's the first of them:</p>
+
+<p><strong>You mustn't invoke a function which is not known at the moment of invocation.</strong></p>
+
+<p>Remember - Python reads your code from top to bottom. It's not going to look ahead in order to find a function you forgot to put in the right place ("right" means "before invocation".)</p>
+
+<p>We've inserted an error into this code ‒ can you see the difference?</p>
+
+<codep style="color:red;">print("We start here.")
+<mark style="background-color:#e6f2ff;color:red;">message()</mark>
+print("We end here.")
+
+
+def message():
+    print("Enter a value: ")
+
+</codep>
+
+<br>
+
+<p>We've moved the function to the end of the code. Is Python able to find it when the execution reaches the invocation?</p>
+
+<p>No, it isn't. The error message will read:</p>
+
+<codep>NameError: name 'message' is not defined</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+<br>
+
+<p>Don't try to force Python to look for functions you didn't deliver at the right time.</p>
+
+<br>
+
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+<p>The second catch sounds a little simpler:</p>
+
+<p><strong>You mustn't have a function and a variable of the same name</strong>.</p>
+
+<p>The following snippet is erroneous:</p>
+
+<codep style="color:red;">def message():
+    print("Enter a value: ")
+
+<mark style="background-color:#e6f2ff;color:red;">message = 1</mark>
+
+</codep>
+
+<br>
+
+
+<p>Assigning a value to the name message causes Python to forget its previous role. The function named <codel>message</codel> becomes unavailable.</p>
+
+<p>Fortunately, you're free to <strong>mix your code with functions</strong> ‒ you're not obliged to put all your functions at the top of your source file.</p>
+
+<p>Look at the snippet:</p>
+
+<codep class="syntax-color">print("We start here.")
+
+
+def message():
+    print("Enter a value: ")
+
+message()
+
+print("We end here.")
+</codep>
+
+<br>
+
+<p>It may look strange, but it's completely correct, and works as intended.</p>
+
+<br>
+
+<p>Let's return to our primary example, and employ the function for the right job, like here:</p>
+
+<codep class="syntax-color copy">def message():
+    print("Enter a value: ")
+
+message()
+a = int(input())
+message()
+b = int(input())
+message()
+c = int(input())
+</codep>
+
+<br>
+
+
+<p>Modifying the prompting message is now easy and clear - you can do it by <strong>changing the code in just one place</strong> ‒ inside the function's body.</p>
+
+<p>Open the sandbox, and try to do it yourself.</p>
+
+<br>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

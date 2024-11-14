@@ -1,0 +1,350 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+PE1 - Module 1 Quiz
+
+Update history:
+2020-07-17 Grzegorz (review, reformatting, checking PEP-8 compliance)
+2020-08-19 Grzegorz (reformatting, checking PEP-8 compliance)
+-->
+
+<questionPool>
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE1_Q1_ITEM_1">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p>A Python egy ...</p>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>magas szintű programozási nyelv.</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>gépi nyelv.</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>természetes nyelv.</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE1_Q1_ITEM_2"> 
+
+<instructions>
+<![CDATA[
+
+<p>Az ismert parancsok teljes halmaza egy ...</p>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>utasításlista.</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>gépi lista.</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>alacsony szintű lista.</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE1_Q1_ITEM_3">  
+
+<instructions>
+<![CDATA[
+
+<p>Mi a forráskód?</p>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>Magas szintű programozási nyelven írt program.</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>A számítógépek által végrehajtott gépi kód.</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>A forrásfájl másik neve.</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE1_Q1_ITEM_4">  
+
+<instructions>
+<![CDATA[
+
+<p>Mi a neve annak a számítógépes programnak, amely közvetlenül egy programozási nyelven írt utasításokat hajt végre?</p>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>interpreter / értelmező</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>compiler / fordítóprogram</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>translator / fordító</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE1_Q1_ITEM_5">  
+
+<instructions>
+<![CDATA[
+
+<p>Melyik Python verziót tárgyalja ez a kurzus?</p>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>Python 3</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>Python 2</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>Python 1</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE1_Q1_ITEM_6">  
+
+<instructions>
+<![CDATA[
+
+<p>Mi az a CPython?</p>
+
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>A Python programozási nyelv alapértelmezett implementációja.</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>A Cython másik neve, a Python programozási nyelv egy szuperhalmaza.</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>Egy fordított nyelv, amelyet magas szintű programozási funkciók elvégzésére használnak.</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE1_Q1_ITEM_7">  
+
+<instructions>
+<![CDATA[
+
+<p>Mi az IDLE?</p>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>Egy betűszó, amely az Integrated Development and Learning Environment (beépített fejlesztő és tanuló környezet) rövidítése.</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>A Python egy változata.</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>Egy rövidítés, amely az Interactive Development and Learning Extension (interaktív fejlesztő és tanuló bővítmény) rövidítése.</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE1_Q1_ITEM_8">  
+
+<instructions>
+<![CDATA[
+
+<p>Mi a neve annak az eszköznek, amely lehetővé teszi, hogy lépésről lépésre futtasd a kódodat, és a végrehajtás minden egyes pillanatában megvizsgáld?</p>
+
+<br>
+
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>debugger / hibakereső</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>editor / szerkesztő</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>console / konzol</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE1_Q1_ITEM_9">  
+
+<instructions>
+<![CDATA[
+
+<p>Honnan kapta a Python programozási nyelv a nevét?</p>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>Guido van Rossum a Monty Python's Flying Circus, a BBC 1970-es években népszerű vígjátéksorozatának tiszteletére nevezte el.</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>Guido van Rossum a Pythonidae - a nagyméretű, nem mérges kígyók családja - után nevezte el.</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>Guido van Rossum a Catanai Python, Nagy Sándor korabeli drámaíró tiszteletére nevezte el.</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE1_Q1_ITEM__10">  
+
+<instructions>
+<![CDATA[
+
+<p>Az alábbiak közül melyik a Python fájlkiterjesztése?</p>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>py</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>p</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>pi</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+<!-- ######################################################################################################################## -->
+
+
+</questionPool>

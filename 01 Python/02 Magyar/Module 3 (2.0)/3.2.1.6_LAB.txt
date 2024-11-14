@@ -1,0 +1,101 @@
+<problem chapter='3' section='2' slide='1' problem='6' title='LAB: A for ciklus – Mississippi-alapú számolás'>
+
+<!--
+Update history:
+2020-07-20 Grzegorz (reviewed, re-formatted)
+-->
+
+<code>
+
+import time
+
+# Write a for loop that counts to five.
+    # Body of the loop - print the loop iteration number and the word "Mississippi".
+    # Body of the loop - use: time.sleep(1)
+
+# Write a print function with the final message.
+
+</code>
+
+<span class="label" style="background-color:rgb(205, 168, 105);"><strong>LABORGYAKORLAT</strong></span>
+
+<br><br>
+
+<h2>Becsült idő</h2>
+<p>5-15 perc</p>
+
+<h2>Nehézségi szint</h2>
+<p>Nagyon könnyű</p>
+
+
+<h2>Célok</h2>
+
+<p>Ismerkedjen meg a tanuló a következőkkel:</p>
+
+<ul>
+<li>a <font face="courier new">for</font> ciklus használata;</li>
+<li>a valós élethelyzeteknek a számítógépes kódban való megjelenítése.</li>
+</ul>
+
+<h2>Feladatleírás</h2>
+
+<p>Tudod, mi az a Mississippi? Nos, ez az Egyesült Államok egyik államának és folyójának a neve. A Mississippi körülbelül 2340 mérföld hosszú, ami az Egyesült Államok második leghosszabb folyója (a leghosszabb a Missouri folyó). Olyan hosszú, hogy egyetlen vízcseppnek 90 napra van szüksége, hogy a teljes hosszát megtegye!</p>
+
+<p>A <i>Mississippi</i> szót egy kicsit más célra is használják: a <i>Mississippi-alapú számolásra</i>.</p>
+
+<p>Ha nem ismered a kifejezést, most elmagyarázzuk, mit jelent: a másodpercek számolására használják.</p>
+
+<p>Az ötlet lényege, hogy a <i>Mississippi</i> szó hozzáadása a számhoz, amikor hangosan számoljuk a másodperceket, közelebb hozza azokat az óraidőhöz, és így az "egy Mississippi, két Mississippi, három Mississippi" körülbelül három másodpercnyi időt vesz igénybe. Gyakran használják bújócskázó gyerekek, hogy megbizonyosodjanak arról, hogy a kereső becsületesen számol.</p>
+
+<br>
+
+
+<p>A feladatod nagyon egyszerű: írj egy programot, amely egy <codel>for</codel> ciklussal "Mississippi-alapon elszámol" ötig. Miután ötig számolt, a program írja ki a képernyőre a végső üzenetet: <codel>"Ready or not, here I come!"</codel></p>
+
+<p>Használd a szerkesztőben megadott vázlatot!</p>
+
+<p><span class="label" style="background-color:orange;"><strong>EXTRA INFORMÁCIÓ</strong></span></p>
+
+<p>Vedd figyelembe, hogy a szerkesztőben lévő kód két olyan elemet tartalmaz, amely ebben a pillanatban nem teljesen világos: az <codel>import time</codel> utasítást és a <codel>sleep()</codel> tagfüggvényt. Hamarosan beszélni fogunk róluk.</p>
+
+<p>Egyelőre csak azt szeretnénk, ha tudnád, hogy importáltuk a <codel>time</codel> modult, és a <codel>sleep()</codel> tagfüggvény segítségével egy másodpercre felfüggesztettük a <codel>for</codel> cikluson belüli minden egyes következő <codel>print()</codel> függvény végrehajtását. Így a konzolra kiadott üzenet egy tényleges számlálásra hasonlít. Ne aggódj, hamarosan többet fogsz tanulni a modulokról és tagfüggvényekről.</p>
+
+
+<h2>Várható kimenet</h2>
+
+<codep>1 Mississippi
+2 Mississippi
+3 Mississippi
+4 Mississippi
+5 Mississippi</codep>
+<br>
+
+
+<studyMode>false</studyMode>
+<labMode>true</labMode>
+
+<hint>
+import time
+
+# Write a for loop that counts to five.
+    # Body of the loop: print the loop iteration number and the word "Mississippi".
+    time.sleep(1)
+	
+# Write a print function with the final message.
+
+</hint>
+
+
+<sampleSolution>
+import time
+
+for second in range(1, 6):
+    print(second, "Mississippi")
+    time.sleep(1)
+	
+print("Ready or not, here I come!")
+
+</sampleSolution>
+
+
+</problem>

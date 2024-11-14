@@ -1,0 +1,77 @@
+<problem chapter='1' section='2' slide='1' problem='1' title='Begin your Python journey'>
+
+<!--
+Update history:
+2020-07-07 Grzegorz (formatted)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h1>How to get Python and how to get to use it</h1>
+
+<p>There are several ways to get your own copy of Python 3, depending on the operating system you use.</p>
+
+<p><strong>Linux users most probably have Python already installed</strong> - this is the most likely scenario, as Python's infrastructure is intensively used by many Linux OS components.</p>
+
+<p>For example, some distributors may couple their specific tools together with the system and many of these tools, like package managers, are often written in Python. Some parts of graphical environments available in the Linux world may use Python, too.</p>
+
+<p>If you're a Linux user, open the terminal/console, and type:</p>
+
+<codep>python3</codep>
+
+<br>
+
+<p>at the shell prompt, press <i>Enter</i> and wait.</p>
+
+<p>If you see something like this:</p>
+
+<codep>Python 3.4.5 (default, Jan 12 2017, 02:28:40)
+[GCC 4.2.1 Compatible Clang 3.7.1 (tags/RELEASE_371/final)] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>></codep>
+
+<br>
+
+<p>then you don't have to do anything else.</p>
+
+
+<br>
+
+</div>
+
+
+
+
+<div class="small-12 large-6 columns">
+
+
+<br>
+
+
+<p>If Python 3 is absent, then refer to your Linux documentation in order to find out how to use your package manager to download and install a new package &ndash; the one you need is named <strong>python3</strong> or its name begins with that.</p>
+
+<p>All non-Linux users can download a copy at <a href="https://www.python.org/downloads/" target="_blank">https://www.python.org/downloads/</a>.</p>
+
+
+<img class="lightbox" src="/uploads/media/default/0001/01/4ee5f443f5b9290c0dc5ca8a57f1e2392e4be01b.png" alt="Linux Terminal" align="middle">
+
+
+<br>
+<br>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

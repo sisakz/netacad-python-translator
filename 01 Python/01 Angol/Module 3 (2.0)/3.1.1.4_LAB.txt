@@ -1,0 +1,79 @@
+<problem chapter='3' section='1' slide='1' problem='4' title='LAB: Questions and answers'>
+
+<!--
+Update history:
+2020-07-20 Grzegorz (reviewed)
+-->
+
+<span class="label" style="background-color:rgb(205, 168, 105);"><strong>LAB</strong></span>
+
+<br><br>
+
+<h2>Estimated time</h2>
+<p>5-10 minutes</p>
+
+<h2>Level of difficulty</h2>
+<p>Very Easy</p>
+
+<h2>Objectives</h2>
+<ul>
+<li>becoming familiar with the the <codel>input()</codel> function;</li>
+<li>becoming familiar with comparison operators in Python.</li>
+</ul>
+
+<h2>Scenario</h2>
+<p>Using one of the comparison operators in Python, write a simple two-line program that takes the parameter <codel>n</codel> as input, which is an integer, and prints <codel>False</codel> if <codel>n</codel> is less than <codel>100</codel>, and <codel>True</codel> if <codel>n</codel> is greater than or equal to <codel>100</codel>.</p>
+<p>Don't create any <codel>if</codel> blocks (we're going to talk about them very soon). Test your code using the data we've provided for you. </p>
+
+<h2>Test Data</h2>
+
+<br>
+
+<p>Sample input: <codel>55</codel></p>
+<p>Expected output: <codel>False</codel></p>
+
+<hr>
+
+<p>Sample input: <codel>99</codel></p>
+<p>Expected output: <codel>False</codel></p>
+
+<hr>
+
+<p>Sample input: <codel>100</codel></p>
+<p>Expected output: <codel>True</codel></p>
+
+<hr>
+
+<p>Sample input: <codel>101</codel></p>
+<p>Expected output: <codel>True</codel></p>
+
+<hr>
+
+<p>Sample input: <codel>-5</codel></p>
+<p>Expected output: <codel>False</codel></p>
+
+<hr>
+
+<p>Sample input: <codel>+123</codel></p>
+<p>Expected output: <codel>True</codel></p>
+
+<br>
+
+<studyMode>false</studyMode>
+<labMode>true</labMode>
+
+<hint>
+n = int(input("Enter a number: "))
+# use the print() function here
+
+</hint>
+
+<sampleSolution>
+n = int(input("Enter a number: "))
+print(n >= 100)
+
+</sampleSolution>
+
+
+
+</problem>

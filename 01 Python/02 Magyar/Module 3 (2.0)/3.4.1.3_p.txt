@@ -1,0 +1,71 @@
+<problem chapter='3' section='4' slide='1' problem='3' title='Listák | Indexelés'>
+
+<!--
+Update history:
+2020-08-03 Grzegorz (reviewed)
+-->
+
+<code>
+numbers = [10, 5, 7, 2, 1]
+print("Original list contents:", numbers)  # Printing original list contents.
+
+numbers[0] = 111
+print("\nPrevious list contents:", numbers)  # Printing previous list contents.
+
+numbers[1] = numbers[4]  # Copying value of the fifth element to the second.
+print("Previous list contents:", numbers)  # Printing previous list contents.
+
+print("\nList length:", len(numbers))  # Printing the list's length.
+
+</code>
+
+
+
+<h1>Hozzáférés a lista tartalmához</h1>
+
+<p>A lista minden egyes eleme külön-külön is elérhető. Például ki lehet nyomtatni:</p>
+
+<codep class="syntax-color">print(numbers[0]) # Accessing the list's first element.
+</codep>
+
+<br>
+
+<p>Feltételezve, hogy az összes előző művelet sikeresen befejeződött, a kódrészlet <codel>111</codel>-et küldi ki a konzolra.</p>
+
+<p>Ahogy a szerkesztőben láthatod, a teljes lista egészben is kiíratható, például így:</p>
+
+<codep class="syntax-color">print(numbers)  # Printing the whole list.
+</codep>
+
+<br>
+
+<p>Amint azt már valószínűleg észrevetted, a Python úgy formázza a kimenetet, hogy azt sugallja, az összes bemutatott érték egy listát alkot. A fenti példaszakasz kimenete így néz ki:</p>
+
+<codep>[111, 1, 7, 2, 1]</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+<br>
+
+<h2>A <font face="courier new">len()</font> függvény</h2>
+
+<p>A <strong>lista hossza</strong> a végrehajtás során változhat. A listához új elemek adhatók hozzá, míg mások eltávolíthatóak belőle. Ez azt jelenti, hogy a lista egy nagyon dinamikus entitás.</p>
+
+<p>Ha a lista aktuális hosszát szeretnénk ellenőrizni, használhatjuk a <codel>len()</codel> nevű függvényt (neve a <i>length</i> (hossz) szóból származik).</p>
+
+<p>A függvény a <strong>lista nevét veszi argumentumként, és a listában jelenleg tárolt elemek számát adja vissza</strong> (más szóval a lista hosszát).</p>
+
+<p>Nézd meg a szerkesztőprogramban az utolsó kódsort, futtasd le a programot, és ellenőrizd, hogy milyen értéket ír ki a konzolra! Ki tudod találni?</p>
+
+
+<br>
+
+
+
+<br>
+
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

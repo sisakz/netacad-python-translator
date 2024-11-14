@@ -1,0 +1,105 @@
+<problem chapter='3' section='1' slide='1' problem='5' title='Making decisions in Python'>
+
+<!--
+Update history:
+2020-07-20 Grzegorz (reviewed)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<h1>Conditions and conditional execution</h1>
+
+
+<p>You already know how to ask Python questions, but you still don't know how to make reasonable use of the answers. You have to have a mechanism which will allow you to do something <strong>if a condition is met, and not do it if it isn't</strong>.</p>
+
+<p>It's just like in real life: you do certain things or you don't when a specific condition is met or not, e.g., you go for a walk if the weather is good, or stay home if it's wet and cold.</p>
+
+<p>To make such decisions, Python offers a special instruction. Due to its nature and its application, it's called a <strong>conditional instruction</strong> (or conditional statement).</p>
+
+<p>There are several variants of it. We'll start with the simplest, increasing the difficulty slowly.</p>
+
+<p>The first form of a conditional statement, which you can see below is written very informally but figuratively:</p>
+
+<codep><mark style="background-color:#e6f2ff;">if</mark> true_or_not:
+    do_this_if_true
+
+</codep>
+
+<br>
+
+<p>This conditional statement consists of the following, strictly necessary, elements in this and this order only:</p>
+
+<ul>
+<li>the <codel>if</codel> keyword;</li>
+
+<li>one or more white spaces;</li>
+
+<li>an expression (a question or an answer) whose value will be interpreted solely in terms of <codel>True</codel> (when its value is non-zero) and <codel>False</codel> (when it is equal to zero);</li>
+
+<li>a <strong>colon</strong> followed by a newline;</li>
+
+<li>an <strong>indented</strong> instruction or set of instructions (at least one instruction is absolutely required); the <strong>indentation</strong> may be achieved in two ways – by inserting a particular number of spaces (the recommendation is to use <strong>four spaces of indentation</strong>), or by using the <i>tab</i> character; note: if there is more than one instruction in the indented part, the indentation should be the same in all lines; even though it may look the same if you use tabs mixed with spaces, it's important to make all indentations <strong>exactly the same</strong> – Python 3 <strong>does not allow the mixing of spaces and tabs</strong> for indentation.</li>
+
+</ul>
+
+<br>
+
+
+
+</div>
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+
+<br>
+
+<p>How does that statement work?</p>
+
+<ul>
+<li>If the <codel>true_or_not</codel> expression <strong>represents the truth</strong> (i.e., its value is not equal to zero), <strong>the indented statement(s) will be executed</strong>;</li>
+
+<li>if the <coodel>true_or_not</codel> expression <strong>does not represent the truth</strong> (i.e., its value is equal to zero), <strong>the indented statement(s) will be omitted</strong> (ignored), and the next executed instruction will be the one after the original indentation level.</li>
+</ul>
+
+<br>
+
+<p>In real life, we often express a desire: </p>
+
+<p><i>if the weather is good, we'll go for a walk</p>
+
+<p>then, we'll have lunch</i></p>
+
+<br>
+
+ 
+
+<p>As you can see, having lunch is <strong>not a conditional activity</strong> and doesn't depend on the weather.</p>
+
+<p>Knowing what conditions influence our behavior, and assuming that we have the parameterless functions <codel>go_for_a_walk()</codel> and <codel>have_lunch()</codel>, we can write the following snippet:</p>
+
+<codep>if the_weather_is_good:
+    go_for_a_walk()
+have_lunch()
+
+</codep>
+
+<br>
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

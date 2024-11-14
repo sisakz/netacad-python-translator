@@ -1,0 +1,83 @@
+<problem chapter='2' section='3' slide='1' problem='7' title='Operátorok'>
+
+<!--
+Update history:
+2020-07-17 Grzegorz (reformatted; code - syntax-color and blank lines added;)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<h1>A műveletek és a műveletek prioritása</h1>
+
+
+<p>Eddig úgy kezeltük az egyes operátorokat, mintha nem lenne kapcsolatuk a többivel. Nyilvánvaló, hogy az ilyen egyszerű helyzetek ritkaságszámba mennek a valós programozásban.</p>
+
+<p>Ehelyett nagyon gyakran előfordul, hogy egy kifejezésben egynél több műveletet kell alkalmaznunk, és akkor ez már nem is nyilvánvaló.</p>
+
+<p>Tekintsük a következő kifejezést:</p>
+
+<codep>2 + 3 * 5</codep>
+
+<br>
+
+<p>Valószínűleg emlékszel az iskolából, hogy a <strong>szorzás magasabb rendű az összeadásnál</strong>.</p>
+
+<p>Bizonyára emlékszel arra, hogy először a 3-at kell megszoroznod 5-tel, majd a 15-öt hozzáadnod a 2-höz, így kapod meg a 17-et eredményként.</p>
+
+
+<p>Azt a tulajdonságot, amely miatt egyes műveleteket előbb kell elvégezni, mint másokat, a <strong>műveletek prioritásának</strong> nevezzük.</p>
+
+<p>A Python pontosan meghatározza az összes művelet prioritását, és betartja a szabályt, miszerint a nagyobb (magasabb) prioritású műveletek számításait előbb kell végrehajtani, mint az alacsonyabb prioritásúakét.</p>
+
+<p>Ha tehát tudjuk, hogy a <codel>*</codel>-nak magasabb prioritása van, mint a <codel>+</codel>-nak, akkor a végeredmény kiszámítása nyilvánvaló.</p>
+
+
+<br>
+
+</div>
+
+
+<div class="small-12 large-6 columns">
+
+<h1>Műveletek és a végrehajtási sorrend</h1>
+
+
+<p>A műveletek <strong>végrehajtási sorrendje</strong> határozza meg az egy kifejezésben egymás mellé helyezett, azonos prioritású műveletek által előírt számítások sorrendjét.</p>
+
+<p>A Python legtöbb műveleti jele balról jobbra sorrendű, ami azt jelenti, hogy a kifejezés kiértékelése balról jobbra történik.</p>
+
+<p>Ez az egyszerű példa megmutatja, hogyan működik mindez. Nézd meg:</p>
+
+<codep class="syntax-color">print(9 % 6 % 2)
+</codep>
+
+<br>
+
+<p>A kifejezés kiértékelésének két lehetséges módja van:</p>
+
+<ul>
+<li>balról jobbra: először <codel>9 % 6</codel> eredménye <codel>3</codel>, majd <codel>3 % 2</codel> eredménye <codel>1</codel>;</li>
+<li>jobbról balra: először a <codel>6 % 2</codel> eredménye <codel>0</codel>, majd a <codel>9 % 0</codel><strong>, ami végzetes hibát</strong> okoz.</li>
+</ul>
+
+<br>
+
+<p>Futtasd le a példát, és nézd meg, mit kapsz!</p>
+
+<p>Az eredménynek <codel>1</codel>-nek kell lennie. Ennek a műveleti jelnek a végrehajtása <strong>balról jobbra</strong> történik. De van egy érdekes kivétel.</p>
+
+<br>
+
+</div>
+
+
+</div>
+</div>
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

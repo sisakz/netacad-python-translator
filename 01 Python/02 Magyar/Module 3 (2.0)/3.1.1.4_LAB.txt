@@ -1,0 +1,79 @@
+<problem chapter='3' section='1' slide='1' problem='4' title='LAB: Kérdések és válaszok'>
+
+<!--
+Update history:
+2020-07-20 Grzegorz (reviewed)
+-->
+
+<span class="label" style="background-color:rgb(205, 168, 105);"><strong>LABORGYAKORLAT</strong></span>
+
+<br><br>
+
+<h2>Becsült idő</h2>
+<p>5-10 perc</p>
+
+<h2>Nehézségi szint</h2>
+<p>Nagyon könnyű</p>
+
+<h2>Célok</h2>
+<ul>
+<li>az <codel>input()</codel> függvény megismerése;</li>
+<li>a Python összehasonlító operátorainak megismerése.</li>
+</ul>
+
+<h2>Feladatleírás</h2>
+<p>A Python egyik összehasonlító operátorát használva írj egy egyszerű kétsoros programot, amely bemenetként az <codel>n</codel> paramétert fogadja, ami egy egész szám. A program kimenete <codel>False</codel>, ha <codel>n</codel> kisebb, mint <codel>100</codel>, és <codel>True</codel>, ha <codel>n</codel> nagyobb vagy egyenlő, mint <codel>100</codel>.</p>
+<p>Ne hozz létre semmilyen <codel>if</codel> blokkot (erről hamarosan beszélni fogunk)! Teszteld a kódodat az általunk megadott adatokkal!</p>
+
+<h2>Tesztadatok</h2>
+
+<br>
+
+<p>Mintabemenet: <codel>55</codel></p>
+<p>Várható kimenet: <codel>False</codel></p>
+
+<hr>
+
+<p>Mintabemenet: <codel>99</codel></p>
+<p>Várható kimenet: <codel>False</codel></p>
+
+<hr>
+
+<p>Mintabemenet: <codel>100</codel></p>
+<p>Várható kimenet: <codel>True</codel></p>
+
+<hr>
+
+<p>Mintabemenet: <codel>101</codel></p>
+<p>Várható kimenet: <codel>True</codel></p>
+
+<hr>
+
+<p>Mintabemenet: <codel>-5</codel></p>
+<p>Várható kimenet: <codel>False</codel></p>
+
+<hr>
+
+<p>Mintabemenet: <codel>+123</codel></p>
+<p>Várható kimenet: <codel>True</codel></p>
+
+<br>
+
+<studyMode>false</studyMode>
+<labMode>true</labMode>
+
+<hint>
+n = int(input("Enter a number: "))
+# use the print() function here
+
+</hint>
+
+<sampleSolution>
+n = int(input("Enter a number: "))
+print(n >= 100)
+
+</sampleSolution>
+
+
+
+</problem>

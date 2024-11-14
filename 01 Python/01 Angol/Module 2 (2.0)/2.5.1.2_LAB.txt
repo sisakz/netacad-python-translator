@@ -1,0 +1,57 @@
+<problem chapter='2' section='5' slide='1' problem='2' title='LAB: Comments'>
+
+<!--
+Update history:
+2020-07-17 Grzegorz (reviewed; blank line added to code)
+-->
+
+<code>#this program computes the number of seconds in a given number of hours
+# this program has been written two days ago
+
+a = 2 # number of hours
+seconds = 3600 # number of seconds in 1 hour
+
+print("Hours: ", a) #printing the number of hours
+# print("Seconds in Hours: ", a * seconds) # printing the number of seconds in a given number of hours
+
+#here we should also print "Goodbye", but a programmer didn't have time to write any code
+#this is the end of the program that computes the number of seconds in 3 hour
+
+</code>
+
+<span class="label" style="background-color:rgb(205, 168, 105);"><strong>LAB</strong></span>
+
+<br><br>
+
+<h2>Estimated time</h2>
+<p>5 minutes</p>
+
+<h2>Level of difficulty</h2>
+<p>Very Easy</p>
+
+<h2>Objectives</h2>
+<ul>
+<li>becoming familiar with the concept of comments in Python;</li>
+<li>using and not using comments;</li>
+<li>replacing comments with code;</li>
+<li>experimenting with Python code.</li>
+</ul>
+
+<h2>Scenario</h2>
+
+<p>The code in the editor contains comments. Try to improve it: add or remove comments where you find it appropriate (yes, sometimes removing a comment can make the code more readable), and change variable names where you think this will improve code comprehension.</p>
+
+
+
+<p><span class="label" style="background-color:orange;"><b>NOTE</b></span></p>
+
+<p>Comments are very important. They are used not only to make your programs <strong>easier to understand</strong>, but also to <strong>disable those pieces of code that are currently not needed</strong> (e.g., when you need to test some parts of your code only, and ignore others). Good programmers <strong>describe</strong> each important piece of code, and give <strong>self-commenting names</strong> to variables, as sometimes it is simply much better to leave information in the code.</p>
+
+<p>It's good to use <strong>readable</strong> variable names, and sometimes it's better to <strong>divide your code</strong> into named pieces (e.g., functions). In some situations, it's a good idea to write the steps of computations in a clearer way.</p>
+<p>One more thing: it may happen that a comment contains a wrong or incorrect piece of information ‒ you should never do that on purpose!</p>
+
+<br>
+
+<labMode>true</labMode>
+
+</problem>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NetAcad Python Translator</title>
+
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 1rem;
+        font-weight: 400;
+        outline-color: #1144aa;
+      }
+      body {
+        padding: 3rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+      h1 {
+        font-size: 2rem;
+        font-weight: 500;
+      }
+      hr {
+        border: 0;
+        height: 1px;
+        flex-shrink: 0;
+        width: 100%;
+        background-color: #ccc;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+        width: 100%;
+      }
+      label {
+        display: flex;
+        gap: 0.5rem;
+        flex-direction: column;
+      }
+      input,
+      textarea {
+        padding: 0.5rem 0.75rem;
+        border-radius: 0.25rem;
+        border: 1px solid #ccc;
+        width: 600px;
+      }
+      button {
+        cursor: pointer;
+        padding: 0.75rem 1.25rem;
+        border: 0;
+        background-color: #1144aa;
+        color: white;
+        border-radius: 0.25rem;
+        font-size: 0.9rem;
+      }
+
+      .result-panel {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      h2 {
+        font-weight: 500;
+        font-size: 1.5rem;
+      }
+
+      .item {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        border: 1px solid #1144aa;
+        padding: 0.5rem;
+        width: fit-content;
+        border-radius: 0.25rem;
+      }
+      .item span {
+        display: block;
+        margin-top: 0.5rem;
+        font-weight: 600;
+      }
+      .item.textarea {
+        width: 100% !important;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>NetAcad Python Translator</h1>
+
+    <hr />
+
+    <form id="search">
+      <label>
+        <span>Add meg a keresni kivant szoveget: </span>
+        <textarea id="input" required></textarea>
+      </label>
+
+      <label style="align-items: flex-start">
+        <span>Kellenek tagek?</span>
+        <input
+          type="checkbox"
+          id="tags"
+          name="tags"
+          value="tags"
+          style="width: fit-content"
+        />
+      </label>
+
+      <button>Mehet!</button>
+    </form>
+
+    <hr />
+
+    <div class="result-panel"></div>
+
+    <script>
+      const form = document.getElementById("search");
+      const resultPanel = document.querySelector(".result-panel");
+
+      function stripHtmlTags(str) {
+        return str.replace(/<\/?([^<>]+)>/g, "");
+      }
+
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        const input = document.getElementById("input").value;
+        const tags = document.getElementById("tags").checked;
+
+        const response = await fetch("http://localhost:3000/api/search", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ query: input }),
+        });
+
+        const data = await response.json();
+
+        let innerHTML = `<h2>Találatok (${data.length}): </h2>`;
+        data.forEach((item) => {
+          innerHTML += `
+            <div class="item">
+              <span>Angol:</span>
+              <textarea rows="5">${
+                tags ? item.english : stripHtmlTags(item.english)
+              }</textarea>
+
+              <span>Magyar:</span>
+              <textarea rows="5">${
+                tags ? item.hungarian : stripHtmlTags(item.hungarian)
+              }</textarea>
+
+              <span>Angol file neve/helye:</span>
+              <div>${item.englishFile}</div>
+
+              <span>Magyar file neve/helye:</span>
+              <div>${item.hungarianFile}</div>
+            </div>
+          `;
+        });
+        resultPanel.innerHTML = innerHTML;
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+<problem chapter='1' section='1' slide='1' problem='0' title='Python Essentials 1 - Module 1'>
+
+<!--
+Update history:
+2020-07-06 Grzegorz (created)
+2020-07-17 Grzegorz (module picture changed)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-4 columns">
+
+<br>
+
+<h1>Python Essentials 1:
+<br>Module 1</h1>
+
+<p><strong>Introduction to Python and computer programming</strong></p>
+
+<p>In this module, you will learn about:</p>
+
+<ul>
+<li>the fundamentals of computer programming, i.e., how the computer works, how the program is executed, how the programming language is defined and constructed;</li>
+
+<li>the difference between compilation and interpretation;</li>
+
+<li>what Python is, how it is positioned among other programming languages, and what distinguishes the different versions of Python.</li>
+</ul>
+
+<br>
+
+
+</div>
+
+
+<div class="small-12 large-8 columns">
+
+<br>
+
+<center><img src="/uploads/media/default/0001/02/5d0e0fbedf0c3dab19901c59eb8eaf652a3f68e7.png" alt="Module 1 Title Page" width="70%"></center>
+
+<br>
+
+
+</div>
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

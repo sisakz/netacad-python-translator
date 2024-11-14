@@ -1,0 +1,139 @@
+<problem chapter='4' section='5' slide='1' problem='9' title='SZAKASZ ÖSSZEFOGLALÁS'>
+
+<!--
+Update history:
+2020-08-18 Grzegorz (reviewed, re-formatted, PEP-8 compliance check)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<h1>A legfontosabb tudnivalók</h1>
+
+
+<p>1. Egy függvény meghívhat más függvényeket vagy akár önmagát is. Amikor egy függvény önmagát hívja meg, azt <strong>rekurziónak</strong> nevezzük. Azt a függvényt, amely önmagát hívja meg, valamint tartalmaz egy meghatározott befejezési feltételt (például alapesetben egy olyan feltételt, amely nem mondja a függvénynek, hogy újból hívja meg magát), <strong>rekurzív</strong> függvénynek nevezzük.</p>
+
+<p>2. A rekurzív függvények segítségével a Pythonban <strong>tiszta, elegáns kódot írhatunk, és azt kisebb, rendszerezett részekre oszthatjuk</strong>. Másrészt viszont nagyon óvatosnak kell lennünk, mivel <strong>könnyen hibázhatunk, és létrehozhatunk egy olyan függvényt, amely soha nem áll meg</strong>. Arról sem szabad megfeledkeznünk, hogy a <strong>rekurzív hívások sok memóriát fogyasztanak</strong>, ezért olykor nem hatékonyak.</p>
+
+<p>A rekurzió használatakor figyelembe kell venni annak minden előnyét és hátrányát is.</p>
+
+<p>A faktoriális függvény klasszikus példája a rekurzió gyakorlati alkalmazásának:<p>
+
+<codep class="copy"># Recursive implementation of the factorial function.
+
+def <mark style="background-color:#e6f2ff;">factorial(n)</mark>:
+    if n == 1:    # The base case (termination condition.)
+        return 1
+    else:
+        return n * <mark style="background-color:#e6f2ff;">factorial(n - 1)</mark>
+
+
+print(factorial(4)) # 4 * 3 * 2 * 1 = 24
+
+</codep>
+<br>
+
+<br>
+<br>
+
+</div>
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+
+<p><strong>1. gyakorlat</strong></p>
+<p>Mi történik, ha futtatod a következő kódrészletet? Mi ennek az oka?</p>
+
+<codep>def factorial(n):
+    return n * factorial(n - 1)
+
+
+print(factorial(4))
+
+</codep>
+
+<br>
+
+<div align="right">
+<button class="button tiny" onclick="solution('sol')">Ellenőrzés</button>
+</div>
+
+<p id="sol" style="display: none;">
+    A faktoriális függvénynek nincs befejezési feltétele (nincs alapeset), így a Python kivételt fog generálni (<codel>RecursionError: maximum recursion depth exceeded</codel>).
+</p>
+
+<script>
+function solution (id) {
+    var element = document.getElementById(id);
+    
+if (element.style.display === "none") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
+    }
+}
+</script>
+
+<br>
+
+
+
+<p><strong>2. gyakorlat</strong></p>
+<p>Mi a kimenete a következő kódrészletnek?</p>
+
+<codep>def fun(a):
+    if a > 30:
+        return 3
+    else:
+        return a + fun(a + 3)
+
+
+print(fun(25))
+
+</codep>
+
+<br>
+
+<div align="right">
+<button class="button tiny" onclick="solution('sol2')">Ellenőrzés</button>
+</div>
+
+<p id="sol2" style="display: none;">
+<codep>56</codep>
+</p>
+
+
+<script>
+function solution (id) {
+    var element = document.getElementById(id);
+    
+if (element.style.display === "none") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
+    }
+}
+</script>
+
+<br>
+
+
+<br>
+
+</div>
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

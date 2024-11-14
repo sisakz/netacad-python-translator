@@ -1,0 +1,49 @@
+<problem chapter='4' section='3' slide='1' problem='3' title='Függvény visszatérési értéke'>
+
+<!--
+Update history:
+2020-08-14 Grzegorz (reviewed, re-formatted)
+-->
+
+<code>
+def strange_function(n):
+    if(n % 2 == 0):
+        return True
+
+</code>
+
+
+
+<h1>Néhány szó a <font face="courier new">None</font> értékről: folytatás</h1>
+
+
+<p>Nézd meg a kódot a szerkesztőablakban!</p>
+
+<p>Nyilvánvaló, hogy a <codel>strangeFunction</codel> függvény <codel>True</codel> értéket ad vissza, ha az argumentuma páros.</p> 
+
+<p>Mit ad vissza egyébként?<p>
+
+<p>A következő kódot használhatjuk az ellenőrzéshez:</p>
+
+<codep class="syntax-color">print(strange_function(2))
+print(strange_function(1))
+</codep>
+
+<br>
+
+<p>Ezt látjuk a kimeneti konzolon:</p>
+
+<codep>True
+None</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+<br> 
+
+<p>Ne lepődj meg, ha legközelebb a <codel>None</codel> értéket látod egy függvény eredményeként. Ez egy apró hiba jele lehet a függvényen belül.</p>
+
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

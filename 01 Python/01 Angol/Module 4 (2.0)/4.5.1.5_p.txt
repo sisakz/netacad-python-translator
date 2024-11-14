@@ -1,0 +1,98 @@
+<problem chapter='4' section='5' slide='1' problem='5' title='Creating functions: right-angle triangles'>
+
+<!--
+Update history:
+2020-08-18 Grzegorz (reviewed, re-formatted, PEP-8 compliance check)
+-->
+
+<code>def is_a_triangle(a, b, c):
+    return a + b > c and b + c > a and c + a > b
+
+
+a = float(input('Enter the first side\'s length: '))
+b = float(input('Enter the second side\'s length: '))
+c = float(input('Enter the third side\'s length: '))
+
+if is_a_triangle(a, b, c):
+    print('Yes, it can be a triangle.')
+else:
+    print('No, it can\'t be a triangle.')
+
+</code>
+
+
+
+<h1>Some simple functions: evaluating a triangle's area</h1>
+
+<p>We can also evaluate a triangle's area. <strong>Heron's formula</strong> will be handy here:</p>
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<img src="/uploads/media/default/0001/01/06d4ed184333e2f6def5b2ffcac9435c18fc325d.png" width="75%" alt="s = (a + b + c) / 2">
+
+</div>
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+<img src="/uploads/media/default/0001/01/aac88ace1ce483bdbc5543fc19a29655e470b4f1.png" width="95%" alt="A = the square root of s(s - a)(s - b)(s - c)">
+
+</div>
+</div>
+</div>
+
+<br>
+
+<p>We're going use the exponentiation operator to find the square root ‒ it may seem strange, but it works:</p>
+
+<img src="/uploads/media/default/0001/01/1ba2517baae100429f0217f536819939b481cdb7.png" width="35%" alt="The square root of x = x to the power of 1/2">
+
+<br>
+<br>
+
+<p>This is the resulting code:</p>
+
+<codep class="copy">def is_a_triangle(a, b, c):
+    return a + b > c and b + c > a and c + a > b
+
+
+def heron(a, b, c):
+    p = (a + b + c) / 2
+    return (p * (p - a) * (p - b) * (p - c)) ** 0.5
+
+
+<mark style="background-color:#e6f2ff;">def area_of_triangle(a, b, c):</mark>
+    if not is_a_triangle(a, b, c):
+        return None
+    return heron(a, b, c)
+
+
+print(area_of_triangle(1., 1., 2. ** .5))
+
+</codep>
+
+<br>
+
+<p>We try it with a right-angle triangle as a half of a square with one side equal to 1. This means that its area should be equal to 0.5.</p>
+
+<p>It's odd ‒ the code produces the following output:</p>
+
+<codep>0.49999999999999983</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+<br>
+
+<p>It's very close to 0.5, but it isn't exactly 0.5. What does it mean? Is it an error?</p>
+
+<p>No, it isn't. This is <strong>the specifics of floating-point calculations</strong>. We'll tell you more about it soon.</p>
+
+
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

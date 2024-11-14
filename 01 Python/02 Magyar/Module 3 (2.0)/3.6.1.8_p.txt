@@ -1,0 +1,83 @@
+<problem chapter='3' section='6' slide='1' problem='8' title='Listák | további részletek'>
+
+<!--
+Update history:
+2020-08-12 Grzegorz (reviewed, reformatted)
+-->
+
+<code>
+</code>
+
+
+
+<h1>Listák – néhány egyszerű program</h1>
+
+
+<p>Most keressük meg egy adott elem helyét egy listán belül:</p>
+
+<codep class="syntax-color copy">my_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+to_find = 5
+found = False
+
+for i in range(len(my_list)):
+    found = my_list[i] == to_find
+    if found:
+        break
+
+if found:
+    print("Element found at index", i)
+else:
+    print("absent")
+</codep>
+
+<br>
+
+<p>Megjegyzés:</p>
+
+<ul>
+<li>a célértéket a <codel>to_find</codel> változó tárolja;</li>
+<li>a keresés aktuális állapota a <codel>found</codel> változóban tárolódik (<codel>True</codel>/<codel>False</codel>);</li>
+<li>amikor a <codel>found</codel> értéke <codel>True</codel> lesz, a <codel>for</codel> ciklus kilép.</li>
+</ul>
+
+<hr>
+
+<p>Tegyük fel, hogy a lottón a következő számokat választottad: <codel>3</codel>, <codel>7</codel>, <codel>11</codel>, <codel>42</codel>, <codel>34</codel>, <codel>49</codel>.</p>
+
+<p>A kisorsolt számok a következők: <codel>5</codel>, <codel>11</codel>, <codel>9</codel>, <codel>42</codel>, <codel>3</codel>, <codel>49</codel>.</p>
+
+<p>A kérdés az: hány számot találtál el?</p>
+
+
+<p>Ez a program megadja a választ:</p>
+
+<codep class="syntax-color copy">drawn = [5, 11, 9, 42, 3, 49]
+bets = [3, 7, 11, 42, 34, 49]
+hits = 0
+
+for number in bets:
+    if number in drawn:
+        hits += 1
+
+print(hits)
+</codep>
+
+<br>
+
+<p>Megjegyzés:</p>
+
+<ul>
+<li>a <codel>drawn</codel> lista az összes kisorsolt számot tárolja;</li>
+<li>a <codel>bets</codel> lista a megtett számaidat tárolja;</li>
+<li>a <codel>hits</codel> változó a találatokat számolja.</li>
+</ul>
+
+<p>A program kimenete: <codel>4</codel>.</p>
+
+<br>
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

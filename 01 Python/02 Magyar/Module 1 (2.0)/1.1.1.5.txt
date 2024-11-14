@@ -1,0 +1,65 @@
+<problem chapter='1' section='1' slide='1' problem='5' title='Programozási alapok | Fordítás vs. értelmezés'>
+
+<!--
+Update history:
+2020-07-07 Grzegorz (formatted)
+2020-07-07 Grzegorz (picture formatting)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+<h1>Mit csinál valójában az értelmező?</h1>
+
+<p>Tegyük fel ismét, hogy írtál egy programot. Az most már számítógépes fájlként létezik: a számítógépes program valójában egy szöveg részlet, ezért a forráskódot általában <strong>szöveges fájlokban</strong> tároljuk.</p>
+
+<p>Megjegyzés: a fájlnak <strong>tiszta szövegnek</strong> kell lennie, mindenféle díszítés, például különböző betűtípusok, színek, beágyazott képek vagy más médiaelemek nélkül. Ekkor kell meghívnod az értelmezőt, és hagynod kell, hogy beolvassa a forrásfájlt.</p>
+
+<p>Az értelmező a nyugati kultúrában megszokott módon olvassa a forráskódot: fentről lefelé és balról jobbra. Van néhány kivétel - ezekről a kurzus későbbi részében lesz szó.</p>
+
+<p>Először is az értelmező ellenőrzi, hogy minden egymást követő sor helyes-e (a korábban tárgyalt négy szempont alapján).</p>
+<p>Ha a fordító hibát talál, azonnal befejezi a munkáját. Ebben az esetben a futtatás eredménye egy <strong>hibaüzenet</strong>.</p>
+
+<p>Az értelmező tájékoztat, hogy hol található a hiba, és mi okozta azt. Ezek az üzenetek azonban félrevezetőek lehetnek, mivel az értelmező nem képes pontosan követni a szándékaidat, és előfordulhat, hogy a hibákat a valódi okuktól távolabb észleli.</p>
+
+<p>Ha például egy ismeretlen nevű változót próbálsz használni, az hibát fog okozni. De a hiba azon a helyen derül ki, ahol az új elemet használni próbálod, nem pedig ott, ahol a változó létrejött.</p>
+
+<p>Más szóval, a tényleges ok általában egy kicsit korábban található a kódban. Például ott, ahol tájékoztatni kellett volna az értelmezőt arról, hogy ezen a néven fogjuk az új entitást használni.</p>
+
+<br>
+
+
+</div>
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+<center><img src="/uploads/media/default/0001/01/317d50f4ac3219561e95d969ec7b95d15f14c30a.png" width="50%" alt="Compilation concept picture"></center>
+
+<br><br>
+
+<p>Ha a sor jónak tűnik, az értelmező megpróbálja végrehajtani (megjegyzés: minden sor általában külön-külön kerül végrehajtásra, így az "olvas - ellenőriz - végrehajt" hármas többször is megismétlődhet. Többször, mint ahány sor van a forrásfájlban, mivel a kód egyes részei többször is végrehajtásra kerülhetnek).</p>
+
+<p>Az is lehetséges, hogy a kód nagy része sikeresen lefut, mielőtt az értelmező hibát találna. Ez normális viselkedés ebben a végrehajtási modellben.</p>
+
+<p>Most megkérdezheted: melyik a jobb? A "fordító" vagy az "értelmező" modell? Erre a kérdésre nincs egyértelmű válasz. Ha lenne, valamelyik modell már régen megszűnt volna. Mindkettőnek megvannak az előnyei és a hátrányai.</p>
+
+<br>
+
+
+</div>
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

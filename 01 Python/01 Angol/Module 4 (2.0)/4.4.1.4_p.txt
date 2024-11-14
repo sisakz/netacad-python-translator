@@ -1,0 +1,129 @@
+<problem chapter='4' section='4' slide='1' problem='4' title='Scopes in Python'>
+
+<!--
+Update history:
+2020-08-18 Grzegorz (reviewed, re-formatted)
+2020-08-27 Grzegorz (function examples and outputs changed)
+-->
+
+<code>
+def my_function(n):
+    print("I got", n)
+    n += 1
+    print("I have", n)
+
+
+var = 1
+my_function(var)
+print(var)
+
+</code>
+
+<h1>How the function interacts with its arguments</h1>
+
+<p>Now let's find out how the function interacts with its arguments.</p>
+
+<p>The code in the editor should teach you something. As you can see, the function changes the value of its parameter. Does the change affect the argument?</p>
+
+<p>Run the program and check.</p>
+
+<p>The code's output is:</p>
+
+<codep>I got 1
+I have 2
+1</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+<br>
+
+<p>The conclusion is obvious ‒ <strong>changing the parameter's value doesn't propagate outside the function</strong> (in any case, not when the variable is a scalar, like in the example).</p>
+
+<p>This also means that a function receives the <strong>argument's value</strong>, not the argument itself. This is true for scalars.</p>
+
+<p>Is it worth checking how it works with lists (do you recall the peculiarities of assigning list slices versus assigning lists as a whole?).</p>
+
+<hr>
+
+<p>The following example will shed some light on the issue:</p>
+
+<codep class="syntax-color copy" class="copy">def my_function(my_list_1):
+    print("Print #1:", my_list_1)
+    print("Print #2:", my_list_2)
+    my_list_1 = [0, 1]
+    print("Print #3:", my_list_1)
+    print("Print #4:", my_list_2)
+
+
+my_list_2 = [2, 3]
+my_function(my_list_2)
+print("Print #5:", my_list_2)
+</codep>
+
+<br>
+
+
+<p>The code's output is:</p>
+
+<codep>Print #1: [2, 3]
+Print #2: [2, 3]
+Print #3: [0, 1]
+Print #4: [2, 3]
+Print #5: [2, 3]
+</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+
+<p>It seems that the former rule still works.</p>
+
+<hr>
+
+<p>Finally, can you see the difference in the example below:</p>
+
+<codep class="copy syntax-color">def my_function(my_list_1):
+    print("Print #1:", my_list_1)
+    print("Print #2:", my_list_2)
+    del my_list_1[0]  # Pay attention to this line.
+    print("Print #3:", my_list_1)
+    print("Print #4:", my_list_2)
+
+
+my_list_2 = [2, 3]
+my_function(my_list_2)
+print("Print #5:", my_list_2)
+</codep>
+
+<br>
+
+<p>We don't change the value of the parameter <codel>my_list_1</codep> (we already know it will not affect the argument), but instead modify the list identified by it.</p>
+
+<p>The output may be surprising. Run the code and check:</p>
+
+<codep>Print #1: [2, 3]
+Print #2: [2, 3]
+Print #3: [3]
+Print #4: [3]
+Print #5: [3]
+</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+<br>
+
+<p>Can you explain it?</p>
+
+<p>Let's try:</p>
+
+<ul>
+<li>if the argument is a list, then changing the value of the corresponding parameter doesn't affect the list (remember: variables containing lists are stored in a different way than scalars)</li>
+
+<li>but if you change a list identified by the parameter (note: the list, not the parameter!), the list will reflect the change.</li>
+</ul>
+
+<p>It's time to write some example functions. You'll do that in the next section.</p>
+
+<br>
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

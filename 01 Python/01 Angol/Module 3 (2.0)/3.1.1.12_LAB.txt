@@ -1,0 +1,121 @@
+<problem chapter='3' section='1' slide='1' problem='12' title='LAB: Essentials of the if-elif-else statement'>
+
+<!--
+Update history:
+2020-07-20 Grzegorz (reviewed)
+-->
+
+<code>
+
+year = int(input("Enter a year: "))
+
+#
+# Write your code here.
+#	
+
+</code>
+
+<span class="label" style="background-color:rgb(205, 168, 105);"><strong>LAB</strong></span>
+
+<br><br>
+
+<h2>Estimated time</h2>
+<p>10-25 minutes</p>
+
+<h2>Level of difficulty</h2>
+<p>Easy/Medium</p>
+
+<h2>Objectives</h2>
+<p>Familiarize the student with:</p>
+<ul>
+<li>using the <font face="courier new">if-elif-else</font> statement;</li>
+<li>finding the proper implementation of verbally defined rules;</li>
+<li>testing code using sample input and output.</li>
+</ul>
+
+
+<h2>Scenario</h2>
+
+<p>As you surely know, due to some astronomical reasons, years may be <i>leap</i> or <i>common</i>. The former are 366 days long, while the latter are 365 days long.</p>
+
+<p>Since the introduction of the Gregorian calendar (in 1582), the following rule is used to determine the kind of year:</p>
+
+<ul>
+<li>if the year number isn't divisible by four, it's a <i>common year</i>;</li>
+<li>otherwise, if the year number isn't divisible by 100, it's a <i>leap year</i>;</li>
+<li>otherwise, if the year number isn't divisible by 400, it's a <i>common year</i>;</li>
+<li>otherwise, it's a <i>leap year</i>.</li>
+</ul>
+
+
+<p>Look at the code in the editor – it only reads a year number, and needs to be completed with the instructions implementing the test we've just described.<p>
+
+<p>The code should output one of two possible messages, which are <codel>Leap year</codel> or <codel>Common year</codel>, depending on the value entered.</p>
+
+<p>It would be good to verify if the entered year falls into the Gregorian era, and output a warning otherwise: <codel>Not within the Gregorian calendar period</codel>. Tip: use the <codel>!=</codel> and <codel>%</codel> operators.</p>
+
+<p>Test your code using the data we've provided.</p>
+
+
+<h2>Test Data</h2>
+
+<p>Sample input: <codel>2000</codel></p>
+<p>Expected output: <codel>Leap year</codel></p>
+
+<hr>
+
+<p>Sample input: <codel>2015</codel></p>
+<p>Expected output: <codel>Common year</codel></p>
+
+<hr>
+
+<p>Sample input: <codel>1999</codel></p>
+<p>Expected output: <codel>Common year</codel></p>
+
+<hr>
+
+<p>Sample input: <codel>1996</codel></p>
+<p>Expected output: <codel>Leap year</codel></p>
+
+<hr>
+
+<p>Sample input: <codel>1580</codel></p>
+<p>Expected output: <codel>Not within the Gregorian calendar period</codel></p>
+
+<br>
+
+
+
+<studyMode>false</studyMode>
+<labMode>true</labMode>
+
+
+<hint>
+year = int(input("Enter a year: "))
+
+if year < 1582:
+	print("Not within the Gregorian calendar period")
+else:
+    #  Write the if-elif-elif-else block here.
+	
+</hint>
+
+<sampleSolution>
+year = int(input("Enter a year: "))
+
+if year < 1582:
+	print("Not within the Gregorian calendar period")
+else:
+	if year % 4 != 0:
+		print("Common year")
+	elif year % 100 != 0:
+		print("Leap year")
+	elif year % 400 != 0:
+		print("Common year")
+	else:
+		print("Leap year")
+		
+</sampleSolution>
+
+
+</problem>

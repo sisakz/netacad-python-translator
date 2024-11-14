@@ -1,0 +1,156 @@
+<problem chapter='3' section='1' slide='1' problem='7' title='Döntéshozatal Pythonban'>
+
+<!--
+Update history:
+2020-07-20 Grzegorz (reviewed)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<h1>Az <font face="Courier New">if-else</font> kifejezés: további elágazások</h1>
+
+
+<p>A feltételes kijelentés ezen formáját használva a következőképpen írhatjuk le terveinket:</p>
+
+<codep>if the_weather_is_good:
+    go_for_a_walk()
+else:
+    go_to_a_theater()
+have_lunch()
+
+</codep>
+
+<br>
+
+<p>Ha jó idő lesz, elmegyünk sétálni. Máskülönben színházba megyünk. Nem számít, hogy jó vagy rossz az idő, utána (a séta vagy a színházlátogatás után) megebédelünk.</p>
+
+<p>Minden, amit a behúzásról mondtunk, ugyanúgy működik <strong>az <i>else</i> ágon belül</strong>  is:</p>
+
+<codep>if the_weather_is_good:
+    go_for_a_walk()
+    have_fun()
+else:
+<mark style="background-color:#e6f2ff;">    </mark>go_to_a_theater()
+<mark style="background-color:#e6f2ff;">    </mark>enjoy_the_movie()
+have_lunch()
+
+</codep>
+
+<br>
+
+
+<h2>Beágyazott <font face="Courier New">if-else</font> kifejezések</h2>
+
+<p>Most a feltételes utasítások két speciális esetét tárgyaljuk.</p>
+
+<p>Először is tekintsük azt az esetet, amikor az <strong><codel>if</codel> után elhelyezett utasítás egy másik <codel>if</codel></strong>.</p>
+
+<p>Olvasd el, mit terveztünk erre a vasárnapra: Ha jó idő lesz, elmegyünk sétálni. Ha találunk egy jó éttermet, ott fogunk ebédelni. Máskülönben szendvicset eszünk. Ha rossz az idő, elmegyünk a színházba. Ha nincs jegy, akkor elmegyünk vásárolni a legközelebbi bevásárlóközpontba.</p>
+
+<p>Írjuk meg ugyanezt Python nyelven. Gondoljuk át figyelmesen az itt látható kódot:</p>
+
+<codep>if the_weather_is_good:
+<mark class="mark-background">    if nice_restaurant_is_found:
+        have_lunch()
+    else:
+        eat_a_sandwich()</mark>
+else:
+<mark class="mark-background">    if tickets_are_available:
+        go_to_the_theater()
+    else:
+        go_shopping()</mark>
+
+</codep>
+
+<br>
+
+
+</div>
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+
+<p>Itt két fontos dolog van:</p>
+
+<ul>
+
+<li>az <codel>if</codel> utasításnak ezt a használatát nevezzük <strong>egymásba ágyazásnak</strong>. Ne feledd, hogy minden <codel>else</codel> arra az <codel>if</codel>-re utal, amely <strong>ugyanazon a behúzási szinten</strong> áll. Ezt azért kell tudnod, hogy képes legyél meghatározni a megfelelő <i>if</i> és <i>else</i> párokat;</li>
+
+<li>fontold meg, hogy a <strong>behúzás miként javítja az olvashatóságot</strong>, és hogyan teszi a kódot könnyebben érthetővé és nyomon követhetővé.</li>
+
+</ul>
+
+
+<h2>Az <font face="Courier New">elif</font> kifejezés</h2>
+
+<p>A második speciális eset egy újabb Python kulcsszót vezet be: <strong>elif</strong>. Ahogy valószínűleg sejted, ez az <strong>else if</strong> egy rövidebb formája.</p>
+
+<p>Az <codel>elif</codel> arra szolgál, hogy <strong>egynél több feltételt ellenőrizzünk</strong>, és <strong>megálljunk</strong>, ha az első igaz állítást megtaláltuk.</p>
+
+<p>Ismét megváltoztatjuk a terveinket, és a következőképpen fejezzük ki őket: Ha jó idő van, elmegyünk sétálni. Máskülönben, ha van jegyünk, elmegyünk a színházba. Megint máskülönben, ha van szabad asztal az étteremben, elmegyünk ebédelni. Ha semmi nem jön össze, hazamegyünk és sakkozunk.</p>
+
+<p>Észrevetted, hányszor használtuk a <i>máskülönben</i> szót? Ez az a szakasz, ahol az <codel>elif</codel> kulcsszó szerepet játszik.</p>
+
+<p>Írjuk meg ugyanezt a forgatókönyvet Python nyelven:</p>
+
+<codep>if the_weather_is_good:
+    go_for_a_walk()
+<mark style="background-color:#e6f2ff;">elif</mark> tickets_are_available:
+    go_to_the_theater()
+<mark style="background-color:#e6f2ff;">elif</mark> table_is_available:
+    go_for_lunch()
+else:
+    play_chess_at_home()
+
+</codep>
+
+
+<br>
+
+<p>Az egymást követő <i>if-elif-else</i> kifejezés összeállításának módját néha <strong>kaszkádnak</strong> nevezik.</p>
+
+<p>Vegyük észre ismét, hogy a behúzás miként javítja a kód olvashatóságát.</p>
+
+<p>Ebben az esetben további figyelmet kell fordítani az alábbiakra:</p>
+
+<ul>
+
+<li><strong>nem szabad <codel>else</codel>-et használni egy megelőző <codel>if</codel> nélkül</strong>;</li>
+
+<li>az <codel>else</codel> mindig a <strong>kaszkád utolsó ága</strong>, függetlenül attól, hogy használtad-e az <codel>elif</codel>-et vagy sem;</li>
+
+<li>az <codel>else</codel> a kaszkád <strong>opcionális</strong> része, és elhagyható;</li>
+
+<li>ha a kaszkádban van egy <coel>else</codel> ág, akkor az összes ág közül csak az egyik kerül végrehajtásra;</li>
+
+<li>ha nincs <codl>else</codel> ág, akkor lehetséges, hogy a rendelkezésre álló ágak egyike sem kerül végrehajtásra.</li>
+
+</ul>
+
+<br> 
+
+<p>Ez kissé rejtélyesnek tűnhet, de remélhetőleg néhány egyszerű példa segít majd jobban megvilágítani.</p>
+
+<br>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

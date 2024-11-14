@@ -1,0 +1,61 @@
+<problem chapter='2' section='6' slide='1' problem='6' title='Adatbevitel | karakterlánc műveletek'>
+
+<!--
+Update history:
+2020-07-17 Grzegorz (reviewed; code - blank lines and syntax-color class added)
+-->
+
+<h1>Karakterlánc műveletek - bevezetés</h1>
+
+
+<p>Eljött az ideje, hogy visszatérjünk a <codel>+</codel> és <codel>*</codel> aritmetikai operátorokhoz.</p>
+
+<p>Szeretnénk megmutatni, hogy van egy második funkciójuk is. Többre is képesek, mint <strong>összeadni</strong> és <strong>szorozni</strong>.</p>
+
+<p>Láttuk őket működés közben, ahol az argumentumaik számok (lebegőpontos  vagy egész számok, nem számít).</p>
+
+<p>Most megmutatjuk, hogy a karakterláncokat is tudják kezelni, bár nagyon speciális módon.</p>
+
+
+<br>
+
+<h1>Összefűzés</h1>
+
+
+
+<p>A <codel>+</codel> (plusz) jel két karakterláncra alkalmazva <strong>konkatenáció, azaz összefűzés műveletté</strong> válik:</p>
+
+<codep>string + string</codep>
+
+<br>
+
+<p>Két karakterláncot <strong>kapcsol össze</strong>, ha úgy tetszik ragaszt eggyé. Természetesen, akárcsak aritmetikai testvére, egy kifejezésben többször is használható, és ilyen értelemben balról jobbra haladási irányban működik.</p>
+
+<p>Aritmetikai testvérével ellentétben az összefűzést végző operátor <strong>nem kommutatív</strong>, azaz <codel>"ab" + "ba"</codel> nem ugyanaz, mint <codel>"ba" + "ab"</codel>.</p>
+
+<p>Ne felejtsük el - ha azt akarjuk, hogy a <codel>+</codel> jel ne összeadást, hanem <strong>összefűzést</strong> jelentsen, akkor gondoskodnunk kell arról, hogy <strong>mindkét argumentuma karakterlánc legyen.</strong>.</p>
+
+<p>Nem keverheted a típusokat.</p>
+
+<hr>
+
+<p>Ez az egyszerű program a <codel>+</codel> jel második funkciójának használatát mutatja be:</p>
+
+<codep class="syntax-color">fnam = input("May I have your first name, please? ")
+lnam = input("May I have your last name, please? ")
+print("Thank you.")
+print("\nYour name is " + fnam + " " + lnam + ".")
+</codep>
+
+<br>
+
+<p>Megjegyzés: a <codel>+</codel> operátor használata a karakterláncok összekapcsolására pontosabb kimeneti szerkesztést tesz lehetővé, mint a tiszta <codel>print()</codel> függvény, még akkor is, ha az <codel>end=</codel> és <codel>sep=</codel> kulcsszó argumentumokat is használjuk.</p>
+
+<p>Futtasd a kódot, és nézd meg, hogy a kimenet megfelel-e az elképzeléseidnek!</p>
+
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

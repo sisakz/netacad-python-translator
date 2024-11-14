@@ -1,0 +1,64 @@
+<problem chapter='4' section='2' slide='1' problem='5' title='How functions communicate with their environment'>
+
+<!--
+Update history:
+2020-08-13 Grzegorz (reviewed, re-formatted)
+-->
+
+<code>
+</code>
+
+
+
+<h1>Keyword argument passing</h1>
+
+<p>Python offers another convention for passing arguments, where <strong>the meaning of the argument is dictated by its name</strong>, not by its position ‒ it's called <strong>keyword argument passing</strong>.</p>
+
+<p>Take a look at the snippet:</p>
+
+<codep class="syntax-color">def introduction(first_name, last_name):
+    print("Hello, my name is", first_name, last_name)
+
+introduction(first_name = "James", last_name = "Bond")
+introduction(last_name = "Skywalker", first_name = "Luke")
+</codep>
+
+<br>
+
+<p>The concept is clear ‒ the values passed to the parameters are preceded by the target parameters' names, followed by the <codel>=</codel> sign.</p>
+
+<p>The position doesn't matter here ‒ each argument's value knows its destination on the basis of the name used.</p>
+
+<p>You should be able to predict the output. Run the code to check if you're right.</p>
+
+<hr>
+
+<p>Of course, you <strong>mustn't use a non-existent parameter name</strong>.</p>
+
+<p>The following snippet will cause a runtime error:</p>
+
+<codep style="color:red;" class="copy">def introduction(first_name, last_name):
+    print("Hello, my name is", first_name, last_name)
+
+introduction(<mark style="background-color:#e6f2ff;color:red;">surname</mark>="Skywalker", first_name="Luke")
+
+</codep>
+
+<br>
+
+<p>This is what Python will tell you:</p>
+
+<codep>TypeError: introduction() got an unexpected keyword argument 'surname'</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+
+<br>
+
+<p>Try it out yourself.</p>
+
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

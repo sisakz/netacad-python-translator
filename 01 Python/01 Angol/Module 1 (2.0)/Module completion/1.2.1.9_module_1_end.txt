@@ -1,0 +1,68 @@
+<problem chapter='1' section='2' slide='1' problem='9' title='Module Completion'>
+
+<!--
+Update history:
+2020-07-07 Grzegorz (formatted)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<h1>Congratulations!
+<br>You have completed Module 1.</h1>
+
+<br>
+
+
+<p>Well done! You've reached the end of Module 1 and completed a major milestone in your Python programming education. Here's a short summary of the objectives you've covered and become familiar with in Module 1:</p>
+
+<ul>
+<li>the fundamentals of computer programming, i.e., how the computer works, how the program is executed, how the programming language is defined and constructed;</li>
+
+<li>the difference between compilation and interpretation;</li>
+
+<li>the basic information about Python and how it is positioned among other programming languages, and what distinguishes its different versions;</li>
+
+<li>the study resources and different types of interfaces you will be using in the course.</li>
+
+</ul>
+
+<br>
+
+<p>You are now ready to take the module quiz, which will help you gauge what you've learned so far.</p>
+
+
+<br>
+<br>
+
+</div>
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+
+
+<center><img src="/uploads/media/default/0001/01/29ed2aa31a1a26221e4eac3b69d973a33cbf562e.png" width="65%" alt="Module completion - congratulations"></center>
+<br>
+
+
+
+
+<br>
+
+</div>
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

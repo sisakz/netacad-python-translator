@@ -1,0 +1,50 @@
+<problem chapter='0' section='0' slide='0' problem='1' title='About PE1'>
+
+<!--
+Update history:
+2020-07-06 Grzegorz (front picture change, style formatting and structure redesigning, new texts)
+2020-07-17 Grzegorz (front page picture change)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-4 columns">
+
+<br>
+
+
+<h1>Welcome to Python Essentials 1</h1>
+
+<p>This course is <b>the first in a 2-course series</b> that will prepare you for the <a href="https://pythoninstitute.org/certification/pcep-certification-entry-level/" target="_blank">PCEP - Certified Entry-Level Python Programmer</a> and <a href="https://pythoninstitute.org/certification/pcap-certification-associate/" target="_blank">PCAP: Certified Associate in Python Programming</a> certification exams.</p>
+
+<p>The main goal of the course is to guide you from a state of complete programming illiteracy to a level of programming knowledge which allows you to <b>design</b>, <b>write</b>, <b>debug</b>, and <b>run</b> programs encoded in the Python language, and to understand the <b>basic concepts of software development technology</b>.</p>
+
+<p>The course will prepare you for jobs and careers connected with widely understood <b>software development</b>, which includes not only creating the code itself as a junior developer, but also computer <b>systems design</b> and <b>software testing</b>.</p>
+
+
+<br>
+
+
+</div>
+
+
+<div class="small-12 large-8 columns">
+
+<br>
+<br>
+
+<center><img src="/uploads/media/default/0001/02/aee363ffd6269bf9f5a38a8ea2fdd386b2a43684.png" alt="Python Essentials 1" width="70%"></center>
+
+<br>
+
+
+</div>
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

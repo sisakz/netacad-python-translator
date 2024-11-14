@@ -1,0 +1,91 @@
+<problem chapter='4' section='2' slide='1' problem='2' title='How functions communicate with their environment'>
+
+<!--
+Update history:
+2020-08-13 Grzegorz (reviewed, re-formatted)
+-->
+
+<code>
+def message(number):
+    print("Enter a number:", number)
+
+message()
+
+</code>
+
+
+
+<h1>Parametrized functions: continued</h1>
+
+
+<p>Try to run the code in the editor.</p>
+
+<p>This is what you'll see in the console:</p>
+
+<codep>TypeError: message() missing 1 required positional argument: 'number'</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+<br>
+
+<p>This looks better, for sure:</p>
+
+<codep>def message(number):
+    print("Enter a number:", number)
+
+<mark style="background-color:#e6f2ff;">message(1)</mark>
+
+</codep>
+
+<br>
+
+
+
+<p>Moreover, it behaves better. The code will produce the following output:</p>
+
+<codep>Enter a number: 1</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+<br>
+
+<p>Can you see how it works? The value of the argument used during invocation (<codel>1</codel>) has been passed into the function, setting the initial value of the parameter named <codel>number</codel>.</p>
+
+<hr>
+
+<p>We have to make you sensitive to one important circumstance.</p>
+
+<p>It's legal, and possible, to have a <strong>variable named the same as a function's parameter</strong>.</p>
+
+<p>The snippet illustrates the phenomenon:</p>
+
+<codep>def message(<mark style="background-color:#e6f2ff;">number</mark>):
+    print("Enter a number:", number)
+
+<mark style="background-color:#e6f2ff;">number</mark> = 1234
+message(1)
+print(number)
+
+</codep>
+
+<br>
+
+
+<p>A situation like this activates a mechanism called <strong>shadowing</strong>:</p>
+
+<ul>
+<li>parameter <codel>x</codel> shadows any variable of the same name, but...</li>
+<li>... only inside the function defining the parameter.</li>
+</ul>
+
+<p>The parameter named <codel>number</codel> is a completely different entity from the variable named <codel>number</codel>.</p>
+
+<p>This means that the snippet above will produce the following output:</p>
+
+<codep>Enter a number: 1
+1234</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

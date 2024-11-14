@@ -1,0 +1,81 @@
+<problem chapter='2' section='6' slide='1' problem='1' title='How to talk to a computer'>
+
+<!--
+Update history:
+2020-07-17 Grzegorz (reviewed; code - class syntax-color and blank lines added)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<h1>The <span style="font-family:courier new;">input()</span> function</h1>
+
+
+<p>We're now going to introduce you to a completely new function, which seems to be a mirror reflection of the good old <codel>print()</codel> function.</p>
+
+<p>Why? Well, <codel>print()</codel> sends data to the console.</p>
+
+<p>The new function gets data from it.</p>
+
+
+<p><codel>print()</codel> has no usable result. The meaning of the new function is to <strong>return a very usable result</strong>.</p>
+
+ 
+<p>The function is named <codel>input()</codep>. The name of the function says everything.</p>
+
+
+<p>The <codel>input()</codep> function is able to read data entered by the user and to return the same data to the running program.</p>
+
+<p>The program can manipulate the data, making the code truly interactive.</p>
+
+<p>Virtually all programs <strong>read and process data</strong>. A program which doesn't get a user's input is a <strong>deaf program</strong>.</p>
+
+<p>Take a look at our example:</p>
+
+<codep class="syntax-color">print("Tell me anything...")
+anything = input()
+print("Hmm...", anything, "... Really?")
+</codep>
+
+<br>
+
+<p>It shows a very simple case of using the <codel>input()</codel> function.</p>
+
+</div>
+
+
+<div class="small-12 large-6 columns">
+
+<h1></h1>
+
+<p>Note:</p>
+
+<ul>
+<li>The program <strong>prompts the user to input some data</strong> from the console (most likely using a keyboard, although it is also possible to input data using voice or image);</li>
+
+<li>the <codel>input()</codel> function is invoked without arguments (this is the simplest way of using the function); the function will <strong>switch the console to input mode</strong>; you'll see a blinking cursor, and you'll be able to input some keystrokes, finishing off by hitting the <i>Enter</i> key; all the inputted data will be <strong>sent to your program</strong> through the function's result;</li>
+<li>note: you need to assign the result to a variable; this is crucial ‒ missing out this step will cause the entered data to be lost;</li>
+<li>then we use the <codel>print()</codel> function to output the data we get, with some additional remarks.</li>
+</ul>
+
+<p>Try to run the code and let the function show you what it can do for you.</p>
+
+
+<br>
+
+<center><img src="/uploads/media/default/0001/01/8a65a4a463dd843c841024c5a9eab156a6695453.png"></center>
+
+<br>
+
+</div>
+
+
+</div>
+</div>
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

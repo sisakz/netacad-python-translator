@@ -1,0 +1,115 @@
+<problem chapter='3' section='1' slide='1' problem='11' title='LAB: Az if-else kifejezés'>
+
+<!--
+Update history:
+2020-07-20 Grzegorz (reviewed)
+-->
+
+<code>
+
+income = float(input("Enter the annual income: "))
+
+#
+# Write your code here.
+#
+
+tax = round(tax, 0)
+print("The tax is:", tax, "thalers")
+
+</code>
+
+<span class="label" style="background-color:rgb(205, 168, 105);"><strong>LABORGYAKORLAT</strong></span>
+
+<br><br>
+
+<h2>Becsült idő</h2>
+<p>10-20 perc</p>
+
+<h2>Nehézségi szint</h2>
+<p>Könnyű/Közepes</p>
+
+<h2>Célok</h2>
+<p>Ismerkedjen meg a tanuló a következőkkel:</p>
+<ul>
+<li>az <i>if-else</i> kifejezés használata a vezérlési útvonal elágazásához;
+<li>egy teljes program készítése, amely egyszerű, valós problémákat old meg.</li>
+</ul>
+
+
+<h2>Feladatleírás</h2>
+<p>Egyszer volt, hol nem volt, volt egyszer egy föld. Tejjel-mézzel folyó föld, amelyet boldog és virágzó emberek laktak. Az emberek persze adót fizettek – boldogságuknak voltak határai. A legfontosabb adót, a <i>személyi jövedelemadót</i> évente egyszer kellett megfizetni, és a következő szabály szerint számították:</p>
+
+<ul>
+<li>ha az állampolgár jövedelme nem haladta meg a 85 528 tallért, az adó a jövedelem 18%-a volt, mínusz 556 tallér és 2 cent (ez volt az úgynevezett <i>adókedvezmény</i>);</li>
+<li>ha a jövedelem magasabb volt ennél az összegnél, az adó 14 839 tallér és 2 cent volt, plusz a 85 528 tallér feletti többlet 32%-a.</li>
+</ul>
+
+<p>A feladatod egy <strong>adókalkulátor</strong> megírása, amely:</p>
+
+<ul>
+<li>egyetlen lebegőpontos értéket fogad el: a jövedelmet;</li>
+<li>ezután kiírja a kiszámított adót, teljes tallérra kerekítve. (Van egy <codel>round()</codel> nevű függvény, amely elvégzi a kerekítést, ezt a szerkesztőben lévő kódban találod.)</li>
+</ul>
+
+
+<p>Megjegyzés: Ez a boldog ország soha nem ad vissza pénzt a polgárainak. Ha a kiszámított adó kisebb, mint nulla, az csak azt jelenti, hogy egyáltalán nincs adó (az adó egyenlő nullával). Ezt vedd figyelembe a számítások során.</p>
+
+<p>Nézd meg a kódot a szerkesztőben! Ez csak egy bemeneti értéket olvas be, és egy eredményt jelenít meg, így néhány okos számítással ki kell egészítened!</p>
+
+<p>Teszteld a kódot az általunk megadott adatokkal!</p>
+
+<h2>Tesztadatok</h2>
+
+<p>Mintabemenet: <codel>10000</codel></p>
+<p>Várható kimenet: <codel>The tax is: 1244.0 thalers</codel></p>
+
+<hr>
+
+<p>Mintabemenet: <codel>100000</codel></p>
+<p>Várható kimenet: <codel>The tax is: 19470.0 thalers</codel></p>
+
+<hr>
+
+<p>Mintabemenet: <codel>1000</codel></p>
+<p>Várható kimenet: <codel>The tax is: 0.0 thalers</codel></p>
+
+<hr>
+
+<p>Mintabemenet: <codel>-100</codel></p>
+<p>Várható kimenet: <codel>The tax is: 0.0 thalers</codel></p>
+
+<br>
+
+<studyMode>false</studyMode>
+<labMode>true</labMode>
+
+
+<hint>
+income = float(input("Enter the annual income: "))
+
+if income < 85528:
+	tax = income * 0.18 - 556.02
+# Write the rest of your code here.
+
+tax = round(tax, 0)
+print("The tax is:", tax, "thalers")
+
+</hint>
+
+<sampleSolution>
+income = float(input("Enter the annual income: "))
+
+if income < 85528:
+	tax = income * 0.18 - 556.02
+else:
+	tax = (income - 85528) * 0.32 + 14839.02
+
+if tax < 0.0:
+	tax = 0.0
+
+tax = round(tax, 0)
+print("The tax is:", tax, "thalers")
+
+</sampleSolution>
+
+</problem>

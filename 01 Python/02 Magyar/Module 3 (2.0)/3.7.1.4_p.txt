@@ -1,0 +1,111 @@
+<problem chapter='3' section='7' slide='1' problem='4' title='Listák fejlett alkalmazásokban ‒ Tömbök'>
+
+<!--
+Update history:
+2020-08-12 Grzegorz (reviewed)
+-->
+
+<code>
+</code>
+
+<h1>A listák többdimenziós jellege: fejlett alkalmazások</h1>
+
+<p>Nézzük meg mélyebben a listák többdimenziós jellegét. Egy kétdimenziós lista bármely elemének megtalálásához két <i>koordinátát</i> kell használnunk:</p>
+
+<ul>
+<li>egy függőlegeset (sorszám),</li>
+<li>és egy vízszinteset (oszlopszám).</li>
+</ul>
+
+<p>Képzeld el, hogy egy automatikus időjárásmérő állomáshoz fejlesztesz egy szoftvert. A készülék óránként rögzíti a levegő hőmérsékletét, és ezt egész hónapban teszi. Ez összesen 24 × 31 = 744 értéket ad. Próbálj meg egy olyan listát tervezni, amely képes tárolni mindezeket az eredményeket.</p>
+
+<p>Először is el kell döntened, hogy melyik adattípus lenne megfelelő az alkalmazáshoz. Ebben az esetben a <codel>float</codel> lenne a legjobb, mivel ez a hőmérő 0,1 ℃ pontossággal képes mérni a hőmérsékletet.</p>
+
+<p>Ezután úgy döntesz, hogy a sorok minden órában rögzítik a leolvasásokat (így a sor 24 elemet tartalmaz), és minden sor a hónap egy napjához lesz rendelve (tegyük fel, hogy minden hónapnak 31 napja van, így 31 sorra van szükség). Íme a megfelelő értelmezési pár (<codel>h</codel> az órát, <codel>d</codel> a napot jelöli):</p>
+
+<codep class="syntax-color">temps = [[0.0 for h in range(24)] for d in range(31)]
+</codep>
+
+<br>
+
+
+<p>Az egész mátrix most tele van nullákkal. Feltételezhető, hogy automatikusan frissül a speciális hardvereszközök segítségével. A te dolgod csak annyi, hogy megvárod, amíg a mátrix feltöltődik mérési adatokkal.</p>
+
+<hr>
+
+<p>Most itt az ideje meghatározni a havi átlagos déli hőmérsékletet. Add össze a délben mért 31 mérési értéket, és oszd el az összeget 31-gyel. Feltételezheted, hogy az éjféli hőmérséklet lesz először eltárolva. Íme a vonatkozó kód:</p>
+
+<codep class="syntax-color">temps = [[0.0 for h in range(24)] for d in range(31)]
+#
+# The matrix is magically updated here.
+#
+
+total = 0.0
+
+for day in temps:
+    total += day[11]
+
+average = total / 31
+
+print("Average temperature at noon:", average)
+</codep>
+
+<br>
+
+<p>Megjegyzés: A <codel>for</codel> ciklus által használt <codel>day</codel> változó nem skalár. A <codel>temps</codel> mátrix minden egyes bejárásakor a mátrix következő sorához rendeljük, tehát ez egy lista. <codel>11</codel>-gyel kell indexelni, hogy hozzáférhessünk a délben mért hőmérsékletértékhez.</p>
+
+<hr>
+
+<p>Most keresd meg az egész hónap legmagasabb hőmérsékletét! Nézd meg a kódot:</p>
+
+<codep class="syntax-color">temps = [[0.0 for h in range(24)] for d in range(31)]
+#
+# The matrix is magically updated here.
+#
+
+highest = -100.0
+
+for day in temps:
+    for temp in day:
+        if temp > highest:
+            highest = temp
+
+print("The highest temperature was:", highest)
+</codep>
+
+<br>
+
+<p>Megjegyzés:</p>
+
+<ul>
+<li>a <codel>day</codel> változó a <codel>temps</codel> mátrix összes során végigmegy;</li>
+<li>a <codel>temp</codel> változó az egy nap alatt végzett összes mérésen végigmegy.</li>
+</ul>
+
+<hr>
+
+<p>Most számold meg azokat a napokat, amikor a hőmérséklet délben legalább 20 ℃ volt:</p>
+
+
+<codep class="syntax-color">temps = [[0.0 for h in range(24)] for d in range(31)]
+#
+# The matrix is magically updated here.
+#
+
+hot_days = 0
+
+for day in temps:
+    if day[11] > 20.0:
+        hot_days += 1
+
+print(hot_days, "days were hot.")
+</codep>
+
+<br>
+<br>
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

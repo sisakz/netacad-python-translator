@@ -1,0 +1,74 @@
+<problem chapter='4' section='1' slide='1' problem='1' title='Függvények'>
+<!--
+Update history:
+2020-08-13 Grzegorz (reviewed, re-formatted)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h1>Miért van szükség függvényekre?</h1>
+
+<p>Már többször találkoztunk <strong>függvényekkel</strong>, de ezidáig meglehetősen egyoldalúan mutattuk be őket. A függvényeket eddig csak a feladataink megkönnyítésére, az időigényes és fárasztó feladatok egyszerűsítésére használtuk.</p>
+
+<p>Ha valamilyen adatot szeretnél kiírni a konzolra, azt a <codel>print()</codel> paranccsal teheted meg. Ha egy változó értékét akarod beolvasni, akkor az <codel>input()</codel> függvényt használhatod, az <codel>int()</codel> vagy a <codel>float()</codel> segítségével.</p>
+
+<p>Néhány <strong>metódust</strong>is használtál már. Ezek valójában függvények, csak nagyon speciális módon deklarálva.</p>
+
+<p>Most megtanuljuk, hogyan írjunk saját függvényeket, és hogyan használjuk őket. Több függvényt megírunk együtt a nagyon egyszerűtől a meglehetősen bonyolultig, amihez szükségünk lesz a figyelmedre és koncentrációdra.</p>
+
+<br>
+
+<p>Gyakran előfordul, hogy egy adott kódrészlet <strong>többször ismétlődik a programban</strong>. Olykor szó szerint ismétlődik, olykor csak néhány apró módosítással, amely más változók használatából ered ugyanabban az algoritmusban. Az is előfordul, hogy a programozó nem tud ellenállni a munka egyszerűsítésének, és elkezdi klónozni az ilyen kódrészleteket a vágólap és a másolás-beillesztés műveletek segítségével.</p>
+
+<p>Nagyon bosszantó, ha hirtelen kiderül, hogy hiba volt a klónozott kódban. A programozónak rengeteg fáradságot okoz megtalálni az összes javítandó részt. Nagy a kockázata annak is, hogy ezek a javítások más hibákat okoznak.</p>
+
+<p>Meghatározhatjuk tehát az első feltételt, amely segíthet eldönteni, hogy mikor kezdjünk el saját függvényeket írni: <strong>ha egy adott kódrészlet több helyen is megjelenik, fontoljuk meg annak lehetőségét, hogy azt egy függvény formájában elkülönítjük</strong>, amelyet azokról a pontokról hívunk meg, ahol az eredeti kódrészlet korábban szerepelt.</p>
+
+<p>Előfordulhat, hogy a megvalósítandó algoritmus annyira összetett, hogy a kód kontrollálatlan növekedésbe kezd, és hirtelen azt veszed észre, hogy már nem tudsz olyan könnyedén eligazodni benne.</p>
+<br> 
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+<p>Megpróbálhatod ilyenkor kommentekkel áttekinthetőbbé tenni a kódot, de hamarosan rá fogsz jönni, hogy ez csak drámaian ront a helyzeten ‒ <strong>a túl sok megjegyzés ugyanis nagyobbá és nehezebben olvashatóvá teszi a kódot</strong>. Egyesek szerint egy <strong>jól megírt függvény egy pillantással teljes egészében áttekinthető</strong>.</p>
+
+<p>Egy jó és figyelmes fejlesztő a kódot (pontosabban: a problémát) jól elkülönített részekre <strong>osztja</strong>, és <strong>mindegyik részt függvény formájában kódolja</strong>.</p>
+
+<p>Ez jelentősen leegyszerűsíti a programozó munkáját, mert minden egyes kódrészletet külön-külön lehet kódolni, és külön-külön lehet tesztelni. Ezt a folyamatot gyakran nevezik <strong>dekompozíciónak</strong>.</p>
+
+<center><img src="/uploads/media/default/0001/01/fbdeb7a6abd3e4f1ca988d609b7df446f3ae441e.png" width="60%" alt="The concept of decomposition"></center>
+
+<br>
+<br>
+
+<p>Most már kimondhatjuk a második feltételt:<strong>ha egy kódrészlet olyan nagy, hogy olvasása és megértése problémát okoz, bontsd fel kisebb problémákra, és mindegyiket különálló függvény formájában valósítsd meg</strong>.</p>
+
+<p>A dekompozíciót addig folytasd, amíg több rövid, könnyen érthető és tesztelhető függvényt nem kapsz.</p>
+
+
+<br>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

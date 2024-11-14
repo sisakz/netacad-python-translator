@@ -1,0 +1,46 @@
+<problem chapter='2' section='6' slide='1' problem='4' title='How to talk to a computer'>
+
+<!--
+Update history:
+2020-07-17 Grzegorz (reviewed; code - blank lines added)
+-->
+
+<code>anything = float(input("Enter a number: "))
+something = anything ** 2.0
+print(anything, "to the power of 2 is", something)
+
+</code>
+
+<h1>Type casting</h1>
+
+
+
+<p>Python offers two simple functions to specify a type of data and solve this problem ‒ here they are: <codel>int()</codel> and <codel>float()</codel>.</p>
+
+<p>Their names are self-commenting:</p>
+
+<ul>
+<li>the <codel>int()</codel> function <strong>takes one argument</strong> (e.g., a string: <codel>int(string)</codel>) and tries to convert it into an integer; if it fails, the whole program will fail too (there is a workaround for this situation, but we'll show you this a little later);</li>
+<li>the <codel>float()</codel> function takes one argument (e.g., a string: <codel>float(string)</codel>) and tries to convert it into a float (the rest is the same).</li>
+</ul>
+
+<br>
+
+<p>This is very simple and very effective. Moreover, you can invoke any of the functions by passing the <codel>input()</codel> results directly to them. There's no need to use any variable as an intermediate storage.</p>
+
+<p>We've implemented the idea in the editor ‒ take a look at the code.</p>
+
+
+<p>Can you imagine how the string entered by the user flows from <codel>input()</codel> into <codel>print()</codel>?</p>
+
+<p>Try to run the modified code. Don't forget to enter a <strong>valid number</strong>.</p>
+
+<p>Check some different values, small and big, negative and positive. Zero is a good input, too.</p>
+
+<br>
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

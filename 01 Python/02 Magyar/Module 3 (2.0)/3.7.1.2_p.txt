@@ -1,0 +1,65 @@
+<problem chapter='3' section='7' slide='1' problem='2' title='Listák fejlett alkalmazásokban ‒ Tömbök'>
+
+<!--
+Update history:
+2020-08-12 Grzegorz (reviewed)
+-->
+
+<code>
+</code>
+
+<h1>Listák a listákban: kétdimenziós tömbök</h1>
+
+<p>Tegyük fel, hogy az <codel>EMPTY</codel> nevű, <strong>előre definiált szimbólum</strong> egy üres mezőt jelöl a sakktáblán.</p>
+
+<p>Ha tehát az egész sakktáblát reprezentáló listát szeretnénk létrehozni, akkor ez a következőképpen történhet:</p>
+
+<codep class="syntax-color">board = []
+
+for i in range(8):
+    row = [EMPTY for i in range(8)]
+    board.append(row)
+</codep>
+
+<br>
+
+<p>Megjegyzés:</p>
+
+<ul>
+<li>a ciklus belső része létrehoz egy nyolc elemből álló sort (amelyek mindegyike egyenlő az <codel>EMPTY</codel>-vel), és hozzáadja a <codel>board</codel> listához;</li>
+<li>a külső rész nyolcszor megismétli ezt;</li>
+<li>a <codel>board</codel> lista összesen 64 elemből áll (mindegyik egyenlő az <codel>EMPTY</codel>-vel).</li>
+
+</ul>
+
+
+<p>Ez a modell tökéletesen leírja a valódi sakktáblát, amely tulajdonképpen egy nyolc elemű lista, amelynek elemei mind egysorosak. Foglaljuk össze a megfigyeléseinket:</p>
+
+<ul>
+<li>a sorok elemei mezők, soronként nyolc darab;</li>
+<li>a sakktábla elemei sorok, sakktáblánként nyolc darab.</li>
+</ul>
+
+
+<p>A <codel>board</codel> változó mostantól egy <strong>kétdimenziós tömb</strong>. Az algebrai kifejezések analógiájára <strong>mátrixnak</strong> is nevezik.</p>
+
+
+<br>
+
+<p>Mivel a listaleképezések <strong>egymásba ágyazhatók</strong>, a táblák létrehozását a következő módon rövidíthetjük le:</p>
+
+<codep class="syntax-color">board = [[EMPTY for i in range(8)] for j in range(8)]
+</codep>
+
+<br>
+
+<p>A belső rész létrehoz egy sort, a külső rész pedig egy sorokból álló listát.</p>
+
+
+<br>
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

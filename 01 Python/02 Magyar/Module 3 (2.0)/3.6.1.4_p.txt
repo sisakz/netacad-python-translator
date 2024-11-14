@@ -1,0 +1,79 @@
+<problem chapter='3' section='6' slide='1' problem='4' title='Műveletek listákkal | szelet'>
+
+<!--
+Update history:
+2020-08-12 Grzegorz (reviewed, reformatted)
+-->
+
+<code>
+</code>
+
+
+
+<h1>Szeletek: folytatás</h1>
+
+<p>Ha kihagyod a <codel>start</codel>-ot a szeletben, akkor a rendszer feltételezi, hogy a <codel>0</codel> indexű elemtől kezdődő szeletet szeretnél kapni.</p>
+
+<p>Más szóval, az ilyen formájú szelet:</p>
+
+<codep>my_list[:end]
+
+</codep>
+<br>
+
+<p>az alábbinak egy tömörebb megfelelője:</p>
+
+<codep>my_list[0:end]
+
+</codep>
+<br>
+
+
+<p>Nézd meg az alábbi kódrészletet:</p>
+
+<codep>my_list = [10, 8, 6, 4, 2]
+new_list = my_list[:3]
+print(new_list)
+
+</codep>
+
+<br>
+
+<p>A kimenete: <codel>[10, 8, 6]</codel>.</p>
+
+<p>Hasonlóképpen, ha kihagyod az <codel>end</codel>-et a szeletedben, akkor a rendszer feltételezi, hogy a szeletet a <codel>len(my_list)</codel> indexű elemnél akarod befejezni.</p>
+
+<p>Más szóval, az ilyen formájú szelet:</p>
+
+<codep>my_list[start:]
+
+</codep>
+<br>
+
+<p>az alábbinak egy tömörebb megfelelője:</p>
+
+<codep>my_list[start:len(my_list)]
+
+</codep>
+<br>
+
+<p>Nézd meg a következő kódrészletet:</p>
+
+<codep>my_list = [10, 8, 6, 4, 2]
+new_list = my_list[3:]
+print(new_list)
+
+</codep>
+
+<br>
+
+A fentiek alapján a kimenet: <codel>[4, 2]</codel>.</p>
+
+
+<br>
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>
