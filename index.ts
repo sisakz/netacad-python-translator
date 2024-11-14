@@ -12,8 +12,8 @@ const db = new sqlite3V.Database("./database.sqlite");
 //     "CREATE TABLE IF NOT EXISTS translations (english TEXT, hungarian TEXT, englishRaw TEXT, englishFile TEXT, hungarianFile TEXT)"
 //   );
 
-//   const englishPath = path.join(__dirname, "01 Python", "01 Angol");
-//   const hungarianPath = path.join(__dirname, "01 Python", "02 Magyar");
+//   const englishPath = path.join(__dirname, "public", "01 Python", "01 Angol");
+//   const hungarianPath = path.join(__dirname, "public", "01 Python", "02 Magyar");
 
 //   const moduleNames = [
 //     "Module 0 About (2.0)",
@@ -114,6 +114,6 @@ app.post("/api/search", (req, res) => {
   );
 });
 
-app.listen(8080, () => {
-  console.log("Server running on port 8080");
+app.listen(8081, () => {
+  console.log("Server running on port 8081");
 });
