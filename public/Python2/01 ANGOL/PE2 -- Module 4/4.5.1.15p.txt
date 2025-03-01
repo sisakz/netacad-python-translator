@@ -1,0 +1,50 @@
+﻿<problem chapter='4' section='5' slide='1' problem='15' title='The datetime and time modules (continued)'>
+
+<!--
+Update history:
+2020-03-30 Sebastian (first version)
+2020-10-12 Grzegorz (file creation, review, PEP-8 compliance check)
+-->
+
+<code>from datetime import date
+
+d = date(2020, 1, 4)
+print(d.strftime('%Y/%m/%d'))
+
+</code>
+
+
+
+<h1>Date and time formatting (part 1)</h1>
+
+<p>All <codel>datetime</codel> module classes presented so far have a method called <codel>strftime</codel>. This is a very important method, because it allows us to return the date and time in the format we specify.</p>
+
+<p>The <codel>strftime</codel> method takes only one argument in the form of a string specifying a format that can consist of directives.</p>
+
+<p>A directive is a string consisting of the character <codel>%</codel> (percent) and a lowercase or uppercase letter. For example, the directive <codel>%Y</codel> means the year with the century as a decimal number. Let's see it in an example. Run the code in the editor.</p>
+
+<p>Result:</p>
+
+<codep>2020/01/04</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+<p>In the example, we've passed a format consisting of three directives separated by <codel>/</codel> (slash) to the <codel>strftime</codel> method. Of course, the separator character can be replaced by another character, or even by a string.</p>
+
+<p>You can put any characters in the format, but only recognizable directives will be replaced with the appropriate values. In our format we've used the following directives:</p>
+
+<ul>
+<li><codel>%Y</codel> – returns the year with the century as a decimal number. In our example, this is <font face="Courier New">2020</font>.</li>
+<li><codel>%m</codel> – returns the month as a zero-padded decimal number. In our example, it's <font face="Courier New">01</font>.</li>
+<li><codel>%d</codel> – returns the day as a zero-padded decimal number. In our example, it's <font face="Courier New">04</font>.</li>
+</ul>
+
+<p><b>Note:</b> You can find all available directives <a href="https://docs.python.org/3/library/datetime.html#strftime-and-strptime-format-codes" target="_blank">here</a>.</p>
+
+<br>
+<br>
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

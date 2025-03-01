@@ -1,0 +1,52 @@
+<problem chapter='1' section='2' slide='1' problem='7' title='Fontos modulok | random'>
+
+<!--
+Update history:
+2020-08-31 Grzegorz (review, PEP-8 compliance check, update)
+2021-06-29 Grzegorz (corrections)
+-->
+
+<code>from random import randrange, randint
+
+print(randrange(1), end=' ')
+print(randrange(0, 1), end=' ')
+print(randrange(0, 1, 1), end=' ')
+print(randint(0, 1))
+
+</code>
+
+<h1>A <font face="Courier New">random</font> modul fontosabb függvényei (folytatás)</h1>
+
+<p><b>A <font face="Courier New">randrange</font> és a <font face="Courier New">randint</font> függvények</b></p>
+
+<p>Ha véletlen egész számokat szeretnél, akkor a következő függvények valamelyike jobban megfelelhet:</p>
+
+<ul>
+<li><codel>randrange(end)</codel></li>
+<li><codel>randrange(beg, end)</codel></li>
+<li><codel>randrange(beg, end, step)</codel></li>
+<li><codel>randint(left, right)</codel></li>
+</ul>
+ 
+
+<p>Az első három függvényhívása egy egész számot generál (pszeudorandom módon) rendre az alábbi intervallumból:</p>
+
+<ul>
+<li><codel>range(end)</codel></li>
+<li><codel>range(beg, end)</codel></li>
+<li><codel>range(beg, end, step)</codel></li>
+</ul>
+ 
+
+<p>Figyeljük meg, hogy az intervallum <strong>jobbról nyitott</strong> (azaz a jobb oldali értéket már nem veheti fel)!</p>
+
+<p>Az utolsó függvény a <codel>randrange(left, right+1)</codel> egyenértékűje - az <codel>i</codel> egész számértéket generálja, amely a [left, right] intervallumba esik (amelybe így a <codel>right</codel> érték is beletartozik).</p>
+
+<p>Nézd meg a kódot a szerkesztőben. A mintaprogram kimeneti eredménye egy három nullából és a negyedik helyen egy nullából vagy egy egyesből álló sor lesz.</p>
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

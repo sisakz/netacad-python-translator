@@ -1,0 +1,86 @@
+<problem chapter='3' section='4' slide='1' problem='1' title='OOP: Methods'>
+
+<!--
+Update history:
+2020-09-30 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>
+class Classy:
+    def method(self):
+        print("method")
+
+
+obj = Classy()
+obj.method()
+
+</code>
+
+
+
+<h1>Methods in detail</h1>
+
+<p>Let's summarize all the facts regarding the use of methods in Python classes.</p>
+
+
+<p>As you already know, a <strong>method is a function embedded inside a class</strong>.</p>
+
+<p>There is one fundamental requirement – a <strong>method is obliged to have at least one parameter</strong> (there are no such things as parameterless methods – a method may be invoked without an argument, but not declared without parameters).</p>
+
+ 
+<p>The first (or only) parameter is usually named <codel>self</codel>. We suggest that you follow the convention – it's commonly used, and you'll cause a few surprises by using other names for it.</p>
+
+<p>The name <font face="Courier New">self</font> suggests the parameter's purpose – <strong>it identifies the object for which the method is invoked</strong>.</p>
+
+<p>If you're going to invoke a method, you mustn't pass the argument for the <codel>self</codel> parameter – Python will set it for you.</p>
+
+<p>The example in the editor shows the difference.</p>
+
+<p>The code outputs:</p>
+
+<codep>method</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+ 
+
+<p>Note the way we've created the object – we've <strong>treated the class name like a function</strong>, returning a newly instantiated object of the class.</p>
+
+<hr>
+
+<p>If you want the method to accept parameters other than <codel>self</codel>, you should:</p>
+
+<ul>
+<li>place them after <codel>self</codel> in the method's definition;</li>
+<li>deliver them during invocation without specifying <codel>self</codel> (as previously)</li>
+</ul>
+ 
+
+<p>Just like here:</p>
+
+<codep class="syntax-color line-numbers copy">class Classy:
+    def method(self, par):
+        print("method:", par)
+
+
+obj = Classy()
+obj.method(1)
+obj.method(2)
+obj.method(3)
+</codep>
+<br>
+ 
+
+<p>The code outputs:</p>
+
+<codep>method: 1
+method: 2
+method: 3</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

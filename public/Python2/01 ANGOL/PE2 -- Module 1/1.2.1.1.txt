@@ -1,0 +1,98 @@
+<problem chapter='1' section='2' slide='1' problem='1' title='Useful Modules'>
+
+<!--
+Update history:
+2020-08-31 Grzegorz (review, PEP-8 compliance check, update)
+2021-06-16 Grzegorz (review)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h1>Working with standard modules</h1>
+
+<p>Before we start going through some standard Python modules, we want to introduce the <codel>dir()</codel> function to you. It has nothing to do with the <codel>dir</codel> command you know from Windows and Unix consoles, as <codel>dir()</codel> doesn't show the contents of a disk directory/folder, but there is no denying that it does something really similar - it is able to reveal all the names provided through a particular module.</p>
+
+<p>There is one condition: the module has to have been previously imported as a whole (i.e., using the <codel>import module</codel> instruction - <codel>from module</codel> is not enough).</p>
+
+<p>The function returns an <strong>alphabetically sorted list</strong> containing all entity names available in the module identified by a name passed to the function as an argument:</p>
+
+<codep class="syntax-color">dir(module)
+</codep>
+<br>
+
+<p>Note: if the module's name has been aliased, you must use the alias, not the original name.</p>
+
+<p>Using the function inside a regular script doesn't make much sense, but it is still possible.</p>
+
+
+
+<p>For example, you can run the following code to print the names of all entities within the <codel>math</codel> module:</p>
+
+<codep class="syntax-color copy">import math
+
+for name in <mark class="mark-background">dir(math)</mark>:
+    print(name, end="\t")
+</codep>
+
+<br>
+
+<p>The example code should produce the following output:</p>
+
+<codep style="white-space: break-spaces;">__doc__	__loader__	__name__	__package__	__spec__	acos	acosh	asin	asinh	atan	atan2	atanh	ceil	copysign	cos	cosh	degrees	e	erf	erfc	exp	expm1	fabs	factorial	floor	fmod	frexp	fsum	gamma	hypot	isfinite	isinf	isnan	ldexp	lgamma	log	log10	log1p	log2	modf	pi	pow	radians	sin	sinh	sqrt	tan	tanh	trunc	</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+<br>
+
+
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+<p>Have you noticed these strange names beginning with <codel>__</codel> at the top of the list? We'll tell you more about them when we talk about the issues related to writing your own modules.</p>
+
+<p>Some of the names might bring back memories from math lessons, and you probably won't have any problems guessing their meanings.</p>
+
+<p>Using the <codel>dir()</codel> function inside a code may not seem very useful - usually you want to know a particular module's contents before you write and run the code.</p>
+
+<p>Fortunately, you can execute the function <strong>directly in the Python console</strong> (IDLE), without needing to write and run a separate script.</p>
+
+<p>This is how it can be done:</p>
+
+<codep class="syntax-color copy">import math
+dir(math)
+</codep>
+
+<br>
+
+<p>You should see something similar to this:</p>
+
+<img class="lightbox" src="/uploads/media/default/0001/01/de942a70f61e8e052a33b3c9ecb23312d305d71e.png" width="95%" alt="Python console window - the math module contents">
+
+<br>
+
+<br>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

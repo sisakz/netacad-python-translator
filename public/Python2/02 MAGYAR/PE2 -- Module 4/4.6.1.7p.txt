@@ -1,0 +1,47 @@
+<problem chapter='4' section='6' slide='1' problem='7' title='A calendar modul'>
+
+<!--
+Update history:
+2020-03-30 Sebastian (first version)
+2020-10-12 Grzegorz (file creation, review, PEP-8 compliance check)
+-->
+
+<code>import calendar
+
+print(calendar.isleap(2020))
+print(calendar.leapdays(2010, 2021))  # Up to but not including 2021.
+
+</code>
+
+<h1>Hogyan ellenõrizhetjük, hogy egy év szökõév-e?</h1>
+
+<p>A <codel>calendar</codel> modul két hasznos függvényt biztosít annak ellenõrzésére, hogy az adott év szökõév-e.</p>
+
+<br>
+<center><img src="/uploads/media/default/0001/02/9aff0c71eb503a0e78239867a888e0162715e31a.png" alt="February 29th" width="70%"></center>
+<br><br>
+
+    <p>Az elsõ, az <codel>isleap</codel> nevû, <i>True</i> értéket ad vissza, ha az átadott év szökõév, illetve <i>False</i> értéket, ha nem. A második, a <codel>leapdays</codel>, a szökõévek számát adja vissza az adott évek tartományában.</p>
+
+    <p>Futtasd a kódot a szerkesztõablakban.</p>
+
+<p>Eredmény:</p>
+
+<codep>True
+3</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+<p>A példában 3-at kaptunk eredménynek, mivel a 2010 és 2020 közötti idõszakban csak három szökõév volt (megjegyzés: 2021 nincs benne a vizsgált tartományban). Ezek a 2012-es, a 2016-os és a 2020-as évek.</p>
+
+
+
+
+
+<br>
+<br>
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

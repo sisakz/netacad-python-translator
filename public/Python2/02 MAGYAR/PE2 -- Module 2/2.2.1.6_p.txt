@@ -1,0 +1,67 @@
+<problem chapter='2' section='2' slide='1' problem='6' title='Karakterláncok'>
+
+<!--
+Update history:
+2020-09-22 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>
+</code>
+
+
+
+<h1>A karakterláncok mint szekvenciák: indexelés</h1>
+
+<p>Korábban már mondtuk, hogy a <strong> Python karakterláncok szekvenciák</strong>. Itt az ideje, hogy megmutassuk, mit is jelent ez valójában.</p>
+
+<p>A karakterláncok nem listák, de <strong>sok esetben listaként kezelhetjük őket</strong>.</p>
+
+<p>Ha például egy karakterlánc bármelyik karakteréhez hozzá szeretnél férni, akkor ezt <strong>indexeléssel </strong>teheted meg, mint az alábbi példában. Futtasd le a programot:</p>
+
+<p><codep class="syntax-color copy line-numbers"># Indexing strings.
+
+the_string = 'silly walks'
+
+for ix in range(len(the_string)):
+    print(the_string[ix], end=' ')
+
+print()
+</codep></p>
+
+<p>Légy óvatos – ne próbáld meg átlépni egy karakterlánc határait – ez kivételt fog kiváltani.</p>
+
+<p>A példakimenet a következő:</p>
+
+<codep>s i l l y   w a l k s</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+ 
+
+<p>Egyébként a negatív indexek is a várakozásoknak megfelelően viselkednek. Ellenőrizd ezt magad is!</p>
+
+<br>
+
+<h2>A karakterláncok mint szekvenciák: bejárás</h2>
+
+<p>A <strong>karakterláncok bejárása</strong> is működik. Nézd meg az alábbi példát:</p>
+
+<codep class="syntax-color copy line-numbers"># Iterating through a string.
+
+the_string = 'silly walks'
+
+for character in the_string:
+    print(character, end=' ')
+
+print()
+</codep>
+<br>
+
+<p>A kimenet ugyanaz, mint korábban. Ellenőrizd!</p>
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

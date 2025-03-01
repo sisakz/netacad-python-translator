@@ -1,0 +1,65 @@
+<problem chapter='4' section='3' slide='1' problem='13' title='Working with real files'>
+
+<!--
+Update history:
+2020-10-07 Grzegorz (review, PEP-8 compliance check)
+2020-10-29 Grzegorz (code fix: strrerror instead of strerr)
+2021-07-07 Grzegorz (code corrections - important!)
+-->
+
+<code>
+from os import strerror
+
+data = bytearray(10)
+
+for i in range(len(data)):
+    data[i] = 10 + i
+
+try:
+    binary_file = open('file.bin', 'wb')
+    binary_file.write(data)
+    binary_file.close()
+except IOError as e:
+    print("I/O error occurred:", strerror(e.errno))
+
+# Your code that reads bytes from the stream should go here.
+
+</code>
+
+
+
+<h1>How to read bytes from a stream: continued</h1>
+
+
+<p>If the <codel>read()</codel> method is invoked with an argument, it <strong>specifies the maximum number of bytes to be read</strong>.</p>
+
+<p>The method tries to read the desired number of bytes from the file, and the length of the returned object can be used to determine the number of bytes actually read.</p>
+
+<p>You can use the method just like here:</p>
+
+<codep class="syntax-color copy line-numbers">try:
+    binary_file = open('file.bin', 'rb')
+    data = bytearray(binary_file.read(5))
+    binary_file.close()
+
+    for b in data:
+        print(hex(b), end=' ')
+
+except IOError as e:
+    print("I/O error occurred:", strerror(e.errno))
+</codep>
+
+<br>
+
+ 
+
+<p>Note: the first five bytes of the file have been read by the code – the next five are still waiting to be processed.</p>
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

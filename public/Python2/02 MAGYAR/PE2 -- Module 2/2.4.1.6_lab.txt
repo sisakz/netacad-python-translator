@@ -1,0 +1,151 @@
+<problem chapter='2' section='4' slide='1' problem='6' title="LAB: LED kijelző">
+
+<!--
+Update history:
+2020-09-23 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+
+<span class="label" style="background-color:rgb(205, 168, 105);"><b>LABORGYAKORLAT</b></span>
+
+<br><br>
+
+
+<h2>Becsült idő</h2>
+<p>30 perc</p>
+
+<h2>Nehézségi szint</h2>
+<p>Közepes</p>
+
+
+<h2>Célok</h2>
+<ul>
+	<li>a karakterlánc-kezelési készségek fejlesztése;</li>
+	<li>karakterláncok használata a nem szöveges adatok ábrázolására.</li>
+</ul>
+
+
+<h2>Forgatókönyv</h2>
+
+<p>Biztosan láttál már <i>hét szegmensből álló kijelzőt</i>.</p>
+
+<p>Ez egy olyan eszköz (néha elektronikus, néha mechanikus), amelyet úgy terveztek, hogy egy tizedesjegyet hét szegmens egy részhalmazának felhasználásával jelenítsen meg. Ha még mindig nem tudod, mi ez, olvasd el az alábbi <a href="https://en.wikipedia.org/wiki/Seven-segment_display" target="_blank">Wikipédia-szócikket</a>.</p>
+
+<p>A feladatod <strong>egy olyan program</strong> megírása, <strong>amely képes szimulálni egy hét szegmenses eszköz működését</strong> bár szegmensek helyett LED-eket fogsz használni.</p>
+
+<p>Minden egyes számjegy 13 LED-ből épül fel (természetesen némelyik világít, némelyik sötét) – így képzeljük el:</p>
+
+<codep>  # ### ### # # ### ### ### ### ### ### 
+  #   #   # # # #   #     # # # # # # # 
+  # ### ### ### ### ###   # ### ### # # 
+  # #     #   #   # # #   # # #   # # # 
+  # ### ###   # ### ###   # ### ### ###</codep>
+<br>
+
+<p>Megjegyzés: a 8-as szám az összes LED fényt bekapcsolva mutatja.</p>
+
+<p>A kódodnak a felhasználó által beírt bármely nem negatív egész számot <i>meg kell jelenítenie</i>.</p>
+
+<p>Tipp: nagyon hasznos lehet egy olyan lista használata, amely mind a tíz számjegyből álló mintát tartalmazza.</p>
+
+
+<h2>Tesztadatok</h2>
+
+<p>Minta bemenet:</p>
+<codep>123</codep>
+<br>
+<p>Minta kimenet:</p>
+<codep>  # ### ### 
+  #   #   # 
+  # ### ### 
+  # #     # 
+  # ### ### </codep>
+<br>
+
+
+
+<p>Minta bemenet:</p>
+<codep>9081726354</codep>
+<br>
+<p>Minta kimenet:</p>
+<codep>### ### ###   # ### ### ### ### ### # # 
+# # # # # #   #   #   # #     # #   # # 
+### # # ###   #   # ### ### ### ### ### 
+  # # # # #   #   # #   # #   #   #   # 
+### ### ###   #   # ### ### ### ###   # </codep>
+<br>
+
+<br>
+
+<studyMode>false</studyMode>
+<labMode>true</labMode>
+
+<hint>
+digits = [ '1111110',  	# 0
+	   '0110000',	# 1
+	   '1101101',	# 2
+	   '1111001',	# 3
+	   '0110011',	# 4
+	   '1011011',	# 5
+	   '1011111',	# 6
+	   '1110000',	# 7
+	   '1111111',	# 8
+	   '1111011',	# 9
+	   ]
+
+
+def print_number(num):
+    # Write the function here.
+
+
+print_number(int(input("Enter the number you wish to display: ")))
+
+</hint>
+
+
+<sampleSolution>
+digits = [ '1111110',  	# 0
+	   '0110000',	# 1
+	   '1101101',	# 2
+	   '1111001',	# 3
+	   '0110011',	# 4
+	   '1011011',	# 5
+	   '1011111',	# 6
+	   '1110000',	# 7
+	   '1111111',	# 8
+	   '1111011',	# 9
+	   ]
+
+
+def print_number(num):
+	global digits
+	digs = str(num)
+	lines = [ '' for lin in range(5) ]
+	for d in digs:
+		segs = [ [' ',' ',' '] for lin in range(5) ]
+		ptrn = digits[ord(d) - ord('0')]
+		if ptrn[0] == '1':
+			segs[0][0] = segs[0][1] = segs[0][2] = '#'
+		if ptrn[1] == '1':
+			segs[0][2] = segs[1][2] = segs[2][2] = '#'
+		if ptrn[2] == '1':
+			segs[2][2] = segs[3][2] = segs[4][2] = '#'
+		if ptrn[3] == '1':
+			segs[4][0] = segs[4][1] = segs[4][2] = '#'
+		if ptrn[4] == '1':
+			segs[2][0] = segs[3][0] = segs[4][0] = '#'
+		if ptrn[5] == '1':
+			segs[0][0] = segs[1][0] = segs[2][0] = '#'
+		if ptrn[6] == '1':
+			segs[2][0] = segs[2][1] = segs[2][2] = '#'
+		for lin in range(5):
+			lines[lin] += ''.join(segs[lin]) + ' '
+	for lin in lines:
+		print(lin)
+
+
+print_number(int(input("Enter the number you wish to display: ")))
+
+</sampleSolution>
+
+</problem>

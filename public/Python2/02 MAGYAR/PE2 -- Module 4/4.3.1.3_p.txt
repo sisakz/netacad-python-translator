@@ -1,0 +1,58 @@
+<problem chapter='4' section='3' slide='1' problem='3' title='Valós fájlok kezelése'>
+
+<!--
+Update history:
+2020-10-07 Grzegorz (review, PEP-8 compliance check)
+2020-10-29 Grzegorz (code fix: strerror instead of strerr; removing line 10: ch = s.read(1) )
+2021-07-07 Grzegorz (code corrections - important!)
+-->
+
+<code>from os import strerror
+
+try:
+    counter = 0
+    stream = open('text.txt', "rt")
+    content = stream.read()
+    for char in content:
+        print(char, end='')
+        counter += 1
+    stream.close()
+    print("\n\nCharacters in file:", counter)
+except IOError as e:
+    print("I/O error occurred: ", strerr(e.errno))
+
+</code>
+
+
+
+<h1>Szövegfájlok feldolgozása (folytatás)</h1>
+
+
+<p>Ha biztos vagy abban, hogy a fájl, hosszát tekintve biztonságosan és egyszerre beolvasható a memóriába, akkor megteheted ezt. Ehhez a <codel>read()</codel> függvényt argumentumok nélkül vagy egy <codel>None</codel> értékű argumentummal kell meghívni.</p>
+
+<p>Ne feledd – <strong>egy terabájt méretű fájl beolvasása ezzel a módszerrel lefagyaszthatja az operációs rendszert</strong>.</p>
+
+<p>Ne várj csodákat - a számítógép memóriája nem végtelen.</p>
+
+<p>Nézd meg a kódot a szerkesztőben. Mit gondolsz róla?</p>
+
+<p>Elemezzük ki:</p> 
+
+<ul>
+    <li>megnyitjuk a fájlt, mint korábban;</li>
+    <li>a tartalmát egyetlen <codel>read()</codel> függvényhívással olvassuk be;</li>
+    <li>ezután végigmegyünk a szövegen egy szabályos <codel>for</codel> ciklus segítségével, és a ciklus minden egyes iterációjánál aktualizáljuk a számláló értékét;</li>
+</ul>
+ 
+<p>Az eredmény pontosan ugyanaz lesz, mint korábban.</p>
+
+
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

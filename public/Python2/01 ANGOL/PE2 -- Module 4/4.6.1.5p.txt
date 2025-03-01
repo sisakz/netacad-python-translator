@@ -1,0 +1,36 @@
+<problem chapter='4' section='6' slide='1' problem='5' title='The calendar module'>
+
+<!--
+Update history:
+2020-03-30 Sebastian (first version)
+2020-10-12 Grzegorz (file creation, review, PEP-8 compliance check)
+-->
+
+<code>import calendar
+print(calendar.weekday(2020, 12, 24))
+
+</code>
+
+<h1>The <font face="Courier New">weekday()</font> function</h1>
+
+<p>Another useful function provided by the <codel>calendar</codel> module is the function called <codel>weekday</codel>, which returns the day of the week as an integer value for the given year, month, and day. Let's see it in practice.</p>
+
+<p>Run the code in the editor to check the day of the week that falls on December 24, 2020.</p>
+
+<p>Result:</p>
+
+<codep>3</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+<p>The <codel>weekday</codel> function returns 3, which means that December 24, 2020 is a Thursday.</p>
+
+
+
+<br>
+<br>
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

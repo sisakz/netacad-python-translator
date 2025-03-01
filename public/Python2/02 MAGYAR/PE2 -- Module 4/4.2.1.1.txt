@@ -1,0 +1,76 @@
+<problem chapter='4' section='2' slide='1' problem='1' title='Fájlkezelés'>
+
+<!--
+Update history:
+2020-10-07 Grzegorz (review, PEP-8 compliance check)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+    <h1>Fájlkezelés Pythonban</h1>
+
+
+    <p>A fejlesztő munkájának egyik leggyakoribb feladata a <strong>fájlokban tárolt adatok feldolgozása</strong> miközben a fájlokat általában fizikailag tárolóeszközök - merevlemezek, optikai, hálózati tárolók vagy memóriakártyák - segítségével tárolják.</p>
+
+ 
+
+    <p>Könnyű elképzelni egy olyan programot, amely 20 számot rendez, és ugyanilyen könnyű elképzelni, hogy a program felhasználója közvetlenül a billentyűzetről adja meg ezt a húsz számot.</p>
+
+    <p>Sokkal nehezebb elképzelni ugyanezt a feladatot, amikor 20 000 számot kell rendezni, és nincs egyetlen olyan felhasználó sem, aki képes lenne hiba nélkül beírni ennyi számot.</p>
+
+    <p>Sokkal könnyebb elképzelni, hogy ezek a számok a merevlemezen vannak tárolva, melyeket a program beolvas. A program rendezi a számokat, de nem küldi őket a képernyőre, hanem létrehoz egy új fájlt, és a rendezett számsorozatot oda menti.</p>
+
+ 
+
+    <p>Ha egy egyszerű adatbázist szeretnénk megvalósítani, akkor az egyetlen módja az információ tárolásának a programfutások között az, hogy egy fájlba (vagy összetettebb adatbázis esetében fájlokba) mentjük.</p>
+
+
+
+
+
+
+<br> 
+<br>
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+
+<br>
+
+<p>Elvileg minden nem triviális programozási probléma fájlok használatára épül, legyen szó akár képek feldolgozásáról (fájlokban tárolt adatok), mátrixok szorzásáról (számolás fájlokban tárolt adatokkal) vagy bérek és adók kiszámításáról (fájlokban tárolt adatok olvasása).</p>
+
+
+<img src="/uploads/media/default/0001/01/baf3c7a32db23a6ee8e80a0696b374bad5394501.png" alt="The concept of file storages">
+<br><br>
+ 
+
+    <p>Megkérdezhetnéd, hogy miért vártunk mostanáig azzal, hogy megmutassuk ezeket az eseteket.</p>
+
+    <p>A válasz nagyon egyszerű - a Python a fájlok elérésének és feldolgozásának módját egy konzisztens objektumkészlet segítségével valósítja meg. Nincs jobb pillanat, hogy erről beszéljünk.</p>
+
+<br>
+<br>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

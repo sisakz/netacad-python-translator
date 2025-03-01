@@ -1,0 +1,59 @@
+<problem chapter='3' section='4' slide='1' problem='9' title='OOP: Methods'>
+
+<!--
+Update history:
+2020-09-30 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h1>Reflection and introspection</h1>
+
+<p>All these means allow the Python programmer to perform two important activities specific to many objective languages. They are:</p>
+
+<ul>
+<li><strong>introspection</strong>, which is the ability of a program to examine the type or properties of an object at runtime;</li>
+<li><strong>reflection</strong>, which goes a step further, and is the ability of a program to manipulate the values, properties and/or functions of an object at runtime.</li>
+</ul>
+ 
+
+<p>In other words, you don't have to know a complete class/object definition to manipulate the object, as the object and/or its class contain the metadata allowing you to recognize its features during program execution. </p>
+
+<br> 
+<br>
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+
+
+<img class="lightbox" src="/uploads/media/default/0001/01/27ee5cade001ded5a564bb7e12f725c112a3bf0e.png" alt="Introspection and Reflection definitions">
+
+
+<br>
+<br>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

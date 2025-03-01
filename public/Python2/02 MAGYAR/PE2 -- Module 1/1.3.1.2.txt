@@ -1,0 +1,103 @@
+<problem chapter='1' section='3' slide='1' problem='2' title='Modulok és csomagok'>
+
+<!--
+Update history:
+2020-09-08 Grzegorz (review, PEP-8 compliance check, update)
+2021-06-29 Grzegorz (corrections)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h1>Az első modulod: 1. lépés</h1>
+
+<p>Ebben a részben a saját gépeden fogsz dolgozni. Kezdjük az elejétől, hozzunk létre egy üres fájlt, így:</p>
+
+<img src="/uploads/media/default/0001/01/c77ae2fe3a6ffb6170405ccaaec77eca3f3695c7.png" width="40%" alt="Creating a module.py file">
+
+<br><br>
+
+<codep class="syntax-color line-numbers">
+</codep>
+<p style="text-align: right;">module.py</p>
+
+
+<p>A kísérletek megismétléséhez két fájlra lesz szükséged. Az első maga a modul lesz. Ez most üres. Ne aggódj, hamarosan tényleges kóddal fogod megtölteni.</p>
+
+<p>A fájlt <font face="Courier New">module.py</font>-nak neveztük el. Nem túl kreatív, de egyszerű és világos.</p>
+
+<br>
+
+<h2>Az első modulod: 2. lépés</h2>
+
+<p>A második fájl tartalmazza az új modult használó kódot. A neve <font face="Courier New">main.py</font>. Tartalma eddig nagyon rövid:</p>
+
+
+<img src="/uploads/media/default/0001/01/fa6a636418f12f30c33a419be1f2482ba3c07793.png" width="40%" alt="Creating a main.py file containing the import module instruction">
+
+<br><br>
+
+<codep class="syntax-color line-numbers">import module
+</codep>
+<p style="text-align: right;">main.py</p>
+
+
+<p>Megjegyzés: <strong>mindkét fájlnak ugyanabban a mappában kell lennie</strong>! Erősen javasoljuk, hogy hozz létre egy üres, új mappát a két fájl számára. Néhány dolog így könnyebb lesz.</p>
+
+
+
+<br>
+
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+<p>Indítsd el az IDLE-t (vagy bármilyen más IDE-t, amit előnyben részesítesz), és futtasd a <font face="Courier New">main.py</font> fájlt. Mit látsz?</p>
+
+<p>Semmit sem szabadna látnod. Ez azt jelenti, hogy a Python sikeresen importálta a <font face="Courier New">module.py</font> fájl tartalmát.</p>
+
+<p>Nem számít, hogy a modul egyelőre üres. A legelső lépés megtörtént, de mielőtt a következő lépést megteszed, szeretnénk, ha vetnél egy pillantást a mappára, amelyben mindkét fájl található.</p>
+
+<p>Észreveszel valami érdekeset?</p>
+
+<p>Megjelent egy új almappa - látod? A neve <font face="Courier New">__pycache__</font>. Nézz bele! Mit látsz?</p>
+
+<p>Van egy <font face="Courier New">module.cpython-xy.pyc</font>-re hasonlító nevű fájl, ahol <font face="Courier New">x</font> és <font face="Courier New">y</font> a Python verziójából származó számjegyek (pl. <font face="Courier New">3</font> és <font face="Courier New">8</font> lesz, ha Python 3.8-at használsz).</p>
+
+ 
+<p>A fájl neve megegyezik a modul (jelen esetben module) nevével. Az első pont utáni rész azt mondja meg, hogy melyik Python implementáció hozta létre a fájlt (itt <font face="Courier New">CPython</font>), és annak verziószáma. Az utolsó rész (<font face="Courier New">pyc</font>) a <i>Python</i> és a <i>compiled</i> szavakból származik.</p>
+
+<p>Belenézhetsz a fájlba - a tartalom teljesen olvashatatlan az emberek számára. Ennek így is kell lennie, mivel a fájlt kizárólag Python használatra szánják.</p>
+
+ 
+<p>Amikor a Python először importál egy modult, annak <strong>tartalmát egy félig lefordított formába fordítja</strong>.</p>
+
+<p>A fájl nem gépi kódot tartalmaz - ez egy belső Python <strong>előfordított kód</strong>, amely készen áll arra, hogy a Python értelmezője futtassa. Mivel egy ilyen fájl nem igényel sok olyan ellenőrzést, ami egy tiszta forrásfájl esetében szükséges, a végrehajtás gyorsabban indul, és gyorsabban is fut.</p>
+
+<p>Ennek köszönhetően minden további importálás gyorsabban fog menni, mintha a forrásszöveget a nulláról kellene értelmeznie.</p>
+
+<p>A Python képes ellenőrizni, hogy a modul forrásfájlja módosult-e (ebben az esetben a <font face="Courier New">pyc</font> fájl újraépül) vagy sem (amikor a <font face="Courier New">pyc</font> fájl egyből futtatható). Mivel ez a folyamat teljesen automatikus és átlátható, nem kell észben tartanod.</p>
+
+<br>
+
+</div>
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

@@ -1,0 +1,113 @@
+<problem chapter='3' section='2' slide='1' problem='7' title='A procedurálistól az objektumorientált megközelítésig'>
+
+<!--
+Update history:
+2020-09-30 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>class Stack:
+    def __init__(self):
+        self.__stack_list = []
+
+
+    def push(self, val):
+        self.__stack_list.append(val)
+
+
+    def pop(self):
+        val = self.__stack_list[-1]
+        del self.__stack_list[-1]
+        return val
+
+
+stack_object = Stack()
+
+stack_object.push(3)
+stack_object.push(2)
+stack_object.push(1)
+
+print(stack_object.pop())
+print(stack_object.pop())
+print(stack_object.pop())
+
+</code>
+
+
+
+<h1>Az objektumos megközelítés: verem létrehozása</h1>
+
+<p>Most a <i>push</i> és <i>pop</i> műveleteket végrehajtó két függvény (metódus) következik. A Python feltételezi, hogy egy ilyen típusú függvényt (egy osztálytevékenységet) az <strong>osztálytestbe</strong> kell <strong>beépíteni</strong> – akárcsak egy konstruktort.</p>
+
+<p>Ezeket a függvényeket akarjuk meghívni az értékek <codel>push</codel> és <codel>pop</codel> műveleteinek elvégzéséhez. Ez azt jelenti, hogy mindkettőnek elérhetőnek kell lennie minden osztály felhasználója számára (ellentétben a korábban felépített listával, amely rejtve van a közönséges osztály felhasználói elől).</p>
+
+<p>Egy ilyen komponens neve <strong>nyilvános</strong>, ezért <strong>nem kezdhetjük a nevét két (vagy több) aláhúzással</strong>. Van még egy feltétel – <strong>a névben nem lehet egynél több aláhúzás a végén</strong>. Mivel az aláhúzás hiánya teljes mértékben megfelel a követelménynek, feltételezhetjük, hogy a név elfogadható.</p>
+
+<p>A függvények egyszerűek. Nézzük meg:</p>
+
+<codep class="syntax-color">class Stack:
+    def __init__(self):
+        self.__stack_list = []
+
+    <mark class="mark-background">def push(self, val):</mark>
+        <mark class="mark-background">self.__stack_list.append(val)</mark>
+
+    <mark class="mark-background">def pop(self):</mark>
+        <mark class="mark-background">val = self.__stack_list[-1]</mark>
+        <mark class="mark-background">del self.__stack_list[-1]</mark>
+        <mark class="mark-background">return val</mark>
+
+
+stack_object = Stack()
+
+stack_object.push(3)
+stack_object.push(2)
+stack_object.push(1)
+
+print(stack_object.pop())
+print(stack_object.pop())
+print(stack_object.pop())
+</codep>
+<br>
+ 
+
+<p>Van azonban valami nagyon furcsa a kódban. A függvények ismerősnek tűnnek, de több paraméterük van, mint procedurális társaiknak.
+
+<p>Itt mindkét függvénynek van egy <codel>self</codel> nevű paramétere a paraméterlista első helyén.</p>
+
+<p>Szükséges ez? Igen, szükséges.</p>
+
+ 
+
+<p>Minden metódusnak rendelkeznie kell ezzel a paraméterrel, ami ugyanolyan szerepet játszik, mint az első konstruktor paraméter.</p>
+
+<p><strong>Lehetővé teszi a metódus számára, hogy hozzáférjen az aktuális objektumhoz tartozó entitásokhoz (tulajdonságokhoz és tevékenységekhez/metódusokhoz)</strong>. Nem lehet kihagyni, megkerülhetetlen. Minden alkalommal, amikor a Python meghív egy metódust, implicit módon az aktuális objektumot küldi el első argumentumként.</p>
+
+<p>Ez azt jelenti, hogy egy <strong>metódusnak kötelezően van legalább egy paramétere, amelyet a Python maga használ</strong> – erre nincs ráhatásunk.</p>
+
+ 
+<p>Ha a metódusnak egyáltalán nincs szüksége paraméterekre, ezt a paramétert akkor is meg kell adnunk. Ha a metódus csak egy paramétert használ, akkor is kettőt kell megadni, és az elsőnek a szerepe továbbra is ugyanaz marad.</p>
+
+<p>Van még egy dolog, ami magyarázatra szorul - a mód, ahogyan a metódusok a <codel>__stack_list</codel> változóból meghívásra kerülnek.</p>
+
+<p>Szerencsére ez sokkal egyszerűbb, mint amilyennek látszik:</p>
+
+<ul>
+    <li>az első rész a teljes objektumot &rarr; <codel>self</codel> adja át;</li>
+
+    <li>ezután el kell jutnunk a <codel>__stack_list</codel> listához &rarr; <codel>self.__stack_list</codel>;</li>
+
+    <li>a <codel>__stack_list</codel> készen áll a használatra, elvégezhetjük a harmadik és egyben utolsó lépést &rarr; <codel>self.__stack_list.append(val)</codel>.</li>
+</ul>
+ 
+
+<p>Az osztály deklarációja teljes, és minden összetevője felsorolásra került. Az osztályunk készen áll a használatra.</p>
+
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

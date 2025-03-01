@@ -1,0 +1,59 @@
+<problem chapter='4' section='5' slide='1' problem='20' title='A datetime és time modul (folytatás)'>
+
+<!--
+Update history:
+2020-03-30 Sebastian (first version)
+2020-10-12 Grzegorz (file creation, review, PEP-8 compliance check)
+-->
+
+<code>from datetime import timedelta
+
+delta = timedelta(weeks=2, days=2, hours=3)
+print(delta)
+
+</code>
+
+
+
+<h1>A <font face="Courier New">timedelta</font> objektumok létrehozása</h1>
+
+<p>Azt már megtanultuk, hogy egy <codel>timedelta</codel> objektumot két <codel>date</codel> vagy <codel>datetime</codel> objektum különbségeként kaphatunk meg.</p>
+
+<p>Természetesen mi is létrehozhatunk <codel>timedelta</codel> objektumot. Ehhez ismerkedjünk meg az osztály konstruktora által elfogadott argumentumokkal, amelyek a következők: <codel>days</codel>, <codel>seconds</codel>, <codel>microseconds</codel>, <codel>milliseconds</codel>, <codel>minutes</codel>, <codel>hours</codel>, és <codel>weeks</codel>. Ezek mindegyike opcionális, és alapértelmezett értéke 0.</p>
+
+<p>Az argumentumok egész vagy lebegőpontos valós számok lehetnek, és a konstruktor egyaránt elfogad pozitív és negatív értékeket. Nézzünk meg egy egyszerű példát!</p>
+
+<p>Eredmény:</p>
+
+<codep>16 days, 3:00:00</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+<p>A 16 napos eredményt úgy kapjuk meg, hogy a <codel>weeks</codel> argumentumot napokra alakítjuk át (2 hét = 14 nap) és hozzáadjuk a <codel>days</codel> argumentumot (2 nap). Ez normális viselkedés, mivel a <codel>timedelta</codel> objektum csak napokat, másodperceket és mikroszekundumokat tárol belsőleg. Hasonlóképpen, az <codel>hour</codel> argumentumot másodpercekre konvertáljuk. Nézd meg az alábbi példát:</p>
+
+<p><codep class="syntax-color copy">from datetime import timedelta
+
+delta = timedelta(weeks=2, days=2, hours=3)
+print("Days:", delta.days)
+print("Seconds:", delta.seconds)
+print("Microseconds:", delta.microseconds)
+</codep></p>
+
+
+<p>Eredmény:</p>
+<codep>Days: 16
+Seconds: 10800
+Microseconds: 0</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+<p>A 10800-as eredményt úgy kapjuk, hogy a 3 órát másodpercekké alakítjuk át. A <codel>timedelta</codel> objektum így tárolja a létrehozásakor átadott argumentumokat. A heteket napokra, az órákat és perceket másodpercekre, a milliszekundumokat pedig mikroszekundumokra konvertálja.</p>
+
+
+
+<br>
+<br>
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

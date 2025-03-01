@@ -1,0 +1,131 @@
+<problem chapter='4' section='1' slide='1' problem='5' title='Generators and closures '>
+
+<!--
+Update history:
+2020-10-05 Grzegorz (review, PEP-8 compliance check)
+-->
+
+<code>
+</code>
+
+
+
+<h1>How to build your own generator</h1>
+
+
+<p>What if you need a <strong>generator to produce the first <i>n</i> powers of <i>2</i></strong>?</p>
+
+<p>Nothing easier. Just look at the code below:</p>
+
+<p><codep class="syntax-color copy line-numbers">def powers_of_2(n):
+    power = 1
+    for i in range(n):
+        yield power
+        power *= 2
+
+
+for v in powers_of_2(8):
+    print(v)
+</codep></p>
+
+<p>Can you guess the output? Copy the code to the editor and run it to check your guesses.</p>
+<br>
+
+<p><b>List comprehensions</b></p>
+
+<p>Generators may also be used within <strong>list comprehensions</strong>, just like here:</p>
+
+<codep class="syntax-color copy line-numbers">def powers_of_2(n):
+    power = 1
+    for i in range(n):
+        yield power
+        power *= 2
+
+
+<mark class="mark-background">t = [x for x in powers_of_2(5)]</mark>
+print(t)
+</codep>
+
+<br>
+
+<p>Run the example and check the output.</p>
+
+<br>
+
+<p><b>The <font face="Courier New">list()</font> function</b></p>
+
+<p>The <codel>list()</codel> function can transform a series of subsequent generator invocations into <strong>a real list</strong>:</p>
+
+<codep class="syntax-color copy line-numbers">def powers_of_2(n):
+    power = 1
+    for i in range(n):
+        yield power
+        power *= 2
+
+
+<mark class="mark-background">t = list(powers_of_2(3))</mark>
+print(t)
+</codep> 
+
+<br>
+
+<p>Again, try to predict the output and run the code to check your predictions.</p> 
+
+<br>
+
+<p><b>The <font face="Courier New">in</font> operator</b></p>
+
+<p>Moreover, the context created by the <codel>in</codel> operator allows you to use a generator, too.</p>
+
+<p>The example shows how to do it:</p>
+
+<codep class="syntax-color copy line-numbers">def powers_of_2(n):
+    power = 1
+    for i in range(n):
+        yield power
+        power *= 2
+
+
+for i in range(20):
+    <mark class="mark-background">if i in powers_of_2(4):</mark>
+        print(i)
+</codep> 
+
+<br>
+
+<p>What's the code's output? Run the program and check.</p>
+
+<br>
+
+<p><b>The Fibonacci number generator</b></p>
+
+<p>Now let's see a <strong>Fibonacci number generator</strong>, and ensure that it looks much better than the object-oriented version based on the direct iterator protocol implementation.</p>
+
+<p>Here it is:</p>
+
+<codep class="syntax-color copy line-numbers">def fibonacci(n):
+    p = pp = 1
+    for i in range(n):
+        if i in [0, 1]:
+            yield 1
+        else:
+            n = p + pp
+            pp, p = p, n
+            yield n
+
+fibs = list(fibonacci(10))
+print(fibs)
+</codep>
+
+<br>
+
+<p>Guess the output (a list) produced by the generator, and run the code to check if you're right.</p>
+
+<br>
+<br>
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

@@ -1,0 +1,184 @@
+<problem chapter='2' section='5' slide='1' problem='11' title="LAB: Sudoku">
+
+<!--
+Update history:
+2020-09-23 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+
+<span class="label" style="background-color:rgb(205, 168, 105);"><strong>LAB</strong></span>
+
+<br><br>
+
+
+<h2>Estimated time</h2>
+<p>60-90 minutes</p>
+
+
+<h2>Level of difficulty</h2>
+<p>Hard</p>
+
+
+<h2>Objectives</h2>
+<ul>
+<li>improving the student's skills in operating with strings and lists;</li>
+<li>converting strings into lists.</li>
+</ul>
+
+
+<h2>Scenario</h2>
+<p>As you probably know, <i>Sudoku</i> is a number-placing puzzle played on a 9x9 board. The player has to fill the board in a very specific way:</p>
+
+<ul>
+<li>each row of the board must contain all digits from 0 to 9 (the order doesn't matter)</li>
+<li>each column of the board must contain all digits from 0 to 9 (again, the order doesn't matter)</li>
+<li>each of the nine 3x3 "tiles" (we will name them "sub-squares") of the table must contain all digits from 0 to 9.</li>
+</ul>
+
+
+<p>If you need more details, you can find them <a href="https://en.wikipedia.org/wiki/Sudoku" target="_blank">here</a>.</p>
+
+
+<p>Your task is to write a program which:</p>
+<ul>
+<li>reads 9 rows of the Sudoku, each containing 9 digits (check carefully if the data entered are valid)</li>
+<li>outputs <codel>Yes</codel> if the Sudoku is valid, and <codel>No</codel> otherwise.</li>
+</ul>
+
+
+<p>Test your code using the data we've provided.</p>
+
+<h2>Test data</h2>
+
+
+<p>Sample input:<p>
+<codep>295743861
+431865927
+876192543
+387459216
+612387495
+549216738
+763524189
+928671354
+154938672</codep>
+
+
+<p>Sample output:</p>
+<codep>Yes</codep>
+<br>
+
+<br>
+
+<p>Sample input:<p>
+<codep>195743862
+431865927
+876192543
+387459216
+612387495
+549216738
+763524189
+928671354
+254938671</codep>
+
+<p>Sample output:</p>
+<codep>No</codep>
+<br>
+
+
+<hint>
+# A function that checks whether a list passed as an argument contains
+# nine digits from '1' to '9'.
+def checkset(digs):
+    return sorted(list(digs)) == [chr(x + ord('0')) for x in range(1, 10)]
+
+
+# A list of rows representing the sudoku.
+rows = [ ]
+for r in range(9):
+
+ok = True
+
+# Check if all rows are good.
+for r in range(9):
+
+
+# Check if all columns are good.
+if ok:
+    for c in range(9):
+
+
+# Check if all sub-squares (3x3) are good.
+if ok:
+    for r in range(0, 9, 3):
+
+
+# Print the final verdict.
+if ok:
+    print("Yes")
+else:
+    print("No")
+
+</hint>
+
+
+<sampleSolution>
+# A function that checks whether a list passed as an argument contains
+# nine digits from '1' to '9'.
+def checkset(digs):
+    return sorted(list(digs)) == [chr(x + ord('0')) for x in range(1, 10)]
+
+
+# A list of rows representing the sudoku.
+rows = [ ]
+for r in range(9):
+    ok = False
+    while not ok:
+        row = input("Enter row #" + str(r + 1) + ": ")
+        ok = len(row) == 9 or row.isdigit()
+        if not ok:
+            print("Incorrect row data - 9 digits required")
+    rows.append(row)
+
+ok = True
+
+# Check if all rows are good.
+for r in range(9):
+    if not checkset(rows[r]):
+        ok = False
+        break
+
+# Check if all columns are good.	
+if ok:
+    for c in range(9):
+        col = []
+        for r in range(9):
+            col.append(rows[r][c])
+        if not checkset(col):
+            ok = False
+            break
+
+# Check if all sub-squares (3x3) are good.
+if ok:
+    for r in range(0, 9, 3):
+        for c in range(0, 9, 3):
+            sqr = ''
+            # Make a string containing all digits from a sub-square.
+            for i in range(3):
+                sqr += rows[r+i][c:c+3]
+            if not checkset(list(sqr)):
+                ok = False
+                break
+
+# Print the final verdict.
+if ok:
+    print("Yes")
+else:
+    print("No")
+
+</sampleSolution>
+
+<studyMode>false</studyMode>
+<labMode>true</labMode>
+
+
+</problem>

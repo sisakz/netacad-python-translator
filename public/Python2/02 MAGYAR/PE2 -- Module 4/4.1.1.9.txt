@@ -1,0 +1,103 @@
+<problem chapter='4' section='1' slide='1' problem='9' title='Generátor és closure'>
+
+<!--
+Update history:
+2020-10-05 Grzegorz (review, PEP-8 compliance check)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h1>A <font face="Courier New">lambda</font> függvény</h1>
+
+
+<p>A <codel>lambda</codel>függvény a matematikából, pontosabban a <i>Lambda-kalkulusz</i>, szakterületéről kölcsönvett fogalom, de ez a két jelenség nem ugyanaz.</p>
+
+<p>A matematikusok a<i> Lambda-kalkuluszt</i> számos formális rendszerben használják, amelyek a logikával, a rekurzióval vagy a tételek bizonyíthatóságával kapcsolatosak. A programozók a <codel>lambda</codel>-függvényt a kód egyszerűsítésére, áttekinthetőbbé és könnyebben érthetővé tételére használják.</p>
+
+<p>A <codel>lambda</codel> függvény egy név nélküli függvény (nevezhetjük <strong>névtelen függvénynek</strong> is). Természetesen egy ilyen kijelentés azonnal felveti a kérdést: hogyan használunk bármit, ami nem azonosítható?</p>
+
+<p>Szerencsére ez nem probléma, hiszen – ha nagyon kell – elnevezhetünk egy ilyen függvényt, de valójában sok esetben a <codel>lambda</codel> függvény úgy is létezhet és működhet, hogy közben teljesen inkognitóban marad.</p>
+
+<p>A <codel>lambda</codel> függvény deklarációja semmiben sem hasonlít egy normál függvénydeklarációra - nézd csak:</p>
+
+<codep>lambda paraméterek: kifejezés
+
+</codep>
+<br>
+
+<p>Egy ilyen utasítás <strong>a kifejezés értékét adja vissza, amiben figyelembe vesszi a <codel>lambda</codel> paraméter aktuális értékét</strong>.</p>
+
+<p>Szokás szerint egy példa segíthet. A példánkban három, névvel ellátott <codel>lambda</codel> függvény szerepel. Nézzük meg alaposabban:</p>
+
+<codep class="syntax-color copy line-numbers">two = lambda: 2
+sqr = lambda x: x * x
+pwr = lambda x, y: x ** y
+
+for a in range(-2, 3):
+    print(sqr(a), end=" ")
+    print(pwr(a, two()))
+</codep>
+
+
+
+
+<br> 
+<br>
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+
+<p>Elemezzük csak:</p>
+
+<ul>
+    <li>az első <codel>lambda</codel> egy névtelen <strong>paraméter nélküli függvény</strong> amely mindig <codel>2</codel>-t ad vissza. Mivel <strong>hozzárendeltük egy <codel>two</codel> nevű változóhoz</strong>, mondhatjuk, hogy a függvény már nem névtelen, és ezt a nevet használhatjuk a meghívásához is.</li>
+<br>
+
+<li>a második egy <strong>egyparaméteres anonim függvény</strong> amely a paraméterül kapott szám négyzetét adja vissza. Ezt is elneveztük a funkciójának megfelelően.</li>
+<br>
+
+<li>a harmadik <codel>lambda</codel> <strong> két paramétert kap</strong> és az első paraméter értékét a második paraméter[-edik] hatványra emelve kapott számot adja vissza. A <codel>lambda</codel> hordozó változó neve magáért beszél. Kerüljük a <codel>pow</codel> használatát, így nem tévesztjük össze az azonos nevű és célú beépített függvénnyel.</li>
+<br>
+</ul>
+
+<p>A program a következő kimenetet adja eredményül:</p>
+
+<codep>4 4
+1 1
+0 0
+1 1
+4 4</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+<p>Ez a példa elég világosan megmutatja, hogyan kell deklarálni a <codel>lambda</codel> függvényeket, és azok hogyan viselkednek. Ugyanakkor semmit sem mond arról, hogy miért van rájuk szükség, és mire használjuk őket, hiszen bármelyik helyettesíthető lenne "hagyományos" Python függvényekkel.</p>
+
+<p>Akkor mi az előnyük?</p>
+
+<br>
+<br>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

@@ -1,0 +1,41 @@
+<problem chapter='4' section='5' slide='1' problem='14' title='The datetime and time modules (continued)'>
+
+<!--
+Update history:
+2020-03-30 Sebastian (first version)
+2020-10-12 Grzegorz (file creation, review, PEP-8 compliance check)
+-->
+
+<code>from datetime import datetime
+
+dt = datetime(2020, 10, 4, 14, 55)
+print("Timestamp:", dt.timestamp())
+
+</code>
+
+
+
+<h1>Getting a timestamp</h1>
+
+
+<p>There are many converters available on the Internet that can calculate a timestamp based on a given date and time, but how can we do it in the <codel>datetime</codel> module?</p>
+
+<p>This is possible thanks to the <codel>timestamp</codel> method provided by the <codel>datetime</codel> class. Look at the code in the editor.</p>
+
+<p>Result:</p>
+
+<codep>Timestamp: 1601823300.0</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+<p>The <codel>timestamp</codel> method returns a float value expressing the number of seconds elapsed between the date and time indicated by the <i>datetime</i> object and January 1, 1970, 00:00:00 (UTC).</p>
+
+
+
+<br>
+<br>
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

@@ -1,0 +1,53 @@
+<problem chapter='4' section='4' slide='1' problem='5' title='Az os modul'>
+
+<!--
+Update history:
+2020-03-30 Sebastian (first version)
+2020-10-08 Grzegorz (review, PEP-8 compliance check)
+-->
+
+<code>import os
+
+os.makedirs("my_first_directory/my_second_directory")
+os.chdir("my_first_directory")
+print(os.getcwd())
+os.chdir("my_second_directory")
+print(os.getcwd())
+
+</code>
+
+
+
+<h1>Hol vagyunk most?</h1>
+
+
+<p>Már tudod, hogyan hozz létre könyvtárakat, és hogyan mozogj közöttük. Néha, amikor egy igazán nagy könyvtárstruktúrában navigálsz, előfordulhat, hogy nem tudod, éppen melyik könyvtárban dolgozol.</p>
+
+<br>
+<center><img src="/uploads/media/default/0001/02/83ab8d8cfb449367a7bb349a63730cb219770c2e.png" alt="Lost programmer" width="70%"></center>
+<br><br>
+
+    <p>Ahogy valószínűleg már kitaláltad, az <i>os</i> modul tartalmaz egy olyan függvényt, amely az aktuális munkakönyvtárról ad vissza információkat. A függvény neve <codel>getcwd</codel>. LNézd meg a kódot a szerkesztőablakban, így használhatod a gyakorlatban.</p>
+
+<p>Eredmény:</p>
+
+<codep>.../my_first_directory
+.../my_first_directory/my_second_directory</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+
+<p>A példában létrehozzuk a <i>my_first_directory</i> könyvtárat, és azon belül a <i>my_second_directory</i> könyvtárat. A következő lépésben az aktuális munkakönyvtárat a <i>my_first_directory</i> könyvtárra változtatjuk, majd megjelenítjük az aktuális munkakönyvtárat (az eredmény első sora).</p>
+
+<p>Ezután a <i>my_second_directory</i> könyvtárba megyünk, és ismét megjelenítjük az aktuális munkakönyvtárat (az eredmény második sora). Mint látható, a <i>getcwd</i> függvény a könyvtárak abszolút elérési útvonalát adja vissza.</p>
+
+<p><b>MEGJEGYZÉS:</b> Unix-hoz hasonló rendszereken a <i>getcwd</i> függvény megfelelője a <i>pwd</i> parancs, amely kiírja az aktuális munkakönyvtár nevét.</p>
+
+
+<br>
+<br>
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

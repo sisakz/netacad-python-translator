@@ -1,0 +1,87 @@
+<problem chapter='3' section='2' slide='1' problem='3' title='A short journey from procedural to object approach'>
+
+<!--
+Update history:
+2020-09-30 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h1>The stack – the procedural approach vs. the object-oriented approach</h1>
+
+<p>The procedural stack is ready. Of course, there are some weaknesses, and the implementation could be improved in many ways (harnessing exceptions to work is a good idea), but in general the stack is fully implemented, and you can use it if you need to.</p>
+
+<p>But the more often you use it, the more disadvantages you'll encounter. Here are some of them:</p>
+
+<ul>
+<li>the essential variable (the stack list) is highly <strong>vulnerable</strong>; anyone can modify it in an uncontrollable way, destroying the stack, in effect; this doesn't mean that it's been done maliciously – on the contrary, it may happen as a result of carelessness, e.g., when somebody confuses variable names; imagine that you have accidentally written something like this:
+<br><br>
+<codep class="syntax-color">stack[0] = 0
+</codep>
+<br>
+
+The functioning of the stack will be completely disorganized;</li>
+<br>
+
+<li>it may also happen that one day you need more than one stack; you'll have to create another list for the stack's storage, and probably other <codel>push</codel> and <codel>pop</codel> functions too;</li>
+<br>
+<li>it may also happen that you need not only <codel>push</codel> and <codel>pop</codel> functions, but also some other conveniences; you could certainly implement them, but try to imagine what would happen if you had dozens of separately implemented stacks.</li>
+</ul>
+
+
+
+
+
+
+<br> 
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+<p>The object-oriented approach delivers solutions for each of these problems. Let's name them first:</p>
+
+<ul>
+<li>the ability to hide (protect) selected values against unauthorized access is called <strong>encapsulation; the encapsulated values can be neither accessed nor modified if you want to use them exclusively</strong>;</li><br>
+
+<li>when you have a class implementing all the needed stack behaviors, you can produce as many stacks as you want; you needn't copy or replicate any part of the code;</li><br>
+
+<li>the ability to enrich the stack with new functions comes from inheritance; you can create a new class (a subclass) which inherits all the existing traits from the superclass, and adds some new ones.</li>
+</ul>
+
+<center><img class="lightbox" src="/uploads/media/default/0001/01/00f7cd2f53aecda61072500eac63095453d5fb08.png" alt="The stack – procedural vs. object approach" width="80%"></center>
+<br><br>
+ 
+
+<p>Let's now write a brand new stack implementation from scratch. This time, we'll use the object approach, guiding you step by step into the world of object-oriented programming.</p>
+
+
+
+
+
+<br>
+<br>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

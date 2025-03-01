@@ -1,0 +1,105 @@
+<problem chapter='3' section='5' slide='1' problem='5' title='OOP alapok: Öröklés'>
+
+<!--
+Update history:
+2020-10-01 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>class Vehicle:
+    pass
+
+
+class LandVehicle(Vehicle):
+    pass
+
+
+class TrackedVehicle(LandVehicle):
+    pass
+
+
+my_vehicle = Vehicle()
+my_land_vehicle = LandVehicle()
+my_tracked_vehicle = TrackedVehicle()
+
+for obj in [my_vehicle, my_land_vehicle, my_tracked_vehicle]:
+    for cls in [Vehicle, LandVehicle, TrackedVehicle]:
+        print(isinstance(obj, cls), end="\t")
+    print()
+
+</code>
+
+
+
+<h1>Öröklõdés: <font face="Courier New">isinstance()</font></h1>
+
+<p>Mint már tudod, <strong>az objektum egy osztály megtestesülése</strong>. Ez azt jelenti, hogy az objektum olyan, mint egy sütemény, amelyet az osztályon belül található recept alapján sütöttek.</p>
+
+<p>Ez néhány fontos kérdést vethet fel.</p>
+
+<p>Tegyük fel, hogy van egy tortánk (pl. a függvényednek átadott argumentumként). Szeretnénk tudni, hogy milyen recept alapján készült. Miért? Mert tudni akarjuk, hogy mit várhatunk tõle, pl. hogy tartalmaz-e dióféléket vagy sem, ami egyesek számára döntõ fontosságú információ.</p>
+
+<p>Hasonlóképpen fontos lehet, hogy az objektum rendelkezik-e (vagy nem rendelkezik) bizonyos tulajdonságokkal. Más szóval, <strong>hogy egy bizonyos osztályba tartozó objektumról van-e szó vagy sem</strong>.</p>
+
+<p>Ezt a tényt az <codel>isinstance()</codel> nevû függvénnyel lehet felismerni:</p>
+
+<codep class="syntax-color">isinstance(objectName, ClassName)
+</codep>
+<br>
+
+<p>A függvény <font face="Courier New">True</font> értéket ad vissza, ha az objektum az osztály példánya, vagy <font face="Courier New">False</font> értéket, ha nem.</p>
+
+<p><strong>Egy osztály példánya azt jelenti, hogy az objektumot (a süteményt) az osztályban vagy annak valamelyik szuperosztályában található recept alapján készítették el</strong>.</p>
+
+<p>Ne felejtsük el: ha egy alosztály legalább olyan felszereltséget tartalmaz, mint bármelyik szuperosztálya, az azt jelenti, hogy az alosztály objektumai ugyanazt tudják tenni, mint a szuperosztályból származtatott objektumok, vagyis az alosztály a saját osztályának és bármelyik szuperosztályának példánya.</p>
+
+<p>Teszteljük le! Elemezzük a kódot a szerkesztõben!</p>
+
+<p>Három objektumot hoztunk létre, egyet-egyet minden osztályhoz. Ezután két egymásba ágyazott ciklus segítségével az összes lehetséges objektum-osztály párost ellenõrizzük, hogy kiderüljön, <strong>hogy az objektumok az osztályok példányai-e</strong>.</p>
+
+<p>Futassuk a kódot.</p>
+
+<p>Ezt kapjuk:</p>
+
+<codep>True	False	False	
+True	True	False	
+True	True	True	</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+<p>Tegyük az eredményt ismét olvashatóbbá:</p>
+
+<table>
+<thead><tr>
+
+<th>&darr; egy példánya a &rarr;</th> <th>Vehicle</th> <th>LandVehicle</th> <th>TrackedVehicle</th>
+
+</tr></thead>
+
+<tbody><tr>
+
+<td><strong>my_vehicle</strong></td> <td><font face="Courier New">True</font></td> <td><font face="Courier New">False</font></td> <td><font face="Courier New">False</font></td>
+
+</tr>
+
+<tr>
+
+<td><strong>my_land_vehicle</strong></td> <td><font face="Courier New">True</font></td> <td><font face="Courier New">True</font></td> <td><font face="Courier New">False</font></td>
+
+</tr>
+
+<tr>
+
+<td><strong>my_tracked_vehicle</strong></td> <td><font face="Courier New">True</font></td> <td><font face="Courier New">True</font></td> <td><font face="Courier New">True</font></td>
+
+</tr></tbody>
+</table>
+
+<p>Megerõsíti a táblázat a várakozásainkat?</p>
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

@@ -1,0 +1,100 @@
+<problem chapter='2' section='7' slide='1' problem='1' title='The anatomy of exceptions'>
+
+<!--
+Update history:
+2020-09-21 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h1>Exceptions</h1>
+
+<p>Python 3 defines <strong>63 built-in exceptions</strong>, and all of them form a <strong>tree-shaped hierarchy</strong>, although the tree is a bit weird as its root is located on top.</p>
+
+<p>Some of the built-in exceptions are more general (they include other exceptions) while others are completely concrete (they represent themselves only). We can say that <strong>the closer to the root an exception is located, the more general (abstract) it is</strong>. In turn, the exceptions located at the branches' ends (we can call them <strong>leaves</strong>) are concrete.</p>
+
+<p>Take a look at the figure:</p>
+
+<img src="/uploads/media/default/0001/01/0ee75473d85349d36925771423976c94c08ddbf1.png" width="80%" alt="Tree-shaped hierarchy of selected exceptions" class="lightbox">
+<br><br>
+
+<p>It shows a small section of the complete exception tree. Let's begin by examining the tree from the <font face="Courier New">ZeroDivisionError</font> leaf.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+
+
+<p>Note:</p>
+
+<ul>
+<li><font face="Courier New">ZeroDivisionError</font> is a special case of a more general exception class named <font face="Courier New">ArithmeticError</font>;</li>
+<li><font face="Courier New">ArithmeticError</font> is a special case of a more general exception class named just <font face="Courier New">Exception</font>;</li>
+<li><font face="Courier New">Exception</font> is a special case of a more general class named <font face="Courier New">BaseException</font>;</li>
+</ul>
+ 
+
+<p>We can describe it in the following way (note the direction of the arrows – they always point to the more general entity):</p>
+
+ 
+<center><p><font face="Courier New" size="+1">BaseException
+<br>
+&uarr;
+<br>
+Exception
+<br>
+&uarr;
+<br>
+ArithmeticError
+<br>
+&uarr;
+<br>
+ZeroDivisionError</font></p></center>
+
+<br>
+
+<p>We're going to show you how this generalization works. Let's start with some really simple code.</p>
+
+
+<br>
+<br>
+
+</div>
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

@@ -1,0 +1,49 @@
+<problem chapter='1' section='2' slide='1' problem='3' title='Useful modules | math'>
+
+<!--
+Update history:
+2020-08-31 Grzegorz (review, PEP-8 compliance check, update)
+2021-06-29 Grzegorz (corrections)
+-->
+
+<code>from math import e, exp, log
+
+print(pow(e, 1) == exp(log(e)))
+print(pow(2, 2) == exp(2 * log(2)))
+print(log(e, e) == exp(0))
+
+</code>
+
+<h1>Selected functions from the <font face="Courier New">math</font> module: continued</h1>
+
+<p>Another group of the <codel>math</codel>'s functions is formed by functions which are connected with <strong>exponentiation</strong>:</p>
+
+<ul>
+<li><codel>e</codel> &rarr; a constant with a value that is an approximation of Euler's number (e)</li>
+<li><codel>exp(x)</codel> &rarr; finds the value of e<sup>x</sup>;</li>
+<li><codel>log(x)</codel> &rarr; the natural logarithm of x</li>
+<li><codel>log(x, b)</codel> &rarr; the logarithm of x to base b</li>
+<li><codel>log10(x)</codel> &rarr; the decimal logarithm of x (more precise than <codel>log(x, 10)</codel>)</li>
+<li><codel>log2(x)</codel> &rarr; the binary logarithm of x (more precise than <codel>log(x, 2)</codel>)</li>
+</ul>
+ 
+
+<p>Note: the <codel>pow()</codel> function:</p>
+
+<ul>
+<li><codel>pow(x, y)</codel> &rarr; finds the value of x<sup>y</sup> (mind the domains)</li>
+</ul>
+ 
+
+<p>This is a built-in function, and doesn't have to be imported.</p>
+
+<p>Look at the code in the editor. Can you predict its output?</p>
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

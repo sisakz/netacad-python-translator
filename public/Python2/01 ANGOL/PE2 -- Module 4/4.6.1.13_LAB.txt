@@ -1,0 +1,85 @@
+<problem chapter='4' section='6' slide='1' problem='13' title="LAB: The calendar module">
+
+<!--
+Update history:
+2020-02-10 Sebastian (first version)
+2020-10-13 Grzegorz (file creation, review, PEP-8 compliance check)
+-->
+
+<code>
+</code>
+
+<span class="label" style="background-color:rgb(205, 168, 105);"><b>LAB</b></span>
+
+<br><br>
+
+<h2>Estimated time</h2>
+<p>30-60 minutes</p>
+
+
+<h2>Level of difficulty</h2>
+<p>Easy</p>
+
+
+<h2>Objectives</h2>
+<ul>
+<li>Improving the student's skills in using the <i>Calendar</i> class.</li>
+</ul>
+
+
+<h2>Scenario</h2>
+<p>During this course, we took a brief look at the <codel>Calendar</codel> class. Your task now is to extend its functionality with a new method called <codel>count_weekday_in_year</codel>, which takes a year and a weekday as parameters, and then returns the number of occurrences of a specific weekday in the year.</p>
+
+<p>Use the following tips:</p>
+
+<ul>
+<li>Create a class called <codel>MyCalendar</codel> that extends the <codel>Calendar</codel> class;</li>
+<li>create the <codel>count_weekday_in_year</codel> method with the year and weekday parameters. The weekday parameter should be a value between 0-6, where 0 is Monday and 6 is Sunday. The method should return the number of days as an integer;</li>
+<li>in your implementation, use the <codel>monthdays2calendar</codel> method of the <codel>Calendar</codel> class.</li>
+</ul>
+
+<p>The following are the expected results:</p>
+
+<p><b>Sample arguments</b></p>
+<p><codep>year=2019, weekday=0</codep></p>
+
+<p><b>Expected output</b></p>
+<p><codep>52</codep></p>
+<br>
+
+
+
+<p><b>Sample arguments</b></p>
+<p><codep>year=2000, weekday=6</codep></p>
+
+<p><b>Expected output</b></p>
+<p><codep>53</codep></p>
+<br>
+
+
+<sampleSolution>import calendar
+
+
+class MyCalendar(calendar.Calendar):
+    def count_weekday_in_year(self, year, weekday):
+        current_month = 1
+        number_of_days = 0
+        while (current_month <= 12):
+            for data in self.monthdays2calendar(year, current_month):
+                if data[weekday][0] != 0:
+                    number_of_days = number_of_days + 1
+
+            current_month = current_month + 1
+        return number_of_days
+
+my_calendar = MyCalendar()
+number_of_days = my_calendar.count_weekday_in_year(2019, calendar.MONDAY)
+
+print(number_of_days)
+
+</sampleSolution>
+
+<studyMode>false</studyMode>
+<labMode>true</labMode>
+
+</problem>

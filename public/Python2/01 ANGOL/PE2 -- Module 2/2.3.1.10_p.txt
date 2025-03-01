@@ -1,0 +1,57 @@
+<problem chapter='2' section='3' slide='1' problem='10' title='String methods'>
+
+<!--
+Update history:
+2020-09-23 Grzegorz (review, PEP-8 compliance check, update)
+2021-06-30	Grzegorz (corrections)
+-->
+
+<code>
+# Demonstrating the lstrip() method:
+print("[" + " tau ".lstrip() + "]")
+
+</code>
+
+
+
+<h1>The <font face="Courier New">lstrip()</font> method</h1>
+
+<p>The parameterless version of the <codel>lstrip()</codel> method <strong>returns a newly created string formed from the original one by removing all leading whitespaces</strong>.</p>
+
+<p>Analyze the example code in the editor.</p>
+
+<p>The brackets are not a part of the result – they only show the result's boundaries.<p>
+
+<p>The example outputs:</p>
+
+<codep>[tau ]</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+
+<p>The <strong>one-parameter</strong> version of the <codel>lstrip()</codel> method does the same as its parameterless version, but <strong>removes all characters enlisted in its argument</strong> (a string), not just whitespaces:</p>
+
+<codep class="syntax-color copy">print("www.cisco.com".lstrip("w."))
+</codep>
+<br>
+
+<p>Brackets aren't needed here, as the output looks as follows:</p>
+
+<codep>cisco.com</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+
+<p>Can you guess the output of the snippet below? Think carefully. Run the code and check your predictions.</p>
+
+<codep class="syntax-color copy">print("pythoninstitute.org".lstrip(".org"))
+</codep>
+<br>
+
+<p>Surprised? <strong>Leading</strong> characters, leading whitespaces. Again, experiment with your own examples.</p>
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

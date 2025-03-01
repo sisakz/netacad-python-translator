@@ -1,0 +1,116 @@
+<problem chapter='4' section='6' slide='1' problem='1' title='A calendar modul'>
+
+<!--
+Update history:
+2020-03-30 Sebastian (first version)
+2020-10-12 Grzegorz (file creation, review, PEP-8 compliance check)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h1>Bevezetés a <i>calendar</i> modulba</h1>
+
+
+<p>A <codel>datetime</codel> és <codel>time</codel> modulokon kívül a Python szabványos könyvtárában van egy <codel>calendar</codel> nevû modul, amely, mint a neve is mutatja, <b>naptárral kapcsolatos függvényeket</b> kínál.</p>
+
+<p>Az egyik ilyen természetesen a naptár megjelenítése. Fontos, hogy a hét napjai hétfõtõl vasárnapig jelennek meg, és minden egyes napnak van egész szám formájú megjelenítése:</p>
+
+<table>
+
+<tr>
+<th>A hét napja</th>
+<th>Egész szám érték</th>
+<th>Állandó</th>
+</tr>
+
+<tr>
+<td>Hétfõ</td>
+<td>0</td>
+<td><codel>calendar.MONDAY</codel></td>
+</tr>
+
+<tr>
+<td>Kedd</td>
+<td>1</td>
+<td><codel>calendar.TUESDAY</codel></td>
+</tr>
+
+<tr>
+<td>Szerda</td>
+<td>2</td>
+<td><codel>calendar.WEDNESDAY</codel></td>
+</tr>
+
+<tr>
+<td>Csütörtök</td>
+<td>3</td>
+<td><codel>calendar.THURSDAY</codel></td>
+</tr>
+
+<tr>
+<td>Péntek</td>
+<td>4</td>
+<td><codel>calendar.FRIDAY</codel></td>
+</tr>
+
+<tr>
+<td>Szombat</td>
+<td>5</td>
+<td><codel>calendar.SATURDAY</codel></td>
+</tr>
+
+<tr>
+<td>Vasárnap</td>
+<td>6</td>
+<td><codel>calendar.SUNDAY</codel></td>
+</tr>
+
+</table>
+
+<p>A fenti táblázat a hét napjainak megjelenítését mutatja a <codel>calendar</codel> modulban. A hét elsõ napját (hétfõ) a <i>0</i> érték és a <i>calendar.MONDAY</i> konstans, míg a hét utolsó napját (vasárnap) a <i>6</i> érték és a <i>calendar.SUNDAY</i> konstans jelöli.</p>
+
+
+
+
+<br> 
+<br>
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+<center><img src="/uploads/media/default/0001/02/b7803b762467a1a3d5910cb93726710f60f5756a.png" alt="A snake and a calendar" width="70%"></center>
+
+<br><br>
+
+    <p>A hónapok esetében az egész értékek indexelése 1-tõl kezdõdik, azaz a januárt az 1, a decembert pedig a 12 jelöli. Sajnos nincsenek a hónapokat kifejezõ konstansok.</p>
+
+    <p>A fenti információk hasznosak lesznek, amikor a tanfolyam ezen részében a <codel>calendar</codel> modullal dolgozol, de elõször kezdjük néhány egyszerû naptár példával.</p>
+
+
+<br>
+<br>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

@@ -1,0 +1,67 @@
+<problem chapter='2' section='6' slide='1' problem='6' title="Errors – the programmer's daily bread | try-except">
+
+<!--
+Update history:
+2020-09-21 Grzegorz (review, PEP-8 compliance check, update, title correction)
+-->
+
+<code>
+first_number = int(input("Enter the first number: "))
+second_number = int(input("Enter the second number: "))
+
+try:
+    print(first_number / second_number)
+except:
+    print("This operation cannot be done.")
+
+print("THE END.")
+
+</code>
+
+
+
+<h1>Exceptions: continued</h1>
+
+<p>Look at the code in the editor. This is the favorite Python approach.</p>
+
+<p>Note:</p>
+
+<ul>
+<li>the <codel>try</codel> keyword <strong>begins a block of the code</strong> which may or may not be performing correctly;</li>
+<li>next, Python tries to perform the risky action; if it fails, an exception is raised and Python starts to look for a solution;</li>
+<li>the <codel>except</codel> keyword starts a piece of code which will be <strong>executed if anything inside the <codel>try</codel> block goes wrong</strong> – if an exception is raised inside a previous <codel>try</codel> block, <strong>it will fail here</strong>, so the code located after the except keyword should provide an <strong>adequate reaction</strong> to the raised exception;</li>
+<li>returning to the previous nesting level ends the <strong>try-except</strong> section.</li>
+</ul>
+ 
+
+<p>Run the code and test its behavior.</p>
+
+<br>
+
+<p>Let's summarize this:</p>
+
+<codep class="syntax-color">try:
+    :
+    :
+except:
+    :
+    :
+</codep>
+<br>
+
+<ul>
+<li>in the first step, Python tries to perform all instructions placed between the <codel>try:</codel> and <codel>except:</codel> statements;</li>
+
+<li>if nothing is wrong with the execution and all instructions are performed successfully, the execution jumps to the point after the last line of the <codel>except:</codel> block, and the block's execution is considered complete;</li>
+
+<li>if anything goes wrong inside the <codel>try:</codel> and <codel>except:</codel> block, the execution immediately jumps out of the block and into the first instruction located after the <codel>except:</codel> keyword; this means that some of the instructions from the block may be silently omitted.</li>
+</ul>
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

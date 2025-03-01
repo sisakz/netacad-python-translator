@@ -1,0 +1,60 @@
+<problem chapter='4' section='3' slide='1' problem='1' title='Working with real files'>
+
+<!--
+Update history:
+2020-10-07 Grzegorz (review, PEP-8 compliance check)
+2021-07-07 Grzegorz (code corrections - important!)
+-->
+
+<code>
+# Opening tzop.txt in read mode, returning it as a file object:
+stream = open("tzop.txt", "rt", encoding = "utf-8")
+
+# Printing the contents of the file:
+print(stream.read()) 
+
+</code>
+
+
+
+<h1>Processing text files</h1>
+
+
+<p>In this lesson we're going to prepare a simple text file with some short, simple content.</p>
+
+<p>We're going to show you some basic techniques you can utilize to <strong>read the file contents</strong> in order to process them.</p>
+
+<p>The processing will be very simple – you're going to copy the file's contents to the console, and count all the characters the program has read in.</p>
+
+<p>But remember – our understanding of a text file is very strict. In our sense, it's a plain text file – it may contain only text, without any additional decorations (formatting, different fonts, etc.).</p>
+
+<p>That's why you should avoid creating the file using any advanced text processor like MS Word, LibreOffice Writer, or something like this. Use the very basics your OS offers: Notepad, vim, gedit, etc.</p>
+
+<p>If your text files contain some national characters not covered by the standard ASCII charset, you may need an additional step. Your <codel>open()</codel> function invocation may require an argument denoting specific text encoding.</p>
+
+<p>For example, if you're using a Unix/Linux OS configured to use UTF-8 as a system-wide setting, the <codel>open()</codel> function may look as follows:</p>
+
+<codep class="syntax-color">stream = open('file.txt', 'rt', encoding='utf-8')
+</codep>
+<br>
+
+<p>where the encoding argument has to be set to a value which is a string representing proper text encoding (UTF-8, here).</p>
+
+<p>Consult your OS documentation to find an encoding name adequate to your environment.</p>
+
+<br>
+
+<p><strong><span class="label" style="background-color:orange;">Note</span></strong></p>
+
+<p>For the purposes of our experiments with file processing carried out in this section, we're going to use a pre-uploaded set of files (i.e., <font face="Courier New">tzop.txt</font>, or <font face="Courier New">text.txt</font> files) which you'll be able to work with. If you'd like to work with your own files locally on your machine, we strongly encourage you to do so, and to use IDLE (or any other IDE that you may prefer) to carry out your own tests.</p>
+
+
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

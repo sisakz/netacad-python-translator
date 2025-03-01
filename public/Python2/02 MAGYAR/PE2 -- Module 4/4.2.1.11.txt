@@ -1,0 +1,63 @@
+<problem chapter='4' section='2' slide='1' problem='11' title='Fájlkezelés'>
+
+<!--
+Update history:
+2020-10-07 Grzegorz (review, PEP-8 compliance check)
+2020-10-29 Grzegorz (code correction: print)
+-->
+
+<code>import errno
+
+try:
+    s = open("c:/users/user/Desktop/file.txt", "rt")
+    # Actual processing goes here.
+    s.close()
+except Exception as exc:
+    if exc.errno == errno.ENOENT:
+        print("The file doesn't exist.")
+    elif exc.errno == errno.EMFILE:
+        print("You've opened too many files.")
+    else:
+        print("The error number is:", exc.errno)
+
+</code>
+
+<h1>Fájlobjektumhibák diagnosztizálása (folytatás)</h1>
+
+<p>Ha nagyon gondos programozó vagy, szükségét érezheted a szerkesztőben bemutatott utasítássorozathoz hasonló kód használatának.</p>
+
+
+<p>Szerencsére van egy függvény, amely jelentősen <strong>leegyszerűsítheti a hibakezelést</strong>.</p>
+
+<p>A neve <codel>strerror()</codel>, és az <codel>os</codel> modul része <strong>, egyetlen argumentumot vár - egy hibaszámot</strong>.</p>
+
+<p>Működése egyszerű: megadod a hiba számát, és kapsz egy karakterláncot, amely leírja a hiba jelentését.</p>
+
+
+<p>Megjegyzés: ha nem létező hibakódot kap (olyan számot, amely nem kötődik semmilyen tényleges hibához), a függvény <font face="Courier New">ValueError</font> kivételt fog eredményezni.</p>
+
+<p>Ezúttal a következő módon egyszerűsíthetjük a kódunkat:</p>
+
+<codep class="syntax-color copy line-numbers">from os import strerror
+
+try:
+    s = open("c:/users/user/Desktop/file.txt", "rt")
+    # Actual processing goes here.
+    s.close()
+except Exception as exc:
+    print("The file could not be opened:", strerror(exc.errno))
+</codep>
+
+<br>
+
+<p>Rendben. Itt az ideje, hogy szöveges fájlokkal foglalkozzunk, és megismerkedjünk néhány alapvető technikával, amelyekkel feldolgozhatjuk azokat.</p>
+
+<br>
+<br>
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+<hideConsole>true</hideConsole>
+
+</problem>

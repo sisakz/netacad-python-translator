@@ -1,0 +1,84 @@
+<problem chapter='1' section='3' slide='1' problem='8' title='Modulok és csomagok'>
+
+<!--
+Update history:
+2020-09-08 Grzegorz (review, PEP-8 compliance check, update)
+2021-06-29 Grzegorz (corrections)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h1>Az első csomagod: 5. lépés</h1>
+
+<p>Ne feledjük: <strong> az <font face="Courier New">__init.py__</font> fájl jelenléte szükséges a csomaghoz</strong>.</p>
+
+<img class="lightbox" src="/uploads/media/default/0001/01/169d8c4c52b36259b17549f6be28d48f3768dfc6.png" width="75%" alt="The relationship between modules and the presence of the __init__.py file - tree structure">
+<br><br> 
+
+    <p>Megjegyzés: nem csak a <i>gyökérmappa</i> tartalmazhat <font face="Courier New">__init.py__</font> fájlt – bármelyik almappába (alcsomagba) is elhelyezheted. Ez akkor lehet hasznos, ha egyes alcsomagok egyedi kezelést és speciális típusú inicializálást igényelnek.</p>
+
+ 
+
+    <p>Itt az ideje, hogy válaszoljunk a második kérdésre - a válasz egyszerű: <strong>bárhol</strong>. Csak arról kell gondoskodnod, hogy a Python tudjon a csomag helyéről. Azt már tudod, hogyan kell ezt megtenni.</p>
+
+<p>Készen állsz arra, hogy használd az első csomagodat.</p>
+
+
+
+
+
+
+
+
+<br><br>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<h2>Az első csomagod: 6. lépés</h2>
+
+
+
+<p>Tegyük fel, hogy a munkakörnyezet a következőképpen néz ki:</p>
+
+<img class="lightbox" src="/uploads/media/default/0001/01/e9a8f3fa3dcebbdcc10a46ee4746d0ab66294052.png" width="75%" alt="The relationship between modules, the presence of the __init__.py file, and the access path - the working environment">
+<br><br> 
+
+    <p>Elkészítettünk egy zip fájlt, amely tartalmazza a csomagok fájának összes fájlját. Letöltheted és használhatod a saját kísérleteidhez, de <b>ne feledd, hogy a sémában bemutatott mappába csomagold ki</b>, különben nem lesz elérhető a main fájlban lévő programból.</p>
+
+
+<p>&nbsp;&nbsp;&nbsp;<a href="/uploads/media/default/0001/01/39a03067f85a9b39c0c94ca50b5d445b7df18a04.zip" target="_blank" download="Modules and Packages ZIP file">Modulok és csomagok <span class="label" style="background-color:orange;"><b>letöltése</b></span> ZIP fájl</a></p>
+
+<p>A kísérleteket a <font face="Courier New">main2.py</font> fájl segítségével folytasd!</p>
+
+
+
+
+
+<br>
+<br>
+
+</div>
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

@@ -1,0 +1,49 @@
+<problem chapter='1' section='2' slide='1' problem='12' title='Fontos modulok | platform'>
+
+<!--
+Update history:
+2020-08-31 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>from platform import processor
+
+print(processor())
+
+</code>
+
+<h1>A <font face="Courier New">platform</font> modul fontosabb függvényei (folytatás)</h1>
+
+<p><b>A <font face="Courier New">processor</font> függvény</b></p>
+
+<p>A <codel>processor()</codel> függvény a processzor valódi nevét tartalmazó karakterláncot adja vissza (ha lehetséges).</p>
+
+<p>Ismét három különbözõ platformon futtattuk a mintaprogramot:</p>
+
+<p><strong>Intel x86 + Windows &reg; Vista (32 bit)</strong>:</p>
+
+<codep>x86</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+
+<p><strong>Intel x86 + Gentoo Linux (64 bit)</strong>:</p>
+
+<codep>Intel(R) Core(TM) i3-2330M CPU @ 2.20GHz</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+
+<p><strong>Raspberry PI2 + Raspbian Linux (32 bit)</strong>:</p>
+
+<codep>armv7l</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+
+<p>Teszteld ezt a saját gépeden.</p>
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

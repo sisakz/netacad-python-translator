@@ -1,0 +1,42 @@
+<problem chapter='3' section='6' slide='1' problem='3' title='Exceptions once again'>
+
+<!--
+Update history:
+2020-10-01 Grzegorz (reviewed, PEP-8 compliance check)
+-->
+
+<code>
+try:
+    i = int("Hello!")
+except Exception as e:
+    print(e)
+    print(e.__str__())
+
+</code>
+
+
+
+<h1>Exceptions are classes</h1>
+
+
+<p>All the previous examples were content with detecting a specific kind of exception and responding to it in an appropriate way. Now we're going to delve deeper, and look inside the exception itself.</p>
+
+<p>You probably won't be surprised to learn that <strong>exceptions are classes</strong>. Furthermore, when an exception is raised, an object of the class is instantiated, and goes through all levels of program execution, looking for the except branch that is prepared to deal with it.</p>
+
+<p>Such an object carries some useful information which can help you to precisely identify all aspects of the pending situation. To achieve that goal, Python offers a special variant of the exception clause – you can find it in the editor.</p>
+
+<p>As you can see, the <codel>except</codel> statement is extended, and contains an additional phrase starting with the <codel>as</codel> keyword, followed by an identifier. The identifier is designed to catch the exception object so you can analyze its nature and draw some useful conclusions.</p>
+
+<p>Note: the identifier's scope covers its <codel>except</codel> branch, and doesn't go any further.</p>
+
+<p>The example presents a very simple way of utilizing the received object – just print it out (as you can see, the output is produced by the object's <codel>__str__()</codel> method) and it contains a brief message describing the reason.</p>
+
+<p>The same message will be printed if there is no fitting <codel>except</codel> block in the code, and Python is forced to handle it alone.</p>
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

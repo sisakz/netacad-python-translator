@@ -1,0 +1,73 @@
+<problem chapter='2' section='7' slide='1' problem='3' title='Kivételek'>
+
+<!--
+Update history:
+2020-09-21 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>try:
+    y = 1 / 0
+except ZeroDivisionError:
+    print("Zero Division!")
+except ArithmeticError:
+    print("Arithmetic problem!")
+
+print("THE END.")
+
+</code>
+
+
+
+<h1>Kivételek (folytatás)</h1>
+
+<p>Nézd meg a kódot a szerkesztőben. Mi fog itt történni?</p>
+
+<p>Az első megfelelő ág a <codel>ZeroDivisionError</codel>-t tartalmazó ág. Ez azt jelenti, hogy a konzolon megjelenik:</p>
+
+<codep>Zero division!
+THE END.</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+
+<p>Változtat valamit, ha felcseréljük a két <codel>except</codel> ágat? Pont mint itt lentebb:</p>
+
+<codep class="syntax-color copy line-numbers">try:
+    y = 1 / 0
+except ArithmeticError:
+    print("Arithmetic problem!")
+except ZeroDivisionError:
+    print("Zero Division!")
+
+print("THE END.")
+</codep>
+
+<br>
+
+<p>A változás radikális – a kód kimenete mostantól:</p>
+
+<codep>Arithmetic problem!
+THE END.</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+<p>Miért van az, hogy a felvetett kivétel ugyanaz, mint korábban?</p>
+
+<p>A kivétel ugyanaz, de az általánosabb kivétel mostantól az első helyen szerepel – ez minden nullával való osztást is elkap. Ez azt is jelenti, hogy nincs esély arra, hogy bármelyik kivétel elérje a <font face="Courier New">ZeroDivisionError</font> ágat. Ez az ág így teljesen elérhetetlen.</p>
+
+ 
+<p>Ne feledd:</p>
+
+<ul>
+    <li>az ágak sorrendje számít!</li>
+    <li>ne helyezzünk általánosabb kivételeket a konkrétabbak elé;</li>
+    <li>ez az utóbbit elérhetetlenné és használhatatlanná teszi;</li>
+    <li>ráadásul a kódod rendezetlenné és következetlenné válik;</li>
+    <li>a Python nem ad hibaüzenetet ezzel a problémával kapcsolatban.</li>
+</ul>
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

@@ -1,0 +1,103 @@
+<problem chapter='3' section='2' slide='1' problem='2' title='A short journey from procedural to object approach'>
+
+<!--
+Update history:
+2020-09-30 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>
+stack = []
+
+
+def push(val):
+    stack.append(val)
+
+
+def pop():
+    val = stack[-1]
+    del stack[-1]
+    return val
+
+
+push(3)
+push(2)
+push(1)
+
+print(pop())
+print(pop())
+print(pop())
+
+</code>
+
+
+
+<h1>The stack – the procedural approach</h1>
+
+<p>First, you have to decide how to store the values which will arrive onto the stack. We suggest using the simplest of methods, and <strong>employing a list</strong> for this job. Let's assume that the size of the stack is not limited in any way. Let's also assume that the last element of the list stores the top element.</p>
+
+<p>The stack itself is already created:</p>
+
+<codep class="syntax-color">stack = []
+</codep>
+<br>
+
+<p>We're ready to <strong>define a function that puts a value onto the stack</strong>. Here are the presuppositions for it:</p>
+
+<ul>
+<li>the name for the function is <codel>push</codel>;</li>
+<li>the function gets one parameter (this is the value to be put onto the stack)</li>
+<li>the function returns nothing;</li>
+<li>the function appends the parameter's value to the end of the stack;</li>
+</ul>
+ 
+
+<p>This is how we've done it – take a look:</p>
+
+<codep class="syntax-color">def push(val):
+    stack.append(val)
+</codep>
+<br>
+
+<p>Now it's time for a <strong>function to take a value off the stack</strong>. This is how you can do it:</p>
+
+<ul>
+<li>the name of the function is pop;</li>
+<li>the function doesn't get any parameters;</li>
+<li>the function returns the value taken from the stack</li>
+<li>the function reads the value from the top of the stack and removes it.</li>
+</ul>
+ 
+
+<p>The function is here:</p>
+
+<codep class="syntax-color">def pop():
+    val = stack[-1]
+    del stack[-1]
+    return val
+</codep>
+<br>
+
+ 
+<p>Note: the function doesn't check if there is any element in the stack.</p>
+
+
+<p>Let's assemble all the pieces together to set the stack in motion. The <strong>complete program</strong> pushes three numbers onto the stack, pulls them off, and prints their values on the screen. You can see it in the editor window.</p>
+
+ 
+
+<p>The program outputs the following text to the screen:</p>
+
+<codep>1
+2
+3</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+<p>Test it.</p>
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

@@ -1,0 +1,84 @@
+<problem chapter='3' section='4' slide='1' problem='10' title='OOP: Metódusok'>
+
+<!--
+Update history:
+2020-09-30 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>class MyClass:
+    pass
+
+
+obj = MyClass()
+obj.a = 1
+obj.b = 2
+obj.i = 3
+obj.ireal = 3.5
+obj.integer = 4
+obj.z = 5
+
+
+def incIntsI(obj):
+    for name in obj.__dict__.keys():
+        if name.startswith('i'):
+            val = getattr(obj, name)
+            if isinstance(val, int):
+                setattr(obj, name, val + 1)
+
+
+print(obj.__dict__)
+incIntsI(obj)
+print(obj.__dict__)
+
+</code>
+
+
+
+<h1>Osztályok vizsgálata</h1>
+
+<p>Mit tudhatunk meg az osztályokról Pythonban? A válasz egyszerű - mindent.</p>
+
+<p>Mind a reflexió, mind az önvizsgálat lehetővé teszi a programozó számára, hogy objektummal bármit megtegyen, függetlenül attól, hogy honnan származik.</p>
+
+<p>Elemezzük a kódot a szerkesztőben!</p>
+
+<p>Az <codel>incIntsI()</codel> nevű függvény egy tetszőleges osztályú objektumot kap, átnézi annak tartalmát, hogy megtalálja az összes <font face="Courier New">i</font>-vel kezdődő nevű egészértékű attribútumot, és eggyel növeli értéküket.</p>
+
+<p>Lehetetlen? Egyáltalán nem!</p>
+
+<p>Ez így működik:</p>
+
+<ul>
+    <li>1. sor: definiáljunk egy nagyon egyszerű osztályt...</li>
+
+    <li>3-10. sor: ... feltöltjük néhány attribútummal;</li>
+
+    <li>12. sor: ez a mi függvényünk!</li>
+
+    <li>13. sor: a <codel>__dict__</codel> attribútum átvizsgálása, az összes attribútum nevének keresése;</li>
+
+<li>14. sor: ha egy név <font face="Courier New">i</font>-vel kezdődik...</li>
+
+<li>15. sor: ... használjuk a <codel>getattr()</codel> függvényt az aktuális értékének lekérdezéséhez; megjegyzés: a <codel>getattr()</codel> két argumentumot vesz fel: egy objektumot és a tulajdonság nevét (sztringként), és az aktuális attribútum értékét adja vissza;</li>
+
+<li>16. sor: ellenőrizze, hogy az érték integer típusú-e, erre a célra az <codel>isinstance()</codel> függvényt használja (ezt később tárgyaljuk);</li>
+
+<li>17. sor: ha az ellenőrzés jól sikerült, növeljük a tulajdonság értékét a <codel>setattr()</codel> függvény használatával; a függvény három argumentumot vár: egy objektumot, a tulajdonság nevét (karakterláncként) és a tulajdonság új értékét.</li>
+</ul>
+
+
+<p>A kód kimenete:</p>
+
+<codep>{'a': 1, 'integer': 4, 'b': 2, 'i': 3, 'z': 5, 'ireal': 3.5}
+{'a': 1, 'integer': 5, 'b': 2, 'i': 4, 'z': 5, 'ireal': 3.5}</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+<p>Ez minden!</p>
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

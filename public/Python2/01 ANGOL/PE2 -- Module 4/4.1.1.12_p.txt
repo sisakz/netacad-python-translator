@@ -1,0 +1,49 @@
+<problem chapter='4' section='1' slide='1' problem='12' title='Generators and closures'>
+
+<!--
+Update history:
+2020-10-05 Grzegorz (review, PEP-8 compliance check)
+-->
+
+<code>
+from random import seed, randint
+
+seed()
+data = [randint(-10,10) for x in range(5)]
+filtered = list(filter(lambda x: x > 0 and x % 2 == 0, data))
+
+print(data)
+print(filtered)
+
+</code>
+
+
+
+<h1>Lambdas and the <font face="Courier New">filter()</font> function</h1>
+
+
+<p>Another Python function which can be significantly beautified by the application of a lambda is <codel>filter()</codel>.</p>
+
+<p>It expects the same kind of arguments as <codel>map()</codel>, but does something different – it <strong>filters its second argument while being guided by directions flowing from the function specified as the first argument</strong> (the function is invoked for each list element, just like in <codel>map()</codel>).</p>
+
+<p>The elements which return <codel>True</codel> from the function <strong>pass the filter</strong> – the others are rejected.</p>
+
+<p>The example in the editor shows the <codel>filter()</codel> function in action.</p>
+
+<p>Note: we've made use of the <codel>random</codel> module to initialize the random number generator (not to be confused with the generators we've just talked about) with the <codel>seed()</codel> function, and to produce five random integer values from <codel>-10</codel> to <codel>10</codel> using the <codel>randint()</codel> function.</p>
+
+<p>The list is then filtered, and only the numbers which are greater than zero and even are accepted.</p>
+
+<p>Of course, it's not likely that you'll receive the same results, but this is what our results looked like:</p>
+
+<codep>[6, 3, 3, 2, -7]
+[6, 2]</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

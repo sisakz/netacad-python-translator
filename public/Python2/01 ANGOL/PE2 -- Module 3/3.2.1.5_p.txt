@@ -1,0 +1,69 @@
+<problem chapter='3' section='2' slide='1' problem='5' title='A short journey from procedural to object approach'>
+
+<!--
+Update history:
+2020-09-30 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>class Stack:
+    def __init__(self):
+        self.stack_list = []
+
+
+stack_object = Stack()
+print(len(stack_object.stack_list))
+
+</code>
+
+
+
+<h1>The stack – the object approach: continued</h1>
+
+<p>Any change you make inside the constructor that modifies the state of the <codel>self</codel> parameter will be reflected in the newly created object.</p>
+
+<p>This means you can add any property to the object and the property will remain there until the object finishes its life or the property is explicitly removed.</p>
+
+<p>Now let's <strong>add just one property to the new object</strong> – a list for a stack. We'll name it <codel>stack_list</codel>.</p>
+
+<p>Just like here:</p>
+
+
+<codep class="syntax-color">class Stack:
+    def __init__(self):
+        <mark class="mark-background">self.stack_list = []</mark>
+
+
+stack_object = Stack()
+print(len(stack_object.stack_list))
+</codep>
+<br>
+
+
+<p>Note:</p>
+
+<ul>
+<li>we've used <strong>dot notation</strong>, just like when invoking methods; this is the general convention for accessing an object's properties  you need to name the object, put a dot (<codel>.</codel>) after it, and specify the desired property's name; don't use parentheses! You don't want to invoke a method – you want to <strong>access a property</strong>;</li>
+<li>if you set a property's value for the very first time (like in the constructor), you are creating it; from that moment on, the object has got the property and is ready to use its value;</li>
+<li>we've done something more in the code – we've tried to access the <codel>stack_list</codel> property from outside the class immediately after the object has been created; we want to check the current length of the stack – have we succeeded?</li>
+</ul>
+ 
+
+<p>Yes, we have – the code produces the following output:</p>
+
+<codep>0</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+ 
+
+<p>This is not we want from the stack. We prefer <codel>stack_list</codel> to be <strong>hidden from the outside world</strong>. Is that possible?</p>
+
+<p>Yes, and it's simple, but not very intuitive.</p>
+
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

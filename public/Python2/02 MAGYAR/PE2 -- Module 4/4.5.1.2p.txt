@@ -1,0 +1,75 @@
+<problem chapter='4' section='5' slide='1' problem='2' title='A datetime modul'>
+
+<!--
+Update history:
+2020-03-30 Sebastian (first version)
+2020-10-08 Grzegorz (review, PEP-8 compliance check)
+-->
+
+<code>from datetime import date
+
+today = date.today()
+
+print("Today:", today)
+print("Year:", today.year)
+print("Month:", today.month)
+print("Day:", today.day)
+
+</code>
+
+
+
+<h1>A dátum lekérdezése és dátum objektumok létrehozása</h1>
+
+
+<p>A <codel>datetime</codel> modul által biztosított egyik osztály a <codel>date</codel> osztály. Ennek az osztálynak az objektumai az év, hónap és napból álló dátumot reprezentálják. Nézd meg a kódot a szerkesztőben, hogy lásd, hogyan néz ki a gyakorlatban. A <codel>today</codel> metódus segítségével megkapjuk az aktuális helyi dátumot.</p>
+
+<p>Futtasd a kódot, hogy lásd, mi történik.</p>
+
+<p><p>A <codel>today</codel> metódus egy <codel>date</codel> objektumot ad vissza, amely az aktuális helyi dátumot reprezentálja. Vedd észre, hogy a <codel>date</codel> objektumnak három attribútuma van: <i>year</i> (év), <i>month</i> (hónap), és <i>day</i> (nap).</p>
+
+   <p>Légy óvatos, ezek az attribútumok csak olvashatóak. Egy <codel>date</codel> objektum létrehozásához a <i>year</i>, a <i>month</i> és a <i>day</i> paramétereket a következőképpen kell átadni:</p>
+
+<p><codep class="syntax-color copy">from datetime import date
+
+my_date = date(2019, 11, 4)
+print(my_date)
+</codep></p>
+
+<p>Futtasd a példát, hogy lásd, mi történik.</p>
+
+<p>A <i>date</i> objektum létrehozásakor tartsd szem előtt a következő korlátozásokat:</p>
+
+<table>
+<tr>
+<th>Paraméter</th>
+<th>Korlátozások</th>
+</tr>
+
+<tr>
+<td><codel>year</codel></td>
+<td><p>A <i>year</i> (év) paraméternek 1-nél (MINYEAR konstans) nagyobbnak vagy egyenlőnek és 9999-nél (MAXYEAR konstans) kisebbnek vagy egyenlőnek kell lennie.</p></td>
+</tr>
+
+<tr>
+<td><codel>month</codel></td>
+<td><p>A <i>month</i> (hónap) paraméternek 1-nél nagyobb vagy egyenlőnek és 12-nél kisebb vagy egyenlőnek kell lennie.</p></td>
+</tr>
+
+<tr>
+<td><codel>day</codel></td>
+<td><p>A <i>day</i> (nap) paraméternek nagyobb vagy egyenlőnek kell lennie 1-nél, és kisebb vagy egyenlőnek kell lennie az év adott hónapjának utolsó napjánál.</p></td>
+</tr>
+</table>
+
+<p><b>Megjegyzés:</b> A tanfolyam későbbi részében megtanuljuk, hogyan változtathatod meg az alapértelmezett dátumformátumot.</p>
+
+
+<br>
+<br>
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

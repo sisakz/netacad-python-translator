@@ -1,0 +1,42 @@
+<problem chapter='3' section='5' slide='1' problem='2' title='OOP alapok: Öröklés'>
+
+<!--
+Update history:
+2020-10-01 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>class Star:
+    def __init__(self, name, galaxy):
+        self.name = name
+        self.galaxy = galaxy
+
+    def __str__(self):
+        return self.name + ' in ' + self.galaxy
+
+
+sun = Star("Sun", "Milky Way")
+print(sun)
+
+</code>
+
+
+
+<h1>Öröklés - miért és hogyan?</h1>
+
+<p>Amikor a Python azt szeretné, hogy bármely osztály/objektum karakterláncként jelenjen meg (a <codel>print()</codel> függvényhívásba argumentumként beletett objektum esetén), megpróbál egy <codel>__str__()</codel> nevű metódust meghívni az objektumból, és az általa visszaadott karakterláncot használni.</p>
+
+<p>Az alapértelmezett <codel>__str__()</codel> metódus a korábban mutatott karakterláncot adja vissza – bizony csúnya és nem túl informatív. Ezt egyszerűen megváltoztathatjuk, ha <strong>definiálunk egy saját metódust ezen a néven</strong>...</p>
+
+<p>Épp most tettük meg - nézd meg a kódot a szerkesztőben!</p>
+
+<p>Ez az új <codel>__str__()</codel> metódus a csillagok és galaxisok nevéből álló karakterláncot állít elő - semmi különös, de a kimeneti eredménye most már jobban néz ki, nem igaz?</p>
+
+<p>Ki tudod találni a kimenetet? Futtasd a kódot, majd ellenőrizd, igazad volt-e!</p>
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

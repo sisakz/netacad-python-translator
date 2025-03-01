@@ -1,0 +1,51 @@
+<problem chapter='4' section='5' slide='1' problem='18' title='The datetime and time modules (continued)'>
+
+<!--
+Update history:
+2020-03-30 Sebastian (first version)
+2020-10-12 Grzegorz (file creation, review, PEP-8 compliance check)
+-->
+
+<code>from datetime import datetime
+print(datetime.strptime("2019/11/04 14:53:00", "%Y/%m/%d %H:%M:%S"))
+
+</code>
+
+
+
+<h1>The <font face="Courier New">strptime()</font> method</h1>
+
+<p>Knowing how to create a format can be helpful when using a method called <codel>strptime</codel> in the <codel>datetime</codel> class. Unlike the <codel>strftime</codel> method, it creates a <codel>datetime</codel> object from a string representing a date and time.</p>
+
+<p>The <codel>strptime</codel> method requires you to specify the format in which you saved the date and time. Let's see it in an example. Take a look at the code in the editor.</p>
+
+<p>Result:</p>
+
+<codep>2019-11-04 14:53:00</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+
+<p>In the example, we've specified two required arguments. The first is a date and time as a string: <codel>"2019/11/04 14:53:00"</codel>, while the second is a format that facilitates parsing to a <codel>datetime</codel> object. Be careful, because if the format you specify doesn't match the date and time in the string, it'll raise a <i>ValueError</i>.</p>
+
+<p><b>Note:</b> In the <codel>time</codel> module, you can find a function called <codel>strptime</codel>, which parses a string representing a time to a <i>struct_time</i> object. Its use is analogous to the <codel>strptime</codel> method in the <codel>datetime</codel> class:</p>
+
+<p><codep class="syntax-color copy">import time
+print(time.strptime("2019/11/04 14:53:00", "%Y/%m/%d %H:%M:%S"))
+</codep></p>
+
+<p>Its result will be as follows:</p>
+
+<codep>time.struct_time(tm_year=2019, tm_mon=11, tm_mday=4, tm_hour=14, tm_min=53, tm_sec=0, tm_wday=0, tm_yday=308, tm_isdst=-1)</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+
+
+
+<br>
+<br>
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

@@ -1,0 +1,69 @@
+<problem chapter='4' section='1' slide='1' problem='11' title='Generators and closures'>
+
+<!--
+Update history:
+2020-10-05 Grzegorz (review, PEP-8 compliance check)
+-->
+
+<code>list_1 = [x for x in range(5)]
+list_2 = list(map(lambda x: 2 ** x, list_1))
+print(list_2)
+
+for x in map(lambda x: x * x, list_2):
+    print(x, end=' ')
+print()
+
+</code>
+
+
+
+<h1>Lambdas and the <font face="Courier New">map()</font> function</h1>
+
+
+<p>In the simplest of all possible cases, the <codel>map()</codel> function:</p>
+
+<p><codep class="syntax-color">map(function, list)
+</codep></p>
+
+<p>takes two arguments:</p>
+
+<ul>
+<li>a function;</li>
+<li>a list.</li>
+</ul>
+
+
+
+<p>The above description is extremely simplified, as:</p>
+
+<ul>
+<li>the second <codel>map()</codel> argument may be any entity that can be iterated (e.g., a tuple, or just a generator)</li>
+<li><codel>map()</codel> can accept more than two arguments.</li>
+</ul>
+
+<p>The <strong><codel>map()</codel> function applies the function passed by its first argument to all its second argument's elements, and returns an iterator delivering all subsequent function results</strong>.</p>
+
+<p>You can use the resulting iterator in a loop, or convert it into a list using the <codel>list()</codel> function.</p>
+
+<p>Can you see a role for any lambda here?</p>
+
+<p>Look at the code in the editor – we've used two lambdas in it.</p>
+
+<p>This is the intrigue:</p>
+
+<ul>
+<li>build the <codel>list_1</codel> with values from <codel>0</codel> to <codel>4</codel>;</li>
+<li>next, use <codel>map</codel> along with the first <codel>lambda</codel> to create a new list in which all elements have been evaluated as <codel>2</codel> raised to the power taken from the corresponding element from <codel>list_1</codel>;</li>
+<li><codel>list_2</codel> is printed then;</li>
+<li>in the next step, use the <codel>map()</codel> function again to make use of the generator it returns and to directly print all the values it delivers; as you can see, we've engaged the second <codel>lambda</codel> here – it just squares each element from <codel>list_2</codel>.</li>
+</ul>
+
+<p>Try to imagine the same code without lambdas. Would it be any better? It's unlikely.</p>
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

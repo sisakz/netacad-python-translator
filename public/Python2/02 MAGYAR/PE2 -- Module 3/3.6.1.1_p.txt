@@ -1,0 +1,56 @@
+<problem chapter='3' section='6' slide='1' problem='1' title='Bővebben a kivételekről'>
+
+<!--
+Update history:
+2020-10-01 Grzegorz (reviewed, PEP-8 compliance check)
+-->
+
+<code>
+def reciprocal(n):
+    try:
+        n = 1 / n
+    except ZeroDivisionError:
+        print("Division failed")
+        return None
+    else:
+        print("Everything went fine")
+        return n
+
+
+print(reciprocal(2))
+print(reciprocal(0))
+
+</code>
+
+
+
+<h1>Bővebben a kivételekről</h1>
+
+
+<p>Az objektum orientált programozás tárgyalása nagyon jó alkalmat kínál arra, hogy visszatérjünk a kivételekre. A Python kivételek objektív jellege nagyon rugalmas eszközzé teszi őket, amely képes alkalmazkodni az egyedi igényekhez, még azokhoz is, amelyekről még nem is tudunk.</p>
+
+<p>Mielőtt belemerülnénk a <strong>kivételek objektumtengerébe</strong>, szeretnénk bemutatni néhány szintaktikai és szemantikai aspektust, ahogyan a Python kezeli a try-except blokkot, mivel ez egy kicsit többet nyújt, mint amit eddig bemutattunk.</p>
+
+<p>Az első funkció, amiről itt beszélni szeretnénk, egy további, lehetséges elágazás, amelyet a <i>try-except</i> blokkban (vagy inkább közvetlenül mögötte) helyezhetünk el - ez a kód <codel>else</codel>-el kezdődő része - ahogy a szerkesztőben lévő példában is láthatod.</p>
+<br>
+
+<p>Az így címkézett kód akkor (és csak akkor) hajtódik végre, ha a <codel>try:</codel> részen belül nem történt kivétel. Azt mondhatjuk, hogy a <codel>try:</codel> után pontosan egy elágazás hajtható végre: vagy az <codel>except</codel> kezdetű (ne felejtsük el, hogy több ilyen ág is lehet), vagy az <codel>else</codel> kezdetű.</p>
+
+<p>Megjegyzés: az <codel>else:</codel> ágnak az utolsó <codel>except</codel> ág után kell elhelyezkednie.</p>
+
+<p>A példakód a következő kimenetet eredményezi:</p>
+
+<codep>Everything went fine
+0.5
+Division failed
+None</codep>
+
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

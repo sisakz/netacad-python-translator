@@ -1,0 +1,90 @@
+<problem chapter='2' section='8' slide='1' problem='4' title="LAB: Egészek beolvasása">
+
+<!--
+Update history:
+2020-09-21 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>def read_int(prompt, min, max):
+    #
+    # Write your code here.
+    #
+
+
+v = read_int("Enter a number from -10 to 10: ", -10, 10)
+
+print("The number is:", v)
+
+</code>
+
+
+<span class="label" style="background-color:rgb(205, 168, 105);"><b>LABORGYAKORLAT</b></span>
+
+<br><br>
+
+<h2>Becsült idő</h2>
+<p>15-25 perc</p>
+
+<h2>Nehézségi szint</h2>
+<p>Közepes</p>
+
+<h2>Célok</h2>
+<ul>
+    <li>a tanuló függvények definiálásában való jártasságának javítása;</li>
+    <li>kivételek használata a biztonságos beviteli környezet biztosítása érdekében.</li>
+</ul>
+
+
+<h2>Forgatókönyv</h2>
+<p>A feladatod, hogy írj egy olyan <strong>függvényt, amely képes egész értékeket bevinni és ellenőrizni, hogy azok egy megadott tartományon belül vannak-e</strong>.</p>
+
+<p>A függvénynek:</p>
+
+<ul>
+    <li>három argumentumot kell elfogadnia: egy kérést, egy alsó határértéket és egy felső határértéket;</li>
+    <li>ha a felhasználó olyan karakterláncot ad meg, amely nem egész szám, a függvénynek az <codel>Error: wrong input</codel>üzenetet kell kiadnia, és meg kell kérnie a felhasználót, hogy adja meg újra az értéket;</li>
+    <li>ha a felhasználó olyan számot ad meg, amely kívül esik a megadott tartományon, a függvénynek az <codel>Error: the value is not within permitted range (min..max)</codel> üzenetet kell kiadnia, és meg kell kérnie a felhasználót, hogy adja meg újra az értéket;</li>
+    <li>ha a bemeneti érték érvényes, akkor eredményként kell visszaadnia azt.</li>
+</ul>
+
+
+
+<h2>Tesztadatok</h2>
+
+<p>Alaposan teszteld a kódot.</p>
+<p>A függvénynek így kell reagálnia a felhasználó bevitelére:</p>
+
+<codep>Enter a number from -10 to 10: 100
+Error: the value is not within permitted range (-10..10)
+Enter a number from -10 to 10: asd
+Error: wrong input
+Enter number from -10 to 10: 1
+The number is: 1</codep>
+
+<br>
+
+<studyMode>false</studyMode>
+<labMode>true</labMode>
+
+
+<sampleSolution>def read_int(prompt, min, max):
+    ok = False
+    while not ok:
+        try:
+            value = int(input(prompt))
+            ok = True
+        except ValueError:
+            print("Error: wrong input")
+        if ok:
+            ok = value >= min and value <= max
+        if not ok:
+            print("Error: the value is not within permitted range (" + str(min) + ".." + str(max) + ")")
+    return value;
+
+
+v = read_int("Enter a number from -10 to 10: ", -10, 10)
+
+print("The number is:", v)
+</sampleSolution>
+
+</problem>

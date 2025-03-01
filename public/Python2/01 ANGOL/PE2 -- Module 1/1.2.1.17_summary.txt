@@ -1,0 +1,141 @@
+<problem chapter='1' section='2' slide='1' problem='17' title='SECTION SUMMARY'>
+
+<!--
+Update history:
+2020-08-31 Sysio (first version)
+2020-09-28 Grzegorz (reviewed)
+2021-06-29 Grzegorz (corrections)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<h1>Key takeaways</h1>
+
+<br/>
+
+
+<p>1. A function named <codel>dir()</codel> can show you a list of the entities contained inside an imported module. For example:</p>
+
+<codep class="syntax-color copy">import os
+dir(os)
+</codep>
+<br/>
+<p>prints out the list of all the <codel>os</codel> module facilities you can use in your code.</p>
+<br/>
+
+
+<p>2. The <codel>math</codel> module couples more than 50 symbols (functions and constants) that perform mathematical operations (like <codel>sine()</codel>, <codel>pow()</codel>, <codel>factorial()</codel>) or providing important values (like <b>&#960;</b> and the Euler symbol <b>e</b>).</p>
+<br/>
+
+
+<p>3. The <codel>random</codel> module groups more than 60 entities designed to help you use pseudo-random numbers. Don't forget the prefix "pseudo", as there is no such thing as a real random number when it comes to generating them using the computer's algorithms.</p>
+<br/>
+
+<p>4. The <codel>platform</codel> module contains about 70 functions which let you dive into the underlaying layers of the OS and hardware. Using them allows you to learn more about the environment in which your code is executed.</p>
+<br/>
+
+<p>5. The <b>Python Module Index</b> (<a href="https://docs.python.org/3/py-modindex.html" target="_blank">https://docs.python.org/3/py-modindex.html</a> is a community-driven directory of modules available in the Python universe. If you want to find a module fitting your needs, start your search there.</p>
+<br/>
+
+</div>
+
+<div class="small-12 large-6 columns">
+
+<br/>
+
+
+<p><strong>Exercise 1</strong></p>
+<p>What is the expected value of the <codel>result</codel> variable after the following code is executed?</p>
+<codep>import math
+result = math.e == math.exp(1)
+
+</codep>
+<br/>
+
+<button class="button tiny" onclick="solution('sol1')">Check</button>
+
+<p id="sol1" style="display: none;">
+<codep>True</codep>
+</p>
+
+<script>
+function solution (id) {
+    var element = document.getElementById(id);
+    
+if (element.style.display === "none") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
+    }
+}
+</script>
+
+<br/>
+
+
+
+<p><strong>Exercise 2</strong></p>
+<p>(Complete the sentence) Setting the generator's seed with the same value each time your program is run guarantees that...</p>
+
+
+<button class="button tiny" onclick="solution('sol2')">Check</button>
+
+<p id="sol2" style="display: none;">
+... the pseudo-random values emitted from the <codel>random</codel> module will be exactly the same.
+</p>
+
+
+
+<br/><br/>
+
+
+
+
+<p><strong>Exercise 3</strong></p>
+<p>Which of the <codel>platform</codel> module's functions will you use to determine the name of the CPU running inside your computer?</p>
+
+
+<button class="button tiny" onclick="solution('sol3')">Check</button>
+
+<p id="sol3" style="display: none;">
+The <codel>processor()</codel> function
+</p>
+
+
+
+<br/><br/>
+
+
+<p><strong>Exercise 4</strong></p>
+<p>What is the expected output of the following snippet?</p>
+<codep>import platform
+
+print(len(platform.python_version_tuple()))
+
+</codep>
+<br/>
+
+<button class="button tiny" onclick="solution('sol4')">Check</button>
+
+<p id="sol4" style="display: none;">
+<codep>3</codep>
+</p>
+
+
+<br/>
+
+<br/>
+
+</div>
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

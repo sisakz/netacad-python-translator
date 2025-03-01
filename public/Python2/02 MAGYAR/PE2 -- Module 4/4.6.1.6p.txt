@@ -1,0 +1,39 @@
+<problem chapter='4' section='6' slide='1' problem='6' title='A calendar modul'>
+
+<!--
+Update history:
+2020-03-30 Sebastian (first version)
+2020-10-12 Grzegorz (file creation, review, PEP-8 compliance check)
+-->
+
+<code>import calendar
+print(calendar.weekheader(2))
+
+</code>
+
+<h1>A <font face="Courier New">weekheader()</font> függvény</h1>
+
+<p>Bizonyára észrevetted, hogy a naptár heti címsorokat tartalmaz rövidített formában. Ha szükséges, a hétköznapok rövidített neveit a <codel>weekheader</codel> metódussal kaphatod meg.</p>
+
+<p>A <codel>weekheader</codel> metódusnak meg kell adni a hét egy napjának szélességét karakterekben. Ha a megadott szélesség nagyobb, mint 3, akkor is a napok három karakterbõl álló rövidített nevét adja vissza a függvény.</p>
+
+<p>Nézd meg, hogyan kaphatunk kisebb fejlécet. Futtasd le a kódot a szerkesztõablakban.</p>
+
+<p>Eredmény:</p>
+
+<codep>Mo Tu We Th Fr Sa Su</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+<p><b>Megjegyzés:</b> Ha megváltoztatod a hét elsõ napját, például a <codel>setfirstweekday</codel> függvény használatával, az hatással lesz a <codel>weekheader</codel> függvény eredményére is.</p>
+
+
+
+
+<br>
+<br>
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

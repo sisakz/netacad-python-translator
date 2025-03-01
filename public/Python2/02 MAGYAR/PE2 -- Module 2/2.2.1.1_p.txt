@@ -1,0 +1,58 @@
+<problem chapter='2' section='2' slide='1' problem='1' title='Karakterláncok'>
+
+<!--
+Update history:
+2020-09-22	Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code># Example 1
+
+word = 'by'
+print(len(word))
+
+
+# Example 2
+
+empty = ''
+print(len(empty))
+
+
+# Example 3
+
+i_am = 'I\'m'
+print(len(i_am))
+
+</code>
+
+
+
+<h1>Karakterláncok - rövid áttekintés</h1>
+
+<p>Tekintsük át röviden a Python karakterláncainak természetét.</p>
+
+<p>Először is, a Python karakterláncai (vagy egyszerűen csak karakterláncok, mivel más nyelvek karakterláncairól nem fogunk beszélni) <strong>megváltoztathatatlan szekvenciák</strong>.</p>
+
+<p>Ezt fontos megjegyezni, mert ez azt jelenti, hogy ismerős viselkedésre számíthatsz tőlük.</p>
+
+<p>Elemezzük a kódot a szerkesztőben, hogy megértsük, miről beszélünk:</p>
+
+
+<ul>
+    <li>Nézd meg az <strong>1. példát</strong>. A karakterláncokhoz használt <codel>len()</codel>függvény az argumentumok által tartalmazott karakterek számát adja vissza. A kódrészlet <codel>2</codel>-t ad vissza.</li>
+
+    <li>Bármilyen karakterlánc lehet üres. Ekkor a hossza <codel>0</codel> – akárcsak a <strong>2. példa</strong>.</li>
+
+
+    <li>Ne feledd, hogy az escape karakterként használt backslash (<codel>\</codel>) nem számít bele a karakterlánc teljes hosszába. A <strong>3. példában</strong> szereplő kód tehát <codel>3</codel>-at ad vissza.</li>
+</ul>
+
+<p>Futtasd le a három példakódot és ellenőrizd!</p>
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

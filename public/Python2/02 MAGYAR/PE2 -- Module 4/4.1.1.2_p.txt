@@ -1,0 +1,134 @@
+<problem chapter='4' section='1' slide='1' problem='2' title='Generátor és closure'>
+
+<!--
+Update history:
+2020-10-05 Grzegorz (review, PEP-8 compliance check)
+-->
+
+<code>class Fib:
+    def __init__(self, nn):
+        print("__init__")
+        self.__n = nn
+        self.__i = 0
+        self.__p1 = self.__p2 = 1
+
+    def __iter__(self):
+        print("__iter__")
+        return self
+
+    def __next__(self):
+        print("__next__")		
+        self.__i += 1
+        if self.__i > self.__n:
+            raise StopIteration
+        if self.__i in [1, 2]:
+            return 1
+        ret = self.__p1 + self.__p2
+        self.__p1, self.__p2 = self.__p2, ret
+        return ret
+
+
+for i in Fib(10):
+    print(i)
+
+</code>
+
+
+
+<h1>Generátorok - Hol találhatók? (folytatás)</h1>
+
+
+<p>Az <strong>iterátor protokoll leírja, ahogy egy objektumnak viselkednie kell, hogy megfeleljen a <codel>for</codel> és <codel>in</codel> utasítások kontextusa által előírt szabályoknak</strong>.  Az iterátor protokollnak megfelelő objektumot <strong>iterátornak</strong> nevezzük.</p>
+
+<p>Egy iterátornak két metódust kell megvalósítania:</p>
+
+<ul>
+    <li><codel>__iter__()</codel> amelynek <strong>vissza</strong> kell <strong>adnia magát az objektumot</strong> és amelyet egyszer hívunk meg (ez szükséges ahhoz, hogy a Python sikeresen elindítsa az iterációt).</li>
+
+    <li><codel>__next__()</codel> amely a kívánt sorozat <strong>következő értékét</strong>  (első, második, stb.) hivatott <strong>visszaadni</strong> - a <codel>for</codel>/<codel>in</codel> utasítások hívják meg a következő iteráció átadásához; ha nincs több érték, a metódusnak a <strong><codel>StopIteration</codel> kivételt</strong> kell <strong>eredményeznie</strong>.</li>
+</ul>
+
+ 
+<p>Furcsán hangzik? Egyáltalán nem. Nézd meg a kódot a szerkesztőablakban.</p> 
+
+ 
+<p>Létrehoztunk egy olyan osztályt, amely képes végigmenni a Fibonacci-számok első <codel>n</codel> értékén (ahol <codel>n</codel> egy konstruktor paraméter).</p>
+
+<p>Emlékezz vissza - a Fibonacci-számokat (Fib<sub>i</sub>) a következőképpen definiáltuk:
+
+<p>Fib<sub>1</sub> = 1
+<br>Fib<sub>2</sub> = 1
+<br>Fib<sub>i</sub> = Fib<sub>i-1</sub> + Fib<sub>i-2</sub></p>
+
+ 
+<p>Más szóval:</p>
+
+<ul>
+    <li>az első két Fibonacci-szám egyenlő 1-gyel;</li>
+    <li>bármely más Fibonacci-szám az előző két szám összege (pl.:  Fib<sub>3</sub> = 2, Fib<sub>4</sub> = 3, Fib<sub>5</sub> = 5, és így tovább)</li>
+</ul>
+
+
+
+<p>Nézzük meg a kódot:</p>
+
+<ul>
+    <li>2-6. sor: az osztály konstruktora kiír egy üzenetet (ezt fogjuk használni az osztály viselkedésének nyomon követésére), előkészít néhány változót (<codel>__n</codel> a sorozat elemszámának tárolására, <codel>__i</codel> az aktuális Fibonacci-szám nyomon követésére, és <codel>__p1</codel> a <codel>__p2</codel>-vel együtt a két előző Fibonacci-szám elmentésére);</li>
+<br>
+
+<li>8-10. sor: az <codel>__iter__</codel> metódusnak vissza kell adnia magát az iterátor objektumot; a célja itt talán kissé félreérthető, de nincs benne semmi titok; próbáljunk meg elképzelni egy olyan objektumot, amely nem iterátor (pl.: néhány elem gyűjteménye), de az egyik összetevője egy iterátor, amely képes a gyűjtemény átvizsgálására; az <codel>__iter__</codel> metódusnak <strong>ki kell vennie az iterátort, és rábízni az iterációs protokoll végrehajtását</strong>; mint látható, a metódus egy üzenet kiírásával kezdi a műveletet;</li>
+<br>
+
+<li>12-21. sor: a <codel>__next__</codel>metódus a szekvencia létrehozásáért felel; kissé szószátyár, de ez olvashatóbbá teszi; először kiír egy üzenetet, majd frissíti a sorozat következő elemének indexét, és ha a szekvencia végére ér, a metódus megszakítja az iterációt a StopIteration kivétel kiváltásával; a kód többi része egyszerű, és pontosan tükrözi a korábban bemutatott definíciót;</li>
+<br>
+
+<li>A 24. és 25. sorok használják az iterátort.</li>
+<br>
+</ul>
+
+ 
+<p>A kód kimenete a következő:</p>
+
+<codep>__init__
+__iter__
+__next__
+1
+__next__
+1
+__next__
+2
+__next__
+3
+__next__
+5
+__next__
+8
+__next__
+13
+__next__
+21
+__next__
+34
+__next__
+55
+__next__</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+
+<p>Vedd észre:</p>
+
+<ul>
+    <li>az iterátor objektumot kell először példányosítani;</li>
+    <li>ezután a Python meghívja az <codel>__iter__</codel> metódust, hogy hozzáférjen a tényleges iterátorhoz;</li>
+    <li>a <codel>__next__</codel> metódust tizenegyszer hívjuk meg - az első tíz alkalommal hasznos értékeket kapunk, míg a tizenegyedik megszakítja az iterációt.</li>
+</ul>
+
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

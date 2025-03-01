@@ -1,0 +1,32 @@
+<problem chapter='2' section='3' slide='1' problem='13' title='Karakterlánc tagfüggvények'>
+
+<!--
+Update history:
+2020-09-23 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>
+# Demonstrating the rstrip() method:
+print("[" + " upsilon ".rstrip() + "]")
+print("cisco.com".rstrip(".com"))
+
+</code>
+
+
+
+<h1>A <font face="Courier New">rstrip()</font> tagfüggvény</h1>
+
+<p>Az <codel>rstrip()</codel> tagfüggvény két változata majdnem ugyanazt teszi, mint az <codel>lstrip</codel>, de a <strong>karakterlánc ellentétes oldalára hat</strong>.</p>
+
+<p>Nézd meg a példa kódot a szerkesztőben! Ki tudod találni a kimenetét? Futtasd le a kódot, hogy ellenőrizd a tippedet!</p>
+
+
+<p>Mint mindig, bátorítunk, hogy kísérletezz saját példáiddal!</p>
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

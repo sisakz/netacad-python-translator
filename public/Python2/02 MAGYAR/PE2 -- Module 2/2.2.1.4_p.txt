@@ -1,0 +1,42 @@
+<problem chapter='2' section='2' slide='1' problem='4' title='Karakterláncok'>
+
+<!--
+Update history:
+2020-09-22 Grzegorz (review, PEP-8 compliance check, update, variable name change)
+-->
+
+<code># Demonstrating the ord() function.
+
+char_1 = 'a'
+char_2 = ' '  # space
+
+print(ord(char_1))
+print(ord(char_2))
+
+</code>
+
+
+
+<h1>Műveletek karakterláncokon: <font face="Courier New">ord()</font></h1>
+
+<p><strong>Ha egy adott karakter ASCII/UNICODE kódpontjának értékét </strong>szeretnénk <strong>megtudni</strong>, használhatjuk az <codel>ord()</codel> (mint <i>ordinal</i>) nevű függvényt.</p>
+
+<p>A függvénynek <strong>egy egykarakteres karakterláncra</strong> van szüksége <strong>argumentumként</strong> (ennek a követelménynek a megszegése <font face="Courier New">TypeError</font> kivételt okoz), és az argumentum kódpontját jelző számot adja vissza.</p>
+
+ 
+<p>Nézd meg a kódot a szerkesztőben, és futtasd le! A kódrészlet kimenete:</p>
+
+<codep>97
+32</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+<p>Most adjunk különböző értékeket a <codel>char_1</codel> és <codel>char_2</codel> karakterláncnak, pl. <codel>&alpha;</codel> (görög alfa) és <codel>&#281;</codel> (a lengyel ábécé egy betűje); majd futtassuk le a kódot, és nézzük meg, milyen eredményt ad. Végezd el a saját kísérleteidet.</p>
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

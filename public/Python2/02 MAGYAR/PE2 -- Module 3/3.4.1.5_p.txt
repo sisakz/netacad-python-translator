@@ -1,0 +1,50 @@
+<problem chapter='3' section='4' slide='1' problem='5' title='OOP: Metódusok'>
+
+<!--
+Update history:
+2020-09-30 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>
+class Classy:
+    varia = 1
+    def __init__(self):
+        self.var = 2
+
+    def method(self):
+        pass
+
+    def __hidden(self):
+        pass
+
+
+obj = Classy()
+
+print(obj.__dict__)
+print(Classy.__dict__)
+
+</code>
+
+
+
+<h1>Az osztályok és objektumok belső élete</h1>
+
+<p>Minden Python osztály és minden Python objektum rendelkezik egy sor hasznos attribútummal, amelyek segítségével megvizsgálhatjuk a képességeit.</p>
+
+<p>Az egyiket már ismerjük - ez a <codel>__dict__</codel> tulajdonság.</p>
+
+<p>Figyeld meg, hogyan kezeli a metódusokat - nézzük meg a kódot a szerkesztőben.</p>
+
+<p>Futtassuk le, hogy lássuk, mit ad eredményül! Alaposan vizsgáljuk meg a kimenetet.</p>
+
+<p>Keresd meg az összes definiált metódust és attribútumot! Keresd meg a kontextust, amelyben léteznek: az objektumon vagy az osztályon belül!</p>
+
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

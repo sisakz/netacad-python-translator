@@ -1,0 +1,104 @@
+<problem chapter='1' section='4' slide='1' problem='13' title='A pip használata'>
+
+<!--
+Update history:
+2020-09-25	Grzegorz (created)
+2021-06-29	Grzegorz (corrections)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<h1>A <i>pip</i> használata (folytatás)</h1>
+
+
+<p>Feltételezve, hogy a keresés sikeres volt (vagy egy már ismert nevű csomagot szeretnél telepíteni), a pip segítségével telepítheted a csomagot a számítógépedre.</p>
+
+<p>Most két lehetséges forgatókönyv valósulhat meg:</p>
+
+<ul>
+    <li>egy új csomagot csak magad számára szeretnél telepíteni - a számítógépeden létező más felhasználók (fiókok) számára nem lesz elérhető; ez az eljárás az egyetlen lehetőség, ha nem rendelkezel rendszergazdai jogokkal</li>
+
+    <li>úgy döntöttél, hogy egy új csomagot telepítesz az egész rendszerre - rendszergazdai jogokkal rendelkezel, és nem félsz használni azokat.</li>
+</ul>
+
+
+<p>E két művelet megkülönböztetésére a pip egy külön <codel>--user</codel> nevű opciót használ (figyeljük meg a kettős kötőjelet). Ennek az opciónak a jelenléte arra utasítja a pip-et, hogy helyileg a (nem adminisztrátori) felhasználó nevében cselekedjen.</p>
+
+<p>Ha ezt nem teszed hozzá, a pip feltételezi, hogy rendszergazda vagy, és ha mégsem, akkor semmit sem fog tenni, hogy kijavítsa a hibát.</p>
+
+<p>Esetünkben egy pygame nevű csomagot fogunk telepíteni - ez egy kiterjesztett és összetett könyvtár, amely lehetővé teszi a programozók számára, hogy számítógépes játékokat fejlesszenek Python segítségével.</p>
+
+<p>A projektet 2000 óta fejlesztik, tehát egy kiforrott és megbízható kódrészről van szó. Ha többet szeretnél megtudni a projektről és az azt fejlesztő közösségről, látogass el a <a href="https://www.pygame.org" target="_blank">https://www.pygame.org</a> oldalra.</p>
+
+<p>Ha rendszergazda vagy, a pygame-et a következő paranccsal telepítheted:</p>
+
+<p><codep class="syntax-color">pip install pygame
+</codep></p>
+
+
+
+
+<br>
+<br> 
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+<p>Ha nem vagy rendszergazda, vagy nem akarod felhizlalni az operációs rendszeredet a pygame rendszerszintű telepítésével, akkor telepítheted csak magadnak:</p>
+
+<p><codep class="syntax-color">pip install --user pygame
+</codep></p>
+
+<p>Tőled függ, hogy a fenti eljárások közül melyiket szeretnéd elvégezni.</p>
+
+<center><img class="lightbox" src="/uploads/media/default/0001/02/81e227dd62808e8800ca2258b00d8a97fc89c4eb.png" width="95%" alt="pip install --user pygame"></center>
+<br>
+
+<p>A pip szokása, hogy a telepítés előrehaladását jelző díszes szöveges animációt jelenít meg, ezért nézd figyelmesen a képernyőt - nehogy lemaradj a show-ról! Ha a folyamat sikeres, valami ilyesmit fogsz látni:</p>
+
+
+
+<p>Javasoljuk, hogy használd ezt:</p>
+
+<p><codep class="syntax-color">pip show pygame
+</codep></p>
+
+<p>és</p>
+
+<p><codep class="syntax-color">pip list
+</codep></p>
+
+<p>hogy több információt kapj arról, hogy mi is történt valójában.</p>
+
+
+
+
+
+
+
+<br>
+<br>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

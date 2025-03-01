@@ -1,0 +1,103 @@
+<problem chapter='4' section='1' slide='1' problem='9' title='Generators and closures'>
+
+<!--
+Update history:
+2020-10-05 Grzegorz (review, PEP-8 compliance check)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h1>The <font face="Courier New">lambda</font> function</h1>
+
+
+<p>The <codel>lambda</codel> function is a concept borrowed from mathematics, more specifically, from a part called <i>the Lambda calculus</i>, but these two phenomena are not the same.</p>
+
+<p>Mathematicians use <i>the Lambda calculus</i> in many formal systems connected with logic, recursion, or theorem provability. Programmers use the <codel>lambda</codel> function to simplify the code, to make it clearer and easier to understand.</p>
+
+<p>A <codel>lambda</codel> function is a function without a name (you can also call it <strong>an anonymous function</strong>). Of course, such a statement immediately raises the question: how do you use anything that cannot be identified?</p>
+
+<p>Fortunately, it's not a problem, as you can name such a function if you really need, but, in fact, in many cases the <codel>lambda</codel> function can exist and work while remaining fully incognito.</p>
+
+<p>The declaration of the <codel>lambda</codel> function doesn't resemble a normal function declaration in any way - see for yourself:</p>
+
+<codep>lambda parameters: expression
+
+</codep>
+<br>
+
+<p>Such a clause <strong>returns the value of the expression when taking into account the current value of the current <codel>lambda</codel> argument</strong>.</p>
+
+<p>As usual, an example will be helpful. Our example uses three <codel>lambda</codel> functions, but gives them names. Look at it carefully:</p>
+
+<codep class="syntax-color copy line-numbers">two = lambda: 2
+sqr = lambda x: x * x
+pwr = lambda x, y: x ** y
+
+for a in range(-2, 3):
+    print(sqr(a), end=" ")
+    print(pwr(a, two()))
+</codep>
+
+
+
+
+<br> 
+<br>
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+
+<p>Let's analzye it:</p>
+
+<ul>
+<li>the first <codel>lambda</codel> is an anonymous <strong>parameterless function</strong> that always returns <codel>2</codel>. As we've <strong>assigned it to a variable named <codel>two</codel></strong>, we can say that the function is not anonymous anymore, and we can use the name to invoke it.</li>
+<br>
+
+<li>the second one is a <strong>one-parameter anonymous function</strong> that returns the value of its squared argument. We've named it as such, too.</li>
+<br>
+
+<li>the third <codel>lambda</codel> <strong>takes two parameters</strong> and returns the value of the first one raised to the power of the second one. The name of the variable which carries the <codel>lambda</codel> speaks for itself. We don't use <codel>pow</codel> in order to avoid confusion with the built-in function of the same name and the same purpose.</li>
+<br>
+</ul>
+
+<p>The program produces the following output:</p>
+
+<codep>4 4
+1 1
+0 0
+1 1
+4 4</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+<p>This example is clear enough to show how <codel>lambda</codel>s are declared and how they behave, but it says nothing about why they're necessary, and what they're used for, since they can all be replaced with routine Python functions.</p>
+
+<p>Where is the benefit?</p>
+
+<br>
+<br>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

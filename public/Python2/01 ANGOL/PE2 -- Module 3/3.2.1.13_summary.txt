@@ -1,0 +1,137 @@
+<problem chapter='3' section='2' slide='1' problem='13' title='SECTION SUMMARY'>
+
+<!--
+Update history:
+2020-09-30 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<!--
+Update history:
+2020-09-04 Sławek (first version)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<h1>Key takeaways</h1>
+
+<br>
+
+
+<p>1. A <b>stack</b> is an object designed to store data using the <b>LIFO</b> model. The stack usually performs at least two operations, named <b>push()</b> and <b>pop()</b>.</p>
+<br>
+
+<p>2. Implementing the stack in a procedural model raises several problems which can be solved by the techniques offered by <b>OOP</b> (<b>O</b>bject <b>O</b>riented <b>P</b>rogramming):</p>
+<br>
+
+<p>3. A class <b>method</b> is actually a function declared inside the class and able to access all the class's components.</p>
+<br>
+
+<p>4. The part of the Python class responsible for creating new objects is called the <b>constructor</b>, and it's implemented as a method of the name <codel>__init__</codel>.</p>
+<br>
+
+<p>5. Each class method declaration must contain at least one parameter (always the first one) usually referred to as <codel>self</codel>, and is used by the objects to identify themselves.</p>
+<br>
+
+<p>6. If we want to hide any of a class's components from the outside world, we should start its name with <codel>__</codel>. Such components are called <b>private</b>.</p>
+
+<br>
+
+
+</div>
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+<script>
+function solution (id) {
+    var element = document.getElementById(id);
+    
+if (element.style.display === "none") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
+    }
+}
+</script>
+
+
+<p><strong>Exercise 1</strong></p>
+<p>Assuming that there is a class named <codel>Snakes</codel>, write the very first line of the <codel>Python</codel> class declaration, expressing the fact that the new class is actually a subclass of Snake.</p>
+
+<button class="button tiny" onclick="solution('sol')">Check</button>
+
+<p id="sol" style="display: none;">
+<codep class="syntax-color copy">class Python(Snakes):
+</codep>
+</p>
+
+<br><br>
+
+
+
+
+
+<p><strong>Exercise 2</strong></p>
+<p>Something is missing from the following declaration – what? </p>
+<codep>class Snakes
+    def __init__():
+        self.sound = 'Sssssss'
+
+</codep>
+<br>
+
+
+<button class="button tiny" onclick="solution('sol2')">Check</button>
+<p id="sol2" style="display: none;">The <codel>__init__()</codel> constructor lacks the obligatory parameter (we should name it <codel>self</codel> to stay compliant with the standards).</p>
+
+
+
+<br><br>
+
+
+
+
+<p><strong>Exercise 3</strong></p>
+<p>Modify the code to guarantee that the <codel>venomous</codel> property is private.</p>
+<codep>class Snakes
+    def __init__(self):
+        self.venomous = True
+		
+</codep>
+<br>
+
+<button class="button tiny" onclick="solution('sol3')">Check</button>
+
+<p id="sol3" style="display: none;">
+The code should look as follows:<br><br>
+<codep>class Snakes
+    def __init__(self):
+        self.__venomous = True
+
+</codep>
+</p>
+
+
+
+<br>
+<br>
+
+
+</div>
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>
+

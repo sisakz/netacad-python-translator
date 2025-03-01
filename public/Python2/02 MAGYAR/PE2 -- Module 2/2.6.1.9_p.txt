@@ -1,0 +1,78 @@
+<problem chapter='2' section='6' slide='1' problem='9' title="Hibák – a programozók mindennapi kenyere | try-except">
+
+<!--
+Update history:
+2020-09-21 Grzegorz (review, PEP-8 compliance check, update, title correction)
+-->
+
+<code>
+try:
+    x = int(input("Enter a number: "))
+    y = 1 / x
+    print(y)
+except ZeroDivisionError:
+    print("You cannot divide by zero, sorry.")
+except ValueError:
+    print("You must enter an integer value.")
+except:
+    print("Oh dear, something went wrong...")
+
+print("THE END.")
+
+</code>
+
+
+
+<h1>Kivételek (folytatás)</h1>
+
+<p>Nézd meg a kódot a szerkesztőben. A megoldásunk ott van.</p>
+
+<p>A kód futtatásakor a következő négy lehetséges kimenet egyikét kapod:</p>
+
+<ul>
+    <li>
+        ha egy érvényes, nem nulla egész szám értéket (pl. <codel>5</codel>)adsz meg, akkor azt mondja:
+        <br><br>
+        <codep>
+            0.2
+            THE END.
+        </codep>
+        <p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+    </li>
+
+<li>ha <codel>0</codel>-t írsz be, azt mondja:
+<br><br>
+<codep>You cannot divide by zero, sorry.
+THE END.</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+</li>
+
+<li>
+    ha bármilyen nem egész számú karakterláncot írsz be, akkor a következőt látod:
+    <br><br>
+    <codep>
+        You must enter an integer value.
+        THE END.
+    </codep>
+    <p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+</li>
+
+<li>
+    (helyileg a gépeden) ha megnyomod a Ctrl-C billentyűt, miközben a program a felhasználó bevitelére vár (ami egy <font face="Courier New">KeyboardInterrupt</font> nevű kivételt okoz), a program azt mondja:
+    <br><br>
+
+    <codep>
+        Oh dear, something went wrong...
+        THE END.
+    </codep>
+    <p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+</li>
+</ul>
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

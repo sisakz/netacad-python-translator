@@ -1,0 +1,75 @@
+<problem chapter='3' section='5' slide='1' problem='6' title='OOP alapok: Öröklés'>
+
+<!--
+Update history:
+2020-10-01 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>class SampleClass:
+    def __init__(self, val):
+        self.val = val
+
+
+object_1 = SampleClass(0)
+object_2 = SampleClass(2)
+object_3 = object_1
+object_3.val += 1
+
+print(object_1 is object_2)
+print(object_2 is object_3)
+print(object_3 is object_1)
+print(object_1.val, object_2.val, object_3.val)
+
+string_1 = "Mary had a little "
+string_2 = "Mary had a little lamb"
+string_1 += "lamb"
+
+print(string_1 == string_2, string_1 is string_2)
+
+</code>
+
+
+
+<h1>Öröklődés: az <font face="Courier New">is</font> operátor</h1>
+
+<p>Van egy Python-operátor, amelyet érdemes még megemlíteni, mivel közvetlenül objektumokra utal - lássuk:</p>
+
+<codep class="syntax-color">object_one <mark class="mark-background">is</mark> object_two
+</codep>
+<br>
+
+<p><strong>Az <codel>is</codel> operátor ellenőrzi, hogy két változó (itt az <codel>object_one</codel> és az <codel>object_two</codel>) ugyanarra az objektumra utal-e</strong>.</p>
+
+<p>Ne felejtsük el, hogy a <strong>változók nem magukat az objektumokat tárolják, hanem csak a Python belső memóriájára mutatnak</strong>.</p>
+
+<p>Egy objektumváltozó értékének egy másik változóhoz való hozzárendelése nem másolja az objektumot, hanem csak a mutatóját. Ezért lehet nagyon hasznos egy olyan operátor, mint az <codel>is</codel> bizonyos körülmények között.</p>
+
+<p>Nézzük meg a kódot a szerkesztőben. Elemezzük ki:</p>
+
+<ul>
+    <li> van egy nagyon egyszerű osztály, amely egy egyszerű konstruktorral van felszerelve, csak egy tulajdonságot hoz létre. Az osztály két objektum példányosítására szolgál. Az előbbit ezután egy másik változóhoz rendeljük, és annak <codel>val</codel> tulajdonságát eggyel növeljük.</li>
+
+    <li> ezt követően az <codel>is</codel> operátor háromszor kerül alkalmazásra az összes lehetséges objektumpár ellenőrzésére, és az összes <codel>val</codel> tulajdonság értéke is kiírásra kerül.</li>
+
+    <li> a kód utolsó része egy másik kísérletet hajt végre. Három hozzárendelés után mindkét karakterlánc ugyanazokat a szövegeket tartalmazza, de <strong>ezek a szövegek különböző objektumokban vannak tárolva</strong>.</li>
+</ul>
+
+<p>A kód eredménye:</p>
+
+<codep>False
+False
+True
+1 2 1
+True False</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+<p>Az eredmények azt bizonyítják, hogy az <codel>object_1</codel> és az <codel>object_3</codel> valójában ugyanazok az objektumok, míg <codel>string_1</codel> és a <codel>string_2</codel> nem, annak ellenére, hogy tartalmuk azonos.</p>
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

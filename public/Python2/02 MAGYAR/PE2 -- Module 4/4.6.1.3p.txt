@@ -1,0 +1,36 @@
+<problem chapter='4' section='6' slide='1' problem='3' title='A calendar modul'>
+
+<!--
+Update history:
+2020-03-30 Sebastian (first version)
+2020-10-12 Grzegorz (file creation, review, PEP-8 compliance check)
+-->
+
+<code>import calendar
+print(calendar.month(2020, 11))
+
+</code>
+
+<h1>Naptár egy adott hónapra</h1>
+
+<p>A <codel>calendar</codel> modul rendelkezik egy <codel>month</codel> nevű függvénnyel, amely lehetővé teszi egy adott hónap naptárának megjelenítését. Használata nagyon egyszerű, csak az évet és a hónapot kell megadnod - nézd meg a kódot a szerkesztőablakban.</p>
+
+<p>A példa a 2020. novemberi naptárat jeleníti meg. A <codel>calendar</codel> függvényhez hasonlóan az alapértelmezett formázást a következő paraméterekkel módosíthatod:</p>
+
+<ul>
+    <li><codel>w</codel> – dátum oszlopszélessége (alapértelmezett 2)</li>
+    <li><codel>l</codel> – a hetek megjelenítése közötti sorköztávolság (alapértelmezett 1)</li>
+</ul>
+
+<p><b>Megjegyzés:</b> Használhatod a <codel>prmonth</codel> függvényt is, amely ugyanazokkal a paraméterekkel rendelkezik, mint a <codel>month</codel> függvény, de a naptár megjelenítéséhez nem kell a <codel>print</codel> függvényt használni.</p>
+
+
+
+<br>
+<br>
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

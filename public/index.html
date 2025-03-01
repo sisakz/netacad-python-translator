@@ -159,10 +159,8 @@
         let innerHTML = `<h2>Találatok (${data.length}): </h2>`;
 
         for (const item of data) {
-          const res = await fetch(`/01 Python/${item.englishFile}`);
+          const res = await fetch(`/Python2/${item.englishFile}`);
           const text = await res.text();
-
-          console.log(text);
 
           innerHTML += `
             <div class="row">

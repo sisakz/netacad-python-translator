@@ -1,0 +1,103 @@
+<problem chapter='3' section='5' slide='1' problem='3' title='OOP alapok: Öröklés'>
+
+<!--
+Update history:
+2020-10-01 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+    <h1>Öröklés - miért és hogyan?</h1>
+
+    <p>Az öröklés kifejezés régebbi, mint a számítógépes programozás, és azt a bevett gyakorlatot írja le, amikor az egyik személy halálakor különböző javakat ad át a másiknak. A számítógépes programozással kapcsolatban a kifejezésnek teljesen más jelentése van.</p>
+
+<br>
+
+<center><img src="/uploads/media/default/0001/01/5afc4a6dfa008a552c43c806c647923e22ad25fd.png" alt="The concept of inheritance" width="55%"></center>
+
+<br><br>
+
+    <p>Definiáljuk a fogalmat a mi céljaink érdekében:</p>
+
+    <p>Az öröklés egy általános gyakorlat (az objektum orientált programozásban), amely során a <strong>(definiált és létező) ősosztályból attribútumokat és metódusokat adunk át egy újonnan létrehozott osztálynak, az úgynevezett alosztálynak</strong>.</p>
+
+    <p>Más szóval, az öröklés <strong>egy új osztály létrehozásának módja, de nem a semmiből, hanem a tulajdonságok már meghatározott repertoárjának felhasználásával</strong>. Az új osztály örökli (ez itt a kulcs) az összes már meglévő tulajdonságot, de szükség esetén kaphat néhány újat is.</p>
+
+    <p>Ennek köszönhetően lehetőség van arra, hogy <strong>specializáltabb (konkrétabb) osztályokat hozzunk létre</strong> néhány előre definiált általános szabály és viselkedés segítségével.</p>
+
+
+
+
+
+<br> 
+<br>
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+<p>A folyamat legfontosabb tényezője a szuperosztály és az összes alosztálya közötti kapcsolat (megjegyzés: ha <i>B</i> az <i>A</i> alosztálya és <i>C</i> a <i>B</i> alosztálya, akkor ez azt is jelenti, hogy <i>C</i> az <i>A</i> alosztálya, mivel a kapcsolat teljesen tranzitív).</p>
+
+
+<p>A <strong>kétszintű öröklődésre</strong> egy nagyon egyszerű példát mutatunk be:</p>
+
+<codep class="syntax-color">class Vehicle:
+    pass
+
+
+class LandVehicle(Vehicle):
+    pass
+
+
+class TrackedVehicle(LandVehicle):
+    pass
+</codep>
+
+<br>
+
+
+<p>A bemutatott osztályok egyelőre üresek, de segítségükkel megmutatjuk, hogyan működnek a szuper- és alosztályok közötti kölcsönös kapcsolatok. Hamarosan feltöltjük őket tartalommal.</p>
+
+<p>Elmondhatjuk:</p>
+
+<ul>
+    <li>A <codel>Vehicle</codel> [jármű] osztály a <codel>LandVehicle</codel> [szárazföldi jármű] és a <codel>TrackedVehicle</codel> [lánctalpas jármű] osztályok szuperosztálya;</li>
+    <li>A <codel>LandVehicle</codel> osztály egyszerre a <codel>Vehicle</codel> alosztálya és a <codel>TrackedVehicle</codel> szuperosztálya;</li>
+    <li>A <codel>TrackedVehicle</codel> osztály a <codel>Vehicle</codel> és a <codel>LandVehicle</codel> osztályok alosztálya.</li>
+</ul>
+
+<p>A fenti ismeret a kód olvasásából származik (más szóval, azért tudjuk, mert látjuk).</p>
+
+<p>A Python ugyanezt vajon tudja? Meg lehet kérdezni a Pythont erről? Igen, lehetséges.</p>
+
+
+
+
+
+
+<br>
+<br>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

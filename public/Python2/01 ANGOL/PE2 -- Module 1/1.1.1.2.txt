@@ -1,0 +1,79 @@
+<problem chapter='1' section='1' slide='1' problem='2' title='Using Modules'>
+
+<!--
+Update history:
+2020-08-28 Grzegorz (review, PEP-8 compliance check, update; added the definition of module on top of page; reformatted pictures)
+2021-06-14 Grzegorz (review)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h1>How to make use of a module?</h1>
+
+<p>So what is a module? The <a href="https://docs.python.org/3/tutorial/modules.html" target="_blank">Python Tutorial</a> defines it as <b>a file containing Python definitions and statements</b>, which can be imported later and used when necessary.</p>
+
+<p>The handling of modules consists of two different issues:</p>
+
+<img src="/uploads/media/default/0001/01/064abbc7b3240f29aff8dcf4226dd22123a2a10a.png" width="60%" alt="The User vs. Supplier concept" style="float:right">
+
+<ul>
+<li>the first (probably the most common) happens when you want to use an already existing module, written by someone else, or created by yourself during your work on some complex project - in this case you are the module's <strong>user</strong>;</li>
+<li>the second occurs when you want to create a brand new module, either for your own use, or to make other programmers' lives easier - you are the module's <strong>supplier</strong>.</li>
+</ul>
+
+<p>Let's discuss them separately.</p>
+
+<br>
+
+<p>First of all, a module is identified by its <strong>name</strong>. If you want to use any module, you need to know the name. A (rather large) number of modules is delivered together with Python itself. You can think of them as a kind of "Python extra equipment".</p>
+
+<br>
+
+<div style="clear: both;"></div>
+<br>
+
+<br>
+<br>
+
+
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+<p>All these modules, along with the built-in functions, form the <strong>Python standard library</strong> - a special sort of library where modules play the roles of books (we can even say that folders play the roles of shelves). If you want to take a look at the full list of all "volumes" collected in that library, you can find it here: <a href="https://docs.python.org/3/library/index.html" target="_blank">https://docs.python.org/3/library/index.html</a>.</p>
+
+<p>Each module consists of entities (like a book consists of chapters). These entities can be functions, variables, constants, classes, and objects. If you know how to access a particular module, you can make use of any of the entities it stores.</p>
+
+<center><img src="/uploads/media/default/0001/01/6328af751dcaeb2e3b8e4c8101fe40ddb876db67.png" width="70%" alt="Accessing modules: math"></center>
+
+<br>
+<br>
+
+<p>Let's start the discussion with one of the most frequently used modules, named <codel>math</codel>. Its name speaks for itself - the module contains a rich collection of entities (not only functions) which enable a programmer to effectively implement calculations demanding the use of mathematical functions, like <i>sin()</i> or <i>log()</i>.</p>
+
+<br>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

@@ -1,0 +1,47 @@
+<problem chapter='4' section='5' slide='1' problem='17' title='The datetime and time modules (continued)'>
+
+<!--
+Update history:
+2020-03-30 Sebastian (first version)
+2020-10-12 Grzegorz (file creation, review, PEP-8 compliance check)
+-->
+
+<code>import time
+
+timestamp = 1572879180
+st = time.gmtime(timestamp)
+
+print(time.strftime("%Y/%m/%d %H:%M:%S", st))
+print(time.strftime("%Y/%m/%d %H:%M:%S"))
+
+</code>
+
+
+
+<h1>The <font face="Courier New">strftime()</font> function in the <font face="Courier New">time</font> module</h1>
+
+<p>You probably won't be surprised to learn that the <codel>strftime</codel> function is available in the <codel>time</codel> module. It differs slightly from the <codel>strftime</codel> methods in the classes provided by the <codel>datetime</codel> module because, in addition to the format argument, it can also take (optionally) a tuple or struct_time object.</p>
+
+<p>If you don't pass a tuple or <i>struct_time</i> object, the formatting will be done using the current local time. Take a look at the example in the editor.</p>
+
+<p>Our result looks as follows:</p>
+
+<codep>2019/11/04 14:53:00
+2020/10/12 12:19:40</codep>
+<p style="text-align: right;"><font size="-2"><b>sample output</b></font></p>
+
+
+<p>Creating a format looks the same as for the <codel>strftime</codel> methods in the <codel>datetime</codel> module. In our example, we use the <codel>%Y</codel>, <codel>%m</codel>, <codel>%d</codel>, <codel>%H</codel>, <codel>%M</codel>, and <codel>%S</codel> directives that you already know.</p>
+
+<p>In the first function call, we format the <i>struct_time</i> object, while in the second call (without the optional argument), we format the local time. You can find all available directives in the <codel>time</codel> module <a href="https://docs.python.org/3/library/time.html#time.strftime" target=_blank">here</a>.</p>
+
+
+
+<br>
+<br>
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

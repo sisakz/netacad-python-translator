@@ -1,0 +1,46 @@
+<problem chapter='4' section='5' slide='1' problem='9' title='The time module'>
+
+<!--
+Update history:
+2020-03-30 Sebastian (first version)
+2020-10-11 Grzegorz (review, PEP-8 compliance check)
+-->
+
+<code>import time
+
+timestamp = 1572879180
+print(time.ctime(timestamp))
+
+</code>
+
+
+
+<h1>The <font face="Courier New">ctime()</font> function</h1>
+
+
+<p>The <codel>time</codel> module provides a function called <codel>ctime</codel>, which <b>converts the time in seconds since January 1, 1970 (Unix epoch) to a string</b>.</p>
+
+<p>Do you remember the result of the <codel>time</codel> function? That's what you need to pass to <codel>ctime</codel>. Take a look at the example in the editor.</p>
+
+<p>Result:</p>
+
+<codep>Mon Nov  4 14:53:00 2019</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+<p>The <codel>ctime</codel> function returns a string for the passed timestamp. In our example, the timestamp expresses November 4, 2019 at 14:53:00.</p>
+
+<p>It's also possible to call the <codel>ctime</codel> function without specifying the time in seconds. In this case, the current time will be returned:</p>
+
+<p><codep class="syntax-color copy">import time
+print(time.ctime())
+</codep></p>
+
+
+<br>
+<br>
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

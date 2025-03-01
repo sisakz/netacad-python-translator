@@ -1,0 +1,75 @@
+<problem chapter='1' section='1' slide='1' problem='8' title='Modul importálása | math'>
+
+<!--
+Update history:
+2020-08-28 Grzegorz (review, PEP-8 compliance check, update, line number adjustment)
+2021-06-16 Grzegorz (review)
+-->
+
+<code>from math import sin, pi
+
+print(sin(pi / 2))
+
+pi = 3.14
+
+
+def sin(x):
+    if 2 * x == pi:
+        return 0.99999999
+    else:
+        return None
+
+
+print(sin(pi / 2))
+
+</code>
+
+<h1>Modul importálása (folytatás)</h1>
+
+
+<p>Nézd meg a kódot a szerkesztőben. Elemezd alaposan:</p>
+
+<ul>
+<li>1. sor: szelektív importálás végrehajtása;</li>
+<li>3. sor: használja az importált entitásokat és megkapja a várt eredményt (<codel>1.0</codel>)</li>
+<li>5-12. sor: a <codel>pi</codel> és <codel>sin</codel> jelentéseinek újradefiniálása - valójában az eredeti (importált) definíciók helyébe lépnek a kód névterében;</li>
+<li>15. sor: <codel>0.99999999</codel>-et kapunk, ami megerősíti a következtetéseinket.</li>
+</ul>
+ 
+
+<p>Csináljunk egy másik tesztet. Nézzük meg az alábbi kódot:</p>
+
+<codep class="syntax-color copy line-numbers">pi = 3.14
+
+
+def sin(x):
+    if 2 * x == pi:
+        return 0.99999999
+    else:
+        return None
+
+
+print(sin(pi / 2))
+
+from math import sin, pi
+
+print(sin(pi / 2))
+</codep>
+<br>
+
+<p>Itt megfordítottuk a kód műveleteinek sorrendjét:</p>
+
+<ul>
+<li>1-8. sor: határozzuk meg a saját<codel>pi</codel>-nket és <codel>sin</codel>-ünket;</li>
+<li>11. sor: használjuk őket (<codel>0.99999999</codel> jelenik meg a képernyőn)</li>
+<li>13. sor: az importálás végrehajtása - az importált szimbólumok a <b>névtéren belüli korábbi definícióik helyébe lépnek</b>;</li>
+<li>15. sor: eredményként <codel>1.0</codel>-t kapunk.</li>
+</ul>
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

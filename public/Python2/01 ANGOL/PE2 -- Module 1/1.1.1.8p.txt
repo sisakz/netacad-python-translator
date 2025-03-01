@@ -1,0 +1,75 @@
+<problem chapter='1' section='1' slide='1' problem='8' title='Importing a module | math'>
+
+<!--
+Update history:
+2020-08-28 Grzegorz (review, PEP-8 compliance check, update, line number adjustment)
+2021-06-16 Grzegorz (review)
+-->
+
+<code>from math import sin, pi
+
+print(sin(pi / 2))
+
+pi = 3.14
+
+
+def sin(x):
+    if 2 * x == pi:
+        return 0.99999999
+    else:
+        return None
+
+
+print(sin(pi / 2))
+
+</code>
+
+<h1>Importing a module: continued</h1>
+
+
+<p>Look at the code in the editor. Analyze it carefully:</p>
+
+<ul>
+<li>line 1: carry out the selective import;</li>
+<li>line 3: make use of the imported entities and get the expected result (<codel>1.0</codel>)</li>
+<li>lines 5 through 12: redefine the meaning of <codel>pi</codel> and <codel>sin</codel> – in effect, they supersede the original (imported) definitions within the code's namespace;</li>
+<li>line 15: get <codel>0.99999999</codel>, which confirms our conclusions.</li>
+</ul>
+ 
+
+<p>Let's do another test. Look at the code below:</p>
+
+<codep class="syntax-color copy line-numbers">pi = 3.14
+
+
+def sin(x):
+    if 2 * x == pi:
+        return 0.99999999
+    else:
+        return None
+
+
+print(sin(pi / 2))
+
+from math import sin, pi
+
+print(sin(pi / 2))
+</codep>
+<br>
+
+<p>Here, we've reversed the sequence of the code's operations:</p>
+
+<ul>
+<li>lines 1 through 8: define our own <codel>pi</codel> and <codel>sin</codel>;</li>
+<li>line 11: make use of them (<codel>0.99999999</codel> appears on the screen)</li>
+<li>line 13: carry out the import – the imported symbols <b>supersede their previous definitions within the namespace</b>;</li>
+<li>line 15: get <codel>1.0</codel> as the result.</li>
+</ul>
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

@@ -1,0 +1,74 @@
+<problem chapter='3' section='5' slide='1' problem='15' title='OOP alapok: Öröklés'>
+
+<!--
+Update history:
+2020-10-01 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>
+class One:
+    def do_it(self):
+        print("do_it from One")
+
+    def doanything(self):
+        self.do_it()
+
+
+class Two(One):
+    def do_it(self):
+        print("do_it from Two")
+
+
+one = One()
+two = Two()
+
+one.doanything()
+two.doanything()
+
+</code>
+
+
+
+<h1>Hogyan építsünk fel egy osztályhierarchiát</h1>
+
+
+<p>Az osztályok hierarchiájának felépítése nem csak művészet a művészet kedvéért.</p>
+
+<p>Ha egy problémát osztályok között osztunk fel, és eldöntjük, hogy melyikük kerüljön a hierarchia tetejére, és melyikük az aljára, akkor alaposan elemeznünk kell a kérdést, de mielőtt megmutatnánk, hogyan kell (és hogyan nem), szeretnénk rávilágítani egy érdekes hatásra. Semmi rendkívüli nincs benne (csupán a korábban bemutatott általános szabályok következménye), de az emlékezetünkbe vésése kulcsfontosságú lehet egyes kódok működésének megértéséhez, és ahhoz, hogy a hatás segítségével rugalmas osztályokat építhessünk.</p>
+
+<p>Nézd meg a kódot a szerkesztőben! Elemezzük is ki:</p>
+
+<ul>
+    <li>két osztály van, amelyek neve <codel>One</codel> és <codel>Two</codel>, a <codel>Two</codel> a <codel>One</codel>-ból származik. Eddig semmi különös. Egy dolog azonban figyelemre méltónak tűnik - a <codel>do_it()</codel> metódus.</li>
+
+    <li>a <codel>do_it()</codel>metódus <strong>kétszer</strong> van <strong>definiálva</strong>: eredetileg a <codel>One</codel>, majd a <codel>Two</codel> metóduson belül. A példa lényege abban rejlik, hogy a metódust <strong>csak egyszer hívjuk meg</strong> – a <codel>One</codel>-on belül.</li>
+</ul>
+
+<p>A kérdés az, hogy a két metódus közül melyiket hívja meg a kód utolsó két sora?</p>
+<br>
+
+<p>Az első meghívás egyszerűnek tűnik, és valóban az is - a <codel>doanything()</codel> meghívása a <codel>one</codel> nevű objektumból nyilvánvalóan az első metódust aktiválja.</p>
+
+<p>A második hívás némi figyelmet igényel. Ez is egyszerű, ha szem előtt tartjuk, hogyan találja meg a Python az osztálykomponenseket. A második meghívás a <codel>do_it()</codel>-ot a <codel>Two</codel> osztályon belül létező formában fogja elindítani, függetlenül attól, hogy a meghívás a <codel>One</codel> osztályon belül történik.</p>
+
+<p>A kód a következő kimenetet eredményezi:</p>
+
+<codep>do_it from One
+do_it from Two</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+<p>Megjegyzés: azt a helyzetet, amikor <strong>az alosztály képes módosítani szeretnánk a szuperosztály viselkedését (mint a fenti példában), polimorfizmusnak (többalakúság, polymorphism) nevezzük</strong>. A szó a görögből származik (polisz: "sok, több" és morphe, "forma, alak"), ami azt jelenti, hogy egy és ugyanaz az osztály különböző formákat vehet fel attól függően, hogy bármelyik alosztálya milyen átdefiniálásokat végez.</p>
+
+<p>A bármelyik szuperosztályban újradefiniált metódust, amely megváltoztatja a szuperosztály viselkedését, <strong>virtuálisnak</strong> nevezzük.</p>
+
+<p>Más szóval, nincs olyan osztály, amelyik egyszer és mindenkorra adott lenne. Minden osztály viselkedése bármikor módosítható bármelyik alosztálya által.</p>
+
+<p>Megmutatjuk, <strong>hogyan használhatjuk a polimorfizmust az osztályok rugalmasságának kiterjesztésére</strong>.</p>
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

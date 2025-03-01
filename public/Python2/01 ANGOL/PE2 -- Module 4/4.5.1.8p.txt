@@ -1,0 +1,52 @@
+<problem chapter='4' section='5' slide='1' problem='8' title='The time module'>
+
+<!--
+Update history:
+2020-03-30 Sebastian (first version)
+2020-10-11 Grzegorz (review, PEP-8 compliance check)
+-->
+
+<code>import time
+
+class Student:
+    def take_nap(self, seconds):
+        print("I'm very tired. I have to take a nap. See you later.")
+        time.sleep(seconds)
+        print("I slept well! I feel great!")
+
+student = Student()
+student.take_nap(5)
+
+</code>
+
+
+
+<h1>The <font face="Courier New">time</font> module</h1>
+
+
+<p>In addition to the <codel>time</codel> class, the Python standard library offers a module called <codel>time</codel>, which provides a time-related function. You already had the opportunity to learn the function called <codel>time</codel> when discussing the <codel>date</codel> class. Now we'll look at another useful function available in this module.</p>
+
+<p>You must spend many hours in front of a computer while doing this course. Sometimes you may feel the need to take a nap. Why not? Let's write a program that simulates a student's short nap. Have a look at the code in the editor.</p>
+
+<p>Result:</p>
+
+<codep>I'm very tired. I have to take a nap. See you later.
+I slept well! I feel great!</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+<p>The most important part of the sample code is the use of the <codel>sleep</codel> function (yes, you may remember it from one of the previous labs earlier in the course), which suspends program execution for the given number of seconds.</p>
+
+<p>In our example it's 5 seconds. You're right, it's a very short nap.</p>
+
+<p>Extend the student's sleep by changing the number of seconds. Note that the <codel>sleep</codel> function accepts only an integer or a floating point number.</p>
+
+
+
+<br>
+<br>
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

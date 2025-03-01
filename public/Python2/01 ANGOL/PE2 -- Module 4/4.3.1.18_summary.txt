@@ -1,0 +1,135 @@
+﻿<problem chapter='4' section='3' slide='1' problem='18' title='SECTION SUMMARY'>
+
+<!--
+Update history:
+2020-09-09 Slawek (first version)
+2020-10-07 Grzegorz (review)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<h1>Key takeaways</h1>
+
+<br/>
+
+
+<p>1. To read a file’s contents, the following stream methods can be used:</p>
+<ul>
+<li><codel>read(number)</codel> – reads the <codel>number</codel> characters/bytes from the file and returns them as a string; is able to read the whole file at once;</li>
+<li><codel>readline()</codel> – reads a single line from the text file;</li>
+<li><codel>readlines(number)</codel> – reads the <codel>number</codel> lines from the text file; is able to read all lines at once;</li>
+<li><codel>readinto(bytearray)</codel> – reads the bytes from the file and fills the <codel>bytearray</codel> with them;</li>
+</ul>
+<br/>
+
+<p>2. To write new content into a file, the following stream methods can be used:</p>
+<ul>
+<li><codel>write(string)</codel> – writes a <codel>string</codel> to a text file;</li>
+<li><codel>write(bytearray)</codel> – writes all the bytes of <codel>bytearray</codel> to a file;</li>
+
+</ul>
+<br/>
+
+<p>3. The <codel>open()</codel> method returns an iterable object which can be used to iterate through all the file's lines inside a <codel>for</codel> loop. For example:</p>
+<codep class="syntax-color copy">for line in open("file", "rt"):
+    print(line, end='')
+</codep> 
+<br/>
+
+<p>The code copies the file's contents to the console, line by line. <b>Note</b>: the stream closes itself <b>automatically</b> when it reaches the end of the file.</p>
+
+
+</div>
+<div class="small-12 large-6 columns">
+
+<br>
+
+<script>
+function solution (id) {
+    var element = document.getElementById(id);
+    
+if (element.style.display === "none") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
+    }
+}
+</script>
+
+<p><strong>Exercise 1</strong></p>
+<p>What do we expect from the <codel>readlines()</codel> method when the stream is associated with an empty file?</p>
+
+
+<button class="button tiny" onclick="solution('sol')">Check</button>
+
+<p id="sol" style="display: none;">
+An empty list (a zero-length list).
+</p>
+
+
+
+<br/><br/>
+
+<p><strong>Exercise 2</strong></p>
+<p>What is the following code intended to do?</p>
+<codep>for line in open("file", "rt"):
+    for char in line:
+        if char.lower() not in "aeiouy ":
+            print(char, end='')
+
+</codep>
+
+<br/>
+
+<button class="button tiny" onclick="solution('sol2')">Check</button>
+<p id="sol2" style="display: none;">It copies the <i>file</i>'s contents to the console, ignoring all vowels.  </p>
+    
+
+<br/><br/>
+
+
+
+
+<p><strong>Exercise 3</strong></p>
+<p>You're going to process a bitmap stored in a file named <codel>image.png</codel>, and you want to read its contents as a whole into a <i>bytearray</i> variable named <codel>image</codel>. Add a line to the following code to achieve this goal.</p>
+<codep>try:
+    stream = open("image.png", "rb")
+    # Insert a line here.
+    stream.close()
+except IOError:
+    print("failed")
+else:
+    print("success")
+
+</codep>
+<br/>
+
+<button class="button tiny" onclick="solution('sol3')">Check</button>
+
+<p id="sol3" style="display: none;">
+<codep>image = bytearray(stream.read())
+
+</codep>
+</p>
+
+
+
+
+<br/>
+
+
+</div>
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>
+
+

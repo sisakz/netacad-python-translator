@@ -1,0 +1,67 @@
+<problem chapter='1' section='4' slide='1' problem='19' title='Modul zárás'>
+
+<!--
+Update history:
+2020-10-18 Grzegorz (file creation)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<h1>Gratulálunk! Befejezted az <i>1. modult.</i></h1>
+
+<br>
+
+
+<p>Szép munka! Elérted az 1. modul végét, és egy fontos mérföldkövet teljesítettél a Python programozási tanulmányaid során. Íme egy rövid összefoglaló az 1. modulban lefedett és megismert témákról:</p>
+
+<ul>
+    <li>Python modulokkal való munka; modulok importálása, létrehozása és használata;</li>
+
+    <li>néhány Python modul használata (<i>math</i>, <i>random</i> és <i>platform</i>);</li>
+
+    <li>csomagok létrehozása és használata Pythonban;</li>
+
+<li>PIP (the Python Package Installer).</li>
+
+</ul>
+
+<br>
+
+<p>Most már készen állsz a modulkvíz kitöltésére és a végső kihívás teljesítésére: a 4. modul tesztje segít felmérni, hogy mit tanultál eddig.</p>
+
+
+<br>
+<br>
+
+</div>
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+
+
+<center><img src="/uploads/media/default/0001/01/29ed2aa31a1a26221e4eac3b69d973a33cbf562e.png" width="65%" alt="Module completion – congratulations"></center>
+<br>
+
+
+
+
+<br>
+
+</div>
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

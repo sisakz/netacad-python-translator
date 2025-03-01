@@ -1,0 +1,78 @@
+<problem chapter='1' section='4' slide='1' problem='10' title='Függőségek'>
+
+<!--
+Update history:
+2020-09-23 Grzegorz (created)
+2021-06-29	Grzegorz (corrections)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h1>Függőségek</h1>
+
+<p>Most, hogy biztosak vagyunk benne, hogy a <i>pip</i> készen áll a parancsunkra, csak az MS Windows rendszerekre fogunk koncentrálni, mivel a viselkedése minden operációs rendszerben ugyanaz (kellene, hogy legyen). De mielőtt elkezdenénk, el kell magyaráznunk egy fontos kérdést, és szólnunk kell a <b>függőségekről</b>.</p>
+
+
+<p>Képzeljük el, hogy létrehoztál egy zseniális Python alkalmazást, a <i>redsuspenders</i>-t, amely 99%-os pontossággal képes megjósolni a tőzsdei árfolyamokat (egyébként, ha ezt tényleg megcsinálod, kérlek, azonnal vedd fel velünk a kapcsolatot).</p>
+
+<p>Természetesen a cél eléréséhez már meglévő kódot használtál - például az alkalmazásod importál egy <i>nyse</i> nevű csomagot, amely néhány fontos függvényt és osztályt tartalmaz. Továbbá a <i>nyse</i> csomag importál egy másik, <i>wallstreet</i> nevű csomagot, míg a <i>wallstreet</i> csomag két másik alapvető csomagot, a <i>bull</i> és a <i>bear</i> nevűeket. </p>
+
+<p>Ahogy valószínűleg már kitaláltad, a csomagok közötti kapcsolatok döntő fontosságúak, és ha valaki úgy dönt, hogy felhasználja a kódodat (de ne feledd, mi már lefoglaltuk), akkor biztosítania kell, hogy minden szükséges csomag a helyén legyen.</p>
+
+
+<p>Röviden összefoglalva a történetet, azt mondhatjuk, hogy <b>a függőség egy olyan jelenség, amely minden alkalommal megjelenik, amikor egy olyan szoftvert használunk, amely más szoftverekre támaszkodik</b>. Megjegyzendő, hogy a függőség a szoftverfejlesztés több szintjét is magában foglalhatja (és általában magában is foglalja).</p>
+
+
+<p>Ez azt jelenti, hogy az <i>nyse</i> csomag egy potenciális felhasználójának kötelessége az összes függőséget visszakövetni és kézzel telepíteni az összes szükséges csomagot? Az szörnyű lenne, nem? </p>
+
+
+<p>Igen, ez határozottan borzalmas, így nem kell meglepődnöd azon, hogy az összes későbbi követelmény fáradságos teljesítésének folyamata saját nevet kapott, ez a <i>függőségi pokol</i>.</p>
+
+
+<p>Hogyan kezeljük ezt? Minden felhasználó arra van kárhoztatva, hogy a pokolba látogasson el, amikor először futtatja a kódot?</p>
+
+<P>Szerencsére nem - a <i>pip</i> mindezt megteheti helyetted. Tényleg. Minden függőséget képes felfedezni, azonosítani és feloldani. Ráadásul mindezt a legokosabb módon teszi, elkerülve a felesleges letöltéseket és újratelepítéseket.</P>
+
+
+
+
+<br>
+<br> 
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br><br>
+
+
+<center><img src="/uploads/media/default/0001/02/cdf237fcb4e326940be11b44fa3c5e324a928e93.png" width="80%" alt="Dependencies"></center>
+
+
+
+
+
+<br>
+<br>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

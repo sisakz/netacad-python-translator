@@ -1,0 +1,113 @@
+<problem chapter='3' section='1' slide='1' problem='7' title='The foundations of OOP'>
+
+<!--
+Update history:
+2020-09-30 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h1>Your first class</h1>
+
+
+<p>Object programming is <strong>the art of defining and expanding classes</strong>. A class is a model of a very specific part of reality, reflecting properties and activities found in the real world.</p>
+
+<p>The classes defined at the beginning are too general and imprecise to cover the largest possible number of real cases.</p>
+
+<p>There's no obstacle to defining new, more precise subclasses. They'll inherit everything from their superclass, so the work that went into its creation isn't wasted.</p>
+
+<p>The new class may add new properties and new activities, and therefore may be more useful in specific applications. Obviously, it may be used as a superclass for any number of newly created subclasses.</p>
+
+<p>The process doesn't need to have an end. You can create as many classes as you need.</p>
+
+ 
+
+<p>The class you define has nothing to do with the object: <strong>the existence of a class does not mean that any of the compatible objects will automatically be created</strong>. The class itself isn't able to create an object – you have to create it yourself, and Python allows you to do this.</p>
+
+<p>It's time to define the simplest class and to create an object. Take a look at the example below:</p>
+
+<codep class="syntax-color">class TheSimplestClass:
+    pass
+</codep>
+<br>
+
+<p>We've defined a class. The class is rather poor: it has neither properties nor activities. It's <strong>empty</strong>, actually, but that doesn't matter for now. The simpler the class, the better for our purposes.</p>
+
+<p><strong>The definition begins with the keyword <codel>class</codel></strong>. The keyword is followed by an <strong>identifier which will name the class</strong> (note: don't confuse it with the object's name – these are two different things).</p>
+
+<p>Next, you add a <strong>colon</strong> (<codel>:</codel>), as classes, like functions, form their own nested block. The content inside the block define all the class's properties and activities.</p>
+
+<p>The <codel>pass</codel> keyword fills the class with nothing. It doesn't contain any methods or properties.</p>
+ 
+
+
+
+<br>
+<br> 
+
+
+
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+
+<h2>Your first object</h2>
+
+
+<p>The newly defined class becomes a tool that is able to create new objects. The tool has to be used explicitly, on demand.</p>
+
+<p>Imagine that you want to create one (exactly one) object of the <codel>TheSimplestClass</codel> class.</p>
+
+<p>To do this, you need to assign a variable to store the newly created object of that class, and create an object at the same time.</p>
+
+<p>You do it in the following way:</p>
+
+<codep class="syntax-color">my_first_object = TheSimplestClass()
+</codep>
+<br>
+
+ 
+
+<p>Note:</p>
+
+<ul>
+<li>the class name tries to pretend that it's a function – can you see this? We'll discuss it soon;</li>
+<li>the newly created object is equipped with everything the class brings; as this class is completely empty, the object is empty, too.</li>
+</ul>
+ 
+
+<p>The act of creating an object of the selected class is also called an <strong>instantiation</strong> (as the object becomes an <strong>instance of the class</strong>).</p>
+
+<p>Let's leave classes alone for a short moment, as we're now going to tell you a few words about <i>stacks</i>. We know the concept of classes and objects may not be fully clear yet. Don't worry, we'll explain everything very soon.</p>
+
+
+<br>
+<br> 
+
+
+
+
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

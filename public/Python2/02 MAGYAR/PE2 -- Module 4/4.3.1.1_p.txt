@@ -1,0 +1,60 @@
+<problem chapter='4' section='3' slide='1' problem='1' title='Igazi fájlok kezelése'>
+
+<!--
+Update history:
+2020-10-07 Grzegorz (review, PEP-8 compliance check)
+2021-07-07 Grzegorz (code corrections - important!)
+-->
+
+<code>
+# Opening tzop.txt in read mode, returning it as a file object:
+stream = open("tzop.txt", "rt", encoding = "utf-8")
+
+# Printing the contents of the file:
+print(stream.read()) 
+
+</code>
+
+
+
+<h1>Szövegfájlok feldolgozása</h1>
+
+
+<p>Ebben a leckében egy közönséges szöveges fájlt fogunk elkészíteni egyszerű, rövid tartalommal.</p>
+
+<p>Megmutatunk néhány alapvető technikát, amelyet a <strong>fájl tartalmának olvasásához</strong> használhatsz, ha fel akarod dolgozni.</p>
+
+<p>A feldolgozás nagyon egyszerű lesz - a fájl tartalmát a konzolra fogjuk másolni, és megszámoljuk a program által beolvasott karaktereket.</p>
+
+<p>De ne feledd - a szöveges fájlról alkotott képünk nagyon szigorú. A mi értelmezésünkben ez egy sima szöveges fájl, ami csak szöveget tartalmazhat, minden további díszítés (formázás, különböző betűtípusok, stb.) nélkül.</p>
+
+<p>Ezért nem szabad ezt a fájlt valamelyik fejlett szövegszerkesztővel, például MS Word, LibreOffice Writer vagy hasonló programmal létrehozni. Használd az operációs rendszer bépített szerkesztőit: Notepad, vim, gedit, stb.</p>
+
+<p>Ha a szövegfájlok olyan karaktereket - például ékezetes betűket - tartalmaznak, amelyek nem tartoznak a szabványos ASCII-karakterkészletbe, akkor további lépésre lehet szükség. Az <codel>open()</codel> függvény meghívása megkövetelhet egy olyan argumentumot, amely egy adott szövegkódolást jelöl.</p>
+
+<p>Például, ha olyan Unix/Linux operációs rendszert használsz, amely úgy van konfigurálva, hogy az UTF-8 szabványt használja az egész rendszerre kiterjedő beállításként, az <codel>open()</codel> függvény a következőképpen nézhet ki:</p>
+
+<codep class="syntax-color">stream = open('file.txt', 'rt', encoding='utf-8')
+</codep>
+<br>
+
+<p>ahol az encoding argumentumot olyan értékre kell állítani, amely a megfelelő szövegkódolást (itt például UTF-8) jelöli.</p>
+
+<p>Nézd meg az operációs rendszer dokumentációját, hogy megtaláld a rendszer-környezetnek megfelelő kódolási nevet.</p>
+
+<br>
+
+<p><strong><span class="label" style="background-color:orange;">Megjegyzés</span></strong></p>
+
+<p>Ebben a szakaszban, a fájlfeldolgozási feladatokhoz előre feltöltött fájlokat fogunk használni (pl.: <font face="Courier New">tzop.txt</font>, vagy <font face="Courier New">text.txt</font> fájlokat), amelyekkel Te is dolgozhatsz. Ha a saját fájljaiddal szeretnél a saját gépeden dolgozni, tedd azt, és használd az IDLE-t (vagy bármilyen más IDE-t, amelyet szeretsz) a saját tesztjeid elvégzéséhez.</p>
+
+
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

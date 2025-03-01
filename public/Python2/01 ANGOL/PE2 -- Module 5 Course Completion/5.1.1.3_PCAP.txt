@@ -1,0 +1,88 @@
+<problem chapter='5' section='1' slide='1' problem='3' title='Earn PCAP certification'>
+
+<!--
+Update history:
+2020-10-01 Grzegorz (created)
+2020-11-19 Grzegorz (updated)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h2>Earn PCAP - Certified Associate in Python Programming Certification</h2>
+
+
+
+<p>Upon completion of the entire Python Essentials two-course series, you are prepared to take the <a href="https://pythoninstitute.org/pcap-certification-associate/" target="_blank">PCAP - Certified Associate in Python Programming</a> certification exam.</p>
+
+<p>The certification enables you to keep your skills up to date, and to demonstrate these skills to others. It gives you a chance to check, prove, and validate your Python programming abilities. Most importantly, it may open doors to a better job and a better salary, and it is a great motivator for self-improvement and self-development.</p>
+
+<p>Boost your career with the <i>PCAP - Certified Associate in Python Programming</i> certification - a valuable and powerful credential that will help you take your career to the next level.</p>
+
+<h2>What to do now? Get certified!</h2>
+
+<p>Use the discount code to reduce the exam fee and purchase your PCAP-31-03 exam voucher with a 50% discount:</p>
+
+<ul>
+<li>Go to <a href="https://ums.edube.org/store" target="_blank">OpenEDG Voucher Store</a>;</li>
+<li>Add a PCAP-31-03 voucher to the cart (click <i>+Add to Order</i>)</li>
+<li>Click <i>Add Promo Code</i> and enter your discount code;</li>
+<li>Click <i>Next Step</i>, provide the Billing and Shipping Information, and place an order;</li>
+<li>Make payment. Your voucher will be sent to the email address you've provided in the Shipping Information field. The invoice will be sent to the email address epcified in the Billing Information section.</li>
+</ul>
+
+<p>You can pay for the PCAP-31-03 exam voucher by all major credit cards (i.e., Visa, MasterCard, American Express), Debit Cards or via PayPal account. You can also request a pro forma invoice and make your payment via wire transfer.</p>
+
+<h2>Register for your exam!</h2>
+
+<p>You can take the PCAP-31-03 exam from the comfort of your home (OnVue Online Proctoring) or sit it at a physical testing facility (Pearson VUE Testing Center).</p>
+
+<p>You can register and schedule by:</p>
+
+<ul>
+<li>Visiting the <a href="https://home.pearsonvue.com/pythoninstitute" target="_blank">OpenEDG Python Institute Candidate Website</a> (Exam delivery channels: Pearson VUE Testing Centers / OnVUE Online Proctoring)</li>
+<li>Calling the <a href="https://home.pearsonvue.com/python/contact" target="_blank">Pearson VUE Contact Center: Customer Service</a> (Exam delivery channels: Pearson VUE Testing Centers / OnVUE Online Proctoring)</li>
+<li>Contacting a Pearson VUE Authorized Test Center of your choice (Exam delivery channel: Pearson VUE Testing Centers) - <a href="https://wsr.pearsonvue.com/testtaker/find/testcenter/CPPINSTITUTE?locale=en_US" target="_blank">Find a Testing Center</a>.</li>
+</ul>
+
+<p>OnVUE Online Proctoring Service is available 24 hours a day, 7 days a week, all year round.</p>
+
+<br>
+
+</div>
+
+<div class="small-12 large-6 columns">
+
+
+<br>
+<center><img src="/uploads/media/default/0001/02/PCAP_new.png" width="95%" class="lightbox" alt="The hierarchy of OpenEDG Python Institute certifications"></center>
+<br><br>
+
+
+
+<p><b>PCAP-31-03 exam - useful links</b>:</p>
+
+<ul>
+<li>Read more about the PCAP-31-03 exam <a href="https://pythoninstitute.org/pcap-31-03-testing-policies/" target="_blank">Testing Policies</a>.</li>
+<li>Get familiar with the PCAP-31-03 <a href="https://pythoninstitute.org/certification/pcap-certification-associate/pcap-exam-syllabus/" target="_blank">Exam Syllabus and Objectives</a>.</li>
+<li>Look at the <a href="https://pythoninstitute.org/support/" target="_blank">tutorials and reference guides</a> (scroll to the bottom of the page) we've prepared for you to make your testing experience a positive and successful one.</li>
+</ul>
+
+
+<br>
+<br>
+
+</div>
+</div>
+</div>
+
+
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

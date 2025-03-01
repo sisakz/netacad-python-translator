@@ -1,0 +1,66 @@
+<problem chapter='3' section='1' slide='1' problem='1' title='The foundations of OOP'>
+
+<!--
+Update history:
+2020-09-30	Grzegorz (review, PEP-8 compliance check, update)
+2021-07-05	Grzegorz (corrections)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h1>The basic concepts of the object-oriented approach</h1>
+
+<p>Let's take a step outside of computer programming and computers in general, and discuss object programming issues.</p>
+
+<p>Nearly all of the programs and techniques you have used till now fall under the procedural style of programming. Admittedly, you have made use of some built-in objects, but when referring to them, we just mentioned the absolute minimum.</p>
+
+<p>The procedural style of programming was the dominant approach to software development for decades of IT, and it is still in use today. Moreover, it isn't going to disappear in the future, as it works very well for specific types of projects (generally, not very complex ones and not large ones, but there are lots of exceptions to that rule).</p>
+
+<p>The object approach is quite young (much younger than the procedural approach) and is particularly useful when applied to big and complex projects carried out by large teams consisting of many developers.</p>
+
+<p>This kind of understanding of a project's structure makes many important tasks easier, for example, dividing the project into small independent parts, and developing different project elements independently.</p>
+
+<p><strong>Python is a universal tool for both object and procedural programming</strong>. It may be successfully utilized in both spheres.</p>
+
+
+
+<br> 
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+<p>Furthermore, you can create lots of useful applications, even if you know nothing about classes and objects, but you have to keep in mind that some of the problems (e.g., graphical user interface handling) may require a strict object approach.</p>
+
+<p>Fortunately, object programming is relatively simple.</p>
+<br>
+
+<center><img src="/uploads/media/default/0001/01/a5f01e4d5011f349a3d53504b67d450a2e42f548.jpeg" alt="The concept of object-oriented programming" width="65%"></center>
+
+
+<br>
+<br>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

@@ -1,0 +1,122 @@
+<problem chapter='4' section='2' slide='1' problem='9' title='Processing files'>
+
+<!--
+Update history:
+2020-10-07 Grzegorz (review, PEP-8 compliance check)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h2>Opening the stream for the first time</h2>
+
+<p>Imagine that we want to develop a program that reads the contents of the text file named: <font face="Courier New">C:\Users\User\Desktop\file.txt</font>.</p>
+
+<p>How do we open that file for reading? Here's the relevant snippet of the code:</p>
+
+<codep class="syntax-color copy line-numbers">try:
+    stream = open("C:\Users\User\Desktop\file.txt", "rt")
+    # Processing goes here.
+    stream.close()
+except Exception as exc:
+    print("Cannot open the file:", exc)
+</codep>
+<br>
+
+<p>What's going on here?</p>
+
+<ul>
+<li>we open the try-except block as we want to handle runtime errors softly;</li>
+<li>we use the <codel>open()</codel> function to try to open the specified file (note the way we've specified the file name)</li>
+<li>the open mode is defined as text to read (as <strong>text is the default setting</strong>, we can skip the <codel>t</codel> in the mode string)</li>
+<li>if we're successful, we get an object from the <codel>open()</codel> function and we assign it to the stream variable;</li>
+<li>if <codel>open()</codel> fails, we handle the exception by printing the full error information (it's definitely good to know what exactly happened)</li>
+
+</ul>
+
+
+<h2>Pre-opened streams</h2>
+
+<p>We said earlier that any stream operation must be preceded by the <codel>open()</codel> function invocation. There are three well-defined exceptions to the rule.</p>
+
+<p>When our program starts, the three streams are already opened and don't require any extra preparations. What's more, your program can use these streams explicitly if you take care to import the <codel>sys</codel> module:</p>
+
+<codep class="syntax-color">import sys
+</codep>
+<br>
+
+<p>because that's where the declaration of the three streams is placed.</p>
+
+
+
+<br> 
+<br>
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+
+<br>
+
+<p>The names of these streams are: <codel>sys.stdin</codel>, <codel>sys.stdout</codel>, and <codel>sys.stderr</codel>.</p>
+
+
+<p>Let's analyze them:</p>
+
+<ul>
+<li><codel>sys.stdin</codel></li>
+
+<ul>
+<li><font face="Courier New">stdin</font> (as <i>standard input</i>)</li>
+<li>the <codel>stdin</codel> stream is normally associated with the keyboard, pre-open for reading and regarded as the primary data source for the running programs;</li>
+<li>the well-known <codel>input()</codel> function reads data from <codel>stdin</codel> by default.</li>
+</ul>
+
+<br>
+
+<li><codel>sys.stdout</codel></li>
+
+<ul>
+<li><font face="Courier New">stdout</font> (as <i>standard output</i>)</li>
+<li>the <codel>stdout</codel> stream is normally associated with the screen, pre-open for writing, regarded as the primary target for outputting data by the running program;</li>
+<li>the well-known <codel>print()</codel> function outputs the data to the <codel>stdout</codel> stream.</li>
+</ul>
+
+<br>
+
+<li><codel>sys.stderr</codel></li>
+
+<ul>
+
+<li><font face="Courier New">stderr</font> (as <i>standard error output</i>)</li>
+<li>the <codel>stderr</codel> stream is normally associated with the screen, pre-open for writing, regarded as the primary place where the running program should send information on the errors encountered during its work;</li>
+<li>we haven't presented any method to send the data to this stream (we will do it soon, we promise)</li>
+<li>the separation of <codel>stdout</codel> (useful results produced by the program) from the <codel>stderr</codel> (error messages, undeniably useful but does not provide results) gives the possibility of redirecting these two types of information to the different targets. More extensive discussion of this issue is beyond the scope of our course. The operation system handbook will provide more information on these issues.</li>
+</ul>
+
+</ul>
+
+<br>
+<br>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

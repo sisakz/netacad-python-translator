@@ -1,0 +1,37 @@
+<problem chapter='2' section='3' slide='1' problem='14' title='Karakterlánc tagfüggvények'>
+
+<!--
+Update history:
+2020-09-23 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>
+# Demonstrating the split() method:
+print("phi       chi\npsi".split())
+
+</code>
+
+
+
+<h1>A <font face="Courier New">split()</font> tagfüggvény</h1>
+
+<p>A <codel>split()</codel> tagfüggvény azt teszi, amit a neve mond – <strong>felosztja a karakterláncot, és létrehoz egy listát az összes felismert részláncról</strong>.</p>
+
+<p>A módszer <strong>feltételezi, hogy a részláncokat whitespace-ek határolják</strong> – a whitespace-ek nem kerülnek bele az eredménylistába.</p>
+
+<p>Ha a karakterlánc üres, az eredménylista is üres lesz.</p>
+
+<p>Nézd meg a kódot a szerkesztőben. A példa a következő kimenetet produkálja:</p>
+
+<codep>['phi', 'chi', 'psi']</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+<p>Megjegyzés: a fordított művelet a <codel>join()</codel> metódussal végezhető el.</p>
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

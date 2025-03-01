@@ -1,0 +1,75 @@
+<problem chapter='4' section='2' slide='1' problem='2' title='Fájlkezelés'>
+
+<!--
+Update history:
+2020-10-07 Grzegorz (review, PEP-8 compliance check)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+    <h2>Fájlnevek</h2>
+
+    <p>A különböző operációs rendszerek különböző módon kezelhetik a fájlokat. A Windows például más elnevezési konvenciót használ, mint a Unix/Linux rendszerek.</p>
+
+    <p>Ha a kanonikus fájlnév fogalmát használjuk (egy olyan név, amely egyértelműen meghatározza a fájl helyét, függetlenül a könyvtárfában  elfoglalt helyétől), akkor rájöhetünk, hogy ezek a nevek másképp néznek ki Windows és Unix/Linux alatt:</p>
+
+<br>
+
+<center><img src="/uploads/media/default/0001/01/8dd129d92508b1867df5d26866d66f79bde3af1a.png" alt="The concept of file paths" width="70%"></center>
+<br><br>
+<br>
+ 
+
+<p>Mint látható, a Unix/Linuxból származó rendszerek nem használják a lemezmeghajtó betűjelét (pl.: <codel>C:</codel>), és az összes könyvtár egy <codel>/</codel> nevű gyökérkönyvtárból nő ki, míg a Windows rendszerek a gyökérkönyvtárat <codel>\</codel> néven ismerik.</p>
+
+
+
+
+<br> 
+<br>
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+
+    <p>Ezenkívül a Unix/Linux rendszer a fájlnevekben szereplő nagy- és kisbetűket megkülönbözteti. A Windows rendszerek tárolják a nagy- és kisbetűket a fájlnévben, de nem tesznek különbséget a különféleképpen írt fájlnevek között.</p>
+
+ 
+
+    <p>Ez azt jelenti, hogy ez a két karakterlánc: <codel>ThisIsTheNameOfTheFile</codel> és <codel>thisisthenameofthefile</codel> két különböző fájlt ír le Unix/Linux rendszerekben, de ugyanazt a fájlt jelentik a Windows rendszerekben.</p>
+
+ 
+    <p>A legfontosabb és legszembetűnőbb különbség az, hogy <strong>két különböző elválasztójelet</strong> kell használni a <strong>könyvtárnevekhez</strong>: <codel>\</codel>-t a Windows és <codel>/</codel>-t Unix/Linux alatt.</p>
+
+    <p>Ez a különbség egy átlagos felhasználó számára nem túl lényeges, de <strong>nagyon fontos, amikor Pythonban írunk programokat</strong>.</p>
+
+ 
+
+    <p>Hogy megértsük miért, próbáljuk meg felidézni a <codel>\</codel> szerepét a Python karakterláncokban. </p>
+
+
+<br>
+<br>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

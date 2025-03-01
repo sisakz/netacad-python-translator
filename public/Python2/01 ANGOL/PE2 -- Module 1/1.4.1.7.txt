@@ -1,0 +1,72 @@
+<problem chapter='1' section='4' slide='1' problem='7' title='pip installation on Linux'>
+
+<!--
+Update history:
+2020-09-23 Grzegorz (created)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h1><i>pip</i> on Linux</h1>
+
+<p>Different Linux distributions may behave differently when it comes to using <i>pip</i>. Some of them (like <i>Gentoo</i>), which are closely bound to Python and which use it internally, may have <i>pip</i> preinstalled and are instantly ready to work.</p>
+
+<p>Don't forget that some Linuces may utilize more than one Python version concurrently, e.g., one Python 2 and one Python 3 coexisting side by side. Such systems may launch Python 2 as the default version, and it may be necessary to explicitly specify the program name as python3. In this case there may be two different <i>pip</i>s identified as <i>pip</i> (or <i>pip2</i>) and <i>pip3</i>. Check it carefully.</p>
+
+
+<p>Open the terminal window and issue the following command:</p>
+
+<p><codep class="syntax-color">pip --version
+</codep></p>
+<br>
+
+<center><img class="lightbox" src="/uploads/media/default/0001/02/5bb7d05f95ab79ac208e69fef800604e33aad690.png" width="95%" alt="pip --version, python 2.7"></center>
+
+
+
+<br>
+<br> 
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+<p>An answer similar to the one shown in the previous picture determines that you've launched <i>pip</i> from Python 2, so the next try should look as follows:</p>
+
+<p><codep class="syntax-color">pip3 --version
+</codep></p>
+<br>
+
+<center><img class="lightbox" src="/uploads/media/default/0001/02/2cf590e6d125749db8fe2ccabb7dbc8d062bf7f1.png" width="95%" alt="pip --version, python 3.6"></center>
+
+<br>
+
+<p>As you can see, we’re now sure that we’re using the appropriate version of <i>pip</i>.</p>
+
+
+<br>
+<br>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

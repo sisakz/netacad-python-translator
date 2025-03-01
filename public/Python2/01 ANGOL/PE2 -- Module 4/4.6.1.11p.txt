@@ -1,0 +1,46 @@
+<problem chapter='4' section='6' slide='1' problem='11' title='The calendar module'>
+
+<!--
+Update history:
+2020-03-30 Sebastian (first version)
+2020-10-13 Grzegorz (file creation, review, PEP-8 compliance check)
+-->
+
+<code>import calendar  
+
+c = calendar.Calendar()
+
+for iter in c.itermonthdays(2019, 11):
+    print(iter, end=" ")
+
+</code>
+
+<h1>Other methods that return iterators</h1>
+
+<p>Another useful method in the <codel>Calendar</codel> class is the method called <codel>itermonthdates</codel>, which takes year and month as parameters, and then returns the iterator to the days of the week represented by numbers.</p>
+
+<p>Take a look at the example in the editor.</p>
+
+<p>You’ll have certainly noticed the large number of 0s returned as a result of the example code. These are days outside the specified month range that are added to keep the complete week.</p>
+
+<p>The first four zeros represent 10/28/2019 (Monday) 10/29/2019 (Tuesday) 10/30/2019 (Wednesday) 10/31/2019 (Thursday). The remaining numbers are days in the month, except the last value of 0, which replaces the date 12/01/2019 (Sunday).</p>
+
+<p>There are four other similar methods in the <codel>Calendar</codel> class that differ in data returned:</p>
+<ul>
+<li><codel>itermonthdates2</codel> – returns days in the form of tuples consisting of a day of the month number and a week day number;</li>
+<li><codel>itermonthdates3</codel> – returns days in the form of tuples consisting of a year, a month, and a day of the month numbers. This method has been available since Python version 3.7;</li>
+<li><codel>itermonthdates4</codel> – returns days in the form of tuples consisting of a year, a month, a day of the month, and a day of the week numbers. This method has been available since Python version 3.7.</li>
+</ul>
+
+<p>For testing purposes, use the example above and see how the return values of the described methods look in practice.</p>
+
+
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

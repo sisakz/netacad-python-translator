@@ -1,0 +1,52 @@
+<problem chapter='3' section='5' slide='1' problem='10' title='OOP Fundamentals: Inheritance'>
+
+<!--
+Update history:
+2020-10-01 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>
+# Testing properties: instance variables.
+class Super:
+    def __init__(self):
+        self.supVar = 11
+
+
+class Sub(Super):
+    def __init__(self):
+        super().__init__()
+        self.subVar = 12
+
+
+obj = Sub()
+
+print(obj.subVar)
+print(obj.supVar)
+
+</code>
+
+
+
+<h1>How Python finds properties and methods: continued</h1>
+
+
+<p>The same effect can be observed with <strong>instance variables</strong> – take a look at the second example in the editor.</p>
+
+<p>The <codel>Sub</codel> class constructor creates an instance variable named <codel>subVar</codel>, while the <codel>Super</codel> constructor does the same with a variable named <codel>supVar</codel>. As previously, both variables are accessible from within the object of class <codel>Sub</codel>.</p>
+
+<p>The program's output is:</p>
+
+<codep>12
+11</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+<p>Note: the existence of the <codel>supVar</codel> variable is obviously conditioned by the <codel>Super</codel> class constructor invocation. Omitting it would result in the absence of the variable in the created object (try it yourself).</p>
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

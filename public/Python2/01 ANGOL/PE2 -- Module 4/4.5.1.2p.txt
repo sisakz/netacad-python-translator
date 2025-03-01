@@ -1,0 +1,75 @@
+<problem chapter='4' section='5' slide='1' problem='2' title='The datetime module'>
+
+<!--
+Update history:
+2020-03-30 Sebastian (first version)
+2020-10-08 Grzegorz (review, PEP-8 compliance check)
+-->
+
+<code>from datetime import date
+
+today = date.today()
+
+print("Today:", today)
+print("Year:", today.year)
+print("Month:", today.month)
+print("Day:", today.day)
+
+</code>
+
+
+
+<h1>Getting the current local date and creating date objects</h1>
+
+
+<p>One of the classes provided by the <codel>datetime</codel> module is a class called <codel>date</codel>. Objects of this class represent a date consisting of the year, month, and day. Look at the code in the editor to see what it looks like in practice, and get the current local date using the <codel>today</codel> method.</p>
+
+<p>Run the code to see what happens.</p>
+
+<p><p>The <codel>today</codel> method returns a <codel>date</codel> object representing the current local date. Note that the <codel>date</codel> object has three attributes: <i>year</i>, <i>month</i>, and <i>day</i>.</p>
+
+<p>Be careful, because these attributes are read-only. To create a <codel>date</codel> object, you must pass the <i>year</i>, <i>month</i>, and <i>day</i> parameters as follows:</p>
+
+<p><codep class="syntax-color copy">from datetime import date
+
+my_date = date(2019, 11, 4)
+print(my_date)
+</codep></p>
+
+<p>Run the example to see what happens.</p>
+
+<p>When creating a <i>date</i> object, keep the following restrictions in mind:</p>
+
+<table>
+<tr>
+<th>Parameter</th>
+<th>Restrictions</th>
+</tr>
+
+<tr>
+<td><codel>year</codel></td>
+<td><p>The <i>year</i> parameter must be greater than or equal to 1 (MINYEAR constant) and less than or equal to 9999 (MAXYEAR constant).</p></td>
+</tr>
+
+<tr>
+<td><codel>month</codel></td>
+<td><p>The <i>month</i> parameter must be greater than or equal to 1 and less than or equal to 12.</p></td>
+</tr>
+
+<tr>
+<td><codel>day</codel></td>
+<td><p>The <i>day</i> parameter must be greater than or equal to 1 and less than or equal to the last day of the given month and year.</p></td>
+</tr>
+</table>
+
+<p><b>Note:</b> Later in this course you'll learn how to change the default date format.</p>
+
+
+<br>
+<br>
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

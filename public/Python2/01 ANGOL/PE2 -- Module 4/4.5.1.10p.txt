@@ -1,0 +1,59 @@
+﻿<problem chapter='4' section='5' slide='1' problem='10' title='The time module'>
+
+<!--
+Update history:
+2020-03-30 Sebastian (first version)
+2020-10-11 Grzegorz (review, PEP-8 compliance check)
+-->
+
+<code>import time
+
+timestamp = 1572879180
+print(time.gmtime(timestamp))
+print(time.localtime(timestamp))
+
+</code>
+
+
+
+<h1>The <font face="Courier New">gmtime()</font> and <font face="Courier New">localtime()</font> functions</h1>
+
+
+<p>Some of the functions available in the <codel>time</codel> module require knowledge of the <i>struct_time</i> class, but before we get to know them, let's see what the class looks like:</p>
+
+<p><codep class="syntax-color">time.struct_time:
+    tm_year   # Specifies the year.
+    tm_mon    # Specifies the month (value from 1 to 12)
+    tm_mday   # Specifies the day of the month (value from 1 to 31)
+    tm_hour   # Specifies the hour (value from 0 to 23)
+    tm_min    # Specifies the minute (value from 0 to 59)
+    tm_sec    # Specifies the second (value from 0 to 61 )
+    tm_wday   # Specifies the weekday (value from 0 to 6)
+    tm_yday   # Specifies the year day (value from 1 to 366)
+    tm_isdst  # Specifies whether daylight saving time applies (1 – yes, 0 – no, -1 – it isn't known)
+    tm_zone   # Specifies the timezone name (value in an abbreviated form)
+    tm_gmtoff # Specifies the offset east of UTC (value in seconds)
+</codep></p>
+
+<p>The <i>struct_time</i> class also allows access to values using indexes. Index <codel>0</codel> returns the value in <i>tm_year</i>, while <codel>8</codel> returns the value in <i>tm_isdst</i>.</p>
+
+<p>The exceptions are <i>tm_zone</i> and <i>tm_gmoff</i>, which cannot be accessed using indexes. Let's look at how to use the <i>struct_time</i> class in practice. Run the code in the editor.</p>
+
+<p>Result:</p>
+
+<codep>time.struct_time(tm_year=2019, tm_mon=11, tm_mday=4, tm_hour=14, tm_min=53, tm_sec=0, tm_wday=0, tm_yday=308, tm_isdst=0)
+time.struct_time(tm_year=2019, tm_mon=11, tm_mday=4, tm_hour=14, tm_min=53, tm_sec=0, tm_wday=0, tm_yday=308, tm_isdst=0)</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+<p>The example shows two functions that convert the elapsed time from the Unix epoch to the <i>struct_time</i> object. The difference between them is that the <codel>gmtime</codel> function returns the <i>struct_time</i> object in UTC, while the <codel>localtime</codel> function returns local time. For the <codel>gmtime</codel> function, the <i>tm_isdst</i> attribute is always 0.</p>
+
+
+
+<br>
+<br>
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

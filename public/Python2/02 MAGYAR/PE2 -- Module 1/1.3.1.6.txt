@@ -1,0 +1,96 @@
+<problem chapter='1' section='3' slide='1' problem='6' title='Modulok és csomagok'>
+
+<!--
+Update history:
+2020-09-08 Grzegorz (review, PEP-8 compliance check, update)
+2021-06-29 Grzegorz (corrections)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h1>Az első csomagod: 1. lépés</h1>
+
+<p>Képzeld el, hogy a nem is olyan távoli jövőben Te és társaid nagyszámú Python függvényt írtok.</p>
+
+<p>A csapatod úgy dönt, hogy a függvényeket külön modulokba csoportosítjátok, és ez lett az elrendezés végeredménye:</p>
+
+<img class="lightbox" src="/uploads/media/default/0001/01/5daeeacd359dd6c05f3f1e61c73ba42c462640f4.png" width="55%" alt="Functions located in separate modules">
+<br><br> 
+
+<codep class="syntax-color copy line-numbers">#! /usr/bin/env python3
+
+""" module: alpha """
+
+def funA():
+    return "Alpha"
+
+if __name__ == "__main__":
+    print("I prefer to be a module.")
+</codep>
+<p style="text-align: right;">alpha.py</p>
+
+ 
+<p>Megjegyzés: csak az <font face="Courier New">alpha.py</font> modul teljes tartalmát mutattuk be - feltételezzük, hogy az összes modul hasonlóan néz ki (tartalmaznak egy <codel>funX</codel>nevű függvényt, ahol <i>X</i> a modul nevének első betűje).</p>
+
+
+
+<br><br>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<h2>Az első csomagod: 2. lépés</h1>
+
+
+
+    <p>Hirtelen valakinek feltűnik, hogy ezek a modulok saját hierarchiát alkotnak, ezért nem lesz jó ötlet az összeset egy lapos struktúrába helyezni.</p>
+
+    <p>Némi vita után a csapat arra a következtetésre jut, hogy a modulokat csoportosítani kell. Minden résztvevő egyetért abban, hogy a következő fastruktúra tökéletesen tükrözi a modulok közötti kölcsönös kapcsolatokat:</p>
+
+<img class="lightbox" src="/uploads/media/default/0001/01/0ad92b73c58b41b513bda0c0d0ed6cd99f1936a4.png" width="65%" alt="Modules grouped together">
+<br><br>  
+
+    <p>Tekintsük át ezt alulról felfelé:</p>
+
+<ul>
+<li>az <font face="Courier New">ugly</font> csoport két modult tartalmaz: <font face="Courier New">psi</font> és <font face="Courier New">omega</font>;</li>
+<li>a <font face="Courier New">best</font> csoport két modult tartalmaz: <font face="Courier New">sigma</font> és <font face="Courier New">tau</font>;</li>
+<li>a <font face="Courier New">good</font> csoport két modult (<font face="Courier New">alpha</font> és <font face="Courier New">beta</font>) és egy alcsoportot (<font face="Courier New">best</font>) tartalmaz.</li>
+<li>az <font face="Courier New">extra</font> csoport két alcsoportot (<font face="Courier New">good</font> és <font face="Courier New">bad</font>) és egy modult (<font face="Courier New">iota</font>) tartalmaz.</li>
+</ul>
+ 
+
+<p>Rosszul néz ki? Egyáltalán nem - elemezd a szerkezetet alaposan. Hasonlít valamire, nem igaz?</p>
+
+<p>Úgy néz ki, mint egy <b>könyvtárszerkezet</b>.</p>
+
+<p>Építsünk egy fát, amely tükrözi a modulok közötti függőségeket.</p>
+
+
+<br>
+<br>
+
+</div>
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

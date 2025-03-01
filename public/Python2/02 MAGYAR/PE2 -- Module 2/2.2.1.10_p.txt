@@ -1,0 +1,46 @@
+<problem chapter='2' section='2' slide='1' problem='10' title='Karakterláncok'>
+
+<!--
+Update history:
+2020-09-22 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>
+alphabet = "bcdefghijklmnopqrstuvwxy"
+
+alphabet = "a" + alphabet
+alphabet = alphabet + "z"
+
+print(alphabet)
+
+</code>
+
+
+
+<h1>Műveletek karakterláncokon (folytatás)</h1>
+
+<p>Ne gondold, hogy a stringek megváltoztathatatlansága korlátozza a stringekkel való műveleteket.</p>
+
+<p>Ennek egyetlen következménye, hogy emlékezned kell rá, és a kódodat kissé másképp kell megvalósítanod – nézd meg a szerkesztőben található példakódot.</p>
+
+
+<p>A kódnak ez a formája teljesen elfogadott, a Python szabályainak megkerülése nélkül működik, és a teljes latin ábécét megjeleníti a képernyőn:</p>
+
+<codep>abcdefghijklmnopqrstuvwxyz</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+
+<p>Feltehetjük a kérdést, hogy <strong>egy karakterlánc új másolatának létrehozása minden egyes alkalommal, amikor módosítjuk a tartalmát, rontja-e a kód hatékonyságát</strong>.</p>
+
+<p>Igen, így van. Egy kicsit. De ez egyáltalán nem probléma.</p>
+
+
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

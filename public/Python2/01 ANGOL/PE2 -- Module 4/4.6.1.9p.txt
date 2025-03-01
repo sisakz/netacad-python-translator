@@ -1,0 +1,42 @@
+<problem chapter='4' section='6' slide='1' problem='9' title='The calendar module'>
+
+<!--
+Update history:
+2020-03-30 Sebastian (first version)
+2020-10-13 Grzegorz (file creation, review, PEP-8 compliance check)
+-->
+
+<code>import calendar  
+
+c = calendar.Calendar(calendar.SUNDAY)
+
+for weekday in c.iterweekdays():
+    print(weekday, end=" ")
+
+</code>
+
+<h1>Creating a <font face="Courier New">Calendar</font> object</h1>
+
+<p>The <codel>Calendar</codel> class constructor takes one optional parameter named <codel>firstweekday</codel>, by default equal to 0 (Monday).</p>
+
+<p>The <codel>firstweekday</codel> parameter must be an integer between 0-6. For this purpose, we can use the already-known constants - look at the code in the editor.</p>
+
+<p>The program will output the following result:</p>
+
+<codep>6 0 1 2 3 4 5</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+<p>The code example uses the <codel>Calendar</codel> class method named <codel>iterweekdays</codel>, which returns an iterator for week day numbers.</p>
+
+<p>The first value returned is always equal to the value of the <codel>firstweekday</codel> property. Because in our example the first value returned is 6, it means that the week starts on a Sunday.</p>
+
+
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

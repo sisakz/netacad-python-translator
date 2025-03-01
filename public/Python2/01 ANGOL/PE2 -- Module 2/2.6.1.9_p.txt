@@ -1,0 +1,70 @@
+<problem chapter='2' section='6' slide='1' problem='9' title="Errors – the programmer's daily bread | try-except">
+
+<!--
+Update history:
+2020-09-21 Grzegorz (review, PEP-8 compliance check, update, title correction)
+-->
+
+<code>
+try:
+    x = int(input("Enter a number: "))
+    y = 1 / x
+    print(y)
+except ZeroDivisionError:
+    print("You cannot divide by zero, sorry.")
+except ValueError:
+    print("You must enter an integer value.")
+except:
+    print("Oh dear, something went wrong...")
+
+print("THE END.")
+
+</code>
+
+
+
+<h1>Exceptions: continued</h1>
+
+<p>Look at the code in the editor. Our solution is there.</p>
+
+<p>The code, when run, produces one of the following four variants of output:</p>
+
+<ul>
+<li>if you enter a valid, non-zero integer value (e.g., <codel>5</codel>) it says:
+<br><br>
+<codep>0.2
+THE END.</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+</li>
+
+<li>if you enter <codel>0</codel>, it says:
+<br><br>
+<codep>You cannot divide by zero, sorry.
+THE END.</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+</li>
+
+<li>if you enter any non-integer string, you see:
+
+<br><br>
+<codep>You must enter an integer value.
+THE END.</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+</li>
+
+<li>(locally on your machine) if you press Ctrl-C while the program is waiting for the user's input (which causes an exception named <font face="Courier New">KeyboardInterrupt</font>), the program says:
+<br><br>
+
+<codep>Oh dear, something went wrong...
+THE END.</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+</li>
+</ul>
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

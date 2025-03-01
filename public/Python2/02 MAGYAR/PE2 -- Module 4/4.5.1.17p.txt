@@ -1,0 +1,47 @@
+<problem chapter='4' section='5' slide='1' problem='17' title='A datetime és time modul (folytatás)'>
+
+<!--
+Update history:
+2020-03-30 Sebastian (first version)
+2020-10-12 Grzegorz (file creation, review, PEP-8 compliance check)
+-->
+
+<code>import time
+
+timestamp = 1572879180
+st = time.gmtime(timestamp)
+
+print(time.strftime("%Y/%m/%d %H:%M:%S", st))
+print(time.strftime("%Y/%m/%d %H:%M:%S"))
+
+</code>
+
+
+
+<h1>Az <font face="Courier New">strftime()</font> függvény a <font face="Courier New">time</font> modulban</h1>
+
+<p>Valószínûleg nem fogsz meglepõdni, ha megtudod, hogy az <codel>strftime</codel> függvény elérhetõ a <codel>time</codel> modulban. Némileg eltér a <codel>datetime</codel> modul által biztosított osztályok <codel>strftime</codel> metódusaitól, mivel a format argumentumon kívül (opcionálisan) egy tuple vagy struct_time objektumot is elfogadhat.</p>
+
+<p>Ha nem adsz át tuple vagy <i>struct_time</i> objektumot, a függvény az aktuális helyi idõt használja. Nézd meg a példát a szerkesztõablakban.</p>
+
+<p>Az eredményünk a következõképpen néz ki:</p>
+
+<codep>2019/11/04 14:53:00
+2020/10/12 12:19:40</codep>
+<p style="text-align: right;"><font size="-2"><b>kimeneti minta</b></font></p>
+
+
+<p>A formátum létrehozása ugyanúgy néz ki, mint a <codel>datetime</codel> modul <codel>strftime</codel> metódusai esetében. Példánkban a már ismert <codel>%Y</codel>, <codel>%m</codel>, <codel>%d</codel>, <codel>%H</codel>, <codel>%M</codel>, és <codel>%S</codel> direktívákat használjuk.</p>
+
+<p>Az elsõ függvényhívásban a <i>struct_time</i> objektumot, míg a második hívásban (az opcionális argumentum nélkül) a helyi idõt formázzuk. A <codel>time</codel> modulban elérhetõ összes direktívát <a href="https://docs.python.org/3/library/time.html#time.strftime" target=_blank">itt</a> találod.</p>
+
+
+
+<br>
+<br>
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

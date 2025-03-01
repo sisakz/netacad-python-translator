@@ -1,0 +1,67 @@
+<problem chapter='1' section='1' slide='1' problem='4' title='A modulok használata'>
+
+<!--
+Update history:
+2020-08-28 Grzegorz (review, PEP-8 compliance check, update)
+2021-06-14 Grzegorz (review)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h1>Modul importálása: folytatás</h1>
+
+<p>A folytatáshoz meg kell ismerned egy fontos kifejezést: a <strong>névteret</strong>. Ne aggódj, nem megyünk bele a részletekbe - ez a magyarázat a lehető legrövidebb lesz.</p>
+
+<p>A <strong>névtér</strong> egy olyan (nem fizikai értelemben vett) tér, amelyben bizonyos nevek léteznek, és a nevek nem ütköznek egymással (azaz nincs két különböző, azonos nevű objektum). Azt mondhatjuk, hogy minden társadalmi csoport egy névtér - a csoport hajlamos arra, hogy minden egyes tagját egyedi módon nevezze el (pl.: a szülők nem fogják ugyanazt a keresztnevet adni a gyermekeiknek).</p>
+
+<center><img src="/uploads/media/default/0001/01/a7a8f2fd201a7368f18635bbfc3b7cd18e699e17.png" alt="The namespace concept"></center>
+
+<p>Ezt az egyediséget többféleképpen el lehet érni, például a keresztnevek mellett becenevek használatával (ez egy kis csoporton belül, például egy iskolai osztályon belül működik), vagy a csoport minden tagjának speciális azonosítókkal való ellátásával (az amerikai társadalombiztosítási szám jó példa erre a gyakorlatra).</p>
+
+
+
+<br>
+
+
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+<p><strong>Egy adott névtéren belül minden névnek egyedinek kell maradnia</strong>. Ez azt jelentheti, hogy egyes nevek eltűnhetnek, amikor egy másik, már ismert nevű entitás belép a névtérbe. Megmutatjuk, hogyan működik ez, és hogyan lehet ezt szabályozni, de előbb térjünk vissza az importokhoz.</p>
+
+<p>Ha a megadott nevű modul <strong>létezik és elérhető</strong> (a modul tulajdonképpen egy <strong>Python forrásfájl</strong>), a Python importálja a tartalmát, azaz a <strong>modulban definiált összes név ismertté válik</strong>, de nem kerül be a kódod névterébe.</p>
+
+<p>Ez azt jelenti, hogy lehet saját <codel>sin</codel> vagy <codel>pi</codel> nevű entitásod, és ezeket az importálás semmilyen módon nem fogja befolyásolni.</p>
+
+<center><img src="/uploads/media/default/0001/01/ad9847e20a1aaf7cb82b6e47b67a9ce091a2f0ea.png" alt="The namespace concept: math and pi"></center>
+<br>
+
+<p>Ezen a ponton talán azon tűnődhetsz, hogyan érheted el a <codel>math</codel> modulból érkező <codel>pi</codel>-t?</p>
+
+<p>Ehhez a <codel>pi</codel>-t a saját modul nevével együtt kell minősíteni.</p>
+
+<br>
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

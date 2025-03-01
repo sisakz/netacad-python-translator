@@ -1,0 +1,106 @@
+<problem chapter='2' section='1' slide='1' problem='3' title='Characters and Strings vs. Computers'>
+
+<!--
+Update history:
+2020-09-21 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h1>Unicode</h1>
+
+<p>Code pages helped the computer industry to solve I18N issues for some time, but it soon turned out that they would not be a permanent solution.</p>
+
+<p>The concept that solved the problem in the long term was <strong>Unicode</strong>.</p>
+
+<img src="/uploads/media/default/0001/01/eba16b61c5b6e2aa7fad8057aadb1783d407dca3.png" width="80%" alt="UNICODE">
+<br><br>
+
+<p><strong>Unicode assigns unique (unambiguous) characters (letters, hyphens, ideograms, etc.) to more than a million code points</strong>. The first 128 Unicode code points are identical to ASCII, and the first 256 Unicode code points are identical to the ISO/IEC 8859-1 code page (a code page designed for western European languages).</p>
+
+
+<h2>UCS-4</h2>
+
+<p>The Unicode standard says nothing about how to code and store the characters in the memory and files. It only names all available characters and assigns them to planes (a group of characters of similar origin, application, or nature).</p>
+
+<img src="/uploads/media/default/0001/01/98a64a2b88df12f5d252d13e44349e2ec4f10ce4.png" width="80%" alt="UCS-4">
+<br><br>
+
+<p>There is more than one standard describing the techniques used to implement Unicode in actual computers and computer storage systems. The most general of them is <strong>UCS-4</strong>.</p>
+
+<p>The name comes from <strong>Universal Character Set</strong>.</p>
+
+<p><strong>UCS-4 uses 32 bits (four bytes) to store each character</strong>, and the code is just the Unicode code points' unique number. A file containing UCS-4 encoded text may start with a BOM (byte order mark), an unprintable combination of bits announcing the nature of the file's contents. Some utilities may require it.</p>
+
+
+
+<br><br>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+
+<p>As you can see, UCS-4 is a rather wasteful standard - it increases a text's size by four times compared to standard ASCII. Fortunately, there are smarter forms of encoding Unicode texts.</p>
+
+<h2>UTF-8</h2>
+
+<p>One of the most commonly used is <strong>UTF-8</strong>.</p>
+
+<p>The name is derived from <strong>Unicode Transformation Format</strong>.</p>
+
+<p>The concept is very smart. <strong>UTF-8 uses as many bits for each of the code points as it really needs to represent them</strong>.</p>
+
+<img src="/uploads/media/default/0001/01/adaa26db7139964a0e75abd086569ab99b969e2d.png" width="80%" alt="UTF-8 - humorous graphics">
+<br><br>
+
+<p>For example:</p>
+
+<ul>
+<li>all Latin characters (and all standard ASCII characters) occupy eight bits;</li>
+<li>non-Latin characters occupy 16 bits;</li>
+<li>CJK (China-Japan-Korea) ideographs occupy 24 bits.</li>
+</ul>
+ 
+
+<p>Due to features of the method used by UTF-8 to store the code points, there is no need to use the BOM, but some of the tools look for it when reading the file, and many editors set it up during the save.</p>
+
+<p>Python 3 fully supports Unicode and UTF-8:</p>
+
+<ul>
+<li>you can use Unicode/UTF-8 encoded characters to name variables and other entities;</li>
+<li>you can use them during all input and output.</li>
+</ul>
+ 
+
+<p>This means that Python3 is completely I18Ned.</p>
+
+
+<br>
+<br>
+
+</div>
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

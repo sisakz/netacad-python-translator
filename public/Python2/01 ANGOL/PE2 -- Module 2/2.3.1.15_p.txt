@@ -1,0 +1,50 @@
+<problem chapter='2' section='3' slide='1' problem='15' title='String methods'>
+
+<!--
+Update history:
+2020-09-23 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>
+# Demonstrating the startswith() method:
+print("omega".startswith("meg"))
+print("omega".startswith("om"))
+
+print()
+
+# Demonstrating the strip() method:
+print("[" + "   aleph   ".strip() + "]")
+
+</code>
+
+
+
+<h1>The <font face="Courier New">startswith()</font> method</h1>
+
+<p>The <codel>startswith()</codel> method is a mirror reflection of <codel>endswith()</codel> – it <strong>checks if a given string starts with the specified substring</strong>.</p>
+
+<p>Look at the example in the editor. This is the result from it:</p>
+
+<codep>False
+True</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+
+<h2>The <font face="Courier New">strip()</font> method</h2>
+
+<p>The <codel>strip()</codel> method combines the effects caused by <codel>rstrip()</codel> and <codel>lstrip()</codel> – it <strong>makes a new string lacking all the leading and trailing whitespaces</strong>.</p>
+
+<p>Look at the second example in the editor. This is the result it returns:</p>
+
+<codep>[aleph]</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+<p>Now carry out your own experiments with the two methods.</p>
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

@@ -1,0 +1,53 @@
+<problem chapter='4' section='1' slide='1' problem='7' title='Generators and closures'>
+
+<!--
+Update history:
+2020-10-05 Grzegorz (review, PEP-8 compliance check)
+-->
+
+<code>
+the_list = []
+
+for x in range(10):
+    the_list.append(1 if x % 2 == 0 else 0)
+
+print(the_list)
+
+</code>
+
+
+
+<h1>More about list comprehensions: continued</h1>
+
+
+<p>There is a very interesting syntax we want to show you now. Its usability is not limited to list comprehensions, but we have to admit that comprehensions are the ideal environment for it.</p>
+
+<P>It's a <strong>conditional expression – a way of selecting one of two different values based on the result of a Boolean expression</strong>.</p>
+
+<p>Look:</p>
+
+<p><font size="+1">expression_one if condition else expression_two</font></p>
+ 
+
+<p>It may look a bit surprising at first glance, but you have to keep in mind that it is <strong>not a conditional instruction</strong>. Moreover, it's not an instruction at all. It's an operator.</p>
+
+<P>The value it provides is equal to <font face="Courier New">expression_one</font> when the condition is <codel>True</codel>, and <font face="Courier New">expression_two</font> otherwise.</p>
+
+<p>A good example will tell you more. Look at the code in the editor.</p>
+
+<p>The code fills a list with <codel>1</codel>s and <codel>0</codel>s – if the index of a particular element is odd, the element is set to <codel>0</codel>, and to <codel>1</codel> otherwise.</p>
+
+<p>Simple? Maybe not at first glance. Elegant? Indisputably.</p>
+
+ 
+<p>Can you use the same trick within a list comprehension? Yes, you can.</p>
+
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

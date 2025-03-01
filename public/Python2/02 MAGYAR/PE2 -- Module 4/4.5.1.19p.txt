@@ -1,0 +1,53 @@
+<problem chapter='4' section='5' slide='1' problem='19' title='A datetime és time modul (folytatás)'>
+
+<!--
+Update history:
+2020-03-30 Sebastian (first version)
+2020-10-12 Grzegorz (file creation, review, PEP-8 compliance check)
+-->
+
+<code>from datetime import date
+from datetime import datetime
+
+d1 = date(2020, 11, 4)
+d2 = date(2019, 11, 4)
+
+print(d1 - d2)
+
+dt1 = datetime(2020, 11, 4, 0, 0, 0)
+dt2 = datetime(2019, 11, 4, 14, 53, 0)
+
+print(dt1 - dt2)
+
+</code>
+
+
+
+<h1>Dátum- és időműveletek</h1>
+
+<p>Előbb-utóbb számításokat kell végeznünk a dátummal és az idővel kapcsolatban. Szerencsére a <codel>datetime</codel> modulban van egy <codel>timedelta</codel> nevű osztály, amely éppen erre a célra készült.</p>
+
+<p>Egy <codel>timedelta</codel> objektum létrehozásához egyszerűen végezz kivonást a <codel>date</codel> vagy <codel>datetime</codel> objektumokon, ahogy azt a szerkesztőablakban lévő példában is tettük. Futtasd le.</p>
+
+
+<p>Eredmény:</p>
+<codep>366 days, 0:00:00
+365 days, 9:07:00</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+<p>A példa a <codel>date</codel> és a <codel>datetime</codel> objektumok kivonását mutatja. Az első esetben a napok különbségét kapjuk, ami 366 nap. Megjegyezzük, hogy az eredményben az órákban, percekben és másodpercekben kifejezett különbség is megjelenik. A második esetben más eredményt kapunk, mivel eltérő időket írtunk a műveletbe. A művelet eredménye így 365 nap, 9 óra és 7 perc.</p>
+
+<p>Hamarosan még többet tudsz meg a <codel>timedelta</codel> objektumok létrehozásáról és a velük végezhető műveletekről.</p>
+
+
+
+
+
+<br>
+<br>
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

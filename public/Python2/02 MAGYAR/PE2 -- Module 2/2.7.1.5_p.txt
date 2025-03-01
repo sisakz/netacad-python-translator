@@ -1,0 +1,55 @@
+<problem chapter='2' section='7' slide='1' problem='5' title='Kivételek | raise'>
+
+<!--
+Update history:
+2020-09-21 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>def bad_fun(n):
+    raise ZeroDivisionError
+
+
+try:
+    bad_fun(0)
+except ArithmeticError:
+    print("What happened? An error?")
+
+print("THE END.")
+
+</code>
+
+
+
+<h1>Kivételek (folytatás)</h1>
+
+<p>
+    A <codel>raise</codel> utasítás a megadott <codel>exc</codel> nevû kivételt úgy idézi elõ, mintha az normál (természetes) módon lenne kiváltva:</p>
+
+    <codep class="syntax-color">
+        raise exc
+    </codep>
+    <br>
+
+
+<p>Megjegyzés: a <codel>raise</codel> egy kulcsszó.</p>
+
+<p>Az utasítás lehetõvé teszi, hogy:</p>
+
+<ul>
+    <li><strong>szimuláld a tényleges kivételek kiváltását</strong> (pl. a kezelési stratégia teszteléséhez)</li>
+    <li>részben <strong>kezelj egy kivételt</strong>, és a kód egy másik részét tedd felelõssé a kezelés befejezéséért (a problémák szétválasztása).</li>
+</ul>
+
+<p>Nézd meg a kódot a szerkesztõben. Így használhatod a gyakorlatban.</p>
+
+<p>A program kimenete változatlan marad.</p>
+
+<p>Így <strong>tesztelheted a kivételkezelési kódrészletedet</strong> anélkül, hogy a programodat mesterségesen hibára kényszerítenéd.</p>
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

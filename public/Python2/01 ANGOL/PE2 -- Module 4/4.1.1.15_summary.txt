@@ -1,0 +1,228 @@
+<problem chapter='4' section='1' slide='1' problem='15' title='SECTION SUMMARY'>
+
+<!--
+Update history:
+2020-09-08 Slawek (first version)
+2020-10-07 Grzegorz (review, lambda note added)
+2021-07-07 Grzegorz (corrections)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<h1>Key takeaways</h1>
+
+<br>
+
+
+<p>1. An <b>iterator</b> is an object of a class providing at least <b>two</b> methods (not counting the constructor):</p>
+<ul>
+<li><codel>__iter__()</codel> is invoked once when the iterator is created and returns the iterator's object <b>itself</b>;</li>
+<li><codel>__next__()</codel> is invoked to provide the <b>next iteration's value</b> and raises the <codel>StopIteration</codel> exception when the iteration <b>comes to and end</b>.</li>
+</ul>
+<br>
+
+<p>2. The <codel>yield</codel> statement can be used only inside functions. The <codel>yield</codel> statement suspends function execution and causes the function to return the yield's argument as a result. Such a function cannot be invoked in a regular way – its only purpose is to be used as a <b>generator</b> (i.e. in a context that requires a series of values, like a <codel>for</codel> loop.)</p> 
+<br>
+
+<p>3. A <b>conditional expression</b> is an expression built using the <codel>if-else</codel> operator. For example:</p>
+<codep class="syntax-color copy">print(True if 0 >= 0 else False)
+</codep>
+<br>
+<p>outputs <codel>True</codel>.</p>
+<br>
+
+<p>4. A <b>list comprehension</b> becomes a <b>generator</b> when used inside <b>parentheses</b> (used inside brackets, it produces a regular list). For example:</p>
+<codep class="syntax-color copy">for x in (el * 2 for el in range(5)):
+	print(x)</codep>
+<br>
+<p>outputs <codel>02468</codel>.</p>
+<br>
+
+<p>4. A <b>lambda function</b> is a tool for creating <b>anonymous functions</b>. For example:</p>
+<codep class="syntax-color copy">def foo(x, f):
+    return f(x)
+
+print(foo(9, lambda x: x ** 0.5))
+</codep>
+<br><p>outputs <codel>3.0</codel>.</p>
+<br>
+
+<p>5. The <codel>map(fun, list)</codel> function creates a <b>copy</b> of a <codel>list</codel> argument, and applies the <codel>fun</codel> function to all of its elements, returning a <b>generator</b> that provides the new list content element by element. For example:</p>
+<codep class="syntax-color copy">short_list = ['mython', 'python', 'fell', 'on', 'the', 'floor']
+new_list = list(map(lambda s: s.title(), short_list))
+print(new_list)
+</codep>
+<br>
+<p>outputs <codel>['Mython', 'Python', 'Fell', 'On', 'The', 'Floor']</codel>.</p>
+<br>
+
+<p>6. The <codel>filter(fun, list)</codel> function creates a <b>copy</b> of those <codel>list</codel> elements, which cause the <codel>fun</codel> function to return <codel>True</codel>. The function's result is a <b>generator</b> providing the new list content element by element. For example:</p>
+<codep class="syntax-color copy">short_list = [1, "Python", -1, "Monty"]
+new_list = list(filter(lambda s: isinstance(s, str), short_list))
+print(new_list)
+</codep>
+<br>
+<p>outputs <codel>['Python', 'Monty']</codel>.</p>
+<br>
+
+<p>7. A closure is a technique which allows the <b>storing of values</b> in spite of the fact that the <b>context</b> in which they have been created <b>does not exist anymore</b>. For example:</p>
+<codep class="syntax-color copy">def tag(tg):
+    tg2 = tg
+    tg2 = tg[0] + '/' + tg[1:]
+
+    def inner(str):
+        return tg + str + tg2
+    return inner
+
+
+b_tag = tag('&lt;b&gt;')
+print(b_tag('Monty Python'))
+</codep>
+<br>
+<p>outputs <codel>&lt;b&gt;Monty Python&lt;/b&gt;</codel></p>
+
+<br>
+
+</div>
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+<script>
+function solution (id) {
+    var element = document.getElementById(id);
+    
+if (element.style.display === "none") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
+    }
+}
+</script>
+
+<p><strong>Exercise 1</strong></p>
+
+<p>What is the expected output of the following code?</p>
+<codep>class Vowels:
+    def __init__(self):
+        self.vow = "aeiouy "  # Yes, we know that y is not always considered a vowel.
+        self.pos = 0
+
+    def __iter__(self):
+        return self
+
+    def __next__(self):
+        if self.pos == len(self.vow):
+            raise StopIteration
+        self.pos += 1
+        return self.vow[self.pos - 1]
+
+
+vowels = Vowels()
+for v in vowels:
+    print(v, end=' ')
+
+</codep>
+<br>
+
+<button class="button tiny" onclick="solution('sol')">Check</button>
+
+<p id="sol" style="display: none;">
+<codep>a e i o u y</codep></p>
+
+
+
+<br><br>
+
+
+
+<p><strong>Exercise 2</strong></p>
+<p>Write a <b>lambda</b> function, setting the least significant bit of its integer argument, and apply it to the <codel>map()</codel> function to produce the string <codel>1 3 3 5</codel> on the console.</p>
+<codep>any_list = [1, 2, 3, 4]
+even_list = # Complete the line here.
+print(even_list)
+
+</codep>
+<br>
+
+
+<button class="button tiny" onclick="solution('sol2')">Check</button>
+<p id="sol2" style="display: none;"><codep>list(map(lambda n: n | 1, any_list))
+
+</codep>
+</p>
+
+
+<br><br>
+
+
+
+
+<p><strong>Exercise 3</strong></p>
+<p>What is the expected output of the following code?</p>
+
+<codep>def replace_spaces(replacement='*'):
+    def new_replacement(text):
+        return text.replace(' ', replacement)
+    return new_replacement
+
+
+stars = replace_spaces()
+print(stars("And Now for Something Completely Different"))
+
+</codep>
+<br>
+
+<button class="button tiny" onclick="solution('sol3')">Check</button>
+
+<p id="sol3" style="display: none;">
+<codep>And*Now*for*Something*Completely*Different</codep>
+</p>
+
+
+
+
+<br>
+<hr>
+
+
+
+<p><span class="label" style="background-color:rgb(205, 168, 105);"><b>Note</b></span></p>
+
+<p><a href="https://www.python.org/dev/peps/pep-0008/#programming-recommendations" target="_blank">PEP 8</a>, the Style Guide for Python Code, recommends that <b>lambdas should not be assigned to variables, but rather they should be defined as functions</b>.</p>
+
+<p>This means that it is better to use a <codel>def</codel> statement, and avoid using an assignment statement that binds a lambda expression to an identifer. Analyze the code below:</p>
+
+<p><codep class="syntax-color"># Recommended:
+def f(x): return 3*x
+
+
+# Not recommended:
+f = lambda x: 3*x
+</codep></p>
+
+<p>Binding lambdas to identifiers generally duplicates the functionality of the <codel>def</codel> statement. Using <codel>def</codel> statements, on the other hand, generates more lines of code.</p>
+
+<p>It is important to understand that reality often likes to draw its own scenarios, which do not necessarily follow the conventions or formal recommendations. Whether you decide to follow them or not will depend on many things: your preferences, other conventions adopted, company internal guidelines, compatibility with existing code, etc. Be aware of this.</p>
+
+<br>
+
+
+</div>
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

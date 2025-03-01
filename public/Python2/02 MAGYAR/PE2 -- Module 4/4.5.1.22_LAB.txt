@@ -1,0 +1,69 @@
+<problem chapter='4' section='5' slide='1' problem='22' title='LAB: A datetime és time modul'>
+
+<!--
+Update history:
+2020-10-07 Grzegorz (review, PEP-8 compliance check)
+-->
+
+<code>
+</code>
+
+<span class="label" style="background-color:rgb(205, 168, 105);"><b>LABORGYAKORLAT</b></span>
+
+<br><br>
+
+<h2>Becsült idő</h2>
+<p>15-45 perc</p>
+
+<h2>Nehézségi szint</h2>
+<p>Könnyű</p>
+
+<h2>Célok</h2>
+<ul>
+    <li>a tanuló dátum- és időformázási készségeinek fejlesztése;</li>
+    <li>a tanuló <codel>strftime</codel> metódus használatára vonatkozó készségeinek fejlesztése.</li>
+</ul>
+
+<h2>Forgatókönyv</h2>
+<p>A tanfolyam során megismerkedtél a <codel>strftime</codel> metódussal, amely a formátum létrehozásához a direktívák ismeretét igényli. Itt az ideje, hogy az ismert direktívákat a gyakorlatban is alkalmazd.</p>
+
+<p>Másrészt lehetőséged lesz gyakorolni a dokumentáció használatát is, mert olyan direktívákat kell majd benne megtalálnod, amelyeket itt még nem tanultunk.</p>
+
+<b>A feladat:</b>
+
+<p>Írj programot, amely létrehoz egy <codel>datetime</codel> objektumot 2020. november 4., 14:53:00-ra. A létrehozott objektum hívja meg a <codel>strftime</codel> metódust a megfelelő formátummal, hogy a következő eredményt jelenítse meg:</p>
+
+<codep>2020/11/04 14:53:00
+20/November/04 14:53:00 PM
+Wed, 2020 Nov 04
+Wednesday, 2020 November 04
+Weekday: 3
+Day of the year: 309
+Week number of the year: 44</codep>
+<p style="text-align: right;"><font size="-2"><b>várható kimenet</b></font></p>
+
+
+<p><b>Megjegyzés:</b> Minden eredménysort az <i>strftime</i> metódus meghívásával kell létrehozni, a format argumentumban legalább egy direktívával.</p>
+
+
+
+
+<sampleSolution>from datetime import datetime
+
+my_date = datetime(2020, 11, 4, 14, 53)
+
+print(my_date.strftime("%Y/%m/%d %H:%M:%S"))
+print(my_date.strftime("%y/%B/%d %H:%M:%S %p"))
+print(my_date.strftime("%a, %Y %b %d"))
+print(my_date.strftime("%A, %Y %B %d"))
+print(my_date.strftime("Weekday: %w"))
+print(my_date.strftime("Day of the year: %j"))
+print(my_date.strftime("Week number of the year: %W"))
+
+</sampleSolution>
+
+
+<studyMode>false</studyMode>
+<labMode>true</labMode>
+
+</problem>

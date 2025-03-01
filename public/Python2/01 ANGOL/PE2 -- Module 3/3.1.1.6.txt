@@ -1,0 +1,112 @@
+<problem chapter='3' section='1' slide='1' problem='6' title='The foundations of OOP'>
+
+<!--
+Update history:
+2020-09-30 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h1>What does an object have?</h1>
+
+
+<p>The object programming convention assumes that <strong>every existing object may be equipped with three groups of attributes</strong>:</p>
+
+<ul>
+<li>an object has a <strong>name</strong> that uniquely identifies it within its home namespace (although there may be some anonymous objects, too)</li>
+<li>an object has a <strong>set of individual properties</strong> which make it original, unique, or outstanding (although it's possible that some objects may have no properties at all)</li>
+<li>an object has a <strong>set of abilities to perform specific activities</strong>, able to change the object itself, or some of the other objects.</li>
+</ul>
+ 
+
+<p>There is a hint (although this doesn't always work) which can help you identify any of the three spheres above. Whenever you describe an object and you use:</p>
+
+<ul>
+<li>a noun – you probably define the object's name;</li>
+<li>an adjective – you probably define the object's property;</li>
+<li>a verb – you probably define the object's activity.</li>
+</ul>
+ 
+<p>Two sample phrases should serve as a good example:</p>
+
+<ul>
+ 
+
+<li><font size="+1">A pink Cadillac went quickly.</font>
+<br><br>
+
+Object name = Cadillac
+<br>
+
+Home class = Wheeled vehicles
+<br>
+
+Property = Color (pink)
+<br>
+
+Activity = Go (quickly)
+</li>
+</ul>
+
+
+
+<br>
+<br> 
+
+
+
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+
+<br>
+
+<ul>
+<li><font size="+1">Max is a large cat who sleeps all day.</font>
+<br><br>
+
+Object name = Max
+<br>
+
+Home class = Cat
+<br>
+
+Property = Size (large)
+<br>
+
+Activity = Sleep (all day)
+<br><br></li>
+
+</ul>
+
+<img class="lightbox" src="/uploads/media/default/0001/01/be95ffa57008024fff0e6cd735afa5687c806902.png" alt="The concept of object attributes" width="90%">
+<br>
+<br> 
+
+
+
+
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

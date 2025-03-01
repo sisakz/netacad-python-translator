@@ -1,0 +1,151 @@
+<problem chapter='3' section='5' slide='1' problem='22' title='SZAKASZ ÖSSZEFOGLALÁS 1/2'>
+
+<!--
+Update history:
+2020-09-07 Slawek (first version)
+2020-10-01 Grzegorz (reviewed, PEP-8 compliance control)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+	<h1>A legfontosabb tudnivalók</h1>
+
+<br>
+
+
+<p>1. Az <codel>__str__()</codel> nevû metódus felelõs az <b>objektum tartalmának (többé-kevésbé) olvasható karakterlánccá alakításáért</b>. Átdefiniálhatjuk, ha azt szeretnénk, hogy az objektumunk elegánsabb formában is képes legyen megjeleníteni önmagát. Például:</p>
+<codep class="syntax-color copy line-numbers">class Mouse:
+	def __init__(self, name):
+		self.my_name = name
+
+
+	def __str__(self):
+		return self.my_name
+
+
+the_mouse = Mouse('mickey')
+print(the_mouse)  # Prints "mickey". 
+</codep>
+<br>
+
+<p>2. Az <codel>issubclass(Class_1, Class_2)</codel> nevû függvény képes meghatározni, hogy a <codel>Class_1</codel> a <codel>Class_2</codel> <b>alosztálya-e</b>. Például:</p> 
+<codep class="syntax-color copy line-numbers">class Mouse:
+	pass
+
+
+class LabMouse(Mouse):
+	pass
+
+
+print(issubclass(Mouse, LabMouse), issubclass(LabMouse, Mouse))  # Prints "False True"
+</codep>
+<br>
+
+<p>3. Az <codel>isinstance(Object, Class)</codel> nevû függvény ellenõrzi, hogy egy objektum <b>egy megadott osztályból származik-e</b>. Például:</p>
+<codep class="syntax-color copy line-numbers">class Mouse:
+	pass
+
+
+class LabMouse(Mouse):
+	pass
+
+
+mickey = Mouse()
+print(isinstance(mickey, Mouse), isinstance(mickey, LabMouse))  # Prints "True False".
+</codep>
+<br>
+
+
+<p>4. Az <codel>is</codel> operátor ellenõrzi, hogy két változó <b>ugyanarra az objektumra</b> hivatkozik-e. Például:</p>
+<codep class="syntax-color copy line-numbers">class Mouse:
+	pass
+
+
+mickey = Mouse()
+minnie = Mouse()
+cloned_mickey = mickey
+print(mickey is minnie, mickey is cloned_mickey)  # Prints "False True".
+</codep>
+<br>
+
+</div>
+<div class="small-12 large-6 columns">
+
+<br>
+
+<p>5. A <codel>super()</codel> nevû paraméter nélküli függvény visszaad egy <b>hivatkozást az osztály legközelebbi szuperosztályára</b>. Például:</p>
+<codep class="syntax-color copy line-numbers">class Mouse:
+	def __str__(self):
+		return "Mouse"
+
+
+class LabMouse(Mouse):
+	def __str__(self):
+		return "Laboratory " + super().__str__()
+
+
+doctor_mouse = LabMouse();
+print(doctor_mouse)  # Prints "Laboratory Mouse".
+</codep>
+<br>
+
+<p>6. A szuperosztályban definiált metódusok, valamint a példány- és osztályváltozók <b>automatikusan öröklõdnek</b> az alosztályok számára. Például:</p>
+<codep class="syntax-color copy line-numbers">class Mouse:
+	Population = 0
+	def __init__(self, name):
+		Mouse.Population += 1
+		self.name = name
+
+	def __str__(self):
+		return "Hi, my name is " + self.name
+
+class LabMouse(Mouse):
+	pass
+
+professor_mouse = LabMouse("Professor Mouser")
+print(professor_mouse, Mouse.Population)  # Prints "Hi, my name is Professor Mouser 1"
+</codep>
+<br>
+
+<p>
+	7. A Python bármely objektum/osztály tulajdonságának megtalálásához megkeresi azt:
+	<ul>
+		<li>•	magában az objektumban;</li>
+		<li>•	az objektum öröklési sorában részt vevõ összes osztályban alulról felfelé;</li>
+		<li>•	ha egynél több osztály van egy adott öröklési útvonalon, a Python balról jobbra haladva vizsgálja azokat;</li>
+		<li>•	ha a fentiek közül mind sikertelen, a Python <codel>AttributeError</codel> kivételt dob.</li>
+	</ul>
+</p>
+<br>
+
+<p>8. Ha bármelyik alosztály definiál egy metódust/osztályváltozót/példányváltozót ugyanazon a néven, mint ami a szuperosztályban létezik, az új név <b>felülírja</b> a név bármely korábbi példányát. Például:</p>
+<codep class="syntax-color copy line-numbers">class Mouse:
+	def __init__(self, name):
+		self.name = name
+
+	def __str__(self):
+		return "My name is " + self.name
+
+class AncientMouse(Mouse):
+	def __str__(self):
+		return "Meum nomen est " + self.name
+
+mus = AncientMouse("Caesar")  # Prints "Meum nomen est Caesar"
+print(mus)
+</codep>
+<br>
+
+</div>
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>
+

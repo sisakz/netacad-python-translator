@@ -1,0 +1,49 @@
+<problem chapter='2' section='3' slide='1' problem='6' title='String methods'>
+
+<!--
+Update history:
+2020-09-22 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>
+# Example 1: Demonstrating the isapha() method:
+print("Moooo".isalpha())
+print('Mu40'.isalpha())
+
+# Example 2: Demonstrating the isdigit() method:
+print('2018'.isdigit())
+print("Year2019".isdigit())
+
+</code>
+
+
+
+<h1>The <font face="Courier New">isalpha()</font> method</h1>
+
+<p>The <codel>isalpha()</codel> method is more specialized – it's interested in <strong>letters only</strong>.</p>
+
+<p>Look at Example 1 – its output is:</p>
+
+<codep>True
+False</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+<h2>The <font face="Courier New">isdigit()</font> method</h2>
+
+<p>In turn, the <codel>isdigit()</codel> method looks at <strong>digits only</strong> – anything else produces <codel>False</codel> as the result.</p>
+
+<p>Look at Example 2 – its output is:</p>
+
+<codep>True
+False</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+<p>Carry out more experiments.</p>
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

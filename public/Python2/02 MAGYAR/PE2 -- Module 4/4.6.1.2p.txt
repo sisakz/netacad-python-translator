@@ -1,0 +1,47 @@
+<problem chapter='4' section='6' slide='1' problem='2' title='A calendar modul'>
+
+<!--
+Update history:
+2020-03-30 Sebastian (first version)
+2020-10-12 Grzegorz (file creation, review, PEP-8 compliance check)
+-->
+
+<code>import calendar
+print(calendar.calendar(2020))
+
+</code>
+
+<h1>Az első naptárad</h1>
+
+<p>A <codel>calendar</codel> modullal kapcsolatos kalandot egy egyszerű, <codel>calendar</codel> nevű függvénnyel kezdjük, amely lehetővé teszi az <b>egész évre vonatkozó naptár megjelenítését</b>. Nézd meg, hogyan használjuk a 2020-as naptár megjelenítésére. Futtasd a kódot a szerkesztőablakban, és figyeld meg, mi történik.</p>
+
+
+<p>A megjelenített eredmény hasonló a Unix alatt elérhető <i>cal</i> parancs kimenetéhez. Ha meg akarod változtatni az alapértelmezett naptárformázást, akkor a következő paramétereket használhatod:</p>
+
+
+<ul>
+    <li><codel>w</codel> – dátum oszlopszélessége (alapértelmezett 2)</li>
+    <li><codel>l</codel> – a hetek megjelenítése közötti sorköztávolság  (alapértelmezett 1)</li>
+    <li><codel>c</codel> – a havi oszlopok közötti szóközök száma (alapértelmezett 6)</li>
+    <li><codel>m</codel> – oszlopok száma (alapértelmezett 3)</li>
+</ul>
+
+
+<p>A naptárfüggvényhez meg kell adnod az évet, míg a többi, a formázásért felelős paraméter nem kötelező. Javasoljuk, hogy próbáld ki ezeket a paramétereket.</p>
+
+<p>A fenti függvény jó alternatívája a <i>prcal</i> nevű függvény, amely szintén ugyanazokat a paramétereket fogadja el, mint a <codel>calendar</codel> függvény, de nem kell a <codel>print</codel> függvényt használni a naptár megjelenítéséhez. Használata a következőképpen néz ki:</p>
+
+<p><codep class="syntax-color copy">import calendar
+calendar.prcal(2020)
+</codep></p>
+
+
+
+<br>
+<br>
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

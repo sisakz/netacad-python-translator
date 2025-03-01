@@ -1,0 +1,137 @@
+<problem chapter='4' section='2' slide='1' problem='12' title='SECTION SUMMARY'>
+
+<!--
+Update history:
+2020-09-09 Slawek (first version)
+2020-10-07 Grzegorz (review)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<h1>Key takeaways</h1>
+
+<br/>
+
+
+<p>1. A file needs to be <b>open</b> before it can be processed by a program, and it should be <b>closed</b> when the processing is finished.</p>
+
+<p>Opening the file associates it with the <b>stream</b>, which is an abstract representation of the physical data stored on the media. The way in which the stream is processed is called <b>open mode</b>. <b>Three</b> open modes exist:</p>
+<ul>
+<li><b>read mode</b> – only read operations are allowed;</li>
+<li><b>write mode</b> – only write operations are allowed;</li>
+<li><b>update mode</b> – both writes and reads are allowed.</li>
+</ul>
+<br/>
+
+<p>2. Depending on the physical file content, different Python classes can be used to process files. In general, the <codel>BufferedIOBase</codel> is able to process any file, while <codel>TextIOBase</codel> is a specialized class dedicated to processing text files (i.e. files containing human-visible texts divided into lines using new-line markers). Thus, the streams can be divided into <b>binary</b> and <b>text</b> ones.</p> 
+<br/>
+
+<p>3. The following <codel>open()</codel> function syntax is used to open a file:
+<br><br>
+<codep>open(file_name, mode=open_mode, encoding=text_encoding)</codep>
+<br>
+The invocation creates a stream object and associates it with the file named <codel>file_name</codel>, using the specified <codel>open_mode</codel> and setting the specified <codel>text_encoding</codel>, or it <b>raises an exception in the case of an error</b>.</p>
+<br/>
+
+<p>4. Three <b>predefined</b> streams are already open when the program starts:</p>
+<ul>
+<li><codel>sys.stdin</codel> – standard input;</li>
+<li><codel>sys.stdout</codel> – standard output;</li>
+<li><codel>sys.stderr</codel> – standard error output.</li>
+</ul>
+<br/>
+
+<p>4. The <codel>IOError</codel> exception object, created when any file operations fails (including open operations), contains a property named <codel>errno</codel>, which contains the completion code of the failed action. Use this value to diagnose the problem.</p>
+<br/>
+
+</div>
+<div class="small-12 large-6 columns">
+
+<br>
+
+<script>
+function solution (id) {
+    var element = document.getElementById(id);
+    
+if (element.style.display === "none") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
+    }
+}
+</script>
+
+<p><strong>Exercise 1</strong></p>
+<p>How do you encode an <codel>open()</codel> function’s <codel>mode</codel> argument value if you're going to create a new text file to only fill it with an article?</p>
+
+
+<button class="button tiny" onclick="solution('sol')">Check</button>
+
+<p id="sol" style="display: none;">
+<codel>"wt"</codel> or <codel>"w"</codel>
+</p>
+
+
+
+<br/><br/>
+
+<p><strong>Exercise 2</strong></p>
+<p>What is the meaning of the value represented by <codel>errno.EACESS</codel>?</p>
+
+
+
+<button class="button tiny" onclick="solution('sol2')">Check</button>
+<p id="sol2" style="display: none;"><b>Permission denied</b>: you're not allowed to access the file's contents.</p>
+    
+
+<br/><br/>
+
+
+
+
+<p><strong>Exercise 3</strong></p>
+<p>What is the expected output of the following code, assuming that the file named <i>file</i> does not exist?</p>
+<codep>import errno
+
+try:
+    stream = open("file", "rb")
+    print("exists")
+    stream.close()
+except IOError as error:
+    if error.errno == errno.ENOENT:
+        print("absent")
+    else:
+        print("unknown")
+
+</codep>
+
+<br/>
+
+<button class="button tiny" onclick="solution('sol3')">Check</button>
+
+
+
+<p id="sol3" style="display: none;">
+<codep>absent</codep>
+</p>
+
+
+
+
+<br/>
+<br/>
+
+</div>
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>
+

@@ -1,0 +1,53 @@
+<problem chapter='1' section='1' slide='1' problem='6' title='Importing a module | math'>
+
+<!--
+Update history:
+2020-08-28 Grzegorz (review, PEP-8 compliance check, update)
+2021-06-16 Grzegorz (review)
+-->
+
+<code>
+import math
+
+
+def sin(x):
+    if 2 * x == pi:
+        return 0.99999999
+    else:
+        return None
+
+
+pi = 3.14
+
+print(sin(pi/2))
+print(math.sin(math.pi/2))
+
+</code>
+
+<h1>Importing a module: continued</h1>
+
+
+<p>Now we're going to show you how the two namespaces (yours and the module's) can coexist.</p>
+
+<p>Take a look at the example in the editor window.</p>
+
+ 
+<p>We've defined our own <codel>pi</codel> and <codel>sin</codel> here.</p>
+
+<p>Run the program. The code should produce the following output:</p>
+
+<codep>0.99999999
+1.0</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+
+<p>As you can see, the entities don't affect each other.</p>
+
+<br>
+<br>
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

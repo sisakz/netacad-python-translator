@@ -1,0 +1,109 @@
+<problem chapter='4' section='5' slide='1' problem='12' title='The datetime and time modules (continued)'>
+
+<!--
+Update history:
+2020-03-30 Sebastian (first version)
+2020-10-12 Grzegorz (file creation, review, PEP-8 compliance check)
+-->
+
+<code>from datetime import datetime
+
+dt = datetime(2019, 11, 4, 14, 53)
+
+print("Datetime:", dt)
+print("Date:", dt.date())
+print("Time:", dt.time())
+
+</code>
+
+
+
+<h1>Creating <font face="Courier New">datetime</font> objects</h1>
+
+
+<p>In the <codel>datetime</codel> module, date and time can be represented either as separate objects or as one object. The class that combines date and time is called <codel>datetime</codel>.</p>
+
+<p><codep>datetime(year, month, day, hour, minute, second, microsecond, <i>tzinfo, fold</i>)
+
+</codep></p>
+
+<p>Its constructor accepts the following parameters:</p>
+
+
+
+<table>
+<tr>
+<th>Parameter</th>
+<th>Restrictions</th>
+</tr>
+
+<tr>
+<td><codel>year</codel></td>
+<td><p>The <i>year</i> parameter must be greater than or equal to 1 (MINYEAR constant) and less than or equal to 9999 (MAXYEAR constant).</p></td>
+</tr>
+
+<tr>
+<td><codel>month</codel></td>
+<td><p>The <i>month</i> parameter must be greater than or equal to 1 and less than or equal to 12.</p></td>
+</tr>
+
+<tr>
+<td><codel>day</codel></td>
+<td><p>The <i>day</i> parameter must be greater than or equal to 1 and less than or equal to the last day of the given month and year.</p></td>
+</tr>
+
+<tr>
+<td><codel>hour</codel></td>
+<td><p>The <i>hour</i> parameter must be greater than or equal to 0 and less than 23.</p></td>
+</tr>
+
+<tr>
+<td><codel>minute</codel></td>
+<td><p>The <i>minute</i> parameter must be greater than or equal to 0 and less than 59.</p></td>
+</tr>
+
+<tr>
+<td><codel>second</codel></td>
+<td><p>The <i>second</i> parameter must be greater than or equal to 0 and less than 59.</p></td>
+</tr>
+
+<tr>
+<td><codel>microsecond</codel></td>
+<td><p>The <i>microsecond</i> parameter must be greater than or equal to 0 and less than 1000000.</p></td>
+</tr>
+
+<tr>
+<td><codel>tzinfo</codel></td>
+<td><p>The <i>tzinfo</i> parameter must be a <codel>tzinfo</codel> subclass object or <codel>None</codel> (default).</p></td>
+</tr>
+
+<tr>
+<td><codel>fold</codel></td>
+<td><p>The <i>fold</i> parameter must be 0 or 1 (default 0).</p></td>
+</tr>
+</table>
+
+<p>Now let's have a look at the code in the editor to see how we create a datetime object.</p>
+
+<p>Result:</p>
+
+<codep>Datetime: 2019-11-04 14:53:00
+Date: 2019-11-04
+Time: 14:53:00</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+
+<p>The example creates a <codel>datetime</codel> object representing November 4, 2019 at 14:53:00. All parameters passed to the constructor go to read-only class attributes. They're <i>year</i>, <i>month</i>, <i>day</i>, <i>hour</i>, <i>minute</i>, <i>second</i>, <i>microsecond</i>, <i>tzinfo</i>, and <i>fold</i>.</p>
+
+<p>The example shows two methods that return two different objects. The method called <codel>date</codel> returns the <i>date</i> object with the given year, month, and day, while the method called <codel>time</codel> returns the <i>time</i> object with the given hour and minute.</p>
+
+
+
+<br>
+<br>
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

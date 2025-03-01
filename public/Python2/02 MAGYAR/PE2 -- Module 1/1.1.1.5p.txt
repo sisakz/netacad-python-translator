@@ -1,0 +1,61 @@
+<problem chapter='1' section='1' slide='1' problem='5' title='Modul importálása | math'>
+
+<!--
+Update history:
+2020-08-28 Grzegorz (review, PEP-8 compliance check, update; 1/2pi notation changed; bullet points examples changed)
+2021-06-16 Grzegorz (review)
+-->
+
+<code>
+import math
+print(math.sin(math.pi/2))
+
+</code>
+
+<h1>Modul importálása: folytatás</h1>
+
+
+<p>Nézd meg az alábbi részletet, ez az a mód, ahogyan a <codel>pi</codel> és <codel>sin</codel> neveket a forrásmodul nevével minősíted:</p>
+
+<codep class="syntax-color">math.pi
+math.sin
+</codep>
+
+<br>
+
+<p>Ez egyszerű, írd le:</p>
+
+<ul>
+<li>a <strong>modul nevét </strong> (pl.: <codel>math</codel>);</li>
+<li>egy <strong>pontot</strong> (azaz <codel>.</codel>);</li>
+<li>az <strong>entitás nevét</strong> (pl.: <codel>pi</codel>).</li>
+</ul>
+
+<p>Az ilyen forma egyértelműen jelzi a névteret, amelyben a név létezik.</p>
+
+<p>Megjegyzés: ennek az elnevezésnek a használata <strong>kötelező</strong>, ha egy modult az <codel>import</codel> modul utasítással importáltak. Nem számít, hogy a kódod és a modul névterének bármelyik neve ütközik-e vagy sem.</p>
+
+
+<br>
+
+<p>Ez az első példa nem lesz túl komplikált, csak a <strong>sin(&frac12;&pi;)</strong> értékét szeretnénk kiírni.</p>
+
+<p>Nézd meg a kódot a szerkesztőben! Így teszteljük.</p>
+ 
+
+<p>A kód a várt értéket adja: <codel>1.0</codel>.</p>
+
+ 
+<p>Megjegyzés: A két minősítés bármelyikének eltávolítása hibás kódot eredményez. Nincs más módja a <codel>math</codel> névterébe való belépésnek, csak ha ezt teszed:</p>
+
+<codep class="syntax-color">import math
+</codep>
+
+<br>
+<br>
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

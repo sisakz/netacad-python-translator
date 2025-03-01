@@ -1,0 +1,41 @@
+<problem chapter='2' section='2' slide='1' problem='13' title='Karakterláncok'>
+
+<!--
+Update history:
+2020-09-22	Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>
+# Demonstrating the index() method:
+print("aAbByYzZaA".index("b"))
+print("aAbByYzZaA".index("Z"))
+print("aAbByYzZaA".index("A"))
+
+</code>
+
+
+
+<h1>Műveletek karakterláncokon: az <font face="Courier New">index()</font> tagfüggvény</h1>
+
+<p>Az <codel>index()</codel> tagfüggvény (ez egy tagfüggvény, nem függvény) az <strong>elejétől kezdve végignézi a szekvenciát, hogy megtalálja az argumentumában megadott érték első előfordulását</strong>.</p>
+
+<p><strong>Megjegyzés: a keresett elemnek meg kell jelennie a szekvenciában – a hiánya <font face="Courier New">ValueError</font> kivételt okoz</strong>.</p>
+
+<p>A metódus az <strong>argumentum első előfordulásának indexét</strong> adja vissza (ami azt jelenti, hogy a legalacsonyabb lehetséges eredmény a <font face="Courier New">0</font>, míg a legmagasabb az argumentum hossza mínusz <font face="Courier New">1</font>).
+
+<p>Így a szerkesztőben lévő példák kimenete:</p>
+
+<codep>2
+7
+1</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+<br>
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

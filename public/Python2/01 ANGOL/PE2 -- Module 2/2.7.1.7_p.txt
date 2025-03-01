@@ -1,0 +1,71 @@
+<problem chapter='2' section='7' slide='1' problem='7' title='The anatomy of exceptions | assert'>
+
+<!--
+Update history:
+2020-09-21 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>
+import math
+
+x = float(input("Enter a number: "))
+assert x >= 0.0
+
+x = math.sqrt(x)
+
+print(x)
+
+</code>
+
+
+
+<h1>Exceptions: continued</h1>
+
+<p>Now is a good moment to show you another Python instruction, named <codel>assert</codel>. This is a keyword.</p>
+
+<codep class="syntax-color">assert expression
+</codep>
+<br>
+
+<p>How does it work?</p>
+
+<ul>
+<li>It evaluates the expression;</li>
+<li>if the expression evaluates to <codel>True</codel>, or a non-zero numerical value, or a non-empty string, or any other value different than <codel>None</codel>, it won't do anything else;</li>
+<li>otherwise, it automatically and immediately raises an exception named <font face="Courier New">AssertionError</font> (in this case, we say that the assertion has failed)</li>
+</ul>
+ 
+
+<p>How it can be used?</p>
+
+<ul>
+<li>you may want to put it into your code where you want to be <strong>absolutely safe from evidently wrong data</strong>, and where you aren't absolutely sure that the data has been carefully examined before (e.g., inside a function used by someone else)</li>
+<li>raising an <font face="Courier New">AssertionError</font> exception secures your code from producing invalid results, and clearly shows the nature of the failure;</li>
+<li><strong>assertions don't supersede exceptions or validate the data</strong> – they are their supplements.</li>
+</ul>
+
+ 
+
+<p>If exceptions and data validation are like careful driving, assertion can play the role of an airbag.</p>
+
+<br>
+
+<p>Let's see the <codel>assert</codel> instruction in action. Look at the code in the editor. Run it.</p>
+
+<p>The program runs flawlessly if you enter a valid numerical value greater than or equal to zero; otherwise, it stops and emits the following message:</p>
+
+<codep>Traceback (most recent call last):
+  File ".main.py", line 4, in <module>
+    assert x >= 0.0
+AssertionError</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

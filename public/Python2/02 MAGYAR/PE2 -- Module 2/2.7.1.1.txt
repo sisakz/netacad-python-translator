@@ -1,0 +1,100 @@
+<problem chapter='2' section='7' slide='1' problem='1' title='Kivételek'>
+
+<!--
+Update history:
+2020-09-21 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h1>Kivételek</h1>
+
+<p>A Python 3-as verziója <strong>63 beépített kivételt</strong> definiál, és ezek mindegyike egy <strong>fa szerkezetű hierarchiát</strong> alkot, bár a fa egy kicsit furcsa, mivel a gyökere a tetején található.</p>
+
+<p>A beépített kivételek némelyike általánosabb (más kivételeket is tartalmaz), míg mások teljesen konkrétak (csak önmagukat képviselik). Azt mondhatjuk, hogy <strong>minél közelebb van egy kivétel a gyökérhez, annál általánosabb (absztraktabb)</strong>. Az ágak végén található kivételek (nevezhetjük őket <strong>leveleknek</strong>) viszont konkrétak.</p>
+
+<p>Nézd meg az ábrát:</p>
+
+<img src="/uploads/media/default/0001/01/0ee75473d85349d36925771423976c94c08ddbf1.png" width="80%" alt="Tree-shaped hierarchy of selected exceptions" class="lightbox">
+<br><br>
+
+    <p>A teljes kivételfa egy kis részét mutatja. Kezdjük a fa vizsgálatát a <font face="Courier New">ZeroDivisionError</font> levéltől.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+
+
+<p>Megjegyzés:</p>
+
+<ul>
+    <li>A <font face="Courier New">ZeroDivisionError</font> az <font face="Courier New">ArithmeticError</font> nevű általánosabb kivételosztály speciális esete;</li>
+    <li>Az <font face="Courier New">ArithmeticError</font> egy speciális esete egy általánosabb, csak <font face="Courier New">Exception</font> nevű kivételosztálynak;</li>
+    <li>Az <font face="Courier New">Exception</font> a <font face="Courier New">BaseException</font> nevű általánosabb osztály speciális esete;</li>
+</ul>
+ 
+
+<p>Ezt a következőképpen írhatjuk le (figyeljük meg a nyilak irányát – mindig az általánosabb egység felé mutatnak):</p>
+
+ 
+<center><p><font face="Courier New" size="+1">BaseException
+<br>
+&uarr;
+<br>
+Exception
+<br>
+&uarr;
+<br>
+ArithmeticError
+<br>
+&uarr;
+<br>
+ZeroDivisionError</font></p></center>
+
+<br>
+
+<p>Megmutatjuk, hogyan működik ez az általánosítás, kezdjük néhány nagyon egyszerű kóddal!</p>
+
+
+<br>
+<br>
+
+</div>
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

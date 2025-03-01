@@ -1,0 +1,62 @@
+<problem chapter='2' section='3' slide='1' problem='1' title='Karakterlánc tagfüggvények'>
+
+<!--
+Update history:
+2020-09-22	Grzegorz (review, PEP-8 compliance check, update)
+2021-06-30	Grzegorz (corrections)
+-->
+
+<code>
+# Demonstrating the capitalize() method:
+print('aBcD'.capitalize())
+
+</code>
+
+
+
+<h1>A <font face="Courier New">capitalize()</font> tagfüggvény</h1>
+
+<p>Nézzünk át néhány standard Python karakterlánc tagfüggvényt. Ábécé sorrendben fogjuk őket végigvenni – hogy őszinték legyünk, bármelyik sorrendnek ugyanannyi hátránya van, mint előnye, így a választás akár véletlenszerű is lehet.</p>
+
+<p>A <codel>capitalize()</codel> tagfüggvény pontosan azt teszi, amit a neve mond – <strong>létrehoz egy új karakterláncot, amely a forrás karakterláncból vett karakterekkel van feltöltve</strong>, de a következő módon próbálja módosítani őket:</p>
+
+<ul>
+    <li><strong>ha a karakterláncban az első karakter egy betű</strong> (megjegyzés: az első karakter egy <font face="Courier New">0</font> indexű elem, nem csak az első látható karakter), akkor az <strong>nagybetűsre konvertálódik</strong>;</li>
+<li><strong>a karakterlánc összes fennmaradó betűje kisbetűsre lesz konvertálva</strong>.</li>
+</ul>
+
+ 
+
+<p>Ezt ne felejtsd el:</p>
+
+<ul>
+    <li>az eredeti karakterlánc (amelyből a tagfüggvény hívásra kerül) semmilyen módon nem változik (a karakterlánc megváltoztathatatlanságát fenntartás nélkül be kell tartani).</li>
+    <li>a módosított (ebben az esetben nagybetűvel írt) karakterlánc eredményként visszakerül – ha nem használod fel semmilyen módon (nem rendeled változóhoz, vagy nem adod át egy függvénynek/tagfüggvénynek), akkor nyomtalanul eltűnik.</li>
+</ul>
+ 
+
+<p>Megjegyzés: a tagfüggvényeket nem csak a változókon belül lehet hívni. Hívhatók közvetlenül a karakterlánc literálokon belülről is. Ezt a konvenciót fogjuk rendszeresen használni – ez egyszerűsíti a példákat, mivel a legfontosabb szempontok nem tűnnek el a felesleges hozzárendelések között.</p>
+
+<p>Nézd meg a példát a szerkesztőben. Futtasd le.</p>
+
+<p>Ezt írja ki:</p>
+
+<codep>Abcd</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+
+<p>Próbálj ki néhány haladóbb példát, és teszteld a kimenetüket:</p>
+
+<codep class="syntax-color copy">print("Alpha".capitalize())
+print('ALPHA'.capitalize())
+print(' Alpha'.capitalize())
+print('123'.capitalize())
+print("&alpha;&beta;&gamma;&delta;".capitalize())</codep>
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

@@ -1,0 +1,49 @@
+<problem chapter='3' section='5' slide='1' problem='9' title='OOP Fundamentals: Inheritance'>
+
+<!--
+Update history:
+2020-10-01 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>
+# Testing properties: class variables.
+class Super:
+    supVar = 1
+
+
+class Sub(Super):
+    subVar = 2
+
+
+obj = Sub()
+
+print(obj.subVar)
+print(obj.supVar)
+
+</code>
+
+
+
+<h1>How Python finds properties and methods: continued</h1>
+
+<p>Let's try to do something similar, but with properties (more precisely: with <strong>class variables</strong>).</p>
+
+<p>Take a look at the example in the editor.</p>
+
+<p>As you can see, the <codel>Super</codel> class defines one class variable named <codel>supVar</codel>, and the <codel>Sub</codel> class defines a variable named <codel>subVar</codel>.</p>
+
+<p>Both these variables are visible inside the object of class <codel>Sub</codel> – this is why the code outputs:</p>
+
+<codep>2
+1</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

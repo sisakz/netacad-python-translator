@@ -1,0 +1,50 @@
+<problem chapter='3' section='4' slide='1' problem='5' title='OOP: Methods'>
+
+<!--
+Update history:
+2020-09-30 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>
+class Classy:
+    varia = 1
+    def __init__(self):
+        self.var = 2
+
+    def method(self):
+        pass
+
+    def __hidden(self):
+        pass
+
+
+obj = Classy()
+
+print(obj.__dict__)
+print(Classy.__dict__)
+
+</code>
+
+
+
+<h1>The inner life of classes and objects</h1>
+
+<p>Each Python class and each Python object is pre-equipped with a set of useful attributes which can be used to examine its capabilities.</p>
+
+<p>You already know one of these – it's the <codel>__dict__</codel> property.</p>
+
+<p>Let's observe how it deals with methods – look at the code in the editor.</p>
+
+<p>Run it to see what it outputs. Check the output carefully.</p>
+
+<p>Find all the defined methods and attributes. Locate the context in which they exist: inside the object or inside the class.</p>
+
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

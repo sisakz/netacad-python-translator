@@ -1,0 +1,59 @@
+<problem chapter='3' section='4' slide='1' problem='9' title='OOP: Metódusok'>
+
+<!--
+Update history:
+2020-09-30 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+    <h1>Reflexió és önvizsgálat</h1>
+
+    <p>Mindezek az eszközök lehetővé teszik a Python programozó számára, hogy két fontos tevékenységet végezzen, amelyek számos objektumorientált nyelvre jellemzőek. Ezek a következők:</p>
+
+<ul>
+    <li><strong>önvizsgálat (introspection)</strong>, azaz a program azon képessége, hogy futás közben megvizsgálja egy objektum típusát vagy tulajdonságait;</li>
+    <li><strong>reflexió (reflection)</strong>, ami egy lépéssel továbbmegy, és egy program azon képessége, hogy futás közben módosítsa egy objektum értékeit, tulajdonságait és/vagy függvényeit.</li>
+</ul>
+ 
+
+<p>Más szóval, nem kell ismernünk a teljes osztály/objektum definíciót az objektum módosításához, mivel az objektum és/vagy annak osztálya tartalmazza a metaadatokat, amelyek lehetővé teszik, hogy a program végrehajtása során felismerje a tulajdonságait.</p>
+
+<br> 
+<br>
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+
+
+<img class="lightbox" src="/uploads/media/default/0001/01/27ee5cade001ded5a564bb7e12f725c112a3bf0e.png" alt="Introspection and Reflection definitions">
+
+
+<br>
+<br>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

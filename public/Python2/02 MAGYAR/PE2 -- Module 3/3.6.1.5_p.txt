@@ -1,0 +1,71 @@
+<problem chapter='3' section='6' slide='1' problem='5' title='Bővebben a kivételekről'>
+
+<!--
+Update history:
+2020-10-01 Grzegorz (reviewed, PEP-8 compliance check)
+-->
+
+<code>
+def print_args(args):
+    lng = len(args)
+    if lng == 0:
+        print("")
+    elif lng == 1:
+        print(args[0])
+    else:
+        print(str(args))
+
+
+try:
+    raise Exception
+except Exception as e:
+    print(e, e.__str__(), sep=' : ' ,end=' : ')
+    print_args(e.args)
+
+try:
+    raise Exception("my exception")
+except Exception as e:
+    print(e, e.__str__(), sep=' : ', end=' : ')
+    print_args(e.args)
+
+try:
+    raise Exception("my", "exception")
+except Exception as e:
+    print(e, e.__str__(), sep=' : ', end=' : ')
+    print_args(e.args)
+	
+</code>
+
+
+
+<h1>A kivételek részletes anatómiája</h1>
+
+
+<p>Nézzük meg közelebbről a kivétel objektumát, mivel van itt néhány igazán érdekes elem (hamarosan visszatérünk a témára, amikor a Python input/output alaptechnikáit vizsgáljuk, mivel a kivétel alrendszerük egy kicsit kibővíti ezeket az objektumokat).</p>
+
+<p>A <codel>BaseException</codel> osztály bevezet egy <codel>args</codel> nevű tulajdonságot. Ez egy <strong>tuple, amelynek célja, hogy összegyűjtse az osztály konstruktorának átadott összes argumentumot</strong>. Ez üres, ha a konstruktort argumentumok nélkül hívtuk meg, vagy csak egy elemet tartalmaz, ha a konstruktor egy argumentumot kap (a <codel>self</codel> argumentumot itt nem számítjuk), és így tovább.</p>
+
+<p>Elkészítettünk egy egyszerű függvényt, amely elegáns módon kiírja az <codel>args</codel> tulajdonságot. A függvényt a szerkesztőben láthatod.</p>
+
+<br>
+
+<p>A függvényt három különböző esetben használtuk az <codel>args</codel> tulajdonság tartalmának kiírására, ahol az <codel>Exception</codel> osztály kivételét három különböző módon hívjuk elő. Hogy még látványosabb legyen, magát az objektumot is kiírtuk, a <codel>__str__()</codel> meghívás eredményével együtt.</p>
+
+<p>Az első eset rutinszerűnek tűnik - az <font face="Courier New">Exception</font> kulcsszó után csak az <codel>raise</codel> név szerepel. Ez azt jelenti, hogy ennek az osztálynak az objektuma a legáltalánosabb módon jött létre.</p>
+
+<p>A második és a harmadik eset első pillantásra kissé furcsának tűnhet, de nincs itt semmi különös - ezek csak a konstruktorok meghívásai. A második <codel>raise</codel> utasításban a konstruktort egy argumentummal hívjuk meg, a harmadikban pedig kettővel.</p>
+
+<p>Amint láthatjuk, a program kimenete ezt tükrözi, és az <codel>args</codel> tulajdonság megfelelő tartalmát mutatja:</p>
+
+<codep> :  :
+my exception : my exception : my exception
+('my', 'exception') : ('my', 'exception') : ('my', 'exception')</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

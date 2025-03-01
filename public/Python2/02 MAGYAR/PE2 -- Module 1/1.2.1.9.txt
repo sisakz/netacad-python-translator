@@ -1,0 +1,81 @@
+<problem chapter='1' section='2' slide='1' problem='9' title='Fontos modulok | platform'>
+
+<!--
+Update history:
+2020-08-31 Grzegorz (review, PEP-8 compliance check, update)
+2021-06-29 Grzegorz (corrections)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h1>Honnan tudhatod, hogy hol vagy?</h1>
+
+<p>Néha szükség lehet a Pythonhoz nem kapcsolódó információk megismerésére. Például szükség lehet arra, hogy megtudd, hol található a programod a számítógép fájlrendszerében.</p>
+
+<p>Képzeld el programod környezetét egy piramisként, amely több rétegből vagy szintből áll.</p>
+
+<center><img src="/uploads/media/default/0001/01/8396e08d1b353074e67e4fd3268edf08b12afc3b.png" width="70%" alt="Program's environment layers"></center>
+
+<br><br>
+
+<p>A rétegek a következők:</p>
+
+<ul>
+<li>A (futó) kódod a piramis tetején található;</li>
+<li>A Python (pontosabban annak futási környezete) közvetlenül alatta helyezkedik el;</li>
+<li>a piramis következő rétegét az OS (operációs rendszer) tölti ki - a Python környezete az operációs rendszer szolgáltatásainak segítségével biztosítja a funkciók egy részét; a Python, bár nagyon erős, nem mindenható - kénytelen sok segédprogramot használni, ha fájlokat akar feldolgozni vagy fizikai eszközökkel kommunikálni;</li>
+<li>a legalsó réteg a hardver - a processzor (vagy processzorok), a hálózati kártyák, a beviteli eszközök (egerek, billentyűzetek, stb.) és minden más, a számítógép működéséhez szükséges gépezet; az operációs rendszer tudja, hogyan kell ezt működtetni, és sok trükköt alkalmaz, hogy minden részt egy egységként működtessen.</li>
+</ul>
+ 
+
+
+
+
+
+<br>
+
+<br>
+
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+
+<p>Ez azt jelenti, hogy az általad (vagyis inkább a programod által) végzett egyes műveleteknek hosszú utat kell megtenniük a sikeres végrehajtásig - képzeld csak el:</p>
+
+<ul>
+<li>A <strong>kódod</strong> egy fájlt akar létrehozni, ezért meghívja a Python egyik függvényét;</li>
+<li>A <strong>Python</strong> elfogadja a kérést, átszerkeszti, hogy megfeleljen a helyi operációs rendszer követelményeinek (ez olyan, mintha "jóváhagyó" pecsétet tenne a kérésedre), és elküldi lefelé (ez emlékeztethet a parancsnoki láncra).</li>
+<li>Az <strong>operációs rendszer</strong> ellenőrzi, hogy a kérés ésszerű és érvényes-e (pl.: a fájlnév megfelel-e bizonyos szintaktikai szabályoknak), és megpróbálja létrehozni a fájlt; egy ilyen, látszólag nagyon egyszerű művelet nem elemi - sok apró lépésből áll, amelyek végrehajtásáért igénybe veszi a:</li>
+<li>A <strong>hardvert</strong>, amely a tárolóeszközök (merevlemez, szilárdtest-eszközök stb.) aktiválásáért felel az operációs rendszer igényeinek kielégítése érdekében.</li>
+</ul>
+ 
+
+<p>Általában nem foglalkozol ezzel az egész felhajtással - azt szeretnéd, hogy a fájl létrejöjjön, és ennyi.</p>
+
+<p>Néha azonban ennél többre is kíváncsi lehetsz - például a Pythont futtató operációs rendszer nevére, valamint az operációs rendszert futtató hardver néhány jellemzőjére.</p>
+
+<p>Van egy modul, amely lehetővé teszi, hogy megtudd, hol vagy és milyen komponensek működnek a gépedben. A modul neve <b>platform</b>. Megmutatunk néhány függvényt, ami hasznos lehet számodra.</p>
+
+</div>
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

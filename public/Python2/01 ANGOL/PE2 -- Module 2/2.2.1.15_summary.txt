@@ -1,0 +1,151 @@
+<problem chapter='2' section='2' slide='1' problem='15' title='SECTION SUMMARY'>
+
+<!--
+Update history:
+2020-09-01 Sysio (first version)
+2020-09-28 Grzegorz (review)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<h1>Key takeaways</h1>
+
+<br>
+
+<p>1. Python strings are <b>immutable sequences</b> and can be indexed, sliced, and iterated like any other sequence, as well as being subject to the <codel>in</codel> and <codel>not in</codel> operators. There are two kinds of strings in Python:</p>
+<ul>
+<li><b>one-line</b> strings, which cannot cross line boundaries – we denote them using either apostrophes (<codel>'string'</codel>) or quotes (<codel>"string"</codel>)</li>
+<li><b>multi-line</b> strings, which occupy more than one line of source code, delimited by trigraphs:<br><br>
+<codep class="syntax-color">'''
+string
+'''
+</codep>
+<br>
+<p>or</p>
+<codep class="syntax-color">"""
+string
+"""
+</codep>
+</li>
+</ul>
+<br>
+
+<p>2. The length of a string is determined by the <codel>len()</codel> function. The escape character (<codel>\</codel>) is not counted. For example:</p>
+<codep class="syntax-color copy">print(len("\n\n"))
+</codep>
+<br>
+<p>outputs <codel>2</codel>.</p>
+<br>
+
+<p>3. Strings can be <b>concatenated</b> using the <codel>+</codel> operator, and <b>replicated</b> using the <codel>*</codel> operator. For example:</p>
+<codep class="syntax-color">asterisk = '*'
+plus = "+"
+decoration = (asterisk + plus) * 4 + asterisk
+print(decoration)
+</codep>
+<br>
+<p>outputs <codel>*+*+*+*+*</codel>.</p>
+<br>
+
+<p>4. The pair of functions <codel>chr()</codel> and <codel>ord()</codel> can be used to create a character using its codepoint, and to determine a codepoint corresponding to a character. Both of the following expressions are always true:</p>
+<codep class="syntax-color copy">chr(ord(character)) == character
+ord(chr(codepoint)) == codepoint
+</codep>
+
+<br>
+
+<p>5. Some other functions that can be applied to strings are:</p>
+<ul>
+<li><codel>list()</codel> – creates a list consisting of all the string's characters;</li>
+<li><codel>max()</codel> – finds the character with the maximal codepoint;</li>
+<li><codel>min()</codel> – finds the character with the minimal codepoint.</li>
+</ul>
+
+<br>
+
+<p>6. The method named <codel>index()</codel> finds the index of a given substring inside the string.</p>
+
+<br>
+
+</div>
+<div class="small-12 large-6 columns">
+
+<script>
+function solution (id) {
+    var element = document.getElementById(id);
+    
+if (element.style.display === "none") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
+    }
+}
+</script>
+
+
+<p><strong>Exercise 1</strong></p>
+<p>What is the length of the following string assuming there is no whitespaces between the quotes?</p>
+<codep>"""
+"""
+
+</codep>
+<br>
+
+<button class="button tiny" onclick="solution('sol1')">Check</button>
+
+<p id="sol1" style="display: none;">1</p>
+
+
+
+
+<br><br>
+
+
+<p><strong>Exercise 2</strong></p>
+<p>What is the expected output of the following code?</p
+>
+<codep>s = 'yesteryears'
+the_list = list(s)
+print(the_list[3:6])
+
+</codep>
+<br>
+
+<button class="button tiny" onclick="solution('sol2')">Check</button>
+
+<p id="sol2" style="display: none;"><codel>['t', 'e', 'r']</codel>
+</p>
+
+<br><br>
+
+
+<p><strong>Exercise 3</strong></p>
+<p>What is the expected output of the following code?</p>
+
+<codep>for ch in "abc":
+    print(chr(ord(ch) + 1), end='')
+
+</codep>
+<br>
+
+<button class="button tiny" onclick="solution('sol3')">Check</button>
+
+<p id="sol3" style="display: none;"><codep>bcd</codep>
+</p>
+
+
+<br>
+
+</div>
+
+</div>
+</div>
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>
+

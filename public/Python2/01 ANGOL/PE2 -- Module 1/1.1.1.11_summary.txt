@@ -1,0 +1,191 @@
+<problem chapter='1' section='1' slide='1' problem='11' title='SECTION SUMMARY'>
+
+<!--
+Update history:
+2020-08-28 Sysio (first version)
+2020-09-28 Grzegorz (review, reformat, PEP-8 compliance)
+2021-06-16 Grzegorz (review)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<h1>Key takeaways</h1>
+
+<br/>
+
+
+<p>1. If you want to import a module as a whole, you can do it using the <codel>import module_name</codel> statement. You are allowed to import more than one module at once using a comma-separated list. For example:</p>
+
+<codep class="syntax-color copy">import mod1
+import mod2, mod3, mod4
+</codep>
+<br/>
+<p>although the latter form is not recommended due to stylistic reasons, and it's better and prettier to express the same intention in more a verbose and explicit form, such as:</p>
+<codep class="syntax-color copy">import mod2
+import mod3
+import mod4
+</codep>
+<br/>
+
+
+<p>2. If a module is imported in the above manner and you want to access any of its entities, you need to prefix the entity's name using <b>dot notation</b>. For example:</p>
+
+<codep class="syntax-color copy">import my_module
+
+result = my_module.my_function(my_module.my_data)
+</codep>
+<br/>
+<p>
+The snippet makes use of two entities coming from the <codel>my_module</codel> module: a function named <codel>my_function()</codel> and a variable named <codel>my_data</codel>. Both names <b>must be prefixed by</b> <codel>my_module.</codel> None of the imported entity names conflicts with the identical names existing in your code's namespace.</p>
+<br/>
+
+
+<p>3. You are allowed not only to import a module as a whole, but to import only individual entities from it. In this case, the imported entities <b>must not be</b> prefixed when used. For example:</p>
+
+<codep class="syntax-color copy">from module import my_function, my_data
+
+result = my_function(my_data)
+</codep>
+<br/>
+<p>The above way - despite its attractiveness - is not recommended because of the danger of causing conflicts with names derived from importing the code's namespace.</p>
+<br/>
+
+<p>4. The most general form of the above statement allows you to import <b>all entities</b> offered by a module:</p>
+
+<codep class="syntax-color copy">from my_module import *
+
+result = my_function(my_data)
+</codep>
+<br/>
+<p><b>Note</b>: this import's variant is not recommended due to the same reasons as previously (the threat of a naming conflict is even more dangerous here).</p>
+
+<p>5. You can change the name of the imported entity "on the fly" by using the <codel>as</codel> phrase of the <codel>import</codel>. For example:</p>
+
+<codep class="syntax-color copy">from module import my_function as fun, my_data as dat
+
+result = fun(dat)
+</codep>
+<br/>
+
+
+</div>
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br/>
+
+<script>
+function solution (id) {
+    var element = document.getElementById(id);
+    
+if (element.style.display === "none") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
+    }
+}
+</script>
+
+
+<p><strong>Exercise 1</strong></p>
+<p>You want to invoke the function <codel>make_money()</codel> contained in the module named <codel>mint</codel>. Your code begins with the following line:</p>
+<codep>import mint
+
+</codep>
+<br/>
+
+<p>What is the proper form of the function's invocation?</p> 
+
+
+<button class="button tiny" onclick="solution('sol')">Check</button>
+
+<p id="sol" style="display: none;">
+<codep>mint.make_money()
+
+</codep>
+</p>
+
+
+
+<br/><br/>
+
+
+
+<p><strong>Exercise 2</strong></p>
+<p>You want to invoke the function <codel>make_money()</codel> contained in the module named <codel>mint</codel>. Your code begins with the following line:</p>
+
+<codep>from mint import make_money
+	
+</codep>
+<br/>
+
+<p>What is the proper form of the function's invocation?</p> 
+
+
+
+<button class="button tiny" onclick="solution('sol2')">Check</button>
+
+<p id="sol2" style="display: none;">
+<codep>make_money()
+
+</codep>
+</p>
+
+<br/><br/>
+
+
+
+
+<p><strong>Exercise 3</strong></p>
+<p>You've written a function named <codel>make_money</codel> on your own. You need to import a function of the same name from the <codel>mint</codel> module and don't want to rename any of your previously defined names. Which variant of the <codel>import</codel> statement may help you with the issue?</p>
+
+
+<button class="button tiny" onclick="solution('sol3')">Check</button>
+
+<p id="sol3" style="display: none;">
+<codep># sample solution
+from mint import make_money as make_more_money
+
+</codep>
+</p>
+
+<br/><br/>
+
+
+<p><strong>Exercise 4</strong></p>
+<p>What form of the <codel>make_money</codel> function invocation is valid if your code starts with the following line?</p>
+<codep>from mint import *
+
+</codep>
+
+<br/>
+
+<button class="button tiny" onclick="solution('sol4')">Check</button>
+
+<p id="sol4" style="display: none;">
+<codep>make_money()
+
+</codep>
+</p>
+
+
+<br/>
+
+<br/>
+
+</div>
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

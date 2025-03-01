@@ -1,0 +1,50 @@
+<problem chapter='2' section='3' slide='1' problem='15' title='Karakterlánc tagfüggvények'>
+
+<!--
+Update history:
+2020-09-23 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>
+# Demonstrating the startswith() method:
+print("omega".startswith("meg"))
+print("omega".startswith("om"))
+
+print()
+
+# Demonstrating the strip() method:
+print("[" + "   aleph   ".strip() + "]")
+
+</code>
+
+
+
+<h1>A <font face="Courier New">startswith()</font> tagfüggvény</h1>
+
+<p>A <codel>startswith()</codel> tagfüggvény az <codel>endswith()</codel> tükörképe – <strong>ellenőrzi, hogy egy adott karakterlánc a megadott részlánccal kezdődik-e</strong>.</p>
+
+<p>Nézd meg a példát a szerkesztőben. Ez az eredmény:</p>
+
+<codep>False
+True</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+
+<h2>A <font face="Courier New">strip()</font> tagfüggvény</h2>
+
+<p>A <codel>strip()</codel> tagfüggvény egyesíti az <codel>rstrip()</codel> és az <codel>lstrip()</codel> által okozott hatásokat - <strong>egy új karakterláncot hoz létre, amelyből hiányzik az összes vezető és záró whitespace</strong>.</p>
+
+<p>Nézd meg a második példát a szerkesztőben. Ezt az eredményt adja:</p>
+
+<codep>[aleph]</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+<p>Most végezd el a saját kísérleteidet a két metódussal.</p>
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

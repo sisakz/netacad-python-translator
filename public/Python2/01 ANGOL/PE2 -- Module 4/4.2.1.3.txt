@@ -1,0 +1,124 @@
+<problem chapter='4' section='2' slide='1' problem='3' title='Processing files'>
+
+<!--
+Update history:
+2020-10-07 Grzegorz (review, PEP-8 compliance check)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h2>File names: continued</h2>
+
+<p>Suppose you're interested in a particular file located in the directory <font face="Courier New">dir</font>, and named <font face="Courier New">file</font>.</p>
+
+<p>Suppose also that you want to assign a string containing the name of the file.</p>
+
+<p>In Unix/Linux systems, it may look as follows:</p>
+
+<codep>name = "/dir/file"
+
+</codep>
+<br>
+
+
+
+
+<p>But if you try to code it for the Windows system:</p>
+
+<codep>name = "\dir\file"
+
+</codep>
+<br>
+
+<p>you'll get an unpleasant surprise: either Python will generate an error, or the execution of the program will behave strangely, as if the file name has been distorted in some way.</p>
+
+<p>In fact, it's not strange at all, but quite obvious when you think about it for a moment. Python uses the <codel>\</codel> as an escape character (like <codel>\n</codel>).</p>
+
+<p>This means that Windows file names must be written as follows:</p>
+
+<codep>name = "\\dir\\file"
+
+</codep>
+<br>
+
+ 
+<p>Fortunately, there is also one more solution. Python is smart enough to be able to convert slashes into backslashes each time it discovers that it's required by the OS.</p>
+
+<p>This means that the following assignments:</p>
+
+
+<codep>name = "/dir/file"
+name = "c:/dir/file"
+
+</codep>
+<br>
+ 
+<p>will work with Windows, too.</p>
+
+<p>Any program written in Python (and not only in Python, because that convention applies to virtually all programming languages) does not communicate with the files directly, but through some abstract entities that are named differently in different languages or environments – the most-used terms are <strong>handles</strong> or <strong>streams</strong> (we'll use them as synonyms here).</p>
+
+<p>The programmer, having a more- or less-rich set of functions/methods, is able to perform certain operations on the stream, which affect the real files using mechanisms contained in the operating system kernel.</p>
+
+<p>In this way, you can implement the process of accessing any file, even when the name of the file is unknown at the time of writing the program.</p>
+
+<br> 
+<br>
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+
+<br>
+
+<p>The operations performed with the abstract stream reflect the activities related to the physical file.</p>
+
+<br>
+
+<center><img class="lightbox" src="/uploads/media/default/0001/01/278d1abf2ed4c9cfd0bce451c387aad365ed4a72.png" alt="Accessing files – a tree structure concept" width="65%"></center>
+<br><br>
+
+
+<p>To connect (bind) the stream with the file, it's necessary to perform an explicit operation.</p>
+
+ 
+
+<p>The operation of connecting the stream with a file is called <strong>opening the file</strong>, while disconnecting this link is named <strong>closing the file</strong>.</p>
+
+<p>Hence, the conclusion is that the very first operation performed on the stream is always <codel>open</codel> and the last one is <codel>close</codel>. The program, in effect, is free to manipulate the stream between these two events and to handle the associated file.</p>
+
+<p>This freedom is limited, of course, by the physical characteristics of the file and the way in which the file has been opened.</p>
+
+ 
+
+<p>Let us say again that the opening of the stream can fail, and it may happen due to several reasons: the most common is the lack of a file with a specified name.</p>
+
+<p>It can also happen that the physical file exists, but the program is not allowed to open it. There's also the risk that the program has opened too many streams, and the specific operating system may not allow the simultaneous opening of more than <font face="Courier New">n</font> files (e.g., 200).</p>
+
+<p>A well-written program should detect these failed openings, and react accordingly.</p>
+
+
+<br>
+<br>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

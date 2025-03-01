@@ -1,0 +1,86 @@
+<problem chapter='4' section='2' slide='1' problem='4' title='Fájlkezelés'>
+
+<!--
+Update history:
+2020-10-07 Grzegorz (review, PEP-8 compliance check)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+    <h2>Fájl adatfolyamok</h2>
+
+    <p>Az adatfolyam (fájlobjektum) megnyitása nem csak kapcsolódás a fájlhoz, hanem azt is meg kell határozni, hogy milyen módon kerül feldolgozásra a fájlobjektum. Ezt a deklarációt nevezzük <strong>megnyitási módnak</strong>.</p>
+
+    <p>Ha a megnyitás sikeres, a <strong>program csak olyan műveleteket végezhet, amelyek megfelelnek a deklarált megnyitási módnak</strong>.</p>
+
+
+    <p>Két alapvető művelet végezhető a fájlobjektumon:</p>
+
+<ul>
+    <li><strong>olvasás</strong> a fájlobjektumból: az adatrészletek a fájlból kerülnek elő, és a program által kezelt memóriaterületre (pl.: egy változóba) kerülnek;</li>
+    <li><strong>írás</strong> a fájlobjektumba: a memóriából származó adatrészletek (pl.: egy változó) átkerülnek a fájlba.</li>
+</ul>
+
+<p>A fájlobjektum megnyitásához három alapvető módot használhatunk:</p>
+
+<ul>
+    <li><strong>read</strong> (olvasási) <strong>mód</strong>: az ebben a módban megnyitott folyam <strong>csak olvasási műveleteket</strong> engedélyez; a fájlobjektumba való írás kísérlete kivételt eredményez (a kivétel neve <font face="Courier New">UnsupportedOperation</font>, amely öröklődik az <font face="Courier New">OSError</font> és a <font face="Courier New">ValueError</font> hibákból, és az <font face="Courier New">io</font> modulból származik);</li>
+
+    <li><strong>write</strong> (írási) <strong>mód</strong>: az ebben a módban megnyitott fájlobjektum <strong>csak írási műveleteket</strong> engedélyez; az olvasási kísérlet a fent említett kivételt eredményezi;</li>
+
+    <li><strong>update</strong> (frissítési) <strong>mód</strong>: ebben az üzemmódban a megnyitott fájlobjektum <strong>írást és olvasást egyaránt</strong> lehetővé tesz.</li>
+</ul>
+
+
+<br> 
+<br>
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+
+<br>
+
+
+<p>Mielőtt megbeszélnénk, hogyan kezeljük az adatfolyamokat, tartozunk egy kis magyarázattal. <strong>Az adatfolyam majdnem úgy viselkedik, mint egy szalagos magnó</strong>.</p>
+
+<p>Amikor olvasol valamit egy adatfolyamból, egy virtuális fej mozog az adatfolyam felett, az adatfolyamból átvitt bájtok számának megfelelően.</p>
+
+<p>Amikor valamit írsz az adatfolyamba, ugyanaz a fej mozog az adatfolyam mentén, és rögzíti az adatokat a memóriából.</p>
+
+<p>Amikor az adatfolyamból való olvasásról és az adatfolyamba való írásról beszélünk, próbáljuk meg elképzelni ezt az analógiát. A programozási könyvek ezt a mechanizmust <strong>aktuális fájlpozíciónak</strong> nevezik, és mi is ezt a kifejezést fogjuk használni.</p>
+
+<br>
+
+<center><img src="/uploads/media/default/0001/01/193c0b58a122298556fe12d7bf37c53d40d50545.png" alt="The read/write concept" width="65%"></center>
+<br><br>
+
+ 
+    <p>Most megismerjük azt az objektumot, amely a programokban az adatfolyamok képviseletéért felelős.</p>
+
+
+<br>
+<br>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

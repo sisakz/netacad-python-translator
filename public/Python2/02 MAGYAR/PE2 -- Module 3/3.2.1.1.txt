@@ -1,0 +1,67 @@
+<problem chapter='3' section='2' slide='1' problem='1' title='A procedurálistól az objektumorientált megközelítésig'>
+
+<!--
+Update history:
+2020-09-30 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+    <h1>Mi az a verem?</h1>
+
+    <p><strong>A verem egy olyan struktúra, amelyet az adatok speciális módon történő tárolására fejlesztettek ki</strong>. Képzeljünk el egy veremnyi érmét. Egy érmét nem tudunk máshová tenni, csak a verem tetején lévő érmére.</p>
+
+    <p>Hasonlóképpen, nem tudunk érmét levenni csak a verem tetejéről. Ha meg szeretnénk kapni az alul fekvő érmét, el kell távolítanunk az összes érmét a magasabb szintekről.</p>
+
+    <p>Ennek a veremnek az alternatív neve (de csak az informatikai szaknyelvben) <strong>LIFO</strong>.</p>
+
+    <p>Ez egy rövidítés a verem viselkedésének nagyon világos leírására: <strong>Last In – First Out</strong>. Az az érme, amelyik utoljára került a verembe, az először távozik.</p>
+
+    <p><strong>A verem egy objektum</strong> amelynek két elemi művelete van, amelyeket hagyományosan <strong>push</strong>-nak (amikor egy új elemet teszünk a tetejére) és <strong>pop</strong>-nak (amikor egy meglévő elemet veszünk el a tetejéről) neveznek.</p>
+
+    <p>A vermeket nagyon gyakran használják számos klasszikus algoritmusban, és sok széles körben használt eszköz megvalósítása nehezen képzelhető el vermek használata nélkül.</p>
+
+
+
+
+
+<br> 
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+<img class="lightbox" src="/uploads/media/default/0001/01/ffe6a36f13d0c549e0a01688e5e372a36421e84a.png" alt="The concept of stack" width="90%">
+<br><br>
+
+    <p>Implementáljunk egy vermet Pythonban! Ez egy nagyon egyszerű verem lesz, két egymástól független megközelítésben fogjuk megmutatni, hogyan lehet ezt megvalósítani: procedurális és objektumorientált módon.</p>
+
+<p>Kezdjük az elsővel.</p>
+
+
+<br>
+<br>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

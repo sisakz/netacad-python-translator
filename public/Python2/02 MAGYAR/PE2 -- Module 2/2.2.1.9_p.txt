@@ -1,0 +1,65 @@
+<problem chapter='2' section='2' slide='1' problem='9' title='Karakterláncok'>
+
+<!--
+Update history:
+2020-09-22 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>
+alphabet = "abcdefghijklmnopqrstuvwxyz"
+
+# Write test code here.
+
+</code>
+
+
+
+<h1>Pythonban a karakterláncok megváltoztathatatlanok</h1>
+
+<p>Azt is elmondtuk már, hogy a Python <strong>karakterláncok megváltoztathatatlanok</strong>. Ez egy nagyon fontos tulajdonság. Mit jelent ez?</p>
+
+<p>Ez elsősorban azt jelenti, hogy a karakterláncok és listák hasonlósága korlátozott. Nem mindent lehet megtenni egy karakterlánccal, amit egy listával.</p>
+
+<p>Az első fontos különbség <strong>nem teszi lehetővé, hogy a <codel>del</codel> utasítással bármit is eltávolítsunk egy karakterláncból</strong>.</p>
+
+<p>Az itteni példa nem fog működni:</p>
+
+<codep><font style="color:red;">alphabet = "abcdefghijklmnopqrstuvwxyz"
+del alphabet[0]</font>
+
+</codep>
+<br>
+ 
+
+<p>A <codel>del</codel>-lel és egy karakterlánccal csak annyit tehetsz, hogy <strong>a karakterlánc egészét eltávolítod</strong>. Próbáld meg!</p> 
+
+<br>
+
+<p>A Python karakterláncok <strong>nem rendelkeznek az <codel>append()</codel> tagfüggvénnyel</strong> – nem lehet őket semmilyen módon bővíteni.</p>
+
+<p>Az alábbi példa hibás:</p>
+
+<codep><font style="color:red;">alphabet = "abcdefghijklmnopqrstuvwxyz"
+alphabet.append("A")</font>
+
+</codep>
+<br>
+
+<p> az <codel>append()</codel> tagfüggvény hiányában <strong>az <codel>insert()</codel> tagfüggvény</strong> is <strong>illegális</strong>:</p>
+
+
+<codep><font style="color:red;">alphabet = "abcdefghijklmnopqrstuvwxyz"
+alphabet.insert(0, "A")</font>
+
+</codep>
+<br>
+
+
+
+
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

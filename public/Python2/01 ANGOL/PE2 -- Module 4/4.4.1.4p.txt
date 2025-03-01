@@ -1,0 +1,57 @@
+<problem chapter='4' section='4' slide='1' problem='4' title='The os module'>
+
+<!--
+Update history:
+2020-03-30 Sebastian (first version)
+2020-10-08 Grzegorz (review, PEP-8 compliance check)
+2021-07-07 Grzegorz (revision)
+-->
+
+<code>import os
+
+os.makedirs("my_first_directory/my_second_directory")
+os.chdir("my_first_directory")
+print(os.listdir())
+
+</code>
+
+
+
+<h1>Recursive directory creation</h1>
+
+
+<p>The <codel>mkdir</codel> function is very useful, but what if you need to create <b>another directory in the directory</b> you've just created? Of course, you can go to the created directory and create another directory inside it, but fortunately the <i>os</i> module provides a function called <codel>makedirs</codel>, which makes this task easier.</p>
+
+<p>The <i>makedirs</i> function enables recursive directory creation, which means that all directories in the path will be created. Let's look at the code in the editor and see how it is in practice.</p>
+
+<p>The code should produce the following result:</p>
+
+<codep>['my_second_directory']</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+<p>The code creates two directories. The first of them is created in the current working directory, while the second in the <i>my_first_directory</i> directory. </p>
+
+<p>You don't have to go to the <i>my_first_directory</i> directory to create the <i>my_second_directory</i> directory, because the <i>makedirs</i> function does this for you. In the example above, we go to the <i>my_first_directory</i> directory to show that the <i>makedirs</i> command creates the <i>my_second_directory</i> subdirectory.</p>
+
+<p>To move between directories, you can use a function called <i>chdir</i>, which changes the current working directory to the specified path. As an argument, it takes any relative or absolute path. In our example, we pass the first directory name to it.</p>
+
+<p><b>NOTE:</b> The equivalent of the <i>makedirs</i> function on Unix systems is the <i>mkdir</i> command with the <i>-p</i> flag, while in Windows, simply the <i>mkdir</i> command with the path:</p>
+
+<ul>
+<li>Unix-like systems:
+<br><br>
+<codel>mkdir -p my_first_directory/my_second_directory</codel></li>
+<br>
+<li>Windows:
+<br><br>
+<codel>mkdir my_first_directory/my_second_directory</codel></li>
+</ul>
+
+<br>
+<br>
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

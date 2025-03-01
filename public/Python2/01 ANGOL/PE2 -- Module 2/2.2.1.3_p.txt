@@ -1,0 +1,66 @@
+<problem chapter='2' section='2' slide='1' problem='3' title='The nature of strings in Python'>
+
+<!--
+Update history:
+2020-09-22 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>
+str1 = 'a'
+str2 = 'b'
+
+print(str1 + str2)
+print(str2 + str1)
+print(5 * 'a')
+print('b' * 4)
+
+</code>
+
+
+
+<h1>Operations on strings</h1>
+
+<p>Like other kinds of data, strings have their own set of permissible operations, although they're rather limited compared to numbers.</p>
+
+<p>In general, strings can be:</p>
+
+<ul>
+<li><strong>concatenated</strong> (joined)</li>
+<li><strong>replicated</strong>.</li>
+</ul>
+
+ 
+
+<p>The first operation is performed by the <codel>+</codel> operator (note: it's not an addition) while the second by the <codel>*</codel> operator (note again: it's not a multiplication).</p>
+
+<p>The ability to use the same operator against completely different kinds of data (like numbers vs. strings) is called <strong>overloading</strong> (as such an operator is overloaded with different duties).</p>
+
+<p>Analyze the example:</p>
+
+<ul>
+<li>The <codel>+</codel> operator used against two or more strings produces a new string containing all the characters from its arguments (note: the order matters – this overloaded <codel>+</codel>, in contrast to its numerical version, is <strong>not commutative</strong>)</li>
+<li>the <codel>*</codel> operator needs a string and a number as arguments; in this case, the order doesn't matter – you can put the number before the string, or vice versa, the result will be the same - a new string created by the nth replication of the argument's string.</li>
+</ul>
+
+ 
+
+<p>The snippet produces the following output:</p>
+
+<codep>ab
+ba
+aaaaa
+bbbb</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+<br> 
+
+<p>Note: shortcut variants of the above operators are also applicable for strings (<codel>+=</codel> and <codel>*=</codel>).</p>
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

@@ -1,0 +1,75 @@
+<problem chapter='3' section='3' slide='1' problem='7' title='OOP: Tulajdonságok'>
+
+<!--
+Update history:
+2020-09-30 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>class ExampleClass:
+    def __init__(self, val):
+        if val % 2 != 0:
+            self.a = 1
+        else:
+            self.b = 1
+
+
+example_object = ExampleClass(1)
+print(example_object.a)
+
+try:
+    print(example_object.b)
+except AttributeError:
+    pass
+
+</code>
+
+
+
+<h1>Egy attribútum létezésének ellenőrzése (folytatás)</h1>
+
+<p>A <font face="Courier New">try-except</font> utasítás lehetőséget ad a nem létező tulajdonságokkal kapcsolatos problémák elkerülésére.</p>
+
+<p>Ez egyszerű – nézzük csak meg a kódot a szerkesztőben!</p>
+
+<p>Amint láthatjuk, ez a művelet nem túl kifinomult. Lényegében csak a szőnyeg alá söpörtük a problémát.</p>
+
+<p>Szerencsére van még egy módja a probléma kezelésének.</p>
+
+<br>
+
+<p>A Python biztosít egy <strong>olyan függvényt, amely képes biztonságosan ellenőrizni, hogy bármely objektum/osztály tartalmaz-e egy megadott tulajdonságot vagy sem</strong>. A függvény neve <codel>hasattr</codel>, és két argumentummal lehet meghívni:</p>
+
+<ul>
+    <li>az ellenőrzött osztály vagy objektum;</li>
+    <li>annak a tulajdonságnak a neve, amelynek a létezését ellenőrizni kell (megjegyzés: az attribútum nevének karakterláncnak kell lennie, nem csak magának a névnek)</li>
+</ul>
+
+ 
+<p>A függvény <font face="Courier New">True</font> vagy <font face="Courier New">False</font> értéket ad vissza.</p>
+
+<p>Így használhatjuk:</p> 
+
+
+<codep class="syntax-color copy line-numbers">class ExampleClass:
+    def __init__(self, val):
+        if val % 2 != 0:
+            self.a = 1
+        else:
+            self.b = 1
+
+
+example_object = ExampleClass(1)
+print(example_object.a)
+
+<mark class="mark-background">if hasattr(example_object, 'b'):</mark>
+    <mark class="mark-background">print(example_object.b)</mark>
+</codep>
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

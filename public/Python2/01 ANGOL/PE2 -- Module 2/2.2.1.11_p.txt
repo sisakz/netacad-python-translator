@@ -1,0 +1,60 @@
+<problem chapter='2' section='2' slide='1' problem='11' title='The nature of strings in Python'>
+
+<!--
+Update history:
+2020-09-22 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>
+# Demonstrating min() - Example 1:
+print(min("aAbByYzZ"))
+
+
+# Demonstrating min() - Examples 2 & 3:
+t = 'The Knights Who Say "Ni!"'
+print('[' + min(t) + ']')
+
+t = [0, 1, 2]
+print(min(t))
+
+</code>
+
+
+
+<h1>Operations on strings: <font face="Courier New">min()</font></h1>
+
+<p>Now that you understand that strings are sequences, we can show you some less obvious sequence capabilities. We'll present them using strings, but don't forget that lists can adopt the same tricks, too.</p>
+
+<p>Let's start with a function named <codel>min()</codel>.</p>
+
+<p>The function <strong>finds the minimum element of the sequence passed as an argument</strong>. There is one condition – the sequence (string, list, it doesn't matter) <strong>cannot be empty</strong>, or else you'll get a <font face="Courier New">ValueError</font> exception.</p>
+
+ 
+<p>The <strong>Example 1</strong> program outputs:</p>
+
+<codep>A</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+<br>
+
+<p>Note: It's an upper-case <i>A</i>. Why? Recall the ASCII table – which letters occupy first locations – upper or lower?</p>
+
+
+<p>We've prepared two more examples to analyze: <strong>Examples 2 & 3</strong>.</p>
+
+<p>As you can see, they present more than just strings. The expected output looks as follows:</p>
+
+<codep>[ ]
+0</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+ 
+
+<p>Note: we've used the square brackets to prevent the space from being overlooked on your screen.</p>
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

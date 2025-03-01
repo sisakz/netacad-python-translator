@@ -1,0 +1,100 @@
+<problem chapter='3' section='2' slide='1' problem='10' title='A procedurálistól az objektumorientált megközelítésig'>
+
+<!--
+Update history:
+2020-09-30 Grzegorz (review, PEP-8 compliance check, update)
+2020-10-26 Grzegorz (Sentence fix: the name of the superclass is written before the colon directly after the new class name.)
+
+-->
+
+<code>class Stack:
+    def __init__(self):
+        self.__stack_list = []
+
+    def push(self, val):
+        self.__stack_list.append(val)
+
+    def pop(self):
+        val = self.__stack_list[-1]
+        del self.__stack_list[-1]
+        return val
+
+
+class AddingStack(Stack):
+    def __init__(self):
+        Stack.__init__(self)
+        self.__sum = 0
+
+</code>
+
+
+
+<h1>Az objektumos megközelítés: verem létrehozása (folytatás)</h1>
+
+<p>Most menjünk egy kicsit tovább <strong>készítsünk egy új osztályt a verem kezeléséhez</strong>.</p>
+
+<p>Az új osztálynak <strong>ki</strong> kell tudnia <strong>számolni a veremben aktuálisan tárolt összes elem összegét</strong>.</p>
+
+<p>Nem akarjuk módosítani a korábban definiált vermet. Tökéletesen működik az alkalmazásokban, és nem akarjuk megváltoztatni. Egy új vermet akarunk, új képességekkel. Más szóval a már létező <codel>Stack</codel> osztály egy alosztályát akarjuk létrehozni.</p>
+
+<p>Az első lépés egyszerű: <strong>definiáljunk egy új alosztályt, amely a szuperosztályként használt osztályra mutat</strong>.</p>
+
+<p>Így néz ki:</p>
+
+<codep class="syntax-color">class AddingStack(Stack):
+    pass
+</codep>
+
+<br> 
+
+<p>Az osztály még nem definiál új komponenst, de ez nem jelenti azt, hogy üres. <strong>Megkapja a szuperosztálya által definiált összes összetevőt</strong> – a szuperosztály nevét a kettőspont előtt közvetlenül az új osztály neve után írjuk.</p>
+
+<p>Ezt várjuk az új veremtől:</p>
+
+<ul>
+    <li>azt szeretnénk, hogy a <codel>push</codel> metódus ne csak az értéket tolja a verembe, hanem az értéket a <codel>sum</codel> változóhoz is hozzáadja;</li>
+    <li>azt szeretnénk, hogy a <codel>pop</codel> függvény ne csak az értéket vegye ki a veremből, hanem vonja ki az értéket a <codel>sum</codel> változóból is.</li>
+</ul>
+
+<br>
+
+<p>Először is adjunk hozzá egy új változót az osztályhoz. Ez egy <strong>privát változó</strong> lesz, mint a korábbi veremlista. Nem akarjuk, hogy bárki manipulálja a <codel>sum</codel> értékét.</p>
+
+<p>Mint már tudod, új tulajdonság hozzáadása az osztályhoz a konstruktor segítségével történik. Azt már tudod, hogyan kell ezt megtenni, de van valami igazán érdekes dolog a konstruktoron belül. Nézzük meg:</p>
+
+<codep class="syntax-color">class AddingStack(Stack):
+    def __init__(self):
+        Stack.__init__(self)
+        self.__sum = 0
+</codep>
+
+<br> 
+
+<p>A konstruktor második sora létrehoz egy <codel>__sum</codel> nevű tulajdonságot - ez tárolja a verem összes értékének összegét.</p>
+
+<p>Az előtte lévő sor viszont másképp néz ki. Mire való? Tényleg szükség van rá? Igen.</p>
+
+ 
+<p>Sok más nyelvvel ellentétben a Python arra kényszerít, hogy <strong>explicit módon hívjuk meg a szuperosztály konstruktorát</strong>. Ennek a pontnak a kihagyása káros következményekkel jár - az objektumot megfosztjuk a <codel>__stack_list</codel> listától. Az ilyen verem nem fog megfelelően működni.</p>
+
+<p>Ez az egyetlen alkalom, amikor a rendelkezésre álló konstruktorok bármelyikét explicit módon meghívhatjuk - ezt az alosztály konstruktorán belül lehet megtenni.</p>
+
+
+<p>Figyeljük meg a szintaxist:</p>
+
+<ul>
+<li>megadjuk a szuperosztály nevét (ez az az osztály, amelynek konstruktorát futtatni akarja).</li>
+<li>egy pontot (<codel>.</codel>)teszünk utána;</li>
+<li>megadjuk a konstruktor nevét;</li>
+<li>az objektumra (az osztály példányára) kell mutatnunk, amelyet a konstruktornak inicializálnia kell - ezért kell megadnunk az argumentumot, és itt a <codel>self</codel> változót használjuk; megjegyzés: <strong>bármely metódus (beleértve a konstruktorokat is) osztályon kívülről történő meghívása soha nem követeli meg, hogy a <codel>self</codel> paramétert az argumentumlistára helyezzük</strong> – az osztályon belülről történő meghívás a <codel>self</codel> argumentum explicit használatát követeli meg, és azt a listán az első helyre kell tenni.</li>
+</ul>
+ 
+
+<p>Megjegyzés: általában ajánlott a szuperosztály konstruktorát előbb meghívni, mint az alosztályon belül végrehajtandó egyéb inicializálásokat. Ezt a szabályt követtük a kódrészletben is.</p>
+
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

@@ -1,0 +1,37 @@
+<problem chapter='2' section='3' slide='1' problem='14' title='String methods'>
+
+<!--
+Update history:
+2020-09-23 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>
+# Demonstrating the split() method:
+print("phi       chi\npsi".split())
+
+</code>
+
+
+
+<h1>The <font face="Courier New">split()</font> method</h1>
+
+<p>The <codel>split()</codel> method does what it says – it <strong>splits the string and builds a list of all detected substrings</strong>.</p>
+
+<p>The method <strong>assumes that the substrings are delimited by whitespaces</strong> – the spaces don't take part in the operation, and aren't copied into the resulting list.</p>
+
+<p>If the string is empty, the resulting list is empty too.</p>
+
+<p>Look at the code in the editor. The example produces the following output:</p>
+
+<codep>['phi', 'chi', 'psi']</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+<p>Note: the reverse operation can be performed by the <codel>join()</codel> method.</p>
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

@@ -1,0 +1,83 @@
+<problem chapter='1' section='2' slide='1' problem='2' title='Fontos modulok | math'>
+
+<!--
+Update history:
+2020-08-31 Grzegorz (review, PEP-8 compliance check, update)
+2021-06-29 Grzegorz (corrections)
+-->
+
+<code>from math import pi, radians, degrees, sin, cos, tan, asin
+
+ad = 90
+ar = radians(ad)
+ad = degrees(ar)
+
+print(ad == 90.)
+print(ar == pi / 2.)
+print(sin(ar) / cos(ar) == tan(ar))
+print(asin(sin(ar)) == ar)
+
+</code>
+
+<h1>A <font face="Courier New">math</font> modul fontosabb függvényei</h1>
+
+<p>Kezdjük a <codel>math</codel> modul által biztosított néhány függvény gyors áttekintésével.</p>
+
+<p>Ezeket önkényesen választottuk ki, de ez nem jelenti azt, hogy az itt nem említett függvények kevésbé fontosak. Merülj el a modulok mélységeiben magad is - nincs helyünk és időnk arra, hogy itt mindenről részletesen beszéljünk.</p>
+
+<p>A <codel>math</codel> függvények első csoportja a <strong>trigonometriához</strong> kapcsolódik:</p>
+
+<ul>
+<li><codel>sin(x)</codel> &rarr; az x szinusza;</li>
+<li><codel>cos(x)</codel> &rarr; az x koszinusza;</li>
+<li><codel>tan(x)</codel> &rarr; az x tangense.</li>
+</ul>
+ 
+
+<p>Mindegyik függvény egy argumentumot fogad el (egy radiánban kifejezett szögmértéket), és a megfelelő eredményt adja vissza (a <codel>tan()</codel> függvénynél vigyázz, mert nem minden argumentumot fogad el).</p>
+
+<p>Természetesen megvannak az inverz változataik is:</p>
+
+<ul>
+<li><codel>asin(x)</codel> &rarr; az x arkusz szinusza;</li>
+<li><codel>acos(x)</codel> &rarr; az arkusz koszinusza;</li>
+<li><codel>atan(x)</codel> &rarr; az x arkusz tangense.</li>
+</ul>
+ 
+
+<p>Ezek a függvények egy argumentumot fogadnak el (a tartományok figyelembevételével), és egy szög mértékét adják vissza radiánban.</p>
+
+<br>
+
+<p>A szögmérések hatékony kezeléséhez a <codel>math</codel> modul a következő entitásokat tartalmazza:</p>
+
+<ul>
+<li><codel>pi</codel> &rarr; egy konstans, amelynek értéke a &pi; értékét közelíti;</li>
+<li><codel>radians(x)</codel> &rarr; egy függvény, amely x-et fokról radiánra alakítja át;</li>
+<li><codel>degrees(x)</codel> &rarr; a másik irányba alakít (radiánról fokba).</li>
+</ul>
+ 
+
+<p>Most nézd meg a kódot a szerkesztőben. A példaprogram nem túl kifinomult, de sejted az eredményeit?</p>
+
+<br>
+
+<p>A <codel>math</codel> modul a (fentebb felsorolt) szögfüggvényeken kívül tartalmazza a <strong>hiperbolikus függvények</strong> készletét is:</p>
+
+<ul>
+<li><codel>sinh(x)</codel> &rarr; szinusz hiperbolikusz;</li>
+<li><codel>cosh(x)</codel> &rarr; koszinusz hiperbolikusz;</li>
+<li><codel>tanh(x)</codel> &rarr; tangens hiperbolikusz;</li>
+<li><codel>asinh(x)</codel> &rarr; arkusz szinusz hiperbolikusz;</li>
+<li><codel>acosh(x)</codel> &rarr; arkusz koszinusz hiperbolikusz;</li>
+<li><codel>atanh(x)</codel> &rarr; arkusz tangens hiperbolikusz.</li>
+</ul>
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

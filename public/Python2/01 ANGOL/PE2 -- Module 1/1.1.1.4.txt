@@ -1,0 +1,67 @@
+<problem chapter='1' section='1' slide='1' problem='4' title='Using Modules'>
+
+<!--
+Update history:
+2020-08-28 Grzegorz (review, PEP-8 compliance check, update)
+2021-06-14 Grzegorz (review)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h1>Importing a module: continued</h1>
+
+<p>To continue, you need to become familiar with an important term: <strong>namespace</strong>. Don't worry, we won't go into great detail – this explanation is going to be as short as possible.</p>
+
+<p>A <strong>namespace</strong> is a space, understood in a non-physical context, in which some names exist and the names don't conflict with each other (i.e., there are not two different objects of the same name). We can say that each social group is a namespace – the group tends to name each of its members in a unique way (e.g., parents won't give their children the same first names).</p>
+
+<center><img src="/uploads/media/default/0001/01/a7a8f2fd201a7368f18635bbfc3b7cd18e699e17.png" alt="The namespace concept"></center>
+
+<p>This uniqueness may be achieved in many ways, such as by using nicknames along with the first names (this will work inside a small group like a class in a school) or by assigning special identifiers to all members of the group (the US Social Security Number is a good example of such a practice).</p>
+
+
+
+<br>
+
+
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+<p><strong>Inside a certain namespace, each name must remain unique</strong>. This may mean that some names may disappear when another entity with the same name enters the namespace. We'll show you how it works and how to control it, but first, let's return to imports.</p>
+
+<p>If the module of a specified name <strong>exists and is accessible</strong> (a module is in fact a <strong>Python source file</strong>), Python imports its contents. In other words, <strong>all the names defined in the module become known</strong>, but they don't enter your code's namespace.</p>
+
+<p>This means that you can have your own entities named <codel>sin</codel> or <codel>pi</codel> and they won't be affected by the import in any way.</p>
+
+<center><img src="/uploads/media/default/0001/01/ad9847e20a1aaf7cb82b6e47b67a9ce091a2f0ea.png" alt="The namespace concept: math and pi"></center>
+<br>
+
+<p>At this point, you may be wondering how to access the <codel>pi</codel> coming from the <codel>math</codel> module.</p>
+
+<p>To do this, you have to qualify the <codel>pi</codel> with the name of its original module.</p>
+
+<br>
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

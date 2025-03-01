@@ -1,0 +1,72 @@
+<problem chapter='3' section='5' slide='1' problem='19' title='OOP alapok: Öröklés'>
+
+<!--
+Update history:
+2020-10-01 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+    <h1>Egyszeres öröklés vs. többszörös öröklés</h1>
+
+    <p>Mint már tudod, a Pythonban nincs akadálya a többszörös öröklődés használatának. Bármilyen új osztályt több, korábban definiált osztályból is levezethetünk.</p>
+
+    <p>Csak van egy "de". Az, hogy megtehetjük, nem jelenti azt, hogy meg is kell tennünk.</p>
+
+    <p>Ne felejtsd el:</p>
+
+<ul>
+    <li>egyetlen öröklődő osztály mindig egyszerűbb, biztonságosabb, könnyebben érthető és karbantartható;</li>
+<br>
+
+<li>A többszörös öröklés mindig kockázatos, mivel sokkal több lehetőségünk van hibázni a szuperosztályok azon részeinek azonosításában, amelyek ténylegesen befolyásolják az új osztályt;</li>
+<br>
+
+<li>a többszörös öröklés rendkívül bonyolulttá teheti a felülbírálást; ráadásul a <codel>super()</codel> függvény használata kétértelművé válik;</li>
+<br>
+</ul>
+
+<br> 
+<br>
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+
+<ul>
+
+    <li>a többszörös öröklés sérti az <strong>egy felelősség elvét</strong> (további részletek itt: <a href="https://en.wikipedia.org/wiki/Single_responsibility_principle" target="_blank">https://en.wikipedia.org/wiki/Single_responsibility_principle</a>), mivel két (vagy több) osztályból, amelyek semmit sem tudnak egymásról, egy új osztályt hoz létre;</li>
+<br>
+
+<li>a többszörös öröklődést mint az utolsó lehetséges megoldást javasoljuk - ha valóban szükség van a különböző osztályok által kínált számos különböző funkcionalitásra, a kompozíció jobb választás lehet.</li>
+</ul>
+
+
+
+<br>
+<br>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

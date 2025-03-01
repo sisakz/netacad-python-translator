@@ -1,0 +1,58 @@
+﻿<problem chapter='2' section='1' slide='1' problem='0' title='Python alapok 2 - 2. modul'>
+
+<!--
+Update history:
+2020-09-28	Grzegorz (first version)
+2021-06-30	Grzegorz (corrections)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-4 columns">
+
+<br>
+
+<h1>Python alapok 2:
+<br>2. modul</h1>
+
+<p><strong>Karakterláncok, karakter és lista tagfüggvények, kivételek</strong></p>
+
+<p>Ebben a modulban a következő témakörökről tanulunk:</p>
+
+<ul>
+    <li>Karakterek, karakterláncok és kódolási szabványok;</li>
+    <li>Sorozatok vs. listák – hasonlóságok és különbségek;</li>
+    <li>Lista tagfüggvények;</li>
+    <li>Karakterlánc tagfüggvények;</li>
+    <li>A Python futásidejű hibakezelési módja;</li>
+    <li>A hibaáramlás ellenőrzése a <codel>try</codel> és <codel>except</codel> használatával;</li>
+    <li>A kivételek hierarchiája.</li>
+
+</ul>
+
+<br>
+
+
+</div>
+
+
+
+<div class="small-12 large-8 columns">
+
+<br>
+
+<center><img src="/uploads/media/default/0001/02/17a22cb94c4a45456dcdbc98116527c183548e85.png" alt="Part 2 Module 2 Title Page" width="70%"></center>
+
+<br>
+
+
+</div>
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

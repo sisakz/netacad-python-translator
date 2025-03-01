@@ -1,0 +1,81 @@
+<problem chapter='4' section='1' slide='1' problem='13' title='Generators and closures'>
+
+<!--
+Update history:
+2020-10-05 Grzegorz (review, PEP-8 compliance check)
+-->
+
+<code>def outer(par):
+    loc = par
+
+    def inner():
+        return loc
+    return inner
+
+
+var = 1
+fun = outer(var)
+print(fun())
+
+</code>
+
+
+
+<h1>A brief look at closures</h1>
+
+
+<p>Let's start with a definition: <strong>closure is a technique which allows the storing of values in spite of the fact that the context in which they have been created does not exist anymore</strong>. Intricate? A bit.</p>
+
+<p>Let's analyze a simple example:</p>
+
+<codep><font color="red">def outer(par):
+    loc = par
+
+
+var = 1
+outer(var)
+
+print(var)
+print(loc)</font>
+
+</codep>
+
+<br>
+
+<p>The example is obviously erroneous.</p>
+
+<p>The last two lines will cause a <font face="Courier New">NameError</font> exception – neither <codel>par</codel> nor <codel>loc</codel> is accessible outside the function. Both the variables exist when and only when the <codel>outer()</codel> function is being executed.</p>
+
+<br>
+
+
+<p>Look at the example in the editor. We've modified the code significantly.</p>
+
+<p>There is a brand new element in it – a function (named <codel>inner</codel>) inside another function (named <codel>outer</codel>).</p>
+
+<p>How does it work? Just like any other function except for the fact that <codel>inner()</codel> may be invoked only from within <codel>outer()</codel>. We can say that <codel>inner()</codel> is <codel>outer()</codel>'s private tool – no other part of the code can access it.</p>
+
+<p>Look carefully:</p>
+
+<ul>
+<li>the <codel>inner()</codel> function returns the value of the variable accessible inside its scope, as <codel>inner()</codel> can use any of the entities at the disposal of <codel>outer()</codel></li>
+<li>the <codel>outer()</codel> function returns the <codel>inner()</codel> function itself; more precisely, it returns a copy of the <codel>inner()</codel> function, the one which was frozen at the moment of <codel>outer()</codel>'s invocation; the frozen function contains its full environment, including the state of all local variables, which also means that the value of <codel>loc</codel> is successfully retained, although <codel>outer()</codel> ceased to exist a long time ago.</li>
+
+</ul>
+
+
+<p>In effect, the code is fully valid, and outputs:</p>
+
+<codep>1</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+<p>The function returned during the <codel>outer()</codel> invocation is a <strong>closure</strong>.</p>
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

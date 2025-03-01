@@ -1,0 +1,98 @@
+<problem chapter='1' section='2' slide='1' problem='1' title='Fontos modulok'>
+
+<!--
+Update history:
+2020-08-31 Grzegorz (review, PEP-8 compliance check, update)
+2021-06-16 Grzegorz (review)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h1>Munka standard modulokkal</h1>
+
+<p>Mielõtt elkezdenénk néhány szabványos Python modulon végigmenni, szeretnénk bemutatni a <codel>dir()</codel> függvényt. Ennek semmi köze a Windows és Unix konzolokról ismert <codel>dir</codel> parancshoz, mivel a <codel>dir()</codel> nem mutatja meg egy meghajtó könyvtárának/mappájának tartalmát, de tagadhatatlan, hogy valami nagyon hasonlót csinál - képes feltárni az összes, egy adott modulon keresztül megadott nevet.</p>
+
+<p>Van egy feltétel: a modult korábban egészben kell importálni (azaz az <codel>import module</codel> utasításhasználata - <codel>from module</codel> nem elég).</p>
+
+<p>A függvény egy <strong>ábécé szerint rendezett listát</strong> ad vissza, amely a modulban elérhetõ összes, a függvénynek argumentumként átadott névvel azonosított entitás nevét tartalmazza:</p>
+
+<codep class="syntax-color">dir(module)
+</codep>
+<br>
+
+<p>Megjegyzés: ha a modul neve alias, akkor az alias-t kell használnod, nem az eredeti nevet.</p>
+
+<p>A függvény használatának egy normál szkriptben nem sok értelme van, de lehetséges.</p>
+
+
+
+<p>Például a következõ kódot futtathatod a <codel>math</codel> modulban található összes entitás nevének kiírásához:</p>
+
+<codep class="syntax-color copy">import math
+
+for name in <mark class="mark-background">dir(math)</mark>:
+    print(name, end="\t")
+</codep>
+
+<br>
+
+<p>A példakódnak a következõ kimenetet kell produkálnia:</p>
+
+<codep style="white-space: break-spaces;">__doc__	__loader__	__name__	__package__	__spec__	acos	acosh	asin	asinh	atan	atan2	atanh	ceil	copysign	cos	cosh	degrees	e	erf	erfc	exp	expm1	fabs	factorial	floor	fmod	frexp	fsum	gamma	hypot	isfinite	isinf	isnan	ldexp	lgamma	log	log10	log1p	log2	modf	pi	pow	radians	sin	sinh	sqrt	tan	tanh	trunc	</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+<br>
+
+
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+<p>Észrevetted ezeket a furcsa, <codel>__</codel>-vel kezdõdõ neveket a lista elején? Többet fogunk róluk mondani, amikor a saját modulok írásával kapcsolatos kérdésekrõl beszélünk.</p>
+
+<p>A nevek némelyike felidézheti a matematikaórák emlékeit, és valószínûleg nem okoz majd gondot kitalálni a jelentésüket.</p>
+
+<p>A <codel>dir()</codel> függvény használata egy kódon belül nem tûnik túl hasznosnak - általában a kód megírása és futtatása elõtt szeretnénk tudni egy adott modul tartalmát.</p>
+
+<p>Szerencsére a függvényt <strong>közvetlenül a Python konzolban</strong> (IDLE) is végre lehet hajtani, anélkül, hogy külön szkriptet kellene írni és futtatni.</p>
+
+<p>Így lehet ezt megtenni:</p>
+
+<codep class="syntax-color copy">import math
+dir(math)
+</codep>
+
+<br>
+
+<p>Valami ehhez hasonlót kell látnod:</p>
+
+<img class="lightbox" src="/uploads/media/default/0001/01/de942a70f61e8e052a33b3c9ecb23312d305d71e.png" width="95%" alt="Python console window - the math module contents">
+
+<br>
+
+<br>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

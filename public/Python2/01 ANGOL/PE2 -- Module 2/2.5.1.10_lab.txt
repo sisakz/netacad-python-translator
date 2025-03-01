@@ -1,0 +1,110 @@
+<problem chapter='2' section='5' slide='1' problem='10' title="LAB: Find a word!">
+
+<!--
+Update history:
+2020-09-23 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<span class="label" style="background-color:rgb(205, 168, 105);"><strong>LAB</strong></span>
+
+<br><br>
+
+<h2>Estimated time</h2>
+<p>30-45 minutes</p>
+
+<h2>Level of difficulty</h2>
+<p>Medium</p>
+
+
+<h2>Objectives</h2>
+<ul>
+<li>improving the student's skills in operating with strings;</li>
+<li>using the <codel>find()</codel> method for searching strings.</li>
+</ul>
+
+
+<h2>Scenario</h2>
+
+<p>Let's play a game. We will give you two strings: one being a word (e.g., "dog") and the second being a combination of any characters.</p>
+
+<p>Your task is to write a program which answers the following question: <strong>are the characters comprising the first string hidden inside the second string?</strong></p>
+
+<p>For example:</p>
+
+<ul>
+<li>if the second string is given as <font face="Courier New">"vcxzxduybfdsobywuefgas"</font>, the answer is <codel>yes</codel>;</li>
+<li>if the second string is <font face="Courier New">"vcxzxdcybfdstbywuefsas"</font>, the answer is <codel>no</codel> (as the letters "d", "o", or "g" don't appear in this order)</li>
+</ul>
+
+<p>Hints:</p>
+<ul>
+<li>you should use the two-argument variants of the <codel>pos()</codel> functions inside your code;</li>
+<li>don't worry about case sensitivity.</li>
+</ul>
+
+<p>Test your code using the data we've provided.</p>
+
+
+<h2>Test data</h2>
+
+
+<p>Sample input:<p>
+<codep>donor
+Nabucodonosor</codep>
+
+<p>Sample output:</p>
+<codep>Yes</codep>
+<br>
+
+<br>
+
+<p>Sample input:<p>
+<codep>donut
+Nabucodonosor</codep>
+
+<p>Sample output:</p>
+<codep>No</codep>
+<br>
+
+
+
+<studyMode>false</studyMode>
+<labMode>true</labMode>
+
+
+
+
+
+<hint>
+word = input("Enter the word you wish to find: ").upper()
+strn = input("Enter the string you wish to search through: ").upper()
+
+found = True
+start = 0
+
+# Write the rest of the code here.
+
+</hint>
+
+<sampleSolution>
+word = input("Enter the word you wish to find: ").upper()
+strn = input("Enter the string you wish to search through: ").upper()
+
+found = True
+start = 0
+
+for ch in word:
+	pos = strn.find(ch, start) 
+	if pos < 0:
+		found = False
+		break
+	start = pos + 1
+if found:
+	print("Yes")
+else:
+	print("No")
+	
+</sampleSolution>
+
+
+</problem>

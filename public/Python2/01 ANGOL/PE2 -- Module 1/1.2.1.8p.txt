@@ -1,0 +1,79 @@
+<problem chapter='1' section='2' slide='1' problem='8' title='Useful modules | random'>
+
+<!--
+Update history:
+2020-08-31 Grzegorz (review, PEP-8 compliance check, update)
+2020-10-20 Grzegorz (elements_to_choose sentence changed, defaults to 1 removed)
+2021-06-29 Grzegorz (corrections)
+-->
+
+<code>
+</code>
+
+<h1>Selected functions from the <font face="Courier New">random</font> module: continued</h1>
+
+
+
+<p>The previous functions have one important disadvantage – they may produce repeating values even if the number of subsequent invocations is not greater than the width of the specified range.</p>
+
+<p>Look at the code below – the program very likely outputs a set of numbers in which some elements are not unique:</p>
+
+<p><codep class="syntax-color copy line-numbers">from random import randint
+
+for i in range(10):
+    print(randint(1, 10), end=',')
+</codep></p>
+
+<p>This is what we got in one of the launches:</p>
+
+<codep>9,4,5,4,5,8,9,4,8,4,</codep>
+<p style="text-align: right;"><font size="-2"><b>sample output</b></font></p>
+
+
+<p><b>The <font face="Courier New">choice</font> and <font face="Courier New">sample</font> functions</b></p>
+ 
+<p>As you can see, this is not a good tool for generating numbers in a lottery. Fortunately, there is a better solution than writing your own code to check the uniqueness of the "drawn" numbers.</p>
+
+<br>
+
+<p>It's a function named in a very suggestive way – <codel>choice</codel>:</p>
+
+<ul>
+<li><codel>choice(sequence)</codel></li>
+<li><codel>sample(sequence, elements_to_choose)</codel></li>
+</ul>
+ 
+
+<p>The first variant chooses a "random" element from the input sequence and returns it.</p>
+
+<p>The second one builds a list (a sample) consisting of the <codel>elements_to_choose</codel> element "drawn" from the input sequence.</p>
+
+<p>In other words, the function chooses some of the input elements, and returns a list with the choice. The elements in the sample are placed in random order. Note: the <codel>elements_to_choose</codel> must not be greater than the length of the input sequence.</p>
+
+<p>Look at the code below:</p>
+
+<codep class="syntax-color copy">from random import choice, sample
+
+my_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+print(choice(my_list))
+print(sample(my_list, 5))
+print(sample(my_list, 10))
+</codep> 
+
+<br>
+
+<p>Again, the output of the program is not predictable. Our results looked like this:</p>
+
+<codep>4
+[3, 1, 8, 9, 10]
+[10, 8, 5, 1, 6, 4, 3, 9, 7, 2]</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

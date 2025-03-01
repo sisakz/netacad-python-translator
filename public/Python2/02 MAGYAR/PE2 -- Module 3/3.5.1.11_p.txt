@@ -1,0 +1,80 @@
+<problem chapter='3' section='5' slide='1' problem='11' title='OOP alapok: Öröklés'>
+
+<!--
+Update history:
+2020-10-01 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>
+
+class Level1:
+    variable_1 = 100
+    def __init__(self):
+        self.var_1 = 101
+
+    def fun_1(self):
+        return 102
+
+
+class Level2(Level1):
+    variable_2 = 200
+    def __init__(self):
+        super().__init__()
+        self.var_2 = 201
+    
+    def fun_2(self):
+        return 202
+
+
+class Level3(Level2):
+    variable_3 = 300
+    def __init__(self):
+        super().__init__()
+        self.var_3 = 301
+
+    def fun_3(self):
+        return 302
+
+
+obj = Level3()
+
+print(obj.variable_1, obj.var_1, obj.fun_1())
+print(obj.variable_2, obj.var_2, obj.fun_2())
+print(obj.variable_3, obj.var_3, obj.fun_3())
+
+</code>
+
+
+
+<h1>Hogyan találja meg a Python a tulajdonságokat és metódusokat (folytatás)</h1>
+
+
+<p>Most már lehetséges egy általános kijelentést megfogalmazni, amely leírja a Python viselkedését.</p>
+
+<P>Amikor megpróbálunk hozzáférni bármely objektum entitásához, a Python az alábbi sorrendben próbálja meg elérni:<p>
+
+<ul>
+<li>az <strong>objektumon belül</strong>;</li>
+<li>az objektum öröklési sorában alulról felfelé haladva az <strong>összes</strong> érintett <strong>osztályban</strong>;</li>
+</ul>
+
+<p>Ha a fentiek közül mindkettõ sikertelen, a <strong>rendszer kivételt (<codel>AttributeError</codel>) jelez</strong>.</p>
+
+<br>
+
+<p>Az elsõ kitétel további figyelmet igényelhet. Mint tudjuk, egy adott osztályból származó összes objektum különbözõ attribútumkészlettel rendelkezhet, és az attribútumok egy része az objektum létrehozását követõen jóval késõbb kerülhet az objektumhoz.</p>
+
+<p>A szerkesztõben található példa ezt egy <strong>háromszintû öröklési sorban</strong> foglalja össze. Elemezd ki alaposan!</p>
+
+<p>Az összes eddigi megjegyzésünk az <strong>egyszeres örökléssel</strong> kapcsolatos, amikor egy alosztály pontosan egy szuperosztállyal rendelkezik. Ez a leggyakoribb helyzet (és ez az ajánlott is).</p>
+
+<p>A Python azonban ennél sokkal többet kínál. A következõ leckékben a <strong>többszörös öröklõdésre</strong> mutatunk néhány példát.</p>
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

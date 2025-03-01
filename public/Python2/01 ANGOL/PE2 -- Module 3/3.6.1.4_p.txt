@@ -1,0 +1,181 @@
+<problem chapter='3' section='6' slide='1' problem='4' title='Exceptions once again'>
+
+<!--
+Update history:
+2020-10-01 Grzegorz (reviewed, PEP-8 compliance check)
+-->
+
+<code>
+def print_exception_tree(thisclass, nest = 0):
+    if nest > 1:
+        print("   |" * (nest - 1), end="")
+    if nest > 0:
+        print("   +---", end="")
+
+    print(thisclass.__name__)
+
+    for subclass in thisclass.__subclasses__():
+        print_exception_tree(subclass, nest + 1)
+
+
+print_exception_tree(BaseException)
+
+</code>
+
+
+
+<h1>Exceptions are classes</h1>
+
+
+<p>All the built-in Python exceptions form a hierarchy of classes. There is no obstacle to extending it if you find it reasonable.</p>
+
+<p>Look at the code in the editor.</p>
+
+<p>This program dumps all predefined exception classes in the form of a tree-like printout.</p>
+
+<p>As <strong>a tree is a perfect example of a recursive data structure</strong>, a recursion seems to be the best tool to traverse through it. The <codel>print_exception_tree()</codel> function takes two arguments:</p>
+
+<ul>
+<li>a point inside the tree from which we start traversing the tree;</li>
+<li>a nesting level (we'll use it to build a simplified drawing of the tree's branches)</li>
+</ul>
+
+<p>Let's start from the tree's root – the root of Python's exception classes is the <codel>BaseException</codel> class (it's a superclass of all other exceptions).</p>
+
+<p>For each of the encountered classes, perform the same set of operations:</p>
+
+<ul>
+<li>print its name, taken from the <codel>__name__</codel> property;</li>
+<li>iterate through the list of subclasses delivered by the <codel>__subclasses__()</codel> method, and recursively invoke the <codel>print_exception_tree()</codel> function, incrementing the nesting level respectively.</p>
+
+<p>Note how we've drawn the branches and forks. The printout isn't sorted in any way – you can try to sort it yourself, if you want a challenge. Moreover, there are some subtle inaccuracies in the way in which some branches are presented. That can be fixed, too, if you wish.</p>
+
+<p>This is what it looks like:</p>
+
+<codep>BaseException
+   +---Exception
+   |   +---TypeError
+   |   +---StopAsyncIteration
+   |   +---StopIteration
+   |   +---ImportError
+   |   |   +---ModuleNotFoundError
+   |   |   +---ZipImportError
+   |   +---OSError
+   |   |   +---ConnectionError
+   |   |   |   +---BrokenPipeError
+   |   |   |   +---ConnectionAbortedError
+   |   |   |   +---ConnectionRefusedError
+   |   |   |   +---ConnectionResetError
+   |   |   +---BlockingIOError
+   |   |   +---ChildProcessError
+   |   |   +---FileExistsError
+   |   |   +---FileNotFoundError
+   |   |   +---IsADirectoryError
+   |   |   +---NotADirectoryError
+   |   |   +---InterruptedError
+   |   |   +---PermissionError
+   |   |   +---ProcessLookupError
+   |   |   +---TimeoutError
+   |   |   +---UnsupportedOperation
+   |   |   +---herror
+   |   |   +---gaierror
+   |   |   +---timeout
+   |   |   +---Error
+   |   |   |   +---SameFileError
+   |   |   +---SpecialFileError
+   |   |   +---ExecError
+   |   |   +---ReadError
+   |   +---EOFError
+   |   +---RuntimeError
+   |   |   +---RecursionError
+   |   |   +---NotImplementedError
+   |   |   +---_DeadlockError
+   |   |   +---BrokenBarrierError
+   |   +---NameError
+   |   |   +---UnboundLocalError
+   |   +---AttributeError
+   |   +---SyntaxError
+   |   |   +---IndentationError
+   |   |   |   +---TabError
+   |   +---LookupError
+   |   |   +---IndexError
+   |   |   +---KeyError
+   |   |   +---CodecRegistryError
+   |   +---ValueError
+   |   |   +---UnicodeError
+   |   |   |   +---UnicodeEncodeError
+   |   |   |   +---UnicodeDecodeError
+   |   |   |   +---UnicodeTranslateError
+   |   |   +---UnsupportedOperation
+   |   +---AssertionError
+   |   +---ArithmeticError
+   |   |   +---FloatingPointError
+   |   |   +---OverflowError
+   |   |   +---ZeroDivisionError
+   |   +---SystemError
+   |   |   +---CodecRegistryError
+   |   +---ReferenceError
+   |   +---BufferError
+   |   +---MemoryError
+   |   +---Warning
+   |   |   +---UserWarning
+   |   |   +---DeprecationWarning
+   |   |   +---PendingDeprecationWarning
+   |   |   +---SyntaxWarning
+   |   |   +---RuntimeWarning
+   |   |   +---FutureWarning
+   |   |   +---ImportWarning
+   |   |   +---UnicodeWarning
+   |   |   +---BytesWarning
+   |   |   +---ResourceWarning
+   |   +---error
+   |   +---Verbose
+   |   +---Error
+   |   +---TokenError
+   |   +---StopTokenizing
+   |   +---Empty
+   |   +---Full
+   |   +---_OptionError
+   |   +---TclError
+   |   +---SubprocessError
+   |   |   +---CalledProcessError
+   |   |   +---TimeoutExpired
+   |   +---Error
+   |   |   +---NoSectionError
+   |   |   +---DuplicateSectionError
+   |   |   +---DuplicateOptionError
+   |   |   +---NoOptionError
+   |   |   +---InterpolationError
+   |   |   |   +---InterpolationMissingOptionError
+   |   |   |   +---InterpolationSyntaxError
+   |   |   |   +---InterpolationDepthError
+   |   |   +---ParsingError
+   |   |   |   +---MissingSectionHeaderError
+   |   +---InvalidConfigType
+   |   +---InvalidConfigSet
+   |   +---InvalidFgBg
+   |   +---InvalidTheme
+   |   +---EndOfBlock
+   |   +---BdbQuit
+   |   +---error
+   |   +---_Stop
+   |   +---PickleError
+   |   |   +---PicklingError
+   |   |   +---UnpicklingError
+   |   +---_GiveupOnSendfile
+   |   +---error
+   |   +---LZMAError
+   |   +---RegistryError
+   |   +---ErrorDuringImport
+   +---GeneratorExit
+   +---SystemExit
+   +---KeyboardInterrupt</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

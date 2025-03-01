@@ -1,0 +1,72 @@
+<problem chapter='3' section='4' slide='1' problem='8' title='OOP: Metódusok'>
+
+<!--
+Update history:
+2020-09-30 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>
+class SuperOne:
+    pass
+
+
+class SuperTwo:
+    pass
+
+
+class Sub(SuperOne, SuperTwo):
+    pass
+
+
+def printBases(cls):
+    print('( ', end='')
+
+    for x in cls.__bases__:
+        print(x.__name__, end=' ')
+    print(')')
+
+
+printBases(SuperOne)
+printBases(SuperTwo)
+printBases(Sub)
+
+</code>
+
+
+
+<h1>Az osztályok és objektumok belső élete (folytatás)</h1>
+
+<p>A <codel>__bases__</codel> egy tuple. A <strong>tuple</strong> olyan <strong>osztályokat</strong> (nem osztályneveket) <strong>tartalmaz</strong>, amelyek az osztály közvetlen szuperosztályai.</p>
+
+<p>A sorrend megegyezik az osztálydefinícióban használt sorrenddel.</p>
+
+<p>Csak egy nagyon egyszerű példát mutatunk, mivel szeretnénk rávilágítani az <strong>öröklődés működésére</strong>.</p>
+
+<p>Sőt, a kivételek objektív aspektusainak tárgyalásakor meg fogjuk mutatni, hogyan használhatod ezt az attribútumot.</p>
+
+ 
+
+<p>Megjegyzés: <strong>csak az osztályok rendelkeznek ezzel az attribútummal</strong> – az objektumok nem.</p>
+
+ 
+
+<p>Meghatároztunk egy <codel>printbases()</codel> nevű függvényt, amelynek célja, hogy a tuple tartalmát megjelenítse.</p>
+
+<p>Nézzük meg a kódot a szerkesztőben! Vizsgáljuk meg és futtassuk! A program kimenete:</p>
+
+ 
+<codep>( object )
+( object )
+( SuperOne SuperTwo )</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+<p>Megjegyzés: <strong>egy explicit szuperosztályok nélküli osztály az object</strong> (egy előre definiált Python-osztály) közvetlen ősére <strong>mutat</strong>.</p>
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

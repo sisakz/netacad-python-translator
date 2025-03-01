@@ -1,0 +1,151 @@
+<problem chapter='1' section='3' slide='1' problem='5' title='Modulok és csomagok'>
+
+<!--
+Update history:
+2020-09-08 Grzegorz (review, PEP-8 compliance check, update)
+2021-06-29 Grzegorz (corrections)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h1>Az első modulod: 11. lépés</h1>
+
+<p>Itt az ideje, hogy a példánkat kicsit bonyolultabbá tegyük - eddig azt feltételeztük, hogy a Python főfájl ugyanabban a mappában/könyvtárban található, mint az importálandó modul.</p>
+
+<p>Adjuk fel ezt a feltételezést, és végezzük el a következő gondolatkísérletet:<p>
+
+<ul>
+<li>Windows &reg; operációs rendszert használunk (ez a feltételezés fontos, mivel a fájlnév alakja ettől függ);</li>
+<li>a fő Python szkript a <font face="Courier New">C:\Users\user\py\progs</font> könyvtárban található és a <font face="Courier New">main.py</font> nevet viseli;</li>
+<li>az importálandó modul a <font face="Courier New">C:\Users\user\py\modules</font> könyvtárban található.</li>
+</ul>
+
+<img class="lightbox" src="/uploads/media/default/0001/01/fe6d2d786bc52c8212b9c4b976ad0b0427480570.png" width="75%" alt="How Python seeks modules – modules access tree">
+<br><br> 
+
+<p>Hogyan kezeljük?</p>
+
+<p>A kérdés megválaszolásához beszélnünk kell arról, <strong>hogyan keresi a Python a modulokat</strong>. Van egy speciális változó (valójában egy lista), amely az összes olyan helyet (mappát/könyvtárat) tárolja, amelyet az import utasítás által kért modul megtalálása érdekében felkeres.</p>
+
+<p>A Python ezeket a mappákat a listában szereplő sorrendben böngészi - ha a modul nem található meg a könyvtárak egyikében sem, az importálás sikertelen.</p>
+
+<p>Ellenkező esetben az első olyan mappát veszi figyelembe a rendszer, amely a kívánt nevű modult tartalmazza (ha a többi mappa bármelyike tartalmaz ilyen nevű modult, azt a rendszer figyelmen kívül hagyja).</p>
+
+<p>A változó neve <codel>path</codel> és a <codel>sys</codel> nevű modulon keresztül érhető el. Így ellenőrizheted a szabályos értékét:</p>
+
+<p><codep class="syntax-color copy line-numbers">import sys
+
+for p in sys.path:
+    print(p)
+</codep></p>
+
+<p>Elindítottuk a kódot a <font face="Courier New">C:\User\user</font> mappában, és ezt kaptuk:</p>
+
+<codep>C:\Users\user
+C:\Users\user\AppData\Local\Programs\Python\Python36-32\python36.zip
+C:\Users\user\AppData\Local\Programs\Python\Python36-32\DLLs
+C:\Users\user\AppData\Local\Programs\Python\Python36-32\lib
+C:\Users\user\AppData\Local\Programs\Python\Python36-32
+C:\Users\user\AppData\Local\Programs\Python\Python36-32\lib\site-packages</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+
+<p>Megjegyzés: a mappa, amelyben a végrehajtás kezdődik, az <b>elérési útvonal első elemében</b> szerepel.</p>
+
+<p>Még egyszer megjegyezzük: az útvonal egyik elemeként egy zip fájl szerepel - ez nem hiba. A Python képes a zip fájlokat közönséges mappaként kezelni - ez rengeteg tárhelyet takaríthat meg.</p>
+
+<br>
+
+<p>Most már ki tudod találni, hogyan tudjuk megoldani a problémánkat? A path változóhoz hozzáadhatjuk a modult tartalmazó mappát (ez teljes mértékben módosítható).</p>
+
+
+
+<br><br>
+
+
+</div>
+
+
+
+<div class="small-12 large-6 columns">
+
+
+<h2>Az első modulod: 12. lépés</h2>
+
+
+<p>A lehetséges megoldások egyike így néz ki:</p>
+
+<img src="/uploads/media/default/0001/01/28b0f82cba77c140c343c3d1117c0fbe2e830caf.png" width="45%" alt="Updating the main.py file with path.append('..\\modules')">
+
+<br><br>
+
+
+<codep class="syntax-color copy">from sys import path
+
+path.append('..\\modules')
+
+import module
+
+zeroes = [0 for i in range(5)]
+ones = [1 for i in range(5)]
+print(module.suml(zeroes))
+print(module.prodl(ones))
+</codep>
+<p style="text-align: right;">main.py</p>
+
+
+<p>Megjegyzés:</p>
+
+<ul>
+<li>Megdupláztuk a <codel>\</codel> jelet a mappanévben. Tudod miért?
+
+<br><br>
+
+<button class="button tiny" onclick="solution('sol')">Ellenőrzés</button>
+
+<p id="sol" style="display: none;">
+A backslash önmagában egy fedőkarakter, ha csak egy sima backslasht-t szeretnél használni, akkor egy fedőkaraktert (\) kell elé tenned.
+</p>
+
+<script>
+function solution (id) {
+    var element = document.getElementById(id);
+    
+if (element.style.display === "none") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
+    }
+}
+</script>
+
+<br></li>
+
+
+<li>a mappa relatív nevét használtuk. Ez akkor fog működni, ha a <font face="Courier New">main.py</font> fájlt közvetlenül a saját mappájából indítjuk el, és nem fog működni, ha az aktuális könyvtár nem felel meg a relatív elérési útvonalnak; viszont mindig használhatunk az alábbihoz hasonló abszolút elérési utat:
+<br><br><codep>path.append('C:\\Users\\user\\py\\modules')
+
+</codep></li>
+<br>
+
+<li>az <codel>append()</codel> metódust használtuk - valójában az új útvonal az utolsó elemet foglalja el az útvonallistában; ha nem tetszik az ötlet, használhatjuk helyette az <codel>insert()</codel> metódust.</p>
+
+
+
+<br>
+<br>
+
+</div>
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

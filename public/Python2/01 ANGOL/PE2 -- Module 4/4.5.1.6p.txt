@@ -1,0 +1,56 @@
+<problem chapter='4' section='5' slide='1' problem='6' title='The datetime module'>
+
+<!--
+Update history:
+2020-03-30 Sebastian (first version)
+2020-10-11 Grzegorz (review, PEP-8 compliance check)
+-->
+
+<code>from datetime import date
+
+d = date(2019, 11, 4)
+print(d.weekday())
+
+</code>
+
+
+
+<h1>What day of the week is it?</h1>
+
+
+<p>One of the more helpful methods that makes working with dates easier is the method called <codel>weekday</codel>. It returns the day of the week as an integer, where 0 is Monday and 6 is Sunday. Run the code in the editor.</p>
+
+<p>Result:</p>
+<codep>0</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+<br>
+
+<center><img src="/uploads/media/default/0001/02/5f445d2e3aead8fd461418e896da9973e5feb594.png" alt="A man and the calendar - what day is today?" width="70%"></center>
+
+<br><br>
+
+<p>The <codel>date</codel> class has a similar method called <codel>isoweekday</codel>, which also returns the day of the week as an integer, but 1 is Monday, and 7 is Sunday:</p>
+
+<p><codep class="syntax-color copy">from datetime import date
+
+d = date(2019, 11, 4)
+print(d.isoweekday())
+</codep></p>
+
+<p>Result:</p>
+<codep>1</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+<p>As you can see, for the same date we get a different integer, but expressing the same day of the week. The integer returned by the <codel>isodayweek</codel> method follows the ISO 85601 specification.</p>
+
+
+
+<br>
+<br>
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

@@ -1,0 +1,132 @@
+<problem chapter='1' section='3' slide='1' problem='11' title='SZAKASZ ÖSSZEFOGLALÁS'>
+
+<!--
+Update history:
+2020-08-31 Sysio (first version)
+2020-09-28 Grzegorz (review, reformat, PEP-8 compliance check)
+2021-06-29 Grzegorz (corrections)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<h1>A legfontosabb tudnivalók</h1>
+
+<br/>
+
+<p>1. Míg egy <b>modul</b> célja, hogy összekössön néhány kapcsolódó entitást (függvényeket, változókat, konstansokat, stb.), addig a <b>csomag</b> egy olyan tároló, amely lehetővé teszi több kapcsolódó modul összekötését egy közös név alatt. Egy ilyen konténer terjeszthető önmagában (egy könyvtárstruktúrán belül telepített fájlok kötegeként), vagy csomagolható egy zip-fájlba.</p>
+<br/>
+
+
+<p>2. Az aktuális modul legelső importálása során a Python lefordítja a modul forráskódját a <b>pyc</b> fájlokban tárolt <b>előfordított</b> formátumba, és ezeket a fájlokat a modul home könyvtárában található <codel>__pycache__</codel> könyvtárba telepíti.</p>
+<br/>
+
+
+<p>3. Ha a modul felhasználóját arra akarod utasítani, hogy egy adott entitást <b>privátként</b> kezeljen (azaz ne használja kifejezetten a modulon kívül), akkor a nevét <codel>_</codel> vagy <codel>__</codel> előtaggal jelölheted. Ne feledd, hogy ez csak egy ajánlás, nem kötelező betartani.</p>
+<br/>
+
+<p>4. A <i>shabang</i>, <i>shebang</i>, <i>hasbang</i>, <i>poundbang</i>, és <i>hashpling</i> nevek a <codel>#!</codel>alakban írt karakterpárt írják le, amellyel a Unix és az ahhoz hasonló operációs rendszereket utasítják arra, hogy a Python forrásfájlt hogyan kell elindítani. Ennek a konvenciónak nincs hatása MS Windows alatt.</p>
+<br/>
+
+<p>5. Ha meg akarjuk győzni a Pythont arról, hogy egy nem szabványos csomag könyvtárát is figyelembe kell vennie, akkor annak nevét be kell illeszteni/hozzá kell illeszteni a <codel>sys</codel> modulban található <codel>path</codel> változóban tárolt import könyvtárlistához.</p>
+<br/>
+
+<p>6. Az <codel>__init__.py</codel> nevű Python fájl implicit módon lefut, amikor az azt tartalmazó csomag importálásra kerül, és a csomag és/vagy alcsomagjai (ha vannak) inicializálására szolgál. A fájl lehet üres, de nem hiányozhat.</p>
+<br/>
+</div>
+
+<div class="small-12 large-6 columns">
+<br/>
+
+<script>
+function solution (id) {
+    var element = document.getElementById(id);
+    
+if (element.style.display === "none") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
+    }
+}
+</script>
+
+
+<p><strong>1. gyakorlat</strong></p>
+<p>Meg akarod akadályozni, hogy a modul felhasználója közönséges szkriptként futtassa a kódját. Hogyan éred el ezt a hatást?</p>
+
+
+<button class="button tiny" onclick="solution('sol1')">Ellenőrzés</button>
+
+<p id="sol1" style="display: none;">
+<codep>import sys
+
+if __name__ == "__main__":
+    print "Don't do that!"
+    sys.exit()
+
+</codep>
+</p>
+
+
+
+<br/><br/>
+
+
+
+<p><strong>2. gyakorlat</strong></p>
+<p>Néhány további és szükséges csomag a <codel>D:\Python\Project\Modules</codel> könyvtárban található. Írj egy kódot, amely biztosítja, hogy a Python bejárja a könyvtárat, és megtalálja az összes kért modult.</p>
+
+
+<button class="button tiny" onclick="solution('sol2')">Ellenőrzés</button>
+
+<p id="sol2" style="display: none;">
+<codep>import sys
+
+# Note the double backslashes!
+sys.path.append("D:\\Python\\Project\\Modules")
+
+</codep></p>
+
+<br/><br/>
+
+
+
+
+<p><strong>3. gyakorlat</strong></p>
+<p>Az előző feladatban említett könyvtár a következő szerkezetű fastruktúrát tartalmazza:</p>
+<codep>abc
+ |__ def
+      |__ mymodule.py
+
+</codep>
+
+<br/>
+
+<p>Feltételezve, hogy a <codel>D:\Python\Project\Modules</codel> sikeresen hozzá lett csatolva a <codel>sys.path</codel> listához, írjunk egy import direktívát, amely lehetővé teszi az összes <codel>mymodule</codel> egység használatát.</p>
+
+<button class="button tiny" onclick="solution('sol3')">Ellenőrzés</button>
+
+<p id="sol3" style="display: none;">
+<codep>import abc.def.mymodule
+
+</codep>
+</p>
+
+<br/>
+
+
+
+<br/>
+
+</div>
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

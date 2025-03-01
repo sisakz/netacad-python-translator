@@ -1,0 +1,100 @@
+<problem chapter='1' section='1' slide='1' problem='3' title='Using Modules'>
+
+<!--
+Update history:
+2020-08-31 Grzegorz (review, PEP-8 compliance check, update; added two ways of importing modules with examples)
+2021-06-14 Grzegorz (review)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h1>Importing a module</h1>
+
+<p>To make a module usable, you must <strong>import</strong> it (think of it like of taking a book off the shelf). Importing a module is done through an instruction named <codel>import</codel>. Note: <codel>import</codel> is also a keyword (with all the consequences of this fact).</p>
+
+<center><img src="/uploads/media/default/0001/01/e111763370df8f83660725b2f878816ffc59fdd4.png" width="80%" alt="The import keyword"></center>
+
+<br>
+<br>
+
+<p>Let's assume that you want to use two entities provided by the <codel>math</codel> module:</p>
+
+<ul>
+<li>a symbol (constant) representing a precise (as precise as possible using double floating-point arithmetic) value of &pi; (although using a Greek letter to name a variable is fully possible in Python, the symbol is named <strong>pi</strong> – it's a more convenient solution, especially for that part of the world which neither has nor is going to use a Greek keyboard)</li>
+
+<li>a function named <codel>sin()</codel>, the computer equivalent of the mathematical <i>sine</i> function.</li>
+</ul>
+ 
+<p>Both these entities are available through the <codel>math</codel> module, but the way in which you can use them strongly depends on how the import has been done.</p>
+
+<br>
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+<p>The simplest way to import a particular module is to use the import instruction as follows:</p>
+
+<codep class="syntax-color">import math
+</codep>
+<br>
+
+<p>The clause contains:</p>
+
+<ul>
+<li>the <codel>import</codel> keyword;</li>
+<li>the <strong>name of the module</strong> which is subject to import.</li>
+</ul>
+
+<p>The instruction may be located anywhere in your code, but it must be placed <strong>before the first use of any of the module's entities</strong>.</p>
+
+<br>
+
+<p>If you want to (or have to) import more than one module, you can do it by repeating the <codel>import</codel> clause (preferred):</p>
+
+<codep class="syntax-color">import math
+import sys
+</codep>
+
+<br>
+
+<p>or by listing the modules after the <codel>import</codel> keyword, like here:</p>
+
+<codep class="syntax-color">import math, sys
+</codep>
+<br>
+
+ 
+<p>The instruction imports two modules, first the one named <codel>math</codel> and then the second named <codel>sys</codel>.</p>
+
+<p>The list of modules to import may be arbitrarily long.</p>
+
+<br>
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

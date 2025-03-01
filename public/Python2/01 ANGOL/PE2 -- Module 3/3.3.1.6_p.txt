@@ -1,0 +1,54 @@
+<problem chapter='3' section='3' slide='1' problem='6' title='OOP: Properties'>
+
+<!--
+Update history:
+2020-09-30 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>
+class ExampleClass:
+    def __init__(self, val):
+        if val % 2 != 0:
+            self.a = 1
+        else:
+            self.b = 1
+
+
+example_object = ExampleClass(1)
+
+print(example_object.a)
+print(example_object.b)
+
+</code>
+
+
+
+<h1>Checking an attribute's existence</h1>
+
+<p>Python's attitude to object instantiation raises one important issue – in contrast to other programming languages, <strong>you may not expect that all objects of the same class have the same sets of properties</strong>.</p>
+
+<p>Just like in the example in the editor. Look at it carefully.</p>
+
+<p>The object created by the constructor can have only one of two possible attributes: <codel>a</codel> or <codel>b</codel>.</p>
+
+<p>Executing the code will produce the following output:</p>
+
+<codep>1
+Traceback (most recent call last):
+  File ".main.py", line 11, in <module>
+    print(example_object.b)
+AttributeError: 'ExampleClass' object has no attribute 'b'</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+<p>As you can see, accessing a non-existing object (class) attribute causes an <font face="Courier New">AttributeError</font> exception.</p>
+
+
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

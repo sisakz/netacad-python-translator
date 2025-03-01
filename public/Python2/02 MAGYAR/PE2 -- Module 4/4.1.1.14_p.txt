@@ -1,0 +1,79 @@
+<problem chapter='4' section='1' slide='1' problem='14' title='Generátor és closure'>
+
+<!--
+Update history:
+2020-10-05 Grzegorz (review, PEP-8 compliance check)
+-->
+
+<code>def make_closure(par):
+    loc = par
+
+    def power(p):
+        return p ** loc
+    return power
+
+
+fsqr = make_closure(2)
+fcub = make_closure(3)
+
+for i in range(5):
+    print(i, fsqr(i), fcub(i))
+
+</code>
+
+
+
+<h1>A closure-ök rövid áttekintése (folytatás)</h1>
+
+
+<p><strong>A closure-t pontosan ugyanúgy kell meghívni, ahogyan deklarálták</strong>.</p>
+
+<p>Az alábbi példában:</p>
+
+<codep class="syntax-color copy line-numbers">def outer(par):
+    loc = par
+
+    def inner():
+        return loc
+    return inner
+
+
+var = 1
+fun = outer(var)
+print(fun())
+</codep>
+
+<br>
+
+<p>az <codel>inner()</codel> függvény paraméter nélküli, így argumentumok nélkül kell meghívnunk.</p>
+
+<p>Nézd meg a kódot a szerkesztőablakban. <strong>Closure-t deklarálhatunk tetszőleges számú paraméterrel</strong>. Az itt látható <codel>power()</codel> függvény például csak egyet használ.</p>
+
+<p>E szerint a closure nem csak a befagyasztott környezetet használja, hanem a <strong>kívülről kapott értékek felhasználásával a viselkedését is módosíthatja</strong>.</p>
+
+<p>Ez a példa még egy érdekes körülményre mutat rá: <strong>annyi closure-t hozhatsz létre, amennyit csak akarsz, egy és ugyanazon kódrészlet segítségével</strong>. Ezt tettük a <codel>make_closure()</codel> nevű függvénnyel. Megjegyzés:</p>
+
+<ul>
+    <li>a <codel>make_closure()</codel> segítségével létrehozott első closure egy olyan eszközt definiál, amely négyzetre emeli az argumentumát;</li>
+    <li>a második pedig a köbre emelésre szolgál.</li>
+</ul>
+
+<p>Így a kód a következő eredményt adja:</p>
+
+<codep>0 0 0
+1 1 1
+2 4 8
+3 9 27
+4 16 64</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+
+<p>Teszteld Te is!</p>
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

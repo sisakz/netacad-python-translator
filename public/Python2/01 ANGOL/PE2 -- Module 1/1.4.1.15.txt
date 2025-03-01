@@ -1,0 +1,88 @@
+<problem chapter='1' section='4' slide='1' problem='15' title='How to use pip'>
+
+<!--
+Update history:
+2020-09-25 Grzegorz (created)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<h1>How to use <i>pip</i>: continued</h1>
+
+
+<p>This is what we expect from our impressive code:</p>
+
+
+<center><img class="lightbox" src="/uploads/media/default/0001/02/929c92b98466fcce4d0da90b879b105661b4b96a.png" width="95%" alt="Command prompt - python testpg.py"></center>
+<br>
+
+
+<br>
+<br> 
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+<p>The <codel>pip install</codel> has two important additional abilities:</p>
+
+<ul>
+<li>it is able to <b>update</b> a locally installed package – e.g., if you want to make sure that you’re using the latest version of a particular package, you can run the following command:
+
+<br><br>
+
+<codep class="syntax-color">pip install -U package_name
+</codep>
+<br>
+
+where <codel>-U</codel> means update. Note: this form of the command makes use of the <codel>--user</codel> option for the same purpose as presented previously;</li>
+
+<br>
+
+<li>it is able to <b>install a user-selected version</b> of a package (<i>pip</i> installs the <b>newest</b> available version by default); to achieve this goal you should use the following syntax:
+
+<br><br>
+
+<codep class="syntax-color">pip install package_name==package_version
+</codep>
+<br>
+
+(note the double equals sign) e.g.,
+
+<br><br>
+
+<codep class="syntax-color">pip install pygame==1.9.2
+</codep>
+<br>
+
+
+
+
+
+
+
+<br>
+<br>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

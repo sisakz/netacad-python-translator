@@ -1,0 +1,79 @@
+<problem chapter='1' section='2' slide='1' problem='6' title='Fontos modulok | random'>
+
+<!--
+Update history:
+2020-08-31 Grzegorz (review, PEP-8 compliance check, update)
+2021-06-29 Grzegorz (corrections)
+-->
+
+<code>
+</code>
+
+<h1>A <font face="Courier New">random</font> modul fontosabb függvényei</h1>
+
+<p><b>A <font face="Courier New">random</font> függvény</b></p>
+
+<p>A legáltalánosabb <codel>random()</codel> nevű függvény (nem tévesztendő össze a modul nevével) <strong>egy <codel>x</codel> lebegőpontos (float) számot állít elő, amely a <codel>(0,0; 1,0)</codel>tartományból származik</strong> - más szóval: 0,0 &lt;= x &lt; 1,0.</p>
+
+<p>Az alábbi példaprogram öt pszeudorandom értéket fog előállítani - mivel ezek értékét az aktuális (meglehetősen kiszámíthatatlan) magérték határozza meg, nem lehet kitalálni őket:</p>
+
+<p><codep class="syntax-color copy">from random import random
+
+for i in range(5):
+    print(<mark class="mark-background">random</mark>())
+</codep></p>
+
+<p>Futtasd a programot. Ezt kapjuk:</p>
+
+<codep>0.9535768927411208
+0.5312710096244534
+0.8737691983477731
+0.5896799172452125
+0.02116716297022092</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+<p><b>A <font face="Courier New">seed</font> függvény</b></p>
+
+<p>A <codel>seed()</codel> függvény képes közvetlenül <strong>beállítani a generátor magját</strong>. Két változatát mutatjuk be:</p>
+
+<ul>
+<li><codel>seed()</codel> – a magot az aktuális idővel állítja be;</li>
+<li><codel>seed(int_value)</codel> – a magot az <codel>int_value</codel> egész szám értékkel állítja be.</li>
+</ul>
+ 
+
+<p>Módosítottuk az előző programot - gyakorlatilag a véletlenszerűség minden nyomát eltávolítottuk a kódból:</p>
+
+<codep class="syntax-color copy">from random import random, seed
+
+<mark class="mark-background">seed</mark>(0)
+
+for i in range(5):
+    print(random())
+</codep>
+
+<br>
+
+<p>Mivel a mag mindig ugyanazzal az értékkel van beállítva, a generált értékek sorozata mindig ugyanúgy néz ki.</p>
+
+<p>Futtasd a programot. Ezt kapjuk:</p>
+
+<codep>0.844421851525
+0.75795440294
+0.420571580831
+0.258916750293
+0.511274721369</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+
+<p>Mi a helyzet veled?</p>
+
+<p>Megjegyzés: az általad kapott értékek kissé eltérhetnek a miénktől, ha a te rendszered pontosabb vagy kevésbé pontos lebegőpontos aritmetikát használ, de a különbség a tizedesvesszőtől elég messze lesz látható.</p>
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

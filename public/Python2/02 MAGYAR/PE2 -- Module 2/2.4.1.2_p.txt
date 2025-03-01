@@ -1,0 +1,72 @@
+<problem chapter='2' section='4' slide='1' problem='2' title='A karakterláncok működése'>
+
+<!--
+Update history:
+2020-09-23 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>
+# Test examples here.
+
+</code>
+
+
+
+<h1>Karakterláncok összehasonlítása (folytatás)</h1>
+
+<p>Még <strong>ha egy karakterlánc csak számjegyeket tartalmaz is, akkor sem szám</strong>. Úgy értelmezzük, mint bármely más szabályos karakterláncot, és a (potenciális) számértékét semmilyen módon nem vesszük figyelembe.</p>
+
+<p>Nézd meg a példákat:</p>
+
+<codep class="syntax-color">'10' == '010'
+'10' &gt; '010'
+'10' &gt; '8'
+'20' &lt; '8'
+'20' &lt; '80'
+</codep>
+<br>
+
+<p>Ezek a következő eredményeket adják:</p>
+
+<codep>False
+True
+False
+True
+True</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+
+<p><strong>A karakterláncok számokkal való összehasonlítása általában rossz ötlet.</strong></p>
+
+<p>Az egyetlen összehasonlítás, amit büntetlenül elvégezhetsz, az <codel>==</codel> és <codel>!=</codel> operátorok által szimbolizált összehasonlítások. Az előbbi mindig <codel>False</codel>-t, míg az utóbbi mindig <codel>True</codel>-t ad.</p>
+
+<p>A többi összehasonlító operátor bármelyikének használata <font face="Courier New">TypeError</font> kivételt ('not supported between instances of 'str' and 'int') fog kiváltani.</p>
+
+<p>Nézzük meg:</p>
+
+<codep class="syntax-color">'10' == 10
+'10' != 10
+'10' == 1
+'10' != 1
+'10' &gt; 10
+</codep>
+<br>
+
+<p>Az eredmények ebben az esetben a következők:</p>
+
+<codep>False
+True
+False
+True
+TypeError exception</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+<p>Futtasd le az összes példát, és végezz további kísérleteket.</p>
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

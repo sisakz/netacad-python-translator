@@ -1,0 +1,77 @@
+<problem chapter='3' section='4' slide='1' problem='4' title='OOP: Methods'>
+
+<!--
+Update history:
+2020-09-30 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>
+class Classy:
+    def __init__(self, value = None):
+        self.var = value
+
+
+obj_1 = Classy("object")
+obj_2 = Classy()
+
+print(obj_1.var)
+print(obj_2.var)
+
+</code>
+
+
+
+<h1>Methods in detail: continued</h1>
+
+<p>As <codel>__init__</codel> is a method, and a method is a function, you can do the same tricks with constructors/methods as you do with ordinary functions.</p>
+
+<p>The example in the editor shows how to define a constructor with a default argument value. Test it.</p>
+
+<p>The code outputs:</p>
+
+<codep>object
+None</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+
+<p>Everything we've said about <strong>property name mangling</strong> applies to method names, too – a method whose name starts with <codel>__</codel> is (partially) hidden.</p>
+
+<p>The example shows this effect:</p>
+
+<codep class="syntax-color copy line-numbers">class Classy:
+    def visible(self):
+        print("visible")
+    
+    def __hidden(self):
+        print("hidden")
+
+
+obj = Classy()
+obj.visible()
+
+try:
+    obj.__hidden()
+except:
+    print("failed")
+
+obj._Classy__hidden()
+</codep>
+<br> 
+
+
+<p>The code outputs:</p>
+
+<codep>visible
+failed
+hidden</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+<p>Run the program, and test it.</p>
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

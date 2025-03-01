@@ -1,0 +1,92 @@
+<problem chapter='0' section='0' slide='0' problem='2' title='Tananyag | Miért érdemes PYTHON-t tanulnod?'>
+
+<!--
+Update history:
+2020-08-27 Grzegorz (created)
+2020-11-19 Grzegorz (updated)
+2021-06-14 Grzegorz (review)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+
+<h1>A kurzus tananyaga</h1>
+
+<p>Ezen a tanfolyamon megtanulhatod:</p>
+
+<ul>
+<li>hogyan alkalmazd az általános kódolási technikákat és a legjobb gyakorlatokat a projektjeidben;</li>
+<li>hogyan kell feldolgozni a karakterláncokat;</li>
+<li>hogyan használjuk az objektumorientált programozást Pythonban;</li>
+<li>hogyan importáld és használd a Python modulokat, beleértve a <i>math</i>, <i>random</i>, <i>platform</i>, <i>os</i>, <i>time</i>, <i>datetime</i> és <i>calendar</i> modulokat;</li>
+<li>hogyan hozz létre és használj saját Python modulokat és csomagokat;</li>
+<li>hogyan használd a Python kivételkezelő mechanizmusát;</li>
+<li>hogyan használj generátorokat, iterátorokat és lezárásokat Pythonban;</li>
+<li>hogyan kell feldolgozni a fájlokat.</li>
+</ul>
+
+
+<br>
+
+<p>A tanfolyam 4 modulra oszlik:</p>
+
+<ol>
+<li><strong>modul</strong>
+<br>Modulok, csomagok és PIP</li>
+
+
+<li><strong>modul</strong>
+<br>Karakterláncok, a karakterláncokat és listákat kezelő tagfüggvények, kivételek</li>
+
+
+<li><strong>modul</strong>
+<br>Objektum-orientált programozás</li>
+
+<li><strong>modul</strong>
+<br>Egyebek (generátorok, iterátorok, closure-ök, fájl adatfolyamok, szöveges és bináris fájlok feldolgozása, az <i>os</i>, <i>time</i>, <i>datetime</i> és <i>calendar</i> modulok)</li>
+
+</ol>
+
+<br>
+
+</div>
+
+
+
+
+<div class="small-12 large-6 columns">
+<br>
+
+
+<h1>Miért érdemes PYTHON-t tanulnod?</h1>
+
+<p>A Python mindenütt jelen van, az emberek számos Python-alapú eszközt használnak nap mint nap, akár észreveszik, akár nem. Több millió (nos, valójában milliárd) kódsort írtak már Pythonban, ami szinte korlátlan lehetőséget biztosít a kód újrahasznosítására és a jó példákból való tanulásra. Sőt, mi több, van egy nagy és nagyon aktív Python közösség, akik mindig szívesen segítenek.</p>
+
+<p>Van még néhány tényező, ami miatt a Python kiválóan alkalmas a tanulásra:</p>
+
+<ul>
+<li>Könnyen tanulható - a Python megtanulása rövidebb időt vesz igénybe, mint sok más nyelvé; ez azt jelenti, hogy gyorsabban el lehet kezdeni a tényleges programozást;</li>
+<li>Könnyen használható új szoftverek írásához - Python használatával gyakran gyorsabban lehet kódot írni;</li>
+<li>Könnyen beszerezhető, telepíthető és használható - a Python ingyenes, nyílt és multiplatformos; ezekkel nem minden nyelv büszkélkedhet.</li>
+</ul>
+
+<p>A kurzus elvégzése ugródeszkaként szolgálhat bármely más programozási nyelv elsajátításához, valamint a Pythont alapként használó technológiák (pl. Django) felfedezéséhez. A tanfolyamot a megfizethetőség, a barátságosság és a diákokkal szembeni nyitottság jellemzi.</p>
+
+<p>Az első rész az alapoktól indult, és lépésről lépésre vezetett el a bonyolultabb problémákhoz, amelyeket ebben a részben ismertetünk. Így egy olyan felelős szoftverfejlesztővé válhatsz, aki az IT-ipar számos pozíciójában képes a különböző kihívásoknak megfelelni.</p>
+
+<br>
+
+</div>
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

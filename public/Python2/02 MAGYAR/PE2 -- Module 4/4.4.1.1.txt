@@ -1,0 +1,74 @@
+<problem chapter='4' section='4' slide='1' problem='1' title='Az os modul'>
+
+<!--
+Update history:
+2020-03-30 Sebastian (first version)
+2020-10-08 Grzegorz (review, PEP-8 compliance check)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h1>Bevezetés az <i>os</i> modulba</h1>
+
+
+<p>Ebben a részben az <i>os</i> modullal ismerkedhetünk meg, amely lehetõvé teszi, hogy <b>Python segítségével interakcióba lépj az operációs rendszerrel</b>.</p>
+
+<p>Olyan függvényeket biztosít, amelyek Unix és/vagy Windows rendszereken is elérhetõk. Ha ismered a parancskonzol utasításait, látni fogod, hogy bizonyos függvények ugyanazt az eredményt adják, mint az operációs rendszereken elérhetõ parancsok.</p>
+
+<p>Jó példa erre az <codel>mkdir</codel> függvény, amely lehetõvé teszi egy könyvtár létrehozását, akárcsak a Unix és a Windows <i>mkdir</i> parancsa. Ha nem ismered ezt a parancsot, ne aggódj.</p>
+
+<p>Hamarosan lehetõséged lesz megismerni az <i>os</i> modul függvényeit, hogy mûveleteket végezhess a fájlokon és könyvtárakon a megfelelõ parancsokhoz hasonlóan.</p>
+
+<p>A fájl- és könyvtármûveleteken kívül az <i>os</i> modul lehetõvé teszi:</p>
+
+<ul>
+    <li>az operációs rendszerre vonatkozó információk lekérdezését;</i>
+    <li>folyamatok kezelését;</li>
+    <li>fájlleírók segítségével az I/O adatfolyamok kezelését.</i>
+</ul>
+
+
+<br> 
+<br>
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+<center><img src="/uploads/media/default/0001/02/acff888e657173efaea1bc8feacc5a61c1190038.png" alt="A penguin, a snake, and a window" width="70%"></center>
+
+<br><br>
+
+
+
+    <p>Hamarosan látni fogod, hogyan szerezhetsz alapvetõ információkat az operációs rendszerrõl. A folyamatkezelést és a fájlleírókkal való munkát itt nem tárgyaljuk, mivel ezek haladóbb témák, amelyek az operációs rendszer mûködési mechanizmusainak ismeretét igénylik.</p>
+
+<p>Készen állsz?</p>
+
+
+<br>
+<br>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

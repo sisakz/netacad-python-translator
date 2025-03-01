@@ -1,0 +1,167 @@
+<problem chapter='1' section='3' slide='1' problem='4' title='Modulok és csomagok'>
+
+<!--
+Update history:
+2020-09-08 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h1>Az első modulod: 7. lépés</h1>
+
+<p>Ez a modul két egyszerű függvényt fog tartalmazni, és ha tudni akarjuk, hogy hányszor hívtuk meg a függvényeket, akkor szükségünk van egy számlálóra, amelyet a modul importálásakor nulla kezdőértékre állítunk.</p>
+
+<p>Ezt így is megteheted:</p>
+
+<img src="/uploads/media/default/0001/01/c8197d3ff79350b3003e5b972099610ae247ab4b.png" width="45%" alt="Updating the module.py file">
+
+<br><br>
+
+
+<codep class="syntax-color copy line-numbers">counter = 0
+
+if __name__ == "__main__":
+    print("I prefer to be a module.")
+else:
+    print("I like to be a module.")
+</codep>
+<p style="text-align: right;">module.py</p>
+
+
+<h2>Az első modulod: 8. lépés</h2>
+
+
+<p>Egy ilyen változó bevezetése teljesen helyes, de fontos <strong>mellékhatásokat</strong> okozhat, amelyekkel tisztában kell lenned.</p>
+
+<p>Nézzük meg a módosított <font face="Courier New">main.py</font> fájlt:</p>
+
+<img src="/uploads/media/default/0001/01/9d08f4ae6053759010511d805a3cddf77393daef.png" width="45%" alt="Updating the main.py file">
+
+<br><br>
+
+<codep class="syntax-color copy line-numbers">import module
+print(module.counter)
+</codep>
+<p style="text-align: right;">main.py</p>
+
+<br>
+ 
+
+<p>Mint látható, a főfájl megpróbál hozzáférni a modul counter nevű változójához. Ez legális? Igen, az. Használható? Nagyon is használható lehet. Biztonságos?</p>
+
+<p>Ez attól függ - ha megbízol a modul felhasználóiban, akkor nincs probléma; azonban nem biztos, hogy szeretnéd, ha a világ többi része látná a <strong>személyes/magánjellegű változódat</strong>.</p>
+
+<p>Sok más programozási nyelvvel ellentétben a Python nem rendelkezik olyan eszközzel, amely lehetővé tenné az ilyen változók elrejtését a modul felhasználóinak szeme elől.</p>
+
+<p>Csak arról tájékoztathatod a felhasználókat, hogy ez a Te változód, és hogy elolvashatják, de semmilyen körülmények között nem módosíthatják.</p>
+
+
+<p>Ez úgy történik, hogy a változó neve elé <codel>_</codel> (egy alulvonás) vagy <codel>__</codel> (két alulvonás) kerül, de ne feledd, ez csak egy  <strong>konvenció</strong>. A modulod felhasználói vagy betartják, vagy nem.</p>
+
+<p>Természetesen követjük a konvenciót. Most tegyünk két függvényt a modulba - ezek egy listába gyűjtött számok összegét és szorzatát fogják kiértékelni.</p>
+
+<p>Ezenkívül adjunk hozzá néhány díszítőelemet, és távolítsuk el a felesleges maradványokat.</p>
+
+
+<br><br>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<h2>Az első modulod: 9. lépés</h2>
+
+<p>Rendben. Írjunk néhány vadonatúj kódot a <font face="Courier New">module.py</font> fájlunkba. Íme a frissített modul:</p>
+
+<codep class="syntax-color copy line-numbers">#!/usr/bin/env python3 
+
+""" module.py - an example of a Python module """
+
+__counter = 0
+
+
+def suml(the_list):
+    global __counter
+    __counter += 1
+    the_sum = 0
+    for element in the_list:
+        the_sum += element
+    return the_sum
+
+
+def prodl(the_list):
+    global __counter	
+    __counter += 1
+    prod = 1
+    for element in the_list:
+        prod *= element
+    return prod
+
+
+if __name__ == "__main__":
+    print("I prefer to be a module, but I can do some tests for you.")
+    my_list = [i+1 for i in range(5)]
+    print(suml(my_list) == 15)
+    print(prodl(my_list) == 120)
+</codep>
+<p style="text-align: right;">module.py</p>
+
+
+
+<p>Úgy gondoljuk, hogy néhány elem némi magyarázatra szorul:</p>
+
+<ul>
+<li>a <codel>#!</codel> kezdetű sornak sokféle neve van - nevezhetjük <i>shabangnak</i>, <i>shebangnek</i>, <i>hashbangnek</i>, <i>poundbangnek</i> vagy akár <i>hashplingnek</i> is (ne kérdezd, miért). Maga a név itt semmit sem jelent - fontosabb a szerepe. A Python szempontjából ez csak egy <strong>megjegyzés</strong>, mivel a <codel>#</codel>-tel kezdődik. A Unix és ahhoz hasonló operációs rendszerek (beleértve a MacOS-t is) esetében egy ilyen sor <strong>utasítja az operációs rendszert, hogyan hajtsa végre a fájl tartalmát</strong> (más szóval, milyen programot kell indítani a szöveg értelmezéséhez). Bizonyos környezetekben (különösen a webszerverekkel kapcsolatban állóknál) ennek a sornak a hiánya gondot okoz;</li>
+
+<li>egy (esetleg többsoros) karakterláncot, amely a modul utasításai (beleértve az importokat is) előtt helyezkedik el, <strong>doc-string</strong> nevezzük, és röviden ismertetnie kell a modul célját és tartalmát;</li>
+
+<li>a modulban definiált függvények (<codel>suml()</codel> és <codel>prodl()</codel>) importálhatók;</li>
+
+<li>a <codel>__name__</codel> változót arra használtuk, hogy felismerjük, ha a fájl önállóan fut, és megragadtuk az alkalmat néhány egyszerű teszt elvégzésére.</li>
+</ul>
+
+
+<h2>Az első modulod: 10. lépés</h2>
+
+<p>Most már lehetséges a frissített modul használata - ez az egyik módja:</p>
+
+<img src="/uploads/media/default/0001/01/372fce8f3bf80c754cd8b6128ebdaf0f96e8ef71.png" width="45%" alt="Updating the main.py file">
+
+<br><br>
+
+<codep class="syntax-color copy line-numbers">from module import suml, prodl
+
+zeroes = [0 for i in range(5)]
+ones = [1 for i in range(5)]
+print(suml(zeroes))
+print(prodl(ones))
+</codep>
+<p style="text-align: right;">main.py</p>
+
+
+<br>
+<br>
+
+</div>
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

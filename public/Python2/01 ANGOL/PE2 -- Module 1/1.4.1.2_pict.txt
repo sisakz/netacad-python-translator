@@ -1,0 +1,78 @@
+﻿<problem chapter='1' section='4' slide='1' problem='2' title='Python Package Installer (PIP)'>
+
+<!--
+Update history:
+2020-09-23	Grzegorz (created)
+2021-06-29	Grzegorz (corrections)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h1>Python packaging ecosystem and how to use it: continued</h1>
+
+<p>The repository (or <i>repo</i> for short) we mentioned before is named <strong>PyPI</strong> (it's short for Python Package Index) and it's maintained by a workgroup named the Packaging Working Group, a part of the Python Software Foundation, whose main task is to support Python developers in efficient code dissemination.</p>
+
+<p>You can find their website here:
+
+<br>
+<a href="https://wiki.python.org/psf/PackagingWG" target="_blank">https://wiki.python.org/psf/PackagingWG</a>.</p>
+
+<br>
+
+<p>The PyPI website (administered by PWG) is located at the address:
+
+<br><a href="https://pypi.org/" target="_blank">https://pypi.org/</a>.</p>
+
+<br>
+
+<p>When we popped in there for a while at the beginning of July 2021, we found that PyPI was home to 315,000 projects, consisting of over 4,500,000 files managed by 520,000 users.</p>
+
+<p>These three numbers alone clearly show the potency of the Python community and the importance of developer cooperation.</p>
+
+
+
+
+
+<br>
+<br> 
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+<center><img src="/uploads/media/default/0001/02/8a073cc555d6464077da78c3f83f0f216a2afaa9.png" width="50%" alt="PyPI, archive, repository"></center>
+
+<br><br>
+
+<p>We must point out that PyPI is not the only existing Python repository. On the contrary, there are lots of them, created for projects and led by many larger and smaller Python communities. It's likely that someday you and your colleagues may want to <b>create your own repos</b>.</p>
+
+<p>Anyway, PyPI is the most important Python repo in the world. If we modify the classic saying a little, we can state that "all Python roads lead to PyPl", and that’s no exaggeration at all.</p>
+
+
+
+<br>
+<br>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

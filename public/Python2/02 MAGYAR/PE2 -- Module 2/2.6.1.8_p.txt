@@ -1,0 +1,77 @@
+<problem chapter='2' section='6' slide='1' problem='8' title="Hibák – a programozók mindennapi kenyere | try-except">
+
+<!--
+Update history:
+2020-09-21 Grzegorz (review, PEP-8 compliance check, update, title correction)
+-->
+
+<code>
+try:
+    x = int(input("Enter a number: "))
+    y = 1 / x
+except:
+    print("Oh dear, something went wrong...")
+
+print("THE END.")
+
+</code>
+
+
+
+<h1>Kivételek (folytatás)</h1>
+
+<p>Ennek a megközelítésnek van egy nagy hátránya – ha fennáll a lehetősége annak, hogy egynél több kivétel ugrik be egy <codel>except:</codel> ágba, akkor <strong>gondot okozhat annak kiderítése, hogy mi is történt valójában</strong>.</p>
+
+<p>Csakúgy, mint a kódunkban a szerkesztőben. Futtasd le, és nézd meg, mi történik.</p>
+
+<p>A konzolban megjelenő üzenet: <codel>Oh dear, something went wrong...</codel> semmit sem mond az okról, miközben a kivételnek két lehetséges oka van:</p>
+
+<ul>
+    <li>a felhasználó által megadott adat nem egész szám;</li>
+    <li>az <codel>x</codel> változóhoz rendelt egész szám értéke <codel>0</codel>.</li>
+</ul>
+
+
+<br>
+
+<p>Technikailag kétféleképpen lehet megoldani a problémát:</p>
+
+<ul>
+    <li>két egymást követő <font face="Courier New">try-except</font> blokkot építesz, egyet minden lehetséges kivétel okára (egyszerű, de kedvezőtlen kódnövekedést okoz)</li>
+    <li>az utasítás egy fejlettebb változatát használod.</li>
+</ul>
+ 
+
+<p>Így néz ki:</p>
+
+<codep class="syntax-color">try:
+    :
+except exc1:
+    :
+except exc2:
+    :
+except:
+    :
+</codep>
+
+<br>
+
+
+<p>Ez így működik:</p>
+
+<ul>
+    <li>ha a <codel>try</codel> ág kiváltja az <codel>exc1</codel> kivételt, akkor azt az <codel>except exc1:</codel> blokk fogja kezelni;</li>
+    <li>hasonlóképpen, ha a <codel>try</codel> ág az <codel>exc2</codel> kivételt váltja ki, akkor azt az <codel>except exc2:</codel> blokk fogja kezelni;</li>
+    <li>ha a <codel>try</codel> ág bármilyen más kivételt vált ki, azt a névtelen <codel>except</codel> blokk kezeli.</li>
+</ul>
+ 
+
+<p>Lépjünk tovább a tanfolyam következő részére, és nézzük meg a gyakorlatban.</p>
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

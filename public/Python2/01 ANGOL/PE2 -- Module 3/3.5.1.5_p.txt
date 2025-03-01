@@ -1,0 +1,105 @@
+<problem chapter='3' section='5' slide='1' problem='5' title='OOP Fundamentals: Inheritance'>
+
+<!--
+Update history:
+2020-10-01 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>class Vehicle:
+    pass
+
+
+class LandVehicle(Vehicle):
+    pass
+
+
+class TrackedVehicle(LandVehicle):
+    pass
+
+
+my_vehicle = Vehicle()
+my_land_vehicle = LandVehicle()
+my_tracked_vehicle = TrackedVehicle()
+
+for obj in [my_vehicle, my_land_vehicle, my_tracked_vehicle]:
+    for cls in [Vehicle, LandVehicle, TrackedVehicle]:
+        print(isinstance(obj, cls), end="\t")
+    print()
+
+</code>
+
+
+
+<h1>Inheritance: <font face="Courier New">isinstance()</font></h1>
+
+<p>As you already know, <strong>an object is an incarnation of a class</strong>. This means that the object is like a cake baked using a recipe which is included inside the class.</p>
+
+<p>This can bring up some important issues.</p>
+
+<p>Let's assume that you've got a cake (e.g., as an argument passed to your function). You want to know what recipe has been used to make it. Why? Because you want to know what to expect from it, e.g., whether it contains nuts or not, which is crucial information to some people.</p>
+
+<p>Similarly, it can be crucial if the object does have (or doesn't have) certain characteristics. In other words, <strong>whether it is an object of a certain class or not</strong>.</p>
+
+<p>Such a fact could be detected by the function named <codel>isinstance()</codel>:</p>
+
+<codep class="syntax-color">isinstance(objectName, ClassName)
+</codep>
+<br>
+
+<p>The function returns <font face="Courier New">True</font> if the object is an instance of the class, or <font face="Courier New">False</font> otherwise.</p>
+
+<p><strong>Being an instance of a class means that the object (the cake) has been prepared using a recipe contained in either the class or one of its superclasses</strong>.</p>
+
+<p>Don't forget: if a subclass contains at least the same equipment as any of its superclasses, it means that objects of the subclass can do the same as objects derived from the superclass, ergo, it's an instance of its home class and any of its superclasses.</p>
+
+<p>Let's test it. Analyze the code in the editor.</p>
+
+<p>We've created three objects, one for each of the classes. Next, using two nested loops, we check all possible object-class pairs <strong>to find out if the objects are instances of the classes</strong>.</p>
+
+<p>Run the code.</p>
+
+<p>This is what we get:</p>
+
+<codep>True	False	False	
+True	True	False	
+True	True	True	</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+<p>Let's make the result more readable once again:</p>
+
+<table>
+<thead><tr>
+
+<th>&darr; is an instance of &rarr;</th> <th>Vehicle</th> <th>LandVehicle</th> <th>TrackedVehicle</th>
+
+</tr></thead>
+
+<tbody><tr>
+
+<td><strong>my_vehicle</strong></td> <td><font face="Courier New">True</font></td> <td><font face="Courier New">False</font></td> <td><font face="Courier New">False</font></td>
+
+</tr>
+
+<tr>
+
+<td><strong>my_land_vehicle</strong></td> <td><font face="Courier New">True</font></td> <td><font face="Courier New">True</font></td> <td><font face="Courier New">False</font></td>
+
+</tr>
+
+<tr>
+
+<td><strong>my_tracked_vehicle</strong></td> <td><font face="Courier New">True</font></td> <td><font face="Courier New">True</font></td> <td><font face="Courier New">True</font></td>
+
+</tr></tbody>
+</table>
+
+<p>Does the table confirm our expectations?</p>
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

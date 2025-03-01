@@ -1,0 +1,71 @@
+<problem chapter='3' section='6' slide='1' problem='10' title='Modul zárás'>
+
+<!--
+Update history:
+2020-10-18 Grzegorz (file creation)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+    <h1>Gratulálunk! Befejezted a <i>3. modult</i>.</h1>
+
+<br>
+
+
+<p>Szép munka! Elérted a 3. modul végét, és egy fontos mérföldkövet teljesítettél a Python programozási tanulmányaidban. Íme egy rövid összefoglaló a 3. modulban lefedett és megismert célokról:</p>
+
+<ul>
+    <li>az objektumorientált programozás alapjai és alapfogalmai;</li>
+
+    <li>a procedurális és az objektumos megközelítés közötti különbségek a verem példáján keresztül;</li>
+
+    <li>tulajdonságok (példány- és osztályváltozók, attribútumok);</li>
+
+    <li>metódusok (osztály és objektum metódusok, a konstruktor, paraméterek és tulajdonságok);</li>
+
+    <li>az öröklés fogalma (függvények, metódusok, osztályhierarchiák, polimorfizmus, kompozíció, egyszeres és többszörös öröklés);</li>
+
+    <li>a python kivételek objektumos jellege.</li>
+
+</ul>
+
+<br>
+
+<p>Most már készen állsz a modul kvízének kitöltésére és a végső kihívás teljesítésére: a 3. modul tesztje, amely segít felmérni, hogy mit tanultál eddig.</p>
+
+
+<br>
+<br>
+
+</div>
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+
+
+<center><img src="/uploads/media/default/0001/01/29ed2aa31a1a26221e4eac3b69d973a33cbf562e.png" width="65%" alt="Module completion – congratulations"></center>
+<br>
+
+
+
+
+<br>
+
+</div>
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

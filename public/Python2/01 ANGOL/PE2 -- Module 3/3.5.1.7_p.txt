@@ -1,0 +1,61 @@
+<problem chapter='3' section='5' slide='1' problem='7' title='OOP Fundamentals: Inheritance'>
+
+<!--
+Update history:
+2020-10-01 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>class Super:
+    def __init__(self, name):
+        self.name = name
+
+    def __str__(self):
+        return "My name is " + self.name + "."
+
+
+class Sub(Super):
+    def __init__(self, name):
+        Super.__init__(self, name)
+
+
+obj = Sub("Andy")
+
+print(obj)
+
+</code>
+
+
+
+<h1>How Python finds properties and methods</h1>
+
+<p>Now we're going to look at how Python deals with inheriting methods.</p>
+
+<p>Take a look at the example in the editor. Let's analyze it:</p>
+
+<ul>
+<li>there is a class named <codel>Super</codel>, which defines its own constructor used to assign the object's property, named <codel>name</codel>.</li>
+
+<li>the class defines the <codel>__str__()</codel> method, too, which makes the class able to present its identity in clear text form.</li>
+
+<li>the class is next used as a base to create a subclass named <codel>Sub</codel>. The <codel>Sub</codel> class defines its own constructor, which invokes the one from the superclass. Note how we've done it: <codel>Super.__init__(self, name)</codel>.</li>
+
+<li>we've explicitly named the superclass, and pointed to the method to invoke <codel>__init__()</codel>, providing all needed arguments.</li>
+
+<li>we've instantiated one object of class <codel>Sub</codel> and printed it.</li>
+</ul>
+
+<p>The code outputs:</p>
+
+<codep>My name is Andy.</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+<p>Note: As there is no <codel>__str__()</codel> method within the <codel>Sub</codel> class, the printed string is to be produced within the <codel>Super</codel> class. This means that the <codel>__str__()</codel> method has been inherited by the <codel>Sub</codel> class.</p>
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

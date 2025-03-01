@@ -1,0 +1,92 @@
+<problem chapter='4' section='1' slide='1' problem='10' title='Generátor és closure'>
+
+<!--
+Update history:
+2020-10-05 Grzegorz (review, PEP-8 compliance check, '[SPACE]' added to code)
+-->
+
+<code>
+def print_function(args, fun):
+    for x in args:
+        print('f(', x,')=', fun(x), sep='')
+
+
+def poly(x):
+    return 2 * x**2 - 4 * x + 2
+
+
+print_function([x for x in range(-2, 3)], poly)
+
+</code>
+
+
+
+<h1>Hogyan és mire használjuk a lambdákat?</h1>
+
+
+<p>A lambda függvények használatának legérdekesebb módja, amikor tisztán - a <strong>kód névtelen részeként</strong> - használjuk őket <strong>azzal a céllal</strong>, hogy <strong>kiértékeljünk egy kifejezést</strong>.</p>
+
+<p>Képzeljük el, hogy szükségünk van egy függvényre (nevezzük el <codel>print_function</codel>-nek), amely egy adott (másik) függvény értékeit nyomtatja ki egy kiválasztott argumentumhalmazra.</p>
+
+<p>Azt akarjuk, hogy a <codel>print_function</codel> univerzális legyen, ami egy listában felsorolt argumentumhalmazt és egy kiértékelendő függvényt vár bemenő argumentumként - semmit nem akarunk beégetni a kódba.</p>
+
+<p>Nézd meg a példát a szerkesztőben. Így valósítottuk meg az ötletet.</p>
+
+<p>Elemezzük ki. A <codel>print_function()</codel> függvény két paramétert kap:</p>
+
+<ul>
+    <li>az első, azon argumentumok listája, amelyek eredményeit ki akarjuk írni a képernyőre;</li>
+    <li>a második egy függvény, amelyet annyiszor kell meghívni, ahány értéket az első paraméterben szereplő listában megadtunk.</li>
+</ul>
+
+<p>Megjegyzés: definiáltunk egy <codel>poly()</codel> nevű függvényt is - ez az a függvény, amelynek értékeit ki fogjuk iratni. A függvény által végzett számítás nem túl bonyolult - egy polinom (innen a neve):</p>
+
+<p><font face="Courier New" size="+1">f(x) = 2x<sup>2</sup> - 4x + 2</font></p>
+
+
+<p>Ennek a függvénynek a nevét átadjuk a <codel>print_function()</codel> függvénynek egy ötelemű argumentumlistával együtt - ez utóbbit egy listaképzéssel hoztuk létre.</p>
+
+<p>A kód a következő sorokat írja ki:</p>
+
+<codep>f(-2)=18
+f(-1)=8
+f(0)=2
+f(1)=0
+f(2)=2</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+<p>Megúszhatjuk a <codel>poly()</codel> függvény definiálását? - Hiszen csak egyszer fogjuk használni. Igen, a lambda segítségével.</p>
+
+<br>
+
+<p>
+    Nézd meg az alábbi példát. Látod a különbséget?</p>
+
+    <codep class="syntax-color copy line-numbers">
+        def print_function(args, fun):
+        for x in args:
+        print('f(', x,')=', fun(x), sep='')
+
+        print_function([x for x in range(-2, 3)], <mark class="mark-background">lambda'[SPACE]'x:'[SPACE]'2'[SPACE]'*'[SPACE]'x**2'[SPACE]'-'[SPACE]'4'[SPACE]'*'[SPACE]'x'[SPACE]'+'[SPACE]'2</mark>)
+    </codep>
+
+    <br>
+
+
+    <p>A <codel>print_function()</codel> pontosan ugyanaz maradt, de nincs <codel>poly()</codel> függvény. Erre már nincs is szükségünk, mivel a polinomot közvetlenül a <codel>print_function()</codel> híváson belül egy lambda formulában definiáltuk a következőképpen:</p>
+
+<p><codep class="syntax-color">lambda x: 2 * x**2 - 4 * x + 2
+</codep></p>
+
+<p>A kód rövidebb, világosabb és olvashatóbb lett.</p>
+
+<p>Hadd mutassunk egy másik példát, ahol a lambdák hasznosak lehetnek. Kezdjük a <codel>map()</codel> - egy beépített Python függvény - bemutatásával, aminek az ötlete egyszerű, és maga a függvény valóban jól használható.</p>
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

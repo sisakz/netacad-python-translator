@@ -1,0 +1,77 @@
+<problem chapter='1' section='4' slide='1' problem='8' title='pip installation on Linux'>
+
+<!--
+Update history:
+2020-09-23 Grzegorz (created)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h1><i>pip</i> on Linux: continued</h1>
+
+<p>Unfortunately, some Linux distributions don't have <i>pip</i> preinstalled, even if Python itself is installed by default (some versions of Ubuntu may behave this way). In this case, you have two possibilities:</p>
+
+<ul>
+<li>install <i>pip</i> as a system package using a dedicated package manager (e.g., <i>apt</i> in Debian-like systems)</li>
+<li>install <i>pip</i> using internal Python mechanisms.</li>
+</ul>
+
+<p>The former is definitely better. Although there are some smart scripts that are able to download and install <i>pip</i> by ignoring the OS, we discourage you from using them. This method can get you into trouble. </p>
+
+<br>
+
+<p>Look – we've tried to launch <i>pip3</i> and we’ve failed. Our OS (we used <i>Ubuntu Budgie</i> this time) suggested using <i>apt</i> in order to install the package named <i>python3-pip</i>:</p>
+
+
+<center><img class="lightbox" src="/uploads/media/default/0001/02/fa628bd831e92cf64dcdf60204a986388765d563.png" width="95%" alt="Terminal screenshot: sudo apt install python3-pip"></center>
+<br>
+
+<p>That's good advice, and we're going to follow it, but it has to be stated that we’ll need administrative rights to do it. Don't forget that different Linuces may use different package managers (e.g., it could be <i>pacman</i> if you use Arch Linux, or <i>yum</i> used by distributions derived from Red Hat).</p>
+
+<p>Anyway, all these methods should get <i>pip</i> (or <i>pip3</i>) installed and working.</p>
+
+
+<br>
+<br> 
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+<p>Look what happened when we followed the OS suggestion:</p>
+
+<center><img class="lightbox" src="/uploads/media/default/0001/02/09afdcb9dcafbcdff4aaa2f18c6aa5bc4c24b98d.png" width="95%" alt="Terminal screenshot: following OS suggestion"></center>
+<br>
+
+ 
+<p>As you can see, the OS decided to install not only <i>pip</i> itself, but also a couple of additional components needed by <i>pip</i>. This is normal – don't be alarmed.</p>
+
+
+
+
+<br>
+<br>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

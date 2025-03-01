@@ -1,0 +1,66 @@
+<problem chapter='4' section='5' slide='1' problem='21' title='A datetime és time modul (folytatás)'>
+
+<!--
+Update history:
+2020-03-30 Sebastian (first version)
+2020-10-12 Grzegorz (file creation, review, PEP-8 compliance check)
+-->
+
+<code>from datetime import timedelta
+from datetime import date
+from datetime import datetime
+
+delta = timedelta(weeks=2, days=2, hours=2)
+print(delta)
+
+delta2 = delta * 2
+print(delta2)
+
+d = date(2019, 10, 4) + delta2
+print(d)
+
+dt = datetime(2019, 10, 4, 14, 53) + delta2
+print(dt)
+
+</code>
+
+
+
+<h1>A <font face="Courier New">timedelta</font> objektumok létrehozása (folytatás)</h1>
+
+<p>Azt már tudjuk, hogy a <codel>timedelta</codel> objektum belsõleg hogyan tárolja a kapott argumentumokat. Itt az ideje, hogy megnézzük, miként használható ez a gyakorlatban.</p>
+
+<p>Nézzünk meg néhány mûveletet, amelyet a <codel>datetime</codel> modul osztályai támogatnak. Futtassuk le az általunk megadott kódot a szerkesztõablakban.</p>
+
+
+<p>Eredmény:</p>
+
+<codep>16 days, 2:00:00
+32 days, 4:00:00
+2019-11-05
+2019-11-05 18:53:00</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+
+
+<p>A <codel>timedelta</codel> objektum egész számmal szorozható. Példánkban a 16 napot és 2 órát jelentõ objektumot megszorozzuk 2-vel, így egy 32 napot és 4 órát jelentõ <codel>timedelta</codel> objektumot kapunk.</p>
+
+<p>Vegyük észre, hogy mind a napok, mind az órák 2-vel vannak megszorozva. Egy másik érdekes mûvelet a <codel>timedelta</codel> objektummal az összeadás. A példában a <codel>timedelta</codel> objektumot hozzáadtuk a <i>date</i> és <codel>datetime</codel> objektumokhoz.</p>
+
+<p>E mûveletek eredményeként a <codel>timedelta</codel> objektumban tárolt napokkal és órákkal megnövelt <i>date</i> és <codel>datetime</codel> objektumokat kapunk.</p>
+
+
+<p>A bemutatott szorzási mûvelet lehetõvé teszi a <codel>timedelta</codel> objektum értékének gyors növelését, és ez a mûvelet a jövõbeli dátumok elérésében is segítségedre lehet.</p>
+
+<p>Természetesen a <codel>timedelta</codel>, <codel>date</codel>, és <codel>datetime</codel> osztályok sokkal több mûveletet támogatnak. Arra bíztatunk, hogy nézz utána a dokumentációban.</p>
+
+
+
+<br>
+<br>
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

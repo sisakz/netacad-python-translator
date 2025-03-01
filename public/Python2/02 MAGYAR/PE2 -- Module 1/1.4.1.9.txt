@@ -1,0 +1,66 @@
+<problem chapter='1' section='4' slide='1' problem='9' title='pip telepítése Linux alatt'>
+
+<!--
+Update history:
+2020-09-23 Grzegorz (created)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h1><i>pip</i> Linux alatt (folytatás)</h1>
+
+<p>Amikor az <i>apt</i> befejezi a munkáját, végre használhatjuk a <i>pip3</i>-at:</p>
+
+
+<center><img class="lightbox" src="/uploads/media/default/0001/02/999e1c82e1535715369bf26228473de36e8fe9b3.png" width="95%" alt="Terminal screenshot 5"></center>
+
+<br>
+
+<p>Ha Mac felhasználó vagy, és a Python 3-at a <i>brew</i> telepítővel telepítheted, a <i>pip</i> már jelen van a rendszeredben, és készen áll a munkára. Ellenőrizd a korábban említett parancs kiadásával:</p>
+
+<p><codep class="syntax-color">pip3 --version
+</codep></p>
+
+<p>és várd meg a választ.</p>
+
+<br>
+<br> 
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+
+
+<p>Ezt láttuk:</p>
+
+<center><img class="lightbox" src="/uploads/media/default/0001/02/090bc01a4b1ee96b72670bd4e32a2850fe3cc1ba.png" width="95%" alt="Terminal screenshot 6"></center>
+
+
+
+<br>
+<br>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

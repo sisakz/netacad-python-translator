@@ -1,0 +1,37 @@
+<problem chapter='4' section='6' slide='1' problem='4' title='A calendar modul'>
+
+<!--
+Update history:
+2020-03-30 Sebastian (first version)
+2020-10-12 Grzegorz (file creation, review, PEP-8 compliance check)
+-->
+
+<code>import calendar
+
+calendar.setfirstweekday(calendar.SUNDAY)
+calendar.prmonth(2020, 12)
+
+</code>
+
+<h1>A <font face="Courier New">setfirstweekday()</font> függvény</h1>
+
+<p>Mint már tudod, a <codel>calendar</codel> modulban a hét első napja alapértelmezés szerint a hétfő. Ezt azonban megváltoztathatod a <codel>setfirstweekday</codel> függvény segítségével.</p>
+
+<p>Emlékszel a táblázatra, amely a hét napjait és azok egész számú reprezentációit mutatja? Itt az ideje használni, mert a <codel>setfirstweekday</codel> metódusnak szüksége van egy olyan paraméterre, amely a hét napját egész érték formájában fejezi ki. Nézd meg a példát a szerkesztőablakban.</p>
+
+
+<p>A példa a <codel>calendar.SUNDAY</codel> konstanst használja, amely <i>6</i>-os értéket tartalmaz. Természetesen ezt az értéket közvetlenül is átadhatnánk a <codel>setfirstweekday</codel> függvénynek, de a konstansos verzió elegánsabb.</p>
+
+<p>Ennek eredményeképpen egy olyan naptárat kapunk, amely 2020 decemberét mutatja, és amelyben minden hét első napja vasárnapra esik.</p>
+
+
+
+
+<br>
+<br>
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

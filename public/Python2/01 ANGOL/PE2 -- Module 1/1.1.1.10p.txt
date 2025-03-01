@@ -1,0 +1,65 @@
+<problem chapter='1' section='1' slide='1' problem='10' title='Importing a module | aliasing'>
+
+<!--
+Update history:
+2020-08-28 Grzegorz (review, PEP-8 compliance check, update)
+2021-06-16 Grzegorz (review)
+-->
+
+<code>import math as m
+
+print(m.sin(m.pi/2))
+
+</code>
+
+<h1>Importing a module: continued</h1>
+
+<p>If you need to change the word <codel>math</codel>, you can introduce your own name, just like in the example:</p>
+
+<codep class="syntax-color">import math as m
+
+print(m.sin(m.pi/2))
+</codep>
+
+<br>
+
+<p>Note: after successful execution of an aliased import, the <strong>original module name becomes inaccessible</strong> and must not be used.</p>
+
+<br>
+
+<p>In turn, when you use the <codel>from module import name</codel> variant and you need to change the entity's name, you make an alias for the entity. This will cause the name to be replaced by the alias you choose.</p>
+
+<p>This is how it can be done:</p>
+
+<codep class="syntax-color">from module import name as alias
+</codep>
+
+<br>
+
+<p>As previously, the original (unaliased) name becomes inaccessible.</p>
+
+<p>The phrase <codel>name as alias</codel> can be repeated – use commas to separate the multiplied phrases, like this:</p>
+
+<codep class="syntax-color">from module import n as a, m as b, o as c
+</codep>
+
+<br>
+
+<p>The example may look a bit weird, but it works:</p>
+
+<codep class="syntax-color">from math import pi as PI, sin as sine
+
+print(sine(PI/2))
+</codep>
+
+<br>
+
+<p>Now that you're familiar with the basics of using modules, let us show you some modules and some of their useful entities.</p>
+
+
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

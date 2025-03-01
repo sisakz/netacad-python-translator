@@ -1,0 +1,57 @@
+<problem chapter='3' section='4' slide='1' problem='6' title='OOP: Methods'>
+
+<!--
+Update history:
+2020-09-30 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>
+class Classy:
+    pass
+
+
+print(Classy.__name__)
+obj = Classy()
+print(type(obj).__name__)
+
+</code>
+
+
+
+<h1>The inner life of classes and objects: continued</h1>
+
+<p><codel>__dict__</codel> is a dictionary. Another built-in property worth mentioning is <codel>__name__</codel>, which is a string.</p>
+
+<p>The property contains <strong>the name of the class</strong>. It's nothing exciting, just a string.</p>
+
+<p>Note: the <codel>__name__</codel> attribute is absent from the object – <strong>it exists only inside classes</strong>.</p>
+
+<br>
+
+<p>If you want to <strong>find the class of a particular object</strong>, you can use a function named <codel>type()</codel>, which is able (among other things) to find a class which has been used to instantiate any object.</p>
+
+<p>Look at the code in the editor, run it, and see for yourself.</p>
+
+<p>The code outputs:</p>
+
+<codep>Classy
+Classy</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+ 
+
+<p>Note that a statement like this one:</p>
+
+<codep class="syntax-color">print(obj.__name__)
+</codep>
+<br>
+
+<p>will cause an error.</p>
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

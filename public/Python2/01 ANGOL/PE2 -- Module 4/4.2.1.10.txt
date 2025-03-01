@@ -1,0 +1,141 @@
+<problem chapter='4' section='2' slide='1' problem='10' title='Processing files'>
+
+<!--
+Update history:
+2020-10-07 Grzegorz (review, PEP-8 compliance check)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h2>Closing streams</h2>
+
+<p>The last operation performed on a stream (this doesn't include the <codel>stdin</codel>, <codel>stdout</codel>, and <codel>stderr</codel> streams, which don't require it) should be <strong>closing</strong>.</p>
+
+<p>That action is performed by a method invoked from within the open stream object: <codel>stream.close()</codel>.</p>
+
+<ul>
+<li>the name of the function is definitely self-commenting: <codel>close()</codel></li>
+<li>the function expects exactly no arguments; the stream doesn't need to be opened</li>
+<li>the function returns nothing, but raises an <font face="Courier New">IOError</font> exception in case of error;</li>
+<li>most developers believe that the <codel>close()</codel> function always succeeds and thus there is no need to check if it's done its task properly.
+
+<br><br>
+This belief is only partly justified. If the stream was opened for writing and then a series of write operations were performed, it may happen that the data sent to the stream has not been transferred to the physical device yet (due to a mechanism called <strong>caching</strong> or <strong>buffering</strong>).
+<br><br>
+Since the closing of the stream forces the buffers to flush them, it may be that the flushes fail and therefore the <codel>close()</codel> fails too.</li>
+</ul>
+
+<p>We have already mentioned failures caused by functions operating with streams, but we haven't said a word about how exactly we can identify the cause of the failure.</p>
+
+<p>The possibility of making a diagnosis exists and is provided by one of streams' exception component which we are going to tell you about just now.</p>
+
+
+
+
+
+<h2>Diagnosing stream problems</h2>
+
+<p>The <codel>IOError</codel> object is equipped with a property named <codel>errno</codel> (the name comes from the phrase <i>error number</i>) and you can access it as follows:</p>
+
+<codep class="syntax-color copy line-numbers">try:
+    # Some stream operations.
+except IOError as exc:
+    print(exc.errno)
+</codep>
+
+<br>
+
+<p>The value of the <codel>errno</codel> attribute can be compared with one of the predefined symbolic constants defined in the <codel>errno</codel> module.</p>
+
+
+<br> 
+<br>
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+
+<br>
+
+<p>Let's take a look at some selected <strong>constants useful for detecting stream errors</strong>:</p>
+
+<ul>
+<li><codel>errno.EACCES</codel> &rarr; <font face="Courier New">Permission denied</font>
+<br><br>
+The error occurs when you try, for example, to open a file with the <i>read only</i> attribute for writing.</li>
+
+<br>
+
+<li><codel>errno.EBADF</codel> &rarr; <font face="Courier New">Bad file number</font>
+<br><br>
+The error occurs when you try, for example, to operate with an unopened stream.</li>
+
+<br>
+
+<li><codel>errno.EEXIST</codel> &rarr; <font face="Courier New">File exists</font>
+<br><br>
+The error occurs when you try, for example, to rename a file with its previous name.</li>
+
+<br>
+
+
+<li><codel>errno.EFBIG</codel> &rarr; <font face="Courier New">File too large</font>
+<br><br>
+The error occurs when you try to create a file that is larger than the maximum allowed by the operating system.</li>
+
+<br>
+
+<li><codel>errno.EISDIR</codel> &rarr; <font face="Courier New">Is a directory</font>
+<br><br>
+The error occurs when you try to treat a directory name as the name of an ordinary file.</li>
+
+<br>
+
+
+<li><codel>errno.EMFILE</codel> &rarr; <font face="Courier New">Too many open files</font>
+<br><br>
+The error occurs when you try to simultaneously open more streams than acceptable for your operating system.</li>
+
+<br>
+
+<li><codel>errno.ENOENT</codel> &rarr; <font face="Courier New">No such file or directory</font>
+<br><br>
+The error occurs when you try to access a non-existent file/directory.</li>
+
+<br>
+
+<li><codel>errno.ENOSPC</codel> &rarr; <font face="Courier New">No space left on device</font>
+<br><br>
+The error occurs when there is no free space on the media.</li>
+
+</ul>
+
+
+<p>The complete list is much longer (it also includes some error codes not related to the stream processing.)</p>
+
+
+<br>
+<br>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

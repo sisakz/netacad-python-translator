@@ -1,0 +1,67 @@
+<problem chapter='3' section='2' slide='1' problem='1' title='A short journey from procedural to object approach'>
+
+<!--
+Update history:
+2020-09-30 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h1>What is a stack?</h1>
+
+<p><strong>A stack is a structure developed to store data in a very specific way</strong>. Imagine a stack of coins. You aren't able to put a coin anywhere else but on the top of the stack.</p>
+
+<p>Similarly, you can't get a coin off the stack from any place other than the top of the stack. If you want to get the coin that lies on the bottom, you have to remove all the coins from the higher levels.</p>
+
+<p>The alternative name for a stack (but only in IT terminology) is <strong>LIFO</strong>.</p>
+
+<p>It's an abbreviation for a very clear description of the stack's behavior: <strong>Last In – First Out</strong>. The coin that came last onto the stack will leave first.</p>
+
+<p><strong>A stack is an object</strong> with two elementary operations, conventionally named <strong>push</strong> (when a new element is put on the top) and <strong>pop</strong> (when an existing element is taken away from the top).</p>
+
+<p>Stacks are used very often in many classical algorithms, and it's hard to imagine the implementation of many widely used tools without the use of stacks.</p>
+
+
+
+
+
+<br> 
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+<img class="lightbox" src="/uploads/media/default/0001/01/ffe6a36f13d0c549e0a01688e5e372a36421e84a.png" alt="The concept of stack" width="90%">
+<br><br>
+
+<p>Let's implement a stack in Python. This will be a very simple stack, and we'll show you how to do it in two independent approaches: procedural and objective.</p>
+
+<p>Let's start with the first one.</p>
+
+
+<br>
+<br>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

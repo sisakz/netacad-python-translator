@@ -1,0 +1,151 @@
+<problem chapter='4' section='4' slide='1' problem='9' title='SECTION SUMMARY'>
+
+<!--
+Update history:
+2020-03-30 Sebastian (first version)
+2020-10-11 Grzegorz (file creation, review, PEP-8 compliance check)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h1>Key takeaways</h1>
+
+<p>1. The <codel>uname</codel> function returns an object that contains information about the current operating system. The object has the following attributes:</p>
+
+<ul>
+<li><i>systemname</i> (stores the name of the operating system)</li>
+<li><i>nodename</i> (stores the machine name on the network)</li>
+<li><i>release</i> (stores the operating system release)</li>
+<li><i>version</i> (stores the operating system version)</li>
+<li><i>machine</i> (stores the hardware identifier, e.g. x86_64.)</li>
+</ul>
+
+
+<p>2. The <i>name</i> attribute available in the <codel>os</codel> module allows you to distinguish the operating system. It returns one of the following three values:</p>
+
+<ul>
+<li><i>posix</i> (you'll get this name if you use Unix)</li>
+<li><i>nt</i> (you'll get this name if you use Windows)</li>
+<li><i>java</i> (you'll get this name if your code is written in something like Jython)</li>
+</ul>
+
+
+<p>3. The <codel>mkdir</codel> function creates a directory in the path passed as its argument. The path can be either relative or absolute, e.g:</p>
+
+<codep class="syntax-color copy">import os
+
+os.mkdir("hello") # the relative path
+os.mkdir("/home/python/hello") # the absolute path
+</codep>
+
+<br>
+
+
+<p><b>Note</b>: If the directory exists, a <codel>FileExistsError</codel> exception will be thrown. In addition to the <codel>mkdir</codel> function, the <codel>os</codel> module provides the <codel>makedirs</codel> function, which allows you to recursively create all directories in a path.</p>
+
+
+<p>4. The result of the <codel>listdir()</codel> function is a list containing the names of the files and directories that are in the path passed as its argument.</p>
+
+<p>It's important to remember that the <codel>listdir</codel> function omits the entries '.' and '..', which are displayed, for example, when using the <codel>ls -a</codel> command on Unix systems. If the path isn't passed, the result will be returned for the current working directory.</p>
+
+
+<p>5. To move between directories, you can use a function called <codel>chdir()</codel>, which changes the current working directory to the specified path. As its argument, it takes any relative or absolute path.</p>
+
+<p>If you want to find out what the current working directory is, you can use the <codel>getcwd()</codel> function, which returns the path to it.</p>
+
+
+<p>6. To remove a directory, you can use the <codel>rmdir()</codel> function, but to remove a directory and its subdirectories, use the <codel>removedirs()</codel> function.</p>
+
+
+<p>7. On both Unix and Windows, you can use the system function, which executes a command passed to it as a string, e.g.:</p>
+
+
+<codep class="syntax-color copy">import os
+
+returned_value = os.system("mkdir hello")
+</codep>
+
+<br>
+
+
+<p>The system function on Windows returns the value returned by the shell after running the command given, while on Unix it returns the exit status of the process.</p>
+
+
+<br> 
+<br>
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+<script>
+function solution (id) {
+    var element = document.getElementById(id);
+    
+if (element.style.display === "none") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
+    }
+}
+</script>
+
+<p><strong>Exercise 1</strong></p>
+<p>What is the output of the following snippet if you run it on Unix?</p>
+
+<p><codep>import os
+print(os.name)
+
+</codep></p>
+
+<button class="button tiny" onclick="solution('sol')">Check</button>
+
+<p id="sol" style="display: none;"><codep>posix</codep>
+</p>
+
+
+<br><br>
+
+
+<p><strong>Exercise 2</strong></p>
+<p>What is the output of the following snippet?</p>
+
+<p><codep>import os
+
+os.mkdir("hello")
+print(os.listdir())
+
+</codep></p>
+
+<button class="button tiny" onclick="solution('sol2')">Check</button>
+
+<p id="sol2" style="display: none;"><codep>['hello']</codep>
+</p>
+
+
+<br>
+<br>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

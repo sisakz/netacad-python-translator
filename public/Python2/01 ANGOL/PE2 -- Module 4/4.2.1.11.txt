@@ -1,0 +1,63 @@
+<problem chapter='4' section='2' slide='1' problem='11' title='Processing files'>
+
+<!--
+Update history:
+2020-10-07 Grzegorz (review, PEP-8 compliance check)
+2020-10-29 Grzegorz (code correction: print)
+-->
+
+<code>import errno
+
+try:
+    s = open("c:/users/user/Desktop/file.txt", "rt")
+    # Actual processing goes here.
+    s.close()
+except Exception as exc:
+    if exc.errno == errno.ENOENT:
+        print("The file doesn't exist.")
+    elif exc.errno == errno.EMFILE:
+        print("You've opened too many files.")
+    else:
+        print("The error number is:", exc.errno)
+
+</code>
+
+<h1>Diagnosing stream problems: continued</h1>
+
+<p>If you are a very careful programmer, you may feel the need to use a sequence of statements similar to those presented in the editor.</p>
+
+
+<p>Fortunately, there is a function that can dramatically <strong>simplify the error handling code</strong>.</p>
+
+<p>Its name is <codel>strerror()</codel>, and it comes from the <codel>os</codel> module and <strong>expects just one argument – an error number</strong>.</p>
+
+<p>Its role is simple: you give an error number and get a string describing the meaning of the error.</p>
+
+
+<p>Note: if you pass a non-existent error code (a number which is not bound to any actual error), the function will raise a <font face="Courier New">ValueError</font> exception.</p>
+
+<p>Now we can simplify our code in the following way:</p>
+
+<codep class="syntax-color copy line-numbers">from os import strerror
+
+try:
+    s = open("c:/users/user/Desktop/file.txt", "rt")
+    # Actual processing goes here.
+    s.close()
+except Exception as exc:
+    print("The file could not be opened:", strerror(exc.errno))
+</codep>
+
+<br>
+
+<p>Okay. Now it's time to deal with text files and get familiar with some basic techniques you can use to process them.</p>
+
+<br>
+<br>
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+<hideConsole>true</hideConsole>
+
+</problem>

@@ -1,0 +1,49 @@
+<problem chapter='4' section='5' slide='1' problem='5' title='The datetime module'>
+
+<!--
+Update history:
+2020-03-30 Sebastian (first version)
+2020-10-11 Grzegorz (review, PEP-8 compliance check)
+-->
+
+<code>from datetime import date
+
+d = date(1991, 2, 5)
+print(d)
+
+d = d.replace(year=1992, month=1, day=16)
+print(d)
+
+</code>
+
+
+
+<h1>The <font face="Courier New">replace()</font> method</h1>
+
+
+<p>Sometimes you may need to replace the year, month, or day with a different value. You can’t do this with the year, month, and day attributes because they're read-only. In this case, you can use the method named <codel>replace</codel>.</p>
+
+<p>Run the code in the editor.</p>
+
+<p>Result:</p>
+
+<codep>1991-02-05
+1992-01-16</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+
+<p>The <i>year</i>, <i>month</i>, and <i>day</i> parameters are optional. You can pass only one parameter to the <codel>replace</codel> method, e.g., <i>year</i>, or all three as in the example.</p>
+
+<p>The <codel>replace</codel> method returns a changed <i>date</i> object, so you must remember to assign it to some variable.</p>
+
+
+
+
+<br>
+<br>
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

@@ -1,0 +1,63 @@
+<problem chapter='1' section='3' slide='1' problem='1' title='Modules and Packages'>
+
+<!--
+Update history:
+2020-09-08 Grzegorz (review, PEP-8 compliance check, update)
+2021-06-29 Grzegorz (corrections)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h1>What is a package?</h1>
+
+<p>Writing your own modules doesn't differ much from writing ordinary scripts.</p>
+
+<p>There are some specific aspects you must be aware of, but it definitely isn't rocket science. You'll see this soon enough.</p>
+
+<center><img src="/uploads/media/default/0001/01/6e2427acf223f597798962aeae1a3b73210090ce.png" width="85%" alt="The Package-Module-Function concept"></center>
+
+<br><br>
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+<p>Let's summarize some important issues:</p>
+
+<ul>
+<li>a <strong>module is a kind of container filled with functions</strong> – you can pack as many functions as you want into one module and distribute it across the world;</li>
+<li>of course, it's generally a good idea not to mix functions with different application areas within one module (just like in a library – nobody expects scientific works to be put among comic books), so group your functions carefully and name the module containing them in a clear and intuitive way (e.g., don't give the name <codel>arcade_games</codel> to a module containing functions intended to partition and format hard disks)</li>
+<li>making a lot of modules may get a little messy – sooner or later you'll want to <strong>group your modules</strong> exactly in the same way as you've previously grouped functions – so is there a more general container than a module?</li>
+<li>yes, there is – it's a <strong>package</strong>; in the world of modules, a package plays a similar role to a folder/directory in the world of files.</li>
+</ul>
+
+
+
+<br>
+
+</div>
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

@@ -1,0 +1,151 @@
+<problem chapter='4' section='4' slide='1' problem='9' title='SZAKASZ ÖSSZEFOGLALÁS'>
+
+<!--
+Update history:
+2020-03-30 Sebastian (first version)
+2020-10-11 Grzegorz (file creation, review, PEP-8 compliance check)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+    <h1>A legfontosabb tudnivalók</h1>
+
+    <p>1. Az <codel>uname</codel> függvény egy olyan objektumot ad vissza, amely az aktuális operációs rendszerre vonatkozó információkat tartalmaz. Az objektum a következő attribútumokkal rendelkezik:</p>
+
+<ul>
+    <li><i>systemname</i> (az operációs rendszer nevét tárolja)</li>
+    <li><i>nodename</i> (a hálózaton lévő gép nevét tárolja)</li>
+    <li><i>release</i> (az operációs rendszer kiadásának számát tárolja)</li>
+    <li><i>version</i> (az operációs rendszer verziószámát tárolja)</li>
+    <li><i>machine</i> (az architektúra azonosítóját tárolja, pl.: x86_64)</li>
+</ul>
+
+
+<p>2. Az <codel>os</codel> modulban elérhető <i>name</i> attribútum lehetővé teszi az operációs rendszer beazonosítását. A következő három érték egyikét adja vissza:</p>
+
+<ul>
+    <li><i>posix</i> (ezt a nevet kapod, ha Unix rendszert használsz)</li>
+    <li><i>nt</i> (ezt a nevet kapod, ha Windows rendszert használsz)</li>
+    <li><i>java</i> (ezt a nevet akkor kapod, ha a kódod Jythonban íródott)</li>
+</ul>
+
+
+<p>3. Az <codel>mkdir</codel> függvény létrehoz egy könyvtárat az argumentumként megadott elérési útvonalon. Az elérési út lehet relatív vagy abszolút, pl.:</p>
+
+<codep class="syntax-color copy">import os
+
+os.mkdir("hello") # the relative path
+os.mkdir("/home/python/hello") # the absolute path
+</codep>
+
+<br>
+
+
+<p><b>Megjegyzés</b>: Ha a könyvtár létezik, a rendszer <codel>FileExistsError</codel> kivételt eredményez. Az <codel>mkdir</codel> függvényen kívül az <codel>os</codel> modul biztosít egy <codel>makedirs</codel> függvényt is, amely lehetővé teszi az útvonal összes könyvtárának rekurzív létrehozását.</p>
+
+
+<p>4. A <codel>listdir()</codel> függvény eredménye egy lista, amely az argumentumként átadott elérési útvonalon található fájlok és könyvtárak nevét tartalmazza.</p>
+
+<p>Fontos megjegyezni, hogy a <codel>listdir</codel> függvény kihagyja a '.' és '..' bejegyzéseket, amelyek például az <codel>ls -a</codel> parancs használatakor jelennek meg Unix rendszereken. Ha az elérési útvonal nincs megadva, az eredmény az aktuális munkakönyvtárra vonatkozóan készül el.</p>
+
+
+<p>5. A könyvtárak közötti mozgáshoz használhatjuk a <codel>chdir()</codel> nevű függvényt, amely az aktuális munkakönyvtárat az argumentumként megadott útvonalra változtatja. A függvény paraméterként bármilyen relatív vagy abszolút elérési utat elfogad.</p>
+
+<p>Ha meg akarjuk tudni, hogy mi az aktuális munkakönyvtár, használhatjuk a <codel>getcwd()</codel> függvényt, amely visszaadja az elérési útvonalat.</p>
+
+
+<p>6. Egy könyvtár törléséhez az <codel>rmdir()</codel> függvényt, egy könyvtár és a benne lévő alkönyvtárak törléséhez pedig a <codel>removedirs()</codel> függvényt használhatod.</p>
+
+
+<p>7. Unix és Windows alatt egyaránt használhatod a <codel>system()</codel> függvényt, amely végrehajtja a karakterláncként kapott parancsot, például:</p>
+
+
+<codep class="syntax-color copy">import os
+
+returned_value = os.system("mkdir hello")
+</codep>
+
+<br>
+
+
+<p>A <codel>system()</codel> függvény Windows alatt a parancsértelmező által a megadott parancs futtatásának eredményét, míg Unix alatt a folyamat kilépési állapotának kódját adja vissza.</p>
+
+
+<br> 
+<br>
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+<script>
+function solution (id) {
+    var element = document.getElementById(id);
+    
+if (element.style.display === "none") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
+    }
+}
+</script>
+
+<p><strong>1. gyakorlat</strong></p>
+<p>Mi a kimenete a következő kódrészletnek, ha Unix alatt futtatod?</p>
+
+<p><codep>import os
+print(os.name)
+
+</codep></p>
+
+<button class="button tiny" onclick="solution('sol')">Ellenőrzés</button>
+
+<p id="sol" style="display: none;"><codep>posix</codep>
+</p>
+
+
+<br><br>
+
+
+<p><strong>2. gyakorlat</strong></p>
+<p>Mi a kimenete a következő kódrészletnek?</p>
+
+<p><codep>import os
+
+os.mkdir("hello")
+print(os.listdir())
+
+</codep></p>
+
+<button class="button tiny" onclick="solution('sol2')">Ellenőrzés</button>
+
+<p id="sol2" style="display: none;"><codep>['hello']</codep>
+</p>
+
+
+<br>
+<br>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

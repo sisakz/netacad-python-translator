@@ -1,0 +1,74 @@
+<problem chapter='2' section='2' slide='1' problem='8' title='Karakterláncok'>
+
+<!--
+Update history:
+2020-09-22 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>
+</code>
+
+
+
+<h1>Az <font face="Courier New">in</font> és <font face="Courier New">not in</font> operátorok</h1>
+
+<p><b>Az <font face="Courier New">in</font> operátor</b></p>
+
+<p>Az <codel>in</codel> operátor nem okozhat meglepetést, ha karakterláncokra alkalmazzuk – egyszerűen <strong>ellenőrzi, hogy a bal oldali argumentum (egy karakterlánc) megtalálható-e bárhol a jobb oldali argumentumon (egy másik karakterláncon) belül</strong>.</p>
+
+<p>Az ellenőrzés eredménye egyszerűen <codel>True</codel> vagy <codel>False</codel>.</p>
+
+<p>Nézd meg az alábbi példaprogramot. Így működik az <codel>in</codel> operátor:</p>
+
+<p><codep class="syntax-color copy line-numbers">alphabet = "abcdefghijklmnopqrstuvwxyz"
+
+print("f" in alphabet)
+print("F" in alphabet)
+print("1" in alphabet)
+print("ghi" in alphabet)
+print("Xyz" in alphabet)
+</codep></p>
+
+<p>A példakimenet a következő:</p>
+
+<codep>True
+False
+False
+True
+False</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+<p><b>A <font face="Courier New">not in</font> operátor</b></p>
+
+<p>Ahogy azt valószínűleg sejted, a <codel>not in</codel> operátor itt is alkalmazható.</p>
+
+<p>Ez így működik:</p>
+
+<codep class="syntax-color copy">alphabet = "abcdefghijklmnopqrstuvwxyz"
+
+print("f" not in alphabet)
+print("F" not in alphabet)
+print("1" not in alphabet)
+print("ghi" not in alphabet)
+print("Xyz" not in alphabet)
+</codep>
+
+<br>
+
+<p>A példakimenet a következő:</p>
+
+<codep>False
+True
+True
+False
+True</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

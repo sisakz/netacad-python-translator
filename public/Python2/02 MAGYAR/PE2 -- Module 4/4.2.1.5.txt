@@ -1,0 +1,81 @@
+<problem chapter='4' section='2' slide='1' problem='5' title='Fájlkezelés'>
+
+<!--
+Update history:
+2020-10-07 Grzegorz (review, PEP-8 compliance check)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+    <h2>Fájlkezelők</h2>
+
+    <p>A Python feltételezi, hogy <strong>minden fájl egy megfelelő osztályú objektum mögött rejtőzik</strong>.</p>
+
+    <p>Persze nehéz nem megkérdezni, hogyan kell értelmezni a <i>megfelelő</i> szót.</p>
+
+    <p>A fájlokat sokféleképpen lehet feldolgozni - ezek közül néhány a fájl tartalmától, néhány pedig a programozó szándékától függ.</p>
+
+    <p>Mindenesetre a különböző fájlok különböző műveletsorozatokat igényelnek, és különböző módon viselkednek.</p>
+
+
+
+    <p><strong>A fájl megnyitásakor létrejön</strong> egy megfelelő osztályú objektum, amely a <strong>bezáráskor megsemmisül</strong>.</p>
+
+    <p>E két esemény között az objektum segítségével megadhatod, hogy milyen műveleteket kell végrehajtani egy adott adatfolyamon. A használható műveleteket a <strong>fájl megnyitásának módja</strong> határozza meg.</p>
+
+
+<br>
+<br>
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+
+<br>
+
+
+<p>Általában az objektum az itt látható osztályok valamelyikéből származik:</p>
+
+<br>
+
+<center><img class="lightbox" src="/uploads/media/default/0001/01/d19a0e31aababa721f84ccfe27bf35970493fb3c.png" alt="The origin of objects: IOBase, RawIOBase, BufferedIOBase, TextIOBase" width="65%"></center>
+<br><br>
+
+ 
+    <p>Megjegyzés: soha nem használunk konstruktorokat, hogy életre keltsük ezeket az objektumokat. Az <strong><codel>open()</codel> függvény meghívása</strong> az egyetlen módja annak, hogy <strong>elérjük őket</strong>.</p>
+
+    <p>A függvény elemzi a megadott argumentumokat, és automatikusan létrehozza a kívánt objektumot.</p>
+
+ 
+    <p>Ha meg akarunk szabadulni az <strong>objektumtól, akkor a <codel>close()</codel> nevű metódust hívjuk meg</strong>.</p>
+
+    <p>A meghívás megszakítja a kapcsolatot az objektummal és a fájllal, és eltünteti az objektumot.</p>
+
+    <p>Mi kizárólag a <codel>BufferIOBase</codel> és <codel>TextIOBase</codel> objektumok által reprezentált fájlobjektumokal foglalkozunk. Hamarosan meg fogod érteni, hogy miért.</p>
+
+
+<br>
+<br>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

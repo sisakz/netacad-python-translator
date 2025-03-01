@@ -1,0 +1,147 @@
+<problem chapter='4' section='1' slide='1' problem='4' title='Generators and closures'>
+
+<!--
+Update history:
+2020-10-06 Grzegorz (review, PEP-8 compliance check)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h1>The <font face="Courier New">yield</font> statement</h1>
+
+
+<p>The iterator protocol isn't particularly difficult to understand and use, but it is also indisputable that the <strong>protocol is rather inconvenient</strong>.</p>
+
+<p>The main discomfort it brings is <strong>the need to save the state of the iteration between subsequent <codel>__iter__</codel> invocations</strong>.</p>
+
+<p>For example, the <codel>Fib</codel> iterator is forced to precisely store the place in which the last invocation has been stopped (i.e., the evaluated number and the values of the two previous elements). This makes the code larger and less comprehensible.</p>
+
+ 
+<p>This is why Python offers a much more effective, convenient, and elegant way of writing iterators.</p>
+
+<p>The concept is fundamentally based on a very specific and powerful mechanism provided by the <codel>yield</codel> keyword.</p>
+
+<p>You may think of the <codel>yield</codel> keyword as a smarter sibling of the <codel>return</codel> statement, with one essential difference.</p>
+
+
+<p>Take a look at this function:</p>
+
+<codep class="syntax-color">def fun(n):
+    for i in range(n):
+        return i
+</codep>
+
+<br> 
+
+<p>It looks strange, doesn't it? It's clear that the <codel>for</codel> loop has no chance to finish its first execution, as the <codel>return</codel> will break it irrevocably.</p>
+
+<p>Moreover, invoking the function won't change anything – the <codel>for</codel> loop will start from scratch and will be broken immediately.</p>
+
+<p>We can say that such a function is not able to save and restore its state between subsequent invocations.</p>
+
+<p>This also means that a function like this <strong>cannot be used as a generator</strong>.</p>
+
+
+
+
+<br> 
+<br>
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+
+
+<p>We've replaced exactly one word in the code – can you see it?</p>
+
+
+<codep class="syntax-color">def fun(n):
+    for i in range(n):
+        <mark class="mark-background">yield i</mark>
+</codep>
+ 
+<br>
+
+<p>We've added <codel>yield</codel> instead of <codel>return</codel>. This little amendment <strong>turns the function into a generator</strong>, and executing the <codel>yield</codel> statement has some very interesting effects.</p>
+
+<p>First of all, it provides the value of the expression specified after the <codel>yield</codel> keyword, just like <codel>return</codel>, but doesn't lose the state of the function.</p>
+
+<p>All the variables' values are frozen, and wait for the next invocation, when the execution is resumed (not taken from scratch, like after <codel>return</codel>).</p>
+
+<p>There is one important limitation: such a <strong>function should not be invoked explicitly</strong> as – in fact – it isn't a function anymore; <strong>it's a generator object</strong>.</p>
+
+<p>The invocation will <strong>return the object's identifier</strong>, not the series we expect from the generator.</p>
+
+ 
+
+<p>Due to the same reasons, the previous function (the one with the <codel>return</codel> statement) may only be invoked explicitly, and must not be used as a generator.</p>
+
+<h2>How to build a generator</h2>
+
+<p>Let us show you the new generator in action.</p>
+
+<p>This is how we can use it:</p>
+
+<codep class="syntax-color copy">def fun(n):
+    for i in range(n):
+        yield i
+
+
+for v in fun(5):
+    print(v)
+</codep>
+
+<br>
+
+<p>Can you guess the output?</p>
+
+<button class="button tiny" onclick="solution('sol')">Check</button>
+
+<p id="sol" style="display: none;">
+<codep>0
+1
+2
+3
+4</codep>
+</p>
+
+
+<script>
+function solution (id) {
+    var element = document.getElementById(id);
+    
+if (element.style.display === "none") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
+    }
+}
+</script>
+
+<br>
+<br>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

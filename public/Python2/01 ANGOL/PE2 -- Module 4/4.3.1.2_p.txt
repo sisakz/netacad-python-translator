@@ -1,0 +1,87 @@
+<problem chapter='4' section='3' slide='1' problem='2' title='Working with real files'>
+
+<!--
+Update history:
+2020-10-07 Grzegorz (review, PEP-8 compliance check)
+2020-10-29 Grzegorz (code fix: strrerror instead of strerr)
+2021-07-07 Grzegorz (code corrections - important!)
+-->
+
+<code>from os import strerror
+
+try:
+    counter = 0
+    stream = open('text.txt', "rt")
+    char = stream.read(1)
+    while char != '':
+        print(char, end='')
+        counter += 1
+        char = stream.read(1)
+    stream.close()
+    print("\n\nCharacters in file:", counter)
+except IOError as e:
+    print("I/O error occurred: ", strerror(e.errno))
+
+</code>
+
+
+
+<h1>Processing text files: continued</h1>
+
+
+<p>Reading a text file's contents can be performed using several different methods – none of them is any better or worse than any other. It's up to you which of them you prefer.</p>
+
+<p>Some of them will sometimes be handier, and sometimes more troublesome. Be flexible. Don't be afraid to change your preferences.</p>
+
+<p>The most basic of these methods is the one offered by the <codel>read()</codel> function, which you were able to see in action in the previous lesson.</p>
+
+ 
+<p>If applied to a text file, the function is able to:</p>
+
+<ul>
+<li>read a desired number of characters (including just one) from the file, and return them as a string;</li>
+
+<li>read all the file contents, and return them as a string;</li>
+
+<li>if there is nothing more to read (the virtual reading head reaches the end of the file), the function returns an empty string.</li>
+</ul>
+
+<br>
+
+<p>We'll start with the simplest variant and use a file named <codel>text.txt</codel>. The file has the following contents:</p>
+
+<codep>Beautiful is better than ugly.
+Explicit is better than implicit.
+Simple is better than complex.
+Complex is better than complicated.</codep>
+<p style="text-align: right;"><font size="-2"><b>text.txt</b></font></p>
+
+<br>
+
+<p>Now look at the code in the editor, and let's analyze it.</p>
+
+<p>The routine is rather simple:</p>
+
+<ul>
+<li>use the try-except mechanism and open the file of the predetermined name (<font face="Courier New">text.txt</font> in our case)</li>
+
+<li>try to read the very first character from the file (<codel>char = stream.read(1)</codel>)</li>
+
+<li>if you succeed (this is proven by a positive result of the <codel>while</codel> condition check), output the character (note the <codel>end=</codel> argument – it's important! You don't want to skip to a new line after every character!);</li>
+
+<li>update the counter (<codel>counter</codel>), too;</li>
+
+<li>try to read the next character, and the process repeats.</li>
+
+</ul>
+
+
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

@@ -1,0 +1,50 @@
+<problem chapter='3' section='5' slide='1' problem='8' title='OOP Fundamentals: Inheritance'>
+
+<!--
+Update history:
+2020-10-01 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>class Super:
+    def __init__(self, name):
+        self.name = name
+
+    def __str__(self):
+        return "My name is " + self.name + "."
+
+
+class Sub(Super):
+    def __init__(self, name):
+        super().__init__(name)
+
+
+obj = Sub("Andy")
+
+print(obj)
+
+</code>
+
+
+
+<h1>How Python finds properties and methods: continued</h1>
+
+<p>Look at the code in the editor. We've modified it to show you another way to access any entity defined inside the superclass.</p>
+
+<p>In the last example, we explicitly named the superclass. In this example, we make use of the <codel>super()</codel> function, which <strong>accesses the superclass without needing to know its name</strong>:</p>
+
+<codep class="syntax-color">super().__init__(name)
+</codep>
+<br>
+
+<p>The <codel>super()</codel> function creates a context in which you don't have to (moreover, you mustn't) pass the self argument to the method being invoked – this is why it's possible to activate the superclass constructor using only one argument.</p>
+
+<p>Note: you can use this mechanism not only to <strong>invoke the superclass constructor, but also to get access to any of the resources available inside the superclass</strong>.</p>
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

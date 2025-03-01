@@ -1,0 +1,87 @@
+<problem chapter='4' section='3' slide='1' problem='2' title='Valós fájlok kezelése'>
+
+<!--
+Update history:
+2020-10-07 Grzegorz (review, PEP-8 compliance check)
+2020-10-29 Grzegorz (code fix: strrerror instead of strerr)
+2021-07-07 Grzegorz (code corrections - important!)
+-->
+
+<code>from os import strerror
+
+try:
+    counter = 0
+    stream = open('text.txt', "rt")
+    char = stream.read(1)
+    while char != '':
+        print(char, end='')
+        counter += 1
+        char = stream.read(1)
+    stream.close()
+    print("\n\nCharacters in file:", counter)
+except IOError as e:
+    print("I/O error occurred: ", strerror(e.errno))
+
+</code>
+
+
+
+<h1>Szövegfájlok feldolgozása (folytatás)</h1>
+
+
+<p>Egy szöveges fájl tartalmának beolvasása többféle módszerrel is elvégezhető - egyik sem jobb vagy rosszabb a másiknál. Csak rajtad múlik, hogy melyiket szereted és melyiket részesíted előnyben.</p>
+
+<p>Némelyikük időnként kézreállóbb , máskor problémásabb. Legyél rugalmas. Ne félj megváltoztatni a preferenciáidat.</p>
+
+<p>A legalapvetőbb ilyen módszer a <codel>read()</codel> függvény által kínált lehetőség, amelyet az előző leckében már láttál működés közben.</p>
+
+ 
+<p>Ha a függvényt egy szöveges fájlra alkalmazzuk, akkor a következőkre képes:</p>
+
+<ul>
+    <li>beolvassa a kívánt számú karaktert (akár csak egyet) a fájlból, és egy karakterláncként adja vissza azokat;</li>
+
+    <li>beolvassa a fájl teljes tartalmát, és egyetlen karakterláncként adja vissza;</li>
+
+    <li>ha nincs több olvasnivaló (a virtuális olvasófej elérte a fájl végét), a függvény egy üres karakterláncot ad vissza.</li>
+</ul>
+
+<br>
+
+<p>A legegyszerűbb változattal kezdünk, és egy <codel>text.txt</codel> nevű fájlt használunk. A fájl tartalma a következő:</p>
+
+<codep>Beautiful is better than ugly.
+Explicit is better than implicit.
+Simple is better than complex.
+Complex is better than complicated.</codep>
+<p style="text-align: right;"><font size="-2"><b>text.txt</b></font></p>
+
+<br>
+
+<p>Nézd meg a kódot a szerkesztőben, és elemezzük ki.</p>
+
+<p>A rutin meglehetősen egyszerű:</p>
+
+<ul>
+    <li>a try-except mechanizmust használjuk, hogy megnyissuk az előre megadott nevű fájlt (esetünkben ez a <font face="Courier New">text.txt</font>)</li>
+
+    <li>megpróbáljuk beolvasni a legelső karaktert a fájlból (<codel>char = stream.read(1)</codel>)</li>
+
+    <li>ha sikerrel járunk (ezt a <codel>while</codel> feltétele ellenőrzi), kiírjuk a karaktert (Figyeld meg az <codel>end=</codel> argumentumot! Ez fontos! Nem akarunk minden karakter után új sort kezdeni.);</li>
+
+    <li>aktualizáljuk a számlálót (<codel>counter</codel>) is;</li>
+
+    <li>megpróbáljuk beolvasni a következő karaktert, és megismételjük a folyamatot.</li>
+
+</ul>
+
+
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

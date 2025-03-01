@@ -1,0 +1,44 @@
+<problem chapter='3' section='5' slide='1' problem='1' title='OOP Fundamentals: Inheritance'>
+
+<!--
+Update history:
+2020-10-01 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>class Star:
+    def __init__(self, name, galaxy):
+        self.name = name
+        self.galaxy = galaxy
+
+
+sun = Star("Sun", "Milky Way")
+print(sun)
+
+</code>
+
+
+
+<h1>Inheritance – why and how?</h1>
+
+<p>Before we start talking about inheritance, we want to present a new, handy mechanism utilized by Python's classes and objects – it's <strong>the way in which the object is able to introduce itself</strong>.</p>
+
+<p>Let's start with an example. Look at the code in the editor.</p>
+
+<p>The program prints out just one line of text, which in our case is this:</p>
+
+<codep><__main__.Star object at 0x7f1074cc7c50></codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+<p>If you run the same code on your computer, you'll see something very similar, although the hexadecimal number (the substring starting with <font face="Courier New">0x</font>) will be different, as it's just an internal object identifier used by Python, and it's unlikely that it would appear the same when the same code is run in a different environment.</p>
+
+<p>As you can see, the printout here isn't really useful, and something more specific, or just prettier, may be more preferable.</p>
+
+<p>Fortunately, Python offers just such a function.</p>
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

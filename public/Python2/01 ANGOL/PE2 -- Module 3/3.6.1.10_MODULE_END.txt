@@ -1,0 +1,71 @@
+<problem chapter='3' section='6' slide='1' problem='10' title='Module Completion'>
+
+<!--
+Update history:
+2020-10-18 Grzegorz (file creation)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<h1>Congratulations! You have completed <i>PE2: Module 3</i>.</h1>
+
+<br>
+
+
+<p>Well done! You've reached the end of Module 3 and completed a major milestone in your Python programming education. Here's a short summary of the objectives you've covered and become familiar with in Module 3:</p>
+
+<ul>
+<li>the foundations and basic concepts of object-oriented programming;</li>
+
+<li>the differences between the procedural and object approaches on the example of the stack;</li>
+
+<li>properties (instance and class variables, attributes)</li>
+
+<li>methods (class and object methods, the constructor, parameters, and properties)</li>
+
+<li>the concept of inheritance (functions, methods, class hierarchies, polymorphism, composition, single vs. multiple inheritance)</li>
+
+<li>the object-oriented nature of Python exceptions.</li>
+
+</ul>
+
+<br>
+
+<p>You are now ready to take the module quiz and attempt the final challenge: Module 3 Test, which will help you gauge what you've learned so far.</p>
+
+
+<br>
+<br>
+
+</div>
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+
+
+<center><img src="/uploads/media/default/0001/01/29ed2aa31a1a26221e4eac3b69d973a33cbf562e.png" width="65%" alt="Module completion – congratulations"></center>
+<br>
+
+
+
+
+<br>
+
+</div>
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

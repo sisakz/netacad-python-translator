@@ -1,0 +1,141 @@
+<problem chapter='1' section='2' slide='1' problem='17' title='SZAKASZ ÖSSZEFOGLALÁS'>
+
+<!--
+Update history:
+2020-08-31 Sysio (first version)
+2020-09-28 Grzegorz (reviewed)
+2021-06-29 Grzegorz (corrections)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<h1>A legfontosabb tudnivalók</h1>
+
+<br/>
+
+
+<p>1. A <codel>dir()</codel> nevű függvény megmutatja az importált modulban található entitások listáját. Például az</p>
+
+<codep class="syntax-color copy">import os
+dir(os)
+</codep>
+<br/>
+<p>kiírja az <codel>os</codel> modul összes olyan szolgáltatásának listáját, amelyet használhatsz a kódodban.</p>
+<br/>
+
+
+<p>2. A <codel>math</codel> modul több mint 50 szimbólumot (függvényeket és állandókat) tartalmaz, amelyek matematikai műveleteket végeznek (mint a <codel>sine()</codel>, <codel>pow()</codel>, <codel>factorial()</codel>) vagy fontos értékeket adnak meg (mint a <b>&#960;</b> és az <b>e</b> Euler-szám).</p>
+<br/>
+
+
+<p>3. A <codel>random</codel> modul több mint 60 olyan entitást foglal magába, amelyek segítségével pszeudo-véletlen számokat használhatsz. Ne felejtkezz meg a "pszeudo” előtagról, mivel nem létezik valódi véletlen szám, amikor a számítógép algoritmusai segítségével generáljuk őket.</p>
+<br/>
+
+<p>4. A <codel>platform</codel> modul körülbelül 70 függvényt tartalmaz, amelyek segítségével belemerülhetsz az operációs rendszer és a hardver mögöttes rétegeibe. Használatukkal többet tudhatsz meg arról a környezetről, amelyben a kódod végrehajtásra kerül.</p>
+<br/>
+
+<p>5. A <b>Python Module Index</b> (<a href="https://docs.python.org/3/py-modindex.html" target="_blank">https://docs.python.org/3/py-modindex.html</a> a Python-univerzumban elérhető modulok közösség által felügyelt könyvtára. Ha az igényeidnek megfelelő modult szeretnél találni, ott kezdd a keresést.</p>
+<br/>
+
+</div>
+
+<div class="small-12 large-6 columns">
+
+<br/>
+
+
+<p><strong>1. gyakorlat</strong></p>
+<p>Mekkora a <codel>result</codel> nevű változó várható értéke a következő kód végrehajtása után?</p>
+<codep>import math
+result = math.e == math.exp(1)
+
+</codep>
+<br/>
+
+<button class="button tiny" onclick="solution('sol1')">Ellenőrzés</button>
+
+<p id="sol1" style="display: none;">
+<codep>True</codep>
+</p>
+
+<script>
+function solution (id) {
+    var element = document.getElementById(id);
+    
+if (element.style.display === "none") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
+    }
+}
+</script>
+
+<br/>
+
+
+
+<p><strong>2. gyakorlat</strong></p>
+<p>(Egészítsd ki a mondatot!) A generátor magjának beállítása a program minden egyes futtatásakor ugyanazzal az értékkel garantálja, hogy ...</p>
+
+
+<button class="button tiny" onclick="solution('sol2')">Ellenőrzés</button>
+
+<p id="sol2" style="display: none;">
+    ... a <codel>random</codel> modul által generált pszeudo véletlen értékek mindig ugyanazok lesznek.
+</p>
+
+
+
+<br/><br/>
+
+
+
+
+<p><strong>3. gyakorlat</strong></p>
+<p>A <codel>platform</codel> modul melyik függvényét kell használni a számítógépben dolgozó CPU nevének meghatározására?</p>
+
+
+<button class="button tiny" onclick="solution('sol3')">Ellenőrzés</button>
+
+<p id="sol3" style="display: none;">
+A <codel>processor()</codel> függvény
+</p>
+
+
+
+<br/><br/>
+
+
+<p><strong>4. gyakorlat</strong></p>
+<p>Mi a várható kimenete a következő kódrészletnek?</p>
+<codep>import platform
+
+print(len(platform.python_version_tuple()))
+
+</codep>
+<br/>
+
+<button class="button tiny" onclick="solution('sol4')">Ellenőrzés</button>
+
+<p id="sol4" style="display: none;">
+<codep>3</codep>
+</p>
+
+
+<br/>
+
+<br/>
+
+</div>
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

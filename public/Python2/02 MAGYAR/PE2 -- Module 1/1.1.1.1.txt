@@ -1,0 +1,77 @@
+<problem chapter='1' section='1' slide='1' problem='1' title='Modulok'>
+
+<!--
+Update history:
+2020-08-31 Grzegorz (review, PEP-8 compliance check, update)
+2021-06-14 Grzegorz (review)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h1>Mi az a modul?</h1>
+
+<p>A számítógépes kód hajlamos növekedni. Azt mondhatjuk, hogy az a kód, amely nem növekszik, valószínűleg teljesen használhatatlan vagy félbehagyott. Egy valódi, keresett és széles körben használt kód folyamatosan fejlődik, ahogyan mind a felhasználók igényei, mind a felhasználók elvárásai a maguk ritmusában alakulnak.</p>
+
+<p>Egy olyan kódot, amely nem képes megfelelni a felhasználók igényeinek, gyorsan elfelejtenek, és azonnal lecserélik egy új, jobb és rugalmasabb kódra. Készülj fel erre, és soha ne gondold, hogy bármelyik programod véglegesen elkészült. A késznek ítélt állapot átmeneti, és általában gyorsan, az első hibajelentés után elmúlik. Maga a Python jó példa arra, hogyan működik ez a szabály.</p>
+
+<p>A növekvő kód valójában növekvő probléma. A nagyobb kód mindig nehezebb karbantartást jelent. A hibák keresése mindig könnyebb, ha a kód kisebb (ahogyan a mechanikai törés megtalálása is egyszerűbb, ha a gépezet egyszerűbb és kisebb).</p>
+
+<p>Ráadásul, ha a létrehozandó kód várhatóan nagyon nagy lesz (a forráskód sorok teljes száma hasznos, de nem túl pontos mérőszámként szolgálhat a kód méretének meghatározására), előfordulhat, hogy azt sok részre kell osztani (vagy inkább arra kényszerülünk), amelyeket párhuzamosan néhány, egy tucat, több tucat, vagy akár több száz egyéni fejlesztő valósít meg.</p>
+
+<p>Természetesen nem lehet egyetlen nagy forrásfájlt használni, amelyet minden programozó egyszerre szerkeszt. Ez biztosan látványos katasztrófához vezetne.</p>
+
+
+<br> 
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+<p>Ha azt szeretnéd, hogy egy ilyen szoftverprojekt sikeresen befejeződjön, akkor rendelkezned kell az ehhez szükséges eszközökkel:</p>
+
+<ul>
+<li>oszd el az összes feladatot a fejlesztők között;</li>
+<li>a létrehozott részeket egyesítsd egyetlen működő egésszé.</li>
+</ul>
+
+ 
+<p>Például egy bizonyos projekt két fő részre osztható:</p>
+
+<ul>
+    <li>a felhasználói felület (az a rész, amely widgetek és grafikus képernyő segítségével kommunikál a felhasználóval)</li>
+    <li>a logika (az adatokat feldolgozó és eredményeket produkáló rész)</li>
+</ul>
+
+ 
+<p>Minden ilyen rész (valószínűleg) kisebb részekre osztható, és így tovább. Az ilyen folyamatot gyakran a projekt <strong>részekre bontásának</strong> nevezik.</p>
+
+<p>Ha például felkérnének, hogy szervezz meg egy esküvőt, nem csinálnál mindent egyedül - keresnél néhány szakembert, és elosztanád a részfeladatokat közöttük.</p>
+
+<p>Hogyan lehet egy szoftvert különálló, de együttműködő részekre bontani? Ez a kérdés. A válasz a <strong>modulok</strong></p>
+
+
+<br>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

@@ -1,0 +1,58 @@
+<problem chapter='2' section='5' slide='1' problem='3' title='Egyszerű programok'>
+
+<!--
+Update history:
+2020-09-23 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>
+# Numbers Processor.
+
+line = input("Enter a line of numbers - separate them with spaces: ")
+strings = line.split()
+total = 0
+try:
+    for substr in strings:
+        total += float(substr)
+    print("The total is:", total)
+except:
+    print(substr, "is not a number.")
+
+</code>
+
+
+
+<h1>A számok feldolgozója</h1>
+
+<p>A harmadik program egy egyszerű módszert mutat be, amely lehetővé teszi egy számokkal teli sor bevitelét és egyszerű feldolgozását. Megjegyzés: a megszokott <codel>input()</codel> függvény az <codel>int()</codel> vagy <codel>float()</codel> függvényekkel együtt nem megfelelő erre a célra.</p>
+
+<p>A feldolgozás rendkívül egyszerű lesz – összegezzük a számokat.</p>
+
+<p>Nézd meg a kódot a szerkesztőben. Elemezd ki.</p>
+
+<p>A lista leképezés használata csinosabbá teheti a kódot. Használd, ha szeretnéd.</p>
+
+<p>Bemutatjuk a mi változatunkat:</p>
+
+<ul>
+    <li>03. sor: kéri a felhasználót, hogy adjon meg egy tetszőleges számú számmal kitöltött sort (a számok lehetnek lebegőpontos számok)</li>
+    <li>04. sor: feldarabolja a sort, és egy részsorozatokat tartalmazó listát készít;</li>
+    <li>05. sor: kezdetben az összeget nullára kell állítani;</li>
+    <li>06. sor: mivel a string-float konverzió kivételt okozhat, a legjobb, ha a try-except blokk védelmében végezzük el;</li>
+    <li>07. sor: végigmegyünk a listán...</li>
+    <li>08. sor: ...és minden elemét lebegőpontos valós számokká próbáljuk alakítani; ha ez működik, növeljük az összeget;</li>
+    <li>09. sor: eddig minden rendben van, így kiíratjuk az összeget;</li>
+    <li>10. sor: hiba esetén a program ér véget;</li>
+    <li>11. sor: kiír egy diagnosztikai üzenetet, amely megmutatja a felhasználónak a hiba okát.</li>
+</ul>
+
+<p>A kódnak van egy gyenge pontja – hamis eredményt jelenít meg, ha a felhasználó üres sort ír be. Meg tudod javítani?</p>
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

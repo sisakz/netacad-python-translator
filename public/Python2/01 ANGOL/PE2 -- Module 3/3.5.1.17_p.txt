@@ -1,0 +1,63 @@
+<problem chapter='3' section='5' slide='1' problem='17' title='OOP Fundamentals: Inheritance'>
+
+<!--
+Update history:
+2020-10-01 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>
+import time
+
+class Vehicle:
+    def change_direction(left, on):
+        pass
+
+    def turn(left):
+        change_direction(left, True)
+        time.sleep(0.25)
+        change_direction(left, False)
+
+
+class TrackedVehicle(Vehicle):
+    def control_track(left, stop):
+        pass
+
+    def change_direction(left, on):
+        control_track(left, on)
+
+
+class WheeledVehicle(Vehicle):
+    def turn_front_wheels(left, on):
+        pass
+
+    def change_direction(left, on):
+        turn_front_wheels(left, on)
+
+</code>
+
+
+
+<h1>How to build a hierarchy of classes: continued</h1>
+
+
+<p>Look at the code in the editor again. This is what we've done:</p>
+
+<ul>
+<li>we defined a superclass named <codel>Vehicle</codel>, which uses the <codel>turn()</codel> method to implement a general scheme of turning, while the turning itself is done by a method named <codel>change_direction()</codel>; note: the former method is empty, as we are going to put all the details into the subclass (such a method is often called an <strong>abstract method</strong>, as it only demonstrates some possibility which will be instantiated later)</li>
+
+<li>we defined a subclass named <codel>TrackedVehicle</codel> (note: it's derived from the <codel>Vehicle</codel> class) which instantiated the <codel>change_direction()</codel> method by using the specific (concrete) method named <codel>control_track()</codel></li>
+
+<li>respectively, the subclass named <codel>WheeledVehicle</codel> does the same trick, but uses the <codel>turn_front_wheels()</codel> method to force the vehicle to turn.</li>
+</ul>
+
+<p>The most important advantage (omitting readability issues) is that this form of code enables you to implement a brand new turning algorithm just by modifying the <codel>turn()</codel> method, which can be done in just one place, as all the vehicles will obey it.</p>
+
+<p>This is how <strong>polymorphism helps the developer to keep the code clean and consistent</strong>.</p>
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

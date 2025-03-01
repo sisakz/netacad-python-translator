@@ -1,0 +1,74 @@
+<problem chapter='3' section='5' slide='1' problem='15' title='OOP Fundamentals: Inheritance'>
+
+<!--
+Update history:
+2020-10-01 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>
+class One:
+    def do_it(self):
+        print("do_it from One")
+
+    def doanything(self):
+        self.do_it()
+
+
+class Two(One):
+    def do_it(self):
+        print("do_it from Two")
+
+
+one = One()
+two = Two()
+
+one.doanything()
+two.doanything()
+
+</code>
+
+
+
+<h1>How to build a hierarchy of classes</h1>
+
+
+<p>Building a hierarchy of classes isn't just art for art's sake.</p>
+
+<p>If you divide a problem among classes and decide which of them should be located at the top and which should be placed at the bottom of the hierarchy, you have to carefully analyze the issue, but before we show you how to do it (and how not to do it), we want to highlight an interesting effect. It's nothing extraordinary (it's just a consequence of the general rules presented earlier), but remembering it may be key to understanding how some codes work, and how the effect may be used to build a flexible set of classes.</p>
+
+<p>Take a look at the code in the editor. Let's analyze it:</p>
+
+<ul>
+<li>there are two classes, named <codel>One</codel> and <codel>Two</codel>, while <codel>Two</codel> is derived from <codel>One</codel>. Nothing special. However, one thing looks remarkable - the <codel>do_it()</codel> method.</li>
+
+<li>the <codel>do_it()</codel>method is <strong>defined twice</strong>: originally inside <codel>One</codel> and subsequently inside <codel>Two</codel>. The essence of the example lies in the fact that it is <strong>invoked just once</strong> – inside <codel>One</codel>.</li>
+</ul>
+
+<p>The question is – which of the two methods will be invoked by the last two lines of the code?</p>
+<br>
+
+<p>The first invocation seems to be simple, and it is simple, actually – invoking <codel>doanything()</codel> from the  object named <codel>one</codel> will obviously activate the first of the methods.</p>
+
+<p>The second invocation needs some attention. It's simple, too if you keep in mind how Python finds class components. The second invocation will launch <codel>do_it()</codel> in the form existing inside the <codel>Two</codel> class, regardless of the fact that the invocation takes place within the <codel>One</codel> class.</p>
+
+<p>In effect, the code produces the following output:</p>
+
+<codep>do_it from One
+do_it from Two</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+<p>Note: the situation in which <strong>the subclass is able to modify its superclass behavior (just like in the example) is called polymorphism</strong>. The word comes from Greek (polys: "many, much" and morphe, "form, shape"), which means that one and the same class can take various forms depending on the redefinitions done by any of its subclasses.</p>
+
+<p>The method, redefined in any of the superclasses, thus changing the behavior of the superclass, is called <strong>virtual</strong>.</p>
+
+<p>In other words, no class is given once and for all. Each class's behavior may be modified at any time by any of its subclasses.</p>
+
+<p>We're going to show you <strong>how to use polymorphism to extend class flexibility</strong>.</p>
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

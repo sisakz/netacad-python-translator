@@ -1,0 +1,62 @@
+<problem chapter='2' section='3' slide='1' problem='1' title='String methods'>
+
+<!--
+Update history:
+2020-09-22	Grzegorz (review, PEP-8 compliance check, update)
+2021-06-30	Grzegorz (corrections)
+-->
+
+<code>
+# Demonstrating the capitalize() method:
+print('aBcD'.capitalize())
+
+</code>
+
+
+
+<h1>The <font face="Courier New">capitalize()</font> method</h1>
+
+<p>Let's go through some standard Python string methods. We're going to go through them in alphabetical order – to be honest, any order has as many disadvantages as advantages, so the choice may as well be random.</p>
+
+<p>The <codel>capitalize()</codel> method does exactly what it says – <strong>it creates a new string filled with characters taken from the source string</strong>, but it tries to modify them in the following way:</p>
+
+<ul>
+<li><strong>if the first character inside the string is a letter</strong> (note: the first character is an element with an index equal to <font face="Courier New">0</font>, not just the first visible character), <strong>it will be converted to upper-case</strong>;</li>
+<li><strong>all remaining letters from the string will be converted to lower-case</strong>.</li>
+</ul>
+
+ 
+
+<p>Don't forget that:</p>
+
+<ul>
+<li>the original string from which the method is invoked is not changed in any way – a string's immutability must be obeyed without reservation;</li>
+<li>the modified string (in this case, capitalized) is returned as a result – if you don't use it in any way (assign it to a variable, or pass it to a function/method) it will disappear without a trace.</li>
+</ul>
+ 
+
+<p>Note: methods don't have to be invoked from within variables only. They can be invoked directly from within string literals. We're going to use that convention regularly – it will simplify the examples, as the most important aspects will not disappear among unnecessary assignments.</p>
+
+<p>Take a look at the example in the editor. Run it.</p>
+
+<p>This is what it prints:</p>
+
+<codep>Abcd</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+
+<p>Try some more advanced examples and test their output:</p>
+
+<codep class="syntax-color copy">print("Alpha".capitalize())
+print('ALPHA'.capitalize())
+print(' Alpha'.capitalize())
+print('123'.capitalize())
+print("&alpha;&beta;&gamma;&delta;".capitalize())</codep>
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

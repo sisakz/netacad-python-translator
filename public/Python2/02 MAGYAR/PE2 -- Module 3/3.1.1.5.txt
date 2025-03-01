@@ -1,0 +1,76 @@
+<problem chapter='3' section='1' slide='1' problem='5' title='Objektumorientált programozás'>
+
+<!--
+Update history:
+2020-09-30 Grzegorz (review, PEP-8 compliance check, update)
+2020-10-26 Grzegorz (Sentence fix: The object's home class may define new traits (as well as requirements and qualities) which will be inherited by any of its subclasses.)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+    <h1>Mi az az objektum?</h1>
+
+
+    <p>Az osztály (más definíciók mellett) <strong>objektumok halmaza</strong>. Az objektum egy <strong>osztályhoz tartozó egyed</strong>.</p>
+
+
+    <p>Az objektum egy <strong>adott osztályhoz rendelt követelmények, jellemzők és tulajdonságok megtestesülése</strong>. Ez egyszerűen hangzik, de vegyük figyelembe a következő fontos kitételt: az osztályok hierarchiát alkotnak.</p>
+
+    <p>Ez azt jelenti, hogy egy adott osztályhoz tartozó objektum egyidejűleg az összes ősosztályhoz is tartozik. Ez azt is jelentheti, hogy egy ősosztályhoz tartozó objektum nem tartozhat egyik alosztályhoz sem.</p>
+
+    <p>Például: bármely személygépkocsi a <i>kerekes járművek</i> osztályba tartozó objektum. Ez azt jelenti, hogy ugyanaz az autó a saját osztályának minden ősosztályához is tartozik, tehát egyúttal a <i>vehicles</i> osztály tagja is.</p>
+
+    <p>A kutyád (vagy macskád) a <i>háziasított emlősök</i> osztályba tartozó objektum, ami egyértelműen azt jelenti, hogy az <i>animals</i> osztályba is beletartozik.</p>
+
+    <p>Minden <strong>alosztály speciálisabb</strong> (vagy specifikusabb), mint a felettes osztálya. Fordítva, minden <strong>szuperosztály (más néven ősosztály) általánosabb</strong> (absztraktabb), mint bármelyik alosztálya.</p>
+
+    <p>Vegyük észre, hogy azt feltételeztük, hogy egy osztálynak csak egy ősosztálya lehet - ez nem mindig igaz, de ezt a kérdést később tárgyaljuk.</p>
+
+
+<br>
+<br> 
+
+
+
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+    <h2>Öröklés</h2>
+
+    <p>Definiáljuk az objektumorientált-programozás egyik alapvető fogalmát, az úgynevezett <strong>öröklődést</strong>. Az osztályhierarchia egy adott szintjéhez kötött objektum <strong>örökli az összes jellemzőt (valamint a követelményeket és tulajdonságokat), amelyeket bármelyik ősosztályon belül definiáltak</strong>.</p>
+
+    <p>Az objektum alaposztálya új jellemzőket (valamint követelményeket és tulajdonságokat) definiálhat, amelyeket bármelyik alosztálya örökölni fog.</p>
+
+
+
+<img src="/uploads/media/default/0001/01/a099081349764cfda3d91329ee4a3345643802d4.png" alt="The inheritance concept" width="75%">
+<br>
+<br> 
+
+
+<p>Nem okozhat gondot, hogy ezt a szabályt a konkrét példáinkra illesszük, akár az állatokra, akár a járművekre vonatkoztatva.</p>
+
+<br>
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

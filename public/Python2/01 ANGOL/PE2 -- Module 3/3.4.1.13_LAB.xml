@@ -1,0 +1,135 @@
+<problem chapter='3' section='4' slide='1' problem='13' title='LAB: Days of the week'>
+
+<!--
+Update history:
+2020-01-01 Syslaw (file created)
+2020-11-16 Grzegorz (review, PEP-8 compliance check)
+2021-03-30 Grzegorz (Correction: day Thu changed to Tue: <p><font face="courier">Mon Tue Wed Thu Fri Sat Sun</font></p>)
+-->
+
+<code>class WeekDayError(Exception):
+    pass
+	
+
+class Weeker:
+    #
+    # Write code here.
+    #
+
+    def __init__(self, day):
+        #
+        # Write code here.
+        #
+
+    def __str__(self):
+        #
+        # Write code here.
+        #
+
+    def add_days(self, n):
+        #
+        # Write code here.
+        #
+
+    def subtract_days(self, n):
+        #
+        # Write code here.
+        #
+
+
+try:
+    weekday = Weeker('Mon')
+    print(weekday)
+    weekday.add_days(15)
+    print(weekday)
+    weekday.subtract_days(23)
+    print(weekday)
+    weekday = Weeker('Monday')
+except WeekDayError:
+    print("Sorry, I can't serve your request.")
+
+</code>
+
+<span class="label" style="background-color:rgb(205, 168, 105);"><b>LAB</b></span>
+
+<br><br>
+
+<h2>Estimated time</h2>
+<p>30-60 minutes</p>
+
+<h2>Level of difficulty</h2>
+<p>Easy/Medium</p>
+
+<h2>Objectives</h2>
+<ul>
+<li>improving the student's skills in defining classes from scratch;</li>
+<li>defining and using instance variables;</li>
+<li>defining and using methods.</li>
+</ul>
+
+<h2>Scenario</h2>
+<p>Your task is to implement a class called <font face="courier">Weeker</font>. Yes, your eyes don't deceive you – this name comes from the fact that objects of that class will be able to store and to manipulate the days of the week.</p>
+
+<p>The class constructor accepts one argument – a string. The string represents the name of the day of the week and the only acceptable values must come from the following set:</p>
+<p><font face="courier">Mon Tue Wed Thu Fri Sat Sun</font></p>
+
+<p>Invoking the constructor with an argument from outside this set should raise the <font face="courier">WeekDayError</font> exception (define it yourself; don't worry, we'll talk about the objective nature of exceptions soon). The class should provide the following facilities:</p>
+<ul>
+<li>objects of the class should be "printable", i.e. they should be able to implicitly convert themselves into strings of the same form as the constructor arguments;</li>
+<li>the class should be equipped with one-parameter methods called <codel>add_days(n)</codel> and <codel>subtract_days(n)</codel>, with <b>n</b> being an integer number and updating the day of week stored inside the object in the way reflecting the change of date by the indicated number of days, forward or backward.</li>
+<li>all object's properties should be private;</li>
+</ul>
+
+<p>Complete the template we've provided in the editor and run your code and check whether your output looks the same as ours.</p>
+
+
+<h2>Expected output</h2>
+
+<p><codep>Mon
+Thu
+Sun
+Sorry, I can't serve your request.</codep></p>
+
+
+
+<sampleSolution>
+class WeekDayError(Exception):
+    pass
+
+
+class Weeker:
+    __names = ['Mon', 'Thu', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+
+    def __init__(self, day):
+        try:
+            self.__current = Weeker.__names.index(day)
+        except ValueError:
+            raise WeekDayError
+
+    def __str__(self):
+        return Weeker.__names[self.__current]
+
+    def add_days(self, n):
+        self.__current = (self.__current + n) % 7
+
+    def subtract_days(self, n):
+        self.__current = (self.__current - n) % 7
+
+
+try:
+    weekday = Weeker('Mon')
+    print(weekday)
+    weekday.add_days(15)
+    print(weekday)
+    weekday.subtract_days(23)
+    print(weekday)
+    weekday = Weeker('Monday')
+except WeekDayError:
+    print("Sorry, I can't serve your request.")
+	
+</sampleSolution>
+
+<br><br>
+
+<labMode>true</labMode>
+</problem>

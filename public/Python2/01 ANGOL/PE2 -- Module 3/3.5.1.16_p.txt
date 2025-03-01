@@ -1,0 +1,65 @@
+<problem chapter='3' section='5' slide='1' problem='16' title='OOP Fundamentals: Inheritance'>
+
+<!--
+Update history:
+2020-10-01 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>
+import time
+
+class TrackedVehicle:
+    def control_track(left, stop):
+        pass
+
+    def turn(left):
+        control_track(left, True)
+        time.sleep(0.25)
+        control_track(left, False)
+
+
+class WheeledVehicle:
+    def turn_front_wheels(left, on):
+        pass
+
+    def turn(left):
+        turn_front_wheels(left, True)
+        time.sleep(0.25)
+        turn_front_wheels(left, False)
+
+</code>
+
+
+
+<h1>How to build a hierarchy of classes: continued</h1>
+
+
+<p>Look at the example in the editor.</p>
+
+<p>Does it resemble anything? Yes, of course it does. It refers to the example shown at the beginning of the module when we talked about the general concepts of object programming.</p>
+
+<p>It may look weird, but we didn't use inheritance in any way – just to show you that it doesn't limit us, and we managed to get ours.</p>
+
+<p>We've defined two separate classes able to produce two different kinds of land vehicles. The main difference between them is in how they turn. A wheeled vehicle just turns the front wheels (generally). A tracked vehicle has to stop one of the tracks.</p>
+
+<P>Can you follow the code?</p>
+
+<ul>
+<li>a tracked vehicle performs a turn by stopping and moving on one of its tracks (this is done by the <codel>control_track()</codel> method, which will be implemented later)</li>
+<li>a wheeled vehicle turns when its front wheels turn (this is done by the <codel>turn_front_wheels()</codel> method)</li>
+<li>the <codel>turn()</codel> method uses the method suitable for each particular vehicle.</li>
+</ul>
+
+<p>Can you see <strong>what's wrong with the code</strong>?</p>
+
+<p>The <codel>turn()</codel> methods look too similar to leave them in this form.</p>
+
+<p>Let's rebuild the code – we're going to introduce a superclass to gather all the similar aspects of the driving vehicles, moving all the specifics to the subclasses.</p>
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

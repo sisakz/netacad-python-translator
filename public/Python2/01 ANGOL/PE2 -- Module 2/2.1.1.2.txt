@@ -1,0 +1,87 @@
+<problem chapter='2' section='1' slide='1' problem='2' title='Characters and Strings vs. Computers'>
+
+<!--
+Update history:
+2020-09-21 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h1>I18N</h1>
+
+<p>Of course, the Latin alphabet is not sufficient for the whole of mankind. Users of that alphabet are in the minority.  It was necessary to come up with something more flexible and capacious than ASCII, something able to make all the software in the world amenable to <strong>internationalization</strong>, because different languages use completely different alphabets, and sometimes these alphabets are not as simple as the Latin one.</p>
+
+<p>The word <i>internationalization</i> is commonly shortened to <strong>I18N</strong>.</p>
+
+<img src="/uploads/media/default/0001/01/a3ba6886fb07ff7ec64c8d24ab55d3c7e39d740e.png" width="80%" alt="I18N Internationalization">
+<br><br>
+ 
+
+<p>Why? Look carefully – there is an <i>I</i> at the front of the word, next there are <i>18</i> different letters, and an <i>N</i> at the end.</p>
+
+<p>Despite the slightly humorous origin, the term is officially used in many documents and standards.</p>
+
+<p>The <strong>software I18N</strong> is a standard in present times. Each program has to be written in a way that enables it to be used all around the world, among different cultures, languages, and alphabets.</p>
+
+ 
+<p><strong>A classic form of ASCII code uses eight bits for each sign</strong>. Eight bits mean 256 different characters. The first 128 are used for the standard Latin alphabet (both upper-case and lower-case characters). Is it possible to push all the other national characters used around the world into the remaining 128 locations?</p>
+
+<p>No. It isn't.</p>
+
+
+<br><br>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<h2>Code points and code pages</h2>
+
+<p>We need a new term now: a <strong>code point</strong>.</p>
+
+<p>A code point is <strong>a number which makes a character</strong>. For example, <i>32</i> is a code point which makes a <i>space</i> in ASCII encoding. We can say that standard ASCII code consists of 128 code points.</p>
+
+<p>As standard ASCII occupies 128 out of 256 possible code points, you can only make use of the remaining 128.</p>
+
+<p>It's not enough for all possible languages, but it may be sufficient for one language, or for a small group of similar languages.</p>
+
+<p>Can you <strong>set the higher half of the code points differently for different languages</strong>? Yes, you can. Such a concept is called a <strong>code page</strong>.</p>
+
+
+<p>A code page is a <strong>standard for using the upper 128 code points to store specific national characters</strong>. For example, there are different code pages for Western Europe and Eastern Europe, Cyrillic and Greek alphabets, Arabic and Hebrew languages, and so on.</p>
+
+<p>This means that the one and same code point can make different characters when used in different code pages.</p>
+
+<p>For example, the code point <i>200</i> makes &Ccaron; (a letter used by some Slavic languages) when utilized by the ISO/IEC 8859-2 code page, and makes &#x428; (a Cyrillic letter) when used by the ISO/IEC 8859-5 code page.</p>
+
+<p>In consequence, to determine the meaning of a specific code point, you have to know the target code page.</p>
+
+<p>In other words, the code points derived from the code page concept are ambiguous.</p>
+
+
+<br>
+<br>
+
+</div>
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

@@ -1,0 +1,96 @@
+<problem chapter='3' section='2' slide='1' problem='4' title='A short journey from procedural to object approach'>
+
+<!--
+Update history:
+2020-09-30 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>class Stack:  # Defining the Stack class.
+    def __init__(self):  # Defining the constructor function.
+        print("Hi!")
+
+
+stack_object = Stack()  # Instantiating the object.
+
+</code>
+
+
+
+<h1>The stack – the object approach</h1>
+
+<p>Of course, the main idea remains the same. We'll use a list as the stack's storage. We only have to know how to put the list into the class.</p>
+
+<p>Let's start from the absolute beginning – this is how the object stack begins:</p>
+
+<codep class="syntax-color">class Stack:
+</codep>
+<br>
+
+
+<p>Now, we expect two things from it:</p>
+
+<ul>
+<li>we want the class to have <strong>one property as the stack's storage</strong> – we have to <strong>"install" a list inside each object of the class</strong> (note: each object has to have its own list – the list mustn't be shared among different stacks)</li>
+
+<li>then, we want <strong>the list to be hidden</strong> from the class users' sight.</li>
+</ul>
+
+ 
+<p>How is this done?</p>
+
+<p>In contrast to other programming languages, Python has no means of allowing you to declare such a property just like that.</p>
+
+<p>Instead, you need to add a specific statement or instruction. The properties have to be added to the class manually.</p>
+
+ 
+<p>How do you guarantee that such an activity takes place every time the new stack is created?</p>
+
+<p>There is a simple way to do it – you have to <strong>equip the class with a specific function</strong> – its specificity is dual:</p>
+
+<ul>
+<li>it has to be named in a strict way;</li>
+<li>it is invoked implicitly, when the new object is created.</li>
+</ul>
+ 
+
+<p>Such a function is called a <strong>constructor</strong>, as its general purpose is to <strong>construct a new object</strong>. The constructor should know everything about the object's structure, and must perform all the needed initializations.</p>
+
+<p>Let's add a very simple constructor to the new class. Take a look at the snippet:</p>
+
+<codep class="syntax-color">class Stack:
+    def <mark class="mark-background">__init__</mark>(self):
+        print("Hi!")
+
+
+stack_object = Stack()
+</codep>
+<br>
+
+<p>And now:</p>
+
+<ul>
+<li>the constructor's name is always <codel>__init__</codel>;</li>
+<li>it has to have <strong>at least one parameter</strong> (we'll discuss this later); the parameter is used to represent the newly created object – you can use the parameter to manipulate the object, and to enrich it with the needed properties; you'll make use of this soon;</li>
+<li>note: the obligatory parameter is usually named <codel>self</codel> – it's only <strong>a convention, but you should follow it</strong> – it simplifies the process of reading and understanding your code.</li>
+</ul>
+ 
+
+<p>The code is in the editor. Run it now.</p>
+
+<p>Here is its output:</p>
+
+<codep>Hi!</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+ 
+
+<p>Note – there is no trace of invoking the constructor inside the code. It has been invoked implicitly and automatically. Let's make use of that now.</p>
+
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

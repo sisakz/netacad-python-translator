@@ -1,0 +1,112 @@
+<problem chapter='3' section='1' slide='1' problem='6' title='Objektumorientált programozás'>
+
+<!--
+Update history:
+2020-09-30 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+    <h1>Mivel rendelkezik egy objektum?</h1>
+
+
+    <p>Az objektumprogramozási konvenció feltételezi, hogy <strong>minden létező objektum három attribútumcsoporttal rendelkezhet</strong>:</p>
+
+<ul>
+    <li>egy objektumnak van egy  <strong>neve</strong> amely egyedileg azonosítja azt a saját névterében (bár lehetnek névtelen objektumok is).</li>
+    <li>egy objektumnak van egy  <strong>sor egyedi tulajdonsága</strong> amelyek eredetivé, egyedivé vagy kiemelkedővé teszik (bár lehetséges, hogy egyes objektumok egyáltalán nem rendelkeznek tulajdonságokkal).</li>
+    <li>egy objektum rendelkezik egy <strong>sor képességgel, hogy bizonyos tevékenységeket végezzen</strong>, képes megváltoztatni magát az objektumot, vagy néhány más objektumot is akár.</li>
+</ul>
+ 
+
+<p>Van egy tipp (bár ez nem mindig működik), amely segíthet azonosítani a fenti három szféra bármelyikét. Amikor meghatározunk egy objektumot és használjuk:</p>
+
+<ul>
+    <li>egy főnév - az objektum nevét határozza meg;</li>
+    <li>egy melléknév - az objektum tulajdonságát határozza meg;</li>
+    <li>egy ige - az objektum tevékenységét határozza meg.</li>
+</ul>
+ 
+<p>Két minta jó példaként szolgálhat:</p>
+
+<ul>
+ 
+
+<li><font size="+1">A rózsaszín Cadillac gyorsan elment.</font>
+<br><br>
+
+Objektum neve = Cadillac
+<br>
+
+Osztály = Kerekes járművek
+<br>
+
+Tulajdonság = Szín (rózsaszín)
+<br>
+
+Tevékenység = Megy (gyorsan)
+</li>
+</ul>
+
+
+
+<br>
+<br> 
+
+
+
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+
+<br>
+
+<ul>
+<li><font size="+1">Max egy nagy macska, aki egész nap alszik.</font>
+<br><br>
+
+Objektum neve = Max
+<br>
+
+Osztály = Macska
+<br>
+
+Tulajdonság = Méret (nagy)
+<br>
+
+Tevékenység = Alvás (egész nap)
+<br><br></li>
+
+</ul>
+
+<img class="lightbox" src="/uploads/media/default/0001/01/be95ffa57008024fff0e6cd735afa5687c806902.png" alt="The concept of object attributes" width="90%">
+<br>
+<br> 
+
+
+
+
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

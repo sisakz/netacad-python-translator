@@ -1,0 +1,78 @@
+<problem chapter='3' section='1' slide='1' problem='2' title='Objektumorientált programozás'>
+
+<!--
+Update history:
+2020-09-30 Grzegorz (review, PEP-8 compliance check, update)
+2021-07-05	Grzegorz (corrections)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+    <h1>Procedurális vs. objektumorientált megközelítés</h1>
+
+    <p>A <strong>procedurális megközelítésben</strong> két különböző és teljesen különálló világot különböztethetünk meg: <strong>az adatok világát és a kód világát</strong>. Az adatok világát különböző típusú változók népesítik be, míg a kód világát modulokba és függvényekbe csoportosított kódok lakják.</p>
+
+    <p>A függvények képesek adatokat használni, de fordítva ez nem lehetséges. Továbbá a függvények képesek visszaélni az adatokkal, azaz jogosulatlanul felhasználni az értéket (pl. amikor a szinusz függvény paraméterként megkapja a bankszámla egyenlegét).</p>
+
+    <p>Korábban azt mondtuk, hogy az adatok nem használhatnak függvényeket. De vajon ez teljesen igaz? Vannak olyan speciális adattípusok, amelyek meghívnak függvényeket?</p>
+
+    <p>Igen, vannak. Az ilyen függvényeket metódusoknak nevezzük. Ezek azok a függvények, amelyeket az adatokból közvetlenül hívunk meg, nem pedig kívülről. Ha ezt a különbséget érted, megtetted az első lépést az objektumprogramozásba.</p>
+
+    <p>Az <strong>objektumos megközelítés</strong> egy teljesen másfajta gondolkodásmódot sugall. Az adatokat és a kódot egyazon világba zárjuk, osztályokba soroljuk.</p>
+
+    <p>Minden <strong>osztály olyan, mint egy recept, amelyet akkor használhatunk, amikor egy hasznos objektumot akarunk létrehozni</strong> (innen származik a megközelítés neve is). Annyi objektumot állíthatsz elő, amennyire szükséged van a problémád megoldásához.</p>
+
+    <p>Minden objektum rendelkezik egy sor tulajdonsággal (ezeket tulajdonságoknak vagy attribútumoknak nevezzük - mindkét szót szinonimaként használjuk majd), és képes egy sor tevékenységet végrehajtani (ezeket nevezzük metódusoknak).</p>
+
+    <p>Ezek a receptek módosíthatók, ha nem megfelelőek bizonyos célokra, és belőlük új osztályok hozhatók létre. Ezek az új osztályok az eredeti osztályok tulajdonságait és metódusait öröklik. Általában néhány újat is hozzáadnak, ezzel új, specifikusabb eszközöket hozva létre.</p>
+ 
+
+
+
+
+
+<br> 
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+<p>Az <strong>objektumok</strong> az osztályokban kifejezett ötletek <strong>megtestesülései</strong>, mint ahogy a tányéron lévő sajttorta is egy régi szakácskönyvben megtalálható recept megtestesülése.</p>
+
+<p>Az objektumok kölcsönhatásba lépnek egymással, adatokat cserélnek vagy aktiválják a metódusaikat. Egy megfelelően felépített osztály (és így annak objektuma) képes megvédeni az érzékeny adatokat, valamint elrejteni azokat az illetéktelen módosításoktól.</p>
+
+<p>Az adatok és a kód között nincs egyértelmű határvonal: az objektumokban egyként élnek.</p>
+
+<p>Mindezek a fogalmak nem olyan elvontak, mint ahogyan azt elsőre gondolnánk. Épp ellenkezőleg, mind a valós életből származnak, és ezért rendkívül hasznosak a számítógépes programozásban: nem mesterséges életet teremtenek – <strong>valós tényeket, összefüggéseket és körülményeket tükröznek</strong>.</p>
+
+<br>
+
+<center><img src="/uploads/media/default/0001/01/2746184e3dea52e1a39df3b1ae510e9dd99e34bc.png" width="70%" alt="The concept of class hierarchies"></center>
+
+
+<br>
+<br>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

@@ -1,0 +1,55 @@
+<problem chapter='1' section='1' slide='1' problem='9' title='Importing a module | * and as'>
+
+<!--
+Update history:
+2020-08-28 Grzegorz (review, PEP-8 compliance check, update)
+2021-06-16 Grzegorz (review)
+-->
+
+<code>from module import *
+
+</code>
+
+<h1>Importing a module: *</h1>
+
+<p>In the third method, the <codel>import</codel>'s syntax is a more aggressive form of the previously presented one:</p>
+
+<codep class="syntax-color">from module import *
+</codep>
+
+<br>
+
+<p>As you can see, the name of an entity (or the list of entities' names) is replaced with a single asterisk (<codel>*</codel>).</p>
+
+<p>Such an instruction <strong>imports all entities from the indicated module</strong>.</p>
+
+<p>Is it convenient? Yes, it is, as it relieves you of the duty of enumerating all the names you need.</p>
+
+<p>Is it unsafe? Yes, it is – unless you know all the names provided by the module, <strong>you may not be able to avoid name conflicts</strong>. Treat this as a temporary solution, and try not to use it in regular code.</p>
+
+<br>
+
+<h2>Importing a module: the <font face="Courier New">as</font> keyword</h2>
+
+<p>If you use the import module variant and you don't like a particular module's name (e.g., it's the same as one of your already defined entities, so qualification becomes troublesome) you can give it any name you like – this is called <strong>aliasing</strong>.</p>
+
+<p>Aliasing causes the module to be identified under a different name than the original. This may shorten the qualified names, too.</p>
+
+<p>Creating an alias is done together with importing the module, and demands the following form of the import instruction:</p>
+
+<codep class="syntax-color">import module as alias
+</codep>
+
+<br>
+
+<p>The "module" identifies the original module's name while the "alias" is the name you wish to use instead of the original.</p>
+
+<p>Note: <codel>as</codel> is a keyword.</p>
+
+
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

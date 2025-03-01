@@ -1,0 +1,105 @@
+<problem chapter='4' section='2' slide='1' problem='7' title='Fájlkezelés'>
+
+<!--
+Update history:
+2020-10-07 Grzegorz (review, PEP-8 compliance check)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+    <h2>Fájlkezelők (folytatás)</h2>
+
+    <p>Mivel a hordozhatósági problémák nagyon komolyak voltak (és még mindig azok), az a döntés született, hogy a problémát mindenképpen úgy kell megoldani, hogy az ne vonja el a fejlesztők figyelmét.</p>
+
+<br>
+
+<center><img src="/uploads/media/default/0001/01/a505b9d471830698e22faf258b8f5754bdf48534.png" alt="Text vs. binary streams concept" width="50%"></center>
+<br><br>
+
+    <p>Ez a művelet azon osztályok szintjén történt meg, amelyek felelősek a karakterek be- és kiírásáért az adatfolyamba, illetve a folyamból, és a következőképpen működik:</p>
+
+<ul>
+    <li>amikor a fájlobjektum meg van nyitva, és arra kap utasítást, hogy a kapcsolódó fájlban lévő adatokat szövegként dolgozza fel (vagy egyáltalán nincs ilyen utasítás), akkor <strong>szöveges módba kapcsol</strong>;</li>
+<br>
+
+<li>a sorok fájlból olvasása és fájlba írása során semmi különleges nem történik a Unix környezetben, de amikor ugyanezeket a műveleteket Windows környezetben hajtjuk végre, az <strong>új sor karakterek fordítása</strong> nevű folyamat történik: amikor egy sort olvasunk a fájlból, minden <codel>\r\n</codel> karakterpárt egyetlen <codel>\n</codel> karakterrel helyettesítünk, és fordítva; írási műveletek során minden <codel>\n</codel> karaktert <codel>\r\n</codel> karakterpárral helyettesítünk;</li>
+<br>
+
+<li>a mechanizmus teljesen <strong>transzparens</strong> a program számára, amely úgy írható meg, mintha csak Unix/Linux szövegfájlok feldolgozására készülne; ezt követően a forráskód a Windows környezetben is megfelelően működik;</li>
+<br>
+
+<li>ha a fájlobjektum bináris módban kerül megnyitásra, a tartalma úgy lesz átvéve, ahogy van, <strong>mindenféle átalakítás nélkül</strong> – nem adunk hozzá vagy hagyunk ki bájtokat.</li>
+</ul>
+
+
+
+<br><br>
+
+
+<br> 
+<br>
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+
+    <h2>A fájlobjektumok megnyitása</h2>
+
+
+ 
+    <p>A <strong>fájlobjektum megnyitása</strong> egy függvény segítségével történik, amely a következő módon hívható meg:</p>
+
+<codep class="syntax-color copy">stream = open(file, mode = 'r', encoding = None)
+</codep>
+
+<br>
+ 
+<p>Elemezzük ki:</p>
+
+<ul>
+    <li>a függvény neve (<codel>open</codel>) magáért beszél; ha a megnyitás sikeres, a függvény egy adatfolyam objektumot (fájlobjektumot) ad vissza; ellenkező esetben egy kivételt kapunk (pl.: <font face="Courier New">FileNotFoundError</font> <strong>ha az olvasni kívánt fájl nem létezik</strong>);</li>
+<br>
+
+<li>a függvény első paramétere (<codel>file</codel>) a fájlobjektumhoz társítandó fájl neve;</li>
+<br>
+
+<li>a második paraméter (<codel>mode</codel>) a fájlobjektumhoz használt megnyitási mód; ezt egy karakterláncként kell megadni, amelyben minden egyes karakternek megvan a maga speciális jelentése (további részletek hamarosan);</li>
+<br>
+
+<li>a harmadik paraméter (<codel>encoding</codel>) a kódolás típusát adja meg (pl.: UTF-8, ha szöveges fájlokkal dolgozunk).</li>
+<br>
+
+<li>a megnyitásnak kell lennie a fájlobjektumon végzett első műveletnek.</li>
+
+</ul>
+
+<p>Megjegyzés: a mode és az encoding argumentumok elhagyhatók - ekkor az alapértelmezett értékekkel dolgozik a rendszer. Az alapértelmezett megnyitási mód a szöveges olvasás, míg az alapértelmezett kódolás a használt platformtól függ.</p>
+
+<p>Hadd mutassuk be most a legfontosabb és leghasznosabb megnyitási módokat. Készen állsz?</p>
+
+
+<br>
+<br>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

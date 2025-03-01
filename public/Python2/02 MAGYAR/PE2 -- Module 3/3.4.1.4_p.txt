@@ -1,0 +1,77 @@
+<problem chapter='3' section='4' slide='1' problem='4' title='OOP: Metódusok'>
+
+<!--
+Update history:
+2020-09-30 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>
+class Classy:
+    def __init__(self, value = None):
+        self.var = value
+
+
+obj_1 = Classy("object")
+obj_2 = Classy()
+
+print(obj_1.var)
+print(obj_2.var)
+
+</code>
+
+
+
+<h1>Metódusok részletesen (folytatás)</h1>
+
+<p>Mivel az <codel>__init__</codel> egy metódus, a metódus pedig egy függvény, a konstruktorokkal/metódusokkal ugyanazokat a trükköket végezhetjük, mint a közönséges függvényekkel.</p>
+
+<p>A szerkesztőben található példa azt mutatja, hogyan definiálhatunk egy konstruktort egy alapértelmezett argumentumértékkel. Teszteljük!</p>
+
+<p>A kód kimenete:</p>
+
+<codep>object
+None</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+
+<p>Minden, amit a <strong>tulajdonságnevek módosításáról (mangling)</strong> mondtunk, vonatkozik a metódusnevekre is - egy olyan metódus, amelynek a neve <codel>__</codel> karakterekkel kezdődik, (részben) rejtett.</p>
+
+<p>A példa ezt a hatást mutatja:</p>
+
+<codep class="syntax-color copy line-numbers">class Classy:
+    def visible(self):
+        print("visible")
+    
+    def __hidden(self):
+        print("hidden")
+
+
+obj = Classy()
+obj.visible()
+
+try:
+    obj.__hidden()
+except:
+    print("failed")
+
+obj._Classy__hidden()
+</codep>
+<br> 
+
+
+<p>A kód kimenete:</p>
+
+<codep>visible
+failed
+hidden</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+<p>Futtasd a programot, és teszteld!</p>
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

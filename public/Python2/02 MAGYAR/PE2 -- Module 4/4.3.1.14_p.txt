@@ -1,0 +1,85 @@
+<problem chapter='4' section='3' slide='1' problem='14' title='Valós fájlok kezelése'>
+
+<!--
+Update history:
+2020-10-07 Grzegorz (review, PEP-8 compliance check)
+2020-10-29 Grzegorz (code fix: strrerror instead of strerr)
+2021-07-07 Grzegorz (code corrections - important!)
+-->
+
+<code>from os import strerror
+
+source_file_name = input("Enter the source file name: ")
+try:
+    source_file = open(source_file_name, 'rb')
+except IOError as e:
+    print("Cannot open the source file: ", strerror(e.errno))
+    exit(e.errno)	
+
+destination_file_name = input("Enter the destination file name: ")
+try:
+    destination_file = open(destination_file_name, 'wb')
+except Exception as e:
+    print("Cannot create the destination file: ", strerror(e.errno))
+    source_file.close()
+    exit(e.errno)	
+
+buffer = bytearray(65536)
+total  = 0
+try:
+    readin = source_file.readinto(buffer)
+    while readin > 0:
+        written = destination_file.write(buffer[:readin])
+        total += written
+        readin = source_file.readinto(buffer)
+except IOError as e:
+    print("Cannot create the destination file: ", strerror(e.errno))
+    exit(e.errno)	
+    
+print(total,'byte(s) succesfully written')
+source_file.close()
+destination_file.close()
+
+</code>
+
+
+
+<h1>Fájlok másolása - egy egyszerű és funkcionális eszköz</h1>
+
+
+<p>A nemrég megszerzett ismereteinket összegyúrjuk, hozzáadunk egy csipetnyi új elemet, és egy valódi kódot írunk belőle, amely képes egy fájl tartalmának tényleges másolására.</p>
+
+<p>Természetesen a cél nem az, hogy a <i>copy</i> (MS Windows) vagy a <i>cp</i> (Unix/Linux) parancsokat helyettesítsük, hanem az, hogy lássuk, miként kell létrehozni egy működő eszközt - még akkor is, ha később senki sem fogja használni.</p>
+
+<p>Nézd meg a kódot a szerkesztőablakban. Elemezzük:</p>
+
+<ul>
+    <li>3-8. sor: megkérdezi a felhasználótól a másolandó fájl nevét, és megpróbálja megnyitni azt olvasásra; a program befejezi a futását, ha a megnyitás sikertelen; megjegyzés: a program az <codel>exit()</codel> függvényt használja futásának leállítására és a befejezési kód operációs rendszernek történő átadására; a <codel>0</codel>-tól eltérő befejezési kód azt jelenti, hogy a program valamilyen problémába ütközött; az <codel>errno</codel> értékkel adjuk meg a probléma jellegét;</li>
+
+    <li>10-16. sor: megismételjük majdnem ugyanazokat a műveleteket, de ezúttal a kimeneti fájlra vonatkozóan;</li>
+
+    <li>18. sor: előkészítünk egy memóriarészt az adatok átvitelére a forrásfájlból a célfájlba; az ilyen átviteli területet gyakran puffernek nevezik, innen a változó neve; a puffer mérete tetszőleges - ebben az esetben 64 kilobájt mellett döntöttünk; technikailag a nagyobb puffer gyorsabb másolást tesz lehetővé, mivel a nagyobb puffer kevesebb I/O műveletet igényel; valójában mindig van egy határ, amelynek átlépése nem hoz további javulást; teszteld magad, ha akarod.</li>
+
+    <li>19. sor: a másolt bájtok számlálása - ez a számláló és annak kezdeti értéke;</li>
+
+    <li>21. sor: először megpróbáljuk feltölteni a puffert;</li>
+
+    <li>22. sor: amíg nullától eltérő számú bájtot kapunk, megismételjük ugyanazokat a műveleteket;</li>
+
+    <li>23. sor: a puffer tartalmának kiírása a kimeneti fájlba (megjegyzés: egy szeletet használtunk a kiírandó bájtok számának korlátozására, máskülönben a <codel>write()</codel> a teljes puffert kiírná).</li>
+
+    <li>24. sor: aktualizáljuk a számlálót;</li>
+
+    <li>25. sor: a következő fájldarab beolvasása;</li>
+
+    <li>30-32. sor: némi végső tisztítás - a munka elvégezve.</li>
+</ul>
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

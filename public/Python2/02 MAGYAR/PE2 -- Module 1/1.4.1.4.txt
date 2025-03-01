@@ -1,0 +1,65 @@
+<problem chapter='1' section='4' slide='1' problem='4' title='PIP'>
+
+<!--
+Update history:
+2020-09-23 Grzegorz (created)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+    <h1>A PyPI repo: a sajtbolt (folytatás)</h1>
+
+    <p>A PyPI egy nagyon különleges üzlet, és nem csak azért, mert minden termékét ingyen kínálja. Egy speciális eszköz is szükséges a használatához.</p>
+
+    <p>Szerencsére ez az eszköz is ingyenes, így ha a PyPI Shop által kínált áruk felhasználásával szeretnéd elkészíteni a saját digitális sajtburgeredet, akkor szükséged lesz egy <i>pip</i> nevű ingyenes eszközre. </p>
+
+    <p>Nem, nem hallottad félre. Csak <i>pip</i>. Természetesen ez is egy rövidítés, de a természete összetettebb, mint a korábban említett PyPI-é, mivel ez egy példa a rekurzív rövidítésre, ami azt jelenti, hogy a rövidítés önmagára utal, ami azt jelenti, hogy a magyarázata végtelen folyamat. </p>
+
+<p>Miért? Mert a <i>pip</i> azt jelenti, hogy <i>“pip installs packages”</i>, és a <i>pip</i> a <i>“pip installs packages”</i> szerkezetben azt jelenti, hogy  <i>“pip installs packages”</i> és így tovább ...</p>
+
+<p>Itt álljunk meg. Köszönjük az együttműködésedet!</p>
+
+<p>Egyébként van még néhány nagyon híres rekurzív rövidítés. Az egyik a <i>Linux</i>, ami úgy értelmezhető, hogy <i>“Linux Is Not Unix”</i>.</p>
+
+
+
+
+
+
+<br>
+<br> 
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+<br>
+
+
+<center><img src="/uploads/media/default/0001/02/e77aa0ca1396f21304d98f09583dd588c3f2d684.png" width="70%" alt="Sajtburger"></center>
+
+<br>
+<br>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

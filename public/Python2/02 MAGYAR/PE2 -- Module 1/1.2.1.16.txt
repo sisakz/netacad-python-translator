@@ -1,0 +1,65 @@
+<problem chapter='1' section='2' slide='1' problem='16' title='Fontos modulok'>
+
+<!--
+Update history:
+2020-08-31 Grzegorz (review, PEP-8 compliance check, update)
+2021-06-29 Grzegorz (corrections)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h1>A Python Module Index</h1>
+
+<p>Eddig csak a Python modulok alapjaival foglalkoztunk. A Python moduljai egy saját univerzumot alkotnak, amelyben maga a Python csak egy galaxis, és megkockáztatjuk azt állítani, hogy a modulok világának felfedezése lényegesen több időt vehet igénybe, mint az "alap" Python megismerése.</p>
+
+<p>A Python-közösség világszerte több száz további modult hoz létre és tart fenn, amelyeket nagyon speciális alkalmazásokban használnak, például a genetikában, a pszichológiában vagy akár az asztrológiában.</p>
+
+<p>Ezeket a modulokat nem terjesztik (és nem is fogják) a Pythonnal együtt, vagy hivatalos csatornákon keresztül, ami a Python univerzumot szélesebbé teszi - szinte végtelenné.</p>
+
+
+<p>Az összes szabványos Python modulról itt olvashatsz: <a href="https://docs.python.org/3/py-modindex.html" target="_blank">https://docs.python.org/3/py-modindex.html</a>.</p>
+
+<p>Ne aggódj - nem lesz szükséged az összes modulra, mivel sok közülük nagyon specifikus.</p>
+
+<p>Mindössze annyit kell tenned, hogy megtaláld a kívánt modulokat és megtanuld, hogyan kell használni ezeket. Ez viszont egyszerű.</p>
+
+
+
+<br>
+
+<br>
+
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+
+
+<img class="lightbox" src="/uploads/media/default/0001/01/1906bc61adcf05ea027179608f3a35bac3a08a24.png" width="90%" alt="Python Module Index - képernyőkép">
+
+<br><br>
+
+<p>A következő részben valami mást fogunk megvizsgálni. Megmutatjuk, hogyan írhatsz saját modult.</p>
+
+</div>
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

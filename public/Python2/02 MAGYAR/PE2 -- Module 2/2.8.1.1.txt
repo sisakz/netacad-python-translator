@@ -1,0 +1,143 @@
+<problem chapter='2' section='8' slide='1' problem='1' title='Hasznos kivételek'>
+
+<!--
+Update history:
+2020-09-21 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h1>Beépített kivételek</h1>
+
+<p>Mutatunk egy rövid listát a leghasznosabb kivételekről. Bár furcsán hangozhat, hogy „hasznosnak” nevezünk egy olyan dolgot vagy jelenséget, amely a kudarc vagy a kudarc látható jele, de mint tudjuk, tévedni emberi dolog, és ha valami elromolhat, akkor el is romlik.</p>
+
+<p>A kivételek ugyanolyan rutinszerűek és normálisak, mint a programozó életének bármely más része.</p>
+
+ 
+<p>Minden egyes kivétel esetében megmutatjuk:</p>
+
+<ul>
+<li>a nevét;</li>
+<li>a kivételfában való elhelyezkedését;</li>
+<li>rövid leírását;</li>
+<li>egy tömör kódrészletet, amely megmutatja, hogy milyen körülmények között fordulhat elő a kivétel.</li>
+</ul>
+ 
+
+<p>Rengeteg más kivételt is megvizsgálhatnánk – egyszerűen nincs helyünk arra, hogy itt mindet végigvegyük.</p>
+
+
+
+<h2><font face="Courier New">ArithmeticError</font></h2>
+
+
+<p><strong>Helyszín:</strong> <font face="Courier New">BaseException &larr; Exception &larr; ArithmeticError</font></p>
+
+ 
+
+<p><strong>Leírás:</strong> absztrakt kivétel, amely magában foglalja az összes olyan számtani művelet által okozott kivételt, mint a nullával való osztás vagy egy argumentum érvénytelen tartománya.</p>
+
+
+
+
+
+
+<h2><font face="Courier New">AssertionError</font></h2>
+
+
+<p><strong>Helyszín:</strong> <font face="Courier New">BaseException &larr; Exception &larr; AssertionError</font></p>
+
+ 
+
+<p><strong>Leírás:</strong> az assert utasítás által kiváltott konkrét kivétel, amikor az argumentuma <codel>False</codel>, <codel>None</codel>, <codel>0</codel>értékre vagy üres karakterláncra értékelődik ki.</p>
+
+
+<p><strong>Kód:</strong></p>
+
+<codep class="syntax-color copy line-numbers">from math import tan, radians
+angle = int(input('Enter integral angle in degrees: '))
+
+# We must be sure that angle != 90 + k * 180
+assert angle % 180 != 90
+print(tan(radians(angle)))
+</codep>
+
+
+<br><br>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<h2><font face="Courier New">BaseException</font></h2>
+
+
+<p><strong>Helyszín:</strong> <font face="Courier New">BaseException</font></p>
+
+ 
+
+<p><strong>Leírás:</strong> A Python kivételek legáltalánosabb (legabsztraktabb) típusa – az összes többi kivételt tartalmazza. A következő két <font face="Courier New">except</font> ág egyenértékű: <codel>except:</codel> és <codel>except BaseException:</codel>.</p>
+
+
+
+
+
+
+
+<h2><font face="Courier New">IndexError</font></h2>
+
+
+<p><strong>Helyszín:</strong> <font face="Courier New">BaseException &larr; Exception &larr; LookupError &larr; IndexError</font></p>
+
+ 
+
+<p><strong>Leírás:</strong> konkrét kivétel, amely akkor lép fel, ha egy nem létező szekvencia eleméhez (pl. egy lista eleméhez) próbálsz hozzáférni.</p>
+
+<p><strong>Kód:</strong></p>
+
+<codep class="syntax-color copy line-numbers"># The code shows an extravagant way
+# of leaving the loop.
+
+the_list = [1, 2, 3, 4, 5]
+ix = 0
+do_it = True
+
+while do_it:
+    try:
+        print(the_list[ix])
+        ix += 1
+    except IndexError:
+        do_it = False
+
+print('Done')
+</codep>
+
+
+
+
+<br>
+<br>
+
+</div>
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

@@ -1,0 +1,82 @@
+<problem chapter='4' section='3' slide='1' problem='5' title='Valós fájlok kezelése'>
+
+<!--
+Update history:
+2020-10-07 Grzegorz (review, PEP-8 compliance check)
+2020-10-29 Grzegorz (code fix: strrerror instead of strerr)
+2021-07-07 Grzegorz (code corrections - important!)
+-->
+
+<code>
+from os import strerror
+
+try:
+    character_counter = line_counter = 0
+    stream = open('text.txt', 'rt')
+    lines = stream.readlines(20)
+    while len(lines) != 0:
+        for line in lines:
+            line_counter += 1
+            for char in line:
+                print(char, end='')
+                character_counter += 1
+        lines = stream.readlines(10)
+    stream.close()
+    print("\n\nCharacters in file:", character_counter)
+    print("Lines in file:     ", line_counter)
+except IOError as e:
+    print("I/O error occurred:", strerror(e.errno))
+
+</code>
+
+
+
+<h1>Szövegfájlok feldolgozása: <font face="Courier New">readlines()</font></h1>
+
+
+<p>Egy másik metódus, amely a szövegfájlt nem karakterek, hanem sorok halmazaként kezeli, a <codel>readlines()</codel>.</p>
+
+<p>A <codel>readlines()</codel> metódus, ha argumentumok nélkül hívjuk meg, megpróbálja <strong>beolvasni a fájl teljes tartalmát, és egy karakterláncokból álló listát ad vissza, amely soronként tartalmazza a fájlt</strong>.</p>
+
+<p>Ha nem vagy biztos benne, hogy a fájl mérete megfelelően kicsi, és nem akarod próbára tenni az operációs rendszert, utasíthatod a <codel>readlines()</codel> metódust, hogy egyszerre legfeljebb egy megadott számú bájtot olvasson be (a visszatérő érték ugyanaz marad - a karakterláncok listája).</p>
+
+<p>Kísérletezz nyugodtan az alábbi példakóddal, hogy megértsd, hogyan működik a <codel>readlines()</codel> metódus:</p>
+
+<p><codep class="syntax-color copy">stream = open("text.txt")
+print(stream.readlines(20))
+print(stream.readlines(20))
+print(stream.readlines(20))
+print(stream.readlines(20))
+stream.close()
+</codep></p>
+
+<p><strong>Az elfogadott legnagyobb bemeneti puffer méretét a metódus argumentumként kapja meg</strong>.</p>
+
+<p>Arra számíthatsz, hogy a <codel>readlines()</codel> hatékonyabban tudja feldolgozni egy fájl tartalmát, mint a <codel>readline()</codel>, mivel kevesebbszer kell meghívni.</p>
+
+<p>Megjegyzés: ha nincs mit beolvasni a fájlból, a tagfüggvény egy üres listát ad vissza. Használhatod ezt a fájl végének észlelésére.</p>
+
+<p>A puffer méretének növelésével számíthatsz arra, hogy javulhat a bemenet kezelésének hatékonysága, de erre nincs aranyszabály - próbáld meg magad megtalálni az optimális értékeket.</p>
+
+<br>
+
+<p>Nézd meg a kódot a szerkesztőben. Módosítottuk, hogy megmutassuk, miként kell használni a <codel>readlines()</codel> függvényt.</p>
+
+<p>Úgy döntöttünk, hogy 15 bájt hosszú puffert használunk. Ne gondold, hogy ez ajánlás.</p>
+
+<p>Azért használtunk ilyen kis értéket, hogy elkerüljük azt a helyzetet, amikor az első <codel>readlines()</codel> hívás az egész fájlt beolvassa.</p>
+
+<p>Komolyabb munkára akartuk kényszeríteni a függvényt, hogy bemutathassuk a képességeit.</p>
+
+<p>A <strong>kódban két egymásba ágyazott ciklus</strong> van: a külső a <codel>readlines()</codel> segítségével halad végig a fájlon, míg a belső karakterenként kiírja a sorokat.</p>
+
+
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

@@ -1,0 +1,56 @@
+<problem chapter='1' section='1' slide='1' problem='0' title='Python Essentials 2 - Module 1'>
+
+<!--
+Update history:
+2020-08-28 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-4 columns">
+
+<br>
+
+<h1>Python Essentials 2:
+<br>Module 1</h1>
+
+<p><strong>Modules, Packages and PIP</strong></p>
+
+<p>In this module, you will learn about:</p>
+
+<ul>
+<li>importing and using Python modules;</li>
+
+<li>using some of the most useful Python standard library modules;</li>
+
+<li>constructing and using Python packages;</li>
+
+<li>PIP (Python Installation Package) and how to use it to install and uninstall ready-to-use packages from PyPI.</li>
+</ul>
+
+<br>
+
+
+</div>
+
+
+
+<div class="small-12 large-8 columns">
+
+<br>
+
+<center><img src="/uploads/media/default/0001/02/bd837cbf9566319713e43ba5abe449373a5c7f2b.png" alt="Part 2 Module 1 Title Page" width="70%"></center>
+
+<br>
+
+
+</div>
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

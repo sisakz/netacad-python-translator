@@ -1,0 +1,113 @@
+<problem chapter='1' section='4' slide='1' problem='12' title='How to use pip'>
+
+<!--
+Update history:
+2020-09-24	Grzegorz (created)
+2021-06-29	Grzegorz (corrections)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<h1>How to use <i>pip</i>: continued</h1>
+
+
+<p>The <i>pip</i> list isn't very informative, and it may happen that it won't satisfy your curiosity. Fortunately, there’s a command that can tell you more about any of the installed packages (note the word <b>installed</b>). The syntax of the command looks as follows:</p>
+
+<p><codep class="syntax-color">pip show package_name
+</codep></p>
+
+
+<p>We’re going to use it in a slightly deceptive way – we want to convince <i>pip</i> to confess something about itself. This is how we do it:</p>
+
+<p><codep class="syntax-color">pip show pip
+</codep></p>
+
+<p>It looks a bit odd, doesn't it? Despite this, it works fine, and <i>pip</i>'s self-presentation looks consistent and current:<p>
+
+
+<center><img class="lightbox" src="/uploads/media/default/0001/02/63a344427a0c881c956f33e1dfe1de6c5da22c82.png" width="95%" alt="pip show pip"></center>
+<br>
+
+
+
+<p>You may ask where this data comes from? Is <i>pip</i> really so perceptive? Not at all – the information appearing on the screen is taken from inside the package being shown. In other words, the package's creator is obliged to equip it with all the needed data (or to express it more precisely – metadata). </p>
+
+<P>Look at the two lines at the bottom of the output. They show:<p>
+
+<ul>
+<li>which packages are needed to successfully utilize the package (<codel>Requires:</codel>)</li>
+<li>which packages need the package to be successfully utilized (<codel>Required-by:</codel>)</li>
+</ul>
+
+<p>As you can see, both properties are empty. Feel free to try to use the <codel>show</codel> command in relation to any other installed package.</p>
+
+</codep></p>
+
+
+
+
+
+
+<br>
+<br> 
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+<p>The power of <i>pip</i> comes from the fact that it’s actually a gateway to the Python software universe. Thanks to that, you can browse and install any of the hundreds of ready-to-use packages gathered in the PyPI repositories. Don't forget that <i>pip</i> is not able to store all PyPI content locally (it’s unnecessary and it would be uneconomical).</p>
+
+<p>In effect, <i>pip</i> uses the Internet to query PyPI and to download the required data. This means that you have to have a network connection working whenever you’re going to ask <i>pip</i> for anything that may involve direct interactions with the PyPI infrastructure. </p>
+
+<p>One of these cases occurs when you want to search through PyPI in order to find a desired package. This kind of search is initiated by the following command:<p>
+
+<p><codep class="syntax-color">pip search anystring
+</codep></p>
+
+<p>The <codel>anystring</codel> you provide will be searched in:</p>
+
+<ul>
+<li>the names of all the packages;</li>
+<li>the summary strings of all the packages.</li>
+</ul>
+
+<p>Be aware of the fact that some searches may generate a real avalanche of data, so try to be as specific as possible. For example, an innocent-looking query like this one:</p>
+
+<p><codep class="syntax-color">pip search pip
+</codep></p>
+
+<p>produces more than 100 lines of results (try it yourself – don't take our word for it). By the way – the search is case insensitive.</p>
+
+<p>If you’re not a fan of console reading, you can use the alternative way of browsing PyPI content offered by a search engine, available at <a href="https://pypi.org/search" target="_blank">https://pypi.org/search</a>.</p>
+
+
+
+
+
+
+
+<br>
+<br>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

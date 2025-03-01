@@ -1,0 +1,65 @@
+<problem chapter='1' section='2' slide='1' problem='16' title='Useful Modules'>
+
+<!--
+Update history:
+2020-08-31 Grzegorz (review, PEP-8 compliance check, update)
+2021-06-29 Grzegorz (corrections)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h1>Python Module Index</h1>
+
+<p>We have only covered the basics of Python modules here. Python's modules make up their own universe, in which Python itself is only a galaxy, and we would venture to say that exploring the depths of these modules can take significantly more time than getting acquainted with "pure" Python.</p>
+
+<p>Moreover, the Python community all over the world creates and maintains hundreds of additional modules used in very niche applications like genetics, psychology, or even astrology.</p>
+
+<p>These modules aren't (and won't be) distributed along with Python, or through official channels, which makes the Python module universe broader – almost infinite.</p>
+
+
+<p>You can read about all standard Python modules here: <a href="https://docs.python.org/3/py-modindex.html" target="_blank">https://docs.python.org/3/py-modindex.html</a>.</p>
+
+<p>Don't worry – you won't need all these modules. Many of them are very specific.</p>
+
+<p>All you need to do is find the modules you want, and teach yourself how to use them. It's easy.</p>
+
+
+
+<br>
+
+<br>
+
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+
+
+<img class="lightbox" src="/uploads/media/default/0001/01/1906bc61adcf05ea027179608f3a35bac3a08a24.png" width="90%" alt="Python Module Index - screenshot">
+
+<br><br>
+
+<p>In the next section we'll take a look at something else. We're going to show you how to write your own module.</p>
+
+</div>
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

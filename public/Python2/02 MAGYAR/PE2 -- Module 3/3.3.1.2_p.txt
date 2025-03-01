@@ -1,0 +1,81 @@
+<problem chapter='3' section='3' slide='1' problem='2' title='OOP: Tulajdonságok'>
+
+<!--
+Update history:
+2020-09-30 Grzegorz (review, PEP-8 compliance check, update)
+2020-10-28 Grzegorz (sentence fix: The mangling won't work if you add a private instance variable outside the class code)
+-->
+
+<code>
+class ExampleClass:
+    def __init__(self, val = 1):
+        self.__first = val
+
+    def set_second(self, val = 2):
+        self.__second = val
+
+
+example_object_1 = ExampleClass()
+example_object_2 = ExampleClass(2)
+
+example_object_2.set_second(3)
+
+example_object_3 = ExampleClass(4)
+example_object_3.__third = 5
+
+
+print(example_object_1.__dict__)
+print(example_object_2.__dict__)
+print(example_object_3.__dict__)
+
+</code>
+
+
+
+<h1>Példányváltozók (folytatás)</h1>
+
+<p>Nézzük meg a módosított példát a szerkesztőben.</p>
+
+ 
+<p>Majdnem ugyanaz, mint az előző. Az egyetlen különbség a tulajdonságnevekben van. <strong>Két aláhúzást (<codel>__</codel>) tettünk</strong> eléjük.</p>
+
+<p>Mint tudjuk, egy ilyen kiegészítés <strong>priváttá</strong> teszi a példányváltozót - a külvilág számára elérhetetlenné válik.</p>
+
+<p>Ezeknek a neveknek a tényleges viselkedése egy kicsit bonyolultabb, ezért futtassuk le a programot. Ez a kimenet:</p>
+
+<codep>{'_ExampleClass__first': 1}
+{'_ExampleClass__first': 2, '_ExampleClass__second': 3}
+{'_ExampleClass__first': 4, '__third': 5}</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+<p>Látod ezeket a furcsa, aláhúzásokkal teli neveket? Honnan származnak vajon?</p>
+
+<p>Amikor a Python azt látja, hogy egy példányváltozót akarunk hozzáadni egy objektumhoz, és ezt annak bármelyik metódusán belül tesszük meg, a következő módon <strong>változtatja a műveletet</strong>:</p>
+
+<ul>
+    <li>egy osztálynevet tesz a változónevünk elé;</li>
+    <li>egy további aláhúzást tesz az elejére.</li>
+</ul>
+ 
+
+<p>Ezért lesz a <codel>__first</codel>-ből <codel>_ExampleClass__first</codel>.</p>
+
+<p><strong>A név mostantól teljesen elérhető az osztályon kívülről</strong>. Futtathatunk egy ilyen kódot:</p>
+
+<codep class="syntax-color">print(example_object_1._ExampleClass__first)
+</codep>
+<br>
+ 
+<p>és érvényes eredményt kapunk hiba vagy kivételek nélkül.</p>
+
+<p>Mint láthatjuk, a tulajdonságok priváttá tétele korlátozott.</p>
+
+<p><strong>A névmódosítás nem fog működni, ha egy privát példányváltozót adunk hozzá az osztály kódján kívül</strong>. Ebben az esetben úgy fog viselkedni, mint bármely más közönséges tulajdonság.</p>
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

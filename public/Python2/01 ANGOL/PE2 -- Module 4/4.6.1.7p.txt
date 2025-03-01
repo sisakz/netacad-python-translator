@@ -1,0 +1,47 @@
+<problem chapter='4' section='6' slide='1' problem='7' title='The calendar module'>
+
+<!--
+Update history:
+2020-03-30 Sebastian (first version)
+2020-10-12 Grzegorz (file creation, review, PEP-8 compliance check)
+-->
+
+<code>import calendar
+
+print(calendar.isleap(2020))
+print(calendar.leapdays(2010, 2021))  # Up to but not including 2021.
+
+</code>
+
+<h1>How do we check if a year is a leap year?</h1>
+
+<p>The <codel>calendar</codel> module provides two useful functions to check whether years are leap years.</p>
+
+<br>
+<center><img src="/uploads/media/default/0001/02/9aff0c71eb503a0e78239867a888e0162715e31a.png" alt="February 29th" width="70%"></center>
+<br><br>
+
+<p>The first one, called <codel>isleap</codel>, returns <i>True</i> if the passed year is leap, or <i>False</i> otherwise. The second one, called <codel>leapdays</codel>, returns the number of leap years in the given range of years.</p>
+
+<p>Run the code in the editor.</p>
+
+<p>Result:</p>
+
+<codep>True
+3</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+<p>In the example, we obtain the result 3, because in the period from 2010 to 2020 there are only three leap years (note: 2021 is not included). They are the years 2012, 2016, and 2020.</p>
+
+
+
+
+
+<br>
+<br>
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

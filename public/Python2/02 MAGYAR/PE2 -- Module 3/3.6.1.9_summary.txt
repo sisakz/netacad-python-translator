@@ -1,0 +1,151 @@
+<problem chapter='3' section='6' slide='1' problem='9' title='SZAKASZ ÖSSZEFOGLALÁS'>
+
+<!--
+Update history:
+2020-09-08 SLawek (first version)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+    <h1>A legfontosabb tudnivalók</h1>
+
+<br>
+
+
+<p>1. A <codel>try</codel> utasítás <codel>else:</codel> ága akkor kerül végrehajtásra, ha a <codel>try:</codel> blokk végrehajtása során nem történt kivétel.</p>
+<br>
+
+<p>2. A <codel>try</codel> utasítás  <codel>finally:</codel> ága <b>mindig</b> végrehajtásra kerül.</p> 
+<br>
+
+<p>3. Az <codel> <i>except kivételnév</i> és <i>kivételobjektum szintaxis</i>:</codel> lehetővé teszi, hogy egy függőben lévő kivételről információt hordozó objektumot elfogjon. Az objektum <codel>args</codel> nevű tulajdonsága (egy tuple) tárolja az objektum konstruktorának átadott összes argumentumot.</p>
+<br>
+
+<p>4. A kivételosztályok kibővíthetők, hogy új képességekkel gazdagodjanak, vagy hogy tulajdonságaikat átvegyék az újonnan definiált kivételekre.</p>
+
+<p>Például:</p>
+<codep class="syntax-color copy">try:
+    assert __name__ == "__main__"
+except:
+    print("fail", end=' ')
+else:
+    print("success", end=' ')
+finally:
+    print("done")
+</codep>
+<br>
+<p>A kód kimenete: <codel>success done</codel>.</p>
+
+</div>
+
+<div class="small-12 large-6 columns">
+<br>
+
+<script>
+function solution (id) {
+    var element = document.getElementById(id);
+    
+if (element.style.display === "none") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
+    }
+}
+</script>
+    
+<p><strong>1. gyakorlat</strong></p>
+<p>Mi a következő kód várható kimenete?</p>
+<codep>import math
+
+try:
+    print(math.sqrt(9))
+except ValueError:
+    print("inf")
+else:
+    print("fine")
+
+</codep>
+<br>
+
+<button class="button tiny" onclick="solution('sol')">Ellenőrzés</button>
+
+<p id="sol" style="display: none;">
+<codep>3.0
+fine
+</codep></p>
+
+
+<br><br>
+
+<p><strong>2. gyakorlat</strong></p>
+<p>Mi a következő kód várható kimenete?</p>
+<codep>import math
+
+try:
+    print(math.sqrt(-9))
+except ValueError:
+    print("inf")
+else:
+    print("fine")
+finally:
+    print("the end")
+
+</codep>
+<br>
+
+
+<button class="button tiny" onclick="solution('sol2')">Ellenőrzés</button>
+<p id="sol2" style="display: none;"><codep>inf
+the end
+</codep>
+</p>
+
+<br><br>
+
+
+
+
+<p><strong>3. gyakorlat</strong></p>
+<p>Mi a következő kód várható kimenete?</p>
+<codep>import math
+
+class NewValueError(ValueError):
+    def __init__(self, name, color, state):
+        self.data = (name, color, state)
+
+try:
+    raise NewValueError("Enemy warning", "Red alert", "High readiness")
+except NewValueError as nve:
+    for arg in nve.args:
+        print(arg, end='! ')
+
+</codep>
+<br>
+
+<button class="button tiny" onclick="solution('sol3')">Ellenőrzés</button>
+
+<p id="sol3" style="display: none;">
+<codep>Enemy warning! Red alert! High readiness! 
+</codep>
+</p>
+
+
+
+
+<br>
+
+
+</div>
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>
+

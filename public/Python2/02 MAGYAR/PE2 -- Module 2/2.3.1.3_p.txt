@@ -1,0 +1,50 @@
+<problem chapter='2' section='3' slide='1' problem='3' title='Karakterlánc tagfüggvények'>
+
+<!--
+Update history:
+2020-09-22 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>
+# Demonstrating the endswith() method:
+if "epsilon".endswith("on"):
+    print("yes")
+else:
+    print("no")
+	
+</code>
+
+
+
+<h1>Az <font face="Courier New">endswith()</font> tagfüggvény</h1>
+
+<p>Az <codel>endswith()</codel> tagfüggvény <strong>ellenőrzi, hogy az adott karakterlánc a megadott argumentummal végződik-e, és </strong> az ellenőrzés eredményétől függően <strong><codel>True</codel> vagy <codel>False</codel> értéket ad vissza.</strong></p>
+
+<p>Megjegyzés: a részláncnak a karakterlánc utolsó karakteréhez kell tapadnia – nem lehet csak úgy valahol a karakterlánc vége közelében.</p>
+
+<p>Nézd meg a példánkat a szerkesztőben, elemezd, és futtasd le. Kimeneti eredmény:</p>
+
+<codep>yes</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+<p>Most már képes vagy arra, hogy megjósold az alábbi kódrészlet kimenetét:</p>
+
+<codep class="syntax-color copy">t = "zeta"
+print(t.endswith("a"))
+print(t.endswith("A"))
+print(t.endswith("et"))
+print(t.endswith("eta"))
+</codep>
+
+<br>
+
+<p>Futtasd le a kódot, hogy ellenőrizd a feltevéseidet.</p>
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

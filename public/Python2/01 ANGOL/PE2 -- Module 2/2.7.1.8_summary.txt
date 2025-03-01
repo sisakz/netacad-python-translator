@@ -1,0 +1,167 @@
+<problem chapter='2' section='7' slide='1' problem='8' title='SECTION SUMMARY'>
+
+<!--
+Update history:
+2020-09-01 Sysio (first version)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<h1>Key takeaways</h1>
+
+<br>
+
+<p>1. You cannot add more than one anonymous (unnamed) <codel>except</codel> branch after the named ones.</p>
+<codep class="syntax-color">:
+# The code that always runs smoothly.
+:
+try:
+	:
+	# Risky code.
+	:
+except Except_1:
+	# Crisis management takes place here.
+except Except_2:
+	# We save the world here.
+except:
+	# All other issues fall here.
+:
+# Back to normal.
+:
+</codep>
+<br>
+
+<p>2. All the predefined Python exceptions form a hierarchy, i.e. some of them are more general (the one named <codel>BaseException</codel> is the most general one) while others are more or less concrete (e.g. <codel>IndexError</codel> is more concrete than <codel>LookupError</codel>).</P>
+
+<P>You shouldn't put more concrete exceptions before the more general ones inside the same <codel>except</codel> branche sequence. For example, you can do this:</p>
+<codep class="syntax-color">try:
+	# Risky code.
+except IndexError:
+	# Taking care of mistreated lists
+except LookupError:
+	# Dealing with other erroneous lookups
+</codep>
+
+<br>
+
+
+<p>but don't do that (unless you're absolutely sure that you want some part of your code to be useless)</p>
+<codep class="syntax-color">try:
+	# Risky code.
+except LookupError:
+	# Dealing with erroneous lookups
+except IndexError:
+	# You'll never get here 
+</codep>
+<br>
+
+<p>3. The Python statement <codel>raise ExceptionName</codel> can raise an exception on demand. The same statement, but lacking <i>ExceptionName</i>, can be used inside the <codel>try</codel> branch <b>only</b>, and raises the same exception which is currently being handled.</p>
+<br>
+
+<p>4. The Python statement <codel>assert expression</codel> evaluates the <i>expression</i> and raises the <codel>AssertError</codel> exception when the <i>expression</i> is equal to zero, an empty string, or <codel>None</codel>. You can use it to protect some critical parts of your code from devastating data.</p>
+<br>
+</div>
+
+<div class="small-12 large-6 columns">
+
+<script>
+function solution (id) {
+    var element = document.getElementById(id);
+    
+if (element.style.display === "none") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
+    }
+}
+</script>
+
+<br>
+
+<p><strong>Exercise 1</strong></p>
+<p>What is the expected output of the following code?</p>
+<codep>try:
+    print(1/0)
+except ZeroDivisionError:
+    print("zero")
+except ArithmeticError:
+    print("arith")
+except:
+    print("some")
+
+</codep>
+<br>
+
+<button class="button tiny" onclick="solution('sol1')">Check</button>
+
+<p id="sol1" style="display: none;">
+<codep>zero
+</codep></p>
+
+
+<br><br>
+
+<p><strong>Exercise 2</strong></p>
+<p>What is the expected output of the following code?</p>
+<codep>try:
+    print(1/0)
+except ArithmeticError:
+    print("arith")
+except ZeroDivisionError:
+    print("zero")
+except:
+    print("some")
+
+</codep>
+<br>
+
+<button class="button tiny" onclick="solution('sol2')">Check</button>
+
+<p id="sol2" style="display: none;">
+<codep>arith</codep>
+</p>
+
+
+
+<br><br>
+
+<p><strong>Exercise 3</strong></p>
+<p>What is the expected output of the following code?</p>
+<codep>def foo(x):
+    assert x
+    return 1/x
+
+
+try:
+    print(foo(0))
+except ZeroDivisionError:
+    print("zero")
+except:
+    print("some")
+
+</codep>
+<br>
+
+<button class="button tiny" onclick="solution('sol3')">Check</button>
+
+<p id="sol3" style="display: none;">
+<codep>some</codep>
+</p>
+
+
+
+<br><br>
+
+</div>
+
+</div>
+</div>
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>
+

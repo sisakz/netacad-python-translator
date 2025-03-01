@@ -1,0 +1,74 @@
+<problem chapter='4' section='3' slide='1' problem='7' title='Valós fájlok kezelése'>
+
+<!--
+Update history:
+2020-10-07 Grzegorz (review, PEP-8 compliance check)
+2020-10-29 Grzegorz (code fix: strrerror instead of strerr)
+2021-07-07 Grzegorz (code corrections - important!)
+-->
+
+<code>from os import strerror
+
+try:
+	file = open('newtext.txt', 'wt') # A new file (newtext.txt) is created.
+	for i in range(10):
+		s = "line #" + str(i+1) + "\n"
+		for char in s:
+			file.write(char)
+	file.close()
+except IOError as e:
+	print("I/O error occurred: ", strerror(e.errno))
+
+</code>
+
+
+
+<h1>Szövegfájlok kezelése: <font face="Courier New">write()</font></h1>
+
+
+<p>A szövegfájlok írása egyszerűbbnek tűnik, mivel valójában egyetlen metódus van, amellyel elvégezhető egy ilyen feladat.</p>
+
+<p>A metódus neve <codel>write()</codel> és csak egy argumentumot vár - egy karakterláncot, amely egy megnyitott fájlba kerül (ne feledd - a <i>megnyitás</i> módjának tükröznie kell az adatátvitel módját - <strong>egy <i>olvasási</i> módban megnyitott fájl írása nem fog sikerülni</strong>).</p>
+
+<p>A <codel>write()</codel> metódus az argumentumához nem ad új sor karaktert, ezért magadnak kell hozzáadni azokat, ha a fájl tartalmát sorokba szeretnéd rendezni.</p>
+
+ 
+
+<p>A szerkesztőablakban lévő példa egy nagyon egyszerű kódot mutat, amely létrehoz egy <font face="Courier New">newtext.txt</font> nevű fájlt, majd tíz sort ír bele. (Megjegyzés: a <codel>w</codel> megnyitási mód biztosítja, hogy <strong>az új fájl létrejön</strong>, még akkor is, ha már létezett ezen a néven és tartalmazott adatokat).</p>
+
+<p>A rögzítendő karakterlánc a line szóból, majd a sor számából áll. Úgy döntöttünk, hogy a karakterlánc tartalmát karakterenként írjuk ki (ezt a belső <codel>for</codel> ciklus végzi), de nem kötelező így csinálni.</p>
+
+<p>Csak azt akartuk megmutatni, hogy a <codel>write()</codel> képes egyetlen karakterrel is operálni.</p>
+
+ 
+
+<p>A kód létrehoz egy fájlt a következő szöveggel:</p>
+
+<codep>line #1
+line #2
+line #3
+line #4
+line #5
+line #6
+line #7
+line #8
+line #9
+line #10</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+<br>
+
+<p>Ki tudod írni a fájl tartalmát a konzolra?</p>
+
+<p>Javasoljuk, hogy teszteld a <codel>write()</codel> metódus viselkedését a saját gépeden.</p>
+
+
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

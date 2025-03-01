@@ -1,0 +1,53 @@
+<problem chapter='4' section='5' slide='1' problem='19' title='The datetime and time modules (continued)'>
+
+<!--
+Update history:
+2020-03-30 Sebastian (first version)
+2020-10-12 Grzegorz (file creation, review, PEP-8 compliance check)
+-->
+
+<code>from datetime import date
+from datetime import datetime
+
+d1 = date(2020, 11, 4)
+d2 = date(2019, 11, 4)
+
+print(d1 - d2)
+
+dt1 = datetime(2020, 11, 4, 0, 0, 0)
+dt2 = datetime(2019, 11, 4, 14, 53, 0)
+
+print(dt1 - dt2)
+
+</code>
+
+
+
+<h1>Date and time operations</h1>
+
+<p>Sooner or later you'll have to perform some calculations on the date and time. Fortunately, there's a class called <codel>timedelta</codel> in the <codel>datetime</codel> module that was created for just such a purpose.</p>
+
+<p>To create a <codel>timedelta</codel> object, just perform a subtraction on the <codel>date</codel> or <codel>datetime</codel> objects, just like we did in the example in the editor. Run it.</p>
+
+
+<p>Result:</p>
+<codep>366 days, 0:00:00
+365 days, 9:07:00</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+<p>The example shows subtraction for both the <codel>date</codel> and <codel>datetime</codel> objects. In the first case, we receive the difference in days, which is 366 days. Note that the difference in hours, minutes, and seconds is also displayed. In the second case, we receive a different result, because we specified the time that was included in the calculations. As a result, we receive 365 days, 9 hours, and 7 minutes.</p>
+
+<p>In a moment you'll learn more about creating <codel>timedelta</codel> objects and about the operations you can do with them.</p>
+
+
+
+
+
+<br>
+<br>
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

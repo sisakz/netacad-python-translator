@@ -1,0 +1,73 @@
+<problem chapter='1' section='2' slide='1' problem='10' title='Fontos modulok | platform'>
+
+<!--
+Update history:
+2020-08-31 Grzegorz (review, PEP-8 compliance check, update)
+2021-06-29 Grzegorz (corrections)
+-->
+
+<code>from platform import platform
+
+print(platform())
+print(platform(1))
+print(platform(0, 1))
+
+</code>
+
+<h1>A <font face="Courier New">platform</font> modul fontosabb függvényei</h1>
+
+<p><b>A <font face="Courier New">platform</font> függvény</b></p>
+
+<p>A <codel>platform</codel> modul segítségével hozzáférhetsz a mögöttes platform adataihoz, azaz a hardver, az operációs rendszer és az értelmező verziójára vonatkozó információkhoz.</p>
+
+<p>Létezik egy függvény, amely egy pillantással megmutatja az összes mögöttes réteget is, szintén <codel>platform</codel> néven. Ez csak egy környezetet leíró karakterláncot ad vissza; így a kimenete inkább az embereknek szól, mint az automatizált feldolgozásnak (hamarosan látni fogod).</p>
+
+<p>Így hívhatod meg:</p>
+
+<p><codep class="syntax-color">platform(aliased = False, terse = False)
+</codep></p>
+
+<p>És most:</p>
+<ul>
+<li><codel>aliased</codel> &rarr; ha <codel>True</codel> (vagy bármely nem nulla értékre van állítva), akkor a függvény a közös rétegnevek helyett az alternatív mögöttes rétegneveket jeleníti meg;</li>
+<li><codel>terse</codel> &rarr; ha <codel>True</codel> (vagy bármely nem nulla érték), akkor megkérheti a függvényt, hogy az eredményt rövidebb formában adja meg (ha lehetséges).</li>
+</ul>
+ 
+
+<p>A mintaprogramunkat három különböző platformon futtattuk le - ezt kaptuk:</p>
+
+<p><strong>Intel x86 + Windows &reg; Vista (32 bit)</strong>:</p>
+
+<codep>Windows-Vista-6.0.6002-SP2
+Windows-Vista-6.0.6002-SP2
+Windows-Vista</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+
+
+<p><strong>Intel x86 + Gentoo Linux (64 bit)</strong>:</p>
+
+<codep>Linux-3.18.62-g6-x86_64-Intel-R-_Core-TM-_i3-2330M_CPU_@_2.20GHz-with-gentoo-2.3
+Linux-3.18.62-g6-x86_64-Intel-R-_Core-TM-_i3-2330M_CPU_@_2.20GHz-with-gentoo-2.3
+Linux-3.18.62-g6-x86_64-Intel-R-_Core-TM-_i3-2330M_CPU_@_2.20GHz-with-glibc2.3.4</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+
+<p><strong>Raspberry PI2 + Raspbian Linux (32 bit)</strong>:</p>
+
+<codep>Linux-4.4.0-1-rpi2-armv7l-with-debian-9.0
+Linux-4.4.0-1-rpi2-armv7l-with-debian-9.0
+Linux-4.4.0-1-rpi2-armv7l-with-glibc2.9</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+
+<p>A mintaprogramot IDLE-ben is futtathatod a saját gépeden, hogy ellenőrizd, milyen kimenetet kapsz.</p>
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

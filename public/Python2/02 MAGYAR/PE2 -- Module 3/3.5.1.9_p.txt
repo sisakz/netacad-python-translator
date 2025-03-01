@@ -1,0 +1,49 @@
+<problem chapter='3' section='5' slide='1' problem='9' title='OOP alapok: Öröklés'>
+
+<!--
+Update history:
+2020-10-01 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>
+# Testing properties: class variables.
+class Super:
+    supVar = 1
+
+
+class Sub(Super):
+    subVar = 2
+
+
+obj = Sub()
+
+print(obj.subVar)
+print(obj.supVar)
+
+</code>
+
+
+
+<h1>Hogyan találja meg a Python a tulajdonságokat és metódusokat (folytatás)</h1>
+
+<p>Próbáljunk meg valami hasonlót tenni, de tulajdonságokkal (pontosabban <strong>osztályváltozókkal</strong>).</p>
+
+<p>Nézzük meg a példát a szerkesztőben!</p>
+
+<p>Mint látható, a <codel>Super</codel> osztály definiál egy <codel>supVar</codel> nevű osztályváltozót, a <codel>Sub</codel> osztály pedig egy <codel>subVar</codel> nevű változót.</p>
+
+<p>Mindkét változó látható a <codel>Sub</codel> osztályú objektumon belül - ezért a kód kimenete a következő:</p>
+
+<codep>2
+1</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

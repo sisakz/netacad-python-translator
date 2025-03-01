@@ -1,0 +1,54 @@
+<problem chapter='3' section='6' slide='1' problem='2' title='Exceptions once again'>
+
+<!--
+Update history:
+2020-10-01 Grzegorz (reviewed, PEP-8 compliance check)
+-->
+
+<code>
+def reciprocal(n):
+    try:
+        n = 1 / n
+    except ZeroDivisionError:
+        print("Division failed")
+        n = None
+    else:
+        print("Everything went fine")
+    finally:
+        print("It's time to say goodbye")
+        return n
+
+
+print(reciprocal(2))
+print(reciprocal(0))
+
+</code>
+
+
+
+<h1>More about exceptions</h1>
+
+
+<p>The try-except block can be extended in one more way – by adding a part headed by the <i>finally</i> keyword (it must be the last branch of the code designed to handle exceptions).</p>
+
+<p>Note: these two variants (<codel>else</codel> and <codel>finally</codel>) aren't dependent in any way, and they can coexist or occur independently.</p>
+
+<p>The <codel>finally</codel> block is always executed (it finalizes the <i>try-except</i> block execution, hence its name), no matter what happened earlier, even when raising an exception, no matter whether this has been handled or not.</p>
+
+<p>Look at the code in the editor. It outputs:</p>
+
+<codep>Everything went fine
+It's time to say goodbye
+0.5
+Division failed
+It's time to say goodbye
+None</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

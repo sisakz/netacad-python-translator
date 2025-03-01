@@ -1,0 +1,63 @@
+<problem chapter='3' section='5' slide='1' problem='17' title='OOP alapok: Öröklés'>
+
+<!--
+Update history:
+2020-10-01 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>
+import time
+
+class Vehicle:
+    def change_direction(left, on):
+        pass
+
+    def turn(left):
+        change_direction(left, True)
+        time.sleep(0.25)
+        change_direction(left, False)
+
+
+class TrackedVehicle(Vehicle):
+    def control_track(left, stop):
+        pass
+
+    def change_direction(left, on):
+        control_track(left, on)
+
+
+class WheeledVehicle(Vehicle):
+    def turn_front_wheels(left, on):
+        pass
+
+    def change_direction(left, on):
+        turn_front_wheels(left, on)
+
+</code>
+
+
+
+<h1>Hogyan építsünk fel egy osztályhierarchiát (folytatás)</h1>
+
+
+<p>Nézd meg újra a kódot a szerkesztőben! Ezt tettük most:</p>
+
+<ul>
+    <li>definiáltunk egy <codel>Vehicle</codel> nevű szuperosztályt, amely a <codel>turn()</codel> metódust használja a kanyarodás általános sémájának megvalósítására, míg magát a kanyarodást a <codel>change_direction()</codel> metódus végzi; megjegyzés: az előbbi metódus üres, mivel minden részletet az alosztályba fogunk tenni (az ilyen metódust gyakran nevezik <strong>absztrakt metódusnak</strong>, mivel csak demonstrál egy lehetőséget, amelyet később fogunk beállítani).</li>
+
+    <li>definiáltunk egy <codel>TrackedVehicle</codel> nevű alosztályt (megjegyzés: ez a <codel>Vehicle</codel> osztályból származik), amely a <codel>change_direction()</codel> metódust a <codel>control_track()</codel> nevű specifikus (konkrét) metódus segítségével példányosította.</li>
+
+    <li>illetve a <codel>WheeledVehicle</codel> nevű alosztály ugyanezt a trükköt hajtja végre, de a <codel>turn_front_wheels()</codel> metódust használja a jármű elfordulásának kikényszerítésére.</li>
+</ul>
+
+<p>A legfontosabb előnye (az olvashatósági kérdéstől eltekintve), hogy ez a kódforma lehetővé teszi egy teljesen új kanyarodási algoritmus implementálását csupán a <codel>turn()</codel> metódus módosításával, amit egyetlen helyen lehet elvégezni, mivel minden jármű engedelmeskedik neki.</p>
+
+<p><strong>A polimorfizmus</strong> így <strong>segíti a fejlesztőt abban, hogy a kódot tisztán és konzisztensen tudja tartani</strong>.</p>
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

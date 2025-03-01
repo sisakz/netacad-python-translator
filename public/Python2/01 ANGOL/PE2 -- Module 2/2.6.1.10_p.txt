@@ -1,0 +1,74 @@
+<problem chapter='2' section='6' slide='1' problem='10' title="Errors – the programmer's daily bread | try-except">
+
+<!--
+Update history:
+2020-09-21 Grzegorz (review, PEP-8 compliance check, update, title correction)
+-->
+
+<code>
+try:
+    x = int(input("Enter a number: "))
+    y = 1 / x
+    print(y)
+except ValueError:
+    print("You must enter an integer value.")
+except:
+    print("Oh dear, something went wrong...")
+
+print("THE END.")
+
+</code>
+
+
+
+<h1>Exceptions: continued</h1>
+
+<p>Don't forget that:</p>
+
+<ul>
+<li>the <codel>except</codel> branches are searched in the same order in which they appear in the code;</li>
+<li>you must not use more than one except branch with a certain exception name;</li>
+<li>the number of different <codel>except</codel> branches is arbitrary – the only condition is that if you use <codel>try</codel>, you must put at least one <codel>except</codel> (named or not) after it;</li>
+<li>the <codel>except</codel> keyword must not be used without a preceding <codel>try</codel>;</li>
+<li>if any of the <codel>except</codel> branches is executed, no other branches will be visited;</li>
+<li>if none of the specified <codel>except</codel> branches matches the raised exception, the exception remains unhandled (we'll discuss it soon)</li>
+<li>if an unnamed <codel>except</codel> branch exists (one without an exception name), it has to be specified as the last.</li>
+</ul>
+ 
+<codep class="syntax-color">try:
+    :
+except exc1:
+    :
+except exc2:
+    :
+except:
+    :
+</codep>
+<br>
+
+
+<p>Let's continue the experiments now.</p>
+
+<br>
+
+
+<p>Look at the code in the editor. We've modified the previous program – we've removed the <codel>ZeroDivisionError</codel> branch.</p>
+
+<p>What happens now if the user enters <codel>0</codel> as an input?</p>
+
+<p>As there are <strong>no dedicated branches</strong> for division by zero, the raised exception falls into the <strong>general (unnamed) branch</strong>; this means that in this case, the program will say:</p>
+
+<codep>Oh dear, something went wrong...
+THE END.</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+<p>Try it yourself. Run the program.</p>
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

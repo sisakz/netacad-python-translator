@@ -1,0 +1,151 @@
+<problem chapter='1' section='3' slide='1' problem='5' title='Modules and Packages'>
+
+<!--
+Update history:
+2020-09-08 Grzegorz (review, PEP-8 compliance check, update)
+2021-06-29 Grzegorz (corrections)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h1>Your first module: step 11</h1>
+
+<p>It's time to make our example more complicated – so far we've assumed that the main Python file is located in the same folder/directory as the module to be imported.</p>
+
+<p>Let's give up this assumption and conduct the following thought experiment:<p>
+
+<ul>
+<li>we are using Windows &reg; OS (this assumption is important, as the file name depends on it)</li>
+<li>the main Python script lies in <font face="Courier New">C:\Users\user\py\progs</font> and is named <font face="Courier New">main.py</font></li>
+<li>the module to import is located in <font face="Courier New">C:\Users\user\py\modules</font>
+</ul>
+
+<img class="lightbox" src="/uploads/media/default/0001/01/fe6d2d786bc52c8212b9c4b976ad0b0427480570.png" width="75%" alt="How Python seeks modules – modules access tree">
+<br><br> 
+
+<p>How do we deal with it?</p>
+
+<p>To answer this question, we have to talk about <strong>how Python searches for modules</strong>. There's a special variable (actually a list) storing all locations (folders/directories) that are searched in order to find a module which has been requested by the import instruction.</p>
+
+<p>Python browses these folders in the order in which they are listed in the list – if the module cannot be found in any of these directories, the import fails.</p>
+
+<p>Otherwise, the first folder containing a module with the desired name will be taken into consideration (if any of the remaining folders contains a module of that name, it will be ignored).</p>
+
+<p>The variable is named <codel>path</codel>, and it's accessible through the module named <codel>sys</codel>. This is how you can check its regular value:</p>
+
+<p><codep class="syntax-color copy line-numbers">import sys
+
+for p in sys.path:
+    print(p)
+</codep></p>
+
+<p>We've launched the code inside the <font face="Courier New">C:\User\user</font> folder, and this is what we've got:</p>
+
+<codep>C:\Users\user
+C:\Users\user\AppData\Local\Programs\Python\Python36-32\python36.zip
+C:\Users\user\AppData\Local\Programs\Python\Python36-32\DLLs
+C:\Users\user\AppData\Local\Programs\Python\Python36-32\lib
+C:\Users\user\AppData\Local\Programs\Python\Python36-32
+C:\Users\user\AppData\Local\Programs\Python\Python36-32\lib\site-packages</codep>
+<p style="text-align: right;"><font size="-2"><b>sample output</b></font></p>
+
+
+<p>Note: the folder in which the execution starts is listed in the <b>first path's element</b>.</p>
+
+<p>Note once again: there is a zip file listed as one of the path's elements – it's not an error. Python is able to treat zip files as ordinary folders – this can save lots of storage.</p>
+
+<br>
+
+<p>Can you figure out how we can solve our problem now? We can add a folder containing the module to the path variable (it's fully modifiable).</p>
+
+
+
+<br><br>
+
+
+</div>
+
+
+
+<div class="small-12 large-6 columns">
+
+
+<h2>Your first module: step 12</h2>
+
+
+<p>One of several possible solutions looks like this:</p>
+
+<img src="/uploads/media/default/0001/01/28b0f82cba77c140c343c3d1117c0fbe2e830caf.png" width="45%" alt="Updating the main.py file with path.append('..\\modules')">
+
+<br><br>
+
+
+<codep class="syntax-color copy">from sys import path
+
+path.append('..\\modules')
+
+import module
+
+zeroes = [0 for i in range(5)]
+ones = [1 for i in range(5)]
+print(module.suml(zeroes))
+print(module.prodl(ones))
+</codep>
+<p style="text-align: right;">main.py</p>
+
+
+<p>Note:</p>
+
+<ul>
+<li>we've doubled the <codel>\</codel> inside folder name – do you know why?
+
+<br><br>
+
+<button class="button tiny" onclick="solution('sol')">Check</button>
+
+<p id="sol" style="display: none;">
+Because a backslash is used to escape other characters – if you want to get just a backslash, you have to escape it.
+</p>
+
+<script>
+function solution (id) {
+    var element = document.getElementById(id);
+    
+if (element.style.display === "none") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
+    }
+}
+</script>
+
+<br></li>
+
+
+<li>we've used the relative name of the folder – this will work if you start the <font face="Courier New">main.py</font> file directly from its home folder, and it won't work if the current directory doesn't fit the relative path; you can always use an absolute path, like this:
+<br><br><codep>path.append('C:\\Users\\user\\py\\modules')
+
+</codep></li>
+<br>
+
+<li>we've used the <codel>append()</codel> method – in effect, the new path will occupy the last element in the path list; if you don't like the idea, you can use <codel>insert()</codel> instead.</p>
+
+
+
+<br>
+<br>
+
+</div>
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

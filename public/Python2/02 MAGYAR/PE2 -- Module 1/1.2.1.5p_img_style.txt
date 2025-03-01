@@ -1,0 +1,79 @@
+<problem chapter='1' section='2' slide='1' problem='5' title='Fontos modulok | random'>
+
+<!--
+Update history:
+2020-08-31 Grzegorz (review, PEP-8 compliance check, update)
+2021-06-29 Grzegorz (corrections)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h1>Van-e valódi véletlenszerűség a számítógépekben?</h1>
+
+<p>Egy másik említésre méltó modul a <codel>random</codel> nevű modul.</p>
+
+<p>A program néhány olyan mechanizmust biztosít, amely lehetővé teszi, hogy <strong>álvéletlen (pszeudo véletlen) számokkal</strong> dolgozzunk.</p>
+
+<div>
+
+<img src="/uploads/media/default/0001/01/9ee0e414a8d7bf872849050963236d72f10850ea.png" alt="Two dice – the concept of random" width="60%" style="float:right">
+
+<br>
+
+Figyeld meg a <strong>pszeudo</strong> előtagot. A modulok által generált számok véletlenszerűnek tűnhetnek abban az értelemben, hogy nem lehet megjósolni a későbbi értékeiket, de ne felejtsd el, hogy mindegyiket nagyon kifinomult algoritmusok segítségével számítják ki.</p>
+
+<br>
+
+Az algoritmusok nem véletlenszerűek - determinisztikusak és kiszámíthatóak. Csak azok a fizikai folyamatok, amelyek teljesen kívül esnek az ellenőrzésünkön (mint például a kozmikus sugárzás intenzitása), használhatók tényleges véletlenszerű adatok forrásaként. A determinisztikus számítógépek által előállított adatok semmilyen módon nem lehetnek véletlenszerűek.
+
+<br>
+
+</div>
+
+
+
+
+<br>
+
+<br>
+
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+<p>A véletlenszám-generátor fog egy <strong>magnak</strong> nevezett értéket, azt bemeneti értékként kezeli, kiszámít egy "véletlen" számot ez alapján (a módszer a választott algoritmustól függ), és egy <strong>új magértéket</strong> állít elő.</p>
+
+
+<p>Egy olyan ciklus hossza, amelyben minden magérték egyedi, nagyon hosszú lehet, de nem végtelen - előbb-utóbb a magértékek ismétlődni kezdenek, és a generáló értékek is ismétlődni fognak. Ez normális. Ez egy funkció, nem hiba vagy rossz algoritmus.</p>
+
+ 
+<p>A program indításakor beállított kezdeti magérték határozza meg a generált értékek megjelenési sorrendjét.</p>
+
+<p>A folyamat véletlenszerűségét <strong>növelhetjük azzal, hogy a magot az aktuális időből vett számmal állítjuk be</strong>. Ez biztosíthatja, hogy minden egyes programindítás más-más magértékről induljon (ergo, más-más véletlen számokat használjon).</p>
+
+<p>Szerencsére az ilyen inicializálást a Python elvégzi a modul importálása során.</p>
+
+<br>
+
+</div>
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

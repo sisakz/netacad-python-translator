@@ -1,0 +1,56 @@
+<problem chapter='4' section='5' slide='1' problem='6' title='A datetime modul'>
+
+<!--
+Update history:
+2020-03-30 Sebastian (first version)
+2020-10-11 Grzegorz (review, PEP-8 compliance check)
+-->
+
+<code>from datetime import date
+
+d = date(2019, 11, 4)
+print(d.weekday())
+
+</code>
+
+
+
+<h1>A hét melyik napja van?</h1>
+
+
+<p>Az egyik hasznos módszer, amely megkönnyíti a dátumokkal való munkát, a <codel>weekday</codel> metódus. Egész számként adja vissza a hét napját, ahol a 0 a hétfõt, a 6 pedig a vasárnapot jelenti. Futtasd a kódot a szerkesztõablakban.</p>
+
+<p>Eredméy:</p>
+<codep>0</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+<br>
+
+<center><img src="/uploads/media/default/0001/02/5f445d2e3aead8fd461418e896da9973e5feb594.png" alt="A man and the calendar - what day is today?" width="70%"></center>
+
+<br><br>
+
+    <p>A <codel>date</codel> osztály rendelkezik egy hasonló, <codel>isoweekday</codel> nevû metódussal, amely szintén egész számként adja vissza a hét napját, de itt az 1 a hétfõt, a 7 pedig a vasárnapot jelenti:</p>
+
+<p><codep class="syntax-color copy">from datetime import date
+
+d = date(2019, 11, 4)
+print(d.isoweekday())
+</codep></p>
+
+<p>Eredmény:</p>
+<codep>1</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+<p>Mint látható, ugyanarra a dátumra eltérõ egész számokat kapunk, amelyek viszont a hétnek ugyanazt a napját fejezik ki. Az <codel>isodayweek</codel> metódus által visszaadott egész szám az ISO 85601 specifikációt követi.</p>
+
+
+
+<br>
+<br>
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

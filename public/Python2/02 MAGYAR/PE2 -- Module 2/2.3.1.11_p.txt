@@ -1,0 +1,56 @@
+<problem chapter='2' section='3' slide='1' problem='11' title='Karakterlánc tagfüggvények'>
+
+<!--
+Update history:
+2020-09-23 Grzegorz (review, PEP-8 compliance check, update)
+2020-10-22 Grzegorz (Correcting the third paragraph sentence)
+2021-06-30	Grzegorz (corrections)
+-->
+
+<code>
+# Demonstrating the replace() method:
+print("www.netacad.com".replace("netacad.com", "pythoninstitute.org"))
+print("This is it!".replace("is", "are"))
+print("Apple juice".replace("juice", ""))
+
+</code>
+
+
+
+<h1>A <font face="Courier New">replace()</font> tagfüggvény</h1>
+
+<p>A <strong>kétparaméteres</strong> <codel>replace()</codel> tagfüggvény az <strong>eredeti karakterlánc egy olyan másolatát adja vissza, amelyben az első argumentum minden előfordulása a második argumentummal van helyettesítve</strong>.</p>
+
+<p>Nézd meg a példakódot a szerkesztőben. Futtasd le.</p>
+
+<p>A példa kimenete:</p>
+
+<codep>www.pythoninstitute.org
+Thare are it!
+Apple </codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+<p>Ha a második argumentum egy üres karakterlánc, <b>a <codel>replace()</codel> valójában</b> az első argumentum karakterláncát <b>távolítja el</b>. Milyen varázslat történik, ha az első argumentum egy üres karakterlánc?</p>
+
+
+<br>
+
+<p>A <strong>háromparaméteres</strong> <codel>replace()</codel> változat a harmadik argumentumot (egy számot) használja a <strong>cserék számának korlátozására</strong>.</p>
+
+<p>Nézd meg az alábbi módosított példakódot:</p>
+
+<codep class="syntax-color copy">print("This is it!".replace("is", "are", 1))
+print("This is it!".replace("is", "are", 2))
+</codep>
+
+<br>
+
+<p>Ki tudod találni a kimenetét? Futtasd le a kódot, és ellenőrizd a tippjeidet.</p>
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

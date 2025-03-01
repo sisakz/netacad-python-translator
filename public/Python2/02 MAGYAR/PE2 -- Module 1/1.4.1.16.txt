@@ -1,0 +1,72 @@
+<problem chapter='1' section='4' slide='1' problem='16' title='A pip használata'>
+
+<!--
+Update history:
+2020-09-25 Grzegorz (created)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<h1>A <i>pip</i> használata (folytatás)</h1>
+
+
+<p>Ha a jelenleg telepített csomagok közül bármelyikre <b>már nincs szükséged</b>, és meg akarsz szabadulni tőlük, a <i>pip</i> erre is használható. Az <codel>uninstall</codel> parancsa elvégzi az összes szükséges lépést. </p>
+
+<p>A szükséges szintaktika világos és egyszerű:</p>
+
+<p><codep class="syntax-color">pip uninstall package_name
+</codep></p>
+
+<p>így, ha már nem akarod a <i>pygame</i>-t, akkor a következő parancsot hajthatod végre:</p>
+
+<p><codep class="syntax-color">pip uninstall pygame
+</codep></p>
+
+<p>A <i>pip</i> tudni szeretné, hogy biztos vagy-e a választásodban - készülj fel a helyes válaszra.</p>
+
+
+
+<br>
+<br> 
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+<p>A folyamat a következőképpen néz ki:</p>
+
+
+<center><img class="lightbox" src="/uploads/media/default/0001/02/895c8f2e96c33b773751373aaea83ff649508cc8.png" width="95%" alt="Command prompt - pip uninstall pygame"></center>
+<br>
+
+
+
+
+
+
+
+<br>
+<br>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

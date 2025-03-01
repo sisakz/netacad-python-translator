@@ -1,0 +1,67 @@
+﻿<problem chapter='1' section='4' slide='1' problem='1' title='Python Package Installer (PIP)'>
+
+<!--
+Update history:
+2020-09-23 Grzegorz (created)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h1>Python packaging ecosystem and how to use it</h1>
+
+<p>Python is a very powerful instrument – we hope you've experienced this yourself already. Many people from around the world feel this way, and they use Python on a regular basis to develop what they can do in many completely different fields of activity. This means that Python has become <b>an interdisciplinary tool</b> employed in countless applications. We can’t go through all the spheres in which Python brilliantly shows off its abilities, so let us just tell you about the most impressive ones.</p>
+
+
+<p>First of all, Python has turned into <b>a leader of research on artificial intelligence</b>. Data mining, one of the most promising modern scientific disciplines, utilizes Python as well. Mathematicians, psychologists, geneticists, meteorologists, linguists – all these people already use Python, or if they don’t already, we’re sure that they will very soon. There is no escaping this trend.</p>
+
+<p>Of course, it doesn’t make any sense to get all Python users to write their code from scratch, keeping them perfectly isolated from the outside world and from other programmers' achievements. This would be both unnatural and counterproductive.</p>
+
+<p>The most preferable and efficient thing is to enable all Python community members to freely exchange their codes and experiences. In this model, nobody is forced to start work from scratch, as there’s a high probability that someone else has been working on the same (or a very similar) problem. </p>
+
+<p>As you know, Python was created as open-source software, and this also works as an invitation for all coders to maintain the whole Python ecosystem as an open, friendly, and free environment. To make the model work and evolve, some additional tools should be provided, tools that help the creators to publish, maintain, and take care of their code.</p>
+
+
+<br>
+<br> 
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+
+
+<p>These same tools should help users to make use of the code, both the already existing code, and also the new code appearing every day. Thanks to that, writing new code for new challenges is not like building a new house, starting at the foundations.</p>
+
+<p>Moreover, the programmer is free to modify someone else's code in order to adapt it to their own needs, and in effect build a completely new product that can be used by another developer. The process seems to have no end. Fortunately.</p>
+
+<p>To make this world go round, two basic entities have to be established and kept in motion: <b>a centralized repository</b> of all available software packages; and a tool allowing users to <b>access the repository</b>. Both these entities already exist and can be used at any time. </p>
+
+
+<center><img src="/uploads/media/default/0001/02/fb6c1e50d3656db5550a8ba5c3b518eeb4a2730e.png" width="50%" alt="Discoveries, inventions, science..."></center>
+
+<br>
+<br>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

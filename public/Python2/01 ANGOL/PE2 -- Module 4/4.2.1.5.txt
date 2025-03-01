@@ -1,0 +1,81 @@
+<problem chapter='4' section='2' slide='1' problem='5' title='Processing files'>
+
+<!--
+Update history:
+2020-10-07 Grzegorz (review, PEP-8 compliance check)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h2>File handles</h2>
+
+<p>Python assumes that <strong>every file is hidden behind an object of an adequate class</strong>.</p>
+
+<p>Of course, it's hard not to ask how to interpret the word <i>adequate</i>.</p>
+
+<p>Files can be processed in many different ways - some of them depend on the file's contents, some on the programmer's intentions.</p>
+
+<p>In any case, different files may require different sets of operations, and behave in different ways.</p>
+
+ 
+
+<p>An object of an adequate class is <strong>created when you open the file and annihilate it at the time of closing</strong>.</p>
+
+<p>Between these two events, you can use the object to specify what operations should be performed on a particular stream. The operations you're allowed to use are imposed by <strong>the way in which you've opened the file</strong>.</p>
+
+
+<br> 
+<br>
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+
+<br>
+
+
+<p>In general, the object comes from one of the classes shown here:</p>
+
+<br>
+
+<center><img class="lightbox" src="/uploads/media/default/0001/01/d19a0e31aababa721f84ccfe27bf35970493fb3c.png" alt="The origin of objects: IOBase, RawIOBase, BufferedIOBase, TextIOBase" width="65%"></center>
+<br><br>
+
+ 
+<p>Note: you never use constructors to bring these objects to life. The only way you <strong>obtain them is to invoke the function named <codel>open()</codel></strong>.</p>
+
+<p>The function analyses the arguments you've provided, and automatically creates the required object.</p>
+
+ 
+<p>If you want to <strong>get rid of the object, you invoke the method named <codel>close()</codel></strong>.</p>
+
+<p>The invocation will sever the connection to the object and the file, and will remove the object.</p>
+
+<p>For our purposes, we'll concern ourselves only with streams represented by <codel>BufferIOBase</codel> and <codel>TextIOBase</codel> objects. You'll understand why soon.</p>
+
+
+<br>
+<br>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

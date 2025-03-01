@@ -1,0 +1,52 @@
+﻿<problem chapter='4' section='1' slide='1' problem='0' title='Python Essentials 2 – Module 4'>
+
+<!--
+Update history:
+2020-10-05 Grzegorz (first version)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-4 columns">
+
+<br>
+
+<h1>Python Essentials 2:
+<br>Module 4</h1>
+
+<p><strong>Miscellaneous</strong></p>
+
+<p>In this module, you will learn about:</p>
+
+<ul>
+<li>Generators, iterators and closures;</li>
+<li>Working with a file-system, a directory tree, and files;</li>
+<li>Selected Python Standard Library modules (<i>os</i>, <i>datetime</i>, <i>time</i>, and <i>calendar</i>.)</li>
+</ul>
+
+<br>
+
+
+</div>
+
+
+
+<div class="small-12 large-8 columns">
+
+<br>
+
+<center><img src="/uploads/media/default/0001/02/98b399be3c471f545e3f860c2ca27ef6986c2508.png" alt="Part 2 Module 4 Title Page" width="70%"></center>
+
+<br>
+
+
+</div>
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

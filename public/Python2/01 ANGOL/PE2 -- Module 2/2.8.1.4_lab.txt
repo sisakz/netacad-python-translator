@@ -1,0 +1,90 @@
+<problem chapter='2' section='8' slide='1' problem='4' title="LAB: Reading ints safely">
+
+<!--
+Update history:
+2020-09-21 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>def read_int(prompt, min, max):
+    #
+    # Write your code here.
+    #
+
+
+v = read_int("Enter a number from -10 to 10: ", -10, 10)
+
+print("The number is:", v)
+
+</code>
+
+
+<span class="label" style="background-color:rgb(205, 168, 105);"><b>LAB</b></span>
+
+<br><br>
+
+<h2>Estimated time</h2>
+<p>15-25 minutes</p>
+
+<h2>Level of difficulty</h2>
+<p>Medium</p>
+
+<h2>Objectives</h2>
+<ul>
+<li>improving the student's skills in defining functions;</li>
+<li>using exceptions in order to provide a safe input environment.</li>
+</ul>
+
+
+<h2>Scenario</h2>
+<p>Your task is to write a <strong>function able to input integer values and to check if they are within a specified range</strong>.</p>
+
+<p>The function should:</p>
+
+<ul>
+<li>accept three arguments: a prompt, a low acceptable limit, and a high acceptable limit;</li>
+<li>if the user enters a string that is not an integer value, the function should emit the message <codel>Error: wrong input</codel>, and ask the user to input the value again;</li>
+<li>if the user enters a number which falls outside the specified range, the function should emit the message <codel>Error: the value is not within permitted range (min..max)</codel> and ask the user to input the value again;</li>
+<li>if the input value is valid, return it as a result.</li>
+</ul>
+
+
+
+<h2>Test data</h2>
+
+<p>Test your code carefully.</p>
+<p>This is how the function should react to the user's input:</p>
+
+<codep>Enter a number from -10 to 10: 100
+Error: the value is not within permitted range (-10..10)
+Enter a number from -10 to 10: asd
+Error: wrong input
+Enter number from -10 to 10: 1
+The number is: 1</codep>
+
+<br>
+
+<studyMode>false</studyMode>
+<labMode>true</labMode>
+
+
+<sampleSolution>def read_int(prompt, min, max):
+    ok = False
+    while not ok:
+        try:
+            value = int(input(prompt))
+            ok = True
+        except ValueError:
+            print("Error: wrong input")
+        if ok:
+            ok = value >= min and value <= max
+        if not ok:
+            print("Error: the value is not within permitted range (" + str(min) + ".." + str(max) + ")")
+    return value;
+
+
+v = read_int("Enter a number from -10 to 10: ", -10, 10)
+
+print("The number is:", v)
+</sampleSolution>
+
+</problem>

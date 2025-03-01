@@ -1,0 +1,184 @@
+<problem chapter='2' section='5' slide='1' problem='11' title="LAB: Sudoku">
+
+<!--
+Update history:
+2020-09-23 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+
+<span class="label" style="background-color:rgb(205, 168, 105);"><strong>LABORGYAKORLAT</strong></span>
+
+<br><br>
+
+
+<h2>Becsült idő</h2>
+<p>60-90 perc</p>
+
+
+<h2>Nehézségi szint</h2>
+<p>Nehéz</p>
+
+
+<h2>Célok</h2>
+<ul>
+    <li>a karakterlánc és lista-kezelési készségek fejlesztése;</li>
+    <li>a karakterláncok listákká alakítása.</li>
+</ul>
+
+
+<h2>Forgatókönyv</h2>
+<p>Mint azt valószínűleg tudod, a <i>Sudoku</i> egy 9x9-es táblán játszott számkirakós feladvány. A játékosnak egy meghatározott módon kell kitöltenie a táblát:</p>
+
+<ul>
+    <li>a tábla minden sorának tartalmaznia kell a 0-tól 9-ig terjedő számjegyeket (a sorrend nem számít).</li>
+    <li>a tábla minden oszlopának tartalmaznia kell a 0-tól 9-ig terjedő számjegyeket (a sorrend nem számít).</li>
+    <li>a táblázat mind a kilenc 3x3-as „csempéjének” (nevezzük őket „alnégyzeteknek”) tartalmaznia kell a 0-tól 9-ig terjedő számjegyeket.</li>
+</ul>
+
+
+<p>Ha további részletekre van szükséged <a href="https://en.wikipedia.org/wiki/Sudoku" target="_blank">itt</a> megtalálod.</p>
+
+
+<p>Az a feladatod, hogy írj egy programot, amely:</p>
+<ul>
+    <li>beolvassa a Sudoku 9 sorát, amelyek mindegyike 9 számjegyet tartalmaz (gondosan ellenőrizd, hogy a beírt adatok érvényesek-e), és</li>
+    <li><codel>Igen</codel>-t ír ki, ha a sudoku érvényes, különben <codel>Nem</codel>-et.</li>
+</ul>
+
+
+<p>Teszteld a kódot az általunk megadott adatokkal.</p>
+
+<h2>Tesztadatok</h2>
+
+
+<p>Minta bemenet:</p>
+<codep>295743861
+431865927
+876192543
+387459216
+612387495
+549216738
+763524189
+928671354
+154938672</codep>
+
+
+<p>Minta kimenet:</p>
+<codep>Igen</codep>
+<br>
+
+<br>
+
+<p>Minta bemenet:</p>
+<codep>195743862
+431865927
+876192543
+387459216
+612387495
+549216738
+763524189
+928671354
+254938671</codep>
+
+<p>Minta kimenet:</p>
+<codep>Nem</codep>
+<br>
+
+
+<hint>
+# Függvény, ami ellenőrzi, hogy az argumentumként kapott lista
+# kilenc számjegyet tartalmaz 1-től 9-ig
+def checkset(digs):
+    return sorted(list(digs)) == [chr(x + ord('0')) for x in range(1, 10)]
+
+
+# Sudoku sorainak listája
+rows = [ ]
+for r in range(9):
+
+ok = True
+
+# Ellenőrzi, hogy minden sor megfelelő-e
+for r in range(9):
+
+
+# Ellenőrzi, hogy minden oszlop megfelelő-e
+if ok:
+    for c in range(9):
+
+
+# Ellenőrzi, hogy minden 3x3 négyzet megfelelő-e
+if ok:
+    for r in range(0, 9, 3):
+
+
+# Kiírja a végső döntést.
+if ok:
+    print("Yes")
+else:
+    print("No")
+
+</hint>
+
+
+<sampleSolution>
+# A function that checks whether a list passed as an argument contains
+# nine digits from '1' to '9'.
+def checkset(digs):
+    return sorted(list(digs)) == [chr(x + ord('0')) for x in range(1, 10)]
+
+
+# A list of rows representing the sudoku.
+rows = [ ]
+for r in range(9):
+    ok = False
+    while not ok:
+        row = input("Enter row #" + str(r + 1) + ": ")
+        ok = len(row) == 9 or row.isdigit()
+        if not ok:
+            print("Incorrect row data - 9 digits required")
+    rows.append(row)
+
+ok = True
+
+# Check if all rows are good.
+for r in range(9):
+    if not checkset(rows[r]):
+        ok = False
+        break
+
+# Check if all columns are good.	
+if ok:
+    for c in range(9):
+        col = []
+        for r in range(9):
+            col.append(rows[r][c])
+        if not checkset(col):
+            ok = False
+            break
+
+# Check if all sub-squares (3x3) are good.
+if ok:
+    for r in range(0, 9, 3):
+        for c in range(0, 9, 3):
+            sqr = ''
+            # Make a string containing all digits from a sub-square.
+            for i in range(3):
+                sqr += rows[r+i][c:c+3]
+            if not checkset(list(sqr)):
+                ok = False
+                break
+
+# Print the final verdict.
+if ok:
+    print("Yes")
+else:
+    print("No")
+
+</sampleSolution>
+
+<studyMode>false</studyMode>
+<labMode>true</labMode>
+
+
+</problem>

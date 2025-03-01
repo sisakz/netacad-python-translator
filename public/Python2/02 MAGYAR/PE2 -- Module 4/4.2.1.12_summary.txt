@@ -1,0 +1,139 @@
+<problem chapter='4' section='2' slide='1' problem='12' title='SZAKASZ ÖSSZEFOGLALÁS'>
+
+<!--
+Update history:
+2020-09-09 Slawek (first version)
+2020-10-07 Grzegorz (review)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+    <h1>A legfontosabb tudnivalók</h1>
+
+<br/>
+
+
+<p>1. Egy fájlt <b>meg kell nyitni</b> mielőtt egy program használná, és a munka befejeztével <b>be kell zárni</b>.</p>
+
+<p>A fájl megnyitása hozzárendeli azt a <b>fájlobjektumhoz</b>, amely az adathordozón tárolt fizikai adatok absztrakt megjelenítése. A fájlobjektum feldolgozásának módját <b>megnyitási módnak</b> nevezzük. <b>Három</b> megnyitási mód létezik:</p>
+<ul>
+    <li><b>olvasási mód</b> – csak olvasási műveletek engedélyezettek;</li>
+    <li><b>írási mód</b> – csak írási műveletek engedélyezettek;</li>
+    <li><b>frissítési mód</b> – az írás és olvasás egyaránt engedélyezett.</li>
+</ul>
+<br/>
+
+<p>2. A fájlok fizikai tartalmától függően különböző Python osztályok használhatóak a fájlok feldolgozására. A <codel>BufferedIOBase</codel> bármilyen fájl feldolgozására képes, míg a <codel>TextIOBase</codel> egy speciális osztály, amely szöveges fájlok (melyek ember számára olvasható, új sor karakterekkel sorokba rendezett szövegeket tartalmaznak) feldolgozására szolgál. Így a fájlobjektumok <b>bináris</b> és <b>szöveges</b> fájlobjektumokra oszthatóak.</p> 
+<br/>
+
+<p>
+    3. Az alábbi <codel>open()</codel> szintaxist használjuk egy fájl megnyitásához:
+    <br><br>
+    <codep>open(file_name, mode=open_mode, encoding=text_encoding)</codep>
+    <br>
+    A hívás létrehoz egy fájlobjektumot, és hozzárendeli azt a <codel>file_name</codel> nevű fájlhoz, a megadott <codel>open_mode</codel> használatával és a megadott <codel>text_encoding</codel> beállításával, vagy <b>hiba esetén kivételt eredményez</b>.
+</p>
+<br/>
+
+<p>4. A program indításakor már három <b>előre meghatározott</b> fájlobjektum van nyitva:</p>
+<ul>
+    <li><codel>sys.stdin</codel> – szabványos bemenet;</li>
+    <li><codel>sys.stdout</codel> – szabványos kimenet;</li>
+    <li><codel>sys.stderr</codel> – szabványos hibakimenet.</li>
+</ul>
+<br/>
+
+<p>4. Az <codel>IOError</codel> kivétel objektum akkor jön létre, ha bármilyen fájlművelet (beleértve a megnyitási műveleteket is) sikertelenül végződik. A kivétel objektum tartalmaz egy <codel>errno</codel> nevű tulajdonságot, amely a sikertelen művelet hibakódját tartalmazza. Ezt az értéket használjuk a probléma diagnosztizálásához.</p>
+<br/>
+
+</div>
+<div class="small-12 large-6 columns">
+
+<br>
+
+<script>
+function solution (id) {
+    var element = document.getElementById(id);
+    
+if (element.style.display === "none") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
+    }
+}
+</script>
+
+<p><strong>1. gyakorlat</strong></p>
+<p>Hogyan kell beállítani az <codel>open()</codel> függvény <codel>mode</codel> argumentumának értékét, ha egy új szövegfájlt hozunk létre, hogy azt egy cikkel töltsük fel?</p>
+
+
+<button class="button tiny" onclick="solution('sol')">Ellenőrzés</button>
+
+<p id="sol" style="display: none;">
+<codel>"wt"</codel> vagy <codel>"w"</codel>
+</p>
+
+
+
+<br/><br/>
+
+<p><strong>2. gyakorlat</strong></p>
+<p>Mit jelent az <codel>errno.EACESS</codel> által képviselt érték?</p>
+
+
+
+<button class="button tiny" onclick="solution('sol2')">Ellenőrzés</button>
+<p id="sol2" style="display: none;"><b>Permission denied</b> (Engedély megtagadva): nincs jogosultságod a fájl tartalmának módosításához.</p>
+    
+
+<br/><br/>
+
+
+
+
+<p><strong>3. gyakorlat</strong></p>
+<p>Mi a kimenete a következő kódnak, feltételezve, hogy a <i>file</i> nevű fájl nem létezik?</p>
+<codep>import errno
+
+try:
+    stream = open("file", "rb")
+    print("exists")
+    stream.close()
+except IOError as error:
+    if error.errno == errno.ENOENT:
+        print("absent")
+    else:
+        print("unknown")
+
+</codep>
+
+<br/>
+
+<button class="button tiny" onclick="solution('sol3')">Ellenőrzés</button>
+
+
+
+<p id="sol3" style="display: none;">
+<codep>absent</codep>
+</p>
+
+
+
+
+<br/>
+<br/>
+
+</div>
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>
+

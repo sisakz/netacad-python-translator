@@ -1,0 +1,59 @@
+<problem chapter='4' section='6' slide='1' problem='8' title='A calendar modul'>
+
+<!--
+Update history:
+2020-03-30 Sebastian (first version)
+2020-10-12 Grzegorz (file creation, review, PEP-8 compliance check)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<code>import calendar
+
+print(calendar.isleap(2020))
+print(calendar.leapdays(2010, 2021))  # Up to but not including 2021.
+
+</code>
+
+<h1>Osztályok naptárak készítéséhez</h1>
+
+<p>A bemutatott függvények nem minden, amit a <codel>calendar</codel> modul kínál. Rajtuk kívül a következő osztályokat használhatjuk:</p>
+
+<ul>
+    <li><codel>calendar.Calendar</codel> – a naptáradatok formázásra való előkészítéséhez kínál metódusokat;</li>
+    <li><codel>calendar.TextCalendar</codel> – rendes szöveges naptárak létrehozására szolgál;</li>
+    <li><codel>calendar.HTMLCalendar</codel> – HTML-naptárak létrehozására szolgál;</li>
+    <li><codel>calendar.LocalTextCalendar</codel> – a <codel>calendar.TextCalendar</codel> osztály alosztálya. Az osztály konstruktora a <i>local</i> paramétert veszi fel, amely a megfelelő hónapok és napok nevének visszaadására szolgál.</li>
+    <li><codel>calendar.LocalHTMLCalendar</codel> – a <codel>calendar.HTMLCalendar</codel> osztály alosztálya. Ennek az osztálynak a konstruktora a local paramétert veszi fel, amely a megfelelő hónapok és napok nevének visszaadására szolgál.</li>
+</ul>
+
+<p>A tanfolyam során már volt lehetőséged szöveges naptárak létrehozására, amikor a <codel>calendar</codel> modul függvényeit tárgyaltuk.</p>
+
+<p>Ideje kipróbálni valami újat. Nézzük meg közelebbről a <codel>calendar</codel> osztály metódusait.</p>
+
+<br>
+
+
+</div>
+
+
+<div class="small-12 large-6 columns">
+
+
+<br>
+<center><img src="/uploads/media/default/0001/02/84ebbab8e240af991a55bcb3e17c9cf836e3d609.png" alt="Different calendars" width="70%"></center>
+<br><br>
+
+
+
+</div>
+</div>
+</div>
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

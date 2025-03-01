@@ -1,0 +1,70 @@
+<problem chapter='3' section='3' slide='1' problem='5' title='OOP: Tulajdonságok'>
+
+<!--
+Update history:
+2020-09-30 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>
+class ExampleClass:
+    varia = 1
+    def __init__(self, val):
+        ExampleClass.varia = val
+
+
+print(ExampleClass.__dict__)
+example_object = ExampleClass(2)
+
+print(ExampleClass.__dict__)
+print(example_object.__dict__)
+
+</code>
+
+
+
+<h1>Osztályváltozók (folytatás)</h1>
+
+<p>Korábban már elmondtuk, hogy az osztályváltozók akkor is léteznek, ha nem hoztunk létre osztálypéldányt (objektumot).</p>
+
+<p>Most megragadjuk az alkalmat, hogy megmutassuk <strong>a különbséget e két <codel>__dict__</codel> változó között</strong>, az osztályból és az objektumból származó változó között.</p>
+
+<p>Nézd meg a kódot a szerkesztőben. A bizonyíték ott van.</p>
+
+<p>Nézzük meg közelebbről:</p>
+
+<ol>
+<li>Definiálunk egy <codel>ExampleClass</codel> nevű osztályt;</li> <br>
+
+<li>Az osztály definiál egy <codel>varia</codel> nevű osztályváltozót;</li> <br>
+
+<li>Az osztály konstruktora a paraméter értékére állítja a változót;</li> <br>
+
+<li>A változó elnevezése a legfontosabb szempont a példában, mert:</li>
+
+<ul>
+    <li>Ha a hozzárendelést <codel>self.varia = val</codel>-ra változtatjuk, akkor az osztályéval azonos nevű példányváltozót hozunk létre;</li>
+
+    <li>A hozzárendelés megváltoztatása <codel>varia = val</codel>-ra egy metódus helyi változójára hat; (erősen javasoljuk, hogy mindkét fenti esetet teszteld le - így könnyebben megjegyzed a különbséget).</li>
+</ul>
+
+<li>Az osztályon kívüli kód első sora kiírja az <codel>ExampleClass.varia</codel> attribútum értékét; figyeljünk arra, hogy az osztály legelső objektumának példányosítása előtt használjuk az értéket.</li>
+</ol>
+ 
+
+<p>Futtassuk a kódot a szerkesztőprogramban, és ellenőrizzük a kimenetet!</p>
+
+
+<p>Mint látható, az osztály <codel>__dict__</codel> szótára sokkal több adatot tartalmaz, mint az objektumé. A legtöbbjük most itt érdektelen, amit szeretnénk, hogy alaposan vizsgáld meg a <codel>varia</codel> értékét.</p>
+
+<p>Vegyük észre, hogy az objektum <codel>__dict__</codel>-je üres - az objektumnak nincsenek példányváltozói.</p>
+
+
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

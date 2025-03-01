@@ -1,0 +1,53 @@
+<problem chapter='4' section='3' slide='1' problem='6' title='Valós fájlok kezelése'>
+
+<!--
+Update history:
+2020-10-07 Grzegorz (review, PEP-8 compliance check)
+2020-10-29 Grzegorz (code fix: strrerror instead of strerr)
+2021-07-07 Grzegorz (code corrections - important!)
+-->
+
+<code>from os import strerror
+
+try:
+	character_counter = line_counter = 0
+	for line in open('text.txt', 'rt'):
+		line_counter += 1
+		for char in line:
+			print(char, end='')
+			character_counter += 1
+	print("\n\nCharacters in file:", character_counter)
+	print("Lines in file:     ", line_counter)
+except IOError as e:
+	print("I/O error occurred: ", strerror(e.errno))
+
+</code>
+
+
+
+<h1>Szövegfájlok feldolgozása (folytatás)</h1>
+
+
+<p>Az utolsó példa, amelyet bemutatunk, az <codel>open()</codel> függvény által szöveges módban visszaadott objektum egy nagyon érdekes tulajdonságát mutatja be.</p>
+
+<p>Úgy gondoljuk, hogy meglepő lehet - <strong>az objektum az iterable osztály egy példánya</strong>.</p>
+
+<p>Furcsa? Egyáltalán nem. Használható? Igen, abszolút.</p>
+ 
+
+<p>A <strong>file objektumhoz definiált iterációs protokoll </strong> nagyon egyszerű - a <codel>__next__</codel> metódus <strong>a fájlból beolvasott következő sort adja vissza</strong>.</p>
+
+<p>Továbbá elvárható, hogy az objektum automatikusan meghívja a <codel>close()</codel> utasítást, amikor az olvasás eléri a fájl végét.</p>
+
+<p>Nézd meg a szerkesztőablakot, milyen egyszerű és világos lett a kód.</p>
+
+
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

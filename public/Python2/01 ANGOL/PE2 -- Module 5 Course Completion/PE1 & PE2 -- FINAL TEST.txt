@@ -1,0 +1,2705 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+PE1 & PE2 :: FINAL TEST
+(Cisco Networking Academy)
+
+Update history:
+2019-02-08 Grzegorz (proof, file creation)
+2020-10-30 Grzegorz (content change, PEP-8 compliance check, reformatting, item id change)
+2020-11-02 Grzegorz (adding new items 51-60)
+-->
+
+<questionPool>
+
+<!-- ######################################################################################################################## -->
+
+<question type="1" scoringType="1" points="1" customId="PE1PE2_FINALTEST_ITEM_1">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; The meaning of a <i>keyword argument</i> is determined by its:</p>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>both name and value assigned to it</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>position within the argument list</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>connection with existing variables</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>value only</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE1PE2_FINALTEST_ITEM_2">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; Which of the following sentences is <u>true</u> about the snippet below?</p>
+
+<codep>str_1 = 'string'
+str_2 = str_1[:]
+
+</codep>
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p><codel>str_1</codel> and <codel>str_2</codel> are different (but equal) strings</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>str_1</codel> and <codel>str_2</codel> are different names of the same string</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>str_1</codel> is longer than <codel>str_2</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>str_2</codel> is longer than <codel>str_1</codel></p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE1PE2_FINALTEST_ITEM_3">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; Which operator would you use to check whether two values are <b>equal</b>?</p>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p><codel>==</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>===</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>=</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>is</codel></p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE1PE2_FINALTEST_ITEM_4">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; What is <u>true</u> about the following code snippet?</p>
+
+<codep>def fun(par2, par1):
+    return par2 + par1
+
+
+print(fun(par2=1, 2))
+
+</codep>
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>The code is erroneous</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>The code will output <codel>3</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>The code will output <codel>2</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>The code will output <codel>1</codel></p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE1PE2_FINALTEST_ITEM_5">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; What value will be assigned to the <codel>x</codel> variable?</p>
+
+<codep>z = 2
+y = 1
+x = y &lt; z or z &gt; y and y &gt; z or z &lt; y
+
+</codep>
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p><codel>True</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>False</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>1</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>0</codel></p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE1PE2_FINALTEST_ITEM_6">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; What is the expected behavior of the following snippet?</p>
+
+<codep>my_string = 'abcdef'
+
+
+def fun(s):
+    del s[2]
+    return s
+
+
+print(fun(my_string))
+
+
+</codep>
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>The program will cause an error</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>The program will output <codel>abdef</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>The program will output <codel>abcef</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>The program will output <codel>acdef</codel></p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE1PE2_FINALTEST_ITEM_7">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; What is the expected output of the following piece of code?</p>
+
+<codep>x, y, z = 3, 2, 1
+z, y, x = x, y, z
+print(x, y, z)
+
+</codep>
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p><codel>1 2 3</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>1 2 2</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>3 2 1</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>2 1 3</codel></p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE1PE2_FINALTEST_ITEM_8">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; What is the expected output of the following snippet?</p>
+
+<codep>a = True
+b = False
+a = a or b
+b = a and b
+a = a or b
+print(a, b)
+
+</codep>
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p><codel>True False</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>True True</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>False False</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>False True</codel></p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE1PE2_FINALTEST_ITEM_9">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; What is the expected behavior of the following snippet?</p>
+
+<codep>def fun(x):
+    return 1 if x % 2 != 0 else 2
+
+
+print(fun(fun(1)))
+
+</codep>
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>The program will output <codel>1</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>The program will output <codel>2</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>The program will output <codel>None</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>The code will cause a runtime error</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE1PE2_FINALTEST_ITEM_10">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; What is <u>true</u> about the following line of code?</p>
+
+<codep>print(len((1, )))
+
+</codep>
+<br>
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>The code will output <codel>1</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>The code will output <codel>2</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>The code will output <codel>0</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>The code is erroneous</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE1PE2_FINALTEST_ITEM_11">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; What is the expected behavior of the following piece of code?</p>
+
+<codep>d = {1: 0, 2: 1, 3: 2, 0: 1}
+x = 0
+
+for y in range(len(d)):
+    x = d[x]
+
+print(x)
+
+</codep>
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>The code will output <codel>0</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>The code will output <codel>2</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>The code will output <codel>1</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>The code will cause a runtime error</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE1PE2_FINALTEST_ITEM_12">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; What is the expected output of the following piece of code if the user enters two lines containing <codel>1</codel> and <codel>2</codel> respectively?</p>
+
+<codep>y = input()
+x = input()
+print(x + y)
+
+</codep>
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p><codel>21</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>12</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>3</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>2</codel></p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE1PE2_FINALTEST_ITEM_13">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; What is <u>true</u> about the following piece of code?</p>
+
+<codep>print("a", "b", "c", sep="'")
+
+</codep>
+<br>
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>The code will output <codel>a'b'c</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>The code will output <codel>abc</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>The code will output <codel>a b c</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>The code is erroneous</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE1PE2_FINALTEST_ITEM_14">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; What is the expected output of the following piece of code?</p>
+
+<codep>v = 1 + 1 // 2 + 1 / 2 + 2
+print(v)
+
+</codep>
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p><codel>3.5</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>4</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>4.0</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>3</codel></p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE1PE2_FINALTEST_ITEM_15">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; What is the expected output of the following code?</p>
+
+<codep>t = (1, )
+t = t[0] + t[0]
+print(t)
+
+</codep>
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p><codel>2</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>(1, 1)</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>(1,)</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>1</codel></p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE1PE2_FINALTEST_ITEM_16">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; What is the expected behavior of the following piece of code?</p>
+
+<codep>x = 16
+while x &gt; 0:
+    print('*', end='')
+    x //= 2
+
+</codep>
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>The code will output <codel>*****</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>The code will output <codel>***</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>The code will output <codel>*</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>The code will enter an infinite loop</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE1PE2_FINALTEST_ITEM_17">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; What is the expected output of the following snippet?</p>
+
+<codep>d = {'one': 1, 'three': 3, 'two': 2}
+
+for k in sorted(d.values()):
+    print(k, end=' ')
+
+</codep>
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p><codel>1 2 3</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>3 2 1</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>2 3 1</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>3 1 2</codel></p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE1PE2_FINALTEST_ITEM_18">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; What is the expected output of the following snippet?</p>
+
+<codep>print(len([i for i in range(0, ‑2)]))
+
+</codep>
+<br>
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p><codel>0</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>3</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>2</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>1</codel></p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE1PE2_FINALTEST_ITEM_19">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; Which line <u>properly</u> invokes the function defined as below?</p>
+
+<codep>def fun(a, b, c=0):
+    # function body
+
+</codep>
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p><codep>fun(a=1, b=0, c=0)
+
+</codep></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codep>fun(0)
+
+</codep></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codep>fun(1, c=2)
+
+</codep></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codep>fun(b=0, b=0)
+
+</codep></p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE1PE2_FINALTEST_ITEM_20">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; What is the expected behavior of the following code snippet?</p>
+
+<codep>my_list = [1, 2, 3, 4]
+
+my_list = list(map(lambda x: 2*x, my_list))
+print(my_list)
+
+</codep>
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>The code will output <codel>2 4 6 8</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>The code will output <codel>1 2 3 4</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>The code will output <codel>10</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>The code will cause a runtime error</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE1PE2_FINALTEST_ITEM_21">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; How many stars (<codel>*</codel>) will the following snippet send to the console?</p>
+<codep>i = 4
+
+while i &gt; 0 :
+    i -= 2
+    print("*")
+    if i == 2:
+        break
+else:
+    print("*")
+
+</codep>
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>one</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>two</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>zero</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>The snippet will enter an infinite loop, constantly printing one <codel>*</codel> per line</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE1PE2_FINALTEST_ITEM_22">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; What is the expected output of the following snippet?</p>
+
+<codep>t = (1, 2, 3, 4)
+t = t[‑2:‑1]
+t = t[‑1]
+print(t)
+
+</codep>
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p><codel>3</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>(3)</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>(3,)</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>33</codel></p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE1PE2_FINALTEST_ITEM_23">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; What is the expected output of the following snippet?</p>
+
+<codep>d = {}
+d['2'] = [1, 2]
+d['1'] = [3, 4]
+
+for x in d.keys():
+    print(d[x][1], end="")
+
+</codep>
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p><codel>24</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>42</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>13</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>31</codel></p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE1PE2_FINALTEST_ITEM_24">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; What is <u>true</u> about the following snippet?</p>
+
+<codep>def fun(d, k, v):
+    d[k] = v
+
+
+my_dictionary = {}
+print(fun(my_dictionary, '1', 'v'))
+
+</codep>
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>The code will output <codel>None</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>The code will output <codel>v</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>The code will output <codel>1</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>The code is erroneous</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE1PE2_FINALTEST_ITEM_25">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; How many empty lines will the following snippet send to the console?</p>
+
+<codep>my_list = [[c for c in range(r)] for r in range(3)]
+
+for element in my_list:
+    if len(element) < 2:
+        print()
+
+</codep>
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p><codel>two</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>one</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>zero</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>three</codel></p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE1PE2_FINALTEST_ITEM_26">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; Knowing that the function named <codel>f()</codel> resides in the module named <codel>m</codel>, and the code contains the following <codel>import</codel> statement:</p>
+
+<codep>from f import m
+
+</codep>
+<br>
+
+<p>Choose the right way to invoke the function:</p>
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>The function cannot be invoked because the <codel>import</codel> statement is invalid</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codep>mod:f()
+
+</codep></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codep>mod.f()
+
+</codep></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codep>f()
+
+</codep></p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE1PE2_FINALTEST_ITEM_27">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; A package directory/folder may contain a file intended to initialize the package. What is its name?</p>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p><codel>__init__.py</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>init.py</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>__init__.</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>__init.py__</codel></p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE1PE2_FINALTEST_ITEM_28">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; What is the name of the directory/folder created by Python used to store <codel>pyc</codel> files?</p>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p><codel>__pycache__</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>__pyc__</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>__pycfiles__</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>__cache__</codel></p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE1PE2_FINALTEST_ITEM_29">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; What is the expected output of the following code, located in the file <codel>module.py</codel>?</p>
+
+<codep>print(__name__)
+
+</codep>
+<br>
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p><codel>__main__</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>module.py</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>__module.py__</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>main</codel></p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE1PE2_FINALTEST_ITEM_30">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; What can you do if you want to tell your module users that a particular variable should <b>not be accessed directly</b>?</p>    
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>Start its name with <codel>_</codel> or <codel>__</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>Start its name with a capital letter</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>Build its name with lowercase letters only</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>Use its number instead of its name</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE1PE2_FINALTEST_ITEM_31">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; If there is a <codel>finally:</codel> branch inside the <codel>try:</codel> block, we can say that:</p>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>the <codel>finally:</codel> branch will always be executed</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>the <codel>finally:</codel> branch will be executed when there is no <codel>else:</codel> branch</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>the <codel>finally:</codel> branch won't be executed if no exception is raised</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>the <codel>finally:</codel> branch won't be executed if any of the <codel>except:</codel> branches is executed</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE1PE2_FINALTEST_ITEM_32">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; What is the expected output of the following snippet?</p>
+
+<codep>try:
+    raise Exception
+except BaseException:
+    print("a", end='')
+else:
+    print("b", end='')
+finally:
+    print("c")
+
+</codep>
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p><codel>ac</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>bc</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>ab</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>a</codel></p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE1PE2_FINALTEST_ITEM_33">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; What is the expected output of the following snippet?</p>
+
+<codep>class A:
+    def __init__(self,name):
+        self.name = name
+
+
+a = A("class")
+print(a)
+
+</codep>
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>A string ending with a long hexadecimal number</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>A number</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>name</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>class</codel></p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE1PE2_FINALTEST_ITEM_34">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; What is the expected behavior of the following snippet?</p>
+
+<codep>try:
+    raise Exception
+except:
+    print("c")
+except BaseException:
+    print("a")
+except Exception:
+    print("b")
+
+</codep>
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>The code will cause an error</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>The code will output <codel>a</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>The code will output <codel>b</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>The code will output <codel>c</codel></p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE1PE2_FINALTEST_ITEM_35">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; What is the expected output of the following snippet?</p>
+
+<codep>class X:
+    pass
+
+
+class Y(X):
+    pass
+
+
+class Z(Y):
+    pass
+
+
+x = X()
+z = Z()
+print(isinstance(x, Z), isinstance(z, X))
+
+</codep>
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option>
+<![CDATA[ <p><codel>True False</codel></p> ]]>
+</option>
+
+<option isCorrect="true">
+<![CDATA[ <p><codel>False True</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>False False</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>True True</codel></p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE1PE2_FINALTEST_ITEM_36">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; What is the expected behavior of the following code?</p>
+
+<codep>x = "\"
+print(len(x))
+
+</codep>
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>The code will cause an error</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>The code will output <codel>1</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>The code will output <codel>a2</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>The code will output <codel>3</codel></p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE1PE2_FINALTEST_ITEM_37">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; What is the expected behavior of the following code?</p>
+
+<codep>x = """
+"""
+print(len(x))
+
+</codep>
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>The code will output <codel>1</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>The code will output <codel>2</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>The code will output <codel>3</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>The code will cause an error</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE1PE2_FINALTEST_ITEM_38">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; If the class constructor is declared as below: </p>
+
+<codep>class Class:
+    def __init__(self):
+        pass
+
+</codep>
+<br>
+
+<p>which one of the assignments is <u>valid</u>?</p>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p><codep>object = Class()</codep>
+
+</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codep>object = Class(1)</codep>
+
+</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codep>object = Class(None)</codep>
+
+</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codep>object = Class(1,2)</codep>
+
+</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE1PE2_FINALTEST_ITEM_39">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; What is the expected output of the following code?</p>
+
+<codep>class A:
+    A = 1
+    def __init__(self, v=2):
+        self.v = v + A.A
+        A.A += 1
+
+    def set(self, v):
+        self.v += v
+        A.A += 1
+        return 
+
+
+a = A()
+a.set(2)
+print(a.v)
+
+</codep>
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p><codel>5</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>3</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>1</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>7</codel></p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE1PE2_FINALTEST_ITEM_40">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; What is the expected output of the following code?</p>
+
+<codep>class A:
+    A = 1
+    def __init__(self):
+        self.a = 0
+
+
+print(hasattr(A, 'A'))
+
+</codep>
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p><codel>True</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>0</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>1</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>False</codel></p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE1PE2_FINALTEST_ITEM_41"> <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; What is the expected result of executing the following code?</p>
+
+<codep>class A:
+    pass
+
+
+class B:
+    pass
+
+
+class C(A, B):
+    pass
+
+
+print(issubclass(C, A) and issubclass(C, B))
+
+</codep>
+<br>
+
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>The code will print <codel>True</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>The code will print <codel>False</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>The code will print an empty line</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>The code will raise an exception</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE1PE2_FINALTEST_ITEM_42">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; What is the <codel>sys.stdout</codel> stream normally associated with?</p>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>The screen</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>The keyboard</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>The printer</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>A <codel>null</codel> device</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE1PE2_FINALTEST_ITEM_43">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; What is the expected effect of running the following code?</p>
+<codep>class A:
+    def __init__(self, v):
+        self._a = v + 1
+
+
+a = A(0)
+print(a._a)
+
+</codep>
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>The code will output <codel>1</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>The code will output <codel>2</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>The code will output <codel>0</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>The code will raise an <codel>AttributeError</codel> exception</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE1PE2_FINALTEST_ITEM_44">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; What is the expected result of executing the following code?</p>
+
+<codep>class A:
+    def __init__(self):
+        pass
+
+    def f(self):
+        return 1
+
+    def g():
+       	return self.f()
+
+
+a = A()
+print(a.g())
+
+</codep>
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>The code will raise an exception</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>The code will output <codel>0</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>The code will output <codel>1</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>The code will output <codel>True</codel></p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE1PE2_FINALTEST_ITEM_45">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; What is the expected result of executing the following code?</p>
+
+<codep>class A:
+    def a(self):
+       	print('a')
+
+
+class B:
+    def a(self):
+        print('b')
+
+
+class C(A, B):
+    def c(self):
+        self.a()
+
+
+o = C()
+o.c()
+
+</codep>
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>The code will print <codel>a</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>The code will print <codel>b</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>The code will print <codel>c</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>The code will raise an exception</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE1PE2_FINALTEST_ITEM_46">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; The <codel>Exception</codel> class contains a property named <codel>args</codel> - what is it?</p>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>A tuple</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>A string</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>A dictionary</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>A list</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE1PE2_FINALTEST_ITEM_47">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; What is the expected output of the following code?</p>
+
+<codep>def fun(n):
+    s = ''
+    for i in range(n):
+        s += '*'
+        yield s
+
+
+for x in fun(3):
+    print(x, end='')
+
+</codep>
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p><codel>******</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>****</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>2***</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>*</codel></p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE1PE2_FINALTEST_ITEM_48">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; What is the expected output of the following code?</p>
+
+<codep>def a(x):
+    def b():
+        return x + x
+    return b
+
+
+x = a('x')
+y = a('')
+print(x() + y())
+
+</codep>
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p><codel>xx</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>x</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>xxxx</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>xxxxxx</codel></p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE1PE2_FINALTEST_ITEM_49">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; If <codel>s</codel> is a stream opened in read mode, the following line:</p>
+
+<codep>q = s.readlines()
+
+</codep>
+<br>
+
+<p>will assign <codel>q</codel> as a:</p>
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>list</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>string</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>tuple</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>dictionary</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE1PE2_FINALTEST_ITEM_50">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; If you want to write a byte array's content to a stream, which method can you use?</p>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p><codel>write()</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>writefrom()</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>writeto()</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>writebytearray()</codel></p> ]]>
+</option>
+
+</options>
+
+</question>
+
+<!-- ######################################################################################################################## -->
+
+<question type="2" scoringType="1" points="1" customId="PE1PE2_FINALTEST_ITEM_51">  <!-- Multiple-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; Which of the following functions provided by the <codel>os</codel> module are available in both Windows and Unix? (Select <u>two</u> answers)</p>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p><codel>mkdir()</codel></p> ]]>
+</option>
+
+<option isCorrect="true">
+<![CDATA[ <p><codel>chdir()</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>getgid()</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>getgroups()</codel></p> ]]>
+</option>
+
+</options>
+
+</question>
+
+<!-- ######################################################################################################################## -->
+
+<question type="1" scoringType="1" points="1" customId="PE1PE2_FINALTEST_ITEM_52">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; What is the expected behavior of the following code?</p>
+
+<codep>import os
+
+os.makedirs('pictures/thumbnails')
+os.rmdir('pictures')
+
+</codep>
+
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>The code will raise an error</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>The code will delete both the <codel>pictures</codel> and <codel>thumbnails</codel> directories</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>The code will delete the <codel>pictures</codel> directory only</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>The code will delete the <codel>thumbnails</codel> directory only</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+<!-- ######################################################################################################################## -->
+
+<question type="1" scoringType="1" points="1" customId="PE1PE2_FINALTEST_ITEM_53">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; What is the expected output of the following code?</p>
+
+<codep>from datetime import datetime
+
+datetime = datetime(2019, 11, 27, 11, 27, 22)
+print(datetime.strftime('%Y/%m/%d %H:%M:%S'))
+
+</codep>
+
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p><codel>2019/11/27 11:27:22</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>19/11/27 11:27:22</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>2019/Nov/27 11:27:22</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>2019/November/27 11:27:22</codel></p> ]]>
+</option>
+
+</options>
+
+</question>
+
+<!-- ######################################################################################################################## -->
+
+<question type="1" scoringType="1" points="1" customId="PE1PE2_FINALTEST_ITEM_54">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; What is the expected output of the following code?</p>
+
+<codep>from datetime import timedelta
+
+delta = timedelta(weeks = 1, days = 7, hours = 11)
+print(delta)
+
+</codep>
+
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p><codel>14 days, 11:00:00</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>7 days, 11:00:00</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>1 week, 7 days, 11 hours</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>2 weeks, 11:00:00</codel></p> ]]>
+</option>
+
+</options>
+
+</question>
+
+<!-- ######################################################################################################################## -->
+
+<question type="1" scoringType="1" points="1" customId="PE1PE2_FINALTEST_ITEM_55">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; What is the expected output of the following code?</p>
+
+<codep>import calendar  
+
+c = calendar.Calendar(calendar.SUNDAY)
+
+for weekday in c.iterweekdays():
+    print(weekday, end=" ")
+
+</codep>
+
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p><codel>6 0 1 2 3 4 5</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>7 1 2 3 4 5 6</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>Su Mo Tu We Th Fr Sa</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>Su</codel></p> ]]>
+</option>
+
+</options>
+
+</question>
+
+<!-- ######################################################################################################################## -->
+
+<question type="2" scoringType="1" points="1" customId="PE1PE2_FINALTEST_ITEM_56">  <!-- Multiple-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; Select the <u>true</u> statements. (Select <u>two</u> answers)</p>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p><i>PyPI</i> is short for Python Package Index</p> ]]>
+</option>
+
+<option isCorrect="true">
+<![CDATA[ <p><i>PyPI</i> is one of many existing Python repositories</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><i>PyPI</i> is the only existing Python repository</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><i>PyPI</i> is short for Python Package Installer</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+<!-- ######################################################################################################################## -->
+
+<question type="1" scoringType="1" points="1" customId="PE1PE2_FINALTEST_ITEM_57">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; What <i>pip</i> operation would you use to check what Python packages have been installed so far?</p>
+
+
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p><codel>list</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>help</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>show</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>dir</codel></p> ]]>
+</option>
+
+</options>
+
+</question>
+
+<!-- ######################################################################################################################## -->
+
+<question type="1" scoringType="1" points="1" customId="PE1PE2_FINALTEST_ITEM_58">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; What is the expected output of the following code?</p>
+
+<codep>my_string_1 = 'Bond'
+my_string_2 = 'James Bond'
+
+print(my_string_1.isalpha(), my_string_2.isalpha())
+
+</codep>
+<br>
+
+
+
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p><codel>True False</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>False True</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>True True</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>False False</codel></p> ]]>
+</option>
+
+</options>
+
+</question>
+
+<!-- ######################################################################################################################## -->
+
+<question type="2" scoringType="1" points="1" customId="PE1PE2_FINALTEST_ITEM_59">  <!-- Multiple-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; Select the <u>true</u> statements. (Select <u>two</u> answers)</p>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>The first parameter of a class method does <b>not</b> have to be named <i>self</i></p> ]]>
+</option>
+
+<option isCorrect="true">
+<![CDATA[ <p>If a class contains the <codel>__init__</codel> method, it <b>cannot</b> return any value</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>The first parameter of a class method must be named <i>self</i></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>If a class contains the <codel>__init__</codel> method, it can return a value</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+<!-- ######################################################################################################################## -->
+
+<question type="1" scoringType="1" points="1" customId="PE1PE2_FINALTEST_ITEM_60">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; What is PEP 8?</p>
+
+
+
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>A document that provides coding conventions and style guide for Python code</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>A document that describes the development and realease schedule for Python versions</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>A document that describes an extension to Python's import mechanism which improves sharing of Python source code files</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>A document that provides coding conventions and style guide for the C code comprising the C implementation of Python</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+<!-- ######################################################################################################################## -->
+
+</questionPool>
+

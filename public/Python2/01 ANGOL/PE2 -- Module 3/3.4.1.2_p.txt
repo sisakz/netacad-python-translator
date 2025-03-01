@@ -1,0 +1,71 @@
+<problem chapter='3' section='4' slide='1' problem='2' title='OOP: Methods'>
+
+<!--
+Update history:
+2020-09-30 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>
+# Test examples here.
+
+</code>
+
+
+
+<h1>Methods in detail: continued</h1>
+
+<p>The <codel>self</codel> parameter is used <strong>to obtain access to the object's instance and class variables</strong>.</p>
+
+<p>The example shows both ways of utilizing <codel>self</codel>:</p>
+
+<codep class="syntax-color line-numbers copy">class Classy:
+    varia = 2
+    def method(self):
+        print(self.varia, self.var)
+
+
+obj = Classy()
+obj.var = 3
+obj.method()
+</codep>
+<br>
+
+<p>The code outputs:</p>
+
+<codep>2 3</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+
+<p>The <codel>self</codel> parameter is also used <strong>to invoke other object/class methods from inside the class</strong>.</p>
+
+<p>Just like here:</p>
+
+<codep class="syntax-color line-numbers copy">class Classy:
+    def other(self):
+        print("other")
+
+    def method(self):
+        print("method")
+        self.other()
+
+
+obj = Classy()
+obj.method()
+</codep> 
+
+<br>
+
+<p>The code outputs:</p>
+
+<codep>method
+other</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

@@ -1,0 +1,53 @@
+<problem chapter='2' section='7' slide='1' problem='5' title='The anatomy of exceptions | raise'>
+
+<!--
+Update history:
+2020-09-21 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>def bad_fun(n):
+    raise ZeroDivisionError
+
+
+try:
+    bad_fun(0)
+except ArithmeticError:
+    print("What happened? An error?")
+
+print("THE END.")
+
+</code>
+
+
+
+<h1>Exceptions: continued</h1>
+
+<p>The <codel>raise</codel> instruction raises the specified exception named <codel>exc</codel> as if it was raised in a normal (natural) way:</p>
+
+<codep class="syntax-color">raise exc
+</codep>
+<br>
+
+ 
+<p>Note: <codel>raise</codel> is a keyword.</p>
+
+<p>The instruction enables you to:</p>
+
+<ul>
+<li><strong>simulate raising actual exceptions</strong> (e.g., to test your handling strategy)</li>
+<li>partially <strong>handle an exception</strong> and make another part of the code responsible for completing the handling (separation of concerns).</li>
+</ul>
+
+<p>Look at the code in the editor. This is how you can use it in practice.</p>
+
+<p>The program's output remains unchanged.</p>
+
+<p>In this way, you can <strong>test your exception handling routine</strong> without forcing the code to do stupid things.</p>
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

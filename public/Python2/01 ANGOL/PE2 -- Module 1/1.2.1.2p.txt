@@ -1,0 +1,83 @@
+<problem chapter='1' section='2' slide='1' problem='2' title='Useful modules | math'>
+
+<!--
+Update history:
+2020-08-31 Grzegorz (review, PEP-8 compliance check, update)
+2021-06-29 Grzegorz (corrections)
+-->
+
+<code>from math import pi, radians, degrees, sin, cos, tan, asin
+
+ad = 90
+ar = radians(ad)
+ad = degrees(ar)
+
+print(ad == 90.)
+print(ar == pi / 2.)
+print(sin(ar) / cos(ar) == tan(ar))
+print(asin(sin(ar)) == ar)
+
+</code>
+
+<h1>Selected functions from the <font face="Courier New">math</font> module</h1>
+
+<p>Let's start with a quick preview of some of the functions provided by the <codel>math</codel> module.</p>
+
+<p>We've chosen them arbitrarily, but that doesn't mean that the functions we haven't mentioned here are any less significant. Dive into the depths of the modules yourself – we don't have the space or the time to talk about everything in detail here.</p>
+
+<p>The first group of the <codel>math</codel>'s functions are connected with <strong>trigonometry</strong>:</p>
+
+<ul>
+<li><codel>sin(x)</codel> &rarr; the sine of x;</li>
+<li><codel>cos(x)</codel> &rarr; the cosine of x;</li>
+<li><codel>tan(x)</codel> &rarr; the tangent of x.</li>
+</ul>
+ 
+
+<p>All these functions take one argument (an angle measurement expressed in radians) and return the appropriate result (be careful with <codel>tan()</codel> – not all arguments are accepted).</p>
+
+<p>Of course, there are also their inversed versions:</p>
+
+<ul>
+<li><codel>asin(x)</codel> &rarr; the arcsine of x;</li>
+<li><codel>acos(x)</codel> &rarr; the arccosine of x;</li>
+<li><codel>atan(x)</codel> &rarr; the arctangent of x.</li>
+</ul>
+ 
+
+<p>These functions take one argument (mind the domains) and return a measure of an angle in radians.</p>
+
+<br>
+
+<p>To effectively operate on angle measurements, the <codel>math</codel> module provides you with the following entities:</p>
+
+<ul>
+<li><codel>pi</codel> &rarr; a constant with a value that is an approximation of &pi;;</li>
+<li><codel>radians(x)</codel> &rarr; a function that converts x from degrees to radians;</li>
+<li><codel>degrees(x)</codel> &rarr; a function that converts x from radians to degrees.</li>
+</ul>
+ 
+
+<p>Now look at the code in the editor. The example program isn't very sophisticated, but can you predict its results?</p>
+
+<br>
+
+<p>Apart from the circular functions (listed above) the <codel>math</codel> module also contains a set of their <strong>hyperbolic analogues</strong>:</p>
+
+<ul>
+<li><codel>sinh(x)</codel> &rarr; the hyperbolic sine;</li>
+<li><codel>cosh(x)</codel> &rarr; the hyperbolic cosine;</li>
+<li><codel>tanh(x)</codel> &rarr; the hyperbolic tangent;</li>
+<li><codel>asinh(x)</codel> &rarr; the hyperbolic arcsine;</li>
+<li><codel>acosh(x)</codel> &rarr; the hyperbolic arccosine;</li>
+<li><codel>atanh(x)</codel> &rarr; the hyperbolic arctangent.</li>
+</ul>
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

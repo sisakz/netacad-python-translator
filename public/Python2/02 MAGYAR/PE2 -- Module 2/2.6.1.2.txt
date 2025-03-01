@@ -1,0 +1,86 @@
+<problem chapter='2' section='6' slide='1' problem='2' title="Hibák – a programozók mindennapi kenyere">
+
+<!--
+Update history:
+2020-09-21 Grzegorz (review, PEP-8 compliance check, update, title correction)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h1>Kivételek</h1>
+
+<p>Minden alkalommal, amikor a kódod megpróbál valami rosszat/ostobaságot/felelőtlenséget/őrültséget/kényszeríthetetlent tenni, a Python két dolgot tesz:</p>
+
+<ul>
+<li><strong>leállítja a programot</strong>;</li>
+<li>egy különleges adatfajtát hoz létre, amelyet <strong>kivételnek</strong> nevezünk.</li>
+</ul>
+ 
+
+<p>Mindkét tevékenységet <strong>kivétel kiváltásnak</strong> nevezzük. Azt mondhatjuk, hogy a Python mindig kivételt vált ki (vagy <strong>kivételt dob</strong>), amikor fogalma sincs, hogy mit kezdjen a kódoddal.</p>
+
+<p>Mi történik ezután?</p>
+
+<ul>
+    <li>a kiváltott kivétel azt várja, hogy valaki vagy valami észrevegye és kezelje;</li>
+    <li>ha nem történik semmi a kiváltott kivétel elhárítására, a program <strong>erőszakosan befejeződik</strong>, és a Python <strong>hibaüzenetet</strong> küld a konzolra;</li>
+    <li>ellenkező esetben, ha a kivételt megfelelően <strong>kezeljük</strong>, a felfüggesztett program és annak végrehajtása folytatódhat.</li>
+</ul>
+ 
+
+<p>A Python hatékony eszközöket biztosít, amelyek lehetővé teszik a <strong>kivételek megfigyelését, azonosítását</strong> és hatékony <strong>kezelését</strong>. Ez annak köszönhető, hogy minden lehetséges kivételnek egyértelmű neve van, így kategorizálni tudod őket, és megfelelően reagálhatsz rájuk.</p>
+
+
+
+
+
+
+<br><br>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+
+
+<center><img src="/uploads/media/default/0001/01/819e89cb98d0fb38e92d3f2559664b65470e476d.png" width="70%" alt="The concept of exceptions"></center>
+<br><br>
+
+
+    <p>Néhány kivétel nevét már ismered. Nézd meg a következő diagnosztikai üzenetet:</p>
+
+<codep><mark style="background-color:#e6f2ff;">ValueError</mark>: math domain error </codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+
+<p>A fent kiemelt szó csak a <strong>kivétel neve</strong>. Ismerkedjünk meg néhány más kivétellel.</p>
+
+
+<br>
+<br>
+
+</div>
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

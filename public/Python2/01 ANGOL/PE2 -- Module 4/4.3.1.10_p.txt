@@ -1,0 +1,46 @@
+<problem chapter='4' section='3' slide='1' problem='10' title='Working with real files'>
+
+<!--
+Update history:
+2020-10-07 Grzegorz (review, PEP-8 compliance check)
+-->
+
+<code>
+data = bytearray(10)
+
+for i in range(len(data)):
+    data[i] = 10 - i
+
+for b in data:
+    print(hex(b))
+
+</code>
+
+
+
+<h1>Bytearrays: continued</h1>
+
+
+<p>Bytearrays resemble lists in many respects. For example, they are <strong>mutable</strong>, they're a subject of the <codel>len()</codel> function, and you can access any of their elements using conventional indexing.</p>
+
+<p>There is one important limitation – <strong>you mustn't set any byte array elements with a value which is not an integer</strong> (violating this rule will cause a <font face="Courier New">TypeError</font> exception) and you're <strong>not allowed to assign a value that doesn't come from the range 0 to 255 inclusive</strong> (unless you want to provoke a <font face="Courier New">ValueError</font> exception).</p>
+
+<p>You can <strong>treat any byte array elements as integer values</strong> – just like in the example in the editor.</p>
+
+ 
+
+<p>Note: we've used two methods to iterate the byte arrays, and made use of the <codel>hex()</codel> function to see the elements printed as hexadecimal values.</p>
+
+<p>Now we're going to show you <strong>how to write a byte array to a binary file</strong> – binary, as we don't want to save its readable representation – we want to write a one-to-one copy of the physical memory content, byte by byte.</p>
+
+
+
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

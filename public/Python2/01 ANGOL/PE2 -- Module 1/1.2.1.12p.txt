@@ -1,0 +1,49 @@
+<problem chapter='1' section='2' slide='1' problem='12' title='Useful modules | platform'>
+
+<!--
+Update history:
+2020-08-31 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>from platform import processor
+
+print(processor())
+
+</code>
+
+<h1>Selected functions from the <font face="Courier New">platform</font> module: continued</h1>
+
+<p><b>The <font face="Courier New">processor</font> function</b></p>
+
+<p>The <codel>processor()</codel> function returns a string filled with the real processor name (if possible).</p>
+
+<p>Once again, we ran the sample program on three different platforms:</p>
+
+<p><strong>Intel x86 + Windows &reg; Vista (32 bit)</strong>:</p>
+
+<codep>x86</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+
+<p><strong>Intel x86 + Gentoo Linux (64 bit)</strong>:</p>
+
+<codep>Intel(R) Core(TM) i3-2330M CPU @ 2.20GHz</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+
+<p><strong>Raspberry PI2 + Raspbian Linux (32 bit)</strong>:</p>
+
+<codep>armv7l</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+
+<p>Test this on your local machine.</p>
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

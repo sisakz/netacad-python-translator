@@ -1,0 +1,43 @@
+<problem chapter='3' section='4' slide='1' problem='7' title='OOP: Methods'>
+
+<!--
+Update history:
+2020-09-30 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>
+class Classy:
+    pass
+
+
+print(Classy.__module__)
+obj = Classy()
+print(obj.__module__)
+
+</code>
+
+
+
+<h1>The inner life of classes and objects: continued</h1>
+
+<p><codel>__module__</codel> is a string, too – it <strong>stores the name of the module which contains the definition of the class</strong>.</p>
+
+<p>Let's check it – run the code in the editor.</p>
+
+<p>The code outputs:</p>
+
+<codep>__main__
+__main__</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+ 
+
+<p>As you know, any module named <codel>__main__</codel> is actually not a module, but the <strong>file currently being run</strong>.</p>
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

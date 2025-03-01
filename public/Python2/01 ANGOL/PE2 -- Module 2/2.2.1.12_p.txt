@@ -1,0 +1,57 @@
+<problem chapter='2' section='2' slide='1' problem='12' title='The nature of strings in Python'>
+
+<!--
+Update history:
+2020-09-22 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>
+# Demonstrating max() - Example 1:
+print(max("aAbByYzZ"))
+
+
+# Demonstrating max() - Examples 2 & 3:
+t = 'The Knights Who Say "Ni!"'
+print('[' + max(t) + ']')
+
+t = [0, 1, 2]
+print(max(t))
+
+</code>
+
+
+
+<h1>Operations on strings: <font face="Courier New">max()</font></h1>
+
+<p>Similarly, a function named <codel>max()</codel> <strong>finds the maximum element of the sequence</strong>.</p>
+
+ 
+
+<p>Look at <strong>Example 1</strong> in the editor. The example program outputs:</p>
+
+<codep>z</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+ 
+<p>Note: It's a lower-case <i>z</i>.</p>
+
+
+<p>Now let's see the <codel>max()</codel> function applied to the same data as previously. Look at <strong>Examples 2 &amp; 3</strong> in the editor.</p>
+
+<p>The expected output is:</p>
+
+<codep>[y]
+2</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+
+<p>Carry out your own experiments.</p>
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

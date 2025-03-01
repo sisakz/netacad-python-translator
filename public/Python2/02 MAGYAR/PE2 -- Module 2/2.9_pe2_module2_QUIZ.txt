@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+PE2 - Module 2 Quiz
+
+Update history:
+2019-02-08 Grzegorz (reviewed)
+2020-09-29 Grzegorz (reformatting, PEP-8 compliance, dividing content into Quiz 1 and Quiz 2, creating items 1-3)
+-->
+
+<questionPool>
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE2_Q2_ITEM_1">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+    <p><span class="label">Q:</span>&nbsp;&nbsp; A kód azon részét, ahol a kivétel előfordulhat, a következő helyen kell elhelyezni:</p>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>a <codel>try:</codel> ágba</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>az <codel>except:</codel> ágba</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>az <codel>exception:</codel> ágba</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE2_Q2_ITEM_2">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+    <p><span class="label">Q:</span>&nbsp;&nbsp; A kód azon részét, ahol a kivétel kezelése történik, a következő helyen kell elhelyezni:</p>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option>
+<![CDATA[ <p>a <codel>try:</codel> ágba</p> ]]>
+</option>
+
+<option isCorrect="true">
+<![CDATA[ <p>az <codel>except:</codel> ágba</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>az <codel>exception:</codel> ágba</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+
+<question type="2" scoringType="1" points="1" customId="PE2_Q2_ITEM_3">  <!-- Multiple-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+    <p><span class="label">Q:</span>&nbsp;&nbsp; Válaszd ki az <u>igaz</u> állításokat! (<u>Két</u> helyes válasz van!)</p>
+
+]]>
+</instructions>
+
+
+<options>
+
+    <option isCorrect="true">
+        <![CDATA[ <p>Több <codel>except:</codel> ágat <b>lehet</b> használni az ugyanabból a <codel>try:</codel> ágból érkező több kivétel kezelésére</p>]]>
+    </option>
+
+<option>
+<![CDATA[ <p> <b>Nem</b> használhatsz több <codel>except:</codel> ágat az ugyanabból a <codel>try:</codel> ágból érkező több kivétel kezelésére</p> ]]>
+</option>
+
+<option isCorrect="true">
+<![CDATA[ <p>A különböző <codel>exception:</codel> ágaknak <b>mindig</b> egyedi kivételnevekkel kell rendelkezniük</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>A különböző <codel>exception:</codel> ágaknak <b>lehet</b> egyedi kivételnevük</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE2_Q2_ITEM_4">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+    <p><span class="label">Q:</span>&nbsp;&nbsp; Amikor a kivétel bekövetkezik, az alkalmazás...</p>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>kivételt dob</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>lefagy</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>megáll</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE2_Q2_ITEM_5">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+    <p><span class="label">Q:</span>&nbsp;&nbsp; Melyik <codel>except:</codel> ágat vesszük figyelembe a kivétel bekövetkezésekor?</p>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>az első megfelelő ágat</p> ]]>
+</option>
+
+<option>
+    <![CDATA[     <p>az utolsó megfelelő ágat</p> ]]>
+</option>
+
+<option>
+    <![CDATA[ <p>bármelyik illeszkedő ágat</p>  ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE2_Q2_ITEM_6">  <!-- Multiple-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+    <p><span class="label">Q:</span>&nbsp;&nbsp; Az assert utasítás arra jó, hogy</p>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>a program megálljon, ha egyes adatok nem megfelelő értékeket tartalmaznak</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>a programozót határozottabbá tegye</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>egy modult importáljon</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE2_Q2_ITEM_7">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; A kódpont (code point)...</p>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>egy karaktert azonosító számkód</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>a kód megírására használt pont</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>egy kód, amely egy pontot tartalmaz</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE2_Q2_ITEM_8">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+    <p><span class="label">Q:</span>&nbsp;&nbsp; Az <codel>isalnum()</codel> ellenőrzi, hogy egy karakterlánc csak betűket és számjegyeket tartalmaz-e, és ez …</p>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>egy tagfüggvény.</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>egy modul.</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>egy függvény.</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE2_Q2_ITEM_9">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; A kifejezés:</p>
+<codep>'mike' &gt; 'Mike'</codep>
+<br>
+
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+    <option isCorrect="true">
+        <![CDATA[ <p>eredménye <codel>True</codel></p> ]]>
+    </option>
+
+<option>
+<![CDATA[ <p>eredménye <codel>False</codel></p> ]]>
+</option>
+
+<option>
+    <![CDATA[ <p>hibás</p>     ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE2_Q2_ITEM_10">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+    <p><span class="label">Q:</span>&nbsp;&nbsp; A <codel>+=</codel> operátor a karakterláncokra alkalmazva a következőt végzi:</p>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>konkatenáció</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>többszörözés</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>kivonás</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+<!-- ######################################################################################################################## -->
+
+
+</questionPool>

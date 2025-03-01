@@ -1,0 +1,46 @@
+<problem chapter='4' section='3' slide='1' problem='10' title='Valós fájlok kezelése'>
+
+<!--
+Update history:
+2020-10-07 Grzegorz (review, PEP-8 compliance check)
+-->
+
+<code>
+data = bytearray(10)
+
+for i in range(len(data)):
+    data[i] = 10 - i
+
+for b in data:
+    print(hex(b))
+
+</code>
+
+
+
+<h1>Bájttömb (folytatás)</h1>
+
+
+<p>A bájttömb objektumok sok tekintetben hasonlítanak a listákra. Például <strong>változtathatóak</strong>, működik rajtuk a <codel>len()</codel> függvény, és bármelyik elemükhöz hozzáférhetünk hagyományos indexeléssel.</p>
+
+<p>Van egy fontos korlátozás - <strong>nem szabad olyan értéket beállítani a bájttömb egyetlen elemére sem, amely nem egész szám</strong> (e szabály megszegése <font face="Courier New">TypeError</font> kivételt eredményez) és <strong>nem adhatunk olyan értéket, amely nem a 0 és 255 közötti tartományból származik</strong> (hacsak nem akarunk <font face="Courier New">ValueError</font> kivételt generálni).</p>
+
+<p><strong>A bájttömb bármely elemét egész értékként kezelheted</strong> – ahogy a szerkesztőablakban lévő példa is mutatja.</p>
+
+ 
+
+<p>Megjegyzés: két metódust használtunk a bájttömbön való iterációhoz, valamint a <codel>hex()</codel> függvény segítségével megjelenítjük az elemek hexadecimális értékét.</p>
+
+<p>Most megmutatjuk, <strong>hogyan írhatunk ki egy bájttömböt bináris fájlba</strong> – binárisan, mivel nem az olvasható reprezentációját akarjuk elmenteni - hanem a fizikai memória tartalmának egy az egyben, bájtról bájtra történő másolatát.</p>
+
+
+
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

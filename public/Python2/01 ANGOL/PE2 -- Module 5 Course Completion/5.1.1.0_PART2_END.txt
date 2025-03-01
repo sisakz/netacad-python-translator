@@ -1,0 +1,69 @@
+<problem chapter='5' section='1' slide='1' problem='0' title='Python Essentials 2 Completed'>
+
+<!--
+Update history:
+2020-10-18 Grzegorz (File creation)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<h1>Congratulations!</h1>
+
+<h2>You have completed <i>Python Essentials 2</i></h2>
+
+<br>
+
+
+<p>Well done! You've reached the end of the <b>Python Essentials 2</b> course, and completed a major milestone in your Python programming education.</p>
+
+<img src="/uploads/media/default/0001/01/eaa7921c017b3ff2e826ac822b50354a757605f3.png" width="60%" alt="Part 2: Basics completion - congratulations" style="float:right; padding:20px;">
+
+You are now prepared to take the final challenge, the <b>PE2 Summary Test</b>, which will help you review the most important information you've read and test the skills and knowledge you've gained throughout the course.
+
+<br><br>
+
+
+Having completed the course, you're also prepared to attempt the qualification <a href="https://pythoninstitute.org/certification/pcap-certification-associate/" target="_blank">PCAP - Certified Associate in Python Programming</a> certification exam, which ensures that you are fully acquainted with all the primary means provided by Python 3 to enable you to start your own studies, and to open a path to a career as a developer, as well as it is an interim step to the <i>PCPP1 - Certified Professional in Python Programming</i> certification.
+
+<br><br>Ready?
+
+
+<div style="clear: both;"></div>
+
+
+<br>
+<br>
+
+</div>
+
+
+
+
+<div class="small-12 large-6 columns">
+
+
+<br>
+<center><img src="/uploads/media/default/0001/02/PCAP_new.png" width="75%" class="lightbox" alt="The hierarchy of OpenEDG Python Institute certifications"></center>
+<br>
+
+
+
+
+
+
+
+<br>
+
+</div>
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

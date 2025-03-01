@@ -1,0 +1,90 @@
+<problem chapter='4' section='3' slide='1' problem='15' title='LAB: Character frequency histogram'>
+
+<!--
+Update history:
+2020-10-07 Grzegorz (review, PEP-8 compliance check)
+2021-07-07 Grzegorz (code corrections - important!)
+-->
+
+<code>
+</code>
+
+<span class="label" style="background-color:rgb(205, 168, 105);"><b>LAB</b></span>
+
+<br><br>
+
+<h2>Estimated time</h2>
+<p>60 minutes</p>
+
+
+<h2>Level of difficulty</h2>
+<p>Medium</p>
+
+
+<h2>Objectives</h2>
+<ul>
+<li>improving the student's skills in operating with files (reading)</li>
+<li>using data collections for counting numerous data.</li>
+</ul>
+
+
+
+<h2>Scenario</h2>
+<p>A text file contains some text (nothing unusual) but we need to know how often (or how rare) each letter appears in the text. Such an analysis may be useful in cryptography, so we want to be able to do that in reference to the Latin alphabet.</p>
+
+<p>Your task is to write a program which:</p>
+<ul>
+<li>asks the user for the input file's name;</li>
+<li>reads the file (if possible) and counts all the Latin letters (lower- and upper-case letters are treated as equal)</li>
+<li>prints a simple histogram in alphabetical order (only non-zero counts should be presented)</li>
+</ul>
+
+
+<p>Create a test file for the code, and check if your histogram contains valid results.</p>
+
+<p>Assuming that the test file contains just one line filled with:</p>
+<codep>aBc</codep>
+<p style="text-align: right;"><font size="-2"><b>samplefile.txt</b></font></p>
+
+<p>the expected output should look as follows:</p>
+
+
+<codep>a -> 1
+b -> 1
+c -> 1</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+<p><strong>Tip</strong>: We think that a dictionary is a perfect data collection medium for storing the counts. The letters may be keys while the counters can be values.</p>
+
+
+
+<sampleSolution>from os import strerror
+
+# Initialize 26 counters for each Latin letter.
+# Note: we've used a comprehension to do that.
+counters = {chr(ch): 0 for ch in range(ord('a'), ord('z') + 1)}
+file_name = input("Enter the name of the file to analyze: ")
+try:
+    file = open(file_name, "rt")
+    for line in file:
+        for char in line:
+            # If it is a letter...
+            if char.isalpha():
+                # ... we'll treat it as lower-case and update the appropriate counter.
+                counters[char.lower()] += 1
+    file.close()
+    # Let's output the counters.
+    for char in counters.keys():
+        c = counters[char]
+        if c > 0:
+            print(char, '->', c)
+except IOError as e:
+    print("I/O error occurred: ", strerror(e.errno))
+
+</sampleSolution>
+
+
+<studyMode>false</studyMode>
+<labMode>true</labMode>
+
+</problem>

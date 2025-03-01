@@ -1,0 +1,163 @@
+<problem chapter='4' section='6' slide='1' problem='14' title='SECTION SUMMARY'>
+
+<!--
+Update history:
+2020-10-01 Sebastian (first version)
+2020-10-13 Grzegorz (file creation, review, PEP-8 compliance check)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h1>Key takeaways</h1>
+
+
+<p>1. In the <codel>calendar</codel> module, the days of the week are displayed from Monday to Sunday. Each day of the week has its representation in the form of an integer, where the first day of the week (Monday) is represented by the value 0, while the last day of the week (Sunday) is represented by the value 6.</p>
+
+<br>
+
+<p>2. To display a calendar for any year, call the <codel>calendar</codel> function with the year passed as its argument, e.g.:</p>
+
+<p><codep class="syntax-color copy">import calendar
+print(calendar.calendar(2020))
+</codep></p>
+
+<p>Note: A good alternative to the above function is the function called <codel>prcal</codel>, which also takes the same parameters as the <codel>calendar</codel> function, but doesn't require the use of the <codel>print</codel> function to display the calendar.</p>
+
+<br>
+
+<p>3. To display a calendar for any month of the year, call the <codel>month</codel> function, passing year and month to it. For example:</p>
+
+<p><codep class="syntax-color copy">import calendar
+print(calendar.month(2020, 9))
+</codep></p>
+
+<p>Note: You can also use the <codel>prmonth</codel> function, which has the same parameters as the <codel>month</codel> function, but doesn't require the use of the <codel>print</codel> function to display the calendar.</p>
+
+<br>
+
+<p>4. The <codel>setfirstweekday</codel> function allows you to change the first day of the week. It takes a value from 0 to 6, where 0 is Sunday and 6 is Saturday. </p>
+
+<br>
+
+<p>5. The result of the <codel>weekday</codel> function is a day of the week as an integer value for a given year, month, and day:</p>
+
+<p><codep class="syntax-color copy">import calendar
+print(calendar.weekday(2020, 9, 29)) # This displays 1, which means Tuesday.
+</codep></p>
+
+<br>
+
+<p>6. The <codel>weekheader</codel> function returns the weekday names in a shortened form. The <codel>weekheader</codel> method requires you to specify the width in characters for one day of the week. If the width you provide is greater than 3, you'll still get the abbreviated weekday names consisting of only three characters. For example:</p>
+
+<p><codep class="syntax-color copy">import calendar
+print(calendar.weekheader(2)) # This display: Mo Tu We Th Fr Sa Su
+</codep></p>
+
+<br>
+
+<p>7. A very useful function available in the <codel>calendar</codel> module is the function called <codel>isleap</codel>, which, as the name suggests, allows you to check whether the year is a leap year or not:</p>
+
+<p><codep class="syntax-color copy">import calendar
+print(calendar.isleap(2020)) # This displays: True
+</codep></p>
+
+<br>
+
+<p>8. You can create a <codel>calendar</codel> object yourself using the <codel>Calendar</codel> class, which, when creating its object, allows you to change the first day of the week with the optional <codel>firstweekday</codel> parameter, e.g.:</p>
+
+
+<p><codep class="syntax-color copy">import calendar  
+
+c = calendar.Calendar(2)
+
+for weekday in c.iterweekdays():
+    print(weekday, end=" ")
+# Result: 2 3 4 5 6 0 1
+</codep></p>
+
+<p>The <codel>iterweekdays</codel> returns an iterator for weekday numbers. The first value returned is always equal to the value of the <codel>firstweekday</codel> property.</p>
+
+
+
+
+
+<br> 
+<br>
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+<script>
+function solution (id) {
+    var element = document.getElementById(id);
+    
+if (element.style.display === "none") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
+    }
+}
+</script>
+
+<p><strong>Exercise 1</strong></p>
+<p>What is the output of the following snippet?</p>
+
+<p><codep>import calendar
+print(calendar.weekheader(1))
+
+</codep></p>
+
+<button class="button tiny" onclick="solution('sol')">Check</button>
+
+<p id="sol" style="display: none;"><codep>M T W T F S S</codep>
+</p>
+
+
+<br><br>
+
+
+<p><strong>Exercise 2</strong></p>
+<p>What is the output of the following snippet?</p>
+
+<p><codep>import calendar  
+
+c = calendar.Calendar()
+
+for weekday in c.iterweekdays():
+    print(weekday, end=" ")
+
+</codep></p>
+
+<button class="button tiny" onclick="solution('sol2')">Check</button>
+
+<p id="sol2" style="display: none;"><codep>0 1 2 3 4 5 6</codep>
+</p>
+
+
+<br>
+<br>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

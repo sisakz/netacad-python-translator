@@ -1,0 +1,152 @@
+<problem chapter='2' section='2' slide='1' problem='15' title='SZAKASZ ÖSSZEFOGLALÁS'>
+
+<!--
+Update history:
+2020-09-01 Sysio (first version)
+2020-09-28 Grzegorz (review)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+    <h1>A legfontosabb tudnivalók</h1>
+
+<br>
+
+<p>1. A Python karakterláncok <b>megváltoztathatatlan szekvenciák</b>, ugyanúgy indexelhetők, szeletelhetők és iterálhatók, mint bármely más szekvencia, valamint az <codel>in</codel> és <codel>not in</codel> operátorok is alkalmazhatóak rájuk. A Pythonban kétféle karakterlánc létezik:</p>
+<ul>
+    <li><b>egysoros</b> karakterláncok, amelyek nem léphetik át a sorhatárokat – ezeket aposztrófokkal (<codel>'string'</codel>) vagy idézőjelekkel (<codel>"string"</codel>) jelöljük.</li>
+    <li>
+        <b>többsoros</b> karakterláncok, amelyek egynél több sort foglalnak el a forráskódban, ezeket trigráfokkal kell határolni:<br><br>
+        <codep class="syntax-color">
+            '''
+            string
+            '''
+        </codep>
+        <br>
+        <p>vagy</p>
+        <codep class="syntax-color">
+            """
+            string
+            """
+        </codep>
+    </li>
+</ul>
+<br>
+
+<p>2. A karakterlánc hosszát a <codel>len()</codel> függvény határozza meg. Az escape karakter (<codel>\</codel>) nem számít. Például:</p>
+<codep class="syntax-color copy">print(len("\n\n"))
+</codep>
+<br>
+<p>kimenet <codel>2</codel>.</p>
+<br>
+
+<p>3. A karakterláncok a <codel>+</codel> operátorral <b>összefűzhetők</b>, a <codel>*</codel> operátorral pedig <b>megismételhetők</b>. Például:</p>
+<codep class="syntax-color">asterisk = '*'
+plus = "+"
+decoration = (asterisk + plus) * 4 + asterisk
+print(decoration)
+</codep>
+<br>
+<p>kimenet <codel>*+*+*+*+*</codel>.</p>
+<br>
+
+<p>4. A <codel>chr()</codel> és <codel>ord()</codel>függvénypár használható egy karakter létrehozására a kódpontja segítségével, és egy karakterhez tartozó kódpont meghatározására. Mindkét alábbi kifejezés mindig igaz:</p>
+<p><codel>chr(ord(character)) == character</codel></p>
+<p><codel>ord(chr(codepoint)) == codepoint</codel></p>
+
+<br>
+
+<p>5. Néhány más, karakterláncokra alkalmazható függvény:</p>
+<ul>
+    <li><codel>list()</codel> – a karakterlánc összes karakteréből álló listát hoz létre;</li>
+    <li><codel>max()</codel> – megtalálja a maximális kódponttal rendelkező karaktert;</li>
+    <li><codel>min()</codel> – megtalálja a minimális kódponttal rendelkező karaktert.</li>
+</ul>
+
+<br>
+
+<p>6. Az <codel>index()</codel> nevű metódus egy adott rész-karakterlánc indexét keresi a karakterláncon belül.</p>
+
+<br>
+
+</div>
+<div class="small-12 large-6 columns">
+
+<script>
+function solution (id) {
+    var element = document.getElementById(id);
+    
+if (element.style.display === "none") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
+    }
+}
+</script>
+
+
+<p><strong>1. gyakorlat</strong></p>
+<p>Mennyi a következő karakterlánc hossza, ha az idézőjelek között nincsenek szóközök?</p>
+<codep>"""
+"""
+
+</codep>
+<br>
+
+<button class="button tiny" onclick="solution('sol1')">Ellenőrzés</button>
+
+<p id="sol1" style="display: none;">1</p>
+
+
+
+
+<br><br>
+
+
+<p><strong>2. gyakorlat</strong></p>
+<p>Mi a következő kód várható kimenete?</p>
+<codep>s = 'yesteryears'
+the_list = list(s)
+print(the_list[3:6])
+
+</codep>
+<br>
+
+<button class="button tiny" onclick="solution('sol2')">Ellenőrzés</button>
+
+<p id="sol2" style="display: none;"><codel>['t', 'e', 'r']</codel>
+</p>
+
+<br><br>
+
+
+<p><strong>3. gyakorlat</strong></p>
+<p>Mi a következő kód várható kimenete?</p>
+
+<codep>for ch in "abc":
+    print(chr(ord(ch) + 1), end='')
+
+</codep>
+<br>
+
+<button class="button tiny" onclick="solution('sol3')">Ellenőrzés</button>
+
+<p id="sol3" style="display: none;"><codep>bcd</codep>
+</p>
+
+
+<br>
+
+</div>
+
+</div>
+</div>
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>
+

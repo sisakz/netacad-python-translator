@@ -1,0 +1,144 @@
+<problem chapter='3' section='2' slide='1' problem='16' title="LAB: Sor, más néven FIFO: 2. rész">
+
+<!--
+Update history:
+2020-01-01 Syslaw (file created)
+2020-11-16 Grzegorz (review, PEP-8 compliance check)
+-->
+
+<code>class QueueError(???):
+    pass
+
+
+class Queue:
+    #
+    # Code from the previous lab.
+    #
+
+
+class SuperQueue(Queue):
+    #
+    # Write new code here.
+    #
+
+
+que = SuperQueue()
+que.put(1)
+que.put("dog")
+que.put(False)
+for i in range(4):
+    if not que.isempty():
+        print(que.get())
+    else:
+        print("Queue empty")
+
+</code>
+
+<span class="label" style="background-color:rgb(205, 168, 105);"><b>LABORGYAKORLAT</b></span>
+
+<br><br>
+
+<h2>Becsült idő</h2>
+<p>15-30 perc</p>
+
+<h2>Nehézségi szint</h2>
+<p>Könnyű/Közepes</p>
+
+<h2>Célok</h2>
+<ul>
+    <li>javítani a tanuló készségeit az alosztályok definiálásában;</li>
+    <li>új függvény hozzáadása egy már meglévő osztályhoz.</li>
+</ul>
+
+<h2>Forgatókönyv</h2>
+<p>A feladatod a <codel>Queue</codel> osztály képességeinek kismértékű bővítése. Azt szeretnénk, hogy legyen egy paraméter nélküli metódus, amely <font face="courier">True</font>-t ad vissza, ha a várólista üres, egyébként pedig <font face="courier">False</font>-t.</p>
+
+<p>Egészítsd ki az általunk megadott kódot a szerkesztőben! Futtasd le, majd ellenőrizd, hogy hasonló eredményt ad-e ki, mint a miénk!</p>
+
+<p>Az alábbiakban bemásolhatod az előző feladatban használt kódot:</p>
+
+<script>
+function solution (id) {
+    var element = document.getElementById(id);
+    
+if (element.style.display === "none") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
+    }
+}
+</script>
+
+
+<button class="button tiny" onclick="solution('sol')">Ellenőrzés</button>
+
+<p id="sol" style="display: none;"><codep class="copy">class QueueError(IndexError):
+    pass
+
+
+class Queue:
+    def __init__(self):
+        self.queue = []
+    def put(self,elem):
+        self.queue.insert(0,elem)
+    def get(self):
+        if len(self.queue) > 0:
+            elem = self.queue[-1]
+            del self.queue[-1]
+            return elem
+        else:
+            raise QueueError
+
+</codep></p>
+
+
+
+<br><br>
+
+<h2>Várható kimenet</h2>
+
+<p><codep>1
+dog
+False
+Queue empty</codep></p>
+
+
+<sampleSolution>class QueueError(IndexError):
+    pass
+
+
+class Queue:
+    def __init__(self):
+        self.queue = []
+    def put(self,elem):
+        self.queue.insert(0,elem)
+    def get(self):
+        if len(self.queue) > 0:
+            elem = self.queue[-1]
+            del self.queue[-1]
+            return elem
+        else:
+            raise QueueError
+
+
+class SuperQueue(Queue):
+    def isempty(self):
+        return len(self.queue) == 0
+
+
+que = SuperQueue()
+que.put(1)
+que.put("dog")
+que.put(False)
+for i in range(4):
+    if not que.isempty():
+        print(que.get())
+    else:
+        print("Queue empty")
+
+</sampleSolution>
+
+<br><br>
+
+<labMode>true</labMode>
+</problem>

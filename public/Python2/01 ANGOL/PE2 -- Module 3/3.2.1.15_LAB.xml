@@ -1,0 +1,123 @@
+<problem chapter='3' section='2' slide='1' problem='15' title="LAB: Queue aka FIFO">
+
+<!--
+Update history:
+2020-01-01 Syslaw (file created)
+2020-11-16 Grzegorz (review, PEP-8 compliance check)
+-->
+
+<code>class QueueError(???):  # Choose base class for the new exception.
+    #
+    #  Write code here
+    #
+
+
+class Queue:
+    def __init__(self):
+        #
+        # Write code here
+        #
+
+    def put(self, elem):
+        #
+        # Write code here
+        #
+
+    def get(self):
+        #
+        # Write code here
+        #
+
+
+que = Queue()
+que.put(1)
+que.put("dog")
+que.put(False)
+try:
+    for i in range(4):
+        print(que.get())
+except:
+    print("Queue error")
+
+</code>
+
+<span class="label" style="background-color:rgb(205, 168, 105);"><b>LAB</b></span>
+
+<br><br>
+
+<h2>Estimated time</h2>
+<p>20-45 minutes</p>
+
+<h2>Level of difficulty</h2>
+<p>Easy/Medium</p>
+
+<h2>Objectives</h2>
+<ul>
+<li>improving the student's skills in defining classes from scratch;</li>
+<li>implementing standard data structures as classes.</li>
+</ul>
+
+<h2>Scenario</h2>
+<p>As you already know, a <i>stack</i> is a data structure realizing the LIFO (Last In – First Out) model. It's easy and you've already grown perfectly accustomed to it.</p>
+
+<p>Let's try something new now. A <i>queue</i> is a data model characterized by the term <b>FIFO: First In – Fist Out</b>. Note: a regular queue (line) you know from shops or post offices works exactly in the same way – a customer who came first is served first too.</p>
+
+<p>Your task is to implement the <codel>Queue</codel> class with two basic operations:</p>
+<ul>
+<li><codel>put(element)</codel>, which puts an element at end of the queue;
+<li><codel>get()</codel>, which takes an element from the front of the queue and returns it as the result (the queue cannot be empty to successfully perform it.)
+</ul>
+
+<p>Follow the hints:</p>
+<ul>
+<li>use a list as your storage (just like we did with the stack)</li>
+<li><codel>put()</codel> should append elements to the beginning of the list, while <codel>get()</codel> should remove the elements from the end of the list;</li>
+<li>define a new exception named <codel>QueueError</codel> (choose an exception to derive it from) and raise it when <codel>get()</codel> tries to operate on an empty list.</li>
+</ul>
+
+<p>Complete the code we've provided in the editor. Run it to check whether its output is similar to ours.</p>
+
+<h2>Expected output</h2>
+
+<p><codep>1
+dog
+False
+Queue error</codep></p>
+
+
+<sampleSolution>class QueueError(IndexError):
+    pass
+
+
+class Queue:
+    def __init__(self):
+        self.queue = []
+
+    def put(self, elem):
+        self.queue.insert(0, elem)
+
+    def get(self):
+        if len(self.queue) > 0:
+            elem = self.queue[-1]
+            del self.queue[-1]
+            return elem
+        else:
+            raise QueueError
+
+
+que = Queue()
+que.put(1)
+que.put("dog")
+que.put(False)
+try:
+    for i in range(4):
+        print(que.get())
+except:
+    print("Queue error")
+
+</sampleSolution>
+
+<br><br>
+
+<labMode>true</labMode>
+</problem>

@@ -1,0 +1,133 @@
+<problem chapter='3' section='1' slide='1' problem='8' title='SZAKASZ ÖSSZEFOGLALÁS'>
+
+<!--
+Update history:
+2020-09-04 Slawek (first version)
+2020-09-30 Grzegorz (reviewed)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<h1>A legfontosabb tudnivalók</h1>
+
+<br>
+
+
+<p>1. Az <b>osztály</b> egy (többé-kevésbé absztrakt) ötlet, amelyből számos inkarnáció hozható létre - egy ilyen megvalósulást <b>objektumnak</b> nevezünk.</p>
+<br>
+
+<p>2. Amikor egy osztály egy másik osztályból származik, a kapcsolatukat <b>öröklésnek</b> nevezzük.  A másik osztályból származtatott osztályt <b>alosztálynak</b> hívjuk. Ennek a kapcsolatnak a másik oldalát <b>ősosztálynak (más néven szuperosztálynak)</b> nevezzük. Egy ilyen kapcsolat bemutatásának egyik módja az <b>öröklési diagram</b>, ahol:</p>
+<ul>
+    <li>a szuperosztályok mindig az alosztályaik <b>felett</b> jelennek meg;</li>
+    <li>az osztályok közötti kapcsolatokat az <b>alosztályból a szuperosztály felé </b>mutató nyilakkal ábrázoljuk.</li>
+</ul>
+<br>
+
+<p>3. Az objektumok jellemzői:</p>
+<ul>
+    <li>egy olyan <b>név</b> amely azonosítja őket, és lehetővé teszi számunkra, hogy megkülönböztessük őket;</li>
+<li><b>tulajdonságok </b> halmaza (ez lehet üres);</li>
+<li><b>metódusok</b> halmaza (szintén lehet üres);</li>
+</ul>
+<br>
+
+<p>4. Egy Python-osztály definiálásához a <codel>class</codel> kulcsszót kell használnunk. Például:</p>
+
+<codep class="syntax-color copy">class This_Is_A_Class:
+     pass
+</codep>
+<br>
+
+<p>5. Az előzőleg definiált osztály objektumának létrehozásához az osztályt úgy kell használnia, mintha az egy függvény lenne. Például:</p>
+
+<codep class="syntax-color copy">this_is_an_object = This_Is_A_Class()
+</codep>
+<br>
+
+
+</div>
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+
+<p><strong>1. gyakorlat</strong></p>
+<p>Ha feltételezzük, hogy a pitonok, a viperák és a kobrák ugyanannak az ősosztálynak az alosztályai, hogyan neveznéd ezt a szuperosztályt?</p>
+
+
+
+<button class="button tiny" onclick="solution('sol')">Ellenőrzés</button>
+<br>
+
+<p id="sol" style="display: none;">
+    Kígyók, hüllők, gerincesek, állatok – bármelyik válasz elfogadható.
+</p>
+
+<script>
+function solution (id) {
+    var element = document.getElementById(id);
+    
+if (element.style.display === "none") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
+    }
+}
+</script>
+
+<br>
+
+
+
+<p><strong>2. gyakorlat</strong></p>
+<p>Próbáld megnevezni néhány alosztályát a piton osztálynak!</p>
+
+<button class="button tiny" onclick="solution('sol2')">Ellenőrzés</button>
+
+<br>
+
+<p id="sol2" style="display: none;">
+    Indiai piton, afrikai kőpiton, golyós piton, burmai piton – a lista elég hosszú.
+</p>
+
+
+<br>
+
+
+
+
+<p><strong>3. gyakorlat</strong></p>
+<p>El tudod nevezni az egyik osztályodat csak "class"-nak?</p>
+
+
+
+<button class="button tiny" onclick="solution('sol3')">Ellenőrzés</button>
+
+<br>
+
+<p id="sol3" style="display: none;">
+Nem, nem tudjuk, mert a <codel>class</codel> egy kulcsszó
+</p>
+
+
+
+<br>
+
+
+</div>
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

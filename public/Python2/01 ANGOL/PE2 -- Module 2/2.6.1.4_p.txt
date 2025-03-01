@@ -1,0 +1,39 @@
+<problem chapter='2' section='6' slide='1' problem='4' title="Errors – the programmer's daily bread">
+
+<!--
+Update history:
+2020-09-21 Grzegorz (review, PEP-8 compliance check, update, title correction)
+-->
+
+<code>my_list = []
+x = my_list[0]
+
+</code>
+
+
+
+<h1>Exceptions: continued</h1>
+
+<p>Look at the code in the editor. What will happen when you run it? Check.</p>
+
+ 
+<p>You will see the following message in reply:</p>
+
+<codep>Traceback (most recent call last):
+File "lst.py", line 2, in <module>
+x = list[0]
+<mark style="background-color:#e6f2ff;">IndexError:</mark> list index out of range</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+ 
+
+<p>This is the <b><font face="Courier New">IndexError</font></b>.</p>
+
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

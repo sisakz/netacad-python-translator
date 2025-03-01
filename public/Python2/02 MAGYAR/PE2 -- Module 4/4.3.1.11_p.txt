@@ -1,0 +1,125 @@
+<problem chapter='4' section='3' slide='1' problem='11' title='Valós fájlok kezelése'>
+
+<!--
+Update history:
+2020-10-07 Grzegorz (review, PEP-8 compliance check)
+2020-10-29 Grzegorz (code fix: strrerror instead of strerr)
+2021-07-07 Grzegorz (code corrections - important!)
+-->
+
+<code>from os import strerror
+
+data = bytearray(10)
+
+for i in range(len(data)):
+    data[i] = 10 + i
+
+try:
+    binary_file = open('file.bin', 'wb')
+    binary_file.write(data)
+    binary_file.close()
+except IOError as e:
+    print("I/O error occurred:", strerror(e.errno))
+
+# Your code that reads bytes from the stream should go here.
+
+</code>
+
+
+
+<h1>Bájttömb (folytatás)</h1>
+
+
+<p>Tehát, hogyan írunk ki egy bájttömböt bináris fájlba?</p>
+
+<p>Nézd meg a kódot a szerkesztőben. Elemezzük:</p>
+
+<ul>
+    <li>először is inicializáljuk a <codel>bytearray</codel>-t <codel>10</codel>-től kezdődő értékekkel; ha azt akarjuk, hogy a fájl tartalma jól olvasható legyen, akkor a <codel>10</codel>-et helyettesítsük például az <codel>ord('a')</codel>-val. Így olyan bájtokat kapunk, amelyek az ASCII-kódtábla ábécés részén helyezkednek el (ne higgyük, hogy ettől a fájl szöveges lesz - még mindig <b>bináris</b>, mivel <codel>wb</codel> jelzőbittel hoztuk létre);</li>
+
+
+
+    <li>ezután létrehozzuk a fájlt az <codel>open()</codel> függvénnyel - az egyetlen különbség az előző változatokhoz képest a <codel>b</codel> jelzőbitet tartalmazó megnyitási mód;</li>
+
+
+
+    <li>a <codel>write()</codel> metódus átveszi az argumentumát (<codel>bytearray</codel>) és (egyben) elküldi a fájlba;</li>
+
+
+
+    <li>a fájlobjektumot ezután rutinszerűen lezárjuk.</li>
+</ul>
+
+ 
+
+<p>A <codel>write()</codel>metódus a sikeresen kiírt bájtok számát adja vissza.</p>
+
+<p>Ha ez az érték eltér a metódus argumentumainak hosszától, akkor az írási hibát jelenthet.</p>
+
+<p>Ebben az esetben nem használtuk fel az eredményt - ez nem biztos, hogy minden esetben helyes.</p>
+
+ 
+
+<p>Próbáld meg futtatni a kódot, és elemezd az újonnan létrehozott kimeneti fájl tartalmát.</p>
+
+<p>A következő lépésben használni fogjuk.</p>
+
+<br>
+
+
+<h2>Hogyan olvashatunk bájtokat egy fájlobjektumból</h2>
+
+
+<p>A bináris fájlból történő olvasás egy speciális <codel>readinto()</codel> nevű metódus használatát igényli. Ez a metódus nem hoz létre új bájttömb objektumot, hanem egy korábban létrehozottba tölti a bináris fájlból vett értékeket.</p>
+
+<p>Megjegyzés:</p>
+
+<ul>
+    <li>a metódus a sikeresen beolvasott bájtok számát adja vissza;</li>
+
+
+    <li>a metódus megpróbálja kitölteni az argumentumként kapott bájttömb objektumban rendelkezésre álló helyet; ha több adat van a fájlban, mint amennyi hely az argumentumként kapott objektumban, akkor az olvasási művelet a fájl vége előtt leáll; ellenkező esetben a metódus eredménye jelezheti, hogy a bájttömb csak részlegesen lett kitöltve (az eredmény is mutatja, és a tömbnek az újonnan beolvasott tartalom által nem használt része érintetlen marad).</li>
+</ul>
+ 
+
+<p>Nézd meg a teljes kódot:</p>
+
+<codep class="syntax-color copy line-numbers">from os import strerror
+
+data = bytearray(10)
+
+try:
+    binary_file = open('file.bin', 'rb')
+    binary_file.readinto(data)
+    binary_file.close()
+
+    for b in data:
+        print(hex(b), end=' ')
+except IOError as e:
+    print("I/O error occurred:", strerror(e.errno))
+</codep>
+
+<br>
+ 
+
+<p>Elemezzük:</p>
+
+<ul>
+    <li>először megnyitjuk a fájlt (az előző kóddal létrehozottat) <codel>rb</codel> móddal;</li>
+
+
+    <li>majd beolvassuk a tartalmát a <codel>data</codel> nevű, tíz bájt méretű bájttömbbe;</li>
+
+    <li>végül kiírjuk a bájttömb tartalmát - az, amire számítottál?</li>
+</ul>
+
+<p>Futtasd a kódot, és ellenőrizd, hogy működik-e.</p>
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

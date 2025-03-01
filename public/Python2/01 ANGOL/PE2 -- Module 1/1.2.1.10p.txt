@@ -1,0 +1,73 @@
+<problem chapter='1' section='2' slide='1' problem='10' title='Useful modules | platform'>
+
+<!--
+Update history:
+2020-08-31 Grzegorz (review, PEP-8 compliance check, update)
+2021-06-29 Grzegorz (corrections)
+-->
+
+<code>from platform import platform
+
+print(platform())
+print(platform(1))
+print(platform(0, 1))
+
+</code>
+
+<h1>Selected functions from the <font face="Courier New">platform</font> module</h1>
+
+<p><b>The <font face="Courier New">platform</font> function</b></p>
+
+<p>The <codel>platform</codel> module lets you access the underlying platform's data, in other words, the hardware, operating system, and interpreter version information.</p>
+
+<p>There is a function that can show you all the underlying layers in one glance, also called <codel>platform</codel>. It just returns a string describing the environment; thus, its output is rather addressed to humans than to automated processing (you'll see it soon).</p>
+
+<p>This is how you can invoke it:</p>
+
+<p><codep class="syntax-color">platform(aliased = False, terse = False)
+</codep></p>
+
+<p>And now:</p>
+<ul>
+<li><codel>aliased</codel> &rarr; when set to <codel>True</codel> (or any non-zero value) it may cause the function to present the alternative underlying layer names instead of the common ones;</li>
+<li><codel>terse</codel> &rarr; when set to <codel>True</codel> (or any non-zero value) it may convince the function to present a briefer form of the result (if possible)</li>
+</ul>
+ 
+
+<p>We ran our sample program using three different platforms – this is what we got:</p>
+
+<p><strong>Intel x86 + Windows &reg; Vista (32 bit)</strong>:</p>
+
+<codep>Windows-Vista-6.0.6002-SP2
+Windows-Vista-6.0.6002-SP2
+Windows-Vista</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+
+
+<p><strong>Intel x86 + Gentoo Linux (64 bit)</strong>:</p>
+
+<codep>Linux-3.18.62-g6-x86_64-Intel-R-_Core-TM-_i3-2330M_CPU_@_2.20GHz-with-gentoo-2.3
+Linux-3.18.62-g6-x86_64-Intel-R-_Core-TM-_i3-2330M_CPU_@_2.20GHz-with-gentoo-2.3
+Linux-3.18.62-g6-x86_64-Intel-R-_Core-TM-_i3-2330M_CPU_@_2.20GHz-with-glibc2.3.4</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+
+<p><strong>Raspberry PI2 + Raspbian Linux (32 bit)</strong>:</p>
+
+<codep>Linux-4.4.0-1-rpi2-armv7l-with-debian-9.0
+Linux-4.4.0-1-rpi2-armv7l-with-debian-9.0
+Linux-4.4.0-1-rpi2-armv7l-with-glibc2.9</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+
+<p>You can also run the sample program in IDLE on your local machine to check what output you will have.</p>
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

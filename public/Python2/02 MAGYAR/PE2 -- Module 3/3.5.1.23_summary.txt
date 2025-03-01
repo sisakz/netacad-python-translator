@@ -1,0 +1,153 @@
+<problem chapter='3' section='5' slide='1' problem='23' title='SZAKASZ ÖSSZEFOGLALÁS 2/2'>
+
+<!--
+Update history:
+2020-09-07 Slawek (first version)
+2020-10-01 Grzegorz (file creation, reviewed, PEP-8 compliance control)
+-->
+
+<div class="small-12 large-6 columns">
+
+<h1>Gyakorlatok</h1>
+
+
+<p><b>Forgatókönyv</b></p>
+
+<p>együk fel, hogy a következõ kódrészlet sikeresen végrehajtásra került:</p>
+<codep class="syntax-color line-numbers copy">class Dog:
+    kennel = 0
+    def __init__(self, breed):
+        self.breed = breed
+        Dog.kennel += 1
+    def __str__(self):
+        return self.breed + " says: Woof!"
+
+
+class SheepDog(Dog):
+    def __str__(self):
+        return super().__str__() + " Don't run away, Little Lamb!"
+
+
+class GuardDog(Dog):
+    def __str__(self):
+        return super().__str__() + " Stay where you are, Mister Intruder!"
+
+
+rocky = SheepDog("Collie")
+luna = GuardDog("Dobermann")
+</codep>
+<br>
+
+<p>Most válaszolj az 1-4. feladat kérdéseire.</p>
+
+<br>
+
+
+</div>
+<div class="small-12 large-6 columns">
+
+<br>
+
+<script>
+function solution (id) {
+    var element = document.getElementById(id);
+    
+if (element.style.display === "none") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
+    }
+}
+</script>
+
+<p><strong>1. gyakorlat</strong></p>
+<p>
+    Mi a következõ kódrészlet várható kimenete?<br><br>
+    <codep>
+        print(rocky)
+        print(luna)
+
+    </codep>
+</p>
+
+<button class="button tiny" onclick="solution('sol1')">Ellenõrzés</button>
+
+<p id="sol1" style="display: none;">
+<codep>Collie says: Woof! Don't run away, Little Lamb!
+Dobermann says: Woof! Stay where you are, Mister Intruder!
+</codep></p>
+
+
+<br><br>
+
+
+<p><strong>2. gyakorlat</strong></p>
+<p>
+    Mi a következõ kódrészlet várható kimenete?<br><br>
+    <codep>
+        print(issubclass(SheepDog, Dog), issubclass(SheepDog, GuardDog))
+        print(isinstance(rocky, GuardDog), isinstance(luna, GuardDog))
+
+    </codep>
+</p>
+
+
+<button class="button tiny" onclick="solution('sol2')">Ellenõrzés</button>
+<p id="sol2" style="display: none;"><codep>True False
+False True
+</codep></p>
+
+
+
+<br><br>
+
+<p><strong>3. gyakorlat</strong></p>
+<p>
+    Mi a következõ kódrészlet várható kimenete?<br><br>
+    <codep>
+        print(luna is luna, rocky is luna)
+        print(rocky.kennel)
+
+    </codep>
+</p>
+
+
+<button class="button tiny" onclick="solution('sol3')">Ellenõrzés</button>
+<p id="sol3" style="display: none;"><codep>True False
+2
+</codep></p>
+
+
+
+<br><br>
+
+<p><strong>4. gyakorlat</strong></p>
+<p>
+    Definiáljuk a <codel>SheepDog</codel> [juhászkutya] alosztályát <codel>LowlandDog</codel> [alföldi juhászkutya] néven, és szereljük fel egy <codel>__str__()</codel> metódussal, amely felülírja az azonos nevû öröklött metódust. Az új kutya <codel>__str__()</codel> metódusának a " Woof! I don't like mountains!" szöveggel kell visszatérnie.
+</p>
+
+
+
+<button class="button tiny" onclick="solution('sol4')">Ellenõrzés</button>
+<p id="sol4" style="display: none;"><codep>class LowlandDog(SheepDog):
+	def __str__(self):
+		return Dog.__str__(self) + " I don't like mountains!"
+		
+</codep></p>
+
+
+
+<br>
+
+</div>
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>
+
+

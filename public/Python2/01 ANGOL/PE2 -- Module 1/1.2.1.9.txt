@@ -1,0 +1,81 @@
+<problem chapter='1' section='2' slide='1' problem='9' title='Useful Modules | platform'>
+
+<!--
+Update history:
+2020-08-31 Grzegorz (review, PEP-8 compliance check, update)
+2021-06-29 Grzegorz (corrections)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h1>How to know where you are?</h1>
+
+<p>Sometimes, it may be necessary to find out information unrelated to Python. For example, you may need to know the location of your program within the greater environment of the computer.</p>
+
+<p>Imagine your program's environment as a pyramid consisting of a number of layers or platforms.</p>
+
+<center><img src="/uploads/media/default/0001/01/8396e08d1b353074e67e4fd3268edf08b12afc3b.png" width="70%" alt="Program's environment layers"></center>
+
+<br><br>
+
+<p>The layers are:</p>
+
+<ul>
+<li>your (running) code is located at the top of it;</li>
+<li>Python, or more precisely, its runtime environment, lies directly below it;</li>
+<li>the next layer of the pyramid is filled with the OS (operating system) – Python's environment provides some of its functionalities using the operating system's services; Python, although very powerful, isn't omnipotent – it's forced to use many helpers if it's going to process files or communicate with physical devices;</li>
+<li>the bottom-most layer is hardware – the processor (or processors), network interfaces, human interface devices (mouse, keyboards, etc.) and all other machinery needed to make the computer run; the OS knows how to drive it, and uses lots of tricks to conduct all parts in a consistent rhythm.</li>
+</ul>
+ 
+
+
+
+
+
+<br>
+
+<br>
+
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+
+<p>This means than some of your (or rather your program's) actions have to travel a long way to be successfully performed – imagine that:</p>
+
+<ul>
+<li><strong>your code</strong> wants to create a file, so it invokes one of Python's functions;</li>
+<li><strong>Python</strong> accepts the order, rearranges it to meet local OS requirements, which is like putting the stamp "approved" on your request, and sends it down (this may remind you of a chain of command)</li>
+<li>the <strong>OS</strong> checks if the request is reasonable and valid (e.g., whether the file name conforms to some syntax rules) and tries to create the file; such an operation, seemingly very simple, isn't atomic – it consists of many minor steps taken by...</li>
+<li>the <strong>hardware</strong>, which is responsible for activating storage devices (hard disk, solid state devices, etc.) to satisfy the OS's needs.</li>
+</ul>
+ 
+
+<p>Usually, you're not aware of all that fuss – you want the file to be created and that's that.</p>
+
+<p>But sometimes you want to know more – for example, the name of the OS which hosts Python, and some characteristics describing the hardware that hosts the OS.</p>
+
+<p>There is a module providing some means to allow you to know where you are and what components work for you. The module is named <b>platform</b>. We'll show you some of the functions it provides to you.</p>
+
+</div>
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

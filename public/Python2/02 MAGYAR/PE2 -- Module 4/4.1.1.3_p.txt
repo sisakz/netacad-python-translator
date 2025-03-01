@@ -1,0 +1,71 @@
+<problem chapter='4' section='1' slide='1' problem='3' title='Generátor és closure'>
+
+<!--
+Update history:
+2020-10-05 Grzegorz (review, PEP-8 compliance check)
+2021-07-07 Grzegorz (IMPORTANT – code corrections)
+-->
+
+<code>class Fib:
+    def __init__(self, nn):
+        self.__n = nn
+        self.__i = 0
+        self.__p1 = self.__p2 = 1
+
+    def __iter__(self):
+        print("Fib iter")
+        return self
+
+    def __next__(self):
+        self.__i += 1
+        if self.__i > self.__n:
+            raise StopIteration
+        if self.__i in [1, 2]:
+            return 1
+        ret = self.__p1 + self.__p2
+        self.__p1, self.__p2 = self.__p2, ret
+        return ret
+
+
+class Class:
+    def __init__(self, n):
+        self.__iter = Fib(n)
+
+    def __iter__(self):
+        print("Class iter")
+        return self.__iter
+
+
+object = Class(8)
+
+for i in object:
+    print(i)
+
+</code>
+
+
+
+<h1>Generátorok - Hol találhatók? (folytatás)</h1>
+
+
+<p>Az előző példa egy olyan megoldást mutat, ahol az <strong>iterátor objektum egy összetett osztály része</strong>.</p>
+
+<p>A kód nem igazán kifinomult, de a koncepciót érthetően mutatja be.</p>
+
+<p>Nézd meg a kódot a szerkesztőablakban.</p>
+ 
+
+<p>A <codel>Fib</codel> iterátort egy másik osztályba építettük be (mondhatjuk, hogy a <codel>Class</codel> osztályba illesztettük). A <codel>Class</codel> objektumával együtt példányosul.</p>
+
+<p>Az osztály objektuma akkor (és csak akkor) használható iterátorként, ha megfelelően válaszol az <codel>__iter__</codel> hívásra - ez az osztály képes erre, és ha így hívják meg, akkor egy olyan objektummal válaszol, amely megfelel az iterációs protokollnak.</p>
+
+<p>Ennek megfelelően a kód kimenete ugyanaz, mint korábban, bár a <codel>Fib</codel> osztály objektumát nem használjuk explicit módon a <codel>for</codel> ciklusban.</p>
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

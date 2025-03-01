@@ -1,0 +1,37 @@
+<problem chapter='4' section='6' slide='1' problem='4' title='The calendar module'>
+
+<!--
+Update history:
+2020-03-30 Sebastian (first version)
+2020-10-12 Grzegorz (file creation, review, PEP-8 compliance check)
+-->
+
+<code>import calendar
+
+calendar.setfirstweekday(calendar.SUNDAY)
+calendar.prmonth(2020, 12)
+
+</code>
+
+<h1>The <font face="Courier New">setfirstweekday()</font> function</h1>
+
+<p>As you already know, by default in the <codel>calendar</codel> module, the first day of the week is Monday. However, you can change this behavior using a function called <codel>setfirstweekday</codel>.</p>
+
+<p>Do you remember the table showing the days of the week and their representation in the form of integer values? It's time to use it, because the <codel>setfirstweekday</codel> method requires a parameter expressing the day of the week in the form of an integer value. Take a look at the example in the editor.</p>
+
+
+<p>The example uses the <codel>calendar.SUNDAY</codel> constant, which contains a value of <i>6</i>. Of course, you could pass this value directly to the <codel>setfirstweekday</codel> function, but the version with a constant is more elegant.</p>
+
+<p>As a result, we get a calendar showing the month of December 2020, in which the first day of all the weeks is Sunday.</p>
+
+
+
+
+<br>
+<br>
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

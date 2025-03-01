@@ -1,0 +1,46 @@
+﻿<problem chapter='4' section='5' slide='1' problem='16' title='A datetime és time modul (folytatás)'>
+
+<!--
+Update history:
+2020-03-30 Sebastian (first version)
+2020-10-12 Grzegorz (file creation, review, PEP-8 compliance check)
+-->
+
+<code>from datetime import time
+from datetime import datetime
+
+t = time(14, 53)
+print(t.strftime("%H:%M:%S"))
+
+dt = datetime(2020, 11, 4, 14, 53)
+print(dt.strftime("%y/%B/%d %H:%M:%S"))
+
+</code>
+
+
+
+<h1>Dátum és idő formázása (2. rész)</h1>
+
+<p>Az időformázás ugyanúgy működik, mint a dátumformázás, de megfelelő direktívák használatát igényli. Nézzünk meg közelebbről néhányat közülük a szerkesztőben.</p>
+
+<p>Eredmény:</p>
+<codep>14:53:00
+20/November/04 14:53:00</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+
+<p>A használt formátumok közül az első csak az időre vonatkozik. Mint sejthető, a <codel>%H</codel> az órát vezető nullával feltöltve kétszámjegyen, a <codel>%M</codel> a percet két számjegyen, míg a <codel>%S</codel> a másodpercet két számjegyen adja vissza. Példánkban a <codel>%H</codel> helyébe 14, a <codel>%M</codel> helyébe 53, a <codel>%S</codel> helyébe pedig 00 lép.</p>
+
+<p>A második használt formátum a dátum és az idő direktívákat kombinálja. Két új direktíva van, a <codel>%Y</codel> és a <codel>%B</codel>. A <codel>%Y</codel> direktíva az évszázad nélküli évet adja vissza vezető nullával kiegészített számként (példánkban 20). A <codel>%B</codel> a hónapot a helyiérték teljes neveként adja vissza (példánkban November).</p>
+
+<p>Általánosságban elmondható, hogy a formátumok létrehozásában nagy szabadságod van, de ügyelj arra, hogy a direktívákat megfelelően használd. Gyakorlatként ellenőrizheted, mi történik, ha megpróbálod használni a <codel>%Y</codel> direktívát a time objektum <i>strftime</i> metódusának átadott formátumban. Próbáld meg magad kitalálni, hogy miért kaptad ezt az eredményt. Sok sikert!</p>
+
+
+<br>
+<br>
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

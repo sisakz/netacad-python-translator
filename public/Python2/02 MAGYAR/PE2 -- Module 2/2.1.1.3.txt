@@ -1,0 +1,106 @@
+<problem chapter='2' section='1' slide='1' problem='3' title='Karakterek és karakterláncok vs. számítógépek'>
+
+<!--
+Update history:
+2020-09-21 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h1>Unicode</h1>
+
+<p>A kódlapok egy ideig segítettek a számítástechnikai iparnak az I18N-problémák megoldásában, de hamarosan kiderült, hogy nem jelentenek tartós megoldást.</p>
+
+<p>Az <strong>Unicode</strong> volt az a koncepció, amely hosszú távon megoldotta a problémát.</p>
+
+<img src="/uploads/media/default/0001/01/eba16b61c5b6e2aa7fad8057aadb1783d407dca3.png" width="80%" alt="UNICODE">
+<br><br>
+
+    <p><strong>Az Unicode több mint egymillió kódponthoz rendel egyedi (egyértelmű) karaktereket (betűket, kötőjeleket, ideogramokat stb.)</strong>. Az első 128 Unicode-kódpont megegyezik az ASCII-vel, az első 256 Unicode-kódpont pedig az ISO/IEC 8859-1 kódlapjával (a nyugat-európai nyelvek számára tervezett kódlap).</p>
+
+
+<h2>UCS-4</h2>
+
+<p>Az Unicode-szabvány nem mond semmit arról, hogy hogyan kell kódolni és tárolni a karaktereket a memóriában és a fájlokban. Csak megnevezi az összes rendelkezésre álló karaktert, és síkokhoz (hasonló eredetű, alkalmazású vagy jellegű karakterek csoportja) rendeli őket.</p>
+
+<img src="/uploads/media/default/0001/01/98a64a2b88df12f5d252d13e44349e2ec4f10ce4.png" width="80%" alt="UCS-4">
+<br><br>
+
+    <p>Több szabvány is létezik, amely leírja az Unicode tényleges számítógépekben és számítógépes tárolórendszerekben történő implementálására használt technikákat. Ezek közül a legáltalánosabb az <strong>UCS-4</strong>.</p>
+
+<p>A név az <strong>Universal Character Set (egyetemes karakterkészlet)</strong> szóból származik.</p>
+
+<p><strong>Az UCS-4 32 bitet (négy bájt) használ minden egyes karakter tárolására</strong>, és a kód csak az Unicode kódpontok egyedi száma. Az UCS-4 kódolt szöveget tartalmazó fájl BOM (byte order mark) jelöléssel kezdődhet, amely egy nem nyomtatható bitkombináció, amely a fájl tartalmának jellegét hirdeti. Egyes segédprogramok megkövetelhetik ezt.</p>
+
+
+
+<br><br>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+
+<p>Mint látható, az UCS-4 meglehetősen pazarló szabvány - négyszeresére növeli a szöveg méretét a szabványos ASCII-hez képest. Szerencsére vannak intelligensebb formái az Unicode szövegek kódolásának.</p>
+
+<h2>UTF-8</h2>
+
+<p>Az egyik leggyakrabban használt az <strong>UTF-8</strong>.</p>
+
+<p>A név az <strong>Unicode Transformation Format</strong> szóból származik.</p>
+
+<p>A koncepció nagyon okos. <strong>Az UTF-8 annyi bitet használ az egyes kódpontokhoz, amennyire valóban szükség van azok ábrázolásához</strong>.</p>
+
+<img src="/uploads/media/default/0001/01/adaa26db7139964a0e75abd086569ab99b969e2d.png" width="80%" alt="UTF-8 - humorous graphics">
+<br><br>
+
+<p>Például:</p>
+
+<ul>
+    <li>minden latin karakter (és minden szabványos ASCII karakter) nyolc bitet foglal el;</li>
+    <li>a nem latin betűs karakterek 16 bitet foglalnak el;</li>
+    <li>A CJK (Kína-Japán-Korea) ideográfiák 24 bitet foglalnak el.</li>
+</ul>
+ 
+
+<p>Az UTF-8 által a kódpontok tárolására használt módszer sajátosságai miatt nincs szükség a BOM használatára, de néhány eszköz keresi azt a fájl olvasásakor, és sok szerkesztőprogram beállítja a mentés során.</p>
+
+<p> A Python 3 teljes mértékben támogatja az Unicode és az UTF-8 kódot:</p>
+
+<ul>
+    <li>Unicode/UTF-8 kódolású karaktereket használhat változók és más entitások elnevezésére;</li>
+    <li>minden be- és kimenet során használhatja őket.</li>
+</ul>
+ 
+
+<p>Ez azt jelenti, hogy a Python3 teljesen I18N-esített.</p>
+
+
+<br>
+<br>
+
+</div>
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

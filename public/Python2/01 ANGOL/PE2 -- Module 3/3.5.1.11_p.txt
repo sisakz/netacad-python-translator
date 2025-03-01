@@ -1,0 +1,80 @@
+<problem chapter='3' section='5' slide='1' problem='11' title='OOP Fundamentals: Inheritance'>
+
+<!--
+Update history:
+2020-10-01 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>
+
+class Level1:
+    variable_1 = 100
+    def __init__(self):
+        self.var_1 = 101
+
+    def fun_1(self):
+        return 102
+
+
+class Level2(Level1):
+    variable_2 = 200
+    def __init__(self):
+        super().__init__()
+        self.var_2 = 201
+    
+    def fun_2(self):
+        return 202
+
+
+class Level3(Level2):
+    variable_3 = 300
+    def __init__(self):
+        super().__init__()
+        self.var_3 = 301
+
+    def fun_3(self):
+        return 302
+
+
+obj = Level3()
+
+print(obj.variable_1, obj.var_1, obj.fun_1())
+print(obj.variable_2, obj.var_2, obj.fun_2())
+print(obj.variable_3, obj.var_3, obj.fun_3())
+
+</code>
+
+
+
+<h1>How Python finds properties and methods: continued</h1>
+
+
+<p>It's now possible to formulate a general statement describing Python's behavior.</p>
+
+<P>When you try to access any object's entity, Python will try to (in this order):<p>
+
+<ul>
+<li>find it <strong>inside the object</strong> itself;</li>
+<li>find it <strong>in all classes</strong> involved in the object's inheritance line from bottom to top;</li>
+</ul>
+
+<p>If both of the above fail, an <strong>exception (<codel>AttributeError</codel>) is raised</strong>.</p>
+
+<br>
+
+<p>The first condition may need some additional attention. As you know, all objects deriving from a particular class may have different sets of attributes, and some of the attributes may be added to the object a long time after the object's creation.</p>
+
+<p>The example in the editor summarizes this in a <strong>three-level inheritance line</strong>. Analyze it carefully.</p>
+
+<p>All the comments we've made so far are related to <strong>single inheritance</strong>, when a subclass has exactly one superclass. This is the most common situation (and the recommended one, too).</p>
+
+<p>Python, however, offers much more here. In the next lessons we're going to show you some examples of <strong>multiple inheritance</strong>.</p>
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

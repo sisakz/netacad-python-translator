@@ -1,0 +1,75 @@
+<problem chapter='2' section='6' slide='1' problem='1' title="Errors – the programmer's daily bread">
+
+<!--
+Update history:
+2020-09-21 Grzegorz (review, PEP-8 compliance check, update, title correction)
+-->
+
+<code>import math
+
+x = float(input("Enter x: "))
+y = math.sqrt(x)
+
+print("The square root of", x, "equals to", y)
+
+</code>
+
+
+
+<h1>Errors, failures, and other plagues</h1>
+
+<p><strong>Anything that can go wrong, will go wrong</strong>.</p>
+
+<p>This is Murphy's law, and it works everywhere and always. Your code's execution can go wrong, too. If it can, it will.</p>
+
+<p>Look the code in the editor. There are at least two possible ways it can "go wrong". Can you see them?</p>
+
+<ul>
+
+<li>As a user is able to enter a completely arbitrary string of characters, <strong>there is no guarantee that the string can be converted into a float value</strong> – this is the first vulnerability of the code;</li>
+<li>the second is that the <strong><codel>sqrt()</codel> function fails if it gets a negative argument</strong>.</li>
+</ul>
+ 
+
+<p>You may get one of the following error messages.</p>
+
+<p>Something like this:</p>
+
+<codep>Enter x: Abracadabra
+
+Traceback (most recent call last):
+
+  File "sqrt.py", line 3, in &lt;module&gt;
+
+    x = float(input("Enter x: "))
+
+ValueError: could not convert string to float: 'Abracadabra'</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+
+<p>Or something like this:</p>
+
+<codep>Enter x: -1
+
+Traceback (most recent call last):
+
+  File "sqrt.py", line 4, in &lt;module&gt;
+
+    y = math.sqrt(x)
+
+ValueError: math domain error</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+ 
+
+<p>Can you protect yourself from such surprises? Of course you can. Moreover, you have to do it in order to be considered a good programmer.</p>
+
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

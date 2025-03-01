@@ -1,0 +1,57 @@
+<problem chapter='4' section='5' slide='1' problem='11' title='The time module'>
+
+<!--
+Update history:
+2020-03-30 Sebastian (first version)
+2020-10-11 Grzegorz (file creation, review, PEP-8 compliance check)
+-->
+
+<code>import time
+
+timestamp = 1572879180
+st = time.gmtime(timestamp)
+
+print(time.asctime(st))
+print(time.mktime((2019, 11, 4, 14, 53, 0, 0, 308, 0)))
+
+</code>
+
+
+
+<h1>The <font face="Courier New">asctime()</font> and <font face="Courier New">mktime()</font> functions</h1>
+
+
+<p>The <codel>time</codel> module has functions that expect a <i>struct_time</i> object or a tuple that stores values according to the indexes presented when discussing the <i>struct_time</i> class. Run the example in the editor.</p>
+
+
+<p>Result:</p>
+
+<codep>Mon Nov  4 14:53:00 2019
+1572879180.0</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+<p>The first of the functions, called <codel>asctime</codel>, converts a <i>struct_time</i> object or a tuple to a string. Note that the familiar <codel>gmtime</codel> function is used to get the <i>struct_time</i> object. If you don't provide an argument to the <codel>asctime</codel> function, the time returned by the <codel>localtime</codel> function will be used.</p>
+
+<p>The second function called <codel>mktime</codel> converts a <i>struct_time</i> object or a tuple that expresses the local time to the number of seconds since the Unix epoch. In our example, we passed a tuple to it, which consists of the following values:</p>
+
+<p style="font-family: 'Courier New'">2019 => tm_year<br>
+11 => tm_mon<br>
+4 => tm_mday<br>
+14 => tm_hour<br>
+53 => tm_min<br>
+0 => tm_sec<br>
+0 => tm_wday<br>
+308 => tm_yday<br>
+0 => tm_isdst</p>
+
+
+
+
+<br>
+<br>
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

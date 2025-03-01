@@ -1,0 +1,126 @@
+<problem chapter='3' section='3' slide='1' problem='1' title='OOP: Properties'>
+
+<!--
+Update history:
+2020-09-30 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h1>Instance variables</h1>
+
+<p>In general, a class can be equipped with two different kinds of data to form a class's properties. You already saw one of them when we were looking at stacks.</p>
+
+<p>This kind of class property exists when and only when it is explicitly created and added to an object. As you already know, this can be done during the object's initialization, performed by the constructor.</p>
+
+<p>Moreover, it can be done at any moment of the object's life. Furthermore, any existing property can be removed at any time.</p>
+
+<p>Such an approach has some important consequences:</p>
+
+<ul>
+<li>different objects of the same class <strong>may possess different sets of properties</strong>;</li>
+<li>there must be a way to <strong>safely check if a specific object owns the property</strong> you want to utilize (unless you want to provoke an exception – it's always worth considering)</li>
+<li>each object <strong>carries its own set of properties</strong> – they don't interfere with one another in any way.</li>
+</ul>
+ 
+
+<p>Such variables (properties) are called <strong>instance variables</strong>.</p>
+
+<p>The word <i>instance</i> suggests that they are closely connected to the objects (which are class instances), not to the classes themselves. Let's take a closer look at them.</p>
+
+<p>Here is an example:</p>
+
+<codep class="syntax-color copy line-numbers">class ExampleClass:
+    def __init__(self, val = 1):
+        self.first = val
+
+    def set_second(self, val):
+        self.second = val
+
+
+example_object_1 = ExampleClass()
+example_object_2 = ExampleClass(2)
+
+example_object_2.set_second(3)
+
+example_object_3 = ExampleClass(4)
+example_object_3.third = 5
+
+print(example_object_1.__dict__)
+print(example_object_2.__dict__)
+print(example_object_3.__dict__)
+</codep>
+
+<br> 
+<br>
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+
+
+<p>It needs one additional explanation before we go into any more detail. Take a look at the last three lines of the code.</p>
+
+<p>Python objects, when created, are gifted with a <strong>small set of predefined properties and methods</strong>. Each object has got them, whether you want them or not. One of them is a variable named <codel>__dict__</codel> (it's a dictionary).</p>
+
+<p>The variable contains the names and values of all the properties (variables) the object is currently carrying. Let's make use of it to safely present an object's contents.</p>
+
+ 
+<p>Let's dive into the code now:</p>
+
+<ul>
+<li>the class named <codel>ExampleClass</codel> has a constructor, which <strong>unconditionally creates an instance variable</strong> named <codel>first</codel>, and sets it with the value passed through the first argument (from the class user's perspective) or the second argument (from the constructor's perspective); note the default value of the parameter – any trick you can do with a regular function parameter can be applied to methods, too;</li>
+<br>
+
+<li>the class also has a <strong>method which creates another instance variable</strong>, named <codel>second</codel>;</li>
+<br>
+
+<li>we've created three objects of the class <codel>ExampleClass</codel>, but all these instances differ:</li>
+
+<br><ul>
+        <li><codel>example_object_1</codel> only has the property named <codel>first</codel>;</li>
+<br>
+        <li><codel>example_object_2</codel> has two properties: <codel>first</codel> and <codel>second</codel>;</li>
+<br>
+        <li><codel>example_object_3</codel> has been enriched with a property named <codel>third</codel> just on the fly, outside the class's code - this is possible and fully permissible.</li>
+<br>
+</ul>
+</ul>
+
+ 
+<p>The program's output clearly shows that our assumptions are correct – here it is:</p>
+
+<codep>{'first': 1}
+{'second': 3, 'first': 2}
+{'third': 5, 'first': 4}</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+<p>There is one additional conclusion that should be stated here: <strong>modifying an instance variable of any object has no impact on all the remaining objects</strong>. Instance variables are perfectly isolated from each other.</p>
+
+<br>
+<br>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

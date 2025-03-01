@@ -1,0 +1,144 @@
+<problem chapter='3' section='2' slide='1' problem='16' title="LAB: Queue aka FIFO: part 2">
+
+<!--
+Update history:
+2020-01-01 Syslaw (file created)
+2020-11-16 Grzegorz (review, PEP-8 compliance check)
+-->
+
+<code>class QueueError(???):
+    pass
+
+
+class Queue:
+    #
+    # Code from the previous lab.
+    #
+
+
+class SuperQueue(Queue):
+    #
+    # Write new code here.
+    #
+
+
+que = SuperQueue()
+que.put(1)
+que.put("dog")
+que.put(False)
+for i in range(4):
+    if not que.isempty():
+        print(que.get())
+    else:
+        print("Queue empty")
+
+</code>
+
+<span class="label" style="background-color:rgb(205, 168, 105);"><b>LAB</b></span>
+
+<br><br>
+
+<h2>Estimated time</h2>
+<p>15-30 minutes</p>
+
+<h2>Level of difficulty</h2>
+<p>Easy/Medium</p>
+
+<h2>Objectives</h2>
+<ul>
+<li>improving the student's skills in defining subclasses;</li>
+<li>adding new functionality to an existing class.</li>
+</ul>
+
+<h2>Scenario</h2>
+<p>Your task is to slightly extend the <codel>Queue</codel> class's capabilities. We want it to have a parameterless method that returns <font face="courier">True</font> if the queue is empty and <font face="courier">False</font> otherwise.</p>
+
+<p>Complete the code we've provided in the editor. Run it to check whether it outputs a similar result to ours.</p>
+
+<p>Below you can copy the code we used in the previous lab:</p>
+
+<script>
+function solution (id) {
+    var element = document.getElementById(id);
+    
+if (element.style.display === "none") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
+    }
+}
+</script>
+
+
+<button class="button tiny" onclick="solution('sol')">Check</button>
+
+<p id="sol" style="display: none;"><codep class="copy">class QueueError(IndexError):
+    pass
+
+
+class Queue:
+    def __init__(self):
+        self.queue = []
+    def put(self,elem):
+        self.queue.insert(0,elem)
+    def get(self):
+        if len(self.queue) > 0:
+            elem = self.queue[-1]
+            del self.queue[-1]
+            return elem
+        else:
+            raise QueueError
+
+</codep></p>
+
+
+
+<br><br>
+
+<h2>Expected output</h2>
+
+<p><codep>1
+dog
+False
+Queue empty</codep></p>
+
+
+<sampleSolution>class QueueError(IndexError):
+    pass
+
+
+class Queue:
+    def __init__(self):
+        self.queue = []
+    def put(self,elem):
+        self.queue.insert(0,elem)
+    def get(self):
+        if len(self.queue) > 0:
+            elem = self.queue[-1]
+            del self.queue[-1]
+            return elem
+        else:
+            raise QueueError
+
+
+class SuperQueue(Queue):
+    def isempty(self):
+        return len(self.queue) == 0
+
+
+que = SuperQueue()
+que.put(1)
+que.put("dog")
+que.put(False)
+for i in range(4):
+    if not que.isempty():
+        print(que.get())
+    else:
+        print("Queue empty")
+
+</sampleSolution>
+
+<br><br>
+
+<labMode>true</labMode>
+</problem>

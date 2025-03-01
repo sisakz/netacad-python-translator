@@ -1,0 +1,67 @@
+<problem chapter='2' section='6' slide='1' problem='6' title="Hibák – a programozók mindennapi kenyere | try-except">
+
+<!--
+Update history:
+2020-09-21 Grzegorz (review, PEP-8 compliance check, update, title correction)
+-->
+
+<code>
+first_number = int(input("Enter the first number: "))
+second_number = int(input("Enter the second number: "))
+
+try:
+    print(first_number / second_number)
+except:
+    print("This operation cannot be done.")
+
+print("THE END.")
+
+</code>
+
+
+
+<h1>Kivételek (folytatás)</h1>
+
+<p>Nézd meg a kódot a szerkesztőben. Ez a Python kedvenc megközelítése.</p>
+
+<p>Megjegyzés:</p>
+
+<ul>
+    <li>a <codel>try</codel> kulcsszó <strong>egy olyan kódblokkot indít</strong>, amely lehet, hogy helyesen teljesít, de az is lehet, hogy nem;</li>
+    <li>ezután a Python megpróbálja végrehajtani a kockázatos műveletet; ha ez nem sikerül, a rendszer kivételt jelez, és a Python elkezd megoldást keresni;</li>
+    <li>az <codel>except</codel> kulcsszó egy olyan kódrészletet indít el, amely <strong>akkor aktiválódik, ha a <codel>try</codel> blokkban valami rosszul sül el</strong> – ha a korábbi <codel>try</codel> blokkban kivétel keletkezik, <strong>az itt hibát okoz</strong>, így az except kulcsszó után található kódnak <strong>megfelelő választ</strong> kell adnia a keletkezett kivételre;</li>
+    <li>az előző behúzási szintre való visszatérés befejezi a <strong>try-except</strong> szakaszt.</li>
+</ul>
+ 
+
+<p>Futtasd le a kódot, és teszteld a viselkedését!</p>
+
+<br>
+
+<p>Foglaljuk össze ezt:</p>
+
+<codep class="syntax-color">try:
+    :
+    :
+except:
+    :
+    :
+</codep>
+<br>
+
+<ul>
+    <li>az első lépésben a Python megpróbálja végrehajtani a <codel>try:</codel> és <codel>except:</codel> utasítások között elhelyezett összes utasítást;</li>
+
+    <li>ha a végrehajtással nincs semmi baj, és minden utasítás sikeresen végrehajtásra került, a végrehajtás az <codel>except:</codel> blokk utolsó sora utáni pontra ugrik, és a blokk végrehajtása befejezettnek tekinthető;</li>
+
+    <li>ha a <codel>try:</codel> és <codel>except:</codel> közötti blokkban bármi rosszul sül el, a végrehajtás azonnal kiugrik a blokkból és az <codel>except:</codel> kulcsszó után található első utasításra ugrik; ez azt jelenti, hogy a blokk néhány utasítása csöndben kimaradhat.</li>
+</ul>
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

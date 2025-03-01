@@ -1,0 +1,46 @@
+<problem chapter='2' section='2' slide='1' problem='10' title='The nature of strings in Python'>
+
+<!--
+Update history:
+2020-09-22 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>
+alphabet = "bcdefghijklmnopqrstuvwxy"
+
+alphabet = "a" + alphabet
+alphabet = alphabet + "z"
+
+print(alphabet)
+
+</code>
+
+
+
+<h1>Operations on strings: continued</h1>
+
+<p>Don't think that a string's immutability limits your ability to operate with strings.</p>
+
+<p>The only consequence is that you have to remember about it, and implement your code in a slightly different way – look at the example code in the editor.</p>
+
+ 
+<p>This form of code is fully acceptable, will work without bending Python's rules, and will bring the full Latin alphabet to your screen:</p>
+
+<codep>abcdefghijklmnopqrstuvwxyz</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+
+<p>You may want to ask if <strong>creating a new copy of a string each time you modify its contents worsens the effectiveness of the code</strong>.</p>
+
+<p>Yes, it does. A bit. It's not a problem at all, though.</p>
+
+
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

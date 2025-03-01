@@ -1,0 +1,54 @@
+<problem chapter='4' section='1' slide='1' problem='6' title='Generators and closures'>
+
+<!--
+Update history:
+2020-10-05 Grzegorz (review, PEP-8 compliance check)
+-->
+
+<code>
+list_1 = []
+
+for ex in range(6):
+    list_1.append(10 ** ex)
+
+list_2 = [10 ** ex for ex in range(6)]
+
+print(list_1)
+print(list_2)
+
+</code>
+
+
+
+<h1>More about list comprehensions</h1>
+
+
+<p>You should be able to remember the rules governing the creation and use of a very special Python phenomenon named <strong>list comprehension – a simple and very impressive way of creating lists and their contents</strong>.</p>
+
+<p>In case you need it, we've provided a quick reminder in the editor.</p>
+
+ 
+<p>There are two parts inside the code, both creating a list containing a few of the first natural powers of ten.</p>
+
+<p>The first employs a routine way to utilize the <codel>for</codel> loop, while the second makes use of the list comprehension and builds the list in situ, without needing a loop, or any other extended code.</p>
+
+<p>It looks like the list is created inside itself – it's not true, of course, as Python has to perform nearly the same operations as in the first snippet, but it is indisputable that the second formalism is simply more elegant, and lets the reader avoid any unnecessary details.</p>
+
+ 
+<p>The example outputs two identical lines containing the following text:</p>
+
+<codep>[1, 10, 100, 1000, 10000, 100000]
+[1, 10, 100, 1000, 10000, 100000]</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+<br>
+
+<p>Run the code to check if we're right.</p>
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

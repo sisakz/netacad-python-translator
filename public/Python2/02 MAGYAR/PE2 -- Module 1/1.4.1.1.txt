@@ -1,0 +1,67 @@
+<problem chapter='1' section='4' slide='1' problem='1' title='PIP'>
+
+<!--
+Update history:
+2020-09-23 Grzegorz (created)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+    <h1>A Python csomagrendszer és annak használata</h1>
+
+    <p>A Python egy nagyon erőteljes eszköz - reméljük, hogy ezt már magad is megtapasztaltad. A világ minden tájáról sokan érzik ezt így, és rendszeresen használják a Pythont, hogy fejlesszenek valamilyen kódot, sok teljesen különböző működési területen. Ez azt jelenti, hogy a Python számtalan alkalmazásban használt <b>interdiszciplináris eszközzé</b> vált. Nem tudjuk végigvenni az összes olyan területet, ahol a Python megmutatja zseniális képességeit, ezért csak a leglátványosabbakról számolunk be.</p>
+
+
+    <p>Először is, a Phyton a <b>mesterséges intelligencia kutatásának elsődleges eszközévé vált</b>. Az adatbányászat, az egyik legígéretesebb modern tudományág is Pythont használ. Matematikusok, pszichológusok, genetikusok, meteorológusok, nyelvészek - mindannyian használják már a Pythont, vagy ha még nem is, biztosak vagyunk benne, hogy hamarosan használni fogják. Ez egy elkerülhetetlen tendencia.</p>
+
+    <p>Természetesen semmi értelme, hogy minden Python felhasználó a nulláról írja a kódját, tökéletesen elszigetelve őket a külvilágtól és más programozók eredményeitől. Ez természetellenes és kontraproduktív lenne.</p>
+
+    <p>A legelőnyösebb és leghatékonyabb az lenne, ha a Python közösség minden tagja szabadon megoszthatná a kódjait és tapasztalatait. Ebben a modellben senki sem kényszerül arra, hogy a nulláról kezdje a munkát, hiszen nagy a valószínűsége annak, hogy valaki más is dolgozott már ugyanazon (vagy nagyon hasonló) problémán. </p>
+
+    <p>Mint tudjuk, a Python nyílt forráskódú szoftverként jött létre, és ez egyben felhívás is minden programozó számára, hogy az egész Python ökoszisztémát nyílt, barátságos és szabad környezetként kezeljék. Ahhoz, hogy ez a modell működjön és fejlődjön, további eszközöket kell biztosítani: olyanokat, amelyek segítik az alkotókat a kódjuk közzétételében, karbantartásában és gondozásában.</p>
+
+
+<br>
+<br> 
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+
+
+<p>Ugyanezeknek az eszközöknek segíteniük kell a felhasználókat a kódok hasznosításában, mind a már meglévő kódok, mind a naponta megjelenő új kódok esetében. Ennek köszönhetően az új kihívásokra új kódot írni nem olyan, mintha egy új házat építenénk az alapoktól kezdve.</p>
+
+<p>A programozó továbbá szabadon módosíthatja valaki más kódját, hogy azt a saját igényeihez igazítsa, és így tulajdonképpen egy teljesen új terméket készíthet, amelyet egy másik fejlesztő is felhasználhat. Úgy tűnik, a folyamatnak nincs vége. Szerencsére.</p>
+
+<p>Ahhoz, hogy ez a világ kerek legyen, két alapvető egységet kell létrehozni és mozgásban tartani: az összes elérhető szoftvercsomag <b>központi tárolóját</b> és egy olyan eszközt, amely lehetővé teszi a felhasználók számára a <b>tárolóhoz való hozzáférést</b>. Mindkét egység már létezik, és bármikor használható.</p>
+
+
+<center><img src="/uploads/media/default/0001/02/fb6c1e50d3656db5550a8ba5c3b518eeb4a2730e.png" width="50%" alt="Discoveries, inventions, science..."></center>
+
+<br>
+<br>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

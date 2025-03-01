@@ -1,0 +1,55 @@
+<problem chapter='1' section='3' slide='1' problem='1' title='Modulok és csomagok'>
+
+<!--
+Update history:
+2020-09-08 Grzegorz (review, PEP-8 compliance check, update)
+2021-06-29 Grzegorz (corrections)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h1>Mi az a csomag?</h1>
+
+<p>A saját modulok írása nem sokban különbözik a közönséges szkriptek írásától.</p>
+
+<p>Van néhány speciális szempont, amellyel tisztában kell lenned, de ez határozottan nem rakéta tudomány. Ezt hamarosan látni is fogod.</p>
+
+<center><img src="/uploads/media/default/0001/01/6e2427acf223f597798962aeae1a3b73210090ce.png" width="85%" alt="The Package-Module-Function concept"></center>
+
+<br><br>
+
+
+</div>
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+<p>Foglaljunk össze néhány fontos kérdést:</p>
+
+<ul>
+<li>A <strong>modul egyfajta konténer, amely tele van függvényekkel</strong> - annyi függvényt pakolhatsz egy modulba, amennyit csak akarsz, és szétoszthatod a világban.</li>
+<li>természetesen általában nem jó ötlet, ha egy modulon belül összekeverjük a különböző alkalmazási területű függvényeket (akárcsak egy könyvtárban - senki sem várja el, hogy a tudományos munkák képregények közé kerüljenek), ezért gondosan csoportosítsuk a függvényeket, és az őket tartalmazó modult nevezzük el egyértelműen és találóan (pl. ne adjuk az <codel>arcade_games</codel> nevet egy olyan modulnak, amely merevlemezek particionálására és formázására szolgáló függvényeket tartalmaz).</li>
+<li>Sok modul létrehozása egy kis zűrzavart okozhat - előbb-utóbb pontosan ugyanúgy akarod majd <strong>csoportosítani a moduljaidat</strong>, ahogyan korábban a függvényeket csoportosítottad - de van-e általánosabb tároló a moduloknál?</li>
+<li>igen van, ez a <strong>csomag</strong>; a modulok világában egy csomag hasonló szerepet játszik, mint egy mappa/könyvtár a fájlok világában.</li>
+</ul>
+
+
+
+<br>
+
+</div>
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

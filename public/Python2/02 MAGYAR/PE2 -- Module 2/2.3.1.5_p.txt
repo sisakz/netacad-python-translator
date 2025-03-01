@@ -1,0 +1,64 @@
+<problem chapter='2' section='3' slide='1' problem='5' title='Karakterlánc tagfüggvények'>
+
+<!--
+Update history:
+2020-09-22 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>
+# Demonstrating the isalnum() method:
+print('lambda30'.isalnum())
+print('lambda'.isalnum())
+print('30'.isalnum())
+print('@'.isalnum())
+print('lambda_30'.isalnum())
+print(''.isalnum())
+
+</code>
+
+
+
+<h1>Az <font face="Courier New">isalnum()</font> tagfüggvény</h1>
+
+<p><strong>Az <codel>isalnum()</codel></strong> nevű paraméter nélküli metódus <strong> ellenőrzi, hogy a karakterlánc csak számjegyeket vagy betűket tartalmaz-e, és</strong> az eredménytől függően <strong><codel>True</codel> vagy <codel>False</codel> értéket ad vissza.</strong></p>
+
+<p>Nézd meg a példát a szerkesztőben, és futtasd le.</p>
+
+<p>Megjegyzés: bármely olyan elem esetén, amely nem számjegy vagy betű, a tagfüggvény <codel>False</codel>-t ad vissza. Az üres karakterlánc esetén is ezt teszi.</p>
+
+<p>A példakimenet a következő:</p>
+
+<codep>True
+True
+True
+False
+False
+False</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+<p>Három további érdekes példa itt található:</p>
+
+<codep class="syntax-color copy">t = 'Six lambdas'
+print(t.isalnum())
+
+t = '&Alpha;&beta;&Gamma;&delta;'
+print(t.isalnum())
+
+t = '20E1'
+print(t.isalnum())
+</codep>
+<br>
+
+<p>Futtasd le őket, és ellenőrizd a kimenetüket.</p>
+
+<p>Tipp: az első eredmény oka egy szóköz – ami nem számjegy és nem betű.</p>
+
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

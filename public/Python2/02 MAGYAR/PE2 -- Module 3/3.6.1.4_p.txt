@@ -1,0 +1,184 @@
+<problem chapter='3' section='6' slide='1' problem='4' title='Bővebben a kivételekről'>
+
+<!--
+Update history:
+2020-10-01 Grzegorz (reviewed, PEP-8 compliance check)
+-->
+
+<code>
+def print_exception_tree(thisclass, nest = 0):
+    if nest > 1:
+        print("   |" * (nest - 1), end="")
+    if nest > 0:
+        print("   +---", end="")
+
+    print(thisclass.__name__)
+
+    for subclass in thisclass.__subclasses__():
+        print_exception_tree(subclass, nest + 1)
+
+
+print_exception_tree(BaseException)
+
+</code>
+
+
+
+<h1>A kivételek osztályok</h1>
+
+
+<p>Az összes beépített Python kivétel egy osztály-hierarchiát alkot. Nincs akadálya annak, hogy ezt kibővítsük, ha ezt találjuk ésszerűnek.</p>
+
+<p>Nézd meg a kódot a szerkesztőben!</p>
+
+<p>Ez a programrészlet az összes előre definiált kivételosztályt egy  fa struktúrában kiírja.</p>
+
+<p>Mivel <strong>a fa tökéletes példája a rekurzív adatszerkezetnek</strong>,a rekurzió tűnik a legjobb eszköznek a bejárására. A <codel>print_exception_tree()</codel> függvény két argumentumot vár:</p>
+
+<ul>
+    <li>egy pont a fán belül, ahonnan a fa bejárását kezdjük;</li>
+    <li>egy ág szint (ezt fogjuk használni a fa ágainak egyszerűsített kirajzolásához)</li>
+</ul>
+
+<p>Kezdjük a fa gyökerével: a Python kivételosztályainak gyökere a <codel>BaseException</codel> osztály (ez az összes többi kivétel szuperosztálya).</p>
+
+<p>Minden egyes talált osztály esetében hajtsa végre ugyanazt a műveletsort:</p>
+
+<ul>
+    <li>kiírja a <codel>__name__</codel> tulajdonságból vett nevet;</li>
+    <li>
+        végigmegy a <codel>__subclasses__()</codel> metódus által szolgáltatott alosztályok listáján, és rekurzívan meghívja a <codel>print_exception_tree()</codel> függvényt, mélyítve a beágyazási szintet.</li>
+
+    <p>Figyeljük meg, hogyan rajzoltuk meg az ágakat és az elágazásokat. A kiíratás nincs semmilyen módon rendezve - megpróbálhatod rendezni, ha szereted a kihívásokat. Ráadásul néhány ág ábrázolásában finom pontatlanságok is vannak. Ezt is javíthatod, ha szeretnéd.</p>
+
+    <p>Így néz ki most:</p>
+
+        <codep>
+            BaseException
+            +---Exception
+            |   +---TypeError
+            |   +---StopAsyncIteration
+            |   +---StopIteration
+            |   +---ImportError
+            |   |   +---ModuleNotFoundError
+            |   |   +---ZipImportError
+            |   +---OSError
+            |   |   +---ConnectionError
+            |   |   |   +---BrokenPipeError
+            |   |   |   +---ConnectionAbortedError
+            |   |   |   +---ConnectionRefusedError
+            |   |   |   +---ConnectionResetError
+            |   |   +---BlockingIOError
+            |   |   +---ChildProcessError
+            |   |   +---FileExistsError
+            |   |   +---FileNotFoundError
+            |   |   +---IsADirectoryError
+            |   |   +---NotADirectoryError
+            |   |   +---InterruptedError
+            |   |   +---PermissionError
+            |   |   +---ProcessLookupError
+            |   |   +---TimeoutError
+            |   |   +---UnsupportedOperation
+            |   |   +---herror
+            |   |   +---gaierror
+            |   |   +---timeout
+            |   |   +---Error
+            |   |   |   +---SameFileError
+            |   |   +---SpecialFileError
+            |   |   +---ExecError
+            |   |   +---ReadError
+            |   +---EOFError
+            |   +---RuntimeError
+            |   |   +---RecursionError
+            |   |   +---NotImplementedError
+            |   |   +---_DeadlockError
+            |   |   +---BrokenBarrierError
+            |   +---NameError
+            |   |   +---UnboundLocalError
+            |   +---AttributeError
+            |   +---SyntaxError
+            |   |   +---IndentationError
+            |   |   |   +---TabError
+            |   +---LookupError
+            |   |   +---IndexError
+            |   |   +---KeyError
+            |   |   +---CodecRegistryError
+            |   +---ValueError
+            |   |   +---UnicodeError
+            |   |   |   +---UnicodeEncodeError
+            |   |   |   +---UnicodeDecodeError
+            |   |   |   +---UnicodeTranslateError
+            |   |   +---UnsupportedOperation
+            |   +---AssertionError
+            |   +---ArithmeticError
+            |   |   +---FloatingPointError
+            |   |   +---OverflowError
+            |   |   +---ZeroDivisionError
+            |   +---SystemError
+            |   |   +---CodecRegistryError
+            |   +---ReferenceError
+            |   +---BufferError
+            |   +---MemoryError
+            |   +---Warning
+            |   |   +---UserWarning
+            |   |   +---DeprecationWarning
+            |   |   +---PendingDeprecationWarning
+            |   |   +---SyntaxWarning
+            |   |   +---RuntimeWarning
+            |   |   +---FutureWarning
+            |   |   +---ImportWarning
+            |   |   +---UnicodeWarning
+            |   |   +---BytesWarning
+            |   |   +---ResourceWarning
+            |   +---error
+            |   +---Verbose
+            |   +---Error
+            |   +---TokenError
+            |   +---StopTokenizing
+            |   +---Empty
+            |   +---Full
+            |   +---_OptionError
+            |   +---TclError
+            |   +---SubprocessError
+            |   |   +---CalledProcessError
+            |   |   +---TimeoutExpired
+            |   +---Error
+            |   |   +---NoSectionError
+            |   |   +---DuplicateSectionError
+            |   |   +---DuplicateOptionError
+            |   |   +---NoOptionError
+            |   |   +---InterpolationError
+            |   |   |   +---InterpolationMissingOptionError
+            |   |   |   +---InterpolationSyntaxError
+            |   |   |   +---InterpolationDepthError
+            |   |   +---ParsingError
+            |   |   |   +---MissingSectionHeaderError
+            |   +---InvalidConfigType
+            |   +---InvalidConfigSet
+            |   +---InvalidFgBg
+            |   +---InvalidTheme
+            |   +---EndOfBlock
+            |   +---BdbQuit
+            |   +---error
+            |   +---_Stop
+            |   +---PickleError
+            |   |   +---PicklingError
+            |   |   +---UnpicklingError
+            |   +---_GiveupOnSendfile
+            |   +---error
+            |   +---LZMAError
+            |   +---RegistryError
+            |   +---ErrorDuringImport
+            +---GeneratorExit
+            +---SystemExit
+            +---KeyboardInterrupt
+        </codep>
+        <p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+        <br>
+        <br>
+
+        <studyMode>false</studyMode>
+        <labMode>false</labMode>
+
+</problem>

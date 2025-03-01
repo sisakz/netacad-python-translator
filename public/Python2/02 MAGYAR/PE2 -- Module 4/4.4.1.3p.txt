@@ -1,0 +1,60 @@
+<problem chapter='4' section='4' slide='1' problem='3' title='Az os modul'>
+
+<!--
+Update history:
+2020-03-30 Sebastian (first version)
+2020-10-08 Grzegorz (review, PEP-8 compliance check)
+-->
+
+<code>import os
+
+os.mkdir("my_first_directory")
+print(os.listdir())
+
+</code>
+
+
+
+<h1>Könyvtárak létrehozása Pythonban</h1>
+
+
+<p>Az <i>os</i> modul egy <i>mkdir</i> nevű függvényt biztosít a könyvtárak létrehozásához, hasonlóan a Unix és a Windows <i>mkdir</i> parancsához. Az <i>mkdir</i> függvénynek szüksége van egy elérési útvonalra, amely lehet relatív vagy abszolút. Idézzük fel, hogyan néznek ki az elérési útvonalak a gyakorlatban:</p>
+
+<ul>
+    <li><b>my_first_directory</b> — ez egy relatív elérési útvonal, amely létrehozza a <i>my_first_directory</i> könyvtárat az aktuális munkakönyvtárban;</li>
+    <li><b>./my_first_directory</b> — ez egy relatív elérési útvonal, amely explicit mutat az aktuális munkakönyvtárra. Ugyanaz a hatása, mint a fenti elérési útvonalnak;</li>
+    <li><b>../my_first_directory</b> — ez egy relatív elérési útvonal, amely a <i>my_first_directory</i> könyvtárat az aktuális munkakönyvtár szülőkönyvtárában hozza létre;</li>
+    <li><b>/python/my_first_directory</b> — ez az abszolút elérési útvonal, amely létrehozza a <i>my_first_directory</i> könyvtárat a gyökérkönyvtárban lévő <i>python</i> könyvtáron belül.</li>
+</ul>
+
+<p>Nézd meg a kódot a szerkesztőben, amely egy példát mutat arra, hogy miként hozhatjuk létre a <i>my_first_directory</i> könyvtárat relatív elérési útvonal használatával. Ez a relatív elérési útvonal legegyszerűbb változata, amely csak a könyvtárnév átadásából áll.</p>
+
+<p>
+    Ha teszteled a kódot, akkor az újonnan létrehozott <codel>['my_first_directory']</codel> könyvtárat (és az aktuális munkakönyvtár teljes tartalmát) fogja kiírni.
+</p>
+
+
+
+<p>Az <i>mkdir</i> függvény létrehoz egy könyvtárat a megadott elérési útvonalon. Vedd figyelembe, hogy a program kétszeri futtatása <i>FileExistsError</i> hibát fog eredményezni.</p>
+
+<p>Ez azt jelenti, hogy nem tudunk létrehozni egy könyvtárat, ha az már létezik. Az <i>mkdir</i> függvény a path argumentumon kívül opcionálisan elfogad egy <i>mode</i> argumentumot is, amely a könyvtár engedélyeit határozza meg. Egyes rendszereken azonban a függvény a <i>mode</i> argumentumot figyelmen kívül hagyja.</p>
+
+<p>A könyvtárak jogosultságainak módosításához a <i>chmod</i> függvényt ajánljuk, amely hasonlóan működik, mint a <i>chmod</i> parancs a Unix rendszereken. A dokumentációban további információkat találhatsz róla.</p>
+
+<p>A fenti példában egy másik, az <i>os</i> modul által biztosított <i>listdir</i> nevű függvényt is használunk. A <i>listdir</i> függvény egy listát ad vissza, amely az argumentumként átadott elérési útvonalban található fájlok és könyvtárak nevét tartalmazza.</p>
+
+<p>Ha nem adunk meg argumentumot, akkor az aktuális munkakönyvtárat fogja használni (mint a fenti példában). Fontos, hogy a <i>listdir</i> függvény eredményéből kimaradnak a '.' és '..' bejegyzések, amelyek például Unix rendszereken az <i>ls -a</i> parancs használatakor láthatóak.</p>
+
+<p><b>MEGJEGYZÉS:</b> Mind Windows, mind Unix alatt létezik egy <i>mkdir</i> nevű parancs, amelyhez egy könyvtár elérési útvonalára van szükség. A fenti kód megfelelője, amely létrehozza a <i>my_first_directory</i> könyvtárat, az <i>mkdir my_first_directory</i> parancs.</p>
+
+
+
+
+<br>
+<br>
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

@@ -1,0 +1,50 @@
+<problem chapter='0' section='0' slide='0' problem='1' title='About PE2'>
+
+<!--
+Update history:
+2020-08-27 Grzegorz (front picture change, style formatting and structure redesigning, new texts)
+2021-06-14 Grzegorz (review)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-4 columns">
+
+<br>
+
+
+<h1>Welcome to Python Essentials 2</h1>
+
+<p>This course is <b>the second in a 2-course series</b> that will prepare you for the <a href="https://pythoninstitute.org/certification/pcap-certification-associate/" target="_blank">PCAP: Certified Associate in Python Programming</a> certification exam at Pearson VUE.</p>
+
+<p>The course picks up where <i>Python Essentials 1</i> leaves off. Its main goal is to teach you the skills related to the more <b>advanced aspects of Python programming</b>, as well as <b>general coding techniques</b> and <b>object-oriented programming</b> (OOP).</p>
+
+<p>The course is recommended for aspiring developers who are interested in pursuing careers connected with <b>Software Development</b>, <b>Security</b>, <b>Networking</b>, and the <b>Internet of Things</b> (IoT).</p>
+
+
+<br>
+
+
+</div>
+
+
+<div class="small-12 large-8 columns">
+
+<br>
+<br>
+
+<center><img src="/uploads/media/default/0001/02/cfec59ca8f8d2633c413132e233a8d7bfab13da1.png" alt="Python Essentials 2" width="70%"></center>
+
+<br>
+
+
+</div>
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

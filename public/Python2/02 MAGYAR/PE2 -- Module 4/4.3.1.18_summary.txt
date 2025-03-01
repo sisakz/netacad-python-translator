@@ -1,0 +1,136 @@
+<problem chapter='4' section='3' slide='1' problem='18' title='SZAKASZ ÖSSZEFOGLALÁS'>
+
+<!--
+Update history:
+2020-09-09 Slawek (first version)
+2020-10-07 Grzegorz (review)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<h1>A legfontosabb tudnivalók</h1>
+
+<br/>
+
+
+<p>1. Egy fájl tartalmának beolvasásához a következő fájlobjektum metódusok használhatók:</p>
+<ul>
+    <li><codel>read(number)</codel> – beolvas <codel>number</codel> számú karaktert/bájtot a fájlból, és karakterláncként adja vissza; képes egyszerre beolvasni az egész fájlt;</li>
+    <li><codel>readline()</codel> – egyetlen sort olvas be a szövegfájlból;</li>
+    <li><codel>readlines(number)</codel> – <codel>number</codel>számú sort olvas be a szövegfájlból; képes az összes sort egyszerre beolvasni;</li>
+    <li><codel>readinto(bytearray)</codel> – beolvassa a bájtokat a fájlból, és feltölti velük a <codel>bytearray</codel> változót;</li>
+</ul>
+<br/>
+
+<p>2. Egy fájl tartalmának írásához a következő fájlobjektum metódusokat használhatjuk:</p>
+<ul>
+    <li><codel>write(string)</codel> – a <codel>string</codel> karakterláncot egy szöveges fájlba írja;</li>
+    <li><codel>write(bytearray)</codel> – a <codel>bytearray</codel> tartalmát egy fájlba írja;</li>
+
+</ul>
+<br/>
+
+<p>3. Az <codel>open()</codel> metódus egy iterable objektumot ad vissza, amely egy <codel>for</codel> cikluson belül a fájl összes sorának végigjárására használható. Például:</p>
+<codep class="syntax-color copy">for line in open("file", "rt"):
+    print(line, end='')
+</codep> 
+<br/>
+
+<p>A kód soronként másolja a fájl tartalmát a konzolra. <b>Megjegyzés</b>: a fájlobjektum <b>automatikusan</b> bezárja magát, amikor eléri a fájl végét.</p>
+
+
+</div>
+<div class="small-12 large-6 columns">
+
+<br>
+
+<script>
+function solution (id) {
+    var element = document.getElementById(id);
+    
+if (element.style.display === "none") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
+    }
+}
+</script>
+
+<p><strong>1. gyakorlat</strong></p>
+<p>Mit várunk a <codel>readlines()</codel> metódustól, ha a fájlobjektum egy üres fájlhoz kapcsolódik?</p>
+
+
+<button class="button tiny" onclick="solution('sol')">Ellenőrzés</button>
+
+<p id="sol" style="display: none;">
+    Egy üres listát (nulla hosszúságú lista)
+
+</p>
+
+
+
+<br/><br/>
+
+<p><strong>2. gyakorlat</strong></p>
+<p>Mi a következő kód célja?</p>
+<codep>for line in open("file", "rt"):
+    for char in line:
+        if char.lower() not in "aeiou":
+            print(char, end='')
+
+</codep>
+
+<br/>
+
+<button class="button tiny" onclick="solution('sol2')">Ellenőrzés</button>
+<p id="sol2" style="display: none;">Lemásolja a <i>file</i> tartalmát a konzolra, minden magánhangzót kihagyva.</p>
+                                    
+
+<br/><br/>
+
+
+
+
+<p><strong>3. gyakorlat</strong></p>
+<p>Egy <codel>image.png</codel> nevű fájlban tárolt bitképet kell feldolgoznod. A tartalmát egészében olvasd be egy <codel>image</codel> nevű <i>bytearray</i> változóba. A következő kódot egészítsd ki egy sorral, hogy elérd ezt a célt.</p>
+<codep>try:
+    stream = open("image.png", "rb")
+    # Insert a line here.
+    stream.close()
+except IOError:
+    print("failed")
+else:
+    print("success")
+
+</codep>
+<br/>
+
+<button class="button tiny" onclick="solution('sol3')">Ellenőrzés</button>
+
+<p id="sol3" style="display: none;">
+<codep>image = bytearray(stream.read())
+
+</codep>
+</p>
+
+
+
+
+<br/>
+
+
+</div>
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>
+
+

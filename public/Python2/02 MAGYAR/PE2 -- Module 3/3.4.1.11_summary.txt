@@ -1,0 +1,144 @@
+<problem chapter='3' section='4' slide='1' problem='11' title='SZAKASZ ÖSSZEFOGLALÁS'>
+
+<!--
+Update history:
+2020-09-04 Slawek (first version)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<h1>A legfontosabb tudnivalók</h1>
+
+<br>
+
+
+<p>1. A metódus egy osztályba ágyazott függvény. Az egyes metódusok első (vagy egyetlen) paraméterét általában <codel>self</codel>-nek nevezzük. Ezzel a paraméterrel azonosítjuk azt az objektumot, amelynek a metódusa meghívásra került. Segítségével elérhetőek az objektum tulajdonságai vagy meghívhatóak a metódusai.</p>
+<br>
+
+<p>2. Ha egy osztály tartalmaz egy <b>konstruktort</b> (<codel>__init__</codel> nevű metódust), az nem adhat vissza értéket, és nem hívható meg közvetlenül.</p> 
+<br>
+
+<p>3. Minden osztály (nem az objektumok) tartalmaz egy <codel>__name__</codel> nevű tulajdonságot, amely az osztály nevét tárolja. Ezen kívül egy <codel>__module__</codel> nevű tulajdonság tárolja annak a modulnak a nevét, amelyben az osztály deklarálva van, míg a <codel>__bases__</codel> nevű tulajdonság egy olyan tuple, amely az osztály szuperosztályait tartalmazza.</p>
+<p>Például:</p>
+
+<codep class="syntax-color copy line-numbers">class Sample:
+    def __init__(self):
+        self.name = Sample.__name__
+    def myself(self):
+        print("My name is " + self.name + " living in a " + Sample.__module__)
+
+
+obj = Sample()
+obj.myself()
+</codep>
+<br>
+<p>A kód kimenete:</p>
+
+<codep>My name is Sample living in a __main__</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+<br>
+
+</div>
+<div class="small-12 large-6 columns">
+<br>
+
+<script>
+function solution (id) {
+    var element = document.getElementById(id);
+    
+if (element.style.display === "none") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
+    }
+}
+</script>
+
+<p><strong>1. gyakorlat</strong></p>
+<p>
+    A <codel>Snake</codel> osztály deklarációja az alábbiakban található. Egészítsük ki az osztályt egy <codel>increment()</codel> nevű metódussal, amely <codel>1</codel>-et ad a <codel>__victims</codel> tulajdonsághoz.<br><br>
+<codep>class Snake:
+        def __init__(self):
+            self.victims = 0
+
+    </codep>
+</p>
+
+<button class="button tiny" onclick="solution('sol')">Ellenőrzés</button>
+
+<p id="sol" style="display: none;">
+<codep>class Snake:
+    def __init__(self):
+        self.victims = 0
+
+    <b>def increment(self):
+        self.victims += 1</b>
+
+</codep></p>
+
+
+
+<br><br>
+
+
+
+<p><strong>2. gyakorlat</strong></p>
+<p>Definiáljuk újra a <codel>Snake</codel> osztály konstruktorát úgy, hogy az rendelkezzen egy paraméterrel, amely az objektumnak a <codel>victims</codel> mezőjét inicializálja a létrehozás során átadott értékkel.</p>
+<br>
+
+
+<button class="button tiny" onclick="solution('sol2')">Ellenőrzés</button>
+<p id="sol2" style="display: none;"><codep>class Snake:
+    <b>def __init__(self, victims):
+        self.victims = victims</b>	
+</codep></p>
+
+
+<br><br>
+
+
+
+
+<p><strong>3. gyakorlat</strong></p>
+<p>Meg tudod jósolni a következő kód kimenetét?</p>
+<codep>class Snake:
+    pass
+
+
+class Python(Snake):
+    pass
+
+
+print(Python.__name__, 'is a', Snake.__name__)
+print(Python.__bases__[0].__name__, 'can be a', Python.__name__)
+
+</codep>
+<br>
+
+<button class="button tiny" onclick="solution('sol3')">Ellenőrzés</button>
+
+<p id="sol3" style="display: none;">
+<codep>Python is a Snake
+Snake can be a Python
+</codep>
+</p>
+
+
+<br>
+
+
+</div>
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>
+

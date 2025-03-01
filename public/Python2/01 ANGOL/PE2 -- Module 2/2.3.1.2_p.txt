@@ -1,0 +1,72 @@
+<problem chapter='2' section='3' slide='1' problem='2' title='String methods'>
+
+<!--
+Update history:
+2020-09-22 Grzegorz (review, PEP-8 compliance check, update)
+2020-10-23 Grzegorz (mark line added to code: '[SPACE]')
+
+-->
+
+<code># Demonstrating the center() method:
+print('[' + 'alpha'.center(10) + ']')
+
+</code>
+
+
+
+<h1>The <font face="Courier New">center()</font> method</h1>
+
+<p>The one-parameter variant of the <codel>center()</codel> method <strogn>makes a copy of the original string, trying to center it inside a field of a specified width</strong>.</p>
+
+<p>The centering is actually done by <strong>adding some spaces before and after the string</strong>.</p>
+
+<p>Don't expect this method to demonstrate any sophisticated skills. It's rather simple.</p>
+
+ 
+<p>The example in the editor uses brackets to clearly show you where the centered string actually begins and terminates.</p>
+
+<p>Its output looks as follows:</p>
+
+<codep>[  alpha   ]</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+ 
+
+<p>If the target field's length is too small to fit the string, the original string is returned.</p>
+
+<p>You can see the <codel>center()</codel> method in more examples here:</p>
+
+<codep class="syntax-color copy">print('[' + 'Beta'.center(2) + ']')
+print('[' + 'Beta'.center(4) + ']')
+print('[' + 'Beta'.center(6) + ']')
+</codep>
+
+<br>
+
+<p>Run the snippets above and check what output they produce.</p>
+
+<br>
+
+<p><strong>The two-parameter variant of <codel>center()</codel> makes use of the character from the second argument, instead of a space</strong>. Analyze the example below:</p>
+
+<codep class="syntax-color copy">print('[' + 'gamma'.center<mark class="mark-background">(20,'[SPACE]''*')</mark> + ']')
+</codep>
+<br>
+
+<p>This is why the output now looks like this:</p>
+
+<codep>[*******gamma********]</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+<p>Carry out more experiments.</p>
+
+
+<br>
+<br>
+
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

@@ -1,0 +1,78 @@
+<problem chapter='2' section='5' slide='1' problem='1' title='Four simple programs'>
+
+<!--
+Update history:
+2020-09-23 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>
+# Caesar cipher.
+text = input("Enter your message: ")
+cipher = ''
+for char in text:
+    if not char.isalpha():
+        continue
+    char = char.upper()
+    code = ord(char) + 1
+    if code > ord('Z'):
+        code = ord('A')
+    cipher += chr(code)
+
+print(cipher)
+
+</code>
+
+
+
+<h1>The Caesar Cipher: encrypting a message</h1>
+
+<p>We're going to show you four simple programs in order to present some aspects of string processing in Python. They are purposefully simple, but the lab problems will be significantly more complicated.</p>
+
+<p>The first problem we want to show you is called the <strong>Caesar cipher</strong> – more details here: <a href="https://en.wikipedia.org/wiki/Caesar_cipher" target="_blank">https://en.wikipedia.org/wiki/Caesar_cipher</a>.</p>
+
+<p>This cipher was (probably) invented and used by Gaius Julius Caesar and his troops during the Gallic Wars. The idea is rather simple – every letter of the message is replaced by its nearest consequent (<i>A</i> becomes <i>B</i>, <i>B</i> becomes <i>C</i>, and so on). The only exception is <i>Z</i>, which becomes <i>A</i>.</p>
+
+<p>The program in the editor is a very simple (but working) implementation of the algorithm.</p>
+
+<p>We've written it using the following assumptions:</p>
+
+<ul>
+<li>it accepts Latin letters only (note: the Romans didn't use whitespaces or digits)</li>
+<li>all letters of the message are in upper case (note: the Romans knew only capitals)</li>
+</ul>
+
+<p>Let's trace the code:</p>
+
+<ul>
+<li>line 02: ask the user to enter the open (unencrypted), one-line message;</li>
+<li>line 03: prepare a string for an encrypted message (empty for now)</li>
+<li>line 04: start the iteration through the message;</li>
+<li>line 05: if the current character is not alphabetic...</li>
+<li>line 06: ...ignore it;</li>
+<li>line 07: convert the letter to upper-case (it's preferable to do it blindly, rather than check whether it's needed or not)</li>
+<li>line 08: get the code of the letter and increment it by one;</li>
+<li>line 09: if the resulting code has "left" the Latin alphabet (if it's greater than the <i>Z</i> code)...</li>
+<li>line 10: ...change it to the <i>A</i> code;</li>
+<li>line 11: append the received character to the end of the encrypted message;</li>
+<li>line 13: print the cipher.</li>
+</ul>
+
+<p>The code, fed with this message:</p>
+
+<codep>AVE CAESAR</codep>
+<br>
+
+<p>outputs:</p>
+
+<codep>BWFDBFTBS</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+<p>Do your own tests.</p>
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

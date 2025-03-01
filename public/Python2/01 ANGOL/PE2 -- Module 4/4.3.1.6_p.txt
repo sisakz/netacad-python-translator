@@ -1,0 +1,53 @@
+<problem chapter='4' section='3' slide='1' problem='6' title='Working with real files'>
+
+<!--
+Update history:
+2020-10-07 Grzegorz (review, PEP-8 compliance check)
+2020-10-29 Grzegorz (code fix: strrerror instead of strerr)
+2021-07-07 Grzegorz (code corrections - important!)
+-->
+
+<code>from os import strerror
+
+try:
+	character_counter = line_counter = 0
+	for line in open('text.txt', 'rt'):
+		line_counter += 1
+		for char in line:
+			print(char, end='')
+			character_counter += 1
+	print("\n\nCharacters in file:", character_counter)
+	print("Lines in file:     ", line_counter)
+except IOError as e:
+	print("I/O error occurred: ", strerror(e.errno))
+
+</code>
+
+
+
+<h1>Processing text files: continued</h1>
+
+
+<p>The last example we want to present shows a very interesting trait of the object returned by the <codel>open()</codel> function in text mode.</p>
+
+<p>We think it may surprise you – <strong>the object is an instance of the iterable class</strong>.</p>
+
+<p>Strange? Not at all. Usable? Yes, absolutely.</p>
+ 
+
+<p>The <strong>iteration protocol defined for the file object</strong> is very simple – its <codel>__next__</codel> method just <strong>returns the next line read in from the file</strong>.</p>
+
+<p>Moreover, you can expect that the object automatically invokes <codel>close()</codel> when any of the file reads reaches the end of the file.</p>
+
+<p>Look at the editor and see how simple and clear the code has now become.</p>
+
+
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

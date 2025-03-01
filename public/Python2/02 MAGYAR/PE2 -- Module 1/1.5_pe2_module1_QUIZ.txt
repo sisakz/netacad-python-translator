@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+PE2 – Module 1 Quiz
+Python Essentials 2.0
+
+Update history:
+2019-02-08	Grzegorz (reviewed)
+2020-06-08	Sysio (first version of pip items)
+2020-09-29	Grzegorz (reformatting, PEP-8 compliance, dividing content into Quiz 1 and Quiz 2, adding items 4-10)
+2021-06-29	Grzegorz (corrections)
+-->
+
+<questionPool>
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE2_Q1_ITEM_1"> <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; A névtér:</p>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>egy tér, amelyben nevek vannak.</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>egy név egy szóközzel.</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>egy tér egy névvel.</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE2_Q1_ITEM_2"> <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; Ha a <codel>pi</codel>-t a <codel>math</codel>-ból akarod importálni, melyik sort fogod használni?</p>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p><codel>from math import pi</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>import pi from math</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>from pi import math</codel></p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE2_Q1_ITEM_3">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp;Az alábbiak közül melyik <u>igaz</u>?</p>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>a csomagok tartalmazhatnak modulokat</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>a modulok tartalmazhatnak modulokat</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>a modulok tartalmazhatnak csomagokat</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="2" scoringType="1" points="1" customId="PE2_Q1_ITEM_4">  <!-- Multiple-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+    <p><span class="label">Q:</span>&nbsp;&nbsp; Mivel jelezheted, hogy egy modul entitást <b>privát</b>ként kell kezelni? (<u>Két</u> helyes válasz van!)</p> 
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>megjelölheted az entitás nevét a <codel>_</codel> (egyetlen aláhúzásjel) előtaggal</p> ]]>
+</option>
+
+<option isCorrect="true">
+<![CDATA[ <p>megjelölheted az entitás nevét a <codel>__</codel> (dupla aláhúzásjel) előtaggal</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>megjelölheted az entitás nevét a <codel>#</codel> előtaggal</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>nincs - alapértelmezés szerint minden modul entitás privát</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE2_Q1_ITEM_5">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+    <p><span class="label">Q:</span>&nbsp;&nbsp; A nyílt forráskódú Python kódot összegyűjtő <b>PWG által kezelt adattár</b> neve:</p>  
+]]>
+</instructions>
+<options>
+<option isCorrect="true" id="A">
+<![CDATA[ <p>PyPI</p> ]]>
+</option>
+<option id="B">
+<![CDATA[ <p>PyCR</p> ]]>
+</option>
+<option id="C">
+<![CDATA[ <p>PWGR</p> ]]>
+</option>
+<option id="D">
+<![CDATA[ <p>PyRep</p> ]]>
+</option>
+</options>
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE2_Q1_ITEM_6">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+    <p><span class="label">Q:</span>&nbsp;&nbsp; <b>PyPI</b>-t gyakran így nevezik:</p>  
+]]>
+</instructions>
+<options>
+<option isCorrect="true" id="A">
+<![CDATA[ <p>A sajtbolt</p> ]]>
+</option>
+<option id="B">
+<![CDATA[ <p>A Py Software Store</p> ]]>
+</option>
+<option id="C">
+<![CDATA[ <p>Python Play</p> ]]>
+</option>
+<option id="D">
+<![CDATA[ <p>pyΠ</p> ]]>
+</option>
+</options>
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE2_Q1_ITEM_7">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+    <p><span class="label">Q:</span>&nbsp;&nbsp; A <i>pip</i> elnevezés a következő kifejezésből származik:</p>  
+]]>
+</instructions>
+<options>
+<option isCorrect="true" id="A">
+<![CDATA[ <p><i>pip installs packages (pip csomagokat telepít)</i></p> ]]>
+</option>
+<option id="B">
+<![CDATA[ <p><i>peripheral interchange program (perifériaváltó program)</i></p> ]]>
+</option>
+<option id="C">
+<![CDATA[ <p><i>python internal packager (python belső csomagoló)</i></p> ]]>
+</option>
+<option id="D">
+<![CDATA[ <p><i>package inside package (csomag a csomagon belül)</i></p> ]]>
+</option>
+</options>
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="2" scoringType="1" points="1" customId="PE2_Q1_ITEM_8">  <!-- Multiple-choice question, graded -->
+
+<instructions>
+<![CDATA[
+    <p><span class="label">Q:</span>&nbsp;&nbsp; Mi <u>igaz</u> a <codel>pip</codel>-ről? (<u>Két</u> helyes válasz van!)</p>  
+]]>
+</instructions>
+<options>
+<option id="A">
+<![CDATA[ <p>mindig elérhető, mert a Pythonnal együtt van telepítve</p> ]]>
+</option>
+<option id="B" isCorrect="true">
+<![CDATA[ <p>két különböző <i>pip</i> implementáció létezik, az egyik a Python 2, a másik a Python 3 számára</p> ]]>
+</option>
+<option id="C">
+<![CDATA[ <p>ez egy GUI eszköz</p> ]]>
+</option>
+<option  isCorrect="true" id="D">
+<![CDATA[ <p>ez egy parancssori eszköz</p> ]]>
+</option>
+</options>
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE2_Q1_ITEM_9">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+    <p><span class="label">Q:</span>&nbsp;&nbsp;Ha a <codel>pip</codel> segítségével telepítesz egy olyan csomagot, amely egy vagy több függőséget igényel, akkor …:</p>  
+]]>
+</instructions>
+<options>
+<option id="A" isCorrect="true">
+<![CDATA[ <p>a pip mindent magától elintéz.</p> ]]>
+</option>
+<option id="B">
+<![CDATA[ <p>az összes függőséget magadnak kell telepítened, <b>mielőtt</b> a kívánt csomagot telepíted.</p> ]]>
+</option>
+<option id="C">
+<![CDATA[ <p>az összes függőséget magadnak kell telepítened <b>azután</b>, hogy telepítetted a kívánt csomagot.</p> ]]>
+</option>
+<option id="D">
+<![CDATA[ <p>a csomag az első futtatás során telepíti az összes függőséget.</p> ]]>
+</option>
+</options>
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="2" scoringType="1" points="1" customId="PE2_Q1_ITEM_10">  <!-- Multiple-choice question, graded -->
+
+<instructions>
+<![CDATA[
+    <p><span class="label">Q:</span>&nbsp;&nbsp; Az alábbi parancsok közül melyiket fogjod használni a <codel>pip</codel> verziójának meghatározásához? (<u>Három</u> helyes válasz van!)</p>  
+]]>
+</instructions>
+<options>
+<option isCorrect="true" id="A">
+<![CDATA[ <p><codel>pip --version</codel></p> ]]>
+</option>
+<option isCorrect="true" id="B">
+<![CDATA[ <p><codel>pip version</codel></p> ]]>
+</option>
+<option isCorrect="true" id="C">
+<![CDATA[ <p><codel>pip -version</codel></p> ]]>
+</option>
+<option id="D">
+<![CDATA[ <p><codel>pip ---version</codel></p> ]]>
+</option>
+</options>
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+</questionPool>

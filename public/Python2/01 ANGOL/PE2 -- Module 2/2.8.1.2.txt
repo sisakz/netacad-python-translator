@@ -1,0 +1,151 @@
+<problem chapter='2' section='8' slide='1' problem='2' title='Useful exceptions'>
+
+<!--
+Update history:
+2020-09-21 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+
+<h2><font face="Courier New">KeyboardInterrupt</font></h2>
+
+
+<p><strong>Location:</strong> <font face="Courier New">BaseException &larr; KeyboardInterrupt</font></p>
+
+ 
+
+<p><strong>Description:</strong> a concrete exception raised when the user uses a keyboard shortcut designed to terminate a program's execution (<i>Ctrl-C</i> in most OSs); if handling this exception doesn't lead to program termination, the program continues its execution.</p>
+
+<p>Note: this exception is not derived from the <font face="Courier New">Exception</font> class. Run the program in IDLE.</p>
+
+
+<p><strong>Code:</strong></p>
+
+<codep class="syntax-color copy line-numbers"># This code cannot be terminated
+# by pressing Ctrl-C.
+
+from time import sleep
+
+seconds = 0
+
+while True:
+    try:
+        print(seconds)
+        seconds += 1
+        sleep(1)
+    except KeyboardInterrupt:
+        print("Don't do that!")
+</codep>
+
+<br>
+
+
+
+
+<h2><font face="Courier New">LookupError</font></h2>
+
+
+<p><strong>Location:</strong> <font face="Courier New">BaseException &larr; Exception &larr; LookupError</font></p>
+
+ 
+
+<p><strong>Description:</strong> an abstract exception including all exceptions caused by errors resulting from invalid references to different collections (lists, dictionaries, tuples, etc.)</p>
+
+
+
+<br><br>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<h2><font face="Courier New">MemoryError</font></h2>
+
+
+<p><strong>Location:</strong> <font face="Courier New">BaseException &larr; Exception &larr; MemoryError</font></p>
+
+ 
+
+<p><strong>Description:</strong> a concrete exception raised when an operation cannot be completed due to a lack of free memory. </p>
+
+
+<p><strong>Code:</strong></p>
+
+<codep class="syntax-color copy line-numbers"># This code causes the MemoryError exception.
+# Warning: executing this code may affect your OS.
+# Don't run it in production environments!
+
+string = 'x'
+try:
+    while True:
+        string = string + string
+        print(len(string))
+except MemoryError:
+    print('This is not funny!')
+</codep>
+
+<br>
+
+
+
+
+
+
+
+
+<h2><font face="Courier New">OverflowError</font></h2>
+
+
+<p><strong>Location:</strong> <font face="Courier New">BaseException &larr; Exception &larr; ArithmeticError &larr; OverflowError</font></p>
+
+ 
+
+<p><strong>Description:</strong> a concrete exception raised when an operation produces a number too big to be successfully stored</p>
+
+<p><strong>Code:</strong></p>
+
+<codep class="syntax-color copy line-numbers"># The code prints subsequent
+# values of exp(k), k = 1, 2, 4, 8, 16, ...
+
+from math import exp
+
+ex = 1
+
+try:
+    while True:
+        print(exp(ex))
+        ex *= 2
+except OverflowError:
+    print('The number is too big.')
+</codep>
+
+
+
+
+<br>
+<br>
+
+</div>
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

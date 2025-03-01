@@ -1,0 +1,639 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+PE2 - Module 2 Test
+
+Update history:
+2019-02-08 Grzegorz (reviewed)
+2020-09-29 Grzegorz (reformatting, PEP-8 compliance, dividing content into Test 1 and Test 2, creating item 5 and 6)
+-->
+
+<questionPool>
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE2_Q2_ITEM_1">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; Entering the <codel>try:</codel> block implies that:</p>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>some of the instructions from this block may not be executed</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>all of the instructions from this block will be executed</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>none of the instructions from this block will be executed</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>the block will be omitted </p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE2_Q2_ITEM_2">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; The unnamed <codel>except:</codel> block:</p>
+
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>must be the last one</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>can be placed anywhere</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>must be the first one</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>cannot be used if any named block has been used</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE2_Q2_ITEM_3">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; The top‑most Python exception is called:</p>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p><codel>BaseException</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>Exception</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>PythonException</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>TopException</codel></p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE2_Q2_ITEM_4">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; The following statement:</p>
+
+<codep>assert var == 0
+
+</codep>
+<br>
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>will stop the program when <codel>var != 0</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>will stop the program when <codel>var == 0</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>is erroneous</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>has no effect</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+<question type="1" scoringType="1" points="1" customId="PE2_Q2_ITEM_5">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; What is the expected output of the following code?</p>
+
+<codep>try:
+    print("5"/0)
+except ArithmeticError:
+    print("arith")
+except ZeroDivisionError:
+    print("zero")
+except:
+    print("some")
+	
+</codep>
+<br>
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p><codel>some</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>arith</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>zero</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>0</codel></p> ]]>
+</option>
+
+</options>
+
+</question>
+
+<!-- ######################################################################################################################## -->
+
+
+
+<question type="2" scoringType="1" points="1" customId="PE2_Q2_ITEM_6">  <!-- Multiple-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; Which of the following are examples of built-in <b>concrete</b> Python exceptions? (Select <u>two</u> answers)</p>
+
+<br>
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p><codel>IndexError</codel></p> ]]>
+</option>
+
+<option isCorrect="true">
+<![CDATA[ <p><codel>ImportError</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>ArithmeticError</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>BaseException</codel></p> ]]>
+</option>
+
+</options>
+
+</question>
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE2_Q2_ITEM_7">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; ASCII is:</p>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>short for <i>American Standard Code for Information Interchange</i></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>a standard Python module name</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>a predefined Python variable name</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>a character name</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE2_Q2_ITEM_8">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; UTF‑8 is:</p>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>a form of encoding Unicode code points</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>a Python version name</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>a synonym for <i>byte</i></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>the 9th version of the UTF standard</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE2_Q2_ITEM_9">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; UNICODE is a standard:</p>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>like ASCII, but much more expansive</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>for coding floating-point numbers</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>used by coders from universities</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>honored by the whole universe</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE2_Q2_ITEM_10">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; The following code:</p>
+
+<codep>x = '\''
+print(len(x))
+
+</codep>
+<br>
+
+<p>prints:</p>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p><codel>1</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>2</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>3</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>20</codel></p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE2_Q2_ITEM_11">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; The following code:</p>
+
+<codep>print(ord('c') - ord('a'))
+
+</codep>
+<br>
+
+<p>prints:</p>
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p><codel>2</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>1</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>3</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>0</codel></p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE2_Q2_ITEM_12">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; The following code:</p>
+
+<codep>print(chr(ord('z') ‑ 2))
+
+</codep>
+<br>
+
+<p>prints:</p>
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p><codel>x</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>y</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>z</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>a</codel></p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE2_Q2_ITEM_13">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; The following code:</p>
+
+<codep>print(3 * 'abc' + 'xyz')
+
+</codep>
+<br>
+
+<p>prints:</p>
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p><codel>abcabcabcxyz</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>abcabcxyzxyz</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>abcxyzxyzxyz</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>xyzxyzxyzxyz</codel></p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE2_Q2_ITEM_14">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; The following code:</p>
+
+<codep>print('Mike' &gt; "Mikey")
+
+</codep>
+<br>
+
+<p>prints:</p>
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p><codel>False</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>True</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>0</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>1</codel></p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE2_Q2_ITEM_15">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; The following code:</p>
+
+<codep>print(float("1, 3"))
+
+</codep>
+<br>
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>raises a <codel>ValueError</codel> exception</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>prints <codel>1.3</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>prints <codel>1,3</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>prints <codel>13</codel></p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+
+</questionPool>

@@ -1,0 +1,101 @@
+<problem chapter='2' section='7' slide='1' problem='4' title='The anatomy of exceptions'>
+
+<!--
+Update history:
+2020-09-21 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>def bad_fun(n):
+    try:
+        return 1 / n
+    except ArithmeticError:
+        print("Arithmetic Problem!")
+    return None
+
+bad_fun(0)
+
+print("THE END.")
+
+</code>
+
+
+
+<h1>Exceptions: continued</h1>
+
+<p>If you want to <strong>handle two or more exceptions</strong> in the same way, you can use the following syntax:</p>
+
+<codep class="syntax-color">try:
+    :
+<mark class="mark-background">except (exc1, exc2):</mark>
+    :
+</codep>
+<br>
+ 
+
+<p>You simply have to put all the engaged exception names into a comma-separated list and not forget the parentheses.</p>
+
+<br>
+
+<p>If an <strong>exception is raised inside a function</strong>, it can be handled:</p>
+
+<ul>
+<li>inside the function;</li>
+<li>outside the function;</li>
+</ul>
+ 
+
+<p>Let's start with the first variant – look at the code in the editor.</p>
+
+ 
+<p>The <font face="Courier New">ZeroDivisionError</font> exception (being a concrete case of the <font face="Courier New">ArithmeticError</font> exception class) is raised inside the <codel>bad_fun()</codel> function, and it doesn't leave the function – the function itself takes care of it.</p>
+
+ 
+<p>The program outputs:</p>
+
+<codep>Arithmetic problem!
+THE END.</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+<br>
+
+<p>It's also possible to let the exception propagate <strong>outside the function</strong>. Let's test it now.</p>
+
+<p>Look at the code below:</p>
+
+<codep class="syntax-color copy line-numbers">def bad_fun(n):
+    return 1 / n
+
+try:
+    bad_fun(0)
+except ArithmeticError:
+    print("What happened? An exception was raised!")
+
+print("THE END.")
+</codep>
+
+<br>
+
+<p>The problem has to be solved by the invoker (or by the invoker's invoker, and so on).</p>
+
+<p>The program outputs:</p>
+
+<codep>What happened? An exception was raised!
+THE END.</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+<br> 
+
+<p>Note: the <strong>exception raised can cross function and module boundaries</strong>, and travel through the invocation chain looking for a matching <codel>except</codel> clause able to handle it.</p>
+
+<p>If there is no such clause, the exception remains unhandled, and Python solves the problem in its standard way – <strong>by terminating your code and emitting a diagnostic message</strong>.</p>
+
+<p>Now we're going to suspend this discussion, as we want to introduce you to a brand new Python instruction.</p>
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

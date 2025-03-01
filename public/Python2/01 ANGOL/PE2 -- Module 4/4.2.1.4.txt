@@ -1,0 +1,86 @@
+<problem chapter='4' section='2' slide='1' problem='4' title='Processing files'>
+
+<!--
+Update history:
+2020-10-07 Grzegorz (review, PEP-8 compliance check)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h2>File streams</h2>
+
+<p>The opening of the stream is not only associated with the file, but should also declare the manner in which the stream will be processed. This declaration is called an <strong>open mode</strong>.</p>
+
+<p>If the opening is successful, the <strong>program will be allowed to perform only the operations which are consistent with the declared open mode</strong>.</p>
+
+
+<p>There are two basic operations performed on the stream:</p>
+
+<ul>
+<li><strong>read</strong> from the stream: the portions of the data are retrieved from the file and placed in a memory area managed by the program (e.g., a variable);</li>
+<li><strong>write</strong> to the stream: the portions of the data from the memory (e.g., a variable) are transferred to the file.</li>
+</ul>
+
+<p>There are three basic modes used to open the stream:</p>
+
+<ul>
+<li><strong>read mode</strong>: a stream opened in this mode allows <strong>read operations only</strong>; trying to write to the stream will cause an exception (the exception is named <font face="Courier New">UnsupportedOperation</font>, which inherits <font face="Courier New">OSError</font> and <font face="Courier New">ValueError</font>, and comes from the <font face="Courier New">io</font> module);</li>
+
+<li><strong>write mode</strong>: a stream opened in this mode allows <strong>write operations only</strong>; attempting to read the stream will cause the exception mentioned above;</li>
+
+<li><strong>update mode</strong>: a stream opened in this mode allows <strong>both writes and reads</strong>.</li>
+</ul>
+
+
+<br> 
+<br>
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+
+<br>
+
+
+<p>Before we discuss how to manipulate the streams, we owe you some explanation. <strong>The stream behaves almost like a tape recorder</strong>.</p>
+
+<p>When you read something from a stream, a virtual head moves over the stream according to the number of bytes transferred from the stream.</p>
+
+<p>When you write something to the stream, the same head moves along the stream recording the data from the memory.</p>
+
+<p>Whenever we talk about reading from and writing to the stream, try to imagine this analogy. The programming books refer to this mechanism as the <strong>current file position</strong>, and we'll also use this term.</p>
+
+<br>
+
+<center><img src="/uploads/media/default/0001/01/193c0b58a122298556fe12d7bf37c53d40d50545.png" alt="The read/write concept" width="65%"></center>
+<br><br>
+
+ 
+<p>It's necessary now to show you the object responsible for representing streams in programs.</p>
+
+
+<br>
+<br>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

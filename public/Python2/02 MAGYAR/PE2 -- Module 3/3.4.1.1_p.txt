@@ -1,0 +1,86 @@
+<problem chapter='3' section='4' slide='1' problem='1' title='OOP: Metódusok'>
+
+<!--
+Update history:
+2020-09-30 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>
+class Classy:
+    def method(self):
+        print("method")
+
+
+obj = Classy()
+obj.method()
+
+</code>
+
+
+
+<h1>Metódusok részletesen</h1>
+
+<p>Foglaljuk össze a Python osztályokban a metódusok használatával kapcsolatos ismereteinket.</p>
+
+
+<p>Mint már tudjuk, a <strong>metódus egy osztályba ágyazott függvény</strong>.</p>
+
+<p>Van egy alapvető követelmény - egy <strong>metódusnak legalább egy paraméterrel kell rendelkeznie</strong> (paraméter nélküli metódus nem létezik - egy metódus argumentum nélkül is meghívható, de paraméterek nélkül nem deklarálható).</p>
+
+ 
+<p>Az első (vagy egyetlen) paraméter neve általában <codel>self</codel>. Javasoljuk, hogy kövessük is ezt a konvenciót - ez az általánosan elfogadott és használt név, egy kis meglepetést fogunk okozni másoknak, ha esetlegesen más elnevezést használunk.</p>
+
+<p>A <font face="Courier New">self</font> név utal a paraméter céljára – <strong>azonosítja az objektumot, amelyre a metódus meghívásra kerül</strong>.</p>
+
+<p>Ha egy metódust akarunk meghívni, nem szabad átadnunk a <codel>self</codel> paraméter argumentumát - a Python beállítja helyettünk.</p>
+
+<p>A szerkesztőben lévő példa mutatja a különbséget.</p>
+
+<p>A kód kimenete:</p>
+
+<codep>method</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+ 
+
+<p>Figyeljük meg, hogyan hoztuk létre az objektumot - <strong>az osztálynevet függvényként kezeltük</strong>, és az osztály egy újonnan példányosított objektumát adtuk vissza.</p>
+
+<hr>
+
+<p>Ha azt szeretnéd, hogy a metódus a <codel>self</codel>-en kívül más paramétereket is elfogadjon, akkor ezt kell tenned:</p>
+
+<ul>
+    <li>helyezd őket a metódus definíciójába a <codel>self</codel> után;</li>
+    <li>add meg őket a meghívás során a <codel>self</codel> megadása nélkül (ahogy láttad)</li>
+</ul>
+ 
+
+<p>Mint itt:</p>
+
+<codep class="syntax-color line-numbers copy">class Classy:
+    def method(self, par):
+        print("method:", par)
+
+
+obj = Classy()
+obj.method(1)
+obj.method(2)
+obj.method(3)
+</codep>
+<br>
+ 
+
+<p>A kód kimenete:</p>
+
+<codep>method: 1
+method: 2
+method: 3</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

@@ -1,0 +1,51 @@
+<problem chapter='4' section='1' slide='1' problem='1' title='Generátor és closure'>
+
+<!--
+Update history:
+2020-10-05 Grzegorz (review, PEP-8 compliance check)
+-->
+
+<code>
+for i in range(5):
+    print(i)
+
+</code>
+
+
+
+<h1>Generátorok - Hol találhatók?</h1>
+
+
+<p><strong>Generátor</strong> – Mi jut eszedbe erről a szóról? Talán valamilyen elektronikus eszköz. Esetleg egy súlyos, nehéz gép, amelyet elektromos vagy másfajta energia előállítására terveztek.</p>
+
+<p>A Python generátor egy <strong>speciális kód, ami értékek sorozatát képes előállítani, miközben vezérli az iterációs folyamatot is</strong>. Ezért a generátorokat nagyon gyakran <strong>iterátoroknak</strong> nevezzük. Egyesek ugyan nagyon finom különbséget tesznek e kétféle objektum között, de mi azonosnak tekintjük ezeket.</p>
+
+<p>Lehet, hogy nem vetted észre, de már nagyon sokszor találkoztál generátorokkal. Vess egy pillantást erre a nagyon egyszerű kódrészletre:</p>
+
+<codep class="syntax-color">for i in range(5):
+    print(i)
+</codep>
+
+<br> 
+
+<p>A <codel>range()</codel> függvény valójában egy generátor, ami (tulajdonképpen) egy iterátor.</p>
+
+<p>Mi a különbség?</p>
+
+<p>Egy függvény egyetlen, jól definiált értéket ad vissza - ez lehet például egy polinom többé-kevésbé bonyolult kiértékelésének eredménye, és egy konkrét érték kiszámításához egyszer hívjuk meg - csak egyszer.</p>
+
+<p>A generátor <strong>értékek sorozatát adja vissza</strong>, és általában (implicit módon) többször is meghívásra kerül.</p>
+
+ 
+
+<p>A példában a <codel>range()</codel> generátort hatszor hívja meg a program, öt egymást követő értéket ad vissza nullától négyig, és végül jelzi, hogy a sorozat befejeződött.</p>
+
+<p>A fenti folyamat el van rejtve a felhasználó elől, de nézzük alaposan meg az <strong>iterátor protokollt</strong>.</p> 
+
+
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

@@ -1,0 +1,73 @@
+<problem chapter='2' section='4' slide='1' problem='3' title='A karakterláncok működése'>
+
+<!--
+Update history:
+2020-09-23 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>
+# Demonstrating the sorted() function:
+first_greek = ['omega', 'alpha', 'pi', 'gamma']
+first_greek_2 = sorted(first_greek)
+
+print(first_greek)
+print(first_greek_2)
+
+print()
+
+# Demonstrating the sort() method:
+second_greek = ['omega', 'alpha', 'pi', 'gamma']
+print(second_greek)
+
+second_greek.sort()
+print(second_greek)
+
+</code>
+
+
+
+<h1>Rendezés</h1>
+
+<p>Az összehasonlítás szorosan kapcsolódik a rendezéshez (vagy inkább a rendezés az összehasonlítás egy nagyon kifinomult esete).</p>
+
+<p>Ez egy jó alkalom arra, hogy megmutassuk a <strong>karakterláncokat tartalmazó listák rendezésének </strong>két lehetséges módját. Az ilyen művelet nagyon gyakori a való világban – bármikor, amikor nevek, áruk, címek vagy városok listáját látod, elvárod, hogy rendezett legyen.</p>
+
+<p>Tegyük fel, hogy a következő listát szeretnénk rendezni:</p>
+
+<codep class="syntax-color"> greek = ['omega', 'alpha', 'pi', 'gamma']
+</codep>
+<br>
+
+<p>A Python két megoldást kínál a listák rendezésére.</p>
+
+<p>Az elsőt <strong>a <codel>sorted()</codel> nevű függvény</strong> valósítja meg.</p>
+
+<p>A függvény egy argumentumot (egy listát) vár, és <strong>egy új listát ad vissza</strong>, amely az argumentum elemeit rendezetten tartalmazza. (Megjegyzés: ez a leírás kissé leegyszerűsített a tényleges megvalósításhoz képest – ezt később tárgyaljuk.)</p>
+
+<p>Az eredeti lista érintetlen marad.</p>
+
+<p>Nézd meg a kódot a szerkesztőben, és futtasd le. A kódrészlet a következő kimenetet eredményezi:</p>
+
+<codep>['omega', 'alpha', 'pi', 'gamma']
+['alpha', 'gamma', 'omega', 'pi']</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+
+<p>A második módszer magát a listát módosítja – <strong>nem jön létre új lista</strong>. A rendezést a <codel>sort()</codel> nevű tagfüggvény végzi el helyben.</p>
+
+<p>A kimenet nem változott:</p>
+
+<codep>['omega', 'alpha', 'pi', 'gamma']
+['alpha', 'gamma', 'omega', 'pi']</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+<p>Ha a növekvő sorrendtől eltérő sorrendre van szükség, akkor meg kell győznöd a függvényt/tagfüggvényt, hogy változtassa meg az alapértelmezett viselkedését. Ezt hamarosan megbeszéljük.</p>
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

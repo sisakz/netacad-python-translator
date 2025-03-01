@@ -1,0 +1,111 @@
+<problem chapter='2' section='8' slide='1' problem='5' title='SZAKASZ ÖSSZEFOGLALÁS'>
+
+<!--
+Update history:
+2020-09-01 Sysio	(first version)
+2021-07-02 Greg		(script optimization)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<h1>A legfontosabb tudnivalók</h1>
+
+<br>
+
+<p>1. Néhány absztrakt beépített Python kivétel:</p>
+<ul>
+<li><codel>ArithmeticError</codel>,</li>
+<li><codel>BaseException</codel>,</li>
+<li><codel>LookupError</codel>.</li>
+</ul>
+<br>
+
+
+
+<p>2. Néhány konkrét beépített Python kivétel:</p>
+<ul>
+<li><codel>AssertionError</codel>,</li>
+<li><codel>ImportError</codel>,</li>
+<li><codel>IndexError</codel>,</li>
+<li><codel>KeyboardInterrupt</codel>,</li>
+<li><codel>KeyError</codel>,</li>
+<li><codel>MemoryError</codel>,</li>
+<li><codel>OverflowError</codel>.</li>
+</ul>
+<br>
+
+</div>
+
+<div class="small-12 large-6 columns">
+<br>
+
+<script>
+function solution (id) {
+    var element = document.getElementById(id);
+    
+if (element.style.display === "none") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
+    }
+}
+</script>
+
+<p><strong>1. gyakorlat</strong></p>
+<p>Melyik kivételt tudod használni, hogy megvédd a kódodat attól, hogy a felhasználó a billentyûzet segítségével megállítsa a futását?</p>
+
+<button class="button tiny" onclick="solution('sol1')">Ellenõrzés</button>
+
+<p id="sol1" style="display: none;">
+<codep>KeyboardInterrupt
+</codep></p>
+
+
+
+
+<br><br>
+
+<p><strong>2. gyakorlat</strong></p>
+<p>
+    Mi a neve a Python legáltalánosabb kivételének?</p>
+
+
+    <button class="button tiny" onclick="solution('sol2')">Ellenõrzés</button>
+
+<p id="sol2" style="display: none;">
+<codep>BaseException</codep>
+</p>
+
+
+<br><br>
+
+<p><strong>3. gyakolat</strong></p>
+<p>A következõ sikertelen értékelés során mely kivételek váltódnak ki?</p>
+<codep>huge_value = 1E250 ** 2
+
+</codep>
+<br>
+
+<button class="button tiny" onclick="solution('sol3')">Ellenõrzés</button>
+
+<p id="sol3" style="display: none;">
+<codep>OverflowError</codep>
+</p>
+
+
+<br>
+
+</div>
+
+</div>
+</div>
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>
+
+

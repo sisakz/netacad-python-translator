@@ -1,0 +1,161 @@
+﻿<problem chapter='2' section='3' slide='1' problem='18' title="LAB: Saját split függvényed">
+
+<!--
+Update history:
+2020-09-22 Grzegorz (review, PEP-8 compliance check, update)
+2021-06-30	Grzegorz (corrections)
+-->
+
+<code>
+def mysplit(strng):
+    #
+    # put your code here
+    #
+
+
+print(mysplit("To be or not to be, that is the question"))
+print(mysplit("To be or not to be,that is the question"))
+print(mysplit("   "))
+print(mysplit(" abc "))
+print(mysplit(""))
+
+</code>
+
+<span class="label" style="background-color:rgb(205, 168, 105);"><b>LABORGYAKORLAT</b></span>
+
+<br><br>
+
+<h2>Becsült idő</h2>
+<p>20-25 perc</p>
+
+<h2>Nehézségi szint</h2>
+<p>Közepes</p>
+
+
+<h2>Célok</h2>
+<ul>
+    <li>a karakterlánc-kezelési készségek fejlesztése;</li>
+    <li>a Python beépített karakterlánc-metódusok használata.</li>
+</ul>
+
+
+<h2>Forgatókönyv</h2>
+<p>Már tudod, hogyan működik a <codel>split()</codel>. Most azt szeretnénk, ha bebizonyítanád.</p>
+
+<p>Az a feladatod, hogy <strong>írj egy saját függvényt, amely majdnem pontosan úgy viselkedik, mint az eredeti <codel>split()</codel> tagfüggvény</strong>, azaz:</p>
+
+<ul>
+    <li>pontosan egy argumentumot fogad el – egy karakterláncot;</li>
+    <li>a karakterláncból létrehozott szavak listáját adja vissza, felosztva azt azokon a helyeken, ahol a karakterlánc whitespace-eket tartalmaz;</li>
+    <li>ha a karakterlánc üres, a függvénynek egy üres listát kell visszaadnia;</li>
+    <li>a neve legyen <codel>mysplit()</codel></li>
+</ul>
+
+
+<p>Használd a sablont a szerkesztőben. Alaposan teszteld le a kódot.</p>
+
+
+<h2>Várható kimenet</h2>
+<codep>['To', 'be', 'or', 'not', 'to', 'be,', 'that', 'is', 'the', 'question']
+['To', 'be', 'or', 'not', 'to', 'be,that', 'is', 'the', 'question']
+[]
+['abc']
+[]</codep>
+
+
+<br>
+
+<studyMode>false</studyMode>
+<labMode>true</labMode>
+
+<hint>def mysplit(strng):
+    # A visszatérési érték legyen [], ha a karakterlánc üres vagy csak whitespace karaktereket tartalmaz
+    
+    # hozz létre egy listát
+
+    # hozz létre egy karakterláncot a megtalált szavak ideiglenes tárolására
+
+    # ellenőrizd, hogy egy szón belül vagy-e
+
+    # iterálj végig a karakterlánc minden karakterén 
+
+        # ha egy karakterláncon belül vagy...
+
+            # ... és az aktuális karakter nem egy szóköz...
+
+                # ... frissítsd a jelenlegi szót
+
+                # ... máskülönben a szó végére értél és hozzá kell adnod a szót a listához
+
+                # ... és jelezned kell a programnak, hogy végetért a szó
+
+            # ha nem egy karakterláncon belül vagy és elértél egy új nem whitespace karaktert...
+
+                 ... akkor az azt jelenti, hogy egy új szó kezdődik és meg kell jegyezned...
+
+                # ... és tárolnod kell az új szó első betűjét
+
+    # ha a karakterlánc végére értünk, akkor az utolsó nem-üres szót hozzáadjuk a listához
+
+    # visszaküljük a listát a hívóhoz
+
+
+print(mysplit("To be or not to be, this is a question"))
+print(mysplit("To be or not to be,this is a question"))
+print(mysplit("   "))
+print(mysplit(" abc "))
+print(mysplit(""))
+
+</hint>
+
+
+<sampleSolution>def mysplit(strng):
+    # return [] if string is empty or contains whitespaces only
+    if strng == '' or strng.isspace():
+        return [ ]
+    # prepare a list to return
+    lst = []
+    # prepare a word to build subsequent words
+    word = ''
+    # check if we are currently inside a word (i.e., if the string starts with a word)
+    inword = not strng[0].isspace()
+    # iterate through all the characters in the string
+    for x in strng:
+        # if we are currently inside a string...
+        if inword:
+            # ... and the current character is not a space...
+            if not x.isspace():
+                # ... update the current word
+                word = word + x
+            else:
+                # ... otherwise, we've reached the end of the word so we need to append it to the list...
+                lst.append(word)
+                # ... and signal the fact that we are outside the word now
+                inword = False
+        else:
+            # if we are outside the word and we've reached a non-white character...
+            if not x.isspace():
+                # ... it means that a new word has begun so we need to remember it and...
+                inword = True
+                # ... store the first letter of the new word
+                word = x
+            else:
+                pass
+    # if we've left the string and there is a non-empty string in the word, we need to update the list
+    if inword:
+        lst.append(word)
+    # return the list to the invoker
+    return lst
+
+
+print(mysplit("To be or not to be, that is the question"))
+print(mysplit("To be or not to be,that is the question"))
+print(mysplit("   "))
+print(mysplit(" abc "))
+print(mysplit(""))
+
+</sampleSolution>
+
+
+
+</problem>

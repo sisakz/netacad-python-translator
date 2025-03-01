@@ -1,0 +1,43 @@
+<problem chapter='3' section='4' slide='1' problem='7' title='OOP: Metódusok'>
+
+<!--
+Update history:
+2020-09-30 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>
+class Classy:
+    pass
+
+
+print(Classy.__module__)
+obj = Classy()
+print(obj.__module__)
+
+</code>
+
+
+
+<h1>Az osztályok és objektumok belső élete (folytatás)</h1>
+
+<p>A <codel>__module__</codel> is egy karakterlánc - az <strong>osztály definícióját tartalmazó modul nevét tárolja</strong>.</p>
+
+<p>Ellenőrizzük, hogy valóban így van-e - futtasd le a kódot a szerkesztőprogramban!</p>
+
+<p>A kód kimenete:</p>
+
+<codep>__main__
+__main__</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+ 
+
+<p>Mint tudjuk, minden <codel>__main__</codel> nevű modul valójában nem modul, hanem az <strong>éppen futó fájl</strong>.</p>
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

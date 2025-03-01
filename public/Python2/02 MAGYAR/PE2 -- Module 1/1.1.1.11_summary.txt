@@ -1,0 +1,191 @@
+<problem chapter='1' section='1' slide='1' problem='11' title='SZAKASZ ÖSSZEFOGLALÁS'>
+
+<!--
+Update history:
+2020-08-28 Sysio (first version)
+2020-09-28 Grzegorz (review, reformat, PEP-8 compliance)
+2021-06-16 Grzegorz (review)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<h1>A legfontosabb tudnivalók</h1>
+
+<br/>
+
+
+<p>1. Ha egy modult egészben akarsz importálni, akkor az <codel>import module_name</codel> utasítással teheted meg. Egyszerre több modult is importálhatsz egy vesszővel elválasztott lista segítségével. Például:</p>
+
+<codep class="syntax-color copy">import mod1
+import mod2, mod3, mod4
+</codep>
+<br/>
+<p>Ez a forma stilisztikai okokból nem ajánlott, jobb és szebb, ha ugyanazt a szándékot kifejezőbb és egyértelműbb formában kódoljuk, mint például:</p>
+<codep class="syntax-color copy">import mod2
+import mod3
+import mod4
+</codep>
+<br/>
+
+
+<p>2. Ha egy modult a fenti módon importáltunk, és hozzá akarunk férni bármelyik entitásához, akkor az entitás nevét <b>pontjelöléssel</b> kell minősíteni. Például:</p>
+
+<codep class="syntax-color copy">import my_module
+
+result = my_module.my_function(my_module.my_data)
+</codep>
+<br/>
+<p>
+A részlet két, a <codel>my_module</codel> modulból származó entitást használ: egy <codel>my_function()</codel> nevű függvényt és egy <codel>my_data</codel> nevű változót. Mindkét név <b>elé a <codel>my_module.</codel> előtagot kell tenni.</b> Az importált entitások egyik neve sem ütközik a kódod névterében létező azonos nevekkel.</p>
+<br/>
+
+
+<p>3. Nem csak a modul egészét importálhatod, hanem csak egyes entitásokat is. Ebben az esetben az importált entitások használatakor <b>nem szabad</b> előtagot használni. Például:</p>
+
+<codep class="syntax-color copy">from module import my_function, my_data
+
+result = my_function(my_data)
+</codep>
+<br/>
+<p>A fenti módszer - vonzereje ellenére - nem ajánlott, mert fennáll a veszélye, hogy konfliktusokat okoz a kód névterének importálásából származó nevekkel.</p>
+<br/>
+
+<p>4. A fenti utasítás legáltalánosabb formája lehetővé teszi a modul által kínált <b>összes entitás</b> importálását:</p>
+
+<codep class="syntax-color copy">from my_module import *
+
+result = my_function(my_data)
+</codep>
+<br/>
+<p><b>Megjegyzés</b>: ez az importváltozat nem ajánlott az előzőekkel megegyező okok miatt (a névütközés kockázata itt még magasabb).</p>
+
+<p>5. Az importált entitás nevét "helyben" is megváltoztathatod az <codel>as</codel> kifejezéssel. Például:</p>
+
+<codep class="syntax-color copy">from module import my_function as fun, my_data as dat
+
+result = fun(dat)
+</codep>
+<br/>
+
+
+</div>
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br/>
+
+<script>
+function solution (id) {
+    var element = document.getElementById(id);
+    
+if (element.style.display === "none") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
+    }
+}
+</script>
+
+
+<p><strong>1. gyakorlat</strong></p>
+<p>A <codel>mint</codel> nevű modulban található <codel>make_money()</codel> függvényt szeretnéd meghívni. A kódod a következő sorral kezdődik:</p>
+<codep>import mint
+
+</codep>
+<br/>
+
+<p>Mi a megfelelő formája a függvényhívásának?</p> 
+
+
+<button class="button tiny" onclick="solution('sol')">Ellenőrzés</button>
+
+<p id="sol" style="display: none;">
+<codep>mint.make_money()
+
+</codep>
+</p>
+
+
+
+<br/><br/>
+
+
+
+<p><strong>2. gyakorlat</strong></p>
+<p>A <codel>mint</codel> nevű modulban található <codel>make_money()</codel> függvényt akarod meghívni. A kódod a következő sorral kezdődik:</p>
+
+<codep>from mint import make_money
+	
+</codep>
+<br/>
+
+<p>Mi a megfelelő formája a függvényhívásának?</p> 
+
+
+
+<button class="button tiny" onclick="solution('sol2')">Ellenőrzés</button>
+
+<p id="sol2" style="display: none;">
+<codep>make_money()
+
+</codep>
+</p>
+
+<br/><br/>
+
+
+
+
+<p><strong>3. gyakorlat</strong></p>
+<p>Írtál egy <codel>make_money</codel> nevű függvényt magadnak. Szükséged van egy ugyanilyen nevű függvény importálására a <codel>mint</codel> modulból, és nem akarod átnevezni a korábban definiált neveket. Az <codel>import</codel> utasítás melyik változata segíthet a probléma megoldásában?</p>
+
+
+<button class="button tiny" onclick="solution('sol3')">Ellenőrzés</button>
+
+<p id="sol3" style="display: none;">
+<codep># Minta megoldás
+from mint import make_money as make_more_money
+
+</codep>
+</p>
+
+<br/><br/>
+
+
+<p><strong>4. gyakorlat</strong></p>
+<p>Milyen formában érvényes a <codel>make_money</codel> függvényhívás, ha a kódod a következő sorral kezdődik?</p>
+<codep>from mint import *
+
+</codep>
+
+<br/>
+
+<button class="button tiny" onclick="solution('sol4')">Ellenőrzés</button>
+
+<p id="sol4" style="display: none;">
+<codep>make_money()
+
+</codep>
+</p>
+
+
+<br/>
+
+<br/>
+
+</div>
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

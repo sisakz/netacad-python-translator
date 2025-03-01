@@ -1,8 +1,6 @@
-import * as path from "path";
-import * as fs from "fs";
+import cors from "cors";
 import express from "express";
 import sqlite3 from "sqlite3";
-import cors from "cors";
 
 const sqlite3V = sqlite3.verbose();
 const db = new sqlite3V.Database("./database.sqlite");
@@ -12,20 +10,18 @@ const db = new sqlite3V.Database("./database.sqlite");
 //     "CREATE TABLE IF NOT EXISTS translations (english TEXT, hungarian TEXT, englishRaw TEXT, englishFile TEXT, hungarianFile TEXT)"
 //   );
 
-//   const englishPath = path.join(__dirname, "public", "01 Python", "01 Angol");
-//   const hungarianPath = path.join(__dirname, "public", "01 Python", "02 Magyar");
+//   const englishPath = path.join(__dirname, "public", "Python2", "01 ANGOL");
+//   const hungarianPath = path.join(__dirname, "public", "Python2", "02 MAGYAR");
 
 //   const moduleNames = [
-//     "Module 0 About (2.0)",
-//     "Module 0 NetAcad About (2.0)",
-//     "Module 1 (2.0)",
-//     "Module 2 (2.0)",
-//     "Module 3 (2.0)",
-//     "Module 4 (2.0)",
-//     "Module 5 Course completion (2.0)",
-//     path.join("Module 1 (2.0)", "Module completion"),
-//     path.join("Module 2 (2.0)", "Module completion"),
-//     path.join("Module 5 Course completion (2.0)", "Summary Test 1"),
+//     "NetAcad ABOUT",
+//     "PE2 -- Module 0 About",
+//     "PE2 -- Module 1",
+//     "PE2 -- Module 2",
+//     "PE2 -- Module 3",
+//     "PE2 -- Module 4",
+//     "PE2 -- Module 5 Course Completion",
+//     // path.join("Module 1 (2.0)", "Module completion"),
 //   ];
 
 //   for (const moduleName of moduleNames) {
@@ -38,6 +34,8 @@ const db = new sqlite3V.Database("./database.sqlite");
 
 //     for (let i = 0; i < englishFiles.length; i++) {
 //       if (!englishFiles[i].endsWith(".txt")) continue;
+//       if (!englishFiles[i] || !hungarianFiles[i]) continue;
+//       if (englishFiles[i] !== hungarianFiles[i]) continue;
 
 //       const englishFile = fs.readFileSync(
 //         path.join(englishModulePath, englishFiles[i]),
@@ -61,8 +59,8 @@ const db = new sqlite3V.Database("./database.sqlite");
 //           english: splitEnglishFile[j],
 //           hungarian: splitHungarianFile[j],
 //           englishRaw: englishWithoutHTML,
-//           englishFile: `01 Angol/${moduleName}/${englishFiles[i]}`,
-//           hungarianFile: `02 Magyar/${moduleName}/${hungarianFiles[i]}`,
+//           englishFile: `01 ANGOL/${moduleName}/${englishFiles[i]}`,
+//           hungarianFile: `02 MAGYAR/${moduleName}/${hungarianFiles[i]}`,
 //         };
 
 //         db.run(

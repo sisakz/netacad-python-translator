@@ -1,0 +1,72 @@
+<problem chapter='3' section='5' slide='1' problem='19' title='OOP Fundamentals: Inheritance'>
+
+<!--
+Update history:
+2020-10-01 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h1>Single inheritance vs. multiple inheritance</h1>
+
+<p>As you already know, there are no obstacles to using multiple inheritance in Python. You can derive any new class from more than one previously defined classes.</p>
+
+<p>There is only one "but". The fact that you can do it does not mean you have to.</p>
+
+<p>Don't forget that:</p>
+
+<ul>
+<li>a single inheritance class is always simpler, safer, and easier to understand and maintain;</li>
+<br>
+
+<li>multiple inheritance is always risky, as you have many more opportunities to make a mistake in identifying these parts of the superclasses which will effectively influence the new class;</li>
+<br>
+
+<li>multiple inheritance may make overriding extremely tricky; moreover, using the <codel>super()</codel> function becomes ambiguous;</li>
+<br>
+</ul>
+
+<br> 
+<br>
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+
+<ul>
+
+<li>multiple inheritance violates the <strong>single responsibility principle</strong> (more details here: <a href="https://en.wikipedia.org/wiki/Single_responsibility_principle" target="_blank">https://en.wikipedia.org/wiki/Single_responsibility_principle</a>) as it makes a new class of two (or more) classes that know nothing about each other;</li>
+<br>
+
+<li>we strongly suggest multiple inheritance as the last of all possible solutions – if you really need the many different functionalities offered by different classes, composition may be a better alternative.</li>
+</ul>
+
+
+
+<br>
+<br>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

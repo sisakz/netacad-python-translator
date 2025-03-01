@@ -1,0 +1,39 @@
+<problem chapter='2' section='6' slide='1' problem='3' title="Hibák – a programozók mindennapi kenyere">
+
+<!--
+Update history:
+2020-09-21 Grzegorz (review, PEP-8 compliance check, update, title correction)
+-->
+
+<code>value = 1
+value /= 0
+
+</code>
+
+
+
+<h1>Kivételek (folytatás)</h1>
+
+<p>Nézd meg a kódot a szerkesztőben. Futtasd a (nyilvánvalóan hibás) programot.</p>
+
+ 
+<p>A válaszban a következő üzenet jelenik meg:</p>
+
+<codep>Traceback (most recent call last):
+File "div.py", line 2, in <module>
+value /= 0
+<mark style="background-color:#e6f2ff;">ZeroDivisionError:</mark> division by zero</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+ 
+
+<p>Ennek a hiba kivételnek a neve: <b><font face="Courier New">ZeroDivisionError</font></b>.</p>
+
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

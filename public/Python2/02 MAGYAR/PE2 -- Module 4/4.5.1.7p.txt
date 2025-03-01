@@ -1,0 +1,98 @@
+<problem chapter='4' section='5' slide='1' problem='7' title='A datetime modul'>
+
+<!--
+Update history:
+2020-03-30 Sebastian (first version)
+2020-10-11 Grzegorz (review, PEP-8 compliance check)
+-->
+
+<code>from datetime import time
+
+t = time(14, 53, 20, 1)
+
+print("Time:", t)
+print("Hour:", t.hour)
+print("Minute:", t.minute)
+print("Second:", t.second)
+print("Microsecond:", t.microsecond)
+
+</code>
+
+
+
+<h1>Időobjektumok létrehozása</h1>
+
+
+<p>Azt már tudod, hogyan kell dátumot megjeleníteni a <codel>date</codel> objektummal. A <codel>datetime</codel> modulnak van egy olyan osztálya is, amely lehetővé teszi az idő megjelenítését. Kitalálod a nevét? Ez a <codel>time</codel>:</p>
+
+<p><codep>time(<i>hour, minute, second, microsecond, tzinfo, fold</i>)
+
+</codep></p>
+
+<p>A <codel>time</codel> osztály konstruktora a következő opcionális paramétereket fogadja el:</p>
+
+
+<table>
+<tr>
+<th>Paraméter</th>
+<th>Korlátozások</th>
+</tr>
+
+<tr>
+<td><codel>hour</codel></td>
+<td><p>Az <i>hour</i> (óra) paraméter 0-tól 23-ig terjedő egész értékeket vehet fel.</p></td>
+</tr>
+
+<tr>
+<td><codel>minute</codel></td>
+<td><p>A <i>minute</i> (perc) paraméter 0-tól 59-ig vehet fel egész értékeket.</p></td>
+</tr>
+
+<tr>
+<td><codel>second</codel></td>
+<td><p>A <i>second</i> (másodperc) paraméter 0-tól 59-ig vehet fel egész értékeket.</p></td>
+</tr>
+
+<tr>
+<td><codel>microsecond</codel></td>
+<td><p>A <i>microsecond</i> (mikroszekundum) paraméter értéke 0-nál nagyobb vagy azzal egyenlő, de 1000000-nál kisebb kell, hogy legyen.</p></td>
+</tr>
+
+<tr>
+<td><codel>tzinfo</codel></td>
+<td><p>A <i>tzinfo</i> paraméternek egy <codel>tzinfo</codel> alosztályú objektumnak vagy <codel>None</codel>-nak (ez az alapértelmezett) kell lennie.</p></td>
+</tr>
+
+<tr>
+<td><codel>fold</codel></td>
+<td><p>A <i>fold</i> paraméter értéke 0 vagy 1 (alapértelmezett a 0). </p></td>
+</tr>
+</table>
+
+<p>A <i>tzinfo</i> paraméter az időzónákhoz kapcsolódik, míg a <i>fold</i> az óraátállításokhoz. Ezen a tanfolyamon nem fogjuk használni őket, de javasoljuk, hogy ismerkedj meg velük.</p>
+
+<p>Nézzük meg, hogyan hozhatunk létre egy időobjektumot a gyakorlatban. Futtasd le a kódot a szerkesztőablakban.</p>
+
+<p>Eredmény:</p>
+
+<codep>Time: 14:53:20.000001
+Hour: 14
+Minute: 53
+Second: 20
+Microsecond: 1</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+<p>A példában négy paramétert adtunk át az osztály konstruktorának: <i>hour</i>, <i>minute</i>, <i>second</i>, and <i>microsecond</i>. Ezek mindegyike elérhető az osztály attribútumai segítségével.</p>
+
+<p><b>Megjegyzés:</b> Hamarosan elmondjuk, hogyan változtathatod meg az alapértelmezett időformátumot.</p>
+
+
+
+<br>
+<br>
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

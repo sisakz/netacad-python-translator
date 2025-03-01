@@ -1,0 +1,71 @@
+<problem chapter='2' section='8' slide='1' problem='6' title='Modul zárás'>
+
+<!--
+Update history:
+2020-10-18 Grzegorz (file creation)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<h1>Gratulálunk! Befejezted a <i>2. modult</i>.</h1>
+
+<br>
+
+
+<p>Szép munka! Elérted a 2. modul végét. Ezzel egy fontos mérföldkövet teljesítettél a Python programozási tanulmányaidban. Íme egy rövid összefoglaló a 2. modulban lefedett és megismert célokról:</p>
+
+<ul>
+    <li>karakterek, karakterláncok és kódolási szabványok;</li>
+
+    <li>a karakterláncok természete Pythonban; karakterláncok kontra listák – hasonlóságok és különbségek;</li>
+
+    <li>lista és karakterlánc tagfüggvények;</li>
+
+    <li>hibakezelés Pythonban;</li>
+
+    <li>a hibaáramlás ellenőrzése <i>try</i> és <i>except</i> segítségével;</li>
+
+    <li>a kivételek hierarchiája; a leghasznosabb kivételek áttekintése.</li>
+
+</ul>
+
+<br>
+
+<p>Most már készen állsz a modul kvízének kitöltésére és a végső kihívás teljesítésére: Teszt a 2. modulhoz, amely segít felmérni, hogy mit tanultál eddig.</p>
+
+
+<br>
+<br>
+
+</div>
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+
+
+<center><img src="/uploads/media/default/0001/01/29ed2aa31a1a26221e4eac3b69d973a33cbf562e.png" width="65%" alt="Module completion – congratulations"></center>
+<br>
+
+
+
+
+<br>
+
+</div>
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

@@ -1,0 +1,93 @@
+<problem chapter='1' section='3' slide='1' problem='9' title='Modules and Packages'>
+
+<!--
+Update history:
+2020-09-08 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h1>Your first package: step 7</h1>
+
+<p>We are going to access the <codel>funI()</codel> function from the <font face="Courier New">iota</font> module from the top of the <font face="Courier New">extra</font> package. It forces us to use qualified package names (associate this with naming folders and subfolders – the conventions are very similar).</p>
+
+<p>This is how to do it:</p>
+
+<img src="/uploads/media/default/0001/01/6da8f46237f7f00576bc32f1c1c76292de88e991.png" width="45%" alt="The main2.py file">
+
+<br><br>
+
+<codep class="syntax-color copy line-numbers">from sys import path
+path.append('..\\packages')
+
+import extra.iota
+print(extra.iota.funI())
+</codep>
+<p style="text-align: right;">main2.py</p>
+ 
+
+<p>Note:</p>
+
+<ul>
+<li>we've modified the <codel>path</codel> variable to make it accessible to Python;</li>
+<li>the <codel>import</codel> doesn't point directly to the module, but specifies the fully qualified path from the top of the package;</li>
+</ul>
+
+<p>replacing <codel>import extra.iota</codel> with <codel>import iota</codel> will cause an error.</p>
+
+<br><br>
+
+
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+
+
+<p>The following variant is valid too:</p>
+
+<img src="/uploads/media/default/0001/01/3912ca43306d65f9cb90766865cf5add190789e0.png" width="45%" alt="The main2.py file alternative version">
+
+<br><br>
+
+
+<codep class="syntax-color copy line-numbers">from sys import path
+path.append('..\\packages')
+
+from extra.iota import funI
+print(funI())
+</codep>
+<p style="text-align: right;">main2.py</p>
+
+
+<p>Note the qualified name of the <font face="Courier New">iota</font> module.</p>
+
+
+
+
+
+<br>
+<br>
+
+</div>
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

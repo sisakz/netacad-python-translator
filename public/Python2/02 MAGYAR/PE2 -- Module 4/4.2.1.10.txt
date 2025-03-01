@@ -1,0 +1,158 @@
+<problem chapter='4' section='2' slide='1' problem='10' title='Fájlkezelés'>
+
+<!--
+Update history:
+2020-10-07 Grzegorz (review, PEP-8 compliance check)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+    <h2>Fájlobjektumok lezárása</h2>
+
+    <p>Az utolsó művelet, amelyet egy fájlobjektumon végzünk (ez nem vonatkozik az <codel>stdin</codel>, <codel>stdout</codel> és <codel>stderr</codel> fájlobjektumokra, amelyek ezt nem igénylik), a <strong>lezárás</strong> kell legyen.</p>
+
+    <p>Ezt a műveletet a megnyitott fájlobjektumon belül a <codel>stream.close()</codel> metódus hajtja végre.</p>
+
+<ul>
+    <li>a függvény neve határozottan beszédes: <codel>close()</codel></li>
+    <li>a függvény pontosan nulla argumentumot vár; a fájlobjektumnak nem kell megnyitva lennie.</li>
+    <li>a függvény nem ad vissza semmit, de hiba esetén <font face="Courier New">IOError</font> kivételt eredményez;</li>
+    <li>a legtöbb fejlesztő úgy gondolja, hogy a <codel>close()</codel> függvény mindig sikeres, és ezért nem szükséges ellenőrizni, hogy megfelelően elvégezte-e a feladatát.
+
+        <br><br>
+        Ez a meggyőződés csak részben helyes. Ha a fájlobjektumot írásra nyitották meg, majd egy sor írási műveletet hajtottak végre, előfordulhat, hogy a fájlobjektumba küldött adatok még nem kerültek át a fizikai eszközre (a <strong>gyorsítótárazásnak</strong> vagy <strong>pufferelésnek</strong> nevezett mechanizmus miatt).
+        <br><br>
+        Mivel a fájlobjektum bezárása a pufferek kiürítését követeli meg, előfordulhat, hogy a kiürítési műveletek nem sikerülnek, és így a <codel>close()</codel> is sikertelen.
+    </li>
+</ul>
+
+<p>Már említettük a fájlobjektumokkal dolgozó függvények által okozott hibákat, de egy szót sem szóltunk arról, hogy pontosan miként tudjuk azonosítani a hiba okát.</p>
+
+<p>A diagnózis felállításának lehetősége létezik, és azt a fájlobjektumok egyik kivételes összetevője biztosítja, amelyről most fogunk beszámolni.</p>
+
+
+
+
+
+<h2>fájlobjektumhibák diagnosztizálása</h2>
+
+<p>Az <codel>IOError</codel> objektum rendelkezik egy <codel>errno</codel> nevű tulajdonsággal (a név az <i>error number</i> kifejezésből származik), amelyhez a következőképpen férhetünk hozzá:</p>
+
+<codep class="syntax-color copy line-numbers">try:
+    # Some stream operations.
+except IOError as exc:
+    print(exc.errno)
+</codep>
+
+<br>
+
+<p>Az <codel>errno</codel> attribútum értéke összehasonlítható az <codel>errno</codel> modulban definiált szimbolikus konstansok egyikével.</p>
+
+
+<br> 
+<br>
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+
+<br>
+
+<p>Vessünk egy pillantást néhány kiválasztott <strong>konstansra, amelyek hasznosak a fájlobjektumhibák észleléséhez</strong>:</p>
+
+<ul>
+    <li>
+        <codel>errno.EACCES</codel> &rarr; <font face="Courier New">Permission denied (Engedély megtagadva)</font>
+        <br><br>
+        A hiba akkor jelentkezik, amikor például egy <i>csak olvasható</i> attribútummal rendelkező fájlt próbálsz írásra megnyitni.
+    </li>
+
+<br>
+
+<li>
+    <codel>errno.EBADF</codel> &rarr; <font face="Courier New">Bad file number (Rossz fájl szám)</font>
+    <br><br>
+    A hiba akkor jelentkezik, amikor például egy nem megnyitott fájlobjektumot próbálsz meg használni.
+</li>
+
+<br>
+
+<li>
+    <codel>errno.EEXIST</codel> &rarr; <font face="Courier New">File exists (Fájl létezik)</font>
+    <br><br>
+    A hiba akkor jelentkezik, amikor megpróbálsz például egy fájlt egy már létező fájl nevére átnevezni.
+</li>
+
+<br>
+
+
+<li>
+    <codel>errno.EFBIG</codel> &rarr; <font face="Courier New">File too large (Túl nagy fájl)</font>
+    <br><br>
+    A hiba akkor jelentkezik, amikor olyan fájlt próbálsz létrehozni, amely nagyobb, mint az operációs rendszer által megengedett maximális méret.
+</li>
+
+<br>
+
+<li>
+    <codel>errno.EISDIR</codel> &rarr; <font face="Courier New">Is a directory (Ez egy könyvtár)</font>
+    <br><br>
+    A hiba akkor lép fel, amikor egy könyvtár nevét egy közönséges fájl neveként próbálsz meg használni.
+</li>
+
+<br>
+
+
+<li>
+    <codel>errno.EMFILE</codel> &rarr; <font face="Courier New">Too many open files (Túl sok a megnyitott fájl)</font>
+    <br><br>
+    A hiba akkor jelentkezik, ha egyszerre több fájlobjektumot próbálsz megnyitni, mint amennyit az operációs rendszer megenged.
+</li>
+
+<br>
+
+<li>
+    <codel>errno.ENOENT</codel> &rarr; <font face="Courier New">No such file or directory (Nincs ilyen fájl vagy könyvtár)</font>
+    <br><br>
+    A hiba akkor lép fel, ha nem létező fájlhoz/könyvtárhoz próbálsz hozzáférni.
+</li>
+
+<br>
+
+<li>
+    <codel>errno.ENOSPC</codel> &rarr; <font face="Courier New">No space left on device (Nincs több hely az eszközön)</font>
+    <br><br>
+    A hiba akkor jelentkezik, ha nincs szabad hely az adathordozón.
+</li>
+
+</ul>
+
+
+<p>A teljes lista sokkal hosszabb (tartalmaz néhány olyan hibakódot is, amelyek nem kapcsolódnak a fájlobjektum feldolgozásához).</p>
+
+
+<br>
+<br>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

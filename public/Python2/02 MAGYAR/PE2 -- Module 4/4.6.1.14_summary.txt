@@ -1,0 +1,163 @@
+<problem chapter='4' section='6' slide='1' problem='14' title='SZAKASZ ÖSSZEFOGLALÁS'>
+
+<!--
+Update history:
+2020-10-01 Sebastian (first version)
+2020-10-13 Grzegorz (file creation, review, PEP-8 compliance check)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h1>A legfontosabb tudnivalók</h1>
+
+
+<p>1. A <codel>calendar</codel> modulban a hét napjai hétfõtõl vasárnapig jelennek meg. A hét minden egyes napját egész szám formájában ábrázoljuk, ahol a hét elsõ napját (hétfõ) a 0 érték, míg a hét utolsó napját (vasárnap) a 6 érték jelöli.</p>
+
+<br>
+
+<p>2. Egy adott év naptárának megjelenítéséhez hívd meg a <codel>calendar</codel> függvényt az évszám paraméterrel, pl.:</p>
+
+<p><codep class="syntax-color copy">import calendar
+print(calendar.calendar(2020))
+</codep></p>
+
+<p>Megjegyzés: A fenti függvény jó alternatívája a <codel>prcal</codel> függvény, amely szintén ugyanazokat a paramétereket várja, mint a <codel>calendar</codel> függvény, de nem szükséges a <codel>print</codel> függvény használata a naptár megjelenítéséhez.</p>
+
+<br>
+
+<p>3. Egy adott év egy hónapjára vonatkozó naptár megjelenítéséhez hívd meg a <codel>month</codel> függvényt az év és a hónap megadásával. Például:</p>
+
+<p><codep class="syntax-color copy">import calendar
+print(calendar.month(2020, 9))
+</codep></p>
+
+<p>Megjegyzés: Használhatod a <codel>prmonth</codel> függvényt is, amely ugyanazokkal a paraméterekkel rendelkezik, mint a <codel>month</codel> függvény, de a naptár megjelenítéséhez nem szükséges a <codel>print</codel> függvény használata.</p>
+
+<br>
+
+<p>4. A <codel>setfirstweekday</codel> függvény lehetõvé teszi a hét elsõ napjának megváltoztatását. A függvény 0 és 6 közötti értéket fogad el, ahol a 0 a hétfõt, a 6 pedig a vasárnapot jelenti.</p>
+
+<br>
+
+<p>5. A <codel>weekday</codel> függvény az év, hónap és nap ismeretében visszaadja, hogy az adott nap a hét mely napjára esett. Az eredményt a nap számával kapjuk vissza:</p>
+
+<p><codep class="syntax-color copy">import calendar
+print(calendar.weekday(2020, 9, 29)) # This displays 1, which means Tuesday.
+</codep></p>
+
+<br>
+
+<p>6. A <codel>weekheader</codel> függvény a hét napjainak nevét adja vissza rövidített formában. A <codel>weekheader</codel> metódusnak paraméterként meg kell adni, hogy a napok nevét hány karakter hosszan akarjuk megkapni. Amennyiben ez az érték több mint 3, akkor is csak három karakterbõl álló, rövidített neveket ad vissza a függvény. Például:</p>
+
+<p><codep class="syntax-color copy">import calendar
+print(calendar.weekheader(2)) # This display: Mo Tu We Th Fr Sa Su
+</codep></p>
+
+<br>
+
+<p>7. A <codel>calendar</codel> modul egyik nagyon hasznos metódusa az <codel>isleap</codel> függvény, amely lehetõvé teszi annak ellenõrzését, hogy az adott év szökõév-e vagy sem:</p>
+
+<p><codep class="syntax-color copy">import calendar
+print(calendar.isleap(2020)) # This displays: True
+</codep></p>
+
+<br>
+
+<p>8. Naptár objektumot magunk is készíthetünk a <codel>Calendar</codel> osztály segítségével, amely az objektum létrehozásakor lehetõvé teszi a hét elsõ napjának megváltoztatását az opcionális <codel>firstweekday</codel> paraméter segítségével, pl.:</p>
+
+
+<p><codep class="syntax-color copy">import calendar  
+
+c = calendar.Calendar(2)
+
+for weekday in c.iterweekdays():
+    print(weekday, end=" ")
+# Result: 2 3 4 5 6 0 1
+</codep></p>
+
+<p>Az <codel>iterweekdays</codel> a hét napjainak iterátorát adja vissza, a napokat a korábban ismertetett számértékekkel jelölve. Az iterátor elsõ visszaadott értéke mindig megegyezik a <codel>firstweekday</codel> tulajdonság értékével.</p>
+
+
+
+
+
+<br> 
+<br>
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+<script>
+function solution (id) {
+    var element = document.getElementById(id);
+    
+if (element.style.display === "none") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
+    }
+}
+</script>
+
+<p><strong>1. gyakorlat</strong></p>
+<p>Mi a kimenete a következõ kódrészletnek?</p>
+
+<p><codep>import calendar
+print(calendar.weekheader(1))
+
+</codep></p>
+
+<button class="button tiny" onclick="solution('sol')">Ellenõrzés</button>
+
+<p id="sol" style="display: none;"><codep>M T W T F S S</codep>
+</p>
+
+
+<br><br>
+
+
+<p><strong>2. gyakorlat</strong></p>
+<p>Mi a kimenete a következõ kódrészletnek?</p>
+
+<p><codep>import calendar  
+
+c = calendar.Calendar()
+
+for weekday in c.iterweekdays():
+    print(weekday, end=" ")
+
+</codep></p>
+
+<button class="button tiny" onclick="solution('sol2')">Ellenõrzés</button>
+
+<p id="sol2" style="display: none;"><codep>0 1 2 3 4 5 6</codep>
+</p>
+
+
+<br>
+<br>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

@@ -1,0 +1,150 @@
+<problem chapter='4' section='2' slide='1' problem='8' title='Processing files'>
+
+<!--
+Update history:
+2020-10-07 Grzegorz (review, PEP-8 compliance check)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h2>Opening the streams: modes</h2>
+
+<p><codel>r</codel> open mode: read</p>
+
+<ul>
+<li>the stream will be opened in <strong>read mode</strong>;</li>
+<li>the file associated with the stream <strong>must exist</strong> and has to be readable, otherwise the <codel>open()</codel> function raises an exception.</li>
+</ul>
+
+
+<p><codel>w</codel> open mode: write</p>
+
+<ul>
+<li>the stream will be opened in <strong>write mode</strong>;</li>
+<li>the file associated with the stream <strong>doesn't need to exist</strong>; if it doesn't exist it will be created; if it exists, it will be truncated to the length of zero (erased); if the creation isn't possible (e.g., due to system permissions) the <codel>open()</codel> function raises an exception.</li>
+</ul>
+
+
+<p><codel>a</codel> open mode: append</p>
+
+<ul>
+<li>the stream will be opened in <strong>append mode</strong>;</li>
+<li>the file associated with the stream <strong>doesn't need to exist</strong>; if it doesn't exist, it will be created; if it exists the virtual recording head will be set at the end of the file (the previous content of the file remains untouched.)</li>
+</ul>
+
+<p><codel>r+</codel> open mode: read and update</p>
+
+<ul>
+<li>the stream will be opened in <strong>read and update mode</strong>;</li>
+<li>the file associated with the stream <strong>must exist and has to be writeable</strong>, otherwise the <codel>open()</codel> function raises an exception;</li>
+<li>both read and write operations are allowed for the stream.</li>
+</ul>
+
+<p><codel>w+</codel> open mode: write and update</p>
+
+<ul>
+<li>the stream will be opened in <strong>write and update</strong> mode;</li>
+<li>the file associated with the stream <strong>doesn't need to exist</strong>; if it doesn't exist, it will be created; the previous content of the file remains untouched;</li>
+<li>both read and write operations are allowed for the stream.</li>
+</ul>
+
+
+
+
+<br> 
+<br>
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+
+<h2>Selecting text and binary modes</h2>
+
+
+
+<p>If there is a letter <codel>b</codel> at the end of the mode string, it means that the stream is to be opened in <strong>binary mode</strong>.</p>
+
+<p>If the mode string ends with a letter <codel>t</codel>, the stream is opened in <strong>text mode</strong>.</p>
+
+<p>Text mode is the default behaviour assumed when no binary/text mode specifier is used.</p>
+
+<p>Finally, the successful opening of a file will set the current file position (the virtual reading/writing head) before the first byte of the file <strong>if the mode <b>is not</b> <codel>a</codel></strong> and after the last byte of the file <strong>if the mode <b>is</b> set to <codel>a</codel></strong>.</p>
+
+<br>
+
+<table>
+
+<thead>
+<tr>
+<th>Text mode</th>
+<th>Binary mode</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><codel>rt</codel></td>
+<td><codel>rb</codel></td>
+<td>read</td>
+</tr>
+
+<tr>
+<tr>
+<td><codel>wt</codel></td>
+<td><codel>wb</codel></td>
+<td>write</td>
+</tr>
+
+<tr>
+<td><codel>at</codel></td>
+<td><codel>ab</codel></td>
+<td>append</td>
+</tr>
+
+<tr>
+<td><codel>r+t</codel></td>
+<td><codel>r+b</codel></td>
+<td>read and update</td>
+</tr>
+
+<tr>
+<td><codel>w+t</codel></td>
+<td><codel>w+b</codel></td>
+<td>write and update</td>
+</tr>
+</tbody>
+
+</table>
+
+<br>
+
+<p><strong><span class="label" style="background-color:orange;">EXTRA</strong></span></p>
+<p>You can also open a file for its exclusive creation. You can do this using the <codel>x</codel> open mode. If the file already exists, the <codel>open()</codel> function will raise an exception.</p>
+
+
+<br>
+<br>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

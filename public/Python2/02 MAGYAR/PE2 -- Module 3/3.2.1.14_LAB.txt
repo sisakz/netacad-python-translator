@@ -1,0 +1,115 @@
+<problem chapter='3' section='2' slide='1' problem='14' title='LAB: Verem számláló'>
+
+<!--
+Update history:
+2020-01-01 Syslaw (file created)
+2020-11-16 Grzegorz (review, PEP-8 compliance check)
+-->
+
+<code>class Stack:
+    def __init__(self):
+        self.__stk = []
+
+    def push(self, val):
+        self.__stk.append(val)
+
+    def pop(self):
+        val = self.__stk[-1]
+        del self.__stk[-1]
+        return val
+
+
+class CountingStack(Stack):
+    def __init__(self):
+    #
+    # Fill the constructor with appropriate actions.
+    #
+
+    def get_counter(self):
+    #
+    # Present the counter's current value to the world.
+    #
+
+    def pop(self):
+    #
+    # Do a pop and update the counter.
+    #
+	
+
+stk = CountingStack()
+for i in range(100):
+    stk.push(i)
+    stk.pop()
+print(stk.get_counter())
+
+</code>
+
+<span class="label" style="background-color:rgb(205, 168, 105);"><b>LABORGYAKORLAT</b></span>
+
+<br><br>
+
+<h2>Becsült idő</h2>
+<p>20-45 perc</p>
+
+<h2>Nehézségi szint</h2>
+<p>Könnyű/Közepes</p>
+
+<h2>Célok</h2>
+<ul>
+    <li>fejleszteni a tanuló készségeit az osztályok létrehozásában;</li>
+    <li>a meglévő osztályok felhasználásával új függvénekkel kibővített osztályok létrehozása.</li>
+</ul>
+
+<h2>Forgatókönyv</h2>
+<p>Nemrég megmutattuk, hogyan lehet a <i>Verem</i> lehetőségeit egy új osztály (azaz alosztály) definiálásával bővíteni, amely megtartja az összes örökölt tulajdonságot és hozzáad néhány újat.</p>
+
+<p>A Te feladatod a <codel>Stack</codel> osztály viselkedésének olyan módon történő kiterjesztése, hogy az osztály képes legyen megszámolni az összes berakott és kivett elemet (feltételezzük, hogy a kivételek számlálása elegendő). Használd a <codel>Stack</codel> osztályt, amit a szerkesztőben adtunk meg.</p>
+
+<p>Néhány tippet adunk:</p>
+<ul>
+    <li>vezessünk be egy olyan tulajdonságot, amely a pop-műveletek számlálására szolgál, és nevezzük el úgy, hogy garantáltan elrejtsük;</li>
+    <li>kezdőértéke nulla legyen a konstruktorban (inicializáld);</li>
+    <li>adj meg egy metódust, amely visszaadja a számlálóhoz aktuálisan hozzárendelt értéket (legyen a neve <codel>get_counter()</codel>).</li>
+</ul>
+
+<p>Egészítsd ki a kódot a szerkesztőprogramban. Futtasd le, majd ellenőrizd, hogy a kód eredményül 100-at ad-e.</p>
+
+
+<sampleSolution>class Stack:
+    def __init__(self):
+        self.__stk = []
+
+    def push(self, val):
+        self.__stk.append(val)
+
+    def pop(self):
+        val = self.__stk[-1]
+        del self.__stk[-1]
+        return val
+
+
+class CountingStack(Stack):
+    def __init__(self):
+        Stack.__init__(self)
+        self.__counter = 0
+
+    def get_counter(self):
+        return self.__counter
+
+    def pop(self):
+        self.__counter += 1
+        return Stack.pop(self)
+
+
+stk = CountingStack()
+for i in range(100):
+    stk.push(i)
+    stk.pop()
+print(stk.get_counter())
+
+</sampleSolution>
+
+<br><br>
+
+<labMode>true</labMode>
+</problem>

@@ -1,0 +1,103 @@
+<problem chapter='3' section='2' slide='1' problem='2' title='A procedurálistól az objektumorientált megközelítésig'>
+
+<!--
+Update history:
+2020-09-30 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>
+stack = []
+
+
+def push(val):
+    stack.append(val)
+
+
+def pop():
+    val = stack[-1]
+    del stack[-1]
+    return val
+
+
+push(3)
+push(2)
+push(1)
+
+print(pop())
+print(pop())
+print(pop())
+
+</code>
+
+
+
+<h1>A verem – a procedurális megközelítés</h1>
+
+<p>Először is el kell döntenünk, hogyan tároljuk a verembe érkező értékeket. Javasoljuk, hogy a legegyszerűbb módszert alkalmazzuk, és <strong>egy listát használjunk</strong> erre a feladatra. Tegyük fel, hogy a verem mérete semmilyen módon nem korlátozott. Tegyük fel azt is, hogy a lista utolsó eleme tárolja a legfelső elemet.</p>
+
+<p>Maga a verem már létezik is:</p>
+
+<codep class="syntax-color">stack = []
+</codep>
+<br>
+
+<p>Készen állunk <strong>egy olyan függvény definiálására, amely egy értéket helyez a verembe</strong>. Itt vannak a követelményei:</p>
+
+<ul>
+    <li>a függvény neve <codel>push</codel>;</li>
+    <li>a függvény kap egy paramétert (ez az érték kerül a verembe)</li>
+    <li>a függvény nem ad vissza semmit;</li>
+    <li>a függvény a paraméter értékét a verem végére illeszti;</li>
+</ul>
+ 
+
+<p>Így oldottuk meg – vess rá egy pillantást:</p>
+
+<codep class="syntax-color">def push(val):
+    stack.append(val)
+</codep>
+<br>
+
+<p>Most egy <strong>olyan függvény következik, amely értéket vesz ki a veremből</strong>. Ezt a következőképpen tehetjük meg:</p>
+
+<ul>
+    <li>a függvény neve pop;</li>
+    <li>a függvény nem kap paramétereket;</li>
+    <li>a függvény visszaadja a veremből vett értéket</li>
+    <li>a függvény beolvassa az értéket a verem tetejéről, és eltávolítja azt.</li>
+</ul>
+ 
+
+<p>A függvény itt található:</p>
+
+<codep class="syntax-color">def pop():
+    val = stack[-1]
+    del stack[-1]
+    return val
+</codep>
+<br>
+
+ 
+<p>Megjegyzés: a függvény nem ellenőrzi, hogy van-e egyáltalán elem a veremben.</p>
+
+
+<p>Rakjuk össze az összes darabot, hogy a verem mozgásba lendüljön! A <strong>teljes program</strong> három számot tol a verembe, majd kihúzza őket, és kiírja az értéküket a képernyőre. Ezt láthatjuk a szerkesztőablakban.</p>
+
+ 
+
+<p>A program a következő szöveget írja ki a képernyőre:</p>
+
+<codep>1
+2
+3</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+<p>Teszteld!</p>
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

@@ -1,0 +1,108 @@
+<problem chapter='3' section='5' slide='1' problem='21' title='OOP alapok: MRO'>
+
+<!--
+Update history:
+2020-10-01 Slawek (content created)
+2020-11-16 Grzegorz (file created, proofed by Will)
+2020-11-17 Grzegorz (proofed by Will, updated)
+-->
+
+<code>class A:
+    pass
+
+
+class B(A):
+    pass
+
+
+class C(A):
+    pass
+
+
+class D(B, C):
+    pass
+
+
+d = D()
+
+</code>
+
+<h1>A gyémántprobléma</h1>
+
+<p>A második példa a többszörös öröklésből adódó problémák spektrumára egy klasszikus probléma, a <strong>gyémántprobléma</strong>. A név az öröklési diagram alakját tükrözi - nézd meg a képet:</p>
+
+<br>
+<img src="/uploads/media/default/0001/01/f87d143baf9957080a28751bcdc696ed26d14f86.png" alt="The diamond problem concept">
+<br><br>
+
+<ul>
+    <li>Van egy A nevű legfelső szuperosztály;</li>
+    <li>két alosztály származik az A-ból: a B és a C;</li>
+    <li>és van egy D nevű legalsó alosztály is, amely a B és C (vagy C és B, mivel ez a két változat különböző dolgokat jelent Pythonban) alosztályokból származik.</li>
+</ul>
+
+<p>Látod ott a gyémántalakzatot?</p>
+
+<p>Nézd meg a kódot a szerkesztőben! Ugyanaz a struktúra, de Pythonban kifejezve.</p>
+
+<p>Egyes programozási nyelvek tiltják a többszörös öröklődést, és ennek következtében nem engedik, hogy gyémántot építs - a Java és a C# a kezdetektől fogva ezt az utat választotta.</p>
+
+<p>A Python azonban más utat választott - lehetővé teszi a többszörös öröklődést, és nem bánja, ha a szerkesztőben lévőhöz hasonló kódot írsz és futtatsz. De ne feledkezz meg az MRO-ról sem - mindig az irányít!</p>
+
+<br>
+
+<p>Építsük át az előző oldalról származó példánkat, hogy gyémántosabbá tegyük, mint alább:</p>
+
+<p><codep class="syntax-color copy line-numbers">class Top:
+    def m_top(self):
+        print("top")
+
+
+class Middle_Left(Top):
+    def m_middle(self):
+        print("middle_left")
+
+
+class Middle_Right(Top):
+    def m_middle(self):
+        print("middle_right")
+
+
+class Bottom(Middle_Left, Middle_Right):
+	def m_bottom(self):
+		print("bottom")
+
+
+object = Bottom()
+object.m_bottom()
+object.m_middle()
+object.m_top()
+</codep></p>
+
+<p>Megjegyzés: mindkét <codel>Middle</codel> osztály definiál <strong>egy azonos nevű metódust</strong>: <codel>m_middle()</codel>.</p>
+
+<p>Ez egy kis bizonytalanságot visz a mintánkba, bár teljesen biztosak vagyunk benne, hogy meg tudjuk válaszolni a következő kulcskérdést: a két <codel>m_middle()</codel> metódus közül melyik fog ténylegesen meghívásra kerülni, amikor a következő sor végrehajtásra kerül?</p>
+
+<p><codep class="syntax-color">Object.m_middle()
+</codep></p>
+
+<p>Más szóval, mit fogsz látni a képernyőn: s<codel>middle_left</codel> vagy <codel>middle_right</codel>?</p>
+
+<p>Nem kell sietned - gondold át, és tartsd szem előtt a Python MRO-t!</p>
+
+<p>Készen állsz?</p>
+
+<p>Igen, igazad van. A hívás az <codel>m_middle()</codel> metódust aktiválja, amely a <codel>Middle_Left</codel> osztályból származik. A magyarázat egyszerű: az osztály a <codel>Middle_Right</codel> előtt szerepel a <codel>Bottom</codel> osztály öröklési listáján. Ha meg akarsz győződni róla, hogy biztosan így van, próbáld meg felcserélni ezt a két osztályt a listán, és ellenőrizd az eredményt!</p>
+
+<p>Ha szeretnél mélyebb ismereteket szerezni a többszörös öröklődésről és a „drágakövekről”, próbáld meg módosítani a kódot, és szereld fel az <codel>Upper</codel> osztályt az <codel>m_middle()</codel> metódus egy újabb példányával, és vizsgáld meg alaposan a viselkedését!</p>
+
+<p>Mint láthatod, a gyémántok problémákat hozhatnak az életedbe - mind a valódiakat, mind a Python által kínáltakat.</p>
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

@@ -1,0 +1,48 @@
+<problem chapter='4' section='5' slide='1' problem='4' title='A datetime modul'>
+
+<!--
+Update history:
+2020-03-30 Sebastian (first version)
+2020-10-11 Grzegorz (review, PEP-8 compliance check)
+-->
+
+<code>from datetime import date
+
+d = date.fromisoformat('2019-11-04')
+print(d)
+
+</code>
+
+
+
+<h1>Dátum objektum létrehozása ISO-formátummal</h1>
+
+
+<p>A <codel>datetime</codel> modul több metódust is kínál egy <codel>dátum</codel> objektum létrehozásához. Ezek egyike a <codel>fromisoformat</codel> metódus, amely az ISO 8601 szabványnak megfelelõ <b>YYYY-MM-DD</b> formátumú dátumot vár.</p>
+
+<p>Az ISO 8601 szabvány határozza meg a dátum és az idõ megjelenítésének módját. Gyakran használjuk, ezért érdemes rászánni egy percet, hogy megismerkedjünk vele. Nézd meg a formátum által megkövetelt értékeket leíró képet:</p>
+
+<br>
+
+<center><img src="/uploads/media/default/0001/02/datetime.01.04.png" alt="The ISO 8601 date and time format" width="70%"></center>
+
+<br><br>
+
+    <p>Most nézd meg a kódot a szerkesztõablakban, és futtasd!</p>
+
+    <p>Példánkban az YYYY 2019, az MM 11 (november), és a DD 04 (november negyedik napja).</p>
+
+    <p>A dátum behelyettesítésénél ügyelj arra, hogy a 10-nél kisebb számmal kifejezett hónap vagy nap elé írd ki a vezetõ 0-t.</p>
+
+    <p><b>Megjegyzés:</b> A <codel>fromisoformat</codel> metódus a Pythonban a 3.7-es verzió óta elérhetõ.</p>
+
+
+
+<br>
+<br>
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

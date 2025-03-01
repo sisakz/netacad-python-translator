@@ -1,0 +1,59 @@
+<problem chapter='4' section='4' slide='1' problem='4' title='Az os modul'>
+
+<!--
+Update history:
+2020-03-30 Sebastian (first version)
+2020-10-08 Grzegorz (review, PEP-8 compliance check)
+2021-07-07 Grzegorz (revision)
+-->
+
+<code>import os
+
+os.makedirs("my_first_directory/my_second_directory")
+os.chdir("my_first_directory")
+print(os.listdir())
+
+</code>
+
+
+
+<h1>Könyvtárak rekurzív létrehozása</h1>
+
+
+<p>Az <codel>mkdir</codel> függvény nagyon hasznos, de mi van akkor, ha egy <b>másik könyvtárat</b> kell létrehozni <b>az éppen létrehozott könyvtárban</b>. Természetesen beléphetsz a létrehozott könyvtárba, és létrehozhatsz benne egy másik könyvtárat, de szerencsére az <i>os</i> modul biztosít egy <codel>makedirs</codel> nevû függvényt, amely megkönnyíti ezt a feladatot.</p>
+
+<p>A <i>makedirs</i> függvény lehetõvé teszi a könyvtárak rekurzív létrehozását, ami azt jelenti, hogy az útvonal összes könyvtárát létrehozza. Nézd meg a kódot a szerkesztõben, és figyeld meg, hogyan mûködik a gyakorlatban.</p>
+
+<p>A kódnak a következõ eredményt kell adnia:</p>
+
+<codep>['my_second_directory']</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+<p>A kód két könyvtárat hoz létre. Az elsõ az aktuális munkakönyvtárban, míg a második a <i>my_first_directory</i> könyvtárban jön létre.</p>
+
+<p>Nem kell a <i>my_first_directory</i> könyvtárba belépned a <i>my_second_directory</i> könyvtár létrehozásához, mert ezt a <i>makedirs</i> függvény elvégzi helyetted. A fenti példában a <i>my_first_directory</i> könyvtárba azért lépünk be, hogy megmutassuk, hogy a <i>makedirs</i> parancs létrehozza a <i>my_second_directory</i> alkönyvtárat.</p>
+
+<p>A könyvtárak közötti mozgáshoz használjuk a <i>chdir</i> nevû függvényt, amely az aktuális munkakönyvtárat a megadott útvonalra változtatja. Argumentumként bármilyen relatív vagy abszolút elérési utat elfogad. Példánkban az elsõ könyvtár nevét adjuk meg neki.</p>
+
+<p><b>MEGJEGYZÉS:</b> A <i>makedirs</i> függvény megfelelõje Unix rendszereken az <i>mkdir</i> parancs a <i>-p</i> paraméterrel, míg Windows alatt egyszerûen az <i>mkdir</i> parancs az elérési útvonallal:</p>
+
+<ul>
+    <li>
+        Unix-hoz hasonló rendszerek:
+        <br><br>
+        <codel>mkdir -p my_first_directory/my_second_directory</codel>
+    </li>
+<br>
+<li>Windows:
+<br><br>
+<codel>mkdir my_first_directory/my_second_directory</codel></li>
+</ul>
+
+<br>
+<br>
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

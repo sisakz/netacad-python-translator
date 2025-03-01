@@ -1,0 +1,73 @@
+<problem chapter='1' section='1' slide='1' problem='7' title='Importing a module | math'>
+
+<!--
+Update history:
+2020-08-28 Grzegorz (review, PEP-8 compliance check, update)
+2021-06-16 Grzegorz (review)
+-->
+
+<code>
+</code>
+
+<h1>Importing a module: continued</h1>
+
+
+<p>In the second method, the <codel>import</codel>'s syntax precisely points out which module's entity (or entities) are acceptable in the code:</p>
+
+<codep class="syntax-color">from math import pi
+</codep>
+
+<br>
+
+<p>The instruction consists of the following elements:</p>
+
+<ul>
+<li>the <codel>from</codel> keyword;</li>
+<li>the <strong>name of the module</strong> to be (selectively) imported;</li>
+<li>the <codel>import</codel> keyword;</li>
+<li>the <strong>name or list of names of the entity/entities</strong> which are being imported into the namespace.</li>
+</ul>
+ 
+
+<p>The instruction has this effect:</p>
+
+<ul>
+<li>the listed entities (and only those ones) are <strong>imported from the indicated module</strong>;</li>
+<li>the names of the imported entities are <strong>accessible without qualification</strong>.</li>
+</ul>
+ 
+
+<p>Note: no other entities are imported. Moreover, you cannot import additional entities using a qualification - a line like this one:</p>
+
+<codep class="syntax-color">print(math.e)
+</codep>
+
+<br>
+
+<p>will cause an error (<codel>e</codel> is Euler's number: 2.71828...)</p>
+
+<p>Let's rewrite the previous script to incorporate the new technique.</p>
+
+<p>Here it is:</p>
+
+<codep class="syntax-color copy">from math import sin, pi
+
+print(sin(pi/2))
+</codep>
+
+<br>
+
+<p>The output should be the same as previously, as in fact we've used the same entities as before: <codel>1.0</codel>. Copy the code, paste it in the editor, and run the program.</p>
+
+<p>Does the code look simpler? Maybe, but the look is not the only effect of this kind of import. Let's show you that.</p>
+
+
+
+<br>
+<br>
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

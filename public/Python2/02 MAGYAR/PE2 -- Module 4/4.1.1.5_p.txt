@@ -1,0 +1,131 @@
+<problem chapter='4' section='1' slide='1' problem='5' title='Generátor és closure'>
+
+<!--
+Update history:
+2020-10-05 Grzegorz (review, PEP-8 compliance check)
+-->
+
+<code>
+</code>
+
+
+
+<h1>Hogyan készítsünk saját generátort?</h1>
+
+
+<p>Képzeld el, hogy egy <strong>generátorra</strong> van szükséged, <strong>amely a <i>2</i> első <i>n</i> hatványát állítja elő</strong>!</p>
+
+<p>Mi sem könnyebb ennél. Nézd meg az alábbi kódot:</p>
+
+<p><codep class="syntax-color copy line-numbers">def powers_of_2(n):
+    power = 1
+    for i in range(n):
+        yield power
+        power *= 2
+
+
+for v in powers_of_2(8):
+    print(v)
+</codep></p>
+
+<p>Kitalálod a kimenetet? Másold a kódot a szerkesztőbe, és futtasd le, hogy ellenőrizd az ötletedet.</p>
+<br>
+
+<p><b>Listaképzések</b></p>
+
+<p>A generátorokat használhatjuk az alábbihoz hasonló <strong>listaképzésekben</strong> [list comprehension] is:</p>
+
+<codep class="syntax-color copy line-numbers">def powers_of_2(n):
+    power = 1
+    for i in range(n):
+        yield power
+        power *= 2
+
+
+<mark class="mark-background">t = [x for x in powers_of_2(5)]</mark>
+print(t)
+</codep>
+
+<br>
+
+<p>Futtasd a példakódot, és ellenőrizd a kimenetét.</p>
+
+<br>
+
+<p><b>A <font face="Courier New">list()</font> függvény</b></p>
+
+<p>A <codel>list()</codel> függvény képes egy sor egymást követő generátor meghívást <strong>valódi listává</strong> alakítani:</p>
+
+<codep class="syntax-color copy line-numbers">def powers_of_2(n):
+    power = 1
+    for i in range(n):
+        yield power
+        power *= 2
+
+
+<mark class="mark-background">t = list(powers_of_2(3))</mark>
+print(t)
+</codep> 
+
+<br>
+
+<p>Próbáld meg most is kitalálni a kód kimenetét, majd futtasd a kódot, hogy ellenőrizd a tippedet.</p> 
+
+<br>
+
+<p><b>Az <font face="Courier New">in</font> operátor</b></p>
+
+<p>Sőt, mi több, az <codel>in</codel> operátor önmagában is lehetővé teszi a generátor használatát.</p>
+
+<p>A példában láthatod, hogy miként:</p>
+
+<codep class="syntax-color copy line-numbers">def powers_of_2(n):
+    power = 1
+    for i in range(n):
+        yield power
+        power *= 2
+
+
+for i in range(20):
+    <mark class="mark-background">if i in powers_of_2(4):</mark>
+        print(i)
+</codep> 
+
+<br>
+
+<p>Mi a kód kimenete? Futtasd a programot, és ellenőrizd.</p>
+
+<br>
+
+<p><b>A Fibonacci-szám generátor</b></p>
+
+<p>Nézd meg a <strong>Fibonacci-szám generátort</strong>, és győződj meg arról, hogy sokkal jobban néz ki, mint az iterátor protokoll közvetlen implementációjára épülő, objektum alapú verzió.</p>
+
+<p>Itt is van:</p>
+
+<codep class="syntax-color copy line-numbers">def fibonacci(n):
+    p = pp = 1
+    for i in range(n):
+        if i in [0, 1]:
+            yield 1
+        else:
+            n = p + pp
+            pp, p = p, n
+            yield n
+
+fibs = list(fibonacci(10))
+print(fibs)
+</codep>
+
+<br>
+
+<p>Tippeld meg a generátor által előállított kimenetet (egy listát), és futtasd le a kódot, hogy ellenőrizd, igazad volt-e.</p>
+
+<br>
+<br>
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

@@ -1,0 +1,50 @@
+<problem chapter='0' section='0' slide='0' problem='1' title='A Python alapok 2 tanfolyam'>
+
+<!--
+Update history:
+2020-08-27 Grzegorz (front picture change, style formatting and structure redesigning, new texts)
+2021-06-14 Grzegorz (review)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-4 columns">
+
+<br>
+
+
+<h1>Üdvözlünk a Python alapok 2 tanfolyamon</h1>
+
+<p>Ez a kurzus <b>egy két tanfolyamból álló sorozat második része</b>, amely felkészít a Pearson VUE-nál letehető <a href="https://pythoninstitute.org/certification/pcap-certification-associate/" target="_blank">PCAP: Certified Associate in Python Programming</a> (Kezdő Szintű Python Programozó Tanúsítvány) minősítő vizsgára.</p>
+
+<p>A tanfolyam ott folytatódik, ahol a <i>Python alapok 1</i> befejeződött. Fő célja, hogy megtanítsa a <b>Python programozás haladóbb aspektusaihoz</b> kapcsolódó készségeket, valamint az <b>általános kódolási technikákat</b> és az <b>objektumorientált programozást</b> (OOP).</p>
+
+<p>A tanfolyamot azoknak a feltörekvő fejlesztőknek ajánljuk, akik a <b>szoftverfejlesztéshez</b>, <b>biztonsághoz</b>, <b>hálózatépítéshez</b> és a <b>tárgyak internetéhez</b> (IoT) kapcsolódó karrierlehetőségek iránt érdeklődnek.</p>
+
+
+<br>
+
+
+</div>
+
+
+<div class="small-12 large-8 columns">
+
+<br>
+<br>
+
+<center><img src="/uploads/media/default/0001/02/cfec59ca8f8d2633c413132e233a8d7bfab13da1.png" alt="Python Essentials 2" width="70%"></center>
+
+<br>
+
+
+</div>
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

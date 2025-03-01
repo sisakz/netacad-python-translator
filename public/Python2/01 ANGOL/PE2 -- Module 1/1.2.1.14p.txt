@@ -1,0 +1,48 @@
+<problem chapter='1' section='2' slide='1' problem='14' title='Useful modules | platform'>
+
+<!--
+Update history:
+2020-08-31 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>from platform import version
+
+print(version())
+
+</code>
+
+<h1>Selected functions from the <font face="Courier New">platform</font> module: continued</h1>
+
+<p><b>The <font face="Courier New">version</font> function</b></p>
+
+<p>The OS version is provided as a string by the <codel>version()</codel> function.</p>
+
+<p>Run the code and check its output. This is what we got:</p>
+
+<p><strong>Intel x86 + Windows &reg; Vista (32 bit)</strong>:</p>
+
+<codep>6.0.6002</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+
+<p><strong>Intel x86 + Gentoo Linux (64 bit)</strong>:</p>
+
+<codep>#1 SMP PREEMPT Fri Jul 21 22:44:37 CEST 2017</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+
+<p><strong>Raspberry PI2 + Raspbian Linux (32 bit)</strong>:</p>
+
+<codep>#1 SMP Debian 4.4.6-1+rpi14 (2016-05-05)</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

@@ -1,0 +1,53 @@
+<problem chapter='1' section='1' slide='1' problem='6' title='Modul importálása | math'>
+
+<!--
+Update history:
+2020-08-28 Grzegorz (review, PEP-8 compliance check, update)
+2021-06-16 Grzegorz (review)
+-->
+
+<code>
+import math
+
+
+def sin(x):
+    if 2 * x == pi:
+        return 0.99999999
+    else:
+        return None
+
+
+pi = 3.14
+
+print(sin(pi/2))
+print(math.sin(math.pi/2))
+
+</code>
+
+<h1>Modul importálása (folytatás)</h1>
+
+
+<p>Most megmutatjuk, hogy a két névtér (a tiéd és a modulé) hogyan létezhet egymás mellett.</p>
+
+<p>Nézd meg a példát a szerkesztőablakban.</p>
+
+ 
+<p>Itt határoztuk meg a saját <codel>pi</codel>-nket és <codel>sin</codel>-ünket.</p>
+
+<p>Futtasd a programot! A kódnak a következő kimenetet kell produkálnia:</p>
+
+<codep>0.99999999
+1.0</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+
+<p>Mint látható, az entitások nem befolyásolják egymást.</p>
+
+<br>
+<br>
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

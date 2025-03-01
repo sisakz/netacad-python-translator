@@ -1,0 +1,110 @@
+<problem chapter='2' section='5' slide='1' problem='10' title="LAB: Szókereső!">
+
+<!--
+Update history:
+2020-09-23 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<span class="label" style="background-color:rgb(205, 168, 105);"><strong>LABORGYAKORLAT</strong></span>
+
+<br><br>
+
+<h2>Becsült idő</h2>
+<p>30-45 perc</p>
+
+<h2>Nehézségi szint</h2>
+<p>Közepes</p>
+
+
+<h2>Célok</h2>
+<ul>
+	<li>a karakterlánc-kezelési készségek fejlesztése;</li>
+	<li>a <codel>find()</codel> tagfüggvény használata a karakterláncok keresésére.</li>
+</ul>
+
+
+<h2>Forgatókönyv</h2>
+
+<p>Játsszunk egy játékot. Adunk két karakterláncot: az egyik egy szó (pl. „kutya”), a másik pedig tetszőleges karakterek kombinációja.</p>
+
+<p>A feladatod egy olyan program megírása, amely választ ad a következő kérdésre: <strong>az első karakterláncot alkotó karakterek el vannak-e rejtve a második karakterláncban?</strong></p>
+
+<p>Például:</p>
+
+<ul>
+<li>ha a második karakterláncot <font face="Courier New">"vcxzxduybfdsobywuefgas"</font>-ként adjuk meg, a válasz <codel>igen</codel>;</li>
+<li>ha a második karakterlánc <font face="Courier New">"vcxzxdcybfdstbywuefsas"</font>, a válasz <codel>nem</codel> (mivel ebben nem szerepel a „k”, „u”, „t”, „y” vagy „a” karakter).</li>
+</ul>
+
+<p>Tippek:</p>
+<ul>
+	<li>a <codel>pos()</codel> függvények kétargumentumos változatait kell használnod a kódodban;</li>
+	<li>ne aggódj a nagy- és kisbetűk érzékenysége miatt.</li>
+</ul>
+
+<p>Teszteld a kódot az általunk megadott adatokkal.</p>
+
+
+<h2>Tesztadatok</h2>
+
+
+<p>Minta bemenet:</p>
+<codep>donor
+Nabucodonosor</codep>
+
+<p>Minta kimenet:</p>
+<codep>Igen</codep>
+<br>
+
+<br>
+
+<p>Minta bemenet:</p>
+<codep>donut
+Nabucodonosor</codep>
+
+<p>Minta kimenet:</p>
+<codep>Nem</codep>
+<br>
+
+
+
+<studyMode>false</studyMode>
+<labMode>true</labMode>
+
+
+
+
+
+<hint>
+word = input("Enter the word you wish to find: ").upper()
+strn = input("Enter the string you wish to search through: ").upper()
+
+found = True
+start = 0
+
+# A kód további részét ide írd.
+
+</hint>
+
+<sampleSolution>
+word = input("Enter the word you wish to find: ").upper()
+strn = input("Enter the string you wish to search through: ").upper()
+
+found = True
+start = 0
+
+for ch in word:
+	pos = strn.find(ch, start) 
+	if pos < 0:
+		found = False
+		break
+	start = pos + 1
+if found:
+	print("Yes")
+else:
+	print("No")
+	
+</sampleSolution>
+
+
+</problem>

@@ -1,0 +1,58 @@
+<problem chapter='3' section='3' slide='1' problem='8' title='OOP: Properties'>
+
+<!--
+Update history:
+2020-09-30 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>
+class ExampleClass:
+    attr = 1
+
+
+print(hasattr(ExampleClass, 'attr'))
+print(hasattr(ExampleClass, 'prop'))
+
+</code>
+
+
+
+<h1>Checking an attribute's existence: continued</h1>
+
+<p>Don't forget that the <codel>hasattr()</codel> function can operate on classes, too. You can use it <strong>to find out if a class variable is available</strong>, just like here in the example in the editor.</p>
+
+<p>The function returns <font face="Courier New">True</font> if the specified class contains a given attribute, and <font face="Courier New">False</font> otherwise.</p>
+
+<p>Can you guess the code's output? Run it to check your guesses.</p>
+
+<br>
+
+<p>And one more example – look at the code below and try to predict its output:</p>
+
+<codep class="syntax-color copy line-numbers">class ExampleClass:
+    a = 1
+    def __init__(self):
+        self.b = 2
+
+
+example_object = ExampleClass()
+
+print(hasattr(example_object, 'b'))
+print(hasattr(example_object, 'a'))
+print(hasattr(ExampleClass, 'b'))
+print(hasattr(ExampleClass, 'a'))
+</codep>
+
+<br>
+
+<p>Were you successful? Run the code to check your predictions.</p>
+
+<p>Okay, we've made it to the end of this section. In the next section we're going to talk about methods, as methods drive the objects and make them active.</p>
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

@@ -1,0 +1,46 @@
+<problem chapter='2' section='3' slide='1' problem='8' title='String methods'>
+
+<!--
+Update history:
+2020-09-22 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>
+# Demonstrating the join() method:
+print(",".join(["omicron", "pi", "rho"]))
+
+</code>
+
+
+
+<h1>The <font face="Courier New">join()</font> method</h1>
+
+<p>The <codel>join()</codel> method is rather complicated, so let us guide you through it step by step:</p>
+
+<ul>
+<li>as its name suggests, the method <strong>performs a join</strong> – it expects one argument as a list; it must be assured that all the list's elements are strings – the method will raise a <font face="Courier New">TypeError</font> exception otherwise;</font>
+<li>all the list's elements will be <strong>joined into one string</strong> but...</li>
+<li>...the string from which the method has been invoked is <strong>used as a separator</strong>, put among the strings;</li>
+<li>the newly created string is returned as a result.</li>
+</ul>
+
+<p>Take a look at the example in the editor. Let's analyze it:</p>
+
+<ul>
+<li>the <codel>join()</codel> method is invoked from within a string containing a comma (the string can be arbitrarily long, or it can be empty)</li>
+<li>the <codel>join</codel>'s argument is a list containing three strings;</li>
+<li>the method returns a new string.</li>
+</ul>
+
+<p>Here it is:</p>
+
+<codep>omicron,pi,rh</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

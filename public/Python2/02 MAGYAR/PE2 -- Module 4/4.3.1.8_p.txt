@@ -1,0 +1,46 @@
+<problem chapter='4' section='3' slide='1' problem='8' title='Valós fájlok kezelése'>
+
+<!--
+Update history:
+2020-10-07 Grzegorz (review, PEP-8 compliance check)
+2020-10-29 Grzegorz (code fix: strrerror instead of strerr)
+2021-07-07 Grzegorz (code corrections - important!)
+-->
+
+<code>from os import strerror
+
+try:
+    file = open('newtext.txt', 'wt')
+    for i in range(10):
+        file.write("line #" + str(i+1) + "\n")
+    file.close()
+except IOError as e:
+    print("I/O error occurred: ", strerror(e.errno))
+
+</code>
+
+
+
+<h1>Szövegfájlok kezelése (folytatás)</h1>
+
+
+<p>Nézd meg a példát a szerkesztõben. Az elõzõ kódot úgy módosítottuk, hogy egész sorokat írjunk a szövegfájlba.</p>
+
+<p>Az újonnan létrehozott fájl tartalma ugyanaz.</p>
+
+<p>Megjegyzés: ugyanezzel a módszerrel írhatsz az <codel>stderr</codel> adatfolyamba is, de ne próbáld megnyitni, mivel az implicit módon mindig nyitva van.</p>
+
+<p>Ha például egy üzenetsort akarsz küldeni az <codel>stderr</codel>-re, hogy megkülönböztesd a program normál kimenetétõl, akkor ez így nézhet ki:</p>
+
+<codep class="syntax-color copy">import sys
+sys.stderr.write("Error message")
+</codep>
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

@@ -1,0 +1,79 @@
+<problem chapter='1' section='2' slide='1' problem='6' title='Useful modules | random'>
+
+<!--
+Update history:
+2020-08-31 Grzegorz (review, PEP-8 compliance check, update)
+2021-06-29 Grzegorz (corrections)
+-->
+
+<code>
+</code>
+
+<h1>Selected functions from the <font face="Courier New">random</font> module</h1>
+
+<p><b>The <font face="Courier New">random</font> function</b></p>
+
+<p>The most general function named <codel>random()</codel> (not to be confused with the module's name) <strong>produces a float number <codel>x</codel> coming from the range <codel>(0.0, 1.0)</codel></strong> - in other words: (0.0 &lt;= x &lt; 1.0).</p>
+
+<p>The example program below will produce five pseudorandom values – as their values are determined by the current (rather unpredictable) seed value, you can't guess them:</p>
+
+<p><codep class="syntax-color copy">from random import random
+
+for i in range(5):
+    print(<mark class="mark-background">random</mark>())
+</codep></p>
+
+<p>Run the program. This is what we've got:</p>
+
+<codep>0.9535768927411208
+0.5312710096244534
+0.8737691983477731
+0.5896799172452125
+0.02116716297022092</codep>
+<p style="text-align: right;"><font size="-2"><b>sample output</b></font></p>
+
+<p><b>The <font face="Courier New">seed</font> function</b></p>
+
+<p>The <codel>seed()</codel> function is able to directly <strong>set the generator's seed</strong>. We'll show you two of its variants:</p>
+
+<ul>
+<li><codel>seed()</codel> – sets the seed with the current time;</li>
+<li><codel>seed(int_value)</codel> – sets the seed with the integer value <codel>int_value</codel>.</li>
+</ul>
+ 
+
+<p>We've modified the previous program – in effect, we've removed any trace of randomness from the code:</p>
+
+<codep class="syntax-color copy">from random import random, seed
+
+<mark class="mark-background">seed</mark>(0)
+
+for i in range(5):
+    print(random())
+</codep>
+
+<br>
+
+<p>Due to the fact that the seed is always set with the same value, the sequence of generated values always looks the same.</p>
+
+<p>Run the program. This is what we've got:</p>
+
+<codep>0.844421851525
+0.75795440294
+0.420571580831
+0.258916750293
+0.511274721369</codep>
+<p style="text-align: right;"><font size="-2"><b>sample output</b></font></p>
+
+
+<p>And you?</p>
+
+<p>Note: your values may be slightly different than ours if your system uses more precise or less precise floating-point arithmetic, but the difference will be seen quite far from the decimal point.</p>
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

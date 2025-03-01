@@ -1,0 +1,74 @@
+<problem chapter='4' section='4' slide='1' problem='2' title='The os module'>
+
+<!--
+Update history:
+2020-03-30 Sebastian (first version)
+2020-10-08 Grzegorz (review, PEP-8 compliance check)
+-->
+
+<code>
+</code>
+
+
+
+<h1>Getting information about the operating system</h1>
+
+
+<p>Before you create your first directory structure, you'll see how you can get information about the current operating system. This is really easy because the <i>os</i> module provides a function called <i>uname</i>, which returns an object containing the following attributes:</p>
+
+<ul>
+<li><b>systemname</b> — stores the name of the operating system;</li>
+<li><b>nodename</b> — stores the machine name on the network;</li>
+<li><b>release</b> — stores the operating system release;</li>
+<li><b>version</b> — stores the operating system version;</li>
+<li><b>machine</b> — stores the hardware identifier, e.g., x86_64.</li>
+</ul>
+
+<p>Let's look at how it is in practice:</p>
+
+<p><codep class="syntax-color copy">import os
+print(os.uname())
+</codep></p>
+
+<p>Result:</p>
+
+<codep>posix.uname_result(sysname='Linux', nodename='192d19f04766', release='4.4.0-164-generic', version='#192-Ubuntu SMP Fri Sep 13 12:02:50 UTC 2019', machine='x86_64')</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+
+
+<p>As you can see, the <i>uname</i> function returns an object containing information about the operating system. The above code was launched on Ubuntu 16.04.6 LTS, so don't be surprised if you get a different result, because it depends on your operating system.</p>
+
+<p>Unfortunately, the <i>uname</i> function only works on some Unix systems. If you use Windows, you can use the <i>uname</i> function in the <i>platform</i> module, which returns a similar result.</p>
+
+<p>The <i>os</i> module allows you to quickly distinguish the operating system using the <i>name</i> attribute, which supports one of the following names:</p>
+<ul>
+<li><b>posix</b> — you'll get this name if you use Unix;</li>
+<li><b>nt</b> — you'll get this name if you use Windows;</li>
+<li><b>java</b> — you'll get this name if your code is written in Jython.</li>
+</ul>
+
+<p>For Ubuntu 16.04.6 LTS, the <i>name</i> attribute returns the name <i>posix</i>:</p>
+
+<p><codep class="syntax-color copy">import os
+print(os.name)
+</codep></p>
+
+<p>Result:</p>
+
+<codep>posix</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+
+<p><b>NOTE:</b> On Unix systems, there's a command called <i>uname</i> that returns the same information (if you run it with the -a option) as the <i>uname</i> function.</p>
+
+
+
+<br>
+<br>
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

@@ -1,0 +1,80 @@
+<problem chapter='2' section='1' slide='1' problem='4' title='SECTION SUMMARY'>
+
+<!--
+Update history:
+2020-09-01	Sysio (first version)
+2020-09-28	Grzegorz (review)
+2021-06-30	Grzegorz (corrections)
+
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<h1>Key takeaways</h1>
+
+<br>
+
+<p>1. Computers store characters as numbers. There is more than one possible way of encoding characters, but only some of them gained worldwide popularity and are commonly used in IT: these are <b>ASCII</b> (used mainly to encode the Latin alphabet and some of its derivates) and <b>UNICODE</b> (able to encode virtually all alphabets being used by humans).</p>
+<br>
+
+<p>2. A number corresponding to a particular character is called a <b>codepoint</b>.</p>
+<br>
+
+<p>3. UNICODE uses different ways of encoding when it comes to storing the characters using files or computer memory: two of them are <b>UCS-4</b> and <b>UTF-8</b> (the latter is the most common as it wastes less memory space).</p>
+<br>
+
+</div>
+<div class="small-12 large-6 columns">
+
+<br>
+
+<script>
+function solution (id) {
+    var element = document.getElementById(id);
+    
+if (element.style.display === "none") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
+    }
+}
+</script>
+
+
+<p><strong>Exercise 1</strong></p>
+<p>What is BOM?</p>
+
+<button class="button tiny" onclick="solution('sol1')">Check</button>
+
+<br>
+
+<p id="sol1" style="display: none;">
+<b>BOM</b> (Byte Order Mark) is a special combination of bits announcing the encoding used by a file's contents (e.g. UCS-4 or UTF-B).</p>
+
+
+<br>
+
+<p><strong>Exercise 2</strong></p>
+<p>Is Python 3 <i>I18N</i>ed?</p>
+
+<button class="button tiny" onclick="solution('sol2')">Check</button>
+
+<p id="sol2" style="display: none;">
+Yes, it's completely internationalized – we can use UNICODE characters inside our code, read them from the input and send them to the output.
+</p>
+
+
+<br>
+
+</div>
+
+</div>
+</div>
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

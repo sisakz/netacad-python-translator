@@ -1,0 +1,74 @@
+<problem chapter='2' section='2' slide='1' problem='8' title='The nature of strings in Python'>
+
+<!--
+Update history:
+2020-09-22 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>
+</code>
+
+
+
+<h1>The <font face="Courier New">in</font> and <font face="Courier New">not in</font> operators</h1>
+
+<p><b>The <font face="Courier New">in</font> operator</b></p>
+
+<p>The <codel>in</codel> operator shouldn't surprise you when applied to strings – it simply <strong>checks if its left argument (a string) can be found anywhere within the right argument (another string)</strong>.</p>
+
+<p>The result of the check is simply <codel>True</codel> or <codel>False</codel>.</p>
+
+<p>Look at the example program below. This is how the <codel>in</codel> operator works:</p>
+
+<p><codep class="syntax-color copy line-numbers">alphabet = "abcdefghijklmnopqrstuvwxyz"
+
+print("f" in alphabet)
+print("F" in alphabet)
+print("1" in alphabet)
+print("ghi" in alphabet)
+print("Xyz" in alphabet)
+</codep></p>
+
+<p>The example output is:</p>
+
+<codep>True
+False
+False
+True
+False</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+<p><b>The <font face="Courier New">not in</font> operator</b></p>
+
+<p>As you probably suspect, the <codel>not in</codel> operator is also applicable here.</p>
+
+<p>This is how it works:</p>
+
+<codep class="syntax-color copy">alphabet = "abcdefghijklmnopqrstuvwxyz"
+
+print("f" not in alphabet)
+print("F" not in alphabet)
+print("1" not in alphabet)
+print("ghi" not in alphabet)
+print("Xyz" not in alphabet)
+</codep>
+
+<br>
+
+<p>The example output is:</p>
+
+<codep>False
+True
+True
+False
+True</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

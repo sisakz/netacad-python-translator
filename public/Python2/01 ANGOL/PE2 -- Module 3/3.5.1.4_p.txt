@@ -1,0 +1,92 @@
+<problem chapter='3' section='5' slide='1' problem='4' title='OOP Fundamentals: Inheritance'>
+
+<!--
+Update history:
+2020-10-01 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>class Vehicle:
+    pass
+
+
+class LandVehicle(Vehicle):
+    pass
+
+
+class TrackedVehicle(LandVehicle):
+    pass
+
+
+for cls1 in [Vehicle, LandVehicle, TrackedVehicle]:
+    for cls2 in [Vehicle, LandVehicle, TrackedVehicle]:
+        print(issubclass(cls1, cls2), end="\t")
+    print()
+
+</code>
+
+
+
+<h1>Inheritance: <font face="Courier New">issubclass()</font></h1>
+
+<p>Python offers a function which is able to <strong>identify a relationship between two classes</strong>, and although its diagnosis isn't complex, it can <strong>check if a particular class is a subclass of any other class</strong>.
+
+<p>This is what it looks like:</p>
+
+<codep class="syntax-color">issubclass(ClassOne, ClassTwo)
+</codep>
+<br>
+
+
+
+<p>The function returns <font face="Courier New">True</font> if <codel>ClassOne</codel> is a subclass of <codel>ClassTwo</codel>, and <font face="Courier New">False</font> otherwise.</p>
+
+<p>Let's see it in action – it may surprise you. Look at the code in the editor. Read it carefully.</p>
+
+<p>There are two nested loops. Their purpose is to <strong>check all possible ordered pairs of classes, and to print the results of the check to determine whether the pair matches the subclass-superclass relationship</strong>.</p>
+
+<p>Run the code. The program produces the following output:</p>
+
+<codep>True	False	False	
+True	True	False	
+True	True	True	</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+
+<p>Let's make the result more readable:</p>
+
+<table>
+<thead><tr>
+
+<th>&darr; is a subclass of &rarr;</th> <th>Vehicle</th> <th>LandVehicle</th> <th>TrackedVehicle</th>
+
+</tr></thead>
+
+<tbody><tr>
+
+<td><strong>Vehicle</strong></td> <td><font face="Courier New">True</font></td> <td><font face="Courier New">False</font></td> <td><font face="Courier New">False</font></td>
+
+</tr>
+
+<tr>
+
+<td><strong>LandVehicle</strong></td> <td><font face="Courier New">True</font></td> <td><font face="Courier New">True</font></td> <td><font face="Courier New">False</font></td>
+
+</tr>
+
+<tr>
+
+<td><strong>TrackedVehicle</strong></td> <td><font face="Courier New">True</font></td> <td><font face="Courier New">True</font></td> <td><font face="Courier New">True</font></td>
+
+</tr></tbody>
+</table>
+
+<p>There is one important observation to make: <strong>each class is considered to be a subclass of itself</strong>.</p>
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

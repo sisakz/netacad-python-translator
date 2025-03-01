@@ -1,0 +1,98 @@
+<problem chapter='1' section='3' slide='1' problem='7' title='Modules and Packages'>
+
+<!--
+Update history:
+2020-09-08 Grzegorz (review, PEP-8 compliance check, update)
+2021-06-29 Grzegorz (corrections)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h1>Your first package: step 3</h1>
+
+<p>This is how the tree currently looks:</p>
+
+<img class="lightbox" src="/uploads/media/default/0001/01/cac9cdda73323bfa0a86a4287de87230abb74df2.png" width="75%" alt="The relationship between modules - tree structure">
+<br><br> 
+
+<p>Such a structure is almost a package (in the Python sense). It lacks the fine detail to be both functional and operative, but we'll complete it in a moment.</p>
+
+<p>If you assume that <font face="Courier New">extra</font> is the name of the <strong>newly created package</strong> (think of it as the <strong>package's root</strong>), it will impose a naming rule which allows you to clearly name every entity from the tree.</p>
+
+
+
+<br><br>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+<p>For example:</p>
+
+<ul>
+<li>the location of the function named <codel>funT()</codel> from the <font face="Courier New">tau</font> package may be described as:
+
+<br><br><codep class="syntax-color">extra.good.best.tau.funT()
+</codep>
+
+<br></li>
+
+<li>the function marked as:
+
+<br><br><codep class="syntax-color">extra.ugly.psi.funP()
+</codep>
+
+<br>
+
+comes from the <font face="Courier New">psi</font> module being stored in the <font face="Courier New">ugly</font> subpackage of the <font face="Courier New">extra</font> package.</li>
+</ul>
+
+<h2>Your first package: step 4</h2>
+
+<p>Now there are two questions to answer:</p>
+
+<ul>
+<li><b>how</b> do you transform such a tree (actually, a subtree) into a real Python <b>package</b> (in other words, how do you convince Python that this tree is not just a bunch of junk files, but a set of modules)?</li>
+<li><b>where</b> do you put the subtree to make it accessible to Python?</li>
+</ul>
+ 
+
+<p>The first question has a surprising answer: <strong>packages, like modules, may require initialization</strong>.</p>
+
+<p>The initialization of a module is done by an <i>unbound</i> code (not a part of any function) located inside the module's file. As a package is not a file, this technique is useless for initializing packages.</p>
+
+<p>You need to use a different trick instead – Python expects there to be a file with a very unique name inside the package's folder: <font face="Courier New">__init__.py</font>.</p>
+
+ 
+<p>The contents of the file are executed when any of the package's modules is <b>imported</b>. If you don't want any special initializations, you can leave the file empty, but you can't omit it.</p>
+
+
+
+<br>
+<br>
+
+</div>
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

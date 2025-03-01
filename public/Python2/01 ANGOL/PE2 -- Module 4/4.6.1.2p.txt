@@ -1,0 +1,47 @@
+<problem chapter='4' section='6' slide='1' problem='2' title='The calendar module'>
+
+<!--
+Update history:
+2020-03-30 Sebastian (first version)
+2020-10-12 Grzegorz (file creation, review, PEP-8 compliance check)
+-->
+
+<code>import calendar
+print(calendar.calendar(2020))
+
+</code>
+
+<h1>Your first calendar</h1>
+
+<p>You will start your adventure with the <codel>calendar</codel> module with a simple function called <codel>calendar</codel>, which allows you to <b>display the calendar for the whole year</b>. Let's look at how to use it to display the calendar for 2020. Run the code in the editor and see what happens.</p>
+
+
+<p>The result displayed is similar to the result of the <i>cal</i> command available in Unix. If you want to change the default calendar formatting, you can use the following parameters:</p>
+
+
+<ul>
+<li><codel>w</codel> – date column width (default 2)</li>
+<li><codel>l</codel> – number of lines per week (default 1)</li>
+<li><codel>c</codel> – number of spaces between month columns (default 6)</li>
+<li><codel>m</codel> – number of columns (default 3)</li>
+</ul>
+
+
+<p>The calendar function requires you to specify the year, while the other parameters responsible for formatting are optional. We encourage you to try these parameters yourself.</p>
+
+<p>A good alternative to the above function is the function called <i>prcal</i>, which also takes the same parameters as the <codel>calendar</codel> function, but doesn't require the use of the <codel>print</codel> function to display the calendar. Its use looks like this:</p>
+
+<p><codep class="syntax-color copy">import calendar
+calendar.prcal(2020)
+</codep></p>
+
+
+
+<br>
+<br>
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

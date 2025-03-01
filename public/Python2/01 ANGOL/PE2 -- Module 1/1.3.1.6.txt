@@ -1,0 +1,96 @@
+<problem chapter='1' section='3' slide='1' problem='6' title='Modules and Packages'>
+
+<!--
+Update history:
+2020-09-08 Grzegorz (review, PEP-8 compliance check, update)
+2021-06-29 Grzegorz (corrections)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h1>Your first package: step 1</h1>
+
+<p>Imagine that in the not-so-distant future you and your associates write a large number of Python functions.</p>
+
+<p>Your team decides to group the functions into separate modules, and this is the final result of the ordering:</p>
+
+<img class="lightbox" src="/uploads/media/default/0001/01/5daeeacd359dd6c05f3f1e61c73ba42c462640f4.png" width="55%" alt="Functions located in separate modules">
+<br><br> 
+
+<codep class="syntax-color copy line-numbers">#! /usr/bin/env python3
+
+""" module: alpha """
+
+def funA():
+    return "Alpha"
+
+if __name__ == "__main__":
+    print("I prefer to be a module.")
+</codep>
+<p style="text-align: right;">alpha.py</p>
+
+ 
+<p>Note: we've presented the whole content for the <font face="Courier New">alpha.py</font> module only – assume that all the modules look similar (they contain one function named <codel>funX</codel>, where <i>X</i> is the first letter of the module's name).</p>
+
+
+
+<br><br>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<h2>Your first package: step 2</h1>
+
+
+
+<p>Suddenly, somebody notices that these modules form their own hierarchy, so putting them all in a flat structure won't be a good idea.</p>
+
+<p>After some discussion, the team comes to the conclusion that the modules have to be grouped. All participants agree that the following tree structure perfectly reflects the mutual relationships between the modules:</p>
+
+<img class="lightbox" src="/uploads/media/default/0001/01/0ad92b73c58b41b513bda0c0d0ed6cd99f1936a4.png" width="65%" alt="Modules grouped together">
+<br><br>  
+
+<p>Let's review this from the bottom up:</p>
+
+<ul>
+<li>the <font face="Courier New">ugly</font> group contains two modules: <font face="Courier New">psi</font> and <font face="Courier New">omega</font>;</li>
+<li>the <font face="Courier New">best</font> group contains two modules: <font face="Courier New">sigma</font> and <font face="Courier New">tau</font>;</li>
+<li>the <font face="Courier New">good</font> group contains two modules (<font face="Courier New">alpha</font> and <font face="Courier New">beta</font>) and one subgroup (<font face="Courier New">best</font>)</li>
+<li>the <font face="Courier New">extra</font> group contains two subgroups (<font face="Courier New">good</font> and <font face="Courier New">bad</font>) and one module (<font face="Courier New">iota</font>)</li>
+</ul>
+ 
+
+<p>Does it look bad? Not at all – analyze the structure carefully. It resembles something, doesn't it?</p>
+
+<p>It looks like a <b>directory structure</b>.</p>
+
+<p>Let's build a tree reflecting the projected dependencies between the modules.</p>
+
+
+<br>
+<br>
+
+</div>
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

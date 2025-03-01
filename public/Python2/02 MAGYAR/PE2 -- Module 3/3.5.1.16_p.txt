@@ -1,0 +1,65 @@
+<problem chapter='3' section='5' slide='1' problem='16' title='OOP alapok: Öröklés'>
+
+<!--
+Update history:
+2020-10-01 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>
+import time
+
+class TrackedVehicle:
+    def control_track(left, stop):
+        pass
+
+    def turn(left):
+        control_track(left, True)
+        time.sleep(0.25)
+        control_track(left, False)
+
+
+class WheeledVehicle:
+    def turn_front_wheels(left, on):
+        pass
+
+    def turn(left):
+        turn_front_wheels(left, True)
+        time.sleep(0.25)
+        turn_front_wheels(left, False)
+
+</code>
+
+
+
+<h1>Hogyan építsünk fel egy osztályhierarchiát (folytatás)</h1>
+
+
+<p>Nézd meg a példát a szerkesztőben!</p>
+
+<p>Hasonlít valamire? Igen, természetesen hasonlít, nem véletlenül. A modul elején bemutatott példára utal, amikor az objektumorientált programozás általános fogalmairól beszéltünk.</p>
+
+<p>Lehet, hogy furcsán néz ki, de most nem használtuk az öröklést semmilyen módon - csak azért, hogy megmutassuk, hogy ez nem korlátoz minket, és sikerült elérnünk, amit szerettünk volna.</p>
+
+<p>Két különálló osztályt határoztunk meg, amelyek két különböző típusú szárazföldi járművet képesek előállítani. A fő különbség közöttük abban van, hogy hogyan fordulnak. A kerekes jármű csak az első kerekeket forgatja (általában). Egy lánctalpas járműnek meg kell állítani az egyik lánctalpat.</p>
+
+<P>Tudod követni a kódot?</P>
+
+<ul>
+    <li>a lánctalpas jármű úgy hajt végre kanyart, hogy megáll és elmozdul az egyik pályáján (ezt a <codel>control_track()</codel> metódus végzi, amelyet később fogunk implementálni).</li>
+    <li>egy kerekes jármű akkor fordul el, amikor az első kerekei elfordulnak (ezt a <codel>turn_front_wheels()</codel> metódus végzi).</li>
+    <li>a <codel>turn()</codel> módszer az egyes járműveknek megfelelő módszert használja.</li>
+</ul>
+
+<p>Észreveszed <strong>, hogy mi a probléma a kóddal</strong>?</p>
+
+<p>A <codel>turn()</codel> metódusok túlságosan hasonlóak ahhoz, hogy ebben a formában hagyjuk őket.</p>
+
+<p>Építsük át a kódot - bevezetünk egy szuperosztályt, amely összegyűjti a vezető járművek összes hasonló aspektusát, az összes sajátosságot pedig az alosztályokba helyezzük át.</p>
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

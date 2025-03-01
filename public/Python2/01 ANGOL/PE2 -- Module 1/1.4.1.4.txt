@@ -1,0 +1,65 @@
+<problem chapter='1' section='4' slide='1' problem='4' title='Python Package Installer (PIP)'>
+
+<!--
+Update history:
+2020-09-23 Grzegorz (created)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h1>The PyPI repo: the Cheese Shop (continued)</h1>
+
+<p>PyPI is a very specific shop, not just because it offers all its products for free. It also requires a special tool to make use of it.</p>
+
+<p>Fortunately, this tool is also free, so if you want to make your own digital cheeseburger by using the goods offered by the PyPI Shop, you’ll need a free tool named <i>pip</i>. </p>
+
+<p>No, you haven't misheard. Just <i>pip</i>. It's another acronym, of course, but its nature is more complex than the previously mentioned PyPI, as it's an example of a recursive acronym, which means that the acronym refers to itself, which means that explaining it is an infinite process. </p>
+
+<p>Why? Because <i>pip</i> means <i>“pip installs packages”</i>, and the <i>pip</i> inside <i>“pip installs packages”</i> means <i>“pip installs packages”</i> and ...</p>
+
+<p>Let’s stop there. Thank you for your cooperation.</p>
+
+<p>By the way, there are a few other very famous recursive acronyms. One of them is <i>Linux</i>, which can be interpreted as <i>“Linux is Not Unix”</i>.</p>
+
+
+
+
+
+
+<br>
+<br> 
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+<br>
+
+
+<center><img src="/uploads/media/default/0001/02/e77aa0ca1396f21304d98f09583dd588c3f2d684.png" width="70%" alt="Cheeseburger"></center>
+
+<br>
+<br>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

@@ -1,0 +1,59 @@
+<problem chapter='2' section='2' slide='1' problem='14' title='Karakterláncok'>
+
+<!--
+Update history:
+2020-09-22 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>
+# Demonstrating the list() function:
+print(list("abcabc"))
+
+# Demonstrating the count() method:
+print("abcabc".count("b"))
+print('abcabc'.count("d"))
+
+</code>
+
+
+
+<h1>Műveletek karakterláncokon: a <font face="Courier New">list()</font> függvény</h1>
+
+<p>A <codel>list()</codel> függvény <strong>fogja az argumentumát (egy karakterláncot), és létrehoz egy új listát, amely a karakterlánc összes karakterét külön-külön tartalmazza listaelemenként</strong>.</p>
+
+<p>Megjegyzés: a <codel>list()</codel> nem szigorúan karakterlánc függvény. Sok más objektumból képes új listát létrehozni (pl. tuplékból és szótárakból).</p>
+
+<p>Nézd meg a példát a szerkesztőben.</p>
+
+<p>A példa kimenetei:</p>
+
+<codep>['a', 'b', 'c', 'a', 'b', 'c']</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+
+<h2>Műveletek karakterláncokon: a <font face="Courier New">count()</font> tagfüggvény</h2>
+
+<p>A <codel>count()</codel> tagfüggvény <strong>megszámolja egy elem összes előfordulását a szekvencián belül</strong>. Az ilyen elemek hiánya nem okoz problémát.</p>
+
+<p>Nézd meg a második példát a szerkesztőben. Ki tudod találni a kimenetét?</p>
+
+<p>Ez az:</p>
+
+<codep>2
+0</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+
+ 
+<p>A Python karakterláncok ráadásul jelentős számú, kizárólag karakterek feldolgozására szolgáló tagfüggvénnyel rendelkeznek. Ne várd tőlük, hogy más adatszerkezetekkel is működjenek. A teljes listát itt találod: <a href="https://docs.python.org/3.4/library/stdtypes.html#string-methods" target="_blank">https://docs.python.org/3.4/library/stdtypes.html#string-methods</a>.</p>
+
+<p>Megmutatjuk azokat, amelyeket a leghasznosabbnak tartunk.</p>
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

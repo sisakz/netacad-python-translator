@@ -1,0 +1,80 @@
+<problem chapter='3' section='5' slide='1' problem='12' title='OOP alapok: Öröklés'>
+
+<!--
+Update history:
+2020-10-01 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>class SuperA:
+    var_a = 10
+    def fun_a(self):
+        return 11
+
+
+class SuperB:
+    var_b = 20
+    def fun_b(self):
+        return 21
+
+
+class Sub(SuperA, SuperB):
+    pass
+
+
+obj = Sub()
+
+print(obj.var_a, obj.fun_a())
+print(obj.var_b, obj.fun_b())
+
+</code>
+
+
+
+<h1>Hogyan találja meg a Python a tulajdonságokat és metódusokat (folytatás)</h1>
+
+
+<p><strong>Többszörös öröklődésről akkor beszélünk, ha egy osztálynak egynél több ősosztálya van</strong>. Szintaktikailag az ilyen öröklés az ősosztályok (szuperosztályok) vesszővel elválasztott listájaként jelenik meg, amelyet az új osztály neve után zárójelbe teszünk - mint itt:</p>
+
+<codep>class SuperA:
+    var_a = 10
+    def fun_a(self):
+        return 11
+
+
+class SuperB:
+    var_b = 20
+    def fun_b(self):
+        return 21
+
+
+<mark class="mark-background">class Sub(SuperA, SuperB):</mark>
+    pass
+
+obj = Sub()
+
+print(obj.var_a, obj.fun_a())
+print(obj.var_b, obj.fun_b())
+
+</codep>
+<br>
+
+
+<p>A <codel>Sub</codel> osztálynak két ősosztálya van: <codel>SuperA</codel> és <codel>SuperB</codel>. Ez azt jelenti, hogy a <codel>Sub</codel> osztály <strong>örökli mind a <codel>SuperA</codel>, mind a <codel>SuperB</codel> által kínált összes tulajdonságot</strong>.</p>
+
+<p>A kód eredménye:</p>
+
+<codep>10 11
+20 21</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+<p>Itt az ideje, hogy bevezessünk egy vadonatúj kifejezést - a <strong>felüldefiniálást (override)</strong>.</p>
+
+<p>Mit gondolsz, mi történik, ha egynél több szuperosztály definiál egy adott nevű entitást?</p>
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

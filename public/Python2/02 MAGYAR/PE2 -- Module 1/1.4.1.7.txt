@@ -1,0 +1,72 @@
+<problem chapter='1' section='4' slide='1' problem='7' title='pip telepítése Linux alatt'>
+
+<!--
+Update history:
+2020-09-23 Grzegorz (created)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h1><i>pip</i> Linux alatt</h1>
+
+<p>A különböző Linux disztribúciók eltérően viselkedhetnek a <i>pip</i> használata során. Néhányuk (mint például a <i>Gentoo</i>) esetében, amelyek szorosan kötődnek a Pythonhoz és belsőleg használják azt, lehet, hogy a <i>pip</i> előre telepítve van, és azonnal készen áll a munkára.</p>
+
+<p>Ne felejtsük el, hogy néhány Linux több Python verziót is használhat egyidejűleg, pl.: egy Python 2 és egy Python 3 van egymás mellett. Az ilyen rendszerek a Python 2-t indíthatják el alapértelmezett verziónak, és előfordulhat, hogy a program nevének explicit python3-ként való megadása szükséges. Ebben az esetben két különböző <i>pip</i> lehet, amelyeket <i>pip</i> (vagy <i>pip2</i>) és <i>pip3</i> néven azonosítanak. Ellenőrizd ezt gondosan.</p>
+
+
+<p>Nyisd meg a terminálablakot, és add ki a következő parancsot:</p>
+
+<p><codep class="syntax-color">pip --version
+</codep></p>
+<br>
+
+<center><img class="lightbox" src="/uploads/media/default/0001/02/5bb7d05f95ab79ac208e69fef800604e33aad690.png" width="95%" alt="pip --version, python 2.7"></center>
+
+
+
+<br>
+<br> 
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+<p>Az előző képen láthatóhoz hasonló válasz azt jelenti, hogy a <i>pip</i>-et a Python 2-ből indítottad, így a következő próbálkozásnak a következőképpen kell kinéznie:</p>
+
+<p><codep class="syntax-color">pip3 --version
+</codep></p>
+<br>
+
+<center><img class="lightbox" src="/uploads/media/default/0001/02/2cf590e6d125749db8fe2ccabb7dbc8d062bf7f1.png" width="95%" alt="pip --version, python 3.6"></center>
+
+<br>
+
+<p>Mint láthatod, most már biztosak vagyunk benne, hogy a <i>pip</i> megfelelő verzióját használjuk.</p>
+
+
+<br>
+<br>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

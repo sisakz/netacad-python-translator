@@ -1,0 +1,59 @@
+<problem chapter='4' section='6' slide='1' problem='8' title='The calendar module'>
+
+<!--
+Update history:
+2020-03-30 Sebastian (first version)
+2020-10-12 Grzegorz (file creation, review, PEP-8 compliance check)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<code>import calendar
+
+print(calendar.isleap(2020))
+print(calendar.leapdays(2010, 2021))  # Up to but not including 2021.
+
+</code>
+
+<h1>Classes for creating calendars</h1>
+
+<p>The functions we've shown you so far aren't everything the <codel>calendar</codel> module offers. In addition to them, we can use the following classes:</p>
+
+<ul>
+<li><codel>calendar.Calendar</codel> – provides methods to prepare calendar data for formatting;</li>
+<li><codel>calendar.TextCalendar</codel> – is used to create regular text calendars;</li>
+<li><codel>calendar.HTMLCalendar</codel> – is used to create HTML calendars;</li>
+<li><codel>calendar.LocalTextCalendar</codel> – is a subclass of the <codel>calendar.TextCalendar</codel> class. The constructor of this class takes the <i>locale</i> parameter, which is used to return the appropriate months and weekday names.</li>
+<li><codel>calendar.LocalHTMLCalendar</codel> – is a subclass of the <codel>calendar.HTMLCalendar</codel> class. The constructor of this class takes the locale parameter, which is used to return the appropriate months and weekday names.</li>
+</ul>
+
+<p>During this course, you've already had the opportunity to create text calendars when discussing the functions of the <codel>calendar</codel> module.</p>
+
+<p>Time to try something new. Let's take a closer look at the methods of the <codel>calendar</codel> class.</p>
+
+<br>
+
+
+</div>
+
+
+<div class="small-12 large-6 columns">
+
+
+<br>
+<center><img src="/uploads/media/default/0001/02/84ebbab8e240af991a55bcb3e17c9cf836e3d609.png" alt="Different calendars" width="70%"></center>
+<br><br>
+
+
+
+</div>
+</div>
+</div>
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

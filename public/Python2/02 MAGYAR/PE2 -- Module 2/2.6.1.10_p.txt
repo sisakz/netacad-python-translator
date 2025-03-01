@@ -1,0 +1,74 @@
+<problem chapter='2' section='6' slide='1' problem='10' title="Hibák – a programozók mindennapi kenyere | try-except">
+
+<!--
+Update history:
+2020-09-21 Grzegorz (review, PEP-8 compliance check, update, title correction)
+-->
+
+<code>
+try:
+    x = int(input("Enter a number: "))
+    y = 1 / x
+    print(y)
+except ValueError:
+    print("You must enter an integer value.")
+except:
+    print("Oh dear, something went wrong...")
+
+print("THE END.")
+
+</code>
+
+
+
+<h1>Kivételek (folytatás)</h1>
+
+<p>Ezt ne felejtsd el:</p>
+
+<ul>
+    <li>az <codel>except</codel> ágakat ugyanabban a sorrendben nézi végig, ahogyan azok a kódban szerepelnek;</li>
+    <li>nem használhatsz egynél több except ágat egy bizonyos kivételnévvel;</li>
+    <li>a különböző <codel>except</codel> ágak száma tetszőleges – az egyetlen feltétel az, hogy ha <codel>try</codel>-t használsz, akkor legalább egy <codel>except</codel>-et (névvel vagy anélkül) kell tenned utána;</li>
+    <li>az <codel>except</codel>kulcsszó nem használható az azt megelőző <codel>try</codel> nélkül;</li>
+    <li>ha az <codel>except</codel> ágak bármelyike végrehajtásra kerül, a többi ágra nem kerül a vezérlés;</li>
+    <li>ha a megadott <codel>except</codel> ágak egyike sem felel meg a kiváltott kivételnek, a kivétel kezeletlen marad (ezt hamarosan megbeszéljük);</li>
+    <li>ha létezik egy névtelen <codel>except</codel> ág (kivételnév nélküli ág), akkor azt kell utolsónak megadni.</li>
+</ul>
+ 
+<codep class="syntax-color">try:
+    :
+except exc1:
+    :
+except exc2:
+    :
+except:
+    :
+</codep>
+<br>
+
+
+<p>Folytassuk most a kísérleteket.</p>
+
+<br>
+
+
+<p>Nézd meg a kódot a szerkesztőben. Módosítottuk az előző programot – eltávolítottuk a <codel>ZeroDivisionError</codel> ágat.</p>
+
+<p>Mi történik most, ha a felhasználó <codel>0</codel>-t ad meg bemenetként?</p>
+
+<p>Mivel a nullával való osztásra nincs <strong>külön ág</strong>,a kiváltott kivétel az <strong>általános (névtelen) ágba</strong> esik; ez azt jelenti, hogy ebben az esetben a program azt mondja:</p>
+
+<codep>Oh dear, something went wrong...
+THE END.</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+<p>Próbáld ki magad. Futtasd le a programot.</p>
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

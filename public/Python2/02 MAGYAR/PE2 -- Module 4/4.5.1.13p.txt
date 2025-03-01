@@ -1,0 +1,46 @@
+﻿<problem chapter='4' section='5' slide='1' problem='13' title='A datetime és time modul (folytatás)'>
+
+<!--
+Update history:
+2020-03-30 Sebastian (first version)
+2020-10-12 Grzegorz (file creation, review, PEP-8 compliance check)
+-->
+
+<code>from datetime import datetime
+
+print("today:", datetime.today())
+print("now:", datetime.now())
+print("utcnow:", datetime.utcnow())
+
+</code>
+
+
+
+<h1>Az aktuális dátumot és időt visszaadó metódusok</h1>
+
+
+<p>A <codel>datetime</codel> osztály több olyan metódussal rendelkezik, amely visszaadja az aktuális dátumot és időt. Ezek a módszerek a következők:</p>
+
+<ul>
+    <li><codel>today()</codel> — az aktuális helyi dátumot és időt adja vissza, a <i>tzinfo</i> attribútum <i>None</i> értékével;</li>
+    <li><codel>now()</codel> — az aktuális helyi dátumot és időt adja vissza, ugyanúgy, mint a <i>today</i> kivéve, ha az opcionális <i>tz</i> argumentummal hívjuk meg. A metódus argumentumának a <i>tzinfo</i> alosztály egy objektumának kell lennie;</li>
+    <li><codel>utcnow()</codel> — az aktuális UTC dátumot és időt adja vissza, a <i>tzinfo</i> attribútum <i>None</i> értékével.</li>
+</ul>
+
+<p>Futtasd a kódot a szerkesztőablakban, hogy a gyakorlatban is lásd mindezt. Mit tudsz mondani a kimenetről?</p>
+
+<p>Mint látható, mindhárom metódus eredménye ugyanaz. A kis különbségeket az egymást követő hívások között eltelt idő okozza.</p>
+
+<p><b>Megjegyzés:</b> A <i>tzinfo</i> objektumokról bővebben a dokumentációban olvashatsz.</p>
+
+
+
+
+<br>
+<br>
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

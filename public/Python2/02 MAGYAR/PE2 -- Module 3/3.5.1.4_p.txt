@@ -1,0 +1,92 @@
+<problem chapter='3' section='5' slide='1' problem='4' title='OOP alapok: Öröklés'>
+
+<!--
+Update history:
+2020-10-01 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>class Vehicle:
+    pass
+
+
+class LandVehicle(Vehicle):
+    pass
+
+
+class TrackedVehicle(LandVehicle):
+    pass
+
+
+for cls1 in [Vehicle, LandVehicle, TrackedVehicle]:
+    for cls2 in [Vehicle, LandVehicle, TrackedVehicle]:
+        print(issubclass(cls1, cls2), end="\t")
+    print()
+
+</code>
+
+
+
+<h1>Öröklődés: <font face="Courier New">issubclass()</font></h1>
+
+<p>Az issubclass() egy olyan függvény, amely képes <strong>azonosítani két osztály közötti kapcsolatot</strong>; azt <strong>ellenőrzi, hogy egy adott osztály bármelyik másik osztály alosztálya-e</strong>.
+
+<p>Így néz ki:</p>
+
+<codep class="syntax-color">issubclass(ClassOne, ClassTwo)
+</codep>
+<br>
+
+
+
+<p>A függvény <font face="Courier New">True</font>-t ad vissza, ha a <codel>ClassOne</codel> a <codel>ClassTwo</codel> alosztálya, és <font face="Courier New">False</font>-t, ha nem.</p>
+
+<p>Lássuk a gyakorlatban - lehet, hogy meglepődsz. Nézzük meg a kódot a szerkesztőben. Vizsgáld meg figyelmesen!</p>
+
+<p>Két egymásba ágyazott ciklus található. Ezek célja az <strong>összes lehetséges osztálypár ellenőrzése, és az ellenőrzés eredményének kiírása annak megállapítására, hogy a pár megfelel-e az alosztály-szuperosztály kapcsolatnak</strong>.</p>
+
+<p>Futtasd a kódot! A program a következő kimenetet produkálja:</p>
+
+<codep>True	False	False	
+True	True	False	
+True	True	True	</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+
+<p>Tegyük az eredményt olvashatóbbá!</p>
+
+<table>
+<thead><tr>
+
+<th>&darr; egy alosztálya a &rarr;</th> <th>Vehicle</th> <th>LandVehicle</th> <th>TrackedVehicle</th>
+
+</tr></thead>
+
+<tbody><tr>
+
+<td><strong>Vehicle</strong></td> <td><font face="Courier New">True</font></td> <td><font face="Courier New">False</font></td> <td><font face="Courier New">False</font></td>
+
+</tr>
+
+<tr>
+
+<td><strong>LandVehicle</strong></td> <td><font face="Courier New">True</font></td> <td><font face="Courier New">True</font></td> <td><font face="Courier New">False</font></td>
+
+</tr>
+
+<tr>
+
+<td><strong>TrackedVehicle</strong></td> <td><font face="Courier New">True</font></td> <td><font face="Courier New">True</font></td> <td><font face="Courier New">True</font></td>
+
+</tr></tbody>
+</table>
+
+<p>Egy fontos megfigyelést kell megállapítanunk: <strong>minden osztály önmaga alosztályának tekinthető</strong>.</p>
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

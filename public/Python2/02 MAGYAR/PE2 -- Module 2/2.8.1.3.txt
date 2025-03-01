@@ -1,0 +1,110 @@
+<problem chapter='2' section='8' slide='1' problem='3' title='Hasznos kivételek'>
+
+<!--
+Update history:
+2020-09-21 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+
+<h2><font face="Courier New">ImportError</font></h2>
+
+
+<p><strong>Helyszín:</strong> <font face="Courier New">BaseException &larr; Exception &larr; StandardError &larr; ImportError</font></p>
+
+ 
+
+<p><strong>Leírás:</strong> konkrét kivétel, amely akkor lép fel, ha az importálási művelet sikertelen.</p>
+
+
+<p><strong>Kód:</strong></p>
+
+<codep class="syntax-color copy line-numbers"># One of these imports will fail – which one?
+
+try:
+    import math
+    import time
+    import abracadabra
+
+except:
+    print('One of your imports has failed.')
+</codep>
+
+<br>
+
+
+
+<br>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+
+<h2><font face="Courier New">KeyError</font></h2>
+
+
+<p><strong>Helyszín:</strong> <font face="Courier New">BaseException &larr; Exception &larr; LookupError &larr; KeyError</font></p>
+
+ 
+
+<p><strong>Leírás:</strong> konkrét kivétel, amely akkor lép fel, ha egy gyűjtemény nem létező eleméhez (pl. egy szótár eleméhez) próbálsz hozzáférni.</p>
+
+<p><strong>Kód:</strong></p>
+
+<codep class="syntax-color copy line-numbers"># How to abuse the dictionary
+# and how to deal with it?
+
+dictionary = {'a': 'b', 'b': 'c', 'c': 'd'}
+ch = 'a'
+
+try:
+    while True:
+        ch = dictionary[ch]
+        print(ch)
+except KeyError:
+    print('No such key:', ch)
+</codep>
+
+<br>
+
+
+
+
+<p>A kivételekkel egyelőre végeztünk, de visszatérünk rájuk, amikor az objektumorientált programozást tárgyaljuk majd Pythonban. Használhatod őket, hogy megvédd a kódodat a kellemetlen balesetektől, de meg kell tanulnod azt is, hogyan merülj el bennük, felfedezve az általuk hordozott információt.</p>
+
+<p>A kivételek valójában objektumok – azonban erről az aspektusról semmit sem tudunk mondani, amíg nem mutatjuk be az osztályokat, az objektumokat és hasonlókat.</p>
+
+<p>Egyelőre, ha önállóan még többet szeretnél megtudni a kivételekről, akkor nézd meg a Standard Python Library-t a <a href="https://docs.python.org/3.6/library/exceptions.html" target="_blank">https://docs.python.org/3.6/library/exceptions.html</a>.</p>
+
+
+
+
+
+<br>
+<br>
+
+</div>
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

@@ -1,0 +1,42 @@
+<problem chapter='4' section='6' slide='1' problem='9' title='A calendar modul'>
+
+<!--
+Update history:
+2020-03-30 Sebastian (first version)
+2020-10-13 Grzegorz (file creation, review, PEP-8 compliance check)
+-->
+
+<code>import calendar  
+
+c = calendar.Calendar(calendar.SUNDAY)
+
+for weekday in c.iterweekdays():
+    print(weekday, end=" ")
+
+</code>
+
+<h1><font face="Courier New">Calendar</font> objektum létrehozása</h1>
+
+<p>A <codel>Calendar</codel> osztály konstruktora egy opcionális paramétert fogad el, melynek neve <codel>firstweekday</codel>, és alapértelmezés szerint 0 (hétfõ).</p>
+
+<p>A <codel>firstweekday</codel> paraméternek 0-6 közötti egész számnak kell lennie. Ehhez használhatjuk a már ismert konstansokat - nézd meg a kódot a szerkesztõben.</p>
+
+<p>A program a következõ eredményt adja:</p>
+
+<codep>6 0 1 2 3 4 5</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+<p>A kódpélda a <codel>Calendar</codel> osztály <codel>iterweekdays</codel> nevû metódusát használja, amely egy iterátort ad vissza a hét napjainak számaihoz.</p>
+
+<p>Az elsõ visszaadott érték mindig megegyezik a <codel>firstweekday</codel> paraméter értékével. Mivel példánkban az elsõ visszaadott érték 6, ez azt jelenti, hogy a hét vasárnappal kezdõdik.</p>
+
+
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

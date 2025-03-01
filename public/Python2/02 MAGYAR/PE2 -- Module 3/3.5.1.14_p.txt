@@ -1,0 +1,75 @@
+<problem chapter='3' section='5' slide='1' problem='14' title='OOP alapok: Öröklés'>
+
+<!--
+Update history:
+2020-10-01 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>
+class Left:
+    var = "L"
+    var_left = "LL"
+    def fun(self):
+        return "Left"
+
+
+class Right:
+    var = "R"
+    var_right = "RR"
+    def fun(self):
+        return "Right"
+
+
+class Sub(Left, Right):
+    pass
+
+
+obj = Sub()
+
+print(obj.var, obj.var_left, obj.var_right, obj.fun())
+
+</code>
+
+
+
+<h1>Hogyan találja meg a Python a tulajdonságokat és metódusokat (folytatás)</h1>
+
+
+<p>Nézzük meg a példát a szerkesztőben!</p>
+
+
+<p>A <codel>Sub</codel>osztály két szuperosztálytól, a <codel>Left</codel> és a <codel>Right</codel> nevű (ezek a nevek jelentéssel bírnak) osztályoktól örököl.</p>
+
+<p>Kétségtelen, hogy a <codel>var_right</codel> osztályváltozó a <codel>Right</codel> osztályból származik, a <codel>var_left</codel> pedig a <codel>Left</codel> osztályból.</p>
+
+<p>Ez egyértelmű. De honnan jön a <codel>var</codel>? Vajon ki lehet találni? Ugyanez a probléma a <codel>fun()</codel> metódus esetében is felmerül - <codel>Left</codel> vagy <codel>Right</codel> osztályból hívjuk meg? Futtassuk le a programot - a kimenete a következő</p>
+
+<codep>L LL RR Left</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+<p>Ez azt bizonyítja, hogy mindkét nem egyértelmű esetnek van megoldása a <codel>Left</codel> osztályon belül. Ez elegendő előfeltétel egy általános szabály megfogalmazásához? Igen, az.</p>
+
+<p>Azt mondhatjuk, hogy a <strong>Python</strong> a következő sorrendben <strong>keresi az objektumkomponenseket</strong>:</p>
+
+<ul>
+<li>magában az<strong>objektumban</strong>;</li>
+<li>a <strong>szuperosztályaiban</strong> alulról felfelé haladva;</li>
+<li>ha egynél több osztály van egy adott öröklési útvonalon, a Python balról jobbra haladva vizsgálja őket.</li>
+</ul>
+
+<p>Kell még több bizonyíték? Csak egy kis módosítást kell végrehajtani a kódban - cseréld ki a <codel>class Sub(Left, Right):</codel> szót a <codel>class Sub(Right, Left):</codel> szóra, majd futtassuk le újra a programot, és nézd meg, mi történik!</p>
+
+<p>Most mit látsz? Ezt:</p>
+
+<codep>R LL RR Right</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+<p>Ugyanazt látod, vagy valami mást?</p>
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

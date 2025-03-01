@@ -1,0 +1,52 @@
+<problem chapter='2' section='5' slide='1' problem='5' title='SECTION SUMMARY'>
+
+<!--
+Update history:
+2020-09-03 Sysio (first version)
+2020-09-28 Grzegorz (review)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<h1>Key takeaways</h1>
+
+<br>
+
+<p>1. Strings are key tools in modern data processing, as most useful data are actually strings. For example, using a web search engine (which seems quite trivial these days) utilizes extremely complex string processing, involving unimaginable amounts of data.</p>
+
+
+<p>2. Comparing strings in a strict way (as Python does) can be very unsatisfactory when it comes to advanced searches (e.g. during extensive database queries). Responding to this demand, a number of <i>fuzzy</i> string comparison algorithms has been created and implemented. These algorithms are able to find strings which aren't equal in the Python sense, but are <b>similar</b>.</p>
+
+<p>One such concept is the <b>Hamming distance</b>, which is used to determine the similarity of two strings. If this problem interests you, you can find out more about it here: <a href="https://en.wikipedia.org/wiki/Hamming_distance">https://en.wikipedia.org/wiki/Hamming_distance</a>. Another solution of the same kind, but based on a different assumption, is the <b>Levenshtein distance</b> described here: <a href="https://en.wikipedia.org/wiki/Levenshtein_distance">https://en.wikipedia.org/wiki/Levenshtein_distance</a>.</p>
+<br>
+
+<br>
+
+</div>
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+<p>3. Another way of comparing strings is finding their <i>acoustic</i> similarity, which means a process leading to determine if two strings sound similar (like "raise" and "race"). Such a similarity has to be established for every language (or even dialect) separately.</p>
+
+<p>An algorithm used to perform such a comparison for the English language is called <b>Soundex</b> and was invented – you won't believe – in 1918. You can find out more about it here: <a href="https://en.wikipedia.org/wiki/Soundex">https://en.wikipedia.org/wiki/Soundex</a>.</p>
+<br>
+
+<p>4. Due to limited native float and integer data precision, it's sometimes reasonable to store and process huge numeric values as strings. This is the technique Python uses when you force it to operate on an integer number consisting of a very large number of digits.</p>
+<br>
+
+<br>
+
+</div>
+</div>
+</div>
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>
+

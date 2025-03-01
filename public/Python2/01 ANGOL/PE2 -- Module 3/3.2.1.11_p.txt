@@ -1,0 +1,75 @@
+<problem chapter='3' section='2' slide='1' problem='11' title='A short journey from procedural to object approach'>
+
+<!--
+Update history:
+2020-09-30 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>
+class Stack:
+    def __init__(self):
+        self.__stackList = []
+
+    def push(self, val):
+        self.__stackList.append(val)
+
+    def pop(self):
+        val = self.__stackList[-1]
+        del self.__stackList[-1]
+        return val
+
+
+class AddingStack(Stack):
+    def __init__(self):
+        Stack.__init__(self)
+        self.__sum = 0
+
+
+# Enter code here.
+
+</code>
+
+
+
+<h1>The object approach: a stack from scratch (continued)</h1>
+
+<p>Secondly, let's add two methods. But let us ask you: is it really adding? We have these methods in the superclass already. Can we do something like that?</p>
+
+<p>Yes, we can. It means that we're going to <strong>change the functionality of the methods, not their names</strong>. We can say more precisely that the interface (the way in which the objects are handled) of the class remains the same when changing the implementation at the same time.</p>
+
+<p>Let's start with the implementation of the <codel>push</codel> function. This is what we expect from it:</p>
+
+<ul>
+<li>to add the value to the <codel>__sum</codel> variable;</li>
+<li>to push the value onto the stack.</li>
+</ul>
+ 
+
+<p>Note: the second activity has already been implemented inside the superclass – so we can use that. Furthermore, we have to use it, as there's no other way to access the <codel>__stackList</codel> variable.</p>
+
+<p>This is what the <codel>push</codel> method looks like in the subclass:</p>
+
+<codep class="syntax-color">def push(self, val):
+    self.__sum += val
+    Stack.push(self, val)
+</codep>
+
+<br>
+
+
+<p>Note the way we've invoked the previous implementation of the <codel>push</codel> method (the one available in the superclass):</p>
+
+<ul>
+<li>we have to specify the superclass's name; this is necessary in order to clearly indicate the class containing the method, to avoid confusing it with any other function of the same name;</li>
+<li>we have to specify the target object and to pass it as the first argument (it's not implicitly added to the invocation in this context.)</li>
+</ul>
+
+<p>We say that the <codel>push</codel> method has been overridden – the same name as in the superclass now represents a different functionality.</p>
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

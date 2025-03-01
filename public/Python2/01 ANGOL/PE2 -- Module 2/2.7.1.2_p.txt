@@ -1,0 +1,68 @@
+<problem chapter='2' section='7' slide='1' problem='2' title='The anatomy of exceptions'>
+
+<!--
+Update history:
+2020-09-21 Grzegorz (review, PEP-8 compliance check, update)
+2020-11-02 Konrad (mark style changed to mark class)
+-->
+
+<code>try:
+    y = 1 / 0
+except ZeroDivisionError:
+    print("Ooopsss...")
+
+print("THE END.")
+
+</code>
+
+
+
+<h1>Exceptions: continued</h1>
+
+<p>Look at the code in the editor. It is a simple example to start with. Run it.</p>
+
+<p>The output we expect to see looks like this:</p>
+
+<codep>Oooppsss...
+THE END.</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+
+
+<p>Now look at the code below:</p>
+
+<codep class="syntax-color copy line-numbers">try:
+    y = 1 / 0
+<mark class="mark-background">except ArithmeticError:</mark>
+    print("Oooppsss...")
+
+print("THE END.")
+</codep>
+
+<br>
+
+<p>Something has changed in it - we've replaced <codel>ZeroDivisionError</codel> with <codel>ArithmeticError</codel>.</p>
+
+<p>You already know that <codel>ArithmeticError</codel> is a general class including (among others) the <codel>ZeroDivisionError</codel> exception.</p>
+
+<p>Thus, the code's output remains unchanged. Test it.</p>
+
+<p>This also means that replacing the exception's name with either <codel>Exception</codel> or <codel>BaseException</codel> won't change the program's behavior.</p>
+
+ 
+<br>
+
+<p>Let's summarize:</p>
+
+<ul>
+<li>each exception raised <strong>falls into the first matching branch</strong>;</li>
+<li>the matching branch doesn't have to specify the same exception exactly – it's enough that the exception is <strong>more general</strong> (more abstract) than the raised one.</li>
+</ul>
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

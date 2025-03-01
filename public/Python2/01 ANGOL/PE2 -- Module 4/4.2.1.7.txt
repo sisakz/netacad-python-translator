@@ -1,0 +1,105 @@
+<problem chapter='4' section='2' slide='1' problem='7' title='Processing files'>
+
+<!--
+Update history:
+2020-10-07 Grzegorz (review, PEP-8 compliance check)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h2>File handles: continued</h2>
+
+<p>Since portability issues were (and still are) very serious, a decision was made to definitely resolve the issue in a way that doesn't engage the developer's attention.</p>
+
+<br>
+
+<center><img src="/uploads/media/default/0001/01/a505b9d471830698e22faf258b8f5754bdf48534.png" alt="Text vs. binary streams concept" width="50%"></center>
+<br><br>
+
+<p>It was done at the level of classes, which are responsible for reading and writing characters to and from the stream. It works in the following way:</p>
+
+<ul>
+<li>when the stream is open and it's advised that the data in the associated file will be processed as text (or there is no such advisory at all), it is <strong>switched into text mode</strong>;</li>
+<br>
+
+<li>during reading/writing of lines from/to the associated file, nothing special occurs in the Unix environment, but when the same operations are performed in the Windows environment, a process called a <strong>translation of newline characters</strong> occurs: when you read a line from the file, every pair of <codel>\r\n</codel> characters is replaced with a single <codel>\n</codel> character, and vice versa; during write operations, every <codel>\n</codel> character is replaced with a pair of <codel>\r\n</codel> characters;</li>
+<br>
+
+<li>the mechanism is completely <strong>transparent</strong> to the program, which can be written as if it was intended for processing Unix/Linux text files only; the source code run in a Windows environment will work properly, too;</li>
+<br>
+
+<li>when the stream is open and it's advised to do so, its contents are taken as-is, <strong>without any conversion</strong> – no bytes are added or omitted.</li>
+</ul>
+
+
+
+<br><br>
+
+
+<br> 
+<br>
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+
+<h2>Opening the streams</h2>
+
+
+ 
+<p>The <strong>opening of the stream</strong> is performed by a function which can be invoked in the following way:</p>
+
+<codep class="syntax-color copy">stream = open(file, mode = 'r', encoding = None)
+</codep>
+
+<br>
+ 
+<p>Let's analyze it:</p>
+
+<ul>
+<li>the name of the function (<codel>open</codel>) speaks for itself; if the opening is successful, the function returns a stream object; otherwise, an exception is raised (e.g., <font face="Courier New">FileNotFoundError</font> <strong>if the file you're going to read doesn't exist</strong>);</li>
+<br>
+
+<li>the first parameter of the function (<codel>file</codel>) specifies the name of the file to be associated with the stream;</li>
+<br>
+
+<li>the second parameter (<codel>mode</codel>) specifies the open mode used for the stream; it's a string filled with a sequence of characters, and each of them has its own special meaning (more details soon);</li>
+<br>
+
+<li>the third parameter (<codel>encoding</codel>) specifies the encoding type (e.g., UTF-8 when working with text files)</li>
+<br>
+
+<li>the opening must be the very first operation performed on the stream.</li>
+
+</ul>
+
+<p>Note: the mode and encoding arguments may be omitted – their default values are assumed then. The default opening mode is read in text mode, while the default encoding depends on the platform used.</p>
+
+<p>Let us now present you with the most important and useful open modes. Ready?</p>
+
+
+<br>
+<br>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

@@ -1,0 +1,169 @@
+<problem chapter='1' section='3' slide='1' problem='3' title='Modules and Packages'>
+
+<!--
+Update history:
+2020-09-08 Grzegorz (review, PEP-8 compliance check, update)
+2021-06-29 Grzegorz (corrections)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h1>Your first module: step 3</h1>
+
+<p>Now we've put a little something into the module file:</p>
+
+<img src="/uploads/media/default/0001/01/ecacec1f22317cb2841b45724660f8b343fa8cca.png" width="45%" alt="Updating the module.py file">
+
+<br><br>
+
+<codep class="syntax-color line-numbers">print("I like to be a module.")
+</codep>
+<p style="text-align: right;">module.py</p>
+
+
+
+<p>Can you notice any differences between a module and an ordinary script? There are none so far.</p>
+
+<p>It's possible to run this file like any other script. Try it for yourself.</p>
+
+<p>What happens? You should see the following line inside your console:</p>
+
+<codep>I like to be a module.</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+
+
+<h2>Your first module: step 4</h2>
+
+
+<p>Let's go back to the <font face="Courier New">main.py</font> file:</p>
+
+<img src="/uploads/media/default/0001/01/fa6a636418f12f30c33a419be1f2482ba3c07793.png" width="45%" alt="The main.py file containing the import module instruction">
+
+<br><br>
+
+
+<codep class="syntax-color line-numbers">import module
+</codep>
+<p style="text-align: right;">main.py</p>
+
+
+<p>Run it. What do you see? Hopefully, you see something like this:</p>
+
+<codep>I like to be a module.</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+ 
+
+<p>What does it actually mean?</p>
+
+<p>When a module is imported, its contents are <strong>implicitly executed by Python</strong>. It gives the module the chance to initialize some of its internal aspects (e.g., it may assign some variables with useful values).</p>
+
+<p>Note: the <strong>initialization takes place only once</strong>, when the first import occurs, so the assignments done by the module aren't repeated unnecessarily.</p>
+
+<p>Imagine the following context:
+
+<ul>
+<li>there is a module named <font face="Courier New">mod1</font>;</li>
+<li>there is a module named <font face="Courier New">mod2</font> which contains the <codel>import mod1</codel> instruction;</li>
+<li>there is a main file containing the <codel>import mod1</codel> and <codel>import mod2</codel> instructions.</li>
+</ul>
+ 
+
+<p>At first glance, you may think that <font face="Courier New">mod1</font> will be imported twice - fortunately, <strong>only the first import occurs</strong>. Python remembers the imported modules and silently omits all subsequent imports.</p>
+
+
+<br><br>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<h2>Your first module: step 5</h2>
+
+<p>But Python does much more than just imports the module. It also creates a variable called <codel>__name__</codel>.</p>
+
+<p>Moreover, each source file uses its own, separate version of the variable – it isn't shared between modules.</p>
+
+<p>We'll show you how to use it. Modify the module a bit:</p>
+
+<img src="/uploads/media/default/0001/01/b07fcde32efd540ff0877284ed2018fd31e2ddc1.png" width="45%" alt="Updating the module.py file">
+
+<br><br>
+
+
+<codep class="syntax-color copy line-numbers">print("I like to be a module.")
+print(__name__)
+</codep>
+<p style="text-align: right;">module.py</p>
+
+
+
+<p>Now run the <font face="Courier New">module.py</font> file. You should see the following lines:</p>
+
+<codep>I like to be a module
+__main__</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+ 
+
+<p>Now run the <font face="Courier New">main.py</font> file. And? Do you see the same as us?</p>
+
+<codep>I like to be a module
+module</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+ 
+
+<p>We can say that:</p>
+
+<ul>
+<li>when you run a file directly, its <codel>__name__</codel> variable is set to <codel>__main__</codel>;</li>
+<li>when a file is imported as a module, its <codel>__name__</codel> variable is set to the file's name (excluding <font face="Courier New">.py</font>)</li>
+</ul>
+
+<br>
+
+<h2>Your first module: step 6</h2>
+
+<p>This is how you can make use of the <codel>__main__</codel> variable in order to detect the context in which your code has been activated:</p>
+
+<img src="/uploads/media/default/0001/01/069d9878c504a8ed9b216a41ec30ff3af582a305.png" width="45%" alt="Updating the module.py file">
+
+<br><br>
+
+<codep class="syntax-color copy line-numbers">if __name__ == "__main__":
+    print("I prefer to be a module.")
+else:
+    print("I like to be a module.")
+</codep>
+<p style="text-align: right;">module.py</p>
+
+
+<p>There's a cleverer way to utilize the variable, however. If you write a module filled with a number of complex functions, you can use it to place a series of tests to check if the functions work properly.</p>
+
+<p>Each time you modify any of these functions, you can simply run the module to make sure that your amendments didn't spoil the code. These tests will be omitted when the code is imported as a module.</p>
+
+<br>
+<br>
+
+</div>
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

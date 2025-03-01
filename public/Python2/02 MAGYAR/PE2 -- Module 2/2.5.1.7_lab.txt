@@ -1,0 +1,93 @@
+<problem chapter='2' section='5' slide='1' problem='7' title="LAB: Palindromok">
+
+<!--
+Update history:
+2020-09-23 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<span class="label" style="background-color:rgb(205, 168, 105);"><strong>LABORGYAKORLAT</strong></span>
+
+<br><br>
+
+
+<h2>Becsült idő</h2>
+<p>15-30 perc</p>
+
+<h2>Nehézségi szint</h2>
+<p>Könnyű</p>
+
+<h2>Célok</h2>
+<ul>
+	<li>a karakterlánc-kezelési készségek fejlesztése;</li>
+	<li>a tanulót a nem nyilvánvaló megoldások keresésére ösztönözni.</li>
+</ul>
+
+
+<h2>Forgatókönyv</h2>
+<p>Tudod, mi az a palindrom?</p>
+
+<p>Ez egy olyan szó, amely előre és hátrafelé olvasva ugyanúgy néz ki. Például a „kajak” palindróm, míg a „lojális” nem az.</p>
+
+<p>A feladatod egy olyan program írása, amely:</p>
+<ul>
+	<li>a felhasználótól bekér valamilyen szöveget;</li>
+	<li>ellenőrzi, hogy a beírt szöveg palindrom-e, és kiírja az eredményt.</li>
+</ul>
+
+
+<p>Megjegyzés:</p>
+<ul>
+	<li>feltételezzük, hogy egy üres karakterlánc nem palindrom;</li>
+	<li>a kis- és nagybetűket egyenlőnek kell tekinteni;</li>
+	<li>a szóközöket az ellenőrzés során nem vesszük figyelembe – kezeljük őket nem létezőként;</li>
+	<li>több helyes megoldás is létezik – próbálj meg egynél többet találni.</li>
+</ul>
+
+<p>Teszteld a kódot az általunk megadott adatokkal.</p>
+
+
+<h2>Tesztadatok</h2>
+
+
+<p>Minta bemenet:</p>
+<codep>Ten animals I slam in a net</codep>
+<br>
+
+<p>Minta kimenet:</p>
+<codep>It's a palindrome</codep>
+<br>
+
+<br>
+
+<p>Minta bemenet:</p>
+<codep>Eleven animals I slam in a net</codep>
+<br>
+
+<p>Minta kimenet:</p>
+<codep>It's not a palindrome</codep>
+<br>
+
+
+
+<br>
+
+<studyMode>false</studyMode>
+<labMode>true</labMode>
+
+
+
+<sampleSolution>
+text = input("Enter text: ")
+
+# Remove all spaces...
+text = text.replace(' ','')
+
+# ... and check if the word is equal to reversed itself
+if len(text) > 1 and text.upper() == text[::-1].upper():
+	print("It's a palindrome")
+else:
+	print("It's not a palindrome")
+	
+</sampleSolution>
+
+</problem>

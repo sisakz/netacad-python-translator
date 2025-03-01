@@ -1,0 +1,66 @@
+<problem chapter='2' section='2' slide='1' problem='3' title='Karakterláncok'>
+
+<!--
+Update history:
+2020-09-22 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>
+str1 = 'a'
+str2 = 'b'
+
+print(str1 + str2)
+print(str2 + str1)
+print(5 * 'a')
+print('b' * 4)
+
+</code>
+
+
+
+<h1>Műveletek karakterláncokon</h1>
+
+<p>Más adattípusokhoz hasonlóan a karakterláncoknak is megvan a saját művelet-készletük, bár ez a készlet a számokéhoz képest meglehetősen korlátozott.</p>
+
+<p>Általánosságban a karakterláncokat lehet:</p>
+
+<ul>
+    <li><strong>konkatenálni </strong> (összekapcsolni)</li>
+<li><strong>replikálni</strong>.</li>
+</ul>
+
+ 
+
+<p>Az első műveletet a <codel>+</codel> operátor végzi (megjegyzés: ez nem összeadás), míg a másodikat a <codel>*</codel> operátor (ismét megjegyzés: ez nem szorzás).</p>
+
+<p>Azt a képességet, hogy ugyanazt az operátort teljesen különböző típusú adatokkal (például számok vs. karakterláncok) használjuk, <strong>túlterhelésnek</strong> nevezzük (mivel egy ilyen operátor különböző feladatokkal van túlterhelve).</p>
+
+<p>Elemezd a példát:</p>
+
+<ul>
+    <li>A <codel>+</codel> operátor két vagy több karakterlánccal használva egy új karakterláncot hoz létre, amely tartalmazza az argumentumok összes karakterét (megjegyzés: a sorrend számít – ez a túlterhelt <codel>+</codel>, ellentétben a numerikus változatával, <strong>nem kommutatív</strong>)</li>
+    <li>a <codel>*</codel>operátornak egy karakterláncra és egy számra van szüksége argumentumként; ebben az esetben a sorrend nem számít – a számot a karakterlánc elé helyezhetjük, vagy fordítva, az eredmény ugyanaz lesz – egy új karakterlánc, amelyet az argumentum karakterláncának n-szeres ismétlése hoz létre.</li>
+</ul>
+
+ 
+
+<p>A kódrészlet a következő kimenetet eredményezi:</p>
+
+<codep>ab
+ba
+aaaaa
+bbbb</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+<br> 
+
+<p>Megjegyzés: a fenti operátorok rövidített változatai a karakterláncokra is alkalmazhatók (<codel>+=</codel> és <codel>*=</codel>).</p>
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

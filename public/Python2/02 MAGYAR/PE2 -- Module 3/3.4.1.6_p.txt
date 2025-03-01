@@ -1,0 +1,57 @@
+<problem chapter='3' section='4' slide='1' problem='6' title='OOP: Metódusok'>
+
+<!--
+Update history:
+2020-09-30 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>
+class Classy:
+    pass
+
+
+print(Classy.__name__)
+obj = Classy()
+print(type(obj).__name__)
+
+</code>
+
+
+
+<h1>Az osztályok és objektumok belső élete (folytatás)</h1>
+
+<p>A <codel>__dict__</codel> egy szótár. Egy másik említésre méltó beépített tulajdonság a <codel>__name__</codel>, amely egy karakterlánc (string).</p>
+
+<p>A tulajdonság az <strong>osztály nevét</strong> tartalmazza. Semmi különleges, csak egy karakterlánc.</p>
+
+<p>Megjegyzés: a <codel>__name__</codel> attribútum hiányzik az objektumból – <strong>csak az osztályokon belül létezik</strong>.</p>
+
+<br>
+
+<p>Ha <strong>egy adott objektum osztályát </strong> szeretnénk <strong>megtalálni</strong>, használhatjuk a <codel>type()</codel> nevű függvényt, amely (többek között) képes megtalálni azt az osztályt, amelyből bármely objektumot példányosítottak.</p>
+
+<p>Nézd meg a kódot a szerkesztőben, futtasd le, és győződj meg róla saját magad is!</p>
+
+<p>A kód kimenete:</p>
+
+<codep>Classy
+Classy</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+ 
+
+<p>Vedd észre, hogy egy ilyen utasítás:</p>
+
+<codep class="syntax-color">print(obj.__name__)
+</codep>
+<br>
+
+<p>hibát fog okozni.</p>
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

@@ -1,0 +1,67 @@
+<problem chapter='4' section='3' slide='1' problem='12' title='Working with real files'>
+
+<!--
+Update history:
+2020-10-07 Grzegorz (review, PEP-8 compliance check)
+2020-10-29 Grzegorz (code fix: strrerror instead of strerr)
+2021-07-07 Grzegorz (code corrections - important!)
+-->
+
+<code>from os import strerror
+
+data = bytearray(10)
+
+for i in range(len(data)):
+    data[i] = 10 + i
+
+try:
+    binary_file = open('file.bin', 'wb')
+    binary_file.write(data)
+    binary_file.close()
+except IOError as e:
+    print("I/O error occurred:", strerror(e.errno))
+
+# Your code that reads bytes from the stream should go here.
+
+</code>
+
+
+
+<h1>How to read bytes from a stream</h1>
+
+
+<p>An alternative way of reading the contents of a binary file is offered by the method named <codel>read()</codel>.</p>
+
+<p>Invoked without arguments, it tries to <strong>read all the contents of the file into the memory</strong>, making them a part of a newly created object of the bytes class.</p>
+
+<p>This class has some similarities to <codel>bytearray</codel>, with the exception of one significant difference – it's <strong>immutable</strong>.</p>
+
+<p>Fortunately, there are no obstacles to creating a byte array by taking its initial value directly from the bytes object, just like here:</p>
+
+<codep class="syntax-color copy line-numbers">from os import strerror
+
+try:
+    binary_file = open('file.bin', 'rb')
+    data = bytearray(binary_file.read())
+    binary_file.close()
+
+    for b in data:
+        print(hex(b), end=' ')
+
+except IOError as e:
+    print("I/O error occurred:", strerror(e.errno))
+</codep>
+<br>
+
+ 
+
+<p>Be careful – <strong>don't use this kind of <i>read</i> if you're not sure whether the file's contents will fit the available memory</strong>.</p>
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

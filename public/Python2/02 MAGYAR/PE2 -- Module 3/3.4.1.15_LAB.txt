@@ -1,0 +1,137 @@
+<problem chapter='3' section='4' slide='1' problem='15' title='LAB: Háromszög'>
+
+<!--
+Update history:
+2020-01-01 Syslaw (file created)
+2020-11-16 Grzegorz (review, PEP-8 compliance check)
+-->
+
+<code>import math
+
+
+class Point:
+    #
+    # The code copied from the previous lab.
+    #
+
+
+class Triangle:
+    def __init__(self, vertice1, vertice2, vertice3):
+        #
+        # Write code here
+        #
+
+    def perimeter(self):
+        #
+        # Write code here
+        #
+
+
+triangle = Triangle(Point(0, 0), Point(1, 0), Point(0, 1))
+print(triangle.perimeter())
+
+</code>
+
+<span class="label" style="background-color:rgb(205, 168, 105);"><b>LABORGYAKORLAT</b></span>
+
+<br><br>
+
+
+<h2>Becsült idő</h2>
+<p>30-60 perc</p>
+
+<h2>Nehézségi szint</h2>
+<p>Közepes</p>
+
+<h2>Célok</h2>
+<ul>
+    <li>javítani a tanuló készségeit az osztályok létrehozásában;</li>
+    <li>kompozíció használata.</li>
+</ul>
+
+<h2>Forgatókönyv</h2>
+<p>Most a <codel>Point</codel> osztályt (lásd a 3.4.1.14. gyakorlatot) egy másik osztályba ágyazzuk be. Három pontot helyezünk egy osztályba, amivel egy háromszöget definiálunk. Hogyan tehetjük ezt meg?</p>
+
+<p>Az új osztály neve <codel>Triangle</codel>, és itt vannak az elvárások:</p>
+<ul>
+    <li>a konstruktor három argumentumot várjon - ezek mindegyike a <codel>Point</codel> osztály objektuma;</li>
+    <li>a pontok az objektumon belül egy privát listaként legyenek tárolva;</li>
+    <li>az osztály biztosítson egy paraméter nélküli metódust <codel>perimeter()</codel> néven, amely kiszámítja a három pont által leírt háromszög kerületét; a kerület az összes oldal hosszának összege (ezt csak a rend kedvéért említjük meg, biztosak vagyunk benne, hogy ezt te magad is tökéletesen tudod).</li>
+</ul>
+
+<p>Egészítsd ki az általunk megadott sablont a szerkesztőben! Futtasd le a kódot, és ellenőrizd, hogy a kapott kerület megegyezik-e a miénkkel!</p>
+
+<p>Az alábbiakban bemásolhatod az előző feladatban használt <codel>Point</codel> osztály kódját:</p>
+
+<script>
+function solution (id) {
+    var element = document.getElementById(id);
+    
+if (element.style.display === "none") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
+    }
+}
+</script>
+
+
+<button class="button tiny" onclick="solution('sol')">Ellenőrzés</button>
+
+<p id="sol" style="display: none;"><codep class="copy">class Point:
+    def __init__(self, x=0.0, y=0.0):
+        self.__x = x
+        self.__y = y
+
+</codep></p>
+
+
+
+<br><br>
+
+<h2>Várható kimenet</h2>
+
+<p><codep>3.414213562373095</codep></p>
+
+
+<sampleSolution>import math
+
+
+class Point:
+    def __init__(self, x=0.0, y=0.0):
+        self.__x = x
+        self.__y = y
+
+    def getx(self):
+        return self.__x
+
+    def gety(self):
+        return self.__y
+
+    def distance_from_xy(self, x, y):
+        return math.hypot(abs(self.__x - x), abs(self.__y - y))
+
+    def distance_from_point(self, point):
+        return self.distance_from_xy(point.getx(), point.gety())
+
+
+class Triangle:
+    def __init__(self, vertice1, vertice2, vertice3):
+        self.__vertices = [vertice1, vertice2, vertice3]
+
+    def perimeter(self):
+        per = 0
+        for i in range(3):
+            per += self.__vertices[i].distance_from_point(self.__vertices[(i + 1) % 3])
+        return per
+
+
+triangle = Triangle(Point(0, 0), Point(1, 0), Point(0, 1))
+print(triangle.perimeter())
+
+</sampleSolution>
+
+<br><br>
+
+<labMode>true</labMode>
+</problem>

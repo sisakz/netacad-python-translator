@@ -1,0 +1,109 @@
+<problem chapter='2' section='5' slide='1' problem='9' title="LAB: The Digit of Life">
+
+<!--
+Update history:
+2020-09-23 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+
+<span class="label" style="background-color:rgb(205, 168, 105);"><strong>LAB</strong></span>
+
+<br><br>
+
+<h2>Estimated time</h2>
+<p>15-30 minutes</p>
+
+
+<h2>Level of difficulty</h2>
+<p>Easy</p>
+
+
+<h2>Objectives</h2>
+<ul>
+<li>improving the student's skills in operating with strings;</li>
+<li>converting integers into strings, and vice versa.</li>
+</ul>
+
+
+
+<h2>Scenario</h2>
+<p>Some say that the <i>Digit of Life</i> is a digit evaluated using somebody's birthday. It's simple – you just need to sum all the digits of the date. If the result contains more than one digit, you have to repeat the addition until you get exactly one digit. For example:</p>
+
+<ul>
+<li>1 January 2017 = 2017 01 01</li>
+<li>2 + 0 + 1 + 7 + 0 + 1 + 0 + 1 = 12</li>
+<li>1 + 2 = 3</li>
+</ul>
+
+
+
+<p><i>3</i> is the digit we searched for and found.</p>
+
+<p>Your task is to write a program which:</p>
+
+<ul>
+<li>asks the user her/his birthday (in the format YYYYMMDD, or YYYYDDMM, or MMDDYYYY – actually, the order of the digits doesn't matter)</li>
+<li>outputs the <i>Digit of Life</i> for the date.</li>
+</ul>
+
+
+<p>Test your code using the data we've provided.</p>
+
+<h2>Test data</h2>
+
+<p>Sample input:</p>
+<codep>19991229</codep>
+<br>
+
+<p>Sample output:</p>
+<codep>6</codep>
+<br>
+
+
+<br>
+
+<p>Sample input:</p>
+<codep>20000101</codep>
+<br>
+
+<p>Sample output:</p>
+<codep>4</codep>
+<br>
+
+
+<br>
+
+<studyMode>false</studyMode>
+<labMode>true</labMode>
+
+<hint>
+date = input("Enter your birthday date (in the following format: YYYYMMDD or YYYYDDMM, 8 digits): ")
+
+# Write the if-else branch here.
+
+    # While there is more than one digit in the date...
+
+        # ... calculate the sum of all the digits...
+
+        # ... and store it inside the string.
+
+    print("Your Digit of Life is: " + date)
+
+</hint>
+
+<sampleSolution>
+date = input("Enter your birthday date (in the following format: YYYYMMDD or YYYYDDMM, 8 digits): ")
+if len(date) != 8 or not date.isdigit():
+    print("Invalid date format.")
+else:
+    while len(date) > 1:
+        the_sum = 0
+        for dig in date:
+            the_sum += int(dig)
+        print(date)
+        date = str(the_sum)
+    print("Your Digit of Life is: " + date)
+	
+</sampleSolution>
+
+</problem>

@@ -1,0 +1,50 @@
+<problem chapter='2' section='2' slide='1' problem='5' title='The nature of strings in Python'>
+
+<!--
+Update history:
+2020-09-22 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code># Demonstrating the chr() function.
+
+print(chr(97))
+print(chr(945))
+
+</code>
+
+
+
+<h1>Operations on strings: <font face="Courier New">chr()</font></h1>
+
+<p>If you know the code point (number) and want to get the corresponding character, you can use a function named <codel>chr()</codel>.</p>
+
+<p>The function <strong>takes a code point and returns its character</strong>.</p>
+
+<p>Invoking it with an invalid argument (e.g., a negative or invalid code point) causes <font face="Courier New">ValueError</font> or <font face="Courier New">TypeError</font> exceptions.</p>
+
+ 
+<p>Run the code in the editor. The example snippet outputs:</p>
+
+<codep>a
+&alpha;</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+<p>Note:</p>
+
+<ul>
+<li><codel>chr(ord(x)) == x</codel></li>
+<li><codel>ord(chr(x)) == x</codel></li>
+</ul>
+
+
+
+<p>Again, run your own experiments.</p>
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

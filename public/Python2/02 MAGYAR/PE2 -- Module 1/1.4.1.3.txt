@@ -1,0 +1,66 @@
+<problem chapter='1' section='4' slide='1' problem='3' title='PIP'>
+
+<!--
+Update history:
+2020-09-23 Grzegorz (created)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h1>A PyPI repo: a sajtbolt</h1>
+
+<p>A PyPI repót néha <strong>Cheese Shop</strong> néven emlegetik. Tényleg.</p>
+ 
+<p>Nem hangzik ez egy kicsit furcsán? Ne aggódj, ez teljesen ártalmatlan. </p>
+
+<p>A repóra boltként hivatkozunk, mert ugyanolyan okokból jársz oda, mint más boltokba: hogy kielégítsd az igényeidet. Ha sajtot akarsz, elmész a sajtboltba. Ha egy szoftverre vágysz, akkor a szoftverboltba mész. Szerencsére az analógia itt véget ér - nincs szükséged pénzre ahhoz, hogy kivegyél egy szoftvert a repóboltból.</p>
+
+<p>A PyPI teljesen ingyenes; csak kiválasztasz egy kódot, és használhatod - nem találkozol sem pénztárossal, sem biztonsági őrrel. Persze ez nem mentesít az udvariasság és az őszinteség alól. Minden licencfeltételt be kell tartanod, úgyhogy ne felejtsd el elolvasni ezeket.</p>
+
+<p>"Oké", mondod, "a bolt most már világos, de mi köze a sajtnak a Pythonhoz?"</p>
+
+<p>A The Cheese Shop az egyik leghíresebb Monty Python-jelenet. Egy angol férfi szürrealista kalandját mutatja be, aki sajtot próbál vásárolni. Sajnos a boltban, amelyet felkeres (szerénytelenül Ye National Cheese Emporiumnak nevezik) egyáltalán nincs sajt.</p>
+
+<p>Természetesen ironikusnak szánták. Mint már tudod, a PyPI rengeteg szoftvert tart raktáron, és a nap 24 órájában elérhető. Teljes joggal nevezi magát <i>Ye International Python Software Emporium</i>nak.</p>
+
+
+
+
+
+<br>
+<br> 
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br><br>
+
+
+
+<center><img src="/uploads/media/default/0001/02/fca6aedc353c773b3fb78bdf34c896a78e9c8e62.png" width="70%" alt="The Cheese Shop – different kinds of cheese"></center>
+
+<br>
+<br>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

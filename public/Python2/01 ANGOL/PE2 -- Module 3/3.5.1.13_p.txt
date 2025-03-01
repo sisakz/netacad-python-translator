@@ -1,0 +1,62 @@
+<problem chapter='3' section='5' slide='1' problem='13' title='OOP Fundamentals: Inheritance'>
+
+<!--
+Update history:
+2020-10-01 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>
+class Level1:
+    var = 100
+    def fun(self):
+        return 101
+
+
+class Level2(Level1):
+    var = 200
+    def fun(self):
+        return 201
+
+
+class Level3(Level2):
+    pass
+
+
+obj = Level3()
+
+print(obj.var, obj.fun())
+
+</code>
+
+
+
+<h1>How Python finds properties and methods: continued</h1>
+
+
+<p>Let's analyze the example in the editor.</p>
+
+
+<p>Both, <codel>Level1</codel> and <codel>Level2</codel> classes define a method named <codel>fun()</codel> and a property named <codel>var</codel>. Does this mean that the <codel>Level3</codel> class object will be able to access two copies of each entity? Not at all.</p>
+
+<p><strong>The entity defined later (in the inheritance sense) overrides the same entity defined earlier</strong>. This is why the code produces the following output:</p>
+
+<codep>200 201</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+<p>As you can see, the <codel>var</codel> class variable and <codel>fun()</codel> method from the <codel>Level2</codel> class override the entities of the same names derived from the <codel>Level1</codel> class.</p>
+
+<p>This feature can be intentionally used to modify default (or previously defined) class behaviors when any of its classes needs to act in a different way to its ancestor.</p>
+
+<p>We can also say that <strong>Python looks for an entity from bottom to top</strong>, and is fully satisfied with the first entity of the desired name.</p>
+
+<p>How does it work when a class has two ancestors offering the same entity, and they lie on the same level? In other words, what should you expect when a class emerges using multiple inheritance? Let's look at this.</p>
+
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

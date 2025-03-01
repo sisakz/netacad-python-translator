@@ -1,0 +1,42 @@
+<problem chapter='2' section='2' slide='1' problem='4' title='The nature of strings in Python'>
+
+<!--
+Update history:
+2020-09-22 Grzegorz (review, PEP-8 compliance check, update, variable name change)
+-->
+
+<code># Demonstrating the ord() function.
+
+char_1 = 'a'
+char_2 = ' '  # space
+
+print(ord(char_1))
+print(ord(char_2))
+
+</code>
+
+
+
+<h1>Operations on strings: <font face="Courier New">ord()</font></h1>
+
+<p>If you want <strong>to know a specific character's ASCII/UNICODE code point value</strong>, you can use a function named <codel>ord()</codel> (as in <i>ordinal</i>).</p>
+
+<p>The function needs a <strong>one-character string as its argument</strong> – breaching this requirement causes a <font face="Courier New">TypeError</font> exception, and returns a number representing the argument's code point.</p>
+
+ 
+<p>Look at the code in the editor, and run it. The snippet outputs:</p>
+
+<codep>97
+32</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+<p>Now assign different values to <codel>char_1</codel> and <codel>char_2</codel>, e.g., <codel>&alpha;</codel> (Greek alpha), and <codel>&#281;</codel> (a letter in the Polish alphabet); then run the code and see what result it outputs. Carry out your own experiments.</p>
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

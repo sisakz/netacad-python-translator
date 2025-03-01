@@ -1,0 +1,42 @@
+<problem chapter='3' section='5' slide='1' problem='2' title='OOP Fundamentals: Inheritance'>
+
+<!--
+Update history:
+2020-10-01 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>class Star:
+    def __init__(self, name, galaxy):
+        self.name = name
+        self.galaxy = galaxy
+
+    def __str__(self):
+        return self.name + ' in ' + self.galaxy
+
+
+sun = Star("Sun", "Milky Way")
+print(sun)
+
+</code>
+
+
+
+<h1>Inheritance - why and how?</h1>
+
+<p>When Python needs any class/object to be presented as a string (putting an object as an argument in the <codel>print()</codel> function invocation fits this condition) it tries to invoke a method named <codel>__str__()</codel> from the object and to use the string it returns.</p>
+
+<p>The default <codel>__str__()</codel> method returns the previous string – ugly and not very informative. You can change it just by <strong>defining your own method of the name</strong>.</p>
+
+<p>We've just done it – look at the code in the editor.</p>
+
+<p>This new <codel>__str__()</codel> method makes a string consisting of the star's and galaxy's names – nothing special, but the print results look better now, doesn't it?</p>
+
+<p>Can you guess the output? Run the code to check if you were right.</p>
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

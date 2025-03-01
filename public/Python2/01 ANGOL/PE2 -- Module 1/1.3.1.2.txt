@@ -1,0 +1,103 @@
+<problem chapter='1' section='3' slide='1' problem='2' title='Modules and Packages'>
+
+<!--
+Update history:
+2020-09-08 Grzegorz (review, PEP-8 compliance check, update)
+2021-06-29 Grzegorz (corrections)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h1>Your first module: step 1</h1>
+
+<p>In this section, you're going to be working locally on your machine. Let's start from scratch. Create an empty file, just like this:</p>
+
+<img src="/uploads/media/default/0001/01/c77ae2fe3a6ffb6170405ccaaec77eca3f3695c7.png" width="40%" alt="Creating a module.py file">
+
+<br><br>
+
+<codep class="syntax-color line-numbers">
+</codep>
+<p style="text-align: right;">module.py</p>
+
+
+<p>You will need two files to repeat these experiments. The first of them will be the <i>module</i> itself. It's empty now. Don't worry, you're going to fill it with code soon.</p>
+
+<p>We've named the file <font face="Courier New">module.py</font>. Not very creative, but simple and clear.</p>
+
+<br>
+
+<h2>Your first module: step 2</h2>
+
+<p>The second file contains the code which takes use of the new module. Its name is <font face="Courier New">main.py</font>. Its contents are very brief so far:</p>
+
+
+<img src="/uploads/media/default/0001/01/fa6a636418f12f30c33a419be1f2482ba3c07793.png" width="40%" alt="Creating a main.py file containing the import module instruction">
+
+<br><br>
+
+<codep class="syntax-color line-numbers">import module
+</codep>
+<p style="text-align: right;">main.py</p>
+
+
+<p>Note: <strong>both files have to be located in the same folder</strong>. We strongly encourage you to create an empty, new folder for both files. Some things will be easier then.
+
+
+
+<br>
+
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+<p>Launch IDLE (or any other IDE you prefer) and run the <font face="Courier New">main.py</font> file. What do you see?</p>
+
+<p>You should see nothing. This means that Python has successfully imported the contents of the <font face="Courier New">module.py</font> file.</p>
+
+<p>It doesn't matter that the module is empty for now. The very first step has been done, but before you take the next step, we want you to take a look into the folder in which both files exist.</p>
+
+<p>Do you notice something interesting?</p>
+
+<p>A new subfolder has appeared – can you see it? Its name is <font face="Courier New">__pycache__</font>. Take a look inside. What do you see?</p>
+
+<p>There is a file named (more or less) <font face="Courier New">module.cpython-xy.pyc</font> where <font face="Courier New">x</font> and <font face="Courier New">y</font> are digits derived from your version of Python (e.g., they will be <font face="Courier New">3</font> and <font face="Courier New">8</font> if you use Python 3.8).</p>
+
+ 
+<p>The name of the file is the same as your module's name (module here). The part after the first dot says which Python implementation has created the file (<font face="Courier New">CPython</font> here) and its version number. The last part (<font face="Courier New">pyc</font>) comes from the words <i>Python</i> and <i>compiled</i>.</p>
+
+<p>You can look inside the file – the contents are completely unreadable to humans. It has to be like that, as the file is intended for Python's use only.</p>
+
+ 
+<p>When Python imports a module for the first time, it <strong>translates its contents into a somewhat compiled shape</strong>.</p>
+
+<p>The file doesn't contain machine code – it's internal Python <strong>semi-compiled code</strong>, ready to be executed by Python's interpreter. As such, the file doesn't require lots of the checks needed for a pure source file, the execution starts faster, and it runs faster, too.</p>
+
+<p>Thanks to that, every subsequent import will go quicker than interpreting the source text from scratch.</p>
+
+<p>Python is able to check if the module's source file has been modified (in this case, the <font face="Courier New">pyc</font> file will be rebuilt) or not (in which case the <font face="Courier New">pyc</font> file may be run at once). As this process is fully automatic and transparent, you don't have to keep it in mind.</p>
+
+<br>
+
+</div>
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

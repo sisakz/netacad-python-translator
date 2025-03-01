@@ -1,0 +1,59 @@
+<problem chapter='4' section='4' slide='1' problem='3' title='The os module'>
+
+<!--
+Update history:
+2020-03-30 Sebastian (first version)
+2020-10-08 Grzegorz (review, PEP-8 compliance check)
+-->
+
+<code>import os
+
+os.mkdir("my_first_directory")
+print(os.listdir())
+
+</code>
+
+
+
+<h1>Creating directories in Python</h1>
+
+
+<p>The <i>os</i> module provides a function called <i>mkdir</i>, which, like the <i>mkdir</i> command in Unix and Windows, allows you to create a directory. The <i>mkdir</i> function requires a path that can be relative or absolute. Let's recall what both paths look like in practice:</p>
+
+<ul>
+<li><b>my_first_directory</b> — this is a relative path which will create the <i>my_first_directory</i> directory in the current working directory;</li>
+<li><b>./my_first_directory</b> — this is a relative path that explicitly points to the current working directory. It has the same effect as the path above;</li>
+<li><b>../my_first_directory</b> — this is a relative path that will create the <i>my_first_directory</i> directory in the parent directory of the current working directory;</li>
+<li><b>/python/my_first_directory</b> — this is the absolute path that will create the <i>my_first_directory</i> directory, which in turn is in the <i>python</i> directory in the root directory.</li>
+</ul>
+
+<p>Look at the code in the editor. It shows an example of how to create the <i>my_first_directory</i> directory using a relative path. This is the simplest variant of the relative path, which consists of passing only the directory name.</p>
+
+<p>If you test your code here, it will output the newly created <codel>['my_first_directory']</codel> directory (and the entire contents of the current working catalog).
+</p>
+
+
+
+<p>The <i>mkdir</i> function creates a directory in the specified path. Note that running the program twice will raise a <i>FileExistsError</i>.</p>
+
+<p>This means that we cannot create a directory if it already exists. In addition to the path argument, the <i>mkdir</i> function can optionally take the <i>mode</i> argument, which specifies directory permissions. However, on some systems, the <i>mode</i> argument is ignored.</p>
+
+<p>To change the directory permissions, we recommend the <i>chmod</i> function, which works similarly to the <i>chmod</i> command on Unix systems. You can find more information about it in the documentation.</p>
+
+<p>In the above example, another function provided by the <i>os</i> module named <i>listdir</i> is used. The <i>listdir</i> function returns a list containing the names of the files and directories that are in the path passed as an argument.</p>
+
+<p>If no argument is passed to it, the current working directory will be used (as in the example above). It's important that the result of the <i>listdir</i> function omits the entries '.' and '..', which are displayed, e.g., when using the <i>ls -a</i> command on Unix systems.</p>
+
+<p><b>NOTE:</b> In both Windows and Unix, there's a command called <i>mkdir</i>, which requires a directory path. The equivalent of the above code that creates the <i>my_first_directory</i> directory is the <i>mkdir my_first_directory</i> command.</p>
+
+
+
+
+<br>
+<br>
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

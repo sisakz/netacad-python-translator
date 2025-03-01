@@ -1,0 +1,70 @@
+<problem chapter='3' section='3' slide='1' problem='5' title='OOP: Properties'>
+
+<!--
+Update history:
+2020-09-30 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>
+class ExampleClass:
+    varia = 1
+    def __init__(self, val):
+        ExampleClass.varia = val
+
+
+print(ExampleClass.__dict__)
+example_object = ExampleClass(2)
+
+print(ExampleClass.__dict__)
+print(example_object.__dict__)
+
+</code>
+
+
+
+<h1>Class variables: continued</h1>
+
+<p>We told you before that class variables exist even when no class instance (object) had been created.</p>
+
+<p>Now we're going to take the opportunity to show you <strong>the difference between these two <codel>__dict__</codel> variables</strong>, the one from the class and the one from the object.</p>
+
+<p>Look at the code in the editor. The proof is there.</p>
+
+<p>Let's take a closer look at it:</p>
+
+<ol>
+<li>We define one class named <codel>ExampleClass</codel>;</li> <br>
+
+<li>The class defines one class variable named <codel>varia</codel>;</li> <br>
+
+<li>The class constructor sets the variable with the parameter's value;</li> <br>
+
+<li>Naming the variable is the most important aspect of the example because:</li>
+
+<ul>
+<li>Changing the assignment to <codel>self.varia = val</codel> would create an instance variable of the same name as the class's one;</li>
+
+<li>Changing the assignment to <codel>varia = val</codel> would operate on a method's local variable; (we strongly encourage you to test both of the above cases - this will make it easier for you to remember the difference)</li>
+</ul>
+
+<li>The first line of the off-class code prints the value of the <codel>ExampleClass.varia</codel> attribute; note – we use the value before the very first object of the class is instantiated.</li>
+</ol>
+ 
+
+<p>Run the code in the editor and check its output.</p>
+
+
+<p>As you can see, the class's <codel>__dict__</codel> contains much more data than its object's counterpart. Most of them are useless now – the one we want you to check carefully shows the current <codel>varia</codel> value.</p>
+
+<p>Note that the object's <codel>__dict__</codel> is empty – the object has no instance variables.</p>
+
+
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

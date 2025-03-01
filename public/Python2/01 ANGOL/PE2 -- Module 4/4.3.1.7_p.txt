@@ -1,0 +1,74 @@
+<problem chapter='4' section='3' slide='1' problem='7' title='Working with real files'>
+
+<!--
+Update history:
+2020-10-07 Grzegorz (review, PEP-8 compliance check)
+2020-10-29 Grzegorz (code fix: strrerror instead of strerr)
+2021-07-07 Grzegorz (code corrections - important!)
+-->
+
+<code>from os import strerror
+
+try:
+	file = open('newtext.txt', 'wt') # A new file (newtext.txt) is created.
+	for i in range(10):
+		s = "line #" + str(i+1) + "\n"
+		for char in s:
+			file.write(char)
+	file.close()
+except IOError as e:
+	print("I/O error occurred: ", strerror(e.errno))
+
+</code>
+
+
+
+<h1>Dealing with text files: <font face="Courier New">write()</font></h1>
+
+
+<p>Writing text files seems to be simpler, as in fact there is one method that can be used to perform such a task.</p>
+
+<p>The method is named <codel>write()</codel> and it expects just one argument – a string that will be transferred to an open file (don't forget – <i>open</i> mode should reflect the way in which the data is transferred – <strong>writing a file opened in <i>read</i> mode won't succeed</strong>).</p>
+
+<p>No newline character is added to the <codel>write()</codel>'s argument, so you have to add it yourself if you want the file to be filled with a number of lines.</p>
+
+ 
+
+<p>The example in the editor shows a very simple code that creates a file named <font face="Courier New">newtext.txt</font> (note: the open mode <codel>w</codel> ensures that <strong>the file will be created from scratch</strong>, even if it exists and contains data) and then puts ten lines into it.</p>
+
+<p>The string to be recorded consists of the word line, followed by the line number. We've decided to write the string's contents character by character (this is done by the inner <codel>for</codel> loop) but you're not obliged to do it this way.</p>
+
+<p>We just wanted to show you that <codel>write()</codel> is able to operate on single characters.</p>
+
+ 
+
+<p>The code creates a file filled with the following text:</p>
+
+<codep>line #1
+line #2
+line #3
+line #4
+line #5
+line #6
+line #7
+line #8
+line #9
+line #10</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+<br>
+
+<p>Can you print the file's contents to the console?</p>
+
+<p>We encourage you to test the behavior of the <codel>write()</codel> method locally on your machine.</p>
+
+
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

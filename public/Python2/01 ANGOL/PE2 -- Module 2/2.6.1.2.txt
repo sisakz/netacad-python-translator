@@ -1,0 +1,86 @@
+<problem chapter='2' section='6' slide='1' problem='2' title="Errors – the programmer's daily bread">
+
+<!--
+Update history:
+2020-09-21 Grzegorz (review, PEP-8 compliance check, update, title correction)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h1>Exceptions</h1>
+
+<p>Each time your code tries to do something wrong/foolish/irresponsible/crazy/unenforceable, Python does two things:</p>
+
+<ul>
+<li>it <strong>stops your program</strong>;</li>
+<li>it creates a special kind of data, called an <strong>exception</strong>.</li>
+</ul>
+ 
+
+<p>Both of these activities are called <strong>raising an exception</strong>. We can say that Python always raises an exception (or that an <strong>exception has been raised</strong>) when it has no idea what to do with your code.</p>
+
+<p>What happens next?</p>
+
+<ul>
+<li>the raised exception expects somebody or something to notice it and take care of it;</li>
+<li>if nothing happens to take care of the raised exception, the program will be <strong>forcibly terminated</strong>, and you will see an <strong>error message</strong> sent to the console by Python;</li>
+<li>otherwise, if the exception is taken care of and <strong>handled</strong> properly, the suspended program can be resumed and its execution can continue.</li>
+</ul>
+ 
+
+<p>Python provides effective tools that allow you to <strong>observe exceptions, identify them and handle them</strong> efficiently. This is possible due to the fact that all potential exceptions have their unambiguous names, so you can categorize them and react appropriately.</p>
+
+
+
+
+
+
+<br><br>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+
+
+<center><img src="/uploads/media/default/0001/01/819e89cb98d0fb38e92d3f2559664b65470e476d.png" width="70%" alt="The concept of exceptions"></center>
+<br><br>
+
+
+<p>You know some exception names already. Take a look at the following diagnostic message:</p>
+
+<codep><mark style="background-color:#e6f2ff;">ValueError</mark>: math domain error </codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+
+<p>The word highlighted above is just the <strong>exception name</strong>. Let's get familiar with some other exceptions.</p>
+
+
+<br>
+<br>
+
+</div>
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

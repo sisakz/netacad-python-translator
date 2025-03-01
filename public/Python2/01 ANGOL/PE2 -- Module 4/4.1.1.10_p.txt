@@ -1,0 +1,90 @@
+<problem chapter='4' section='1' slide='1' problem='10' title='Generators and closures'>
+
+<!--
+Update history:
+2020-10-05 Grzegorz (review, PEP-8 compliance check, '[SPACE]' added to code)
+-->
+
+<code>
+def print_function(args, fun):
+    for x in args:
+        print('f(', x,')=', fun(x), sep='')
+
+
+def poly(x):
+    return 2 * x**2 - 4 * x + 2
+
+
+print_function([x for x in range(-2, 3)], poly)
+
+</code>
+
+
+
+<h1>How to use lambdas and what for?</h1>
+
+
+<p>The most interesting thing about lambdas is that you can use them in their pure form – <strong>as anonymous parts of code intended to evaluate a result</strong>.</p>
+
+<p>Imagine that we need a function (we'll name it <codel>print_function</codel>) which prints the values of a given (other) function for a set of selected arguments.</p>
+
+<p>We want <codel>print_function</codel> to be universal – it should accept a set of arguments put in a list and a function to be evaluated, both as arguments – we don't want to hardcode anything.</p>
+
+<p>Look at the example in the editor. This is how we've implemented the idea.</p>
+
+<p>Let's analyze it. The <codel>print_function()</codel> function takes two parameters:</p>
+
+<ul>
+<li>the first, a list of arguments for which we want to print the results;</li>
+<li>the second, a function which should be invoked as many times as the number of values that are collected inside the first parameter.</li>
+</ul>
+
+<p>Note: we've also defined a function named <codel>poly()</codel> – this is the function whose values we're going to print. The calculation the function performs isn't very sophisticated – it's the polynomial (hence its name) of the form:</p>
+
+<p><font face="Courier New" size="+1">f(x) = 2x<sup>2</sup> - 4x + 2</font></p>
+
+
+<p>The name of the function is then passed to the <codel>print_function()</codel> along with a set of five different arguments – the set is built with a list comprehension clause.</p>
+
+<p>The code prints the following lines:</p>
+
+<codep>f(-2)=18
+f(-1)=8
+f(0)=2
+f(1)=0
+f(2)=2</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+<p>Can we avoid defining the <codel>poly()</codel> function, as we're not going to use it more than once? Yes, we can – this is the benefit a lambda can bring.</p>
+
+<br>
+
+<p>Look at the example below. Can you see the difference?</p>
+
+<codep class="syntax-color copy line-numbers">def print_function(args, fun):
+    for x in args:
+        print('f(', x,')=', fun(x), sep='')
+
+print_function([x for x in range(-2, 3)], <mark class="mark-background">lambda'[SPACE]'x:'[SPACE]'2'[SPACE]'*'[SPACE]'x**2'[SPACE]'-'[SPACE]'4'[SPACE]'*'[SPACE]'x'[SPACE]'+'[SPACE]'2</mark>)
+</codep>
+
+<br>
+
+
+<p>The <codel>print_function()</codel> has remained exactly the same, but there is no <codel>poly()</codel> function. We don't need it anymore, as the polynomial is now directly inside the <codel>print_function()</codel> invocation in the form of a lambda defined in the following way:</p>
+
+<p><codep class="syntax-color">lambda x: 2 * x**2 - 4 * x + 2
+</codep></p>
+
+<p>The code has become shorter, clearer, and more legible.</p>
+
+<p>Let us show you another place where lambdas can be useful. We'll start with a description of <codel>map()</codel>, a built-in Python function. Its name isn't too descriptive, its idea is simple, and the function itself is really usable.</p>
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

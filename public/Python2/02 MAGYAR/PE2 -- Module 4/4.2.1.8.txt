@@ -1,0 +1,150 @@
+<problem chapter='4' section='2' slide='1' problem='8' title='Fájlkezelés'>
+
+<!--
+Update history:
+2020-10-07 Grzegorz (review, PEP-8 compliance check)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+    <h2>A fájlobjektum megnyitása: üzemmódok</h2>
+
+    <p><codel>r</codel> megnyitási mód: olvasás</p>
+
+<ul>
+    <li>a fájlobjektum <strong>olvasási módban</strong> nyílik meg;</li>
+    <li>a fájlobjektumhoz tartozó fájlnak <strong>léteznie kell</strong>, és olvashatónak kell lennie, különben az <codel>open()</codel> függvény kivételt eredményez.</li>
+</ul>
+
+
+<p><codel>w</codel> megnyitási mód: írás</p>
+
+<ul>
+    <li>a fájlobjektum <strong>írási módban</strong> lesz megnyitva;</li>
+    <li>a fájlobjektumhoz tartozó fájlnak <strong>nem kell léteznie</strong>; ha nem létezik, akkor létrejön; ha létezik, akkor nullára rövidül (törlődik); ha a létrehozás nem lehetséges (pl.: a rendszer jogosultságai miatt), akkor az <codel>open()</codel> függvény kivételt eredményez.</li>
+</ul>
+
+
+<p><codel>a</codel> megnyitási mód: hozzáfűzés</p>
+
+<ul>
+    <li>a fájlobjektum <strong>hozzáfűzési (append) módban</strong> lesz megnyitva;</li>
+    <li>a fájlobjektumhoz tartozó fájlnak <strong>nem kell léteznie</strong>; ha nem létezik, akkor létrejön; ha létezik, akkor a virtuális rögzítőfej a fájl végére kerül (a fájl korábbi tartalma érintetlen marad).</li>
+</ul>
+
+<p><codel>r+</codel> megnyitási mód: olvasás és frissítés</p>
+
+<ul>
+    <li>a fájlobjektum <strong>olvasási és frissítési módban</strong> lesz megnyitva;</li>
+    <li>a fájlobjektumhoz tartozó fájlnak <strong>léteznie kell, és írhatónak kell lennie</strong>, különben az <codel>open()</codel> függvény kivételt eredményez;</li>
+    <li>a fájlobjektum számára mind az olvasási, mind az írási műveletek engedélyezettek.</li>
+</ul>
+
+<p><codel>w+</codel> megnyitási mód: írás és frissítés</p>
+
+<ul>
+    <li>a fájlobjektum <strong>írási és frissítési</strong> módban lesz megnyitva;</li>
+    <li>a fájlobjektumhoz tartozó fájlnak <strong>nem kell léteznie</strong>; ha nem létezik, akkor létrejön; a fájl korábbi tartalma érintetlen marad;</li>
+    <li>a fájlobjektum számára mind az olvasási, mind az írási műveletek engedélyezettek.</li>
+</ul>
+
+
+
+
+<br> 
+<br>
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+
+    <h2>Szöveges és bináris üzemmódok kiválasztása</h2>
+
+
+
+    <p>Ha a megnyitási mód karakterlánc végén egy <codel>b</codel> betű szerepel, az azt jelenti, hogy a fájlobjektumot <strong>bináris módban</strong> kell megnyitni.</p>
+
+    <p>Ha a mód karakterlánc <codel>t</codel> betűvel végződik, a fájlobjektum <strong>szöveges módban</strong> nyílik meg.</p>
+
+    <p>A szöveges üzemmód az alapértelmezett, ha nem használunk bináris/szöveges üzemmód meghatározó karaktert.</p>
+
+    <p>Végül, a fájl sikeres megnyitása az aktuális fájl pozícióját (a virtuális író/olvasó fejet) a fájl első bájtja elé állítja, <strong>ha a mód nem <codel>a</codel></strong>, és a fájl utolsó bájtja után, <strong> ha a mód <codel>a</codel></strong>.</p>
+
+<br>
+
+<table>
+
+<thead>
+<tr>
+<th>Szöveges üzemmód</th>
+<th>Bináris üzemmód</th>
+<th>Leírás</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><codel>rt</codel></td>
+<td><codel>rb</codel></td>
+<td>olvasás</td>
+</tr>
+
+<tr>
+<tr>
+<td><codel>wt</codel></td>
+<td><codel>wb</codel></td>
+<td>írás</td>
+</tr>
+
+<tr>
+<td><codel>at</codel></td>
+<td><codel>ab</codel></td>
+<td>hozzáfűzés</td>
+</tr>
+
+<tr>
+<td><codel>r+t</codel></td>
+<td><codel>r+b</codel></td>
+<td>olvasás és frissítés</td>
+</tr>
+
+<tr>
+<td><codel>w+t</codel></td>
+<td><codel>w+b</codel></td>
+<td>írás és frissítés</td>
+</tr>
+</tbody>
+
+</table>
+
+<br>
+
+<p><strong><span class="label" style="background-color:orange;">EXTRA</strong></span></p>
+<p>Megnyithatsz egy fájlt annak létrehozása céljából is. Ezt az <codel>x</codel> (exclusive creation) megnyitási móddal teheted meg. Ha a fájl már létezik, az <codel>open()</codel> függvény kivételt fog eredményezni.</p>
+
+
+<br>
+<br>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

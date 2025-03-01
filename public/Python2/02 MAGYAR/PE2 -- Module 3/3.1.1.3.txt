@@ -1,0 +1,86 @@
+<problem chapter='3' section='1' slide='1' problem='3' title='Objektumorientált programozás'>
+
+<!--
+Update history:
+2020-09-30 Grzegorz (review, PEP-8 compliance check, update)
+2021-07-05	Grzegorz (corrections)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+    <h1>Osztályhierarchiák</h1>
+
+    <p>Az <i>osztály</i> szónak sokféle jelentése van, de nem mindegyik összeegyeztethető azokkal az elképzelésekkel, amelyeket itt meg akarunk vitatni. Az <i>osztály</i> amellyel foglalkozunk, olyan, mint egy <i>kategória</i>, pontosan meghatározott hasonlóságok eredményeként.</p>
+
+    <p>Megpróbálunk néhány olyan osztályt kiemelni, amelyek jó példái ennek a megközelítésnek.</p>
+
+<img class="lightbox" src="/uploads/media/default/0001/01/09e4ad95eae46acc8e0f6427751452cbd255b004.png" alt="The concept of class hierarchies: vehicles" width="95%">
+
+<br><br>
+
+    <p>Nézzük egy pillanatra a járműveket. Az összes létező járművet (és azokat is, amelyek még nem léteznek) <strong>egyetlen fontos tulajdonság köti össze</strong>: a mozgásképesség. Lehetne példát hozni ellene, a kutya is mozog. Egy kutya is jármű? Nem, nem az természetesen. Javítanunk kell a definíciót, azaz más kritériumokkal kell bővítenünk, megkülönböztetve a járműveket más lényektől. Vegyük figyelembe akkor a következő meghatározást: a járművek mesterségesen létrehozott, szállításra használt, természeti erők által mozgatott, emberek által irányított (vezetett) entitások.</p>
+
+    <p>E meghatározás alapján egy kutya már nem jármű.</p>
+
+    <p>A <i>járművek</i> osztálya nagyon széles. Túlságosan is széles. Akkor néhány <strong>speciálisabb osztályt</strong> kell definiálnunk. A speciális osztályok az <strong>alosztályok (subclass)</strong>. A <i>járművek</i> osztály lesz a <strong>szuperosztályunk (superclass)</strong>. A magyar nyelvű szakirodalomban sok helyen <strong>ősosztály</strong> névvel hivatkoznak rá. Ebben a tananyagban a szuperosztály és az ősosztály szavakat szinonimaként használjuk.</p>
+
+
+
+<br> 
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+<p>Megjegyzés: <strong>a hierarchia fentről lefelé halad, mint egy fa gyökerei, nem pedig az ágai</strong>. A legáltalánosabb és legszélesebb körű osztály mindig a csúcson van (az ősosztály), míg a leszármazottai alatta helyezkednek el (az alosztályok).</p>
+
+<p>Mostanra már valószínűleg fel tudsz mutatni néhány lehetséges alosztályt a <i>járművek</i> szuperosztály számára. Számos lehetséges osztályozás létezik. Mi a környezet alapján választottuk ki az alosztályokat, és azt mondjuk, hogy (legalább) négy alosztály létezik:</p>
+
+<ul>
+<li>szárazföldi járművek;</li>
+<li>vízi járművek;</li>
+<li>légi járművek;</li>
+<li>űrjárművek.</li>
+</ul>
+
+<p>Ebben a példában csak az első alosztályt - a szárazföldi járműveket - tárgyaljuk. Ha szeretnéd, folytathatod a többi osztállyal.</p>
+
+<p>A szárazföldi járművek tovább oszthatók aszerint, hogy milyen módon kapcsolódnak a talajjal. Így felsorolhatjuk:</p>
+
+<ul>
+<li>kerekes járművek;</li>
+<li>lánctalpas járművek;</li>
+<li>légpárnás járművek.</li>
+</ul>
+
+<p>Az általunk létrehozott hierarchiát az ábra szemlélteti.</p>
+
+<p>Figyeljük meg a nyilak irányát - mindig a szuperosztály felé mutatnak. A legfelső szintű osztály ez alól kivétel - nincs saját ősosztálya.</p>
+
+
+<br>
+<br>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

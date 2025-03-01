@@ -1,0 +1,110 @@
+<problem chapter='2' section='5' slide='1' problem='8' title="LAB: Anagrammák">
+
+<!--
+Update history:
+2020-09-23 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+
+<span class="label" style="background-color:rgb(205, 168, 105);"><strong>LABORGYAKORLAT</strong></span>
+
+<br><br>
+
+
+<h2>Becsült idő</h2>
+<p>30-60 perc</p>
+
+
+<h2>Nehézségi szint</h2>
+<p>Könnyű</p>
+
+
+<h2>Célok</h2>
+<ul>
+	<li>a karakterlánc-kezelési készségek fejlesztése;</li>
+	<li>a karakterláncok listákká alakítása és fordítva.</li>
+</ul>
+
+
+
+<h2>Forgatókönyv</h2>
+<p>Az anagramma egy új szó, amely egy szó betűinek átrendezésével jön létre, az eredeti betűket pontosan egyszer felhasználva. Például a „kocsi” és a „csoki” kifejezések anagrammák, míg az „én vagyok” és a „te vagy” nem.</p>
+
+
+<p>Az a feladatod, hogy írj egy programot, amely:</p>
+<ul>
+	<li>két különálló szöveget kér be a felhasználótól;</li>
+	<li>ellenőrzi, hogy a beírt szövegek anagrammák-e, és kiírja az eredményt.</li>
+</ul>
+
+
+<p>Megjegyzés:</p>
+<ul>
+	<li>feltételezzük, hogy két üres karakterlánc nem anagramma;</li>
+	<li>a kis- és nagybetűket egyenlőnek kell tekinteni;</li>
+	<li>a szóközöket nem vesszük figyelembe az ellenőrzés során – kezeld őket nem létezőként.</li>
+</ul>
+
+
+<p>Teszteld a kódot az általunk megadott adatokkal.</p>
+
+
+<h2>Teszadatok</h2>
+
+
+<p>Minta bemenet:</p>
+<codep>Listen
+Silent</codep>
+<br>
+
+<p>Minta kimenet:</p>
+<codep>Anagrams</codep>
+<br>
+
+<br>
+
+<p>Minta bemenet:</p>
+<codep>modern
+norman</codep>
+<br>
+
+<p>Minta kimenet:</p>
+<codep>Not anagrams</codep>
+<br>
+
+
+<br>
+
+<studyMode>false</studyMode>
+<labMode>true</labMode>
+
+<hint>
+str_1 = input("Enter the first string: ")
+str_2 = input("Enter the second string: ")
+
+# A következőket tesszük mindkét karakterlánccal:
+# - eltávolítjuk a szóközöket
+# - minden betűt nagybetűvé alakítunk
+# - listává alakítjuk
+# - rendezzük a listát
+# - a lista elemeit karakterláncá alakítjuk
+# és végezetül összehasonlítjuk a két karakterláncot
+# Vágjunk bele!
+
+</hint>
+
+<sampleSolution>
+str_1 = input("Enter the first string: ")
+str_2 = input("Enter the second string: ")
+
+strx_1 = ''.join(sorted(list(str_1.upper().replace(' ',''))))
+strx_2 = ''.join(sorted(list(str_2.upper().replace(' ',''))))
+if len(strx_1) > 0 and strx_1 == strx_2:
+	print("Anagrams")
+else:
+	print("Not anagrams")
+	
+</sampleSolution>
+
+
+</problem>

@@ -1,0 +1,68 @@
+<problem chapter='2' section='7' slide='1' problem='2' title='Kivételek'>
+
+<!--
+Update history:
+2020-09-21 Grzegorz (review, PEP-8 compliance check, update)
+2020-11-02 Konrad (mark style changed to mark class)
+-->
+
+<code>try:
+    y = 1 / 0
+except ZeroDivisionError:
+    print("Ooopsss...")
+
+print("THE END.")
+
+</code>
+
+
+
+<h1>Kivételek (folytatás)</h1>
+
+<p>Elsőnek vegyünk egy egyszerű példát. Nézd meg a kódot a szerkesztőben és futtasd le.</p>
+
+<p>A várható kimenet:</p>
+
+<codep>Oooppsss...
+THE END.</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+
+
+<p>Most nézzük meg az alábbi kódot:</p>
+
+<codep class="syntax-color copy line-numbers">try:
+    y = 1 / 0
+<mark class="mark-background">except ArithmeticError:</mark>
+    print("Oooppsss...")
+
+print("THE END.")
+</codep>
+
+<br>
+
+<p>Valami megváltozott benne – a <codel>ZeroDivisionError</codel>-t <codel>ArithmeticError</codel>-ra cseréltük.</p>
+
+<p>Azt már tudod, hogy az <codel>ArithmeticError</codel> egy általános osztály, amely tartalmazza (többek között) a <codel>ZeroDivisionError</codel> kivételt.</p>
+
+<p>Így a kód kimenete változatlan marad. Teszteljük.</p>
+
+<p>Ez azt is jelenti, hogy a kivétel nevének <codel>Exception</codel> vagy <codel>BaseException</codel> névvel való helyettesítése nem változtatja meg a program viselkedését.</p>
+
+ 
+<br>
+
+<p>Foglaljuk össze:</p>
+
+<ul>
+    <li>minden egyes kiváltott kivétel <strong>az első megfelelő ágba esik</strong>;</li>
+    <li>a megfelelő ágnak nem kell pontosan ugyanazt a kivételt megadni – elég, ha a kivétel <strong>általánosabb</strong> (absztraktabb), mint a kiváltott kivétel.</li>
+</ul>
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

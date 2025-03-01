@@ -1,0 +1,38 @@
+<problem chapter='4' section='6' slide='1' problem='10' title='A calendar modul'>
+
+<!--
+Update history:
+2020-03-30 Sebastian (first version)
+2020-10-13 Grzegorz (file creation, review, PEP-8 compliance check)
+-->
+
+<code>import calendar  
+
+c = calendar.Calendar()
+
+for date in c.itermonthdates(2019, 11):
+    print(date, end=" ")
+
+</code>
+
+<h1>Az <font face="Courier New">itermonthdates()</font> metódus</h1>
+
+<p>A <codel>Calendar</codel> osztály számos olyan metódussal rendelkezik, amelyek egy iterátort adnak vissza. Ezek egyike az <codel>itermonthdates</codel> metódus, amelyhez meg kell adni az évet és a hónapot.</p>
+
+<p>Eredményül a megadott év adott hónapjának összes napját kapjuk vissza, valamint a hónap eleje elõtt és vége után annyi napot, ami egy teljes héthez szükséges.</p>
+
+<p>A napokat <codel>datetime.date</codel> objektum formában kapjuk vissza. Nézd meg a példát a szerkesztõablakban.</p>
+
+<p>A kód 2019 novemberének minden napját megjeleníti. Mivel 2019 novemberének elsõ napja péntek volt, a következõ napokat is visszaadja a függvény a teljes héthez: 2019/10/28 (hétfõ) 2019/10/29 (kedd) 2019/10/30 (szerda) 2019/10/31 (csütörtök).</p>
+
+<p>2019 novemberének utolsó napja szombat volt, így a teljes hét megtartása érdekében még egy napot visszakapunk: 2019/12/01 (vasárnap).</p>
+
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

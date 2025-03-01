@@ -1,0 +1,69 @@
+<problem chapter='3' section='2' slide='1' problem='5' title='A procedurálistól az objektumorientált megközelítésig'>
+
+<!--
+Update history:
+2020-09-30 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>class Stack:
+    def __init__(self):
+        self.stack_list = []
+
+
+stack_object = Stack()
+print(len(stack_object.stack_list))
+
+</code>
+
+
+
+<h1>A verem - az objektumorientált megközelítés (folytatás)</h1>
+
+<p>A konstruktoron belül végrehajtott minden olyan változtatás, amely módosítja a <codel>self</codel> paraméter állapotát, tükröződik az újonnan létrehozott objektumban.</p>
+
+<p>Ez azt jelenti, hogy bármilyen tulajdonságot hozzáadhatunk az objektumhoz, és a tulajdonság ott marad, amíg az objektum életciklusa véget nem ér, vagy a tulajdonságot kifejezetten el nem távolítjuk.</p>
+
+<p>Most <strong>adjunk hozzá egyetlen tulajdonságot az új objektumhoz</strong> – egy listát a veremhez. Nevezzük el <codel>stack_list</codel>-nek.</p>
+
+<p>Mint ahogy itt láthatjuk:</p>
+
+
+<codep class="syntax-color">class Stack:
+    def __init__(self):
+        <mark class="mark-background">self.stack_list = []</mark>
+
+
+stack_object = Stack()
+print(len(stack_object.stack_list))
+</codep>
+<br>
+
+
+<p>Megjegyzés:</p>
+
+<ul>
+    <li><strong>pontozott jelölést </strong>használtunk, ahogy a metódusok meghívásakor; ez az általános konvenció egy objektum tulajdonságainak elérésére - meg kell neveznünk az objektumot magát, egy pontot (<codel>.</codel>) tenni utána, és megadni a kívánt tulajdonság nevét; ne használjunk zárójelet! Nem egy metódust akarunk meghívni - <strong>egy tulajdonsághoz</strong> szeretnénk <strong>hozzáférni</strong>;</li>
+    <li>ha egy tulajdonság értékét először állítjuk be (például a konstruktorban), akkor létrehozzuk; ettől a pillanattól kezdve az objektum rendelkezik ezzel a tulajdonsággal, és készen áll az értékének használatára;</li>
+    <li>tettünk még valamit a kódban - megpróbáltuk elérni a <codel>stack_list</codel> tulajdonságot az osztályon kívülről, közvetlenül az objektum létrehozása után; a verem aktuális hosszát akarjuk ellenőrizni – Lehetséges vajon?</li>
+</ul>
+ 
+
+<p>Igen, megvan - a kód a következő kimenetet jeleníti meg:</p>
+
+<codep>0</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+ 
+
+<p>Ezt nem akarjuk a veremtől. Jobban szeretjük, ha a <codel>stack_list</codel> <strong>rejtve van a külvilág elől</strong>. Lehetséges ez?</p>
+
+<p>Igen, és egyszerű, de azért nem túl magától értetődő.</p>
+
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

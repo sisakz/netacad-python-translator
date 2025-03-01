@@ -1,0 +1,36 @@
+<problem chapter='4' section='6' slide='1' problem='5' title='A calendar modul'>
+
+<!--
+Update history:
+2020-03-30 Sebastian (first version)
+2020-10-12 Grzegorz (file creation, review, PEP-8 compliance check)
+-->
+
+<code>import calendar
+print(calendar.weekday(2020, 12, 24))
+
+</code>
+
+<h1>A <font face="Courier New">weekday()</font> függvény</h1>
+
+<p>A <codel>calendar</codel> modul által biztosított másik hasznos függvény a <codel>weekday</codel> függvény, amely a hét napját adja vissza egész számértékként az adott év, hónap és nap esetén. Lássuk a gyakorlatban.</p>
+
+<p>Futtasd a kódot a szerkesztőablakban, hogy megtudd, 2020. december 24. a hét melyik napjára esett.</p>
+
+<p>Eredmény:</p>
+
+<codep>3</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+<p>A <codel>weekday</codel> függvény 3-at ad vissza, ami azt jelenti, hogy 2020. december 24. csütörtökre esett.</p>
+
+
+
+<br>
+<br>
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

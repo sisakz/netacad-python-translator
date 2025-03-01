@@ -1,0 +1,51 @@
+<problem chapter='4' section='5' slide='1' problem='18' title='A datetime és time modul (folytatás)'>
+
+<!--
+Update history:
+2020-03-30 Sebastian (first version)
+2020-10-12 Grzegorz (file creation, review, PEP-8 compliance check)
+-->
+
+<code>from datetime import datetime
+print(datetime.strptime("2019/11/04 14:53:00", "%Y/%m/%d %H:%M:%S"))
+
+</code>
+
+
+
+<h1>Az <font face="Courier New">strptime()</font> metódus</h1>
+
+<p>A formátum létrehozásának ismerete hasznos lehet a <codel>datetime</codel> osztály <codel>strptime</codel> metódusának használatakor. Az <codel>strftime</codel> metódussal ellentétben ez egy dátumot és idõt reprezentáló karakterláncból hoz létre <codel>datetime</codel> objektumot.</p>
+
+<p>Az <codel>strptime</codel> metódusnak meg kell adni a dátum és az idõ mentésének formátumát. Nézzük meg egy példán. Futtasd a kódot a szerkesztõablakban.</p>
+
+<p>Eredmény:</p>
+
+<codep>2019-11-04 14:53:00</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+
+<p>A példában két kötelezõ argumentumot adtunk meg. Az elsõ a dátum és az idõ egy karakterlánc formájában: <codel>"2019/11/04 14:53:00"</codel>, míg a második egy formátum, amely megkönnyíti a karakterlánc <codel>datetime</codel> objektumba pakolását. Legyünk óvatosak, mert ha a megadott formátum nem egyezik a karakterláncban lévõ dátummal és idõvel, akkor <i>ValueError</i>-t kapunk.</p>
+
+<p><b>Megjegyzés:</b> A <codel>time</codel> modulban található egy <codel>strptime</codel> függvény, amely az idõt reprezentáló karakterláncot egy <i>struct_time</i> objektumba rendezi. Használata megegyezik a <codel>datetime</codel> osztály <codel>strptime</codel> metódusával:</p>
+
+<p><codep class="syntax-color copy">import time
+print(time.strptime("2019/11/04 14:53:00", "%Y/%m/%d %H:%M:%S"))
+</codep></p>
+
+<p>Eredmény:</p>
+
+<codep>time.struct_time(tm_year=2019, tm_mon=11, tm_mday=4, tm_hour=14, tm_min=53, tm_sec=0, tm_wday=0, tm_yday=308, tm_isdst=-1)</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+
+
+
+<br>
+<br>
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

@@ -1,0 +1,82 @@
+<problem chapter='3' section='5' slide='1' problem='18' title='OOP alapok: Öröklés'>
+
+<!--
+Update history:
+2020-10-01 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>
+import time
+
+class Tracks:
+    def change_direction(self, left, on):
+        print("tracks: ", left, on)
+
+
+class Wheels:
+    def change_direction(self, left, on):
+        print("wheels: ", left, on)
+
+
+class Vehicle:
+    def __init__(self, controller):
+        self.controller = controller
+
+    def turn(self, left):
+        self.controller.change_direction(left, True)
+        time.sleep(0.25)
+        self.controller.change_direction(left, False)
+
+
+wheeled = Vehicle(Wheels())
+tracked = Vehicle(Tracks())
+
+wheeled.turn(True)
+tracked.turn(False)
+
+</code>
+
+
+
+<h1>Hogyan építsünk fel egy osztályhierarchiát (folytatás)</h1>
+
+
+<p>Az öröklés nem az egyetlen módja az adaptálható osztályok létrehozásának. Ugyanezeket a célokat (nem mindig, de nagyon gyakran) elérhetjük a kompozíciónak nevezett technika alkalmazásával is.</p>
+
+<p>A <strong>kompozíció egy objektum összeállításának folyamata más különböző objektumok felhasználásával</strong>. A kompozícióban használt objektumok a kívánt leírások (tulajdonságok és/vagy metódusok) egy készletét szolgáltatják, így mondhatjuk, hogy úgy viselkednek, mint egy bonyolultabb struktúra felépítéséhez használt blokkok.</p>
+
+<p>Elmondható, hogy:</p>
+
+<ul>
+    <li><strong>az öröklés</strong> új komponensek hozzáadásával és a meglévők módosításával<strong> bővíti az osztály képességeit</strong>; más szóval a teljes recept magában az osztályban és annak összes ősében található; az objektum átveszi az osztály összes tartozékát és felhasználja azokat;</li>
+    <li>a <strong>kompozíció egy osztályt olyan tárolóként vetít előre</strong> amely képes más (más osztályokból származtatott) objektumok tárolására és használatára, ahol minden egyes objektum a kívánt osztály viselkedésének egy részét valósítja meg.</li>
+</ul>
+
+<p>A különbséget a korábban meghatározott járművek segítségével szemléltetjük. A korábbi megközelítés egy olyan osztályhierarchiához vezetett, amelyben a legfelső osztály tisztában volt a jármű forgatásánál használt általános szabályokkal, de nem tudta, hogyan kell a megfelelő komponenseket (kerekeket vagy pályákat) vezérelni.</p>
+
+<p>Az alosztályok ezt a képességet speciális mechanizmusok bevezetésével valósították meg. Tegyük meg (majdnem) ugyanezt, de kompozíciót használva. Az osztály - az előző példához hasonlóan - tisztában van azzal, hogyan kell megfordítani a járművet, de a tényleges megfordítást egy speciális objektum végzi, amelyet egy <codel>controller</codel> nevű tulajdonságban tárolunk. A <codel>controller</codel> a járművet a jármű megfelelő részeinek manipulálásával tudja irányítani.</p>
+
+<p>Vessünk egy pillantást a szerkesztőre - így nézhetne ki!</p>
+
+<p>Két osztály van, a <codel>Tracks</codel> és a <codel>Wheels</codel> - ezek tudják, hogyan kell vezérelni a jármű irányát. Van egy <codel>Vehicle</codel> nevű osztály is, amely bármelyik rendelkezésre álló vezérlőt használhatja (a már definiált kettőt, vagy bármely más, a jövőben definiáltat) - maga a <codel>controller</codel> az inicializálás során kerül átadásra az osztálynak.</p>
+
+<p>Ily módon a jármű fordulási képessége egy külső objektum segítségével valósul meg, amely nem a <codel>Vehicle</codel> osztályon belül van implementálva.</p>
+
+<p>Más szóval, van egy univerzális járművünk, és akár lánctalpakat, akár kerekeket szerelhetünk rá.</p>
+
+<P>A kód a következő kimenetet eredményezi:</P>
+
+<codep>wheels:  True True
+wheels:  True False
+tracks:  False True
+tracks:  False False</codep>
+
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

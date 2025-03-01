@@ -1,0 +1,50 @@
+<problem chapter='4' section='5' slide='1' problem='15' title='A datetime és time modul (folytatás)'>
+
+<!--
+Update history:
+2020-03-30 Sebastian (first version)
+2020-10-12 Grzegorz (file creation, review, PEP-8 compliance check)
+-->
+
+<code>from datetime import date
+
+d = date(2020, 1, 4)
+print(d.strftime('%Y/%m/%d'))
+
+</code>
+
+
+
+<h1>Dátum és idő formázása (1. rész)</h1>
+
+<p>Minden eddig bemutatott <codel>datetime</codel> modul osztály rendelkezik egy <codel>strftime</codel> nevű metódussal. Ez egy nagyon fontos metódus, mert lehetővé teszi, hogy a dátumot és az időt az általunk megadott formátumban adjuk vissza.</p>
+
+<p>Az <codel>strftime</codel> metódus csak egy argumentumot vár, a formátumot megadó karakterláncot. Ez a karakterlánc tartalmazhat direktívákat is.</p>
+
+<p>A direktíva egy karakterlánc, amely a <codel>%</codel> (százalék) karakterből és egy kis- vagy nagybetűből áll, például a <codel>%Y</codel> direktíva az évszámot jelenti, az évszázaddal együtt négy számjegyen kiírva. Nézzünk egy példát. Futtasd a kódot a szerkesztőablakban.</p>
+
+<p>Eredmény:</p>
+
+<codep>2020/01/04</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+<p>A példában az <codel>strftime</codel> metódusnak egy három, <codel>/</codel>-rel (perjellel) elválasztott direktívából álló formátumot adtunk át. Természetesen az elválasztó karakter helyettesíthető más karakterrel vagy akár egy karakterlánccal is.</p>
+
+<p>A formátumba bármilyen karaktert beírhatsz, de csak a felismerhető direktívák lesznek a megfelelő értékekkel helyettesítve. A mi formátumunkban a következő direktívákat használtuk:</p>
+
+<ul>
+    <li><codel>%Y</codel> – az évszámot adja vissza az évszázaddal négy számjegyen kiírva. Példánkban ez <font face="Courier New">2020</font>.</li>
+    <li><codel>%m</codel> – a hónapot két számjegyen adja vissza (egy számjegyű hónap esetén 0-val kezdve). Példánkban ez <font face="Courier New">01</font>.</li>
+    <li><codel>%d</codel> – a napot két számjegyen adja vissza (egy számjegyű hónap esetén 0-val kezdve). Példánkban ez <font face="Courier New">04</font>.</li>
+</ul>
+
+<p><b>Megjegyzés:</b> Az összes elérhető direktíva <a href="https://docs.python.org/3/library/datetime.html#strftime-and-strptime-format-codes" target="_blank">itt</a> található.</p>
+
+<br>
+<br>
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

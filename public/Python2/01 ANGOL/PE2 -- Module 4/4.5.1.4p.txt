@@ -1,0 +1,48 @@
+<problem chapter='4' section='5' slide='1' problem='4' title='The datetime module'>
+
+<!--
+Update history:
+2020-03-30 Sebastian (first version)
+2020-10-11 Grzegorz (review, PEP-8 compliance check)
+-->
+
+<code>from datetime import date
+
+d = date.fromisoformat('2019-11-04')
+print(d)
+
+</code>
+
+
+
+<h1>Creating a date object using the ISO format</h1>
+
+
+<p>The <codel>datetime</codel> module provides several methods to create a <codel>date</codel> object. One of them is the <codel>fromisoformat</codel> method, which takes a date in the <b>YYYY-MM-DD</b> format compliant with the ISO 8601 standard.</p>
+
+<p>The ISO 8601 standard defines how the date and time are represented. It's often used, so it's worth taking a moment to familiarize yourself with it. Take a look at the picture describing the values required by the format:</p>
+
+<br>
+
+<center><img src="/uploads/media/default/0001/02/datetime.01.04.png" alt="The ISO 8601 date and time format" width="70%"></center>
+
+<br><br>
+
+<p>Now look at the code in the editor and run it.</p>
+
+<p>In our example, YYYY is 2019, MM is 11 (November), and DD is 04 (fourth day of November).</p>
+
+<p>When substituting the date, be sure to add 0 before a month or a day that is expressed by a number less than 10.</p>
+
+<p><b>Note:</b> The <codel>fromisoformat</codel> method has been available in Python since version 3.7.</p>
+
+
+
+<br>
+<br>
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

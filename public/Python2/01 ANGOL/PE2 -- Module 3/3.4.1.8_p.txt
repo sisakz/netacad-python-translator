@@ -1,0 +1,72 @@
+<problem chapter='3' section='4' slide='1' problem='8' title='OOP: Methods'>
+
+<!--
+Update history:
+2020-09-30 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>
+class SuperOne:
+    pass
+
+
+class SuperTwo:
+    pass
+
+
+class Sub(SuperOne, SuperTwo):
+    pass
+
+
+def printBases(cls):
+    print('( ', end='')
+
+    for x in cls.__bases__:
+        print(x.__name__, end=' ')
+    print(')')
+
+
+printBases(SuperOne)
+printBases(SuperTwo)
+printBases(Sub)
+
+</code>
+
+
+
+<h1>The inner life of classes and objects: continued</h1>
+
+<p><codel>__bases__</codel> is a tuple. The <strong>tuple contains classes</strong> (not class names) which are direct superclasses for the class.</p>
+
+<p>The order is the same as that used inside the class definition.</p>
+
+<p>We'll show you only a very basic example, as we want to highlight <strong>how inheritance works</strong>.</p>
+
+<p>Moreover, we're going to show you how to use this attribute when we discuss the object approach aspects of exceptions.</p>
+
+ 
+
+<p>Note: <strong>only classes have this attribute</strong> – objects don't.</p>
+
+ 
+
+<p>We've defined a function named <codel>printbases()</codel>, designed to present the tuple's contents clearly.</p>
+
+<p>Look at the code in the editor. Analyze it and run it. It will output:</p>
+
+ 
+<codep>( object )
+( object )
+( SuperOne SuperTwo )</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+<p>Note: <strong>a class without explicit superclasses points to an object</strong> (a predefined Python class) as its direct ancestor.</p>
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

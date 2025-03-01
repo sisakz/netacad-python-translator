@@ -1,0 +1,101 @@
+<problem chapter='2' section='7' slide='1' problem='4' title='Kivételek'>
+
+<!--
+Update history:
+2020-09-21 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>def bad_fun(n):
+    try:
+        return 1 / n
+    except ArithmeticError:
+        print("Arithmetic Problem!")
+    return None
+
+bad_fun(0)
+
+print("THE END.")
+
+</code>
+
+
+
+<h1>Kivételek (folytatás)</h1>
+
+<p>Ha <strong>két vagy több kivételt</strong> szeretnél ugyanúgy <strong>kezelni, akkor a</strong> következő szintaxist használhatod:</p>
+
+<codep class="syntax-color">try:
+    :
+<mark class="mark-background">except (exc1, exc2):</mark>
+    :
+</codep>
+<br>
+ 
+
+<p>Egyszerűen egy vesszővel elválasztott listába kell tenned az összes érintett kivétel nevét, és ne feledkezz meg a zárójelekről sem.</p>
+
+<br>
+
+<p>Ha egy <strong>függvényen belül kivétel keletkezik</strong>, az kezelhető:</p>
+
+<ul>
+<li>a függvényen belül;</li>
+<li>a függvényen kívül;</li>
+</ul>
+ 
+
+<p>Kezdjük az első változattal – nézd meg a kódot a szerkesztőben.</p>
+
+ 
+<p>A <font face="Courier New">ZeroDivisionError</font> kivétel (amely az <font face="Courier New">ArithmeticError</font> kivételosztály konkrét esete) a <codel>bad_fun()</codel> függvényen belül keletkezik, és nem hagyja el a függvényt – a függvény maga gondoskodik róla.</p>
+
+ 
+<p>A program kimenete:</p>
+
+<codep>Arithmetic problem!
+THE END.</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+<br>
+
+<p>Az is lehetséges, hogy a kivétel a <strong>függvényen kívülre</strong> terjedjen. Most teszteljük le.</p>
+
+<p>Nézd meg az alábbi kódot:</p>
+
+<codep class="syntax-color copy line-numbers">def bad_fun(n):
+    return 1 / n
+
+try:
+    bad_fun(0)
+except ArithmeticError:
+    print("What happened? An exception was raised!")
+
+print("THE END.")
+</codep>
+
+<br>
+
+<p>A problémát a hívónak (vagy a hívó hívójának, és így tovább) kell megoldania.</p>
+
+<p>A program kimenete:</p>
+
+<codep>What happened? An exception was raised!
+THE END.</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+<br> 
+
+<p>Megjegyzés: a <strong>kiváltott kivétel átlépheti a függvény- és modulhatárokat</strong>, és végigjárhatja a hívási láncot, keresve egy megfelelő <codel>except</codel> záradékot, amely képes kezelni azt.</p>
+
+<p>Ha nincs ilyen záradék, a kivétel kezeletlen marad, és a Python a szokásos módon oldja meg a problémát – <strong>a kód befejezésével és egy diagnosztikai üzenet kiírásával</strong>.</p>
+
+<p>Most felfüggesztjük ezt a beszélgetést, mert szeretnénk bemutatni egy vadonatúj Python utasítást.</p>
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

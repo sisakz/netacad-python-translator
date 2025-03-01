@@ -1,0 +1,76 @@
+<problem chapter='3' section='1' slide='1' problem='5' title='The foundations of OOP'>
+
+<!--
+Update history:
+2020-09-30 Grzegorz (review, PEP-8 compliance check, update)
+2020-10-26 Grzegorz (Sentence fix: The object's home class may define new traits (as well as requirements and qualities) which will be inherited by any of its subclasses.)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h1>What is an object?</h1>
+
+
+<p>A class (among other definitions) is a <strong>set of objects</strong>. An object is <strong>a being belonging to a class</strong>.</p>
+
+
+<p>An object is <strong>an incarnation of the requirements, traits, and qualities assigned to a specific class</strong>. This may sound simple, but note the following important circumstances. Classes form a hierarchy.</p>
+
+<p>This may mean that an object belonging to a specific class belongs to all the superclasses at the same time. It may also mean that any object belonging to a superclass may not belong to any of its subclasses.</p>
+
+<p>For example: any personal car is an object belonging to the <i>wheeled vehicles</i> class. It also means that the same car belongs to all superclasses of its home class; therefore, it is a member of the <i>vehicles</i> class, too.</p>
+
+<p>Your dog (or your cat) is an object included in the <i>domesticated mammals</i> class, which explicitly means that it is included in the <i>animals</i> class as well.</p>
+
+<p>Each <strong>subclass is more specialized</strong> (or more concrete) than its superclass. Conversely, each <strong>superclass is more general</strong> (more abstract) than any of its subclasses.</p>
+
+<p>Note that we've presumed that a class may only have one superclass – this is not always true, but we'll discuss this issue more a bit later.</p>
+
+
+<br>
+<br> 
+
+
+
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<h2>Inheritance</h2>
+
+<p>Let's define one of the fundamental concepts of object programming, named <strong>inheritance</strong>. Any object bound to a specific level of a class hierarchy <strong>inherits all the traits (as well as the requirements and qualities) defined inside any of the superclasses</strong>.</p>
+
+<p>The object's home class may define new traits (as well as requirements and qualities) which will be inherited by any of its subclasses.</p>
+
+
+
+<img src="/uploads/media/default/0001/01/a099081349764cfda3d91329ee4a3345643802d4.png" alt="The inheritance concept" width="75%">
+<br>
+<br> 
+
+
+<p>You shouldn't have any problems matching this rule to specific examples, whether it applies to animals, or to vehicles.</p>
+
+<br>
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

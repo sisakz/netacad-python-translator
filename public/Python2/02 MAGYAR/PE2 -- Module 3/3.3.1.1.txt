@@ -1,0 +1,126 @@
+<problem chapter='3' section='3' slide='1' problem='1' title='OOP: Tulajdonságok'>
+
+<!--
+Update history:
+2020-09-30 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+    <h1>Példányváltozók</h1>
+
+    <p>Általánosságban elmondható, hogy egy osztály kétféle adattípussal is felruházható az osztály tulajdonságainak kialakításához. Az egyiket már láthattuk, amikor a vermeket néztük meg.</p>
+
+    <p>Ez a fajta osztálytulajdonság akkor és csak akkor létezik, ha kifejezetten létrehozzák és hozzáadják egy objektumhoz. Mint már tudjuk, ez megtehető az objektum inicializálása során, amelyet a konstruktor végez el.</p>
+
+    <p>Ráadásul az objektum életének bármelyik pillanatában elvégezhető. Továbbá bármely meglévő tulajdonság bármikor eltávolítható.</p>
+
+    <p>Az ilyen megközelítésnek van néhány fontos következménye:</p>
+
+<ul>
+    <li>ugyanazon osztály különböző objektumai <strong>különböző tulajdonságkészletekkel rendelkezhetnek</strong>;</li>
+    <li>kell lennie egy módnak arra, hogy <strong>biztonságosan ellenőrizzük, hogy egy adott objektum birtokolja-e</strong> a használni kívánt <strong>tulajdonságot</strong> (hacsak nem akarunk kivételt kiváltani - ezt mindig érdemes megfontolni).</li>
+    <li>minden objektum <strong>saját tulajdonságkészletet hordoz</strong> – ezek semmilyen módon nem befolyásolják egymást.</li>
+</ul>
+ 
+
+<p>Az ilyen változókat (tulajdonságokat) <strong>példányváltozóknak</strong> nevezzük.</p>
+
+<p>A <i>példány</i> szó azt sugallja, hogy ezek szorosan kapcsolódnak az objektumokhoz (amelyek osztálypéldányok), nem pedig magukhoz az osztályokhoz. Nézzük meg őket közelebbről.</p>
+
+<p>Íme egy példa:</p>
+
+<codep class="syntax-color copy line-numbers">class ExampleClass:
+    def __init__(self, val = 1):
+        self.first = val
+
+    def set_second(self, val):
+        self.second = val
+
+
+example_object_1 = ExampleClass()
+example_object_2 = ExampleClass(2)
+
+example_object_2.set_second(3)
+
+example_object_3 = ExampleClass(4)
+example_object_3.third = 5
+
+print(example_object_1.__dict__)
+print(example_object_2.__dict__)
+print(example_object_3.__dict__)
+</codep>
+
+<br> 
+<br>
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+
+
+<p>Ez további magyarázatra szorul, mielőtt még részletesebben kifejtenénk. Nézzük meg a kód utolsó három sorát!</p>
+
+<p>A Python-objektumok létrehozásukkor <strong>előre meghatározott tulajdonságok és metódusok kis készletével vannak ellátva</strong>. Minden objektum rendelkezik velük, akár akarjuk őket, akár nem. Az egyik ilyen egy <codel>__dict__</codel> nevű változó (ez egy szótár).</p>
+
+<p>A változó tartalmazza az összes olyan tulajdonság (változó) nevét és értékét, amelyet az objektum jelenleg hordoz. Használjuk fel ezt az objektum tartalmának biztonságos bemutatására.</p>
+
+ 
+<p>Nézzük most a kódot:</p>
+
+<ul>
+    <li>az <codel>ExampleClass</codel> nevű osztálynak van egy konstruktora, amely <strong>feltétel nélkül létrehoz egy</strong> <codel>first</codel> nevű <strong>példányváltozót</strong> és beállítja azt az első argumentumon keresztül átadott értékkel (az osztály felhasználójának szemszögéből) vagy a második argumentummal (a konstruktor szemszögéből); figyeljük meg a paraméter alapértelmezett értékét - minden trükk, amit egy hagyományos függvényparaméterrel megtehetünk, alkalmazható a metódusokra is;</li>
+<br>
+
+<li>az osztálynak van egy <strong>metódusa is, amely létrehoz egy másik példányváltozót</strong>, a <codel>second</codel> nevű <strong>változót</strong>;</li>
+<br>
+
+<li>létrehoztuk az <codel>ExampleClass</codel> osztály három objektumát, de ezek a példányok különböznek egymástól:</li>
+
+<br><ul>
+        <li>Az <codel>example_object_1</codel> csak a <codel>first</codel> nevű tulajdonsággal rendelkezik;</li>
+<br>
+        <li>Az <codel>example_object_2</codel> két tulajdonsággal rendelkezik: <codel>first</codel> és <codel>second</codel>;</li>
+<br>
+<li>Az <codel>example_object_3</codel> egy <codel>third</codel> nevű tulajdonsággal lett bővítve, csak úgy menet közben, az osztály kódján kívül - ez lehetséges és teljesen megengedett.</li>
+<br>
+</ul>
+</ul>
+
+ 
+<p>A program kimenete egyértelműen mutatja, hogy a feltételezéseink helyesek - íme:</p>
+
+<codep>{'first': 1}
+{'second': 3, 'first': 2}
+{'third': 5, 'first': 4}</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+<p>Van egy további következtetés, amelyet itt ki kell mondani: <strong>bármely objektum példányváltozójának módosítása nincs hatással az összes többi objektumra</strong>. A példányváltozók tökéletesen elszigeteltek egymástól.</p>
+
+<br>
+<br>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

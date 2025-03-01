@@ -1,0 +1,499 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+PE2 - Module 4 Quiz
+
+Update history:
+2020-10-16 Grzegorz (file creation, reformatting, PEP-8 compliance, dividing content into Quiz 3 and Quiz 4, adding new items)
+-->
+
+<questionPool>
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE2_Q4_ITEM_1">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+    <p><span class="label">Q:</span>&nbsp;&nbsp; Mi a következő kód várható kimenete?</p>
+
+<p><codep>def my_fun():
+    for num in range(3):
+        yield num
+
+
+for i in my_fun():
+    print(i)
+
+</codep></p>
+
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p><codep>0
+1
+2</codep></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p></codep>SyntaxError</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codep>generator object my_fun at <i>valamilyen hexa számértéken</i></codep></p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE2_Q4_ITEM_2">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+    <p><span class="label">Q:</span>&nbsp;&nbsp; Mi a következő kód várható kimenete?</p>
+
+<p><codep>foo = [i + i for i in range(5)]
+print(foo)
+
+</codep></p>
+
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p><codep>[0, 2, 4, 6, 8]</codep></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codep>[1, 3, 5, 7, 9]</codep></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codep>0
+2
+4
+6
+8</codep></p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+
+<question type="1" scoringType="1" points="1" customId="PE2_Q4_ITEM_3">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+    <p><span class="label">Q:</span>&nbsp;&nbsp; Mi a következő kód várható kimenete?</p>
+
+<p><codep>x = lambda a, b: a ** b
+print(x(2, 10))
+
+</codep></p>
+
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p><codep>1024</codep></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codep>2222222222</codep></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codep>SyntaxError</codep></p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+
+<question type="2" scoringType="1" points="1" customId="PE2_Q4_ITEM_4">  <!-- Multiple-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+    <p><span class="label">Q:</span>&nbsp;&nbsp; Válaszd ki az <u>igaz</u> állítások a <codel>map()</codel> függvénnyel kapcsolatban. (Válassz ki <u>két</u> lehetőséget.)</p>
+
+<br>
+
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>A <codel>map()</codel> függvény <b>kettőnél</b> több</b> argumentumot is elfogad.</p> ]]>
+</option>
+
+<option isCorrect="true">
+    <![CDATA[ <p>A <codel>map()</codel> függvény második argumentuma lehet egy lista.</p>  ]]>
+</option>
+
+<option>
+<![CDATA[ <p>A <codel>map()</codel> függvény első argumentuma lehet egy lista.</p> ]]>
+</option>
+
+<option>
+    <![CDATA[ <p>A <codel>map()</codel> függvény <b>csak</b> két argumentumot fogad el.</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+<question type="2" scoringType="1" points="1" customId="PE2_Q4_ITEM_5">  <!-- Multiple-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+    <p><span class="label">Q:</span>&nbsp;&nbsp; Válaszd ki az <u>igaz</u> állítások a <codel>filter()</codel> függvénnyel kapcsolatban. (Válassz ki <u>két</u> lehetőséget.)</p>
+
+<br>
+
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>A <codel>filter()</codel> függvény szintaxisa a következő: <codel>filter(function, iterable)</codel></p> ]]>
+</option>
+
+<option isCorrect="true">
+    <![CDATA[ <p>A <codel>filter()</codel> függvény egy iterátort ad vissza</p>  ]]>
+</option>
+
+<option>
+<![CDATA[ <p>A <codel>filter()</codel> függvény <b>nem</b> ad vissza iterátort</p> ]]>
+</option>
+
+<option>
+    <![CDATA[ <p>A <codel>filter()</codel> függvény szintaxisa a következő: <codel>filter(iterable, function)</codel></p>     ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+
+<question type="1" scoringType="1" points="1" customId="PE2_Q4_ITEM_6">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+    <p><span class="label">Q:</span>&nbsp;&nbsp; Mi a következő kód várható kimenete?</p>
+
+<p><codep>numbers = (1, 2, 5, 9, 15)
+
+def filter_numbers(num):
+    nums = (1, 5, 17)
+    if num in nums:
+        return True
+    else:
+        return False
+
+
+filtered_numbers = filter(filter_numbers, numbers)
+for n in filtered_numbers:
+    print(n)
+
+</codep></p>
+
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p><codep>1
+5</codep></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codep>2, 9, 15</codep></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codep>SyntaxError</codep></p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+
+<question type="2" scoringType="1" points="1" customId="PE2_Q4_ITEM_7">  <!-- Multiple-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+    <p><span class="label">Q:</span>&nbsp;&nbsp; Az alábbi állítások közül melyik <u>igaz</u>? (Válassz ki <u>két</u> lehetőséget.)</p>
+
+<br>
+
+
+]]>
+</instructions>
+
+
+<options>
+
+    <option isCorrect="true">
+        <![CDATA[ <p>A listaleképezés akkor válik generátorrá, ha kerek zárójelek között (azaz <codel>()</codel>), és nem pedig szögletes zárójelek között (azaz <codel>[]</codel>) használjuk.</p> ]]>
+    </option>
+
+<option isCorrect="true">
+<![CDATA[ <p>A <codel>map()</codel> függvény létrehoz egy másolatot a második argumentumáról, és az első argumentumot alkalmazza rá.</p> ]]>
+</option>
+
+<option>
+    <![CDATA[ <p>A <codel>yield</codel> utasítást függvényeken kívül kell használni</p>  ]]>
+</option>
+
+<option>
+<![CDATA[ <p>A <codel>lambda</codel> függvény deklarációja megegyezik egy hagyományos függvény deklarációjával</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+
+
+<question type="1" scoringType="1" points="1" customId="PE2_Q4_ITEM_8">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+    <p><span class="label">Q:</span>&nbsp;&nbsp; A két alapvető, egymást kizáró fájlmegnyitási mód neve:</p>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>bináris és szöveges</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>bináris és trinális</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>szöveg és kép</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE2_Q4_ITEM_9">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+    <p><span class="label">Q:</span>&nbsp;&nbsp; Annak a metódusnak a neve, amely képes fájlból adatokat olvasni egy bytearray objektumba:</p>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p><codel>readinto()</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>readout()</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>readin()</codel></p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+<question type="1" scoringType="1" points="1" customId="PE2_Q4_ITEM_10">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+    <p><span class="label">Q:</span>&nbsp;&nbsp; Mi történik, ha a következő kódot futtatjuk, feltételezve, hogy a <codel>d</codel> könyvtár már létezik?</p>
+
+<p><codep>import os
+os.mkdir("/a/b/c/d")
+
+</codep></p>
+
+]]>
+</instructions>
+
+
+<options>
+
+    <option isCorrect="true">
+        <![CDATA[ <p>Egy <codel>FileExistsError</codel> kivétel keletkezik.</p>  ]]>
+    </option>
+
+<option>
+<![CDATA[ <p>Egy <codel>DirectoryExistsError</codel> kivétel keletkezik.</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>A Python felülírja a meglévő könyvtárat</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+<question type="1" scoringType="1" points="1" customId="PE2_Q4_ITEM_11">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+    <p><span class="label">Q:</span>&nbsp;&nbsp; Mi történik, ha a következő kódot futtatjuk?</p>
+
+<p><codep>import time
+
+time.sleep(30)
+print("Wake up!")
+
+</codep></p>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>A képernyőn 30 másodperc elteltével megjelenik az <codel>Wake up!</codel> karakterlánc.</p> ]]>
+</option>
+
+<option>
+    <![CDATA[ <p>A <codel>Wake up!</codel> karakterlánc harmincszor jelenik meg a képernyőn 30 másodpercig.</p>     ]]>
+</option>
+
+<option>
+    <![CDATA[ <p>A <codel>Wake up!</codel> karakterlánc 30 másodpercig fog megjelenni a képernyőn.</p>  ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+<question type="1" scoringType="1" points="1" customId="PE2_Q4_ITEM_12">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+    <p><span class="label">Q:</span>&nbsp;&nbsp; Mi a következő kód várható kimenete?</p>
+
+<p><codep>import calendar
+
+cal = calendar.isleap(2019)
+print(cal)
+
+</codep></p>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p><codel>False</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>True</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>None</codel></p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+</questionPool>

@@ -1,0 +1,46 @@
+﻿<problem chapter='4' section='5' slide='1' problem='13' title='The datetime and time modules (continued)'>
+
+<!--
+Update history:
+2020-03-30 Sebastian (first version)
+2020-10-12 Grzegorz (file creation, review, PEP-8 compliance check)
+-->
+
+<code>from datetime import datetime
+
+print("today:", datetime.today())
+print("now:", datetime.now())
+print("utcnow:", datetime.utcnow())
+
+</code>
+
+
+
+<h1>Methods that return the current date and time</h1>
+
+
+<p>The <codel>datetime</codel> class has several methods that return the current date and time. These methods are:</p>
+
+<ul>
+<li><codel>today()</codel> — returns the current local date and time with the <i>tzinfo</i> attribute set to <i>None</i>;</li>
+<li><codel>now()</codel> — returns the current local date and time the same as the <i>today</i> method, unless we pass the optional argument <i>tz</i> to it. The argument of this method must be an object of the <i>tzinfo</i> subclass;</li>
+<li><codel>utcnow()</codel> — returns the current UTC date and time with the <i>tzinfo</i> attribute set to <i>None</i>.</li>
+</ul>
+
+<p>Run the code in the editor to see them all in practice. What can you say about the output?</p>
+
+<p>As you can see, the result of all the three methods is the same. The small differences are caused by the time elapsed between subsequent calls.</p>
+
+<p><b>Note:</b> You can read more about <i>tzinfo</i> objects in the documentation.</p>
+
+
+
+
+<br>
+<br>
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

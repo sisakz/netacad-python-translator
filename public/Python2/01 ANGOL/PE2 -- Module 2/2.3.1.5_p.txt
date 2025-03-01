@@ -1,0 +1,64 @@
+<problem chapter='2' section='3' slide='1' problem='5' title='String methods'>
+
+<!--
+Update history:
+2020-09-22 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>
+# Demonstrating the isalnum() method:
+print('lambda30'.isalnum())
+print('lambda'.isalnum())
+print('30'.isalnum())
+print('@'.isalnum())
+print('lambda_30'.isalnum())
+print(''.isalnum())
+
+</code>
+
+
+
+<h1>The <font face="Courier New">isalnum()</font> method</h1>
+
+<p>The parameterless method named <codel>isalnum()</codel> <strong>checks if the string contains only digits or alphabetical characters (letters), and returns <codel>True</codel> or <codel>False</codel></strong> according to the result.</p>
+
+<p>Look at the example in the editor and run it.</p>
+
+<p>Note: any string element that is not a digit or a letter causes the method to return <codel>False</codel>. An empty string does, too.</p>
+
+<p>The example output is:</p>
+
+<codep>True
+True
+True
+False
+False
+False</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+<p>Three more intriguing examples are here:</p>
+
+<codep class="syntax-color copy">t = 'Six lambdas'
+print(t.isalnum())
+
+t = '&Alpha;&beta;&Gamma;&delta;'
+print(t.isalnum())
+
+t = '20E1'
+print(t.isalnum())
+</codep>
+<br>
+
+<p>Run them and check their output.</p>
+
+<p>Hint: the cause of the first result is a space – it's neither a digit nor a letter.</p>
+
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

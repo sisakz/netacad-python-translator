@@ -1,0 +1,499 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+PE2 - Module 4 Quiz
+
+Update history:
+2020-10-16 Grzegorz (file creation, reformatting, PEP-8 compliance, dividing content into Quiz 3 and Quiz 4, adding new items)
+-->
+
+<questionPool>
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE2_Q4_ITEM_1">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; What is the expected output of the following code?</p>
+
+<p><codep>def my_fun():
+    for num in range(3):
+        yield num
+
+
+for i in my_fun():
+    print(i)
+
+</codep></p>
+
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p><codep>0
+1
+2</codep></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p></codep>SyntaxError</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codep>generator object my_fun at <i>some hex number</i></codep></p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE2_Q4_ITEM_2">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; What is the expected output of the following code?</p>
+
+<p><codep>foo = [i + i for i in range(5)]
+print(foo)
+
+</codep></p>
+
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p><codep>[0, 2, 4, 6, 8]</codep></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codep>[1, 3, 5, 7, 9]</codep></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codep>0
+2
+4
+6
+8</codep></p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+
+<question type="1" scoringType="1" points="1" customId="PE2_Q4_ITEM_3">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; What is the expected output of the following code?</p>
+
+<p><codep>x = lambda a, b: a ** b
+print(x(2, 10))
+
+</codep></p>
+
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p><codep>1024</codep></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codep>2222222222</codep></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codep>SyntaxError</codep></p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+
+<question type="2" scoringType="1" points="1" customId="PE2_Q4_ITEM_4">  <!-- Multiple-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; Select the <u>true</u> statements about the <codel>map()</codel> function. (Select <u>two</u> answers)</p>
+
+<br>
+
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>The <codel>map()</codel> function can accept <b>more than</b> two arguments</p> ]]>
+</option>
+
+<option isCorrect="true">
+<![CDATA[ <p>The second <codel>map()</codel> function argument can be a list</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>The first <codel>map()</codel> function argument can be a list</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>The <codel>map()</codel> function can accept <b>only</b> two arguments</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+<question type="2" scoringType="1" points="1" customId="PE2_Q4_ITEM_5">  <!-- Multiple-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; Select the <u>true</u> statements about the <codel>filter()</codel> function. (Select <u>two</u> answers)</p>
+
+<br>
+
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>The <codel>filter()</codel> function has the following syntax: <codel>filter(function, iterable)</codel></p> ]]>
+</option>
+
+<option isCorrect="true">
+<![CDATA[ <p>The <codel>filter()</codel> function returns an iterator</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>The <codel>filter()</codel> function does <b>not</b> return an iterator</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>The <codel>filter()</codel> function has the following syntax: <codel>filter(iterable, function)</codel></p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+
+<question type="1" scoringType="1" points="1" customId="PE2_Q4_ITEM_6">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; What is the expected output of the following code?</p>
+
+<p><codep>numbers = (1, 2, 5, 9, 15)
+
+def filter_numbers(num):
+    nums = (1, 5, 17)
+    if num in nums:
+        return True
+    else:
+        return False
+
+
+filtered_numbers = filter(filter_numbers, numbers)
+for n in filtered_numbers:
+    print(n)
+
+</codep></p>
+
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p><codep>1
+5</codep></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codep>2, 9, 15</codep></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codep>SyntaxError</codep></p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+
+<question type="2" scoringType="1" points="1" customId="PE2_Q4_ITEM_7">  <!-- Multiple-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; Which of the following statements are <u>true</u>? (Select <u>two</u> answers)</p>
+
+<br>
+
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>A list comprehension becomes a generator when used inside round brackets (i.e., <codel>()</codel>), not square brackets (i.e., <codel>[]</codel>)</p> ]]>
+</option>
+
+<option isCorrect="true">
+<![CDATA[ <p>The <codel>map()</codel> function creates a copy of its second argument, and applies the first argument to it</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>The <codel>yield</codel> statement must be used outside functions</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>The declaration of the <codel>lambda</codel> function is the same as the declaration of a regular function</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+
+
+<question type="1" scoringType="1" points="1" customId="PE2_Q4_ITEM_8">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; The two basic, mutually exclusive, file open modes are named:</p>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>binary and text</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>binary and ternary</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>text and image</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE2_Q4_ITEM_9">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; A method able to read data from a file into a byte array object, is named:</p>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p><codel>readinto()</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>readout()</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>readin()</codel></p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+<question type="1" scoringType="1" points="1" customId="PE2_Q4_ITEM_10">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; What happens if you run the following code, assuming that the <codel>d</codel> directory already exists?</p>
+
+<p><codep>import os
+os.mkdir("/a/b/c/d")
+
+</codep></p>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>A <codel>FileExistsError</codel> exception will be raised</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>A <codel>DirectoryExistsError</codel> exception will be raised</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>Python will overwrite the existing directory</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+<question type="1" scoringType="1" points="1" customId="PE2_Q4_ITEM_11">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; What happens if you run the following code?</p>
+
+<p><codep>import time
+
+time.sleep(30)
+print("Wake up!")
+
+</codep></p>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>The string <codel>Wake up!</codel> will be displayed on the screen after 30 seconds</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>The string <codel>Wake up!</codel> will be displayed thirty times on the screen for 30 seconds</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>The string <codel>Wake up!</codel> will be displayed on the screen for 30 seconds</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+<question type="1" scoringType="1" points="1" customId="PE2_Q4_ITEM_12">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; What is the expected output of the following code?</p>
+
+<p><codep>import calendar
+
+cal = calendar.isleap(2019)
+print(cal)
+
+</codep></p>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p><codel>False</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>True</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>None</codel></p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+</questionPool>

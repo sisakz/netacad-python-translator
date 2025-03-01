@@ -1,0 +1,66 @@
+<problem chapter='4' section='5' slide='1' problem='21' title='The datetime and time modules (continued)'>
+
+<!--
+Update history:
+2020-03-30 Sebastian (first version)
+2020-10-12 Grzegorz (file creation, review, PEP-8 compliance check)
+-->
+
+<code>from datetime import timedelta
+from datetime import date
+from datetime import datetime
+
+delta = timedelta(weeks=2, days=2, hours=2)
+print(delta)
+
+delta2 = delta * 2
+print(delta2)
+
+d = date(2019, 10, 4) + delta2
+print(d)
+
+dt = datetime(2019, 10, 4, 14, 53) + delta2
+print(dt)
+
+</code>
+
+
+
+<h1>Creating <font face="Courier New">timedelta</font> objects: continued</h1>
+
+<p>You already know how the <codel>timedelta</codel> object stores the passed arguments internally. Let's see how it can be used in practice.</p>
+
+<p>Look at some operations supported by the <codel>datetime</codel> module classes. Run the code we've provided in the editor.</p>
+
+
+<p>Result:</p>
+
+<codep>16 days, 2:00:00
+32 days, 4:00:00
+2019-11-05
+2019-11-05 18:53:00</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+
+
+<p>The <codel>timedelta</codel> object can be multiplied by an integer. In our example, we multiply the object representing 16 days and 2 hours by 2. As a result, we receive a <codel>timedelta</codel> object representing 32 days and 4 hours.</p>
+
+<p>Note that both days and hours have been multiplied by 2. Another interesting operation using the <codel>timedelta</codel> object is adding. In the example, we've added the <codel>timedelta</codel> object to the <i>date</i> and <codel>datetime</codel> objects.</p>
+
+<p>As a result of these operations, we receive <i>date</i> and <codel>datetime</codel> objects increased by days and hours stored in the <codel>timedelta</codel> object.</p>
+
+
+<p>The presented multiplication operation allows you to quickly increase the value of the <codel>timedelta</codel> object, while multiplication can also help you get a date from the future.</p>
+
+<p>Of course, the <codel>timedelta</codel>, <codel>date</codel>, and <codel>datetime</codel> classes support many more operations. We encourage you to familiarize yourself with them in the documentation.</p>
+
+
+
+<br>
+<br>
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

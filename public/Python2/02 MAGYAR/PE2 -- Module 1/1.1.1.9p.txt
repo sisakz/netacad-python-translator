@@ -1,0 +1,55 @@
+<problem chapter='1' section='1' slide='1' problem='9' title='Modul importálása | * és as'>
+
+<!--
+Update history:
+2020-08-28 Grzegorz (review, PEP-8 compliance check, update)
+2021-06-16 Grzegorz (review)
+-->
+
+<code>from module import *
+
+</code>
+
+<h1>Modul importálása: *</h1>
+
+<p>A harmadik módszerben az <codel>import</codel> szintaktikája a korábban bemutatott szintaktika egy agresszívabb formája:</p>
+
+<codep class="syntax-color">from module import *
+</codep>
+
+<br>
+
+<p>Amint láthatod, az entitás neve (vagy az entitások neveinek listája) egyetlen csillaggal (<codel>*</codel>) van helyettesítve.</p>
+
+<p>Egy ilyen utasítás <strong>a megadott modul összes entitását importálja</strong>.</p>
+
+<p>Kényelmes? Igen, mivel megszabadít az összes szükséges név felsorolásának kényszerétől.</p>
+
+<p>Nem biztonságos? Bizony, nem az - hacsak nem ismered a modulban megadott összes nevet, <strong>nem biztos, hogy el tudod kerülni a névütközéseket</strong>. Tekintsd ezt ideiglenes megoldásnak, és próbáld meg nem használni a kódjaidban.</p>
+
+<br>
+
+<h2>Modul importálása: az <font face="Courier New">as</font> kulcsszó</h2>
+
+<p>Ha az import modul változatot használod, és nem tetszik egy adott modul neve (például, mert megegyezik az egyik már definiált entitásoddal, így a minősítés problémássá válik), akkor bármilyen nevet adhatsz neki - ezt az ún. álnevet hívjuk <strong>alias</strong>-nak.</p>
+
+<p>Az álnév használatával a modul az eredetitől eltérő néven azonosítható. Ez a minősített neveket is lerövidítheti.</p>
+
+<p>Az alias létrehozása a modul importálásával együtt történik, és az import utasítás következő formáját követeli meg:</p>
+
+<codep class="syntax-color">import module as alias
+</codep>
+
+<br>
+
+<p>A "modul" az eredeti modul nevét azonosítja, míg az "alias" az a név, amelyet az eredeti helyett használni kívánsz.</p>
+
+<p>Megjegyzés: az <codel>as</codel> egy kulcsszó.</p>
+
+
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

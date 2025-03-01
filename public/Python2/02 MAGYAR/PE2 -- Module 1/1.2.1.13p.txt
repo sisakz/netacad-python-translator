@@ -1,0 +1,47 @@
+<problem chapter='1' section='2' slide='1' problem='13' title='Fontos modulok | platform'>
+
+<!--
+Update history:
+2020-08-31 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>from platform import system
+
+print(system())
+
+</code>
+
+<h1>A <font face="Courier New">platform</font> modul fontosabb függvényei (folytatás)</h1>
+
+<p><b>A <font face="Courier New">system</font> függvény</b></p>
+
+<p>A <codel>system()</codel> nevû függvény az operációs rendszer alapnevét karakterláncként adja vissza.</p>
+
+<p>A mi példaplatformjaink így mutatkoztak be:</p>
+
+<p><strong>Intel x86 + Windows &reg; Vista (32 bit)</strong>:</p>
+
+<codep>Windows</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+
+<p><strong>Intel x86 + Gentoo Linux (64 bit)</strong>:</p>
+
+<codep>Linux</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+
+<p><strong>Raspberry PI2 + Raspbian Linux (32 bit)</strong>:</p>
+
+<codep>Linux</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

@@ -1,0 +1,122 @@
+<problem chapter='4' section='2' slide='1' problem='9' title='Fájlkezelés'>
+
+<!--
+Update history:
+2020-10-07 Grzegorz (review, PEP-8 compliance check)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+    <h2>A fájlobjektum első megnyitása</h2>
+
+    <p>Képzeljük el, hogy egy olyan programot szeretnénk fejleszteni, amely beolvassa a következő szöveges fájl tartalmát: <font face="Courier New">C:\Users\User\Desktop\file.txt</font>.</p>
+
+    <p>Hogyan nyissuk meg ezt a fájlt olvasásra? Az ide vonatkozó kódrészlet:</p>
+
+<codep class="syntax-color copy line-numbers">try:
+    stream = open("C:\Users\User\Desktop\file.txt", "rt")
+    # Processing goes here.
+    stream.close()
+except Exception as exc:
+    print("Cannot open the file:", exc)
+</codep>
+<br>
+
+<p>Mi történik itt?</p>
+
+<ul>
+    <li>megnyitjuk a try-except blokkot, mivel a futásidejű hibákat kíméletesen akarjuk kezelni;</li>
+    <li>az <codel>open()</codel> függvényt használjuk, hogy megpróbáljuk megnyitni a megadott fájlt (figyeljük meg, hogy miként adtuk meg a fájl nevét);</li>
+    <li>a megnyitási módot szövegként definiáljuk (mivel a <strong>szöveg az alapértelmezett beállítás</strong>, kihagyhatjuk a <codel>t</codel>-t a mód karakterláncból);</li>
+    <li>siker esetén kapunk egy objektumot az <codel>open()</codel> függvénytől, és hozzárendeljük a stream változóhoz;</li>
+    <li>ha az <codel>open()</codel> sikertelen, akkor a teljes hibainformációt kiírva kezeljük a kivételt (feltétlenül hasznos tudni, hogy pontosan mi történt).</li>
+
+</ul>
+
+
+<h2>Előre megnyitott fájlobjektumok</h2>
+
+<p>Korábban már említettük, hogy minden fájlobjektum műveletet meg kell előzzön az <codel>open()</codel> függvény meghívása. E szabály alól három jól meghatározott kivétel van.</p>
+
+<p>Amikor a programunk elindul, három fájlobjektum már nyitva van, és nem igényel különösebb előkészületeket. Mi több, a programunk kifejezetten használhatja ezeket a fájlobjektumokat, ha gondoskodunk a <codel>sys</codel> modul importálásáról:</p>
+
+<codep class="syntax-color">import sys
+</codep>
+<br>
+
+<p>mert itt található a három adatfolyam deklarációja.</p>
+
+
+
+<br> 
+<br>
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+
+<br>
+
+<p>E három fájlobjektum neve: <codel>sys.stdin</codel>, <codel>sys.stdout</codel>, és <codel>sys.stderr</codel>.</p>
+
+
+<p>Vizsgáljuk meg őket:</p>
+
+<ul>
+<li><codel>sys.stdin</codel></li>
+
+<ul>
+<li><font face="Courier New">stdin</font> (<i>standard input</i> - szabványos bemenet)</li>
+<li>az <codel>stdin</codel> fájlobjektum általában a billentyűzethez kapcsolódik, olvasásra előzetesen meg van nyitva, és a futó programok elsődleges adatforrásának tekinthető;</li>
+<li>a jól ismert <codel>input()</codel> függvény alapértelmezés szerint az <codel>stdin</codel>-ből olvassa az adatokat.</li>
+</ul>
+
+<br>
+
+<li><codel>sys.stdout</codel></li>
+
+<ul>
+<li><font face="Courier New">stdout</font> (<i>standard output</i> - szabványos kimenet)</li>
+<li>az <codel>stdout</codel> fájlobjektum általában a képernyőhöz kapcsolódik, írásra előzetesen meg van nyitva, a futó program által az adatok kimenetének elsődleges célpontja;</li>
+<li>a jól ismert<codel>print()</codel> függvény kiküldi az adatokat az <codel>stdout</codel> fájlobjektumba.</li>
+</ul>
+
+<br>
+
+<li><codel>sys.stderr</codel></li>
+
+<ul>
+
+<li><font face="Courier New">stderr</font> (<i>standard error output</i> - szabványos hibakimenet)</li>
+<li>az <codel>stderr</codel> fájlobjektum általában a képernyőhöz kapcsolódik, írásra előzetesen meg van nyitva, és a futó programok műveletei során felmerülő hibákról szóló információk kiküldésének elsődleges helye;</li>
+<li>még nem mutattunk be semmilyen módszert az adatok kiküldésére ebbe a fájlobjektumba (hamarosan meg fogjuk tenni, ígérjük).</li>
+<li>az <codel>stdout</codel> (a program által előállított hasznos eredmények) és az <codel>stderr</codel> (hibaüzenetek, amelyek kétségtelenül hasznosak, de nem szolgáltatnak eredményt) szétválasztása lehetőséget ad e kétféle információ különböző célú átirányítására. Ennek a kérdésnek a részletesebb tárgyalása meghaladja tanfolyamunk kereteit. Az operációs rendszer kézikönyve bővebb információt nyújt ezekről a kérdésekről.</li>
+</ul>
+
+</ul>
+
+<br>
+<br>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

@@ -1,0 +1,77 @@
+<problem chapter='4' section='3' slide='1' problem='9' title='Working with real files'>
+
+<!--
+Update history:
+2020-10-07 Grzegorz (review, PEP-8 compliance check)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+
+<h2>What is a bytearray?</h2>
+
+<p>Before we start talking about binary files, we have to tell you about one of the <strong>specialized classes Python uses to store amorphous data</strong>.</p>
+
+<p><strong>Amorphous data is data which have no specific shape or form</strong> – they are just a series of bytes.</p>
+
+<p>This doesn't mean that these bytes cannot have their own meaning, or cannot represent any useful object, such as bitmap graphics.</p>
+
+<p>The most important aspect of this is that in the place where we have contact with the data, we are not able to, or simply don't want to, know anything about it.</p>
+
+ 
+
+<p>Amorphous data cannot be stored using any of the previously presented means – they are neither strings nor lists.</p>
+
+<p>There should be a special container able to handle such data.</p>
+
+<br> 
+<br>
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+
+<br>
+
+
+
+<p>Python has more than one such container – one of them is <strong>a specialized class name bytearray</strong> – as the name suggests, it's <strong>an array containing (amorphous) bytes</strong>.</p>
+
+<p>If you want to have such a container, for example, in order to read in a bitmap image and process it in any way, you need to create it explicitly, using one of the available constructors.</p>
+
+<p>Take a look:</p>
+
+<codep class="syntax-color">data = bytearray(10)
+</codep>
+<br>
+
+<p>Such an invocation creates a bytearray object able to store ten bytes.</p>
+
+<p>Note: such a constructor <strong>fills the whole array with zeros</strong>.</p>
+
+
+<br>
+<br>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

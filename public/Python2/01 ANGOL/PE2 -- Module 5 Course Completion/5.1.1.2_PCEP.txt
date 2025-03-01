@@ -1,0 +1,72 @@
+<problem chapter='5' section='1' slide='1' problem='2' title='Earn PCEP certification'>
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h2>What is PCEP certification?</h2>
+
+
+<p><i>PCEP - Certified Entry-Level Python Programmer</i> certification shows that you are familiar with universal computer programming concepts like data types, containers, functions, conditions, and loops, as well as Python programming language syntax, semantics, and the runtime environment.</p>
+
+
+<img src="/uploads/media/default/0001/02/23021d04887ddd6b79d34f0cab969d758b17295a.png" width="40%" alt="PCEP badge" style="float:left; padding:20px;">
+
+Becoming PCEP certified ensures that you are acquainted with the most essential means provided by Python 3, which enable you to start your own studies at an intermediate level and to continue your professional development.
+
+<br><br>
+
+PCEP certification allows you to demonstrate that not only are you up to date with Python-related issues, but also that you can competently deal with them.
+
+<br><br>
+Furthermore, with the OpenEDG Python Institute, you gain access to a large network of Python programming professionals, a valuable resource for solving Python-related problems, and for developing innovative solutions.
+
+<br><br>
+
+Get your foot in the door with the <i>PCEP - Certified Entry-Level Python Programmer</i> certification. Land an entry-level programming job, break into the field, and gain the necessary skills, knowledge, and experience to advance your career.
+
+<br><br>
+
+<div style="clear: both;"></div>
+
+<br>
+
+</div>
+
+<div class="small-12 large-6 columns">
+
+<h2>How to become PCEP certified?</h2>
+
+
+<p>Upon completion of <i>Python Essentials 1</i>, you are prepared to attempt the qualification <a href="https://pythoninstitute.org/pcep-certification-entry-level/" target="_blank">PCEP - Certified Entry-Level Python Programmer</a>.</p>
+
+<p><b>Registration</b></p>
+<p>OpenEDG Python Institute Test Candidates can register and take the PCEP exam online via the <strong>OpenEDG Testing Service Platform</strong> available at <a href="https://edube.org" target="_blank">https://edube.org</a>.</p>
+
+<p>OpenEDG Python Institute PCEP exam sessions do not need to be scheduled in advance, and test candidates can register for and take exams on the same day (non-proctored exams).</p>
+
+<p><b>Test Candidate Account</b></p>
+
+<p>Prior to taking an exam, the candidate is required to create a <b>User Account</b> (Test Candidate Account) at <a href="https://edube.org/registration" target="_blank">https://edube.org/registration</a>. The candidate must provide their personal information and address, set up a secure password, and read and accept the Terms of Service. If you've been doing the <i>Python Essentials 1</i> course directly through <b>Edube Interactive</b>, this means that you already have your Test Candidate Account and you are not required to do anything else.</p>
+
+<p>Please note that once your account has been set up, you will no longer be able to edit some of the information associated with your profile (i.e., your name, email address, and date of birth), so please make sure all the details you provide in the registration form are correct.</p>
+
+
+
+
+<br>
+<br>
+
+</div>
+</div>
+</div>
+
+
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

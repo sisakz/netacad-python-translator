@@ -1,0 +1,73 @@
+<problem chapter='1' section='1' slide='1' problem='7' title='Modul importálása | math'>
+
+<!--
+Update history:
+2020-08-28 Grzegorz (review, PEP-8 compliance check, update)
+2021-06-16 Grzegorz (review)
+-->
+
+<code>
+</code>
+
+<h1>Modul importálása (folytatás)</h1>
+
+
+<p>A második módszerben az <codel>import</codel> szintaktikája pontosan rámutat arra, hogy a modul mely entitását (vagy entitásait) fogadjuk el a kódban:</p>
+
+<codep class="syntax-color">from math import pi
+</codep>
+
+<br>
+
+<p>Az utasítás a következő elemekből áll:</p>
+
+<ul>
+<li>a <codel>from</codel> kulcsszó;</li>
+<li>a (részlegesen) importálandó <strong>modul neve</strong>;</li>
+<li>az <codel>import</codel> kulcsszó;</li>
+<li>a névtérbe importálandó <strong>entitás/entitások neve vagy névlistája</strong>.</li>
+</ul>
+ 
+
+<p>Az utasításnak ez a hatása:</p>
+
+<ul>
+<li>a <strong>megadott modulból</strong> a felsorolt entitások (és csak azok) <strong>kerülnek importálásra</strong>;</li>
+<li>az importált entitások nevei <strong>korlátozás nélkül elérhetők</strong>.</li>
+</ul>
+ 
+
+<p>Megjegyzés: más entitások nem kerülnek importálásra. Sőt további entitásokat sem lehet használni, minősítéssel sem - egy ilyen sorral:</p>
+
+<codep class="syntax-color">print(math.e)
+</codep>,
+
+<br>
+
+<p>mert hibát fog okozni (az<codel>e</codel> Euler szám: 2.71828...)</p>
+
+<p>Írjuk át az előző szkriptet, hogy beépítsük az új technikát!</p>
+
+<p>Itt is van:</p>
+
+<codep class="syntax-color copy">from math import sin, pi
+
+print(sin(pi/2))
+</codep>
+
+<br>
+
+<p>A kimenetnek ugyanannak kell lennie, mint korábban, mivel ugyanazokat az entitásokat használtuk, mint korábban: <codel>1.0</codel>. Másold ki a kódot, illeszd be a szerkesztőbe, és futtasd a programot!</p>
+
+<p>Egyszerűbbnek tűnik a kód? Talán, de nem csak a kinézet az egyetlen hatása ennek a fajta importálásnak. Nézzük meg, mi még?</p>
+
+
+
+<br>
+<br>
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

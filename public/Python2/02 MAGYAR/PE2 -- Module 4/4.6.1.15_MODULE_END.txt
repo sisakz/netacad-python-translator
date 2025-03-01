@@ -1,0 +1,73 @@
+<problem chapter='4' section='6' slide='1' problem='15' title='Modul zárás'>
+
+<!--
+Update history:
+2020-10-18 Grzegorz (file creation)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+    <h1>Gratulálunk! Befejezted a <i>4. modult</i>.</h1>
+
+<br>
+
+
+<p>Szép munka! Elérted a 4. modul végét, és egy fontos mérföldkövet teljesítettél a Python programozási tanulmányaid során. Íme egy rövid összefoglaló a 4. modulban lefedett és megismert témákról:</p>
+
+<ul>
+    <li>generátorok és iterátorok;</li>
+
+    <li>listaképzések;</li>
+
+<li>a <i>lambda</i>, <i>map</i>, és <i>filter</i> függvények;</li>
+
+<li>closure-ök;</li>
+
+<li>fájlokkal való munka (fájl adatfolyam, fájlfeldolgozás, adatfolyamhibák diagnosztizálása);</li>
+
+<li>szöveges és bináris fájlok feldolgozása;</li>
+
+<li>kiválasztott Python STL-modulok: <i>os</i>, <i>datetime</i>, <i>time</i>, and <i>calendar</i>.</li>
+
+</ul>
+
+<br>
+
+<p>Most már készen állsz a modulkvíz kitöltésére és a végső kihívás teljesítésére: a 4. modul tesztje segít felmérni, hogy mit tanultál eddig.</p>
+
+
+<br>
+<br>
+
+</div>
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+
+
+<center><img src="/uploads/media/default/0001/01/29ed2aa31a1a26221e4eac3b69d973a33cbf562e.png" width="65%" alt="Module completion – congratulations"></center>
+<br>
+
+
+
+
+<br>
+
+</div>
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

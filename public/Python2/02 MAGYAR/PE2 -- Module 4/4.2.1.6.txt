@@ -1,0 +1,79 @@
+<problem chapter='4' section='2' slide='1' problem='6' title='Fájlkezelés'>
+
+<!--
+Update history:
+2020-10-07 Grzegorz (review, PEP-8 compliance check)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+    <h2>Fájlkezelők (folytatás)</h2>
+
+    <p>A fájlobjektum tartalmának típusa szerint az <strong>összes fájlobjektumot szöveges és bináris fájlobjektumokra osztjuk</strong>.</p>
+
+    <p>A szöveges fájlobjektumok sorokba rendezettek, azaz sorokba rendezett tipográfiai karaktereket (betűket, számjegyeket, írásjeleket, stb.) tartalmaznak, ahogy az szemmel is látható, amikor a szerkesztőprogramban megnézzük a fájl tartalmát.</p>
+
+    <p>Ezeket a fájlokat többnyire karakterenként, esetleg soronként írjuk (vagy olvassuk).</p>
+
+ 
+
+    <p>A bináris fájlobjektumok nem szöveget, hanem tetszőleges értékű bájtsorozatot tartalmaznak. Ez a sorozat lehet például egy futtatható program, egy kép, egy hang- vagy videoklip, egy adatbázisfájl stb.</p>
+
+    <p>Mivel ezek a fájlok nem tartalmaznak sorokat, az olvasások és írások bármilyen méretű adatrészletekre vonatkozhatnak. Az adatok olvasása/írása bájtonként vagy blokkonként történik, ahol a blokk mérete általában egytől egy tetszőlegesen választott értékig terjed.</p>
+
+ 
+
+    <p>Ezután jön egy kisebb probléma. A Unix/Linux rendszerekben a sorvégeket egyetlen <codel>LF</codel> (ASCII 10-es kódú) karakter jelöli, amelyet a Python programokban <codel>\n</codel>-ként jelölnek.</p>
+
+    <p>Más operációs rendszerek, különösen az ősi CP/M rendszerből származó rendszerek (ami a Windows család rendszereire is vonatkozik) más konvenciót használnak: a sor végét egy <codel>CR</codel> és <codel>LF</codel> karakterpár (13-as és 10-es ASCII kód) jelzi, amely <codel>\r\n</codel>-ként kódolható.</p>
+
+
+<br> 
+<br>
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+
+<br>
+
+
+
+<center><img src="/uploads/media/default/0001/01/4947f81ce6cd3f37d08c0b1f3657983360d22395.png" alt="Text vs. binary streams concept" width="70%"></center>
+<br><br>
+
+ 
+    <p>Ez a kettőség különböző kellemetlen következményekkel járhat.</p>
+
+    <p>Ha készítesz egy programot, amely egy szöveges fájl feldolgozásáért felelős, és Windows-ra írod, akkor a sorok végét felismerheted a <codel>\r\n</codel> karakterek keresésével, de ugyanez a program Unix/Linux környezetben teljesen használhatatlan lesz, és fordítva: a Unix/Linux rendszerekre írt program lehet, hogy Windows alatt használhatatlan lesz.</p>
+
+    <p>A program ilyen nemkívánatos tulajdonságait, amelyek megnehezítik vagy akadályozzák a program különböző környezetekben való használatát, <strong>non-portability</strong>-nek, magyarul hordozhatatlanságnak nevezzük.</p>
+
+    <p>Hasonlóképpen, a programnak azt a tulajdonságát, amely lehetővé teszi a különböző környezetekben történő végrehajtást, <strong>hordozhatóságnak</strong> nevezzük. Az ilyen tulajdonsággal rendelkező programot <strong>hordozható programnak</strong> nevezzük.</p>
+
+
+<br>
+<br>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

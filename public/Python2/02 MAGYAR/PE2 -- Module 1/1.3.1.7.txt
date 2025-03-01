@@ -1,0 +1,98 @@
+<problem chapter='1' section='3' slide='1' problem='7' title='Modulok és csomagok'>
+
+<!--
+Update history:
+2020-09-08 Grzegorz (review, PEP-8 compliance check, update)
+2021-06-29 Grzegorz (corrections)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h1>Az első csomagod: 3. lépés</h1>
+
+<p>Jelenleg így néz ki a fa:</p>
+
+<img class="lightbox" src="/uploads/media/default/0001/01/cac9cdda73323bfa0a86a4287de87230abb74df2.png" width="75%" alt="The relationship between modules - tree structure">
+<br><br> 
+
+    <p>Egy ilyen struktúra már majdnem egy csomag (a Python értelmében). De még hiányoznak belőle apró részletek ahhoz, hogy használható és működőképes legyen. Mindjárt kiegészítjük.</p>
+
+    <p>Ha feltételezzük, hogy az <font face="Courier New">extra</font> az <strong>újonnan lértehozott csomag</strong> neve (gondoljunk rá úgy, mint a  <strong>csomag gyökerére</strong>), akkor egy olyan elnevezési szabályt fogunk alkalmazni, amely lehetővé teszi, hogy egyértelműen megnevezzünk minden entitást a fából.</p>
+
+
+
+<br><br>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+<p>Például:</p>
+
+<ul>
+<li>a <font face="Courier New">tau</font> csomagból származó <codel>funT()</codel> nevű függvény helye a következőképpen írható le:
+
+<br><br><codep class="syntax-color">extra.good.best.tau.funT()
+</codep>
+
+<br></li>
+
+<li>az alábbi függvényjelölés:
+
+<br><br><codep class="syntax-color">extra.ugly.psi.funP()
+</codep>
+
+<br>
+
+abból ered, hogy a <font face="Courier New">psi</font> modul az <font face="Courier New">extra</font> csomag <font face="Courier New">ugly</font> alcsomagjában található.</li>
+</ul>
+
+<h2>Az első csomagod: 4. lépés</h2>
+
+<p>Két kérdésre kell választ adni:</p>
+
+<ul>
+    <li><b>hogyan</b> lehet egy ilyen fát (valójában egy részfát) valódi Python <b>csomaggá</b> alakítani (más szóval, hogyan lehet meggyőzni a Pythont, hogy egy ilyen fa nem csak egy rakás felesleges fájl, hanem egy modulhalmaz)?</li>
+    <li><b>hova</b> kell tenni a részfát, hogy a Python számára elérhető legyen?</li>
+</ul>
+ 
+
+<p>Az első kérdésre meglepő választ kaphatunk: a <strong>csomagok, akárcsak a modulok, inicializálást igényelhetnek</strong>.</p>
+
+<p>A modul inicializálása egy <i>független</i> kóddal történik (nem része semmilyen függvénynek), amely a modul fájljában található. Mivel a csomag nem egy fájl, ez a technika használhatatlan a csomagok inicializálására.</p>
+
+<p>Ehelyett egy másik trükköt kell használnod - a Python elvárja, hogy a csomag mappájában legyen egy nagyon egyedi nevű fájl: <font face="Courier New">__init__.py</font>.</p>
+
+ 
+<p>A fájl tartalma akkor kerül végrehajtásra, amikor a csomag bármelyik modulja <b>importálásra kerül</b>. Ha nem szeretnél semmilyen speciális inicializálást, a fájlt üresen is hagyhatod, de léteznie kell.</p>
+
+
+
+<br>
+<br>
+
+</div>
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

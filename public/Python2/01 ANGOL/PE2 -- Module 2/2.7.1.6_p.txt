@@ -1,0 +1,69 @@
+<problem chapter='2' section='7' slide='1' problem='6' title='The anatomy of exceptions | raise'>
+
+<!--
+Update history:
+2020-09-21 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>
+def bad_fun(n):
+    try:
+        return n / 0
+    except:
+        print("I did it again!")
+        raise
+
+
+try:
+    bad_fun(0)
+except ArithmeticError:
+    print("I see!")
+
+print("THE END.")
+
+</code>
+
+
+
+<h1>Exceptions: continued</h1>
+
+<p>The <codel>raise</codel> instruction may also be utilized in the following way (note the absence of the exception's name):</p>
+
+<codep class="syntax-color">raise
+</codep>
+<br>
+
+<p>There is one serious restriction: this kind of <codel>raise</codel> instruction may be used <strong>inside the <codel>except</codel> branch</strong> only; using it in any other context causes an error.</p>
+
+ 
+<p>The instruction will immediately re-raise the same exception as currently handled.</p>
+
+<br>
+
+<p>Thanks to this, you can distribute the exception handling among different parts of the code.</p>
+
+<p>Look at the code in the editor. Run it – we'll see it in action.</p>
+
+<p>The <font face="Courier New">ZeroDivisionError</font> is raised twice:</p>
+
+<ul>
+<li>first, inside the <codel>try</codel> part of the code (this is caused by actual zero division)</li>
+<li>second, inside the <codel>except</codel> part by the <codel>raise</codel> instruction.</li>
+</ul>
+ 
+
+<p>In effect, the code outputs:</p>
+
+<codep>I did it again!
+I see!
+THE END.</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

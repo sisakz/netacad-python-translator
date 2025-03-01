@@ -1,0 +1,58 @@
+<problem chapter='4' section='3' slide='1' problem='3' title='Working with real files'>
+
+<!--
+Update history:
+2020-10-07 Grzegorz (review, PEP-8 compliance check)
+2020-10-29 Grzegorz (code fix: strerror instead of strerr; removing line 10: ch = s.read(1) )
+2021-07-07 Grzegorz (code corrections - important!)
+-->
+
+<code>from os import strerror
+
+try:
+    counter = 0
+    stream = open('text.txt', "rt")
+    content = stream.read()
+    for char in content:
+        print(char, end='')
+        counter += 1
+    stream.close()
+    print("\n\nCharacters in file:", counter)
+except IOError as e:
+    print("I/O error occurred: ", strerr(e.errno))
+
+</code>
+
+
+
+<h1>Processing text files: continued</h1>
+
+
+<p>If you're absolutely sure that the file's length is safe and you can read the whole file to the memory at once, you can do it – the <codel>read()</codel> function, invoked without any arguments or with an argument that evaluates to <codel>None</codel>, will do the job for you.</p>
+
+<p>Remember – <strong>reading a terabyte-long file using this method may corrupt your OS</strong>.</p>
+
+<p>Don't expect miracles – computer memory isn't stretchable.</p>
+
+<p>Look at the code in the editor. What do you think of it?</p>
+
+<p>Let's analyze it:</p> 
+
+<ul>
+<li>open the file as previously;</li>
+<li>read its contents by one <codel>read()</codel> function invocation;</li>
+<li>next, process the text, iterating through it with a regular <codel>for</codel> loop, and updating the counter value at each turn of the loop;</li>
+</ul>
+ 
+<p>The result will be exactly the same as previously.</p>
+
+
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

@@ -1,0 +1,46 @@
+<problem chapter='4' section='6' slide='1' problem='11' title='A calendar modul'>
+
+<!--
+Update history:
+2020-03-30 Sebastian (first version)
+2020-10-13 Grzegorz (file creation, review, PEP-8 compliance check)
+-->
+
+<code>import calendar  
+
+c = calendar.Calendar()
+
+for iter in c.itermonthdays(2019, 11):
+    print(iter, end=" ")
+
+</code>
+
+<h1>Egyéb iterátorokat visszaadó metódusok</h1>
+
+<p>A <codel>Calendar</codel> osztály másik hasznos metódusa az <codel>itermonthdates</codel> nevű metódus, amely az évet és a hónapot várja paraméterként, majd egy iterátorban adja vissza a hónap napjait (egész számokkal jelölve).</p>
+
+<p>Nézd meg a példát a szerkesztőablakban.</p>
+
+<p>Amint láthatod, a példakódban kapott eredmény a hónap napjai előtt és után 0-kat tartalmaz. Ezek a megadott havi tartományon kívüli napok, amelyek a teljes hetek megjelenítéséhez szükségesek.</p>
+
+<p>Az első négy nulla a következő dátumokat jelenti: 2019/10/28 (hétfő) 2019/10/29 (kedd) 2019/10/30 (szerda) 2019/10/31 (csütörtök). A többi szám a hónap napjait jelöli, kivéve az utolsó 0 értéket, amely a 2019/12/01 (vasárnap) dátumot helyettesíti.</p>
+
+<p>A <codel>Calendar</codel> osztályban további négy hasonló metódus van, amelyek a visszaadott adatokban különböznek:</p>
+<ul>
+    <li><codel>itermonthdates2</codel> – a napokat a hónap napjának számából és a hét napjának számából álló tuple formájában adja vissza;</li>
+    <li><codel>itermonthdates3</codel> – a napokat év, hónap és a hónap napjának számából álló tuple formájában adja vissza. Ez a metódus a 3.7-es verzió óta elérhető;</li>
+    <li><codel>itermonthdates4</codel> – az év, a hónap, a hónap napja és a hét napja számokból álló tuple formájában adja vissza a napokat. Ez a metódus a Python 3.7-es verziója óta elérhető.</li>
+</ul>
+
+<p>Tesztelés céljából használd a fenti példát, és nézd meg, hogyan néznek ki a gyakorlatban a leírt metódusok visszatérési értékei.</p>
+
+
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

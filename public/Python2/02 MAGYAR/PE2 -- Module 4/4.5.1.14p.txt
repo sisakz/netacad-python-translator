@@ -1,0 +1,41 @@
+<problem chapter='4' section='5' slide='1' problem='14' title='A datetime és time modul (folytatás)'>
+
+<!--
+Update history:
+2020-03-30 Sebastian (first version)
+2020-10-12 Grzegorz (file creation, review, PEP-8 compliance check)
+-->
+
+<code>from datetime import datetime
+
+dt = datetime(2020, 10, 4, 14, 55)
+print("Timestamp:", dt.timestamp())
+
+</code>
+
+
+
+<h1>Idõbélyeg beszerzése</h1>
+
+
+<p>Az interneten számos olyan konverter érhetõ el, amely egy adott dátum és idõ ismeretében képes idõbélyeget kiszámítani, de hogyan tudjuk ezt a <codel>datetime</codel> modul segítségével megtenni?</p>
+
+<p>A <codel>timestamp</codel> osztály által biztosított <codel>datetime</codel> metódus segítségével lehetséges. Nézd meg a kódot a szerkesztõablakban.</p>
+
+<p>Eredmény:</p>
+
+<codep>Timestamp: 1601823300.0</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+<p>A <codel>timestamp</codel> metódus egy lebegõpontos valós értéket ad vissza, amely kifejezi a <i>datetime</i> objektum által megadott dátum és idõpont, valamint az 1970. január 1. 00:00:00 (UTC) között eltelt másodpercek számát.</p>
+
+
+
+<br>
+<br>
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

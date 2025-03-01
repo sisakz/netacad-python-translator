@@ -1,0 +1,49 @@
+<problem chapter='4' section='5' slide='1' problem='5' title='A datetime modul'>
+
+<!--
+Update history:
+2020-03-30 Sebastian (first version)
+2020-10-11 Grzegorz (review, PEP-8 compliance check)
+-->
+
+<code>from datetime import date
+
+d = date(1991, 2, 5)
+print(d)
+
+d = d.replace(year=1992, month=1, day=16)
+print(d)
+
+</code>
+
+
+
+<h1>A <font face="Courier New">replace()</font> metódus</h1>
+
+
+<p>Előfordulhat, hogy az évet, hónapot vagy napot más értékkel kell helyettesíteni. Ezt nem tehetjük meg az év, hónap és nap attribútumokkal, mivel ezek csak olvashatóak. Ebben az esetben a <codel>replace</codel> metódust használhatjuk.</p>
+
+<p>Futtasd a kódot a szerkesztőablakban.</p>
+
+<p>Eredmény:</p>
+
+<codep>1991-02-05
+1992-01-16</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+
+<p>A <i>year</i>, <i>month</i>, és <i>day</i> paraméterek nem kötelezőek. A <codel>replace</codel> metódushoz megadhatunk csak egy paramétert, például a <i>year</i>-t, vagy mindhármat, mint a példában.</p>
+
+<p>A <codel>replace</codel> metódus egy megváltozott dátum objektumot ad vissza, ezért nem szabad elfelejtenünk, hogy hozzárendeljük azt valamilyen változóhoz.</p>
+
+
+
+
+<br>
+<br>
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

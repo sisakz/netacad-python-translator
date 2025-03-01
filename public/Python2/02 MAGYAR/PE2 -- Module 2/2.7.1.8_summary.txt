@@ -1,0 +1,167 @@
+<problem chapter='2' section='7' slide='1' problem='8' title='SZAKASZ ÖSSZEFOGLALÁS'>
+
+<!--
+Update history:
+2020-09-01 Sysio (first version)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<h1>A legfontosabb tudnivalók</h1>
+
+<br>
+
+<p>1. A nevesített kivételek után csak egyetlen anoním (névtelen) <codel>except</codel> ágat lehet felvenni.</p>
+<codep class="syntax-color">:
+# The code that always runs smoothly.
+:
+try:
+	:
+	# Risky code.
+	:
+except Except_1:
+	# Crisis management takes place here.
+except Except_2:
+	# We save the world here.
+except:
+	# All other issues fall here.
+:
+# Back to normal.
+:
+</codep>
+<br>
+
+<p>2. Az összes előre definiált Python kivétel hierarchiát alkot, azaz egyesek közülük általánosabbak (a <codel>BaseException</codel> nevű a legáltalánosabb), míg mások többé-kevésbé konkrétak (pl. az <codel>IndexError</codel> konkrétabb, mint a <codel>LookupError</codel>).</p>
+
+<P>Nem szabad az általánosabb kivételt a konkrétabb kivételek elé helyezni ugyanazon <codel>except</codel> ág sorozaton belül. Például ezt teheted:</P>
+<codep class="syntax-color">try:
+	# Risky code.
+except IndexError:
+	# Taking care of mistreated lists
+except LookupError:
+	# Dealing with other erroneous lookups
+</codep>
+
+<br>
+
+
+<p>de ne tedd (hacsak nem akarod a kódod egy részét szándékosan haszontalanná tenni).</p>
+<codep class="syntax-color">try:
+	# Risky code.
+except LookupError:
+	# Dealing with erroneous lookups
+except IndexError:
+	# You'll never get here 
+</codep>
+<br>
+
+<p>3. A <codel>raise ExceptionName</codel> Python utasítás igény szerinti kivételt hív elő. Ugyanez az utasítás, de <i>ExceptionName</i> nélkül, <strong>csak a</strong> <codel>try</codel>ágon belül használható, és ugyanazt a kivételt váltja ki, amelyet éppen kezelünk.</p>
+<br>
+
+<p>4. Az <codel>assert expression</codel> Python utasítás kiértékel egy <i>kifejezést</i>, és <codel>AssertError</codel> kivételt vált ki, ha a <i>kifejezés</i> értéke egyenlő nullával, üres karakterlánc vagy <codel>None</codel>. Arra használhatod, hogy megvédd a kódod kritikus részeit egyes pusztító adatoktól.</p>
+<br>
+</div>
+
+<div class="small-12 large-6 columns">
+
+<script>
+function solution (id) {
+    var element = document.getElementById(id);
+    
+if (element.style.display === "none") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
+    }
+}
+</script>
+
+<br>
+
+<p><strong>1. gyakorlat</strong></p>
+<p>Mi a következő kód várható kimenete?</p>
+<codep>try:
+    print(1/0)
+except ZeroDivisionError:
+    print("zero")
+except ArithmeticError:
+    print("arith")
+except:
+    print("some")
+
+</codep>
+<br>
+
+<button class="button tiny" onclick="solution('sol1')">Ellenőrzés</button>
+
+<p id="sol1" style="display: none;">
+<codep>zero
+</codep></p>
+
+
+<br><br>
+
+<p><strong>2. gyakorlat</strong></p>
+<p>Mi a következő kód várható kimenete?</p>
+<codep>try:
+    print(1/0)
+except ArithmeticError:
+    print("arith")
+except ZeroDivisionError:
+    print("zero")
+except:
+    print("some")
+
+</codep>
+<br>
+
+<button class="button tiny" onclick="solution('sol2')">Ellenőrzés</button>
+
+<p id="sol2" style="display: none;">
+<codep>arith</codep>
+</p>
+
+
+
+<br><br>
+
+<p><strong>3. gyakorlat</strong></p>
+<p>Mi a következő kód várható kimenete?</p>
+<codep>def foo(x):
+    assert x
+    return 1/x
+
+
+try:
+    print(foo(0))
+except ZeroDivisionError:
+    print("zero")
+except:
+    print("some")
+
+</codep>
+<br>
+
+<button class="button tiny" onclick="solution('sol3')">Ellenőrzés</button>
+
+<p id="sol3" style="display: none;">
+<codep>some</codep>
+</p>
+
+
+
+<br><br>
+
+</div>
+
+</div>
+</div>
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>
+

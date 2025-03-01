@@ -1,0 +1,79 @@
+<problem chapter='1' section='1' slide='1' problem='2' title='Using Modules'>
+
+<!--
+Update history:
+2020-08-28 Grzegorz (review, PEP-8 compliance check, update; added the definition of module on top of page; reformatted pictures)
+2021-06-14 Grzegorz (review)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h1>Hogyan használjuk a modult?</h1>
+
+<p>Mi is az a modul? A <a href="https://docs.python.org/3/tutorial/modules.html" target="_blank">Python Tutorial</a> szerint <b>egy olyan fájl, amely Python definíciókat és utasításokat tartalmaz</b>, amelyeket később importálhatunk és használhatunk, ha szükséges.</p>
+
+<p>A modulok kezelése kétféle módon történhet:</p>
+
+<img src="/uploads/media/default/0001/01/064abbc7b3240f29aff8dcf4226dd22123a2a10a.png" width="60%" alt="The User vs. Supplier concept" style="float:right">
+
+<ul>
+    <li>az első (valószínűleg a leggyakoribb), amikor egy már létező modult akarsz használni, amelyet valaki más írt, vagy amelyet te magad hoztál létre egy összetett projekten végzett munkád során - ebben az esetben te vagy a modul <strong>felhasználója</strong>;</li>
+    <li>a második, amikor egy teljesen új modult akarsz létrehozni, akár saját használatra, akár azért, hogy megkönnyítsd más programozók életét – ilyenkor te vagy a modul <strong>létrehozója</strong>.</li>
+</ul>
+
+<p>Beszéljünk róluk külön-külön.</p>
+
+<br>
+
+<p>Először is, egy modult a <strong>neve</strong> azonosít. Ha bármilyen modult használni akarsz, ismerned kell a nevét. A Pythonnal együtt (meglehetősen nagyszámú) modult is szállítanak. Úgy is gondolhatsz rájuk, mint egyfajta "Python extra felszerelésre".</p>
+
+<br>
+
+<div style="clear: both;"></div>
+<br>
+
+<br>
+<br>
+
+
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+<p>Mindezek a modulok a beépített függvényekkel együtt alkotják a <strong>Python szabványos könyvtárát</strong>- egy különleges könyvtárat, ahol a modulok a könyvek szerepét töltik be (mondhatjuk azt is, hogy a mappák a polcok szerepét töltik be). Ha szeretnéd megnézni az ebben a könyvtárban összegyűjtött összes "kötet" teljes listáját, itt találod: <a href="https://docs.python.org/3/library/index.html" target="_blank">https://docs.python.org/3/library/index.html</a>.</p>
+
+<p>Minden modul entitásokból áll (mint egy könyv a fejezeteiből). Ezek az entitások lehetnek függvények, változók, konstansok, osztályok és objektumok. Ha tudod, hogyan érhetsz el egy adott modult, akkor az abban tárolt entitások bármelyikét használhatod.</p>
+
+<center><img src="/uploads/media/default/0001/01/6328af751dcaeb2e3b8e4c8101fe40ddb876db67.png" width="70%" alt="Accessing modules: math"></center>
+
+<br>
+<br>
+
+<p>Kezdjük az ismerkedést az egyik leggyakrabban használt modullal, a <codel>math</codel> nevűvel. A neve magáért beszél - a modul olyan entitások (nemcsak függvények) gazdag gyűjteményét tartalmazza, amelyek lehetővé teszik a programozó számára, hogy hatékonyan hajtsa végre a matematikai függvények, például a <i>sin()</i> vagy a <i>log()</i> használatát igénylő számításokat.</p>
+
+<br>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

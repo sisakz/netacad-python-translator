@@ -1,0 +1,115 @@
+<problem chapter='1' section='3' slide='1' problem='10' title='Modules and Packages'>
+
+<!--
+Update history:
+2020-09-08 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h1>Your first package: step 8</h1>
+
+<p>Now let's reach all the way to the bottom of the tree – this is how to get access to the <font face="Courier New">sigma</font> and <font face="Courier New">tau</font> modules:</p>
+
+<img src="/uploads/media/default/0001/01/d2ae5ea44070d051fffa709cfbf79746f3cfbb13.png" width="45%" alt="The main2.py file">
+
+<br><br>
+
+<codep class="syntax-color copy line-numbers">from sys import path
+
+path.append('..\\packages')
+
+import extra.good.best.sigma
+from extra.good.best.tau import funT
+
+print(extra.good.best.sigma.funS())
+print(funT())
+</codep>
+<p style="text-align: right;">main2.py</p>
+ 
+
+<p>You can make your life easier by using aliasing:</p>
+
+<img src="/uploads/media/default/0001/01/2ce24012593b9bd095dcd131fba504c4b3960e1c.png" width="45%" alt="The main2.py file">
+
+<br><br>
+
+<codep class="syntax-color copy line-numbers">from sys import path
+
+path.append('..\\packages')
+
+import extra.good.best.sigma as sig
+import extra.good.alpha as alp
+
+print(sig.funS())
+print(alp.funA())
+</codep>
+<p style="text-align: right;">main2.py</p>
+
+
+
+<br><br>
+
+
+
+</div>
+
+
+
+<div class="small-12 large-6 columns">
+
+<h2>Your first package: step 9</h2>
+
+
+
+<p>Let's assume that we've zipped the whole subdirectory, starting from the <font face="Courier New">extra</font> folder (including it), and let's get a file named <font face="Courier New">extrapack.zip</font>. Next, we put the file inside the <font face="Courier New">packages</font> folder.</p>
+
+<p>Now we are able to use the zip file in a role of packages:</p>
+
+
+<codep class="syntax-color copy line-numbers">from sys import path
+
+path.append('..\\packages\\extrapack.zip')
+
+import extra.good.best.sigma as sig
+import extra.good.alpha as alp
+from extra.iota import funI
+from extra.good.beta import funB
+
+print(sig.funS())
+print(alp.funA())
+print(funI())
+print(funB())
+</codep>
+<p style="text-align: right;">main2.py</p>
+
+
+<p>If you want to conduct your own experiments with the package we've created, you can download it below. We encourage you to do so.</p>
+
+<p><span class="label" style="background-color:orange;"><b>DOWNLOAD</b></span>&nbsp;&nbsp;&nbsp;<a href="/uploads/media/default/0001/01/d9df38daa0410952c4cbf85b47892954c45b9215.zip" target="_blank" download="Extrapack ZIP file">Extrapack ZIP file</a></p>
+
+
+
+<p>Now you can create modules and combine them into packages. It's time to start a completely different discussion – about errors, failures, and crashes.</p>
+
+
+
+
+
+<br>
+<br>
+
+</div>
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

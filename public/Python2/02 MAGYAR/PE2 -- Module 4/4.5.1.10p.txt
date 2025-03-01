@@ -1,0 +1,59 @@
+<problem chapter='4' section='5' slide='1' problem='10' title='A time modul'>
+
+<!--
+Update history:
+2020-03-30 Sebastian (first version)
+2020-10-11 Grzegorz (review, PEP-8 compliance check)
+-->
+
+<code>import time
+
+timestamp = 1572879180
+print(time.gmtime(timestamp))
+print(time.localtime(timestamp))
+
+</code>
+
+
+
+<h1>A <font face="Courier New">gmtime()</font> és <font face="Courier New">localtime()</font> függvények</h1>
+
+
+<p>A <codel>time</codel> modulban elérhető függvények egy része a <i>struct_time</i> osztály ismeretét igényli, de mielőtt megismerkednénk velük, nézzük meg, hogyan néz ki az osztály:</p>
+
+<p><codep class="syntax-color">time.struct_time:
+    tm_year   # Specifies the year.
+    tm_mon    # Specifies the month (value from 1 to 12)
+    tm_mday   # Specifies the day of the month (value from 1 to 31)
+    tm_hour   # Specifies the hour (value from 0 to 23)
+    tm_min    # Specifies the minute (value from 0 to 59)
+    tm_sec    # Specifies the second (value from 0 to 61 )
+    tm_wday   # Specifies the weekday (value from 0 to 6)
+    tm_yday   # Specifies the year day (value from 1 to 366)
+    tm_isdst  # Specifies whether daylight saving time applies (1 – yes, 0 – no, -1 – it isn't known)
+    tm_zone   # Specifies the timezone name (value in an abbreviated form)
+    tm_gmtoff # Specifies the offset east of UTC (value in seconds)
+</codep></p>
+
+<p>A <i>struct_time</i> osztály lehetővé teszi az értékekhez való hozzáférést indexek segítségével is. A <codel>0</codel> index a <i>tm_year</i>, míg a <codel>8</codel> a <i>tm_isdst</i> értékét adja vissza.</p>
+
+<p>Kivételt képez a <i>tm_zone</i> és a <i>tm_gmoff</i>, amelyekhez nem lehet indexek segítségével hozzáférni. Nézzük meg, hogyan használhatjuk a <i>struct_time</i> osztályt a gyakorlatban. Futtassuk le a kódot a szerkesztőablakban.</p>
+
+<p>Eredmény:</p>
+
+<codep>time.struct_time(tm_year=2019, tm_mon=11, tm_mday=4, tm_hour=14, tm_min=53, tm_sec=0, tm_wday=0, tm_yday=308, tm_isdst=0)
+time.struct_time(tm_year=2019, tm_mon=11, tm_mday=4, tm_hour=14, tm_min=53, tm_sec=0, tm_wday=0, tm_yday=308, tm_isdst=0)</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+<p>A példa két függvényt mutat be, amelyek az eltelt időt a Unix-időből a <i>struct_time</i> objektumba konvertálják. A különbség közöttük az, hogy a <codel>gmtime</codel> függvény a <i>struct_time</i> objektumot UTC-ben adja vissza, míg a <codel>localtime</codel> függvény a helyi időt adja vissza. A <codel>gmtime</codel> függvény esetében a <i>tm_isdst</i> attribútum mindig 0.</p>
+
+
+
+<br>
+<br>
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

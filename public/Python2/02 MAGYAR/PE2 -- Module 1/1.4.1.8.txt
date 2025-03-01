@@ -1,0 +1,77 @@
+<problem chapter='1' section='4' slide='1' problem='8' title='pip telepítése Linux alatt'>
+
+<!--
+Update history:
+2020-09-23 Grzegorz (created)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h1><i>pip</i> Linux alatt (folytatás)</h1>
+
+<p>Sajnos, néhány Linux disztribúcióban nincs előre telepítve a <i>pip</i>, még akkor sem, ha maga a Python alapértelmezés szerint telepítve van (az Ubuntu egyes verziói így viselkedhetnek). Ebben az esetben két lehetőséged van:</p>
+
+<ul>
+    <li>telepítsd a <i>pip</i>-et rendszercsomagként egy dedikált csomagkezelővel (pl.: <i>apt</i> a Debian-hoz hasonló rendszerekben)</li>
+    <li><i>pip</i> telepítése a belső Python mechanizmusok segítségével.</li>
+</ul>
+
+<p>Az előbbi határozottan jobb választás. Bár vannak olyan okos szkriptek, amelyek az operációs rendszert figyelmen kívül hagyva képesek letölteni és telepíteni a <i>pip</i>-et, ezek használatáról lebeszélünk. Ez a módszer bajba sodorhat. </p>
+
+<br>
+
+<p>Nézd - megpróbáltuk elindítani a <i>pip3</i>-at, de nem sikerült. Az operációs rendszerünk (ezúttal <i>Ubuntu Budgie</i>-t használtuk) az <i>apt</i> használatát javasolta a <i>python3-pip</i> nevű csomag telepítéséhez:</p>
+
+
+<center><img class="lightbox" src="/uploads/media/default/0001/02/fa628bd831e92cf64dcdf60204a986388765d563.png" width="95%" alt="Terminál képernyőkép: sudo apt install python3-pip"></center>
+<br>
+
+<p>Ez egy jó tanács, és mi követni fogjuk, de ki kell jelenteni, hogy ehhez adminisztrátori jogokra lesz szükségünk. Ne felejtsük el, hogy a különböző Linux rendszerek különböző csomagkezelőket használhatnak (pl.: lehet a <i>pacman</i> az Arch Linux esetében, vagy a Red Hat alapú disztribúciók által használt <i>yum</i>.</p>
+
+<p>Mindegy, ezekkel a módszerekkel a <i>pip</i> (vagy <i>pip3</i>) telepíthető és működőképes lesz.</p>
+
+
+<br>
+<br> 
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+<p>Nézd meg, mi történt, amikor követtük az operációs rendszer javaslatát:</p>
+
+<center><img class="lightbox" src="/uploads/media/default/0001/02/09afdcb9dcafbcdff4aaa2f18c6aa5bc4c24b98d.png" width="95%" alt="Terminál screenshot: following OS suggestion"></center>
+<br>
+
+ 
+<p>Mint látható, az operációs rendszer úgy döntött, hogy nem csak magát a pip-et telepíti, hanem néhány további, a <i>pip</i>-hez szükséges komponenst is. Ez normális - ne ijedj meg.</p>
+
+
+
+
+<br>
+<br>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

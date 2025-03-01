@@ -1,0 +1,129 @@
+<problem chapter='1' section='4' slide='1' problem='18' title='SZAKASZ ÖSSZEFOGLALÁS'>
+
+<!--
+Update history:
+2020-09-11	Sysio (first version)
+2020-09-28	Grzegorz (review)
+2021-06-29	Grzegorz (corrections)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+    <h1>A legfontosabb tudnivalók</h1>
+
+<br/>
+
+
+<p>1. Létezik és <b>Python Package Index (PyPI)</b> néven működik egy olyan <b>adattár</b> (vagy röviden <b>repo</b>) amelynek célja az ingyenes Python kódok összegyűjtése és megosztása, bár az is eléggé valószínű, hogy egy nagyon vicces névvel találkozol: <b>The Cheese Shop</b>. A The Cheese Shop honlapja a <a href="https://pypi.org/" target="_blank">https://pypi.org/</a> címen érhető el.</p>
+<br/>
+
+<p>2. A The Cheese Shop használatához egy speciális eszközt hoztak létre, melynek neve <b>pip</b> (a <i><b>p</b>ip <b>i</b>nstalls <b>p</b>ackages</i> amelyben a <i>pip</i> a... oké, ne is törődj vele). Mivel a pip nem biztos, hogy a szabványos Python telepítés részeként felkerül a gépedre, lehetséges, hogy kézzel kell telepíteni. A pip egy konzolos eszköz.</p>
+<br/>
+
+<p>3. A pip verziójának ellenőrzéséhez a következő parancsok egyikét kell kiadni:</p>
+<codep>pip --version
+
+</codep> 
+<br/>
+<p>vagy</p>
+<codep>pip3 --version
+
+</codep>
+<br/>
+<p>Ellenőrizd magad, hogy ezek közül melyik működik az operációs rendszereden.</p>
+<br/>
+
+<p>4. A <b>pip</b> főbb tevékenységeinek listája a következőképpen néz ki:</p>
+<ul>
+    <li><codel>pip help <i>művelet</i></codel> – a pip egy műveletének rövid leírását mutatja;</li>
+    <li><codel>pip list</codel> – megmutatja a jelenleg telepített csomagok listáját;</li>
+    <li><codel>pip show <i>package_name</i></codel> – megmutatja a <i>package_name</i> információkat, beleértve a csomag függőségeit is;</li>
+    <li><codel>pip search <i>anystring</i></codel> – a PyPI könyvtárakban keres olyan csomagokat, amelyek neve az <i>anystring</i> szövegrészletet tartalmazza;</li>
+    <li><codel>pip install <i>name</i></codel> – telepíti a <i>name</i> csomagot az egész rendszerre (számíts problémákra, ha nincsenek rendszergazdai jogaid);</li>
+    <li><codel>pip install --user <i>name</i></codel> – telepíti a <i>name</i> csomagot az egész rendszerre (számíts problémákra, ha nincsenek rendszergazdai jogaid);</li>
+    <li><codel>pip install -U <i>name</i></codel> – frissíti a korábban telepített csomagot;</li>
+    <li><codel>pip uninstall <i>name</i></codel> – eltávolítja a korábban telepített csomagot.</li>
+</ul>
+<br/>
+
+</div>
+<div class="small-12 large-6 columns">
+
+<p><strong>1. gyakorlat</strong></p>
+<p>Honnan származik a "<i>The Cheese Shop</i>" név?</p>
+
+<button class="button tiny" onclick="solution('sol')">Ellenőrzés</button>
+
+<p id="sol" style="display: none;">
+    Ez egy utalás egy régi <i>Monty Python</i> jelenetre, ugyanezzel a névvel.
+</p>
+
+<script>
+function solution (id) {
+    var element = document.getElementById(id);
+    
+if (element.style.display === "none") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
+    }
+}
+</script>
+
+<br/><br/>
+
+
+
+<p><strong>2. gyakorlat</strong></p>
+<p>Miért kell meggyőződnünk arról, hogy a <i>pip</i> és a <i>pip3</i> közül melyik működik a mi esetünkben?</p>
+
+<button class="button tiny" onclick="solution('sol2')">Ellenőrzés</button>
+
+<p id="sol2" style="display: none;">
+    Ha operációs rendszereden Python 2 és Python 3 is telepítve van, akkor előfordulhat, hogy a <i>pip</i> a Python 2-t veszi alapértelmezettnek.
+</p>
+
+
+<br/><br/>
+
+
+
+
+<p><strong>3. gyakorlat</strong></p>
+<p>Hogyan tudjuk megállapítani, hogy a <i>pip</i> a Python 2 vagy a Python 3-mal működik-e?</p>
+
+<button class="button tiny" onclick="solution('sol3')">Ellenőrzés</button>
+
+<p id="sol3" style="display: none;">
+<codel>pip --version</codel> megmondja neked.</p>
+
+
+<br/><br/>
+
+
+<p><strong>4. gyakorlat</strong></p>
+<p>Sajnos nem rendelkezem adminisztratív joggal. Mit kell tennem, hogy telepítsek egy csomagot az egész rendszerre?</p>
+
+<button class="button tiny" onclick="solution('sol4')">Ellenőrzés</button>
+
+<p id="sol4" style="display: none;">
+Kérdezd meg a <i>sysadmin</i>-odat – ne próbáld meg meghekkelni az operációs rendszeredet!</p>
+
+
+
+<br/>
+
+
+</div>
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

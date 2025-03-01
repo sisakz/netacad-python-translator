@@ -1,0 +1,42 @@
+<problem chapter='3' section='6' slide='1' problem='3' title='Bővebben a kivételekről'>
+
+<!--
+Update history:
+2020-10-01 Grzegorz (reviewed, PEP-8 compliance check)
+-->
+
+<code>
+try:
+    i = int("Hello!")
+except Exception as e:
+    print(e)
+    print(e.__str__())
+
+</code>
+
+
+
+<h1>A kivétel osztályok</h1>
+
+
+<p>Az előző példák mindegyike megelégedett egy adott típusú kivétel észlelésével és a megfelelő módon történő reagálással. Most mélyebbre ásunk, és magába a kivételbe nézünk bele.</p>
+
+<p>Valószínűleg nem fogsz meglepődni, ha megtudod, hogy a <strong>kivételek osztályok</strong>. Továbbá, amikor egy kivétel előjön, az osztály egy objektuma példányosításra kerül, és végigmegy a programvégrehajtás minden szintjén, keresve a kivétel ágat, amely felkészült a kivétel kezelésére.</p>
+
+<p>Egy ilyen objektum hasznos információkat hordoz, amelyek segíthetnek a függőben lévő helyzet minden aspektusának pontos azonosításában. E cél eléréséhez a Python a kivétel záradék egy speciális változatát kínálja – ezt látod most a szerkesztőben.</p>
+
+<p>Mint látod, az <codel>except</codel> utasítás kibővült, és tartalmaz egy további <codel>as</codel> kulcsszóval kezdődő kifejezést, amelyet egy azonosító követ. Az azonosító arra szolgál, hogy a kivételobjektumot elkapja, így elemezni tudja annak természetét, és le tudja vonni a megfelelő következtetéseket.</p>
+
+<p>Megjegyzés: az azonosító hatóköre az <codel>except</codel> ágra terjed ki, és nem megy tovább.</p>
+
+<p>A példa a kapott objektum felhasználásának egy nagyon egyszerű módját mutatja be - csak kiírja (mint látható, a kimenetet az objektum <codel>__str__()</codel> metódusa állítja elő), és egy rövid, az okot leíró üzenetet tesz mellé.</p>
+
+<p>Ugyanez az üzenet jelenik meg, ha a kódban nincs illeszkedő <codel>except</codel> blokk, és a Python kénytelen egyedül kezelni azt.</p>
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

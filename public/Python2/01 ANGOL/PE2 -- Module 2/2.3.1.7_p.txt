@@ -1,0 +1,68 @@
+<problem chapter='2' section='3' slide='1' problem='7' title='String methods'>
+
+<!--
+Update history:
+2020-09-22 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>
+# Example 1: Demonstrating the islower() method:
+print("Moooo".islower())
+print('moooo'.islower())
+
+# Example 2: Demonstrating the isspace() method:
+print(' \n '.isspace())
+print(" ".isspace())
+print("mooo mooo mooo".isspace())
+
+# Example 3: Demonstrating the isupper() method:
+print("Moooo".isupper())
+print('moooo'.isupper())
+print('MOOOO'.isupper())
+
+</code>
+
+
+
+<h1>The <font face="Courier New">islower()</font> method</h1>
+
+<p>The <codel>islower()</codel> method is a fussy variant of <codel>isalpha()</codel> – it accepts <strong>lower-case letters only</strong>.</p>
+
+<p>Look at Example 1 in the editor – it outputs:</p>
+
+<codep>False
+True</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+<br>
+<h2>The <font face="Courier New">isspace()</font> method</h2>
+
+<p>The <codel>isspace()</codel> method <strong>identifies whitespaces only</strong> – it disregards any other character (the result is <codel>False</codel> then).</p>
+
+<p>Look at Example 2 in the editor – the output is:</p>
+
+<codep>True
+True
+False</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+<br>
+
+<h2>The <font face="Courier New">isupper()</font> method</h2>
+
+<p>The <codel>isupper()</codel> method is the upper-case version of <codel>islower()</codel> – it concentrates on <strong>upper-case letters only</strong>.</p>
+
+<p>Again, Look at the code in the editor – Example 3 produces the following output:</p>
+
+<codep>False
+False
+True</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

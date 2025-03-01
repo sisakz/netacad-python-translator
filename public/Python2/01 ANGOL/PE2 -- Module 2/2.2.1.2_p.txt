@@ -1,0 +1,80 @@
+<problem chapter='2' section='2' slide='1' problem='2' title='The nature of strings in Python'>
+
+<!--
+Update history:
+2020-09-22 Grzegorz (review, PEP-8 compliance check, update, variable name change)
+-->
+
+<code>
+multiline = '''Line #1
+Line #2'''
+
+print(len(multiline))
+
+</code>
+
+
+
+<h1>Multiline strings</h1>
+
+<p>Now is a very good moment to show you another way of specifying strings inside the Python source code. Note that the syntax you already know won't let you use a string occupying more than one line of text.</p>
+
+<p>For this reason, the code here is erroneous:</p>
+
+<codep><font style="color:red;">multiline = 'Line #1
+Line #2'
+
+print(len(multiline))</font>
+
+</codep>
+<br>
+ 
+
+<p>Fortunately, for these kinds of strings, Python offers separate, convenient, and simple syntax.</p>
+
+<br>
+
+
+<p>Look at the code in the editor. This is what it looks like.</p>
+
+ 
+<p>As you can see, the string starts with <strong>three apostrophes</strong>, not one. The same tripled apostrophe is used to terminate it.</p>
+
+<p>The number of text lines put inside such a string is arbitrary.</p>
+
+<p>The snippet outputs <codel>15</codel>.</p>
+
+<p>Count the characters carefully. Is this result correct or not? It looks okay at first glance, but when you count the characters, it doesn't.</p>
+
+<p><codel>Line #1</codel> contains seven characters. Two such lines comprise 14 characters. Did we lose a character? Where? How?</p>
+
+<p>No, we didn't.</p>
+
+<p><strong>The missing character is simply invisible – it's a whitespace</strong>. It's located between the two text lines.</p>
+
+<p>It's denoted as: <codel>\n</codel>.</p>
+
+ 
+<p>Do you remember? It's a special (control) character used to <strong>force a line feed</strong> (hence its name: LF). You can't see it, but it counts.</p>
+
+<p>Multiline strings can be delimited by <strong>triple quotes</strong>, too, just like here:</p>
+
+<codep class="syntax-color">multiline = """Line #1
+Line #2"""
+
+print(len(multiline))
+</codep>
+
+ 
+<br>
+
+<p>Choose the method that is more comfortable for you. Both work the same.</p>
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

@@ -1,0 +1,61 @@
+<problem chapter='1' section='1' slide='1' problem='5' title='Importing a module | math'>
+
+<!--
+Update history:
+2020-08-28 Grzegorz (review, PEP-8 compliance check, update; 1/2pi notation changed; bullet points examples changed)
+2021-06-16 Grzegorz (review)
+-->
+
+<code>
+import math
+print(math.sin(math.pi/2))
+
+</code>
+
+<h1>Importing a module: continued</h1>
+
+
+<p>Look at the snippet below, this is the way in which you qualify the names of <codel>pi</codel> and <codel>sin</codel> with the name of its originating module:</p>
+
+<codep class="syntax-color">math.pi
+math.sin
+</codep>
+
+<br>
+
+<p>It's simple – you put:</p>
+
+<ul>
+<li>the <strong>name of the module</strong> (e.g., <codel>math</codel>)</li>
+<li>a <strong>dot</strong> (i.e., <codel>.</codel>)</li>
+<li>the <strong>name of the entity</strong> (e.g., <codel>pi</codel>)</li>
+</ul>
+
+<p>Such a form clearly indicates the namespace in which the name exists.</p>
+
+<p>Note: using this qualification is <strong>compulsory</strong> if a module has been imported by the <codel>import</codel> module instruction. It doesn't matter if any of the names from your code and from the module's namespace are in conflict or not.</p>
+
+
+<br>
+
+<p>This first example won't be very advanced - we just want to print the value of <strong>sin(&frac12;&pi;)</strong>.</p>
+
+<p>Look at the code in the editor. This is how we test it.</p>
+ 
+
+<p>The code outputs the expected value: <codel>1.0</codel>.</p>
+
+ 
+<p>Note: removing any of the two qualifications will make the code erroneous. There is no other way to enter <codel>math</codel>'s namespace if you have already done the following:</p>
+
+<codep class="syntax-color">import math
+</codep>
+
+<br>
+<br>
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

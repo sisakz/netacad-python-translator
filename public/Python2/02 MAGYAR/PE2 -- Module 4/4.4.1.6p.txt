@@ -1,0 +1,50 @@
+<problem chapter='4' section='4' slide='1' problem='6' title='Az os modul'>
+
+<!--
+Update history:
+2020-03-30 Sebastian (first version)
+2020-10-08 Grzegorz (review, PEP-8 compliance check)
+-->
+
+<code>import os
+
+os.mkdir("my_first_directory")
+print(os.listdir())
+os.rmdir("my_first_directory")
+print(os.listdir())
+
+</code>
+
+
+
+<h1>Könyvtárak törlése Pythonban</h1>
+
+
+<p>Az <i>os</i> modul lehetővé teszi a könyvtárak törlését is. Egy konkrét könyvtárat vagy egy könyvtárat az alkönyvtáraival együtt is törölhetsz. Egyetlen könyvtár törléséhez az <codel>rmdir</codel> nevű függvényt használhatjuk, amely argumentumként az elérési utat várja. Nézd meg a kódot a szerkesztőben.</p>
+
+<p>A fenti példa nagyon egyszerű. Először létrehozzuk a <i>my_first_directory</i> könyvtárat, majd az <i>rmdir</i> függvénnyel töröljük. A <i>listdir</i> függvény segítségével meggyőződünk arról, hogy a könyvtárat sikeresen eltávolítottuk. Ebben az esetben egy üres listát ad vissza. A könyvtár törlésekor bizonyosodj meg arról, hogy a törölni kívánt könyvtár létezik és üres, különben kivételt fog eredményezni.</p>
+
+<p>Egy könyvtár és benne lévő alkönyvtárak törléséhez használd a <codel>removedirs</codel> függvényt, amelyhez meg kell adnod az összes törölni kívánt könyvtárat tartalmazó elérési utat:</p>
+
+<p><codep class="syntax-color copy">import os
+
+os.makedirs("my_first_directory/my_second_directory")
+os.removedirs("my_first_directory/my_second_directory")
+print(os.listdir())
+</codep></p>
+
+
+<p>Az <i>rmdir</i> függvényhez hasonlóan, ha az egyik könyvtár nem létezik, vagy nem üres, akkor egy kivételt kapunk.</p>
+
+<p><b>MEGJEGYZÉS:</b> Mind Windows, mind Unix alatt létezik egy <i>rmdir</i> nevű parancs, amely az <i>rmdir</i> függvényhez hasonlóan könyvtárakat töröl. Sőt, mindkét rendszerben vannak olyan parancsok, amelyekkel törölhetünk egy könyvtárat és annak minden tartalmát. Unix alatt ez az <i>rm</i> parancs az <i>-r</i> kapcsolóval.</p>
+
+
+
+<br>
+<br>
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

@@ -1,0 +1,75 @@
+<problem chapter='3' section='2' slide='1' problem='11' title='A procedurálistól az objektumorientált megközelítésig'>
+
+<!--
+Update history:
+2020-09-30 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>
+class Stack:
+    def __init__(self):
+        self.__stackList = []
+
+    def push(self, val):
+        self.__stackList.append(val)
+
+    def pop(self):
+        val = self.__stackList[-1]
+        del self.__stackList[-1]
+        return val
+
+
+class AddingStack(Stack):
+    def __init__(self):
+        Stack.__init__(self)
+        self.__sum = 0
+
+
+# Enter code here.
+
+</code>
+
+
+
+<h1>Az objektumos megközelítés: verem létrehozása (folytatás)</h1>
+
+<p>Másodszor, adjunk hozzá két metódust. De hadd kérdezzük meg: tényleg hozzáadjuk? Ezek a metódusok már megvannak a szuperosztályban. Megtehetünk valami ilyesmit?</p>
+
+<p>Igen, megtehetjük. Ez azt jelenti, hogy a <strong>metódusok funkcionalitását</strong> fogjuk <strong>megváltoztatni, nem a nevüket</strong>. Pontosabban azt mondhatjuk, hogy az osztály interfésze (az objektumok kezelésének módja) változatlan marad, ha egyúttal az implementációt is megváltoztatjuk.</p>
+
+<p>Kezdjük a <codel>push</codel> függvény megvalósításával. Ezt várjuk tőle:</p>
+
+<ul>
+    <li>hogy az értéket hozzáadjuk a <codel>__sum</codel> változóhoz;</li>
+    <li>hogy az értéket a verembe tegye.</li>
+</ul>
+ 
+
+<p>Megjegyzés: a második aktivitás már implementálva van a szuperosztályon belül - így azt használhatjuk. Sőt, muszáj is használnunk, mivel nincs más módja a <codel>__stackList</codel> változó elérésének.</p>
+
+<p>Így néz ki a <codel>push</codel> metódus az alosztályban:</p>
+
+<codep class="syntax-color">def push(self, val):
+    self.__sum += val
+    Stack.push(self, val)
+</codep>
+
+<br>
+
+
+<p>Figyeljük meg, hogyan hívtuk meg a <codel>push</codel> metódus előző (a szuperosztályban elérhető) implementációját:</p>
+
+<ul>
+    <li>meg kell adnunk a szuperosztály nevét; erre azért van szükség, hogy egyértelműen jelezzük a metódust tartalmazó osztályt, hogy elkerüljük a metódus összetévesztését bármely más, azonos nevű függvénnyel;</li>
+    <li>meg kell adnunk a célobjektumot, és első argumentumként át kell adnunk (ebben a kontextusban nem adódik hozzá implicit módon a híváshoz).</li>
+</ul>
+
+<p>Azt mondjuk, hogy a <codel>push</codel> metódus felülírásra került - ugyanaz a név, mint a szuperosztályban, most egy másik függvényt képvisel.</p>
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

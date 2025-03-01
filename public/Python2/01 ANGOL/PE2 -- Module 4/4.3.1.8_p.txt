@@ -1,0 +1,46 @@
+<problem chapter='4' section='3' slide='1' problem='8' title='Working with real files'>
+
+<!--
+Update history:
+2020-10-07 Grzegorz (review, PEP-8 compliance check)
+2020-10-29 Grzegorz (code fix: strrerror instead of strerr)
+2021-07-07 Grzegorz (code corrections - important!)
+-->
+
+<code>from os import strerror
+
+try:
+    file = open('newtext.txt', 'wt')
+    for i in range(10):
+        file.write("line #" + str(i+1) + "\n")
+    file.close()
+except IOError as e:
+    print("I/O error occurred: ", strerror(e.errno))
+
+</code>
+
+
+
+<h1>Dealing with text files: continued</h1>
+
+
+<p>Look at the example in the editor. We've modified the previous code to write whole lines to the text file.</p>
+
+<p>The contents of the newly created file are the same.</p>
+
+<p>Note: you can use the same method to write to the <codel>stderr</codel> stream, but don't try to open it, as it's always open implicitly.</p>
+
+<p>For example, if you want to send a message string to <codel>stderr</codel> to distinguish it from normal program output, it may look like this:</p>
+
+<codep class="syntax-color copy">import sys
+sys.stderr.write("Error message")
+</codep>
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

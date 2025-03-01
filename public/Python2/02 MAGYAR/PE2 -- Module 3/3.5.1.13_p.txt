@@ -1,0 +1,62 @@
+<problem chapter='3' section='5' slide='1' problem='13' title='OOP alapok: Öröklés'>
+
+<!--
+Update history:
+2020-10-01 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>
+class Level1:
+    var = 100
+    def fun(self):
+        return 101
+
+
+class Level2(Level1):
+    var = 200
+    def fun(self):
+        return 201
+
+
+class Level3(Level2):
+    pass
+
+
+obj = Level3()
+
+print(obj.var, obj.fun())
+
+</code>
+
+
+
+<h1>Hogyan találja meg a Python a tulajdonságokat és metódusokat (folytatás)</h1>
+
+
+<p>Elemezzük a példát a szerkesztõben!</p>
+
+
+<p>Mind a <codel>Level1</codel>, mind a <codel>Level2</codel> osztályok definiálnak egy <codel>fun()</codel> nevû metódust és egy <codel>var</codel> nevû tulajdonságot. Ez azt jelenti, hogy a <codel>Level3</codel> osztály objektuma képes lesz elérni az egyes elõfordulások két példányát? Egyáltalán nem.</p>
+
+<p><strong>A késõbb definiált entitás (az öröklés értelmében) felülírja ugyanazt a korábban definiált entitást</strong>. Ezért a kód a következõ kimenetet produkálja:</p>
+
+<codep>200 201</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+<p>Mint látható, a <codel>var</codel> osztályváltozó és a <codel>fun()</codel> metódus a<codel>Level2</codel> osztályból felülírja a <codel>Level1</codel> osztályból származó azonos nevû entitásokat.</p>
+
+<p>Ez a funkció szándékosan használható az osztályok alapértelmezett (vagy korábban definiált) viselkedésének módosítására, ha bármelyik osztályának másképp kell viselkednie, mint az elõdjének.</p>
+
+<p>Azt is mondhatjuk, hogy <strong>a Python alulról felfelé keres egy elõfordulást</strong> és teljesen elégedett lesz az elsõként megtalálttal.</p>
+
+<p>Hogyan mûködik, ha egy osztálynak két õse van, amelyek ugyanazt az entitást kínálják, és ugyanazon a szinten fekszenek? Más szóval, mire kell számítani, ha egy osztály többszörös öröklõdéssel jön létre? Nézzük meg ezt!</p>
+
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

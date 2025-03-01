@@ -1,0 +1,38 @@
+<problem chapter='4' section='6' slide='1' problem='12' title='The calendar module'>
+
+<!--
+Update history:
+2020-03-30 Sebastian (first version)
+2020-10-13 Grzegorz (file creation, review, PEP-8 compliance check)
+-->
+
+<code>import calendar  
+
+c = calendar.Calendar()
+
+for data in c.monthdays2calendar(2020, 12):
+    print(data)
+
+</code>
+
+<h1>The <font face="Courier New">monthdays2calendar()</font> method</h1>
+
+<p>The <codel>Calendar</codel> class has several other useful methods that you can learn more about in the documentation (<a href="https://docs.python.org/3/library/calendar.html" target="_blank">https://docs.python.org/3/library/calendar.html</a>).</p>
+
+<p>One of them is the <codel>monthdays2calendar</codel> method, which takes the year and month, and then returns a list of weeks in a specific month. Each week is a tuple consisting of day numbers and weekday numbers. Look at the code in the editor.</p>
+
+<p>Note that the day numbers outside the month are represented by 0, while the weekday numbers are a number from 0-6, where 0 is Monday and 6 is Sunday.</p>
+
+<p>In a moment, this method may be useful for you to complete a laboratory task. Are you ready?</p>
+
+
+
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

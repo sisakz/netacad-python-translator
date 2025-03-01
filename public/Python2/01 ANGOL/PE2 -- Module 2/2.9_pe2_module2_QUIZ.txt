@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+PE2 - Module 2 Quiz
+
+Update history:
+2019-02-08 Grzegorz (reviewed)
+2020-09-29 Grzegorz (reformatting, PEP-8 compliance, dividing content into Quiz 1 and Quiz 2, creating items 1-3)
+-->
+
+<questionPool>
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE2_Q2_ITEM_1">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; The part of your code where you think an exception may occur should be placed inside:</p>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>the <codel>try:</codel> branch</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>the <codel>except:</codel> branch</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>the <codel>exception:</codel> branch</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE2_Q2_ITEM_2">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; The part of your code where the handling of an exception takes place should be placed inside:</p>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option>
+<![CDATA[ <p>the <codel>try:</codel> branch</p> ]]>
+</option>
+
+<option isCorrect="true">
+<![CDATA[ <p>the <codel>except:</codel> branch</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>the <codel>exception:</codel> branch</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+
+<question type="2" scoringType="1" points="1" customId="PE2_Q2_ITEM_3">  <!-- Multiple-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; Choose the <u>true</u> statements. (Select <u>two</u> answers)</p>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>you <b>can</b> use multiple <codel>except:</codel> branches to handle multiple exceptions coming from the same <codel>try:</codel> branch</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>you <b>cannot</b> use multiple <codel>except:</codel> branches to handle multiple exceptions coming from the same <codel>try:</codel> branch</p> ]]>
+</option>
+
+<option isCorrect="true">
+<![CDATA[ <p>Different <codel>exception:</codel> branches <b>must</b> have unique exception names</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>Different <codel>exception:</codel> branches <b>may</b> have unique exception names</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE2_Q2_ITEM_4">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; When an exception occurs, we say that it has been:</p>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>raised</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>thrown</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>dropped</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE2_Q2_ITEM_5">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; Which of the approachable <codel>except:</codel> branches is taken into consideration when an exception occurs?</p>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>the first matching branch</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>the last matching branch</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>any of the matching branches</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE2_Q2_ITEM_6">  <!-- Multiple-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; An assertion can be used to:</p>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>stop the program when some data have improper values</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>make the programmer more assertive</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>import a module</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE2_Q2_ITEM_7">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; A code point is:</p>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>a number which makes up a character</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>a point used to write a code</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>a code containing a point</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE2_Q2_ITEM_8">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; <codel>isalnum()</codel> checks if a string contains only letters and digits, and this is:</p>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>a method</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>a module</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>a function</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE2_Q2_ITEM_9">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; The expression:</p>
+<codep>'mike' &gt; 'Mike'</codep>
+<br>
+
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>evaluates to <codel>True</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>evaluates to <codel>False</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>is erroneous</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE2_Q2_ITEM_10">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; The <codel>+=</codel> operator, when applied to strings, performs:</p>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>concatenation</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>multiplication</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>subtraction</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+<!-- ######################################################################################################################## -->
+
+
+</questionPool>

@@ -1,0 +1,81 @@
+<problem chapter='3' section='3' slide='1' problem='2' title='OOP: Properties'>
+
+<!--
+Update history:
+2020-09-30 Grzegorz (review, PEP-8 compliance check, update)
+2020-10-28 Grzegorz (sentence fix: The mangling won't work if you add a private instance variable outside the class code)
+-->
+
+<code>
+class ExampleClass:
+    def __init__(self, val = 1):
+        self.__first = val
+
+    def set_second(self, val = 2):
+        self.__second = val
+
+
+example_object_1 = ExampleClass()
+example_object_2 = ExampleClass(2)
+
+example_object_2.set_second(3)
+
+example_object_3 = ExampleClass(4)
+example_object_3.__third = 5
+
+
+print(example_object_1.__dict__)
+print(example_object_2.__dict__)
+print(example_object_3.__dict__)
+
+</code>
+
+
+
+<h1>Instance variables: continued</h1>
+
+<p>Take a look at the modified example in the editor.</p>
+
+ 
+<p>It's nearly the same as the previous one. The only difference is in the property names. We've <strong>added two underscores (<codel>__</codel>)</strong> in front of them.</p>
+
+<p>As you know, such an addition makes the instance variable <strong>private</strong> – it becomes inaccessible from the outer world.</p>
+
+<p>The actual behavior of these names is a bit more complicated, so let's run the program. This is the output:</p>
+
+<codep>{'_ExampleClass__first': 1}
+{'_ExampleClass__first': 2, '_ExampleClass__second': 3}
+{'_ExampleClass__first': 4, '__third': 5}</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+<p>Can you see these strange names full of underscores? Where did they come from?</p>
+
+<p>When Python sees that you want to add an instance variable to an object and you're going to do it inside any of the object's methods, it <strong>mangles the operation</strong> in the following way:</p>
+
+<ul>
+<li>it puts a class name before your name;</li>
+<li>it puts an additional underscore at the beginning.</li>
+</ul>
+ 
+
+<p>This is why the <codel>__first</codel> becomes <codel>_ExampleClass__first</codel>.</p>
+
+<p><strong>The name is now fully accessible from outside the class</strong>. You can run a code like this:</p>
+
+<codep class="syntax-color">print(example_object_1._ExampleClass__first)
+</codep>
+<br>
+ 
+<p>and you'll get a valid result with no errors or exceptions.</p>
+
+<p>As you can see, making a property private is limited.</p>
+
+<p><strong>The mangling won't work if you add a private instance variable outside the class code</strong>. In this case, it'll behave like any other ordinary property.</p>
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

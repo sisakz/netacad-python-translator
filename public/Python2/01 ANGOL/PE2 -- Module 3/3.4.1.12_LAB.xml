@@ -1,0 +1,142 @@
+<problem chapter='3' section='4' slide='1' problem='12' title='LAB: The Timer class'>
+
+<!--
+Update history:
+2020-01-01 Syslaw (file created)
+2020-11-16 Grzegorz (review, PEP-8 compliance check)
+2021-07-05 Grzegorz (corrections)
+-->
+
+<code>class Timer:
+    def __init__( ??? ):
+        #
+        # Write code here.
+        #
+
+    def __str__(self):
+        #
+        # Write code here.
+        #
+
+    def next_second(self):
+        #
+        # Write code here.
+        #
+
+    def prev_second(self):
+        #
+        # Write code here.
+        #
+
+
+timer = Timer(23, 59, 59)
+print(timer)
+timer.next_second()
+print(timer)
+timer.prev_second()
+print(timer)
+
+</code>
+
+<span class="label" style="background-color:rgb(205, 168, 105);"><b>LAB</b></span>
+
+<br><br>
+
+<h2>Estimated time</h2>
+<p>30-60 minutes</p>
+
+<h2>Level of difficulty</h2>
+<p>Easy/Medium</p>
+
+<h2>Objectives</h2>
+<ul>
+<li>improving the student's skills in defining classes from scratch;</li>
+<li>defining and using instance variables;</li>
+<li>defining and using methods.</li>
+</ul>
+
+<h2>Scenario</h2>
+<p>We need a class able to count seconds. Easy? Not as easy as you may think, as we're going to have some specific requirements.</p>
+
+<p>Read them carefully as the class you're about write will be used to launch rockets carrying international missions to Mars. It's a great responsibility. We're counting on you!</p>
+
+<p>Your class will be called <codel>Timer</codel>. Its constructor accepts three arguments representing <b>hours</b> (a value from the range [0..23] – we will be using military time), <b>minutes</b> (from the range [0..59]) and <b>seconds</b> (from the range [0..59]).</p>
+
+<p>Zero is the default value for all of the above parameters. There is no need to perform any validation checks.</p>
+
+<p>The class itself should provide the following facilities:</p>
+<ul>
+<li>objects of the class should be "printable", i.e. they should be able to implicitly convert themselves into strings of the following form: "hh:mm:ss",  with leading zeros added when any of the values is less than 10;</li>
+<li>the class should be equipped with parameterless methods called <codel>next_second()</codel> and <codel>previous_second()</codel>, incrementing the time stored inside the objects by +1/-1 second respectively.</li>
+</ul>
+
+
+<p>Use the following hints:</p>
+<ul>
+<li>all object properties should be private;</li>
+<li>consider writing a separate function (not method!) to format the time string.</li>
+</ul>
+
+<p>Complete the template we've provided in the editor. Run your code and check whether the output looks the same as ours.</p>
+
+<h2>Expected output</h2>
+
+<p><codep>23:59:59
+00:00:00
+23:59:59</codep></p>
+
+
+<sampleSolution>def two_digits(val):
+    s = str(val)
+    if len(s) == 1:
+        s = '0' + s
+    return s
+
+
+class Timer:
+    def __init__(self, hours=0, minutes=0, seconds=0):
+        self.__hours = hours
+        self.__minutes = minutes
+        self.__seconds = seconds
+
+    def __str__(self):
+        return two_digits(self.__hours) + ":" + \
+               two_digits(self.__minutes) + ":" + \
+               two_digits(self.__seconds)
+
+    def next_second(self):
+        self.__seconds += 1
+        if self.__seconds > 59:
+            self.__seconds = 0
+            self.__minutes += 1
+            if self.__minutes > 59:
+                self.__minutes = 0
+                self.__hours += 1
+                if self.__hours > 23:
+                    self.__hours = 0
+
+    def prev_second(self):
+        self.__seconds -= 1
+        if self.__seconds < 0:
+            self.__seconds = 59
+            self.__minutes -= 1
+            if self.__minutes < 0:
+                self.__minutes = 59
+                self.__hours -= 1
+                if self.__hours < 0:
+                    self.__hours = 23
+
+
+timer = Timer(23, 59, 59)
+print(timer)
+timer.next_second()
+print(timer)
+timer.prev_second()
+print(timer)
+
+</sampleSolution>
+
+<br><br>
+
+<labMode>true</labMode>
+</problem>

@@ -1,0 +1,39 @@
+<problem chapter='2' section='3' slide='1' problem='9' title='String methods'>
+
+<!--
+Update history:
+2020-09-22 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>
+# Demonstrating the lower() method:
+print("SiGmA=60".lower())
+
+</code>
+
+
+
+<h1>The <font face="Courier New">lower()</font> method</h1>
+
+<p>The <codel>lower()</codel> method <strong>makes a copy of a source string, replaces all upper-case letters with their lower-case counterparts</strong>, and returns the string as the result. Again, the source string remains untouched.</p>
+
+<p>If the string doesn't contain any upper-case characters, the method returns the original string.</p>
+
+<p>Note: The <codel>lower()</codel> method doesn't take any parameters.</p>
+
+<p>The example in the editor outputs:</p>
+
+<codep>sigma=60</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+
+<p>As usual, carry out your own experiments.</p>
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

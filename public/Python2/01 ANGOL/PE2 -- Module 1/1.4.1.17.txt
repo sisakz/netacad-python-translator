@@ -1,0 +1,66 @@
+<problem chapter='1' section='4' slide='1' problem='17' title='How to use pip'>
+
+<!--
+Update history:
+2020-09-25 Grzegorz (created)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<h1>Use <i>pip</i>!</h1>
+
+<p><i>Pip</i>'s capabilities don't end here, but the command set we've presented to you is enough to start successfully managing packages that aren't a part of the regular Python installation.</p>
+
+<p>We hope we’ve encouraged you to carry out your own experiments with <i>pip</i> and the Python package universe. PyPI invites you to dive into its extensive resources.</p>
+
+<p>Some say that one of the most important programming virtues is <b>laziness</b>. Don't get us wrong – we don't want you to spend all day napping on the couch and dreaming of Python code.</p>
+
+<p>A lazy programmer is a programmer who looks for existing solutions and analyzes the available code before they start to develop their own software from scratch. </p>
+
+<p>This is why PyPI and <i>pip</i> exist – use them!</p>
+
+
+
+
+<br>
+<br> 
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+
+<center><img class="lightbox" src="/uploads/media/default/0001/02/4a84fef4ce207a15bffd8755f12c86071b8902d2.png" width="95%" alt="Two programmers"></center>
+<br>
+
+
+
+
+
+
+
+<br>
+<br>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

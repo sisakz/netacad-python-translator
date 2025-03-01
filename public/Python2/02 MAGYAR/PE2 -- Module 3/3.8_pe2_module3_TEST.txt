@@ -1,0 +1,888 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+PE2 - Module 3 Test
+
+Update history:
+2020-02-28 Grzegorz (item 19 formatting, response change)
+2020-07-02 Grzegorz (CH_5_QU_3_03 (code correction), CH_5_QU_1_01 (response formatting)
+2020-10-05 Grzegorz (reformatting, PEP-8 compliance, dividing content into Test 3 and Test 4)
+2020-10-18 Grzegorz (added items)
+-->
+
+<questionPool>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE2_T3_ITEM_1">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+    <p><span class="label">Q:</span>&nbsp;&nbsp; A <i>LIFO</i>-ként leírt adatszerkezet valójában:</p>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>verem (stack)</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>halom (heap)</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>lista (list)</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>fa (tree)</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE2_T3_ITEM_2"> 
+
+<instructions>
+<![CDATA[
+
+    <p><span class="label">Q:</span>&nbsp;&nbsp; Ha az osztály konstruktorát az alábbiak szerint deklaráljuk, melyik hozzárendelés érvényes?</p>
+
+<codep>class Class:
+    def __init__(self):
+        pass
+
+</codep>
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p><codel>object = Class()</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>object = Class(self)</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>object = Class(object)</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>object = Class</codel></p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE2_T3_ITEM_3">  
+
+<instructions>
+<![CDATA[
+
+    <p><span class="label">Q:</span>&nbsp;&nbsp; Ha van egy <codel>A</codel> nevű szuperosztály és egy <codel>B</codel> nevű alosztály, akkor a bemutatott meghívások közül melyiket kell a megjegyzés helyett beírni?</p>
+
+<codep>class A:
+    def __init__(self):
+        self.a = 1
+
+
+class B(A):
+    def __init__(self):
+        # Tegyük ide a kiválasztott sort.
+        self.b = 2
+
+</codep>
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p><codel>A.__init__(self)</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>A.__init__()</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>__init__()</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>A.__init__(1)</codel></p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE2_T3_ITEM_4">  
+
+<instructions>
+<![CDATA[
+
+    <p><span class="label">Q:</span>&nbsp;&nbsp; Mi lesz a hatása a következő kód futtatásának?</p>
+
+<codep>class A:
+    def __init__(self,v):
+        self.__a = v + 1
+
+
+a = A(0)
+print(a.__a)
+
+</codep>
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>TA kód egy <codel>AttributeError</codel> kivételt fog kiváltani</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>0</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>1</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>2</codel></p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE2_T3_ITEM_5">  
+
+<instructions>
+<![CDATA[
+
+    <p><span class="label">Q:</span>&nbsp;&nbsp; Mi lesz a kimenete a következő kódnak?</p>
+
+<codep>class A:
+    def __init__(self,v = 1):
+        self.v = v
+
+    def set(self,v):
+        self.v = v
+        return v
+
+
+a = A()
+print(a.set(a.v + 1))
+
+</codep>
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p><codel>2</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>1</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>3</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>0</codel></p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE2_T3_ITEM_6">  
+
+<instructions>
+<![CDATA[
+
+    <p><span class="label">Q:</span>&nbsp;&nbsp; Mi lesz a következő kód kimenete?</p>
+
+<codep>class A:
+    X = 0
+    def __init__(self,v = 0):
+        self.Y = v
+        A.X += v
+
+
+a = A()
+b = A(1)
+c = A(2)
+print(c.X)
+
+</codep>
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p><codel>3</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>1</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>2</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>0</codel></p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE2_T3_ITEM_7">  
+
+<instructions>
+<![CDATA[
+
+    <p><span class="label">Q:</span>&nbsp;&nbsp; Mi lesz a következő kód kimenete?</p>
+
+<codep>class A:
+    A = 1
+
+
+print(hasattr(A,'A'))
+
+</codep>
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p><codel>True</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>False</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>0</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>1</codel></p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE2_T3_ITEM_8">  
+
+<instructions>
+<![CDATA[
+
+    <p><span class="label">Q:</span>&nbsp;&nbsp; Mi lesz az eredménye a következő kód végrehajtásának?</p>
+
+<codep>class A:
+    def __init__(self):
+        pass
+
+
+a = A(1)
+print(hasattr(a,'A'))
+
+</codep>
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>a fenti kód egy kivételt fog kiváltani</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>1</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>False</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>True</codel></p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE2_T3_ITEM_9">  
+
+<instructions>
+<![CDATA[
+
+    <p><span class="label">Q:</span>&nbsp;&nbsp; Mi lesz az eredménye a következő kód végrehajtásának?</p>
+
+<codep>class A:
+    def __str__(self):
+        return 'a'
+
+
+class B(A):
+    def __str__(self):
+        return 'b'
+
+
+class C(B):
+    pass
+    
+
+o = C()
+print(o)
+
+</codep>
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+    <option isCorrect="true">
+        <![CDATA[ <p>megjelenik <codel>b</codel> kiírás</p>  ]]>
+    </option>
+
+    <option>
+        <![CDATA[ <p>megjelenik <codel>a</codel> kiírás</p>  ]]>
+    </option>
+
+    <option>
+        <![CDATA[     <p>megjelenik <codel>c</codel> kiírás</p>   ]]>
+    </option>
+
+    <option>
+        <![CDATA[ <p>a fenti kód kivételt okoz</p>     ]]>
+    </option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE2_T3_ITEM_10">  
+
+<instructions>
+<![CDATA[
+
+    <p><span class="label">Q:</span>&nbsp;&nbsp; Mi lesz az eredménye a következő kód végrehajtásának?</p>
+
+<codep>class A:
+    pass
+    
+
+class B(A):
+    pass
+    
+
+class C(B):
+    pass
+    
+
+print(issubclass(C,A))
+
+</codep>
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>megjelenik a <codel>True</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>megjelenik a <codel>False</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>megjelenik az <codel>1</codel></p> ]]>
+</option>
+
+<option>
+    <![CDATA[ <p>a fenti kód kivételt okoz</p>     ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE2_T3_ITEM_11">  
+
+<instructions>
+<![CDATA[
+
+    <p><span class="label">Q:</span>&nbsp;&nbsp; Mi lesz az eredménye a következő kód végrehajtásának?</p>
+
+<codep>class A:
+    def a(self):
+        print('a')
+
+
+class B:
+    def a(self):
+       	print('b')
+
+
+class C(B,A):
+    def c(self):
+   	    self.a()
+
+
+o = C()
+o.c()
+
+</codep>
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+    <option isCorrect="true">
+        <![CDATA[ <p>megjelenik a <codel>b</codel></p> s ]]>
+    </option>
+
+    <option>
+        <![CDATA[ <p>megjelenik az <codel>a</codel></p>  ]]>
+    </option>
+
+<option>
+<![CDATA[ <p>megjelenik a <codel>c</codel></p> ]]>
+</option>
+
+<option>
+    <![CDATA[ <p>a fenti kód kivételt okoz</p>  ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE2_T3_ITEM_12">  
+
+<instructions>
+<![CDATA[
+
+    <p><span class="label">Q:</span>&nbsp;&nbsp; Mi lesz az eredménye a következő kód végrehajtásának?</p>
+
+<codep>class A:
+    def __str__(self):
+        return 'a'
+
+
+class B:
+    def __str__(self):
+        return 'b'
+
+
+class C(A, B):
+    pass
+    
+
+o = C()
+print(o)
+
+</codep>
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+    <option isCorrect="true">
+        <![CDATA[ <p>megjelenik az <codel>a</codel></p>   ]]>
+    </option>
+
+<option>
+<![CDATA[ <p>megjelenik a <codel>b</codel></p> ]]>
+</option>
+
+<option>
+    <![CDATA[ <p>megjelenik a <codel>c</codel></p>  ]]>
+</option>
+
+<option>
+    <![CDATA[ <p>a fenti kódrészlet kivételt okoz</p>    ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE2_T3_ITEM_13">  
+
+<instructions>
+<![CDATA[
+
+    <p><span class="label">Q:</span>&nbsp;&nbsp; Mi lesz az eredménye a következő kód végrehajtásának?</p>
+
+<codep>class A:
+    v = 2
+
+
+class B(A):
+    v = 1
+
+
+class C(B):
+    pass
+
+
+o = C()
+print(o.v)
+
+</codep>
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>megjelenik az <codel>1</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>megjelenik a <codel>2</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>egy üres sort fog kiírni</p> ]]>
+</option>
+
+<option>
+    <![CDATA[ <p>kivételt fog generálni</p>   ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE2_T3_ITEM_14">  
+
+<instructions>
+<![CDATA[
+
+    <p>
+        <span class="label">Q:</span>&nbsp;&nbsp; Mi lesz az eredménye a következő kód végrehajtásának?</p>
+
+        <codep>
+            def f(x):
+            try:
+            x = x / x
+            except:
+            print("a",end='')
+            else:
+            print("b",end='')
+            finally:
+            print("c",end='')
+
+
+            f(1)
+            f(0)
+
+        </codep>
+        <br />
+
+        ]]>
+    </p></instructions>
+
+
+<options>
+
+    <option isCorrect="true">
+        <![CDATA[ <p>megjelenik a <codel>bcac</codel> szöveg</p>  ]]>
+    </option>
+
+<option>
+<![CDATA[ <p>megjelenik a <codel>bcbcbc</codel> szöveg</p> ]]>
+</option>
+
+<option>
+    <![CDATA[ <p>megjelenik a <codel>acac</codel> szöveg</p>  ]]>
+</option>
+
+<option>
+    <![CDATA[ <p>a kód egy kezeletlen kivételt fog okozni</p>   ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE2_T3_ITEM_15">  
+
+<instructions>
+<![CDATA[
+
+    <p><span class="label">Q:</span>&nbsp;&nbsp; Mi lesz az eredménye a következő kód végrehajtásának?</p>
+
+<codep>try:
+    raise Exception(1,2,3)
+except Exception as e:
+    print(len(e.args))
+
+</codep>
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+    <option isCorrect="true">
+        <![CDATA[ <p>megjelenik a <codel>3</codel></p>   ]]>
+    </option>
+
+    <option>
+        <![CDATA[ <p>megjelenik a <codel>2</codel></p>  ]]>
+    </option>
+
+    <option>
+        <![CDATA[ <p>megjelenik az <codel>1</codel></p>  ]]>
+    </option>
+
+    <option>
+        <![CDATA[ <p>a kód egy kezeletlen kivételt fog okozni</p>     ]]>
+    </option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE2_T3_ITEM_16">  
+
+<instructions>
+<![CDATA[
+
+    <p><span class="label">Q:</span>&nbsp;&nbsp; Mi lesz az eredménye a következő kód végrehajtásának?</p>
+
+<codep>class Ex(Exception):
+    def __init__(self,msg):
+        Exception.__init__(self,msg + msg)
+        self.args = (msg,)
+
+
+try:
+    raise Ex('ex')
+except Ex as e:
+    print(e)
+except Exception as e:
+    print(e)
+
+</codep>
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+    <option isCorrect="true">
+        <![CDATA[ <p>kiírja az <codel>ex</codel> szöveget</p>  ]]>
+    </option>
+
+    <option>
+        <![CDATA[ <p>kiírja az <codel>exex</codel> szöveget</p>  ]]>
+    </option>
+
+    <option>
+        <![CDATA[ <p>egy üres sort fog megjeleníteni</p>   ]]>
+    </option>
+
+    <option>
+        <![CDATA[ <p>kezeletlen kivételt okoz</p>     ]]>
+    </option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+<question type="1" scoringType="1" points="1" customId="PE2_T3_ITEM_17">  
+
+<instructions>
+<![CDATA[
+
+    <p><span class="label">Q:</span>&nbsp;&nbsp; Mi lesz az eredménye a következő kód végrehajtásának?</p>
+
+<codep>class I:
+    def __init__(self):
+        self.s = 'abc'
+        self.i = 0
+
+	def __iter__(self):
+        return self
+
+	def __next__(self):
+        if self.i == len(self.s):
+            raise StopIteration
+        v = self.s[self.i]
+        self.i += 1
+        return v
+
+
+for x in I():
+    print(x,end='')
+
+</codep>
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+    <option isCorrect="true">
+        <![CDATA[ <p>megjelenik az <codel>ex</codel> szöveg</p>  ]]>
+    </option>
+
+    <option>
+        <![CDATA[ <p>megjelenik az <codel>exex</codel> szöveg</p>  ]]>
+    </option>
+
+    <option>
+        <![CDATA[ <p>egy üres sort fog kiírni</p>   ]]>
+    </option>
+
+    <option>
+        <![CDATA[ <p>egy kezeletlen kivételt fog generálni</p>       ]]>
+    </option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+</questionPool>

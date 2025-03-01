@@ -1,0 +1,92 @@
+<problem chapter='4' section='1' slide='1' problem='8' title='Generators and closures'>
+
+<!--
+Update history:
+2020-10-05 Grzegorz (review, PEP-8 compliance check)
+-->
+
+<code>the_list = [1 if x % 2 == 0 else 0 for x in range(10)]
+
+print(the_list)
+
+</code>
+
+
+
+<h1>More about list comprehensions: continued</h1>
+
+
+<p>Look at the example in the editor.</p>
+
+<p>Compactness and elegance – these two words come to mind when looking at the code.</p>
+
+<p>So, what do they have in common, generators and list comprehensions? Is there any connection between them? Yes. A rather loose connection, but an unequivocal one.</p>
+
+<p>Just one change can <strong>turn any list comprehension into a generator</strong>.</p>
+<br>
+
+<p><b>List comprehensions vs. generators</b></p>
+
+<p>Now look at the code below and see if you can find the detail that turns a list comprehension into a generator:</p>
+
+<codep class="syntax-color copy line-numbers">the_list = [1 if x % 2 == 0 else 0 for x in range(10)]
+the_generator = (1 if x % 2 == 0 else 0 for x in range(10))
+
+for v in the_list:
+    print(v, end=" ")
+print()
+
+for v in the_generator:
+    print(v, end=" ")
+print()
+</codep>
+
+<br>
+ 
+
+<p>It's the <strong>parentheses</strong>. The brackets make a comprehension, the parentheses make a generator.</p>
+
+<P>The code, however, when run, produces two identical lines:</p>
+
+<codep>1 0 1 0 1 0 1 0 1 0
+1 0 1 0 1 0 1 0 1 0</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+ 
+
+<p>How can you know that the second assignment creates a generator, not a list?</p>
+
+<p>There is some proof we can show you. Apply the <codel>len()</codel> function to both these entities.</p>
+
+<p><codel>len(the_list)</codel> will evaluate to <codel>10</codel>. Clear and predictable. <codel>len(the_generator)</codel> will raise an exception, and you will see the following message:</p>
+
+<codep>TypeError: object of type 'generator' has no len()</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+
+<p>Of course, saving either the list or the generator is not necessary – you can create them exactly in the place where you need them – just like here:</p>
+
+<codep class="syntax-color copy line-numbers">for v in [1 if x % 2 == 0 else 0 for x in range(10)]:
+    print(v, end=" ")
+print()
+
+for v in (1 if x % 2 == 0 else 0 for x in range(10)):
+    print(v, end=" ")
+print()
+</codep>
+
+<br>
+
+<p>Note: the same appearance of the output doesn't mean that both loops work in the same way. In the first loop, the list is created (and iterated through) as a whole – it actually exists when the loop is being executed.</p>
+
+<p>In the second loop, there is no list at all – there are only subsequent values produced by the generator, one by one.</p>
+
+<p>Carry out your own experiments.</p>
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

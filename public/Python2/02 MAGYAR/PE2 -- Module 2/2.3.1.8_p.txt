@@ -1,0 +1,46 @@
+<problem chapter='2' section='3' slide='1' problem='8' title='Karakterlánc tagfüggvények'>
+
+<!--
+Update history:
+2020-09-22 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>
+# Demonstrating the join() method:
+print(",".join(["omicron", "pi", "rho"]))
+
+</code>
+
+
+
+<h1>A <font face="Courier New">join()</font> tagfüggvény</h1>
+
+<p>A <codel>join()</codel> tagfüggvény meglehetősen bonyolult, ezért hadd vezessünk végig lépésről lépésre:</p>
+
+<ul>
+    <li>ahogy a neve is mutatja, a tagfüggvény <strong>összekapcsolást hajt végre</strong> – egy listát vár argumentumként; biztosítania kell, hogy a lista minden eleme karakterlánc legyen – ellenkező esetben a metódus <font face="Courier New">TypeError</font> kivételt generál;</li>
+    <li>a lista összes eleme <strong>egy karakterláncba kerül</strong>, de...</li>
+    <li>...az a karakterlánc, amelyre a tagfüggvényt meghívták<strong> elválasztóként szolgálva</strong>, a listaelemek közé kerül;</li>
+    <li>az újonnan létrehozott karakterláncot adja vissza eredményként.</li>
+</ul>
+
+<p>Nézd meg a példát a szerkesztőben. Elemezzük ki:</p>
+
+<ul>
+    <li>a <codel>join()</codel> tagfüggvényt egy vesszőt tartalmazó karakterláncra hívjuk meg (a karakterlánc lehet tetszőlegesen hosszú, de lehet üres is).</li>
+    <li>a <codel>join</codel> argumentuma egy három karakterláncot tartalmazó lista;</li>
+    <li>a tagfüggvény egy új karakterláncot ad vissza.</li>
+</ul>
+
+<p>Itt is van:</p>
+
+<codep>omicron,pi,rh</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

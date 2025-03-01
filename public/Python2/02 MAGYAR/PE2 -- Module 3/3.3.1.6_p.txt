@@ -1,0 +1,54 @@
+<problem chapter='3' section='3' slide='1' problem='6' title='OOP: Tulajdonságok'>
+
+<!--
+Update history:
+2020-09-30 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>
+class ExampleClass:
+    def __init__(self, val):
+        if val % 2 != 0:
+            self.a = 1
+        else:
+            self.b = 1
+
+
+example_object = ExampleClass(1)
+
+print(example_object.a)
+print(example_object.b)
+
+</code>
+
+
+
+<h1>Egy attribútum létezésének ellenőrzése</h1>
+
+<p>A Python viselkedése az objektumok példányosításakor felvet egy fontos kérdést - más programozási nyelvekkel ellentétben <strong>nem várhatjuk el, hogy az azonos osztályba tartozó objektumok azonos tulajdonságkészlettel rendelkezzenek</strong>.</p>
+
+<p>Pontosan úgy, mint a szerkesztőben lévő példában. Nézzük meg figyelmesen!</p>
+
+<p>A konstruktor által létrehozott objektum csak két lehetséges attribútummal rendelkezhet: <codel>a</codel> vagy <codel>b</codel>.</p>
+
+<p>A kód végrehajtása a következő kimenetet eredményezi:</p>
+
+<codep>1
+Traceback (most recent call last):
+  File ".main.py", line 11, in <module>
+    print(example_object.b)
+AttributeError: 'ExampleClass' object has no attribute 'b'</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+<p>Mint látható, egy nem létező objektum (osztály) attribútumának elérése <font face="Courier New">AttributeError</font> kivételt okoz.</p>
+
+
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

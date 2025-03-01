@@ -1,0 +1,51 @@
+<problem chapter='4' section='1' slide='1' problem='1' title='Generators and closures'>
+
+<!--
+Update history:
+2020-10-05 Grzegorz (review, PEP-8 compliance check)
+-->
+
+<code>
+for i in range(5):
+    print(i)
+
+</code>
+
+
+
+<h1>Generators – where to find them</h1>
+
+
+<p><strong>Generator</strong> – what do you associate this word with? Perhaps it refers to some electronic device. Or perhaps it refers to a heavy machine designed to produce power, electrical or other.</p>
+
+<p>A Python generator is <strong>a piece of specialized code able to produce a series of values, and to control the iteration process</strong>. This is why generators are very often called <strong>iterators</strong>, and although some may find a very subtle distinction between these two, we'll treat them as one.</p>
+
+<p>You may not realize it, but you've encountered generators many, many times before. Take a look at the very simple snippet:</p>
+
+<codep class="syntax-color">for i in range(5):
+    print(i)
+</codep>
+
+<br> 
+
+<p>The <codel>range()</codel> function is, in fact, a generator, which is (in fact, again) an iterator.</p>
+
+<p>What is the difference?</p>
+
+<p>A function returns one, well-defined value – it may be the result of a more or less complex evaluation of, something like a polynomial, and is invoked once – only once.</p>
+
+<p>A generator <strong>returns a series of values</strong>, and in general, is (implicitly) invoked more than once.</p>
+
+ 
+
+<p>In the example, the <codel>range()</codel> generator is invoked six times, providing five subsequent values from zero to four, and finally signaling that the series is complete.</p>
+
+<p>The above process is completely transparent. Let's shed some light on it. Let's show you the <strong>iterator protocol</strong>.</p> 
+
+
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

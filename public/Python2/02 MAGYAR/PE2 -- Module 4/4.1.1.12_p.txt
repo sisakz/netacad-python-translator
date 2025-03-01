@@ -1,0 +1,49 @@
+<problem chapter='4' section='1' slide='1' problem='12' title='Generátor és closure'>
+
+<!--
+Update history:
+2020-10-05 Grzegorz (review, PEP-8 compliance check)
+-->
+
+<code>
+from random import seed, randint
+
+seed()
+data = [randint(-10,10) for x in range(5)]
+filtered = list(filter(lambda x: x > 0 and x % 2 == 0, data))
+
+print(data)
+print(filtered)
+
+</code>
+
+
+
+<h1>Lambdák és a <font face="Courier New">filter()</font> függvény</h1>
+
+
+<p>Egy másik Python függvény, amelyet lambda alkalmazásával jelentősen megszépíthetünk, a <codel>filter()</codel>.</p>
+
+<p>Ugyanolyan típusú argumentumokat vár el, mint a <codel>map()</codel>, de egészen mást csinál - a <strong>második argumentumot megszűri az első argumentumként kapott függvény szerinti feltételek alapján</strong> (a függvényt minden egyes listaelemre meghívja, akárcsak a <codel>map()</codel> esetében).</p>
+
+<p>Azok az elemek, amelyekre a függvény <codel>True</codel> azaz igaz értéket ad vissza, <strong>átmennek a szűrőn</strong> – a többit elutasítja a rendszer.</p>
+
+<p>A szerkesztőben lévő példa bemutatja a <codel>filter()</codel> függvényt működés közben.</p>
+
+<p>Megjegyzés: a <codel>random</codel> modul segítségével inicializáltuk a véletlenszám-generátort (nem összetévesztendő az imént tárgyalt generátorokkal) a <codel>seed()</codel> függvénnyel, és a <codel>randint()</codel> függvény használatával öt véletlen egész értéket állítottunk elő <codel>-10</codel> és <codel>10</codel> között.</p>
+
+<p>A listát ezután megszűrjük, és csak a páros, nullánál nagyobb számokat fogadjuk el.</p>
+
+<p>Természetesen nem valószínű, hogy Te is pont ezt az eredményt fogod kapni, de a mi eredményeink így néznek ki:</p>
+
+<codep>[6, 3, 3, 2, -7]
+[6, 2]</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

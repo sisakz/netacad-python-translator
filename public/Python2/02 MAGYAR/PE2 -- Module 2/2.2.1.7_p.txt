@@ -1,0 +1,52 @@
+<problem chapter='2' section='2' slide='1' problem='7' title='Karakterláncok'>
+
+<!--
+Update history:
+2020-09-22 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code># Slices
+
+alpha = "abdefg"
+
+print(alpha[1:3])
+print(alpha[3:])
+print(alpha[:3])
+print(alpha[3:-2])
+print(alpha[-3:4])
+print(alpha[::2])
+print(alpha[1::2])
+
+</code>
+
+
+
+<h1>Szeletelés</h1>
+
+<p>Ráadásul minden, amit a <strong>szeletelésrõl </strong> tudsz, továbbra is használható.</p>
+
+<p>Összegyûjtöttünk néhány példát arra, hogyan mûködik a szeletelés a karakterláncok világában. Nézd meg a kódot a szerkesztõben, elemezd és futtasd le.</p>
+
+<p>A példában semmi újat nem fogsz látni, de szeretnénk, ha biztos lennél benne, hogy a kód minden sorát el tudod magyarázni.</p>
+
+<p>A kód kimenete a következõ:</p>
+
+<codep>bd
+efg
+abd
+e
+e
+adf
+beg</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+<p>Most végezd el a saját kísérleteidet.</p>
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

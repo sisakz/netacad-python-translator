@@ -1,0 +1,121 @@
+<problem chapter='3' section='4' slide='1' problem='14' title='LAB: Pontok a síkon'>
+
+<!--
+Update history:
+2020-01-01 Syslaw (file created)
+2020-11-16 Grzegorz (review, PEP-8 compliance check)
+-->
+
+<code>import math
+
+
+class Point:
+    def __init__(self, x=0.0, y=0.0):
+        #
+        # Write code here
+        #
+
+    def getx(self):
+        #
+        # Write code here
+        #
+
+    def gety(self):
+        #
+        # Write code here
+        #
+
+    def distance_from_xy(self, x, y):
+        #
+        # Write code here
+        #
+
+    def distance_from_point(self, point):
+        #
+        # Write code here
+        #
+
+
+point1 = Point(0, 0)
+point2 = Point(1, 1)
+print(point1.distance_from_point(point2))
+print(point2.distance_from_xy(2, 0))
+
+</code>
+
+
+<span class="label" style="background-color:rgb(205, 168, 105);"><b>LABORGYAKORLAT</b></span>
+
+<br><br>
+
+<h2>Becsült idő</h2>
+<p>30-60 perc</p>
+
+<h2>Nehézségi szint</h2>
+<p>Könnyű/Közepes</p>
+
+<h2>Célok</h2>
+<ul>
+    <li>javítani a tanuló készségeit az osztályok létrehozásában;</li>
+    <li>példányváltozók definiálása és használata;</li>
+    <li>metódusok meghatározása és használata.</li>
+</ul>
+
+<h2>Forgatókönyv</h2>
+<p>Látogassunk el egy nagyon különleges helyre - a Descartes-féle koordináta-rendszerrel rendelkező síkba (erről a fogalomról többet megtudhatsz itt: <a href="https://en.wikipedia.org/wiki/Cartesian_coordinate_system">https://en.wikipedia.org/wiki/Cartesian_coordinate_system</a> [illetve magyarul itt <a href="https://hu.wikipedia.org/wiki/Koordin%C3%A1ta-rendszer">https://hu.wikipedia.org/wiki/Koordin%C3%A1ta-rendszer</a>]).</p>
+
+<p>A síkon található minden egyes pont leírható egy koordinátapárral, amelyet általában <b>x</b>-nek és <b>y</b>-nak nevezünk. Úgy gondoljuk, hogy tudsz olyan Python-osztályt írni, amely mindkét koordinátát lebegőpontos-számként (float) tárolja. Továbbá azt szeretnénk, ha ennek az osztálynak az objektumai kiértékelnék a síkban elhelyezkedő két pont bármelyikének távolságát.</p>
+
+<p>A feladat meglehetősen egyszerű, ha a <font face="courier">hypot()</font> nevű függvényt használjuk (elérhető a <i>math</i> modulban), amely egy derékszögű háromszög átfogójának hosszát számítja ki (további részletek itt: <a href="https://en.wikipedia.org/wiki/Hypotenuse">https://en.wikipedia.org/wiki/Hypotenuse</a>) és itt: <a href="https://docs.python.org/3.7/library/math.html#trigonometric-functions">https://docs.python.org/3.7/library/math.html#trigonometric-functions</a>.</p>
+
+<p>Így képzeljük el az osztályt:</p>
+<ul>
+<li><codel>Point</codel>-nak hívják;</li>
+<li>konstruktora két argumentumra vár (<b>x</b> és <b>y</b>), mindkettő alapértelmezett értéke nulla;</li>
+<li>minden tulajdonságnak privátnak kell lennie;</li>
+<li>az osztály két paraméter nélküli metódust tartalmaz, a <codel>getx()</codel> és a <codel>gety()</codel> metódusokat, amelyek a két koordinátát adják vissza (a koordináták privát módon vannak tárolva, így nem lehet közvetlenül elérni őket az objektumon kívülről);</li>
+<li>az osztály rendelkezik egy <codel>distance_from_xy(x,y)</codel> nevű metódussal, amely kiszámítja és visszaadja az objektumban tárolt pont és a másik pont közötti távolságot, amelyet egy lebegőpontos koordináta-párként kell megadni;</li>
+<li>az osztály biztosít egy <codel>distance_from_point(point)</codel>nevű metódust, amely kiszámítja a távolságot (mint az előző metódus), de a másik pont helyét egy <font face="courier">Point</font> osztályú objektumban kapja;</li>
+</ul>
+
+<p>Egészítsd ki a szerkesztőben az általunk megadott sablont, futtasd le a kódot, és ellenőrizd, hogy a kimenet ugyanúgy néz-e ki, mint a miénk!</p>
+
+
+<h2>Várható kimenet</h2>
+
+<p><codep>1.4142135623730951
+1.4142135623730951</p></codep>
+
+
+<sampleSolution>import math
+
+
+class Point:
+    def __init__(self, x=0.0, y=0.0):
+        self.__x = x
+        self.__y = y
+
+    def getx(self):
+        return self.__x
+
+    def gety(self):
+        return self.__y
+
+    def distance_from_xy(self, x, y):
+        return math.hypot(abs(self.__x - x), abs(self.__y - y))
+
+    def distance_from_point(self, point):
+        return self.distance_from_xy(point.getx(), point.gety())
+
+
+point1 = Point(0, 0)
+point2 = Point(1, 1)
+print(point1.distance_from_point(point2))
+print(point2.distance_from_xy(2, 0))
+
+</sampleSolution>
+
+<br><br>
+
+<labMode>true</labMode>
+</problem>

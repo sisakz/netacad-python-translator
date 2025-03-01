@@ -1,0 +1,86 @@
+<problem chapter='3' section='1' slide='1' problem='3' title='The foundations of OOP'>
+
+<!--
+Update history:
+2020-09-30 Grzegorz (review, PEP-8 compliance check, update)
+2021-07-05	Grzegorz (corrections)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h1>Class hierarchies</h1>
+
+<p>The word <i>class</i> has many meanings, but not all of them are compatible with the ideas we want to discuss here. The <i>class</i> that we are concerned with is like a <i>category</i>, as a result of precisely defined similarities.</p>
+
+<p>We'll try to point out a few classes which are good examples of this concept.</p>
+
+<img class="lightbox" src="/uploads/media/default/0001/01/09e4ad95eae46acc8e0f6427751452cbd255b004.png" alt="The concept of class hierarchies: vehicles" width="95%">
+
+<br><br>
+
+<p>Let's look for a moment at vehicles. All existing vehicles (and those that don't exist yet) are <strong>related by a single, important feature</strong>: the ability to move. You may argue that a dog moves, too; is a dog a vehicle? No, it isn't. We have to improve the definition, enrich it with other criteria, in order to distinguish vehicles from other beings, and create a stronger connection. Let's take the following circumstances into consideration: vehicles are artificially created entities used for transportation, moved by forces of nature, and directed (driven) by humans.</p>
+
+<p>Based on this definition, a dog is not a vehicle.</p>
+
+<p>The <i>vehicles</i> class is very broad. Too broad. We have to define some more <strong>specialized classes</strong>, then. The specialized classes are the <strong>subclasses</strong>. The <i>vehicles</i> class will be a <strong>superclass</strong> for them all.</p>
+
+
+
+<br> 
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+<p>Note: <strong>the hierarchy grows from top to bottom, like tree roots, not branches</strong>. The most general, and the widest, class is always at the top (the superclass) while its descendants are located below (the subclasses).</p>
+
+<p>By now, you can probably point out some potential subclasses for the <i>Vehicles</i> superclass. There are many possible classifications. We've chosen subclasses based on the environment, and say that there are (at least) four subclasses:</p>
+
+<ul>
+<li>land vehicles;</li>
+<li>water vehicles;</li>
+<li>air vehicles;</li>
+<li>space vehicles.</li>
+</ul>
+
+<p>In this example, we'll discuss the first subclass only – land vehicles. If you wish, you can continue with the remaining classes.</p>
+
+<p>Land vehicles may be further divided, depending on the method with which they impact the ground. So, we can enumerate:</p>
+
+<ul>
+<li>wheeled vehicles;</li>
+<li>tracked vehicles;</li>
+<li>hovercrafts.</li>
+</ul>
+
+<p>The hierarchy we've created is illustrated by the figure.</p>
+
+<p>Note the direction of the arrows – they always point to the superclass. The top-level class is an exception – it doesn't have its own superclass.</p>
+
+
+<br>
+<br>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

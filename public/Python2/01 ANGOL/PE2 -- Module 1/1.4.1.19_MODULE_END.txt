@@ -1,0 +1,67 @@
+<problem chapter='1' section='4' slide='1' problem='19' title='Module Completion'>
+
+<!--
+Update history:
+2020-10-18 Grzegorz (file creation)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<h1>Congratulations! You have completed <i>PE2: Module 1</i>.</h1>
+
+<br>
+
+
+<p>Well done! You've reached the end of Module 1 and completed a major milestone in your Python programming education. Here's a short summary of the objectives you've covered and become familiar with in Module 1:</p>
+
+<ul>
+<li>working with Python modules; importing, creating, and using modules;</li>
+
+<li>using selected Python STL modules (<i>math</i>, <i>random</i>, and <i>platform</i>)</li>
+
+<li>constructing and using packages in Python;</li>
+
+<li>PIP (the Python Package Installer).</li>
+
+</ul>
+
+<br>
+
+<p>You are now ready to take the module quiz and attempt the final challenge: Module 1 Test, which will help you gauge what you've learned so far.</p>
+
+
+<br>
+<br>
+
+</div>
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+
+
+<center><img src="/uploads/media/default/0001/01/29ed2aa31a1a26221e4eac3b69d973a33cbf562e.png" width="65%" alt="Module completion – congratulations"></center>
+<br>
+
+
+
+
+<br>
+
+</div>
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

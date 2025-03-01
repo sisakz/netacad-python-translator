@@ -1,0 +1,109 @@
+<problem chapter='2' section='5' slide='1' problem='9' title="LAB: Az élet száma">
+
+<!--
+Update history:
+2020-09-23 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+
+<span class="label" style="background-color:rgb(205, 168, 105);"><strong>LABORGYAKORLAT</strong></span>
+
+<br><br>
+
+<h2>Becsült idő</h2>
+<p>15-30 perc</p>
+
+
+<h2>Nehézségi szint</h2>
+<p>Könnyű</p>
+
+
+<h2>Célok</h2>
+<ul>
+    <li>a karakterlánc-kezelési készségek fejlesztése;</li>
+    <li>egész számok átalakítása karakterláncokká, és fordítva.</li>
+</ul>
+
+
+
+<h2>Forgatókönyv</h2>
+<p>Egyesek szerint az <i>Élet száma</i> egy olyan szám, amelyet az ember születésnapja alapján számítanak ki. A kiszámítása egyszerű – csak össze kell adni a dátum összes számjegyét. Ha az eredmény egynél több számjegyet tartalmaz, meg kell ismételni az összeadást, amíg pontosan egy számjegyet nem kapunk. Például:</p>
+
+<ul>
+<li>2017. január 1. = 2017 01 01</li>
+<li>2 + 0 + 1 + 7 + 0 + 1 + 0 + 1 = 12</li>
+<li>1 + 2 = 3</li>
+</ul>
+
+
+
+<p>Tehát a keresett szám a <i>3</i>.</p>
+
+<p>A feladatod egy olyan program írása, amely:</p>
+
+<ul>
+    <li>megkérdezi a felhasználótól a születésnapját (ÉÉÉÉHHNN, vagy ÉÉÉÉNNHH, vagy HHNNÉÉÉÉ formában – valójában a számjegyek sorrendje nem számít).</li>
+<li>kiírja a dátumhoz tartozó <i>életszámot</i>.</li>
+</ul>
+
+
+<p>Teszteld a kódot az általunk megadott adatokkal.</p>
+
+<h2>Tesztadatok</h2>
+
+<p>Minta bemenet:</p>
+<codep>19991229</codep>
+<br>
+
+<p>Minta kimenet:</p>
+<codep>6</codep>
+<br>
+
+
+<br>
+
+<p>Minta bemenet:</p>
+<codep>20000101</codep>
+<br>
+
+<p>Minta kimenet:</p>
+<codep>4</codep>
+<br>
+
+
+<br>
+
+<studyMode>false</studyMode>
+<labMode>true</labMode>
+
+<hint>
+date = input("Enter your birthday date (in the following format: YYYYMMDD or YYYYDDMM, 8 digits): ")
+
+# Írj egy if-else ágat ide.
+
+    # Amíg egynél több számjegyed van...
+
+        # ... add össze a számjegyeket...
+
+        # ... és tárold egy karakterláncban.
+
+    print("Your Digit of Life is: " + date)
+
+</hint>
+
+<sampleSolution>
+date = input("Enter your birthday date (in the following format: YYYYMMDD or YYYYDDMM, 8 digits): ")
+if len(date) != 8 or not date.isdigit():
+    print("Invalid date format.")
+else:
+    while len(date) > 1:
+        the_sum = 0
+        for dig in date:
+            the_sum += int(dig)
+        print(date)
+        date = str(the_sum)
+    print("Your Digit of Life is: " + date)
+	
+</sampleSolution>
+
+</problem>

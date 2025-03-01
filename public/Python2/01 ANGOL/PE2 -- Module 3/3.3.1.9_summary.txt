@@ -1,0 +1,144 @@
+<problem chapter='3' section='3' slide='1' problem='9' title='SECTION SUMMARY'>
+
+<!--
+Update history:
+2020-09-04 Slawek (first version)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<h1>Key takeaways</h1>
+
+<br>
+
+
+<p>1. An <b>instance variable</b> is a property whose existence depends on the creation of an object. Every object can have a different set of instance variables.</p>
+
+<p>Moreover, they can be freely added to and removed from objects during their lifetime. All object instance variables are stored inside a dedicated dictionary named <codel>__dict__</codel>, contained in every object separately.</p>
+
+<br>
+
+<p>2. An instance variable can be private when its name starts with <codel>__</codel>, but don't forget that such a property is still accessible from outside the class using a <b>mangled name</b> constructed as <codel>_ClassName__PrivatePropertyName</codel>.</p> 
+<br>
+
+<p>3. A <b>class variable</b> is a property which exists in exactly one copy, and doesn't need any created object to be accessible. Such variables are not shown as <codel>__dict__</codel> content.</p>
+
+<p>All a class's class variables are stored inside a dedicated dictionary named <codel>__dict__</codel>, contained in every class separately.</p></p>
+<br>
+
+<p>4. A function named <codel>hasattr()</codel> can be used to determine if any object/class contains a specified property.</p>
+
+<p>For example:</p>
+<codep class="syntax-color copy line-numbers">class Sample:
+    gamma = 0 # Class variable.
+    def __init__(self):
+        self.alpha = 1 # Instance variable.
+        self.__delta = 3 # Private instance variable.
+
+
+obj = Sample()
+obj.beta = 2  # Another instance variable (existing only inside the "obj" instance.)
+print(obj.__dict__)
+</codep>
+<br>
+<p>The code outputs:</p>
+
+<codep>{'alpha': 1, '_Sample__delta': 3, 'beta': 2}</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+<br>
+
+</div>
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+<script>
+function solution (id) {
+    var element = document.getElementById(id);
+    
+if (element.style.display === "none") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
+    }
+}
+</script>
+
+
+<p><strong>Exercise 1</strong></p>
+<p>Which of the <codel>Python</codel> class properties are instance variables and which are class variables? Which of them are private?
+<br><br>
+<codep>class Python:
+    population = 1
+    victims = 0
+    def __init__(self):
+        self.length_ft = 3
+        self.__venomous = False
+
+</codep>
+</p>
+
+<button class="button tiny" onclick="solution('sol')">Check</button>
+
+<p id="sol" style="display: none;">
+<codel>population</codel> and <codel>victims</codel> are <b>class</b> variables, while <codel>length</codel> and <codel>__venomous</codel> are <b>instance</b> variables (the latter is also <b>private</b>).</p>
+
+
+
+<br><br>
+
+
+
+<p><strong>Exercise 2</strong></p>
+<p>You're going to negate the <codel>__venomous</codel> property of the <codel>version_2</codel> object, ignoring the fact that the property is private. How will you do this?</p>
+<codep>version_2 = Python()
+
+</codep>
+<br>
+
+
+<button class="button tiny" onclick="solution('sol2')">Check</button>
+<p id="sol2" style="display: none;"><codep>version_2._Python__venomous = not version_2._Python__venomous</codep></p>
+
+
+
+<br><br>
+
+
+
+
+<p><strong>Exercise 3</strong></p>
+<p>Write an expression which checks if the <codel>version_2</codel> object contains an instance property named <codel>constrictor</codel> (yes, constr<b>i</b>ctor!).</p>
+
+<button class="button tiny" onclick="solution('sol3')">Check</button>
+
+<p id="sol3" style="display: none;">
+<codep>hasattr(version_2, 'constrictor')
+
+</codep>
+</p>
+
+
+
+
+<br>
+
+
+</div>
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>
+

@@ -1,0 +1,113 @@
+<problem chapter='3' section='2' slide='1' problem='7' title='A short journey from procedural to object approach'>
+
+<!--
+Update history:
+2020-09-30 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>class Stack:
+    def __init__(self):
+        self.__stack_list = []
+
+
+    def push(self, val):
+        self.__stack_list.append(val)
+
+
+    def pop(self):
+        val = self.__stack_list[-1]
+        del self.__stack_list[-1]
+        return val
+
+
+stack_object = Stack()
+
+stack_object.push(3)
+stack_object.push(2)
+stack_object.push(1)
+
+print(stack_object.pop())
+print(stack_object.pop())
+print(stack_object.pop())
+
+</code>
+
+
+
+<h1>The object approach: a stack from scratch</h1>
+
+<p>Now it's time for the two functions (methods) implementing the <i>push</i> and <i>pop</i> operations. Python assumes that a function of this kind (a class activity) should be <strong>immersed inside the class body</strong> – just like a constructor.</p>
+
+<p>We want to invoke these functions to <codel>push</codel> and <codel>pop</codel> values. This means that they should both be accessible to every class's user (in contrast to the previously constructed list, which is hidden from the ordinary class's users).</p>
+
+<p>Such a component is called <strong>public</strong>, so you <strong>can't begin its name with two (or more) underscores</strong>. There is one more requirement – <strong>the name must have no more than one trailing underscore</strong>. As no trailing underscores at all fully meets the requirement, you can assume that the name is acceptable.</p>
+
+<p>The functions themselves are simple. Take a look:</p>
+
+<codep class="syntax-color">class Stack:
+    def __init__(self):
+        self.__stack_list = []
+
+    <mark class="mark-background">def push(self, val):</mark>
+        <mark class="mark-background">self.__stack_list.append(val)</mark>
+
+    <mark class="mark-background">def pop(self):</mark>
+        <mark class="mark-background">val = self.__stack_list[-1]</mark>
+        <mark class="mark-background">del self.__stack_list[-1]</mark>
+        <mark class="mark-background">return val</mark>
+
+
+stack_object = Stack()
+
+stack_object.push(3)
+stack_object.push(2)
+stack_object.push(1)
+
+print(stack_object.pop())
+print(stack_object.pop())
+print(stack_object.pop())
+</codep>
+<br>
+ 
+
+<p>However, there's something really strange in the code. The functions look familiar, but they have more parameters than their procedural counterparts.
+
+<p>Here, both functions have a parameter named <codel>self</codel> at the first position of the parameters list.</p>
+
+<p>Is it needed? Yes, it is.</p>
+
+ 
+
+<p>All methods have to have this parameter. It plays the same role as the first constructor parameter.</p>
+
+<p><strong>It allows the method to access entities (properties and activities/methods) carried out by the actual object</strong>. You cannot omit it. Every time Python invokes a method, it implicitly sends the current object as the first argument.</p>
+
+<p>This means that a <strong>method is obligated to have at least one parameter, which is used by Python itself</strong> – you don't have any influence on it.</p>
+
+ 
+<p>If your method needs no parameters at all, this one must be specified anyway. If it's designed to process just one parameter, you have to specify two, and the first one's role is still the same.</p>
+
+<p>There is one more thing that requires explanation – the way in which methods are invoked from within the <codel>__stack_list</codel> variable.</p>
+
+<p>Fortunately, it's much simpler than it looks:</p>
+
+<ul>
+<li>the first stage delivers the object as a whole &rarr; <codel>self</codel>;</li>
+
+<li>next, you need to get to the <codel>__stack_list</codel> list &rarr; <codel>self.__stack_list</codel>;</li>
+
+<li>with <codel>__stack_list</codel> ready to be used, you can perform the third and last step &rarr; <codel>self.__stack_list.append(val)</codel>.</li>
+</ul>
+ 
+
+<p>The class declaration is complete, and all its components have been listed. The class is ready for use.</p>
+
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

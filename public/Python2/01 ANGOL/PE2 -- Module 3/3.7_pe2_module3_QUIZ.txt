@@ -1,0 +1,360 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+PE2 - Module 3 Quiz
+
+Update history:
+2019-02-08 Grzegorz (reviewed)
+2020-10-05 Grzegorz (reformatting, PEP-8 compliance, dividing content into Quiz 3 and Quiz 4)
+-->
+
+<questionPool>
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE2_Q3_ITEM_1">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; A subclass is usually:</p>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>more specialized than its superclass</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>more general than its superclass</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>a twin of its superclass</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE2_Q3_ITEM_2">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; An object is characterized by the following three:</p>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>name, properties, activities</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>name, owner, possession</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>properties, estates, lands</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE2_Q3_ITEM_3">   <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; An alternative name for a data structure called a <i>stack</i> is:</p>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>LIFO</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>FIFO</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>FOLO</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE2_Q3_ITEM_4">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; A variable that exists as a separate being in separate objects is called:</p>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>an instance variable</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>a separate variable</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>an objective variable</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE2_Q3_ITEM_5">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; A function able to check if an object is equipped with a given property is named:</p>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p><codel>hasattr()</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>hasvar()</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>hasprop()</codel></p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE2_Q3_ITEM_6">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; Is there a way to check if a class is a subclass of another class?</p>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>yes, there is a function able to do that</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>no</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>it may be possible, but only under special conditions</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE2_Q3_ITEM_7">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; The function named <codel>super()</codel> may be used to:</p>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>access a super class’s attributes and/or methods</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>make a class super</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>make a class better</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE2_Q3_ITEM_8">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; A user defined exception:</p>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>may be derived from the Exception class</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>must not be derived from the Exception class</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>must be derived from the Exception class</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="2" scoringType="1" points="1" customId="PE2_Q3_ITEM_9">  <!-- Multiple-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; Select the <u>true</u> statements. (Select <u>two</u> answers)</p>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>The <codel>finally</codel> branch of the <codel>try</codel> statement is <b>always</b> executed.</p> ]]>
+</option>
+
+<option isCorrect="true">
+<![CDATA[ <p>The <codel>args</codel> property is a tuple designed to gather all arguments passed to the class constructor.</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>The <codel>finally</codel> branch of the <codel>try</codel> statement <b>may</b> be executed if special conditions are met.</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>You <b>cannot</b> define new exceptions as subclasses derived from predefined exceptions.</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE2_Q3_ITEM_10">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; What is the output of the following code?</p>
+
+<codep>import math
+
+try:
+    print(math.pow(2))
+except TypeError:
+    print("A")
+else:
+    print("B")
+
+</codep>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p><codel>A</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>B</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>The program will cause the <codel>ValueError</codel> exception</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+<!-- ######################################################################################################################## -->
+
+
+</questionPool>

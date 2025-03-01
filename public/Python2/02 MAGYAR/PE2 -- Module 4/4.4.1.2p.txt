@@ -1,0 +1,74 @@
+<problem chapter='4' section='4' slide='1' problem='2' title='Az os modul'>
+
+<!--
+Update history:
+2020-03-30 Sebastian (first version)
+2020-10-08 Grzegorz (review, PEP-8 compliance check)
+-->
+
+<code>
+</code>
+
+
+
+<h1>Az operációs rendszerrel kapcsolatos információk beszerzése</h1>
+
+
+<p>Mielőtt létrehoznád az első könyvtárstruktúrát, megnézzük, hogyan szerezhetünk információt az aktuális operációs rendszerről. Ez nagyon egyszerű, mert az <i>os</i> modul biztosít egy <i>uname</i> nevű függvényt, amely egy olyan objektumot ad vissza, amely a következő attribútumokat tartalmazza:</p>
+
+<ul>
+    <li><b>systemname</b> — az operációs rendszer nevét tárolja;</li>
+    <li><b>nodename</b> — a hálózaton lévő gép nevét tárolja;</li>
+    <li><b>release</b> — az operációs rendszer kiadásának számát tárolja;</li>
+    <li><b>version</b> — az operációs rendszer verziószámát tárolja;</li>
+    <li><b>machine</b> — az architektúra azonosítóját tárolja, pl.: x86_64.</li>
+</ul>
+
+<p>Nézzük meg, hogyan is működik ez a gyakorlatban:</p>
+
+<p><codep class="syntax-color copy">import os
+print(os.uname())
+</codep></p>
+
+<p>Eredmény:</p>
+
+<codep>posix.uname_result(sysname='Linux', nodename='192d19f04766', release='4.4.0-164-generic', version='#192-Ubuntu SMP Fri Sep 13 12:02:50 UTC 2019', machine='x86_64')</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+
+
+<p>Mint látható, az <i>uname</i> függvény egy olyan objektumot ad vissza, amely az operációs rendszerre vonatkozó információkat tartalmaz. A fenti kódot Ubuntu 16.04.6 LTS rendszeren indítottuk el, ezért ne lepődj meg, ha más eredményt kapsz, mert ez az operációs rendszertől függ.</p>
+
+<p>Sajnos, az <i>uname</i> függvény csak egyes Unix rendszereken működik. Ha Windows rendszert használsz, próbáld ki a <i>platform</i> modulban található <i>uname</i> függvényt, amely hasonló eredményt ad.</p>
+
+<p>Az <i>os</i> modul lehetővé teszi az operációs rendszer gyors megkülönböztetését a <i>name</i> attribútum segítségével, amely a következő nevek egyikét támogatja:</p>
+<ul>
+    <li><b>posix</b> — ezt a nevet kapod, ha Unix rendszert használsz;</li>
+    <li><b>nt</b> — ezt a nevet kapod, ha Windows rendszert használsz;</li>
+    <li><b>java</b> — ezt a nevet akkor kapod, ha a kódod Jython nyelven íródott.</li>
+</ul>
+
+<p>Az Ubuntu 16.04.6 LTS esetében a <i>name</i> attribútum a <i>posix</i> nevet adja vissza:</p>
+
+<p><codep class="syntax-color copy">import os
+print(os.name)
+</codep></p>
+
+<p>Eredmény:</p>
+
+<codep>posix</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+
+<p><b>MEGJEGYZÉS:</b> Unix rendszereken létezik egy <i>uname</i> nevű parancs, amely ugyanazt az információt adja vissza (ha a -a kapcsolóval futtatod), mint az <i>uname</i> függvény.</p>
+
+
+
+<br>
+<br>
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

@@ -1,0 +1,69 @@
+<problem chapter='3' section='6' slide='1' problem='7' title='Bővebben a kivételekről'>
+<!--
+Update history:
+2020-10-01 Grzegorz (reviewed, PEP-8 compliance check, code changed: self parameter added to examples)
+-->
+
+<code>class PizzaError(Exception):
+    def __init__(self, pizza, message):
+        Exception.__init__(self, message)
+        self.pizza = pizza
+
+
+class TooMuchCheeseError(PizzaError):
+    def __init__(self, pizza, cheese, message):
+        PizzaError._init__(self, pizza, message)
+        self.cheese = cheese
+
+</code>
+
+
+
+<h1>Hogyan hozzunk létre saját kivételt (folytatás)</h1>
+
+
+<p>Ha egy teljesen új univerzumot akarunk építeni, tele eddig nem látott lényekkel, amelyeknek semmi közük az összes megszokott dologhoz, akkor érdemes <strong>saját kivétel struktúrát építeni</strong>.</p>
+
+<p>Ha például egy nagy szimulációs rendszeren dolgozunk, amely egy pizzázó tevékenységét hivatott modellezni, akkor kívánatos lehet a kivételek külön hierarchiáját kialakítani.</p>
+
+<p>A felépítését kezdhetjük azzal, hogy <strong>egy általános kivételt definiálunk amely</strong> bármely más speciális kivétel <strong>új alaposztálya</strong>. Ezt a következő módon tettük meg:</p>
+
+<codep class="syntax-color copy line-numbers">class PizzaError(Exception):
+    def __init__(self, pizza, message):
+        Exception.__init__(self, message)
+        self.pizza = pizza
+</codep>
+
+<br>
+
+<p>Megjegyzés: itt több specifikus információt fogunk gyűjteni, mint egy hagyományos <font face="Courier New">Exception</font> , ezért a konstruktorunk két argumentumot vár majd:</p>
+
+<ul>
+    <li>egy pizzát ad meg a folyamat alanyaként,</li>
+    <li>és egy leírást, amely a probléma többé-kevésbé pontos leírását tartalmazza.</li>
+</ul>
+
+<p>Mint látható, a második paramétert átadjuk a szuperosztály konstruktorának, az elsőt pedig a saját tulajdonságunkban tároljuk.</p>
+
+
+<p>Egy specifikusabb probléma (például a sajtfelesleg) specifikusabb kivételt igényelhet. Lehetséges, hogy az új osztályt a már definiált <codel>PizzaError</codel> osztályból származtatjuk, ahogy itt is tettük:</p>
+
+<codep class="syntax-color copy line-numbers">class TooMuchCheeseError(PizzaError):
+    def __init__(self, pizza, cheese, message):
+        PizzaError._init__(self, pizza, message)
+        self.cheese = cheese
+</codep>
+
+<br>
+
+<p>A <codel>TooMuchCheeseError</codel> kivételnek több információra van szüksége, mint a szokásos <codel>PizzaError</codel> kivételnek, ezért hozzáadjuk a konstruktorhoz - a <codel>cheese</codel> nevet ezután tároljuk a további feldolgozáshoz.</p>
+
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

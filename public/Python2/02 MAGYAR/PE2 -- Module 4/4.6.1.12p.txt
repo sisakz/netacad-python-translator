@@ -1,0 +1,38 @@
+<problem chapter='4' section='6' slide='1' problem='12' title='A calendar modul'>
+
+<!--
+Update history:
+2020-03-30 Sebastian (first version)
+2020-10-13 Grzegorz (file creation, review, PEP-8 compliance check)
+-->
+
+<code>import calendar  
+
+c = calendar.Calendar()
+
+for data in c.monthdays2calendar(2020, 12):
+    print(data)
+
+</code>
+
+<h1>A <font face="Courier New">monthdays2calendar()</font> metódus</h1>
+
+<p>A <codel>Calendar</codel> osztály számos más hasznos metódussal is rendelkezik, amelyekrõl többet megtudhatsz a dokumentációból (<a href="https://docs.python.org/3/library/calendar.html" target="_blank">https://docs.python.org/3/library/calendar.html</a>).</p>
+
+<p>Az egyik ilyen a <codel>monthdays2calendar</codel> metódus, amely bemenetként az évet és a hónapot várja, majd visszaadja az adott hónap heteinek listáját. A hét minden napját egy tuple jelképezi, melynek elsõ eleme a nap sorszáma a hónapban, második eleme pedig a nap száma a héten. Nézd meg a kódot a szerkesztõablakban.</p>
+
+<p>Vedd figyelembe, hogy a hónapon kívüli napok számai 0-val jelennek meg, míg a hét napjainak számai 0-6 közötti számok, ahol a 0 a hétfõt és a 6 a vasárnapot jelenti.</p>
+
+<p>Ez a metódus rögtön hasznos lehet a következõ feladat elvégzéséhez. Készen állsz?</p>
+
+
+
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

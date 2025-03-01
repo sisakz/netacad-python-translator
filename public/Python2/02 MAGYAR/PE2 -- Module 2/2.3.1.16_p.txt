@@ -1,0 +1,64 @@
+<problem chapter='2' section='3' slide='1' problem='16' title='Karakterlánc tagfüggvények'>
+
+<!--
+Update history:
+2020-09-23 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>
+# Demonstrating the swapcase() method:
+print("I know that I know nothing.".swapcase())
+
+print()
+
+# Demonstrating the title() method:
+print("I know that I know nothing. Part 1.".title())
+
+print()
+
+# Demonstrating the upper() method:
+print("I know that I know nothing. Part 2.".upper())
+
+</code>
+
+
+
+<h1>A <font face="Courier New">swapcase()</font> tagfüggvény</h1>
+
+<p>A <codel>swapcase()</codel> tagfüggvény <strong>egy új karakterláncot hoz létre a forrás karakterláncban lévő betűk felcserélésével</strong>: a kisbetűs karakterekből nagybetűs karakterek lesznek, és fordítva.</p>
+
+<p>Minden más karakter érintetlen marad.</p>
+
+<p>Nézd meg az első példát a szerkesztőben. Ki tudod találni a kimenetet? Nem fog jól kinézni, de látnod kell:</p>
+
+<codep>i KNOW THAT i KNOW NOTHING.</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+<h2>A <font face="Courier New">title()</font> tagfüggvény</h2>
+
+<p>A <codel>title()</codel> tagfüggvény némileg hasonló funkciót lát el – <strong>minden szó első betűjét nagybetűsre, a többit pedig kisbetűsre változtatja</strong>.</p>
+
+<p>Nézd meg a második példát a szerkesztőben. Ki tudod találni a kimenetét? Ez az eredmény:</p>
+
+<codep>I Know That I Know Nothing. Part 1.</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+<h2>Az <font face="Courier New">upper()</font> tagfüggvény</h2>
+
+<p>Végül, de nem utolsósorban, az <codel>upper()</codel> tagfüggvény <strong>másolatot készít a forrás karakterláncról, kicseréli az összes kisbetűt a nagybetűs megfelelőjükre</strong>, és eredményként visszaadja a karakterláncot.</p>
+
+<p>Nézd meg a harmadik példát a szerkesztőben! A kimenet:</p>
+
+<codep>I KNOW THAT I KNOW NOTHING. PART 2.</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+<p>Hurrá! Eljutottunk ennek a szakasznak a végére. Meglepődtél az eddig tárgyalt karakterlánc tagfüggvények valamelyikén? Szánj rájuk pár percet, és nézd át őket, majd térjünk át a tanfolyam következő részére, ahol megmutatjuk, milyen nagyszerű dolgokat tudunk csinálni a karakterláncokkal.</p>
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

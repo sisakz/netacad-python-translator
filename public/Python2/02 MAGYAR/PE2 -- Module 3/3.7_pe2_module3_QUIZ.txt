@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+PE2 - Module 3 Quiz
+
+Update history:
+2019-02-08 Grzegorz (reviewed)
+2020-10-05 Grzegorz (reformatting, PEP-8 compliance, dividing content into Quiz 3 and Quiz 4)
+-->
+
+<questionPool>
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE2_Q3_ITEM_1">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+    <p><span class="label">Q:</span>&nbsp;&nbsp; Az alosztály általában...</p>
+
+]]>
+</instructions>
+
+
+<options>
+
+    <option isCorrect="true">
+        <![CDATA[ <p>speciálisabb, mint a szuperosztálya</p>  ]]>
+    </option>
+
+<option>
+<![CDATA[ <p>általánosabb, mint a szuperosztálya</p> ]]>
+</option>
+
+<option>
+    <![CDATA[ <p>ikertestvére a szuperosztályának</p>     ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE2_Q3_ITEM_2">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+    <p><span class="label">Q:</span>&nbsp;&nbsp; Egy objektumot a következő három jellemző határozza meg:</p>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>név, tulajdonságok, tevékenységek</p> ]]>
+</option>
+
+<option>
+    <![CDATA[ <p>név, tulajdonos, birtoklás</p> ]]>
+</option>
+
+<option>
+    <![CDATA[ <p>tulajdonságok, birtokok, alapok</p>     ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE2_Q3_ITEM_3">   <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+    <p><span class="label">Q:</span>&nbsp;&nbsp; Egy <i>verem</i> adatstruktúra lehetséges alternatív neve:</p>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>LIFO</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>FIFO</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>FOLO</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE2_Q3_ITEM_4">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+    <p><span class="label">Q:</span>&nbsp;&nbsp; A változót, amely különálló objektumokban létezik, úgy hívják, hogy…</p>
+
+]]>
+</instructions>
+
+
+<options>
+
+    <option isCorrect="true">
+        <![CDATA[ <p>példányváltozó</p>  ]]>
+    </option>
+
+<option>
+<![CDATA[ <p>különálló változó</p> ]]>
+</option>
+
+<option>
+    <![CDATA[     <p>objektumváltozó</p>     ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE2_Q3_ITEM_5">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+    <p><span class="label">Q:</span>&nbsp;&nbsp; Egy függvényt, amely képes ellenőrizni, hogy egy objektum rendelkezik-e egy adott tulajdonsággal, úgy nevezzük, hogy…</p>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p><codel>hasattr()</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>hasvar()</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>hasprop()</codel></p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE2_Q3_ITEM_6">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+    <p><span class="label">Q:</span>&nbsp;&nbsp; Létezik-e mód arra, hogy ellenőrizzük, hogy egy osztály egy másik osztály alosztálya-e?</p>
+
+]]>
+</instructions>
+
+
+<options>
+
+    <option isCorrect="true">
+        <![CDATA[ <p>Igen, van egy függvény, amely képes erre.</p>  ]]>
+    </option>
+
+<option>
+<![CDATA[ <p>Nem.</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>Lehetséges, de csak speciális feltételek mellett.</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE2_Q3_ITEM_7">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+    <p><span class="label">Q:</span>&nbsp;&nbsp; A <codel>super()</codel> nevű függvény használható arra, hogy…</p>
+
+]]>
+</instructions>
+
+
+<options>
+
+    <option isCorrect="true">
+        <![CDATA[ <p>elérjük egy szuperosztály attribútumait és/vagy metódusait</p> ]]>
+    </option>
+
+    <option>
+        <![CDATA[ <p>egy osztályt szuperré tegyük</p> ]]>
+    </option>
+
+    <option>
+        <![CDATA[ <p>egy osztályt jobbá tegyük</p>  ]]>
+    </option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE2_Q3_ITEM_8">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+    <p><span class="label">Q:</span>&nbsp;&nbsp; A felhasználó által definiált kivétel...</p>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>származtatható az Exception osztályból</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>nem származtatható az Exception osztályból</p> ]]>
+</option>
+
+<option>
+    <![CDATA[ <p>az Exception osztályból szükséges származtatni</p>     ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="2" scoringType="1" points="1" customId="PE2_Q3_ITEM_9">  <!-- Multiple-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+    <p><span class="label">Q:</span>&nbsp;&nbsp; Válaszd ki az <u>igaz</u> kijelentéseket! (<u>Kettő</u> válasz lehetséges)</p>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>A <codel>try</codel> utasítás <codel>finally</codel> ága <b>mindig</b> végrehajtásra kerül.</p> ]]>
+</option>
+
+<option isCorrect="true">
+    <![CDATA[ <p>Az <codel>args</codel> tulajdonság egy olyan tuple, amelynek célja az osztály konstruktorának átadott összes argumentum összegyűjtése.</p>    ]]>
+</option>
+
+<option>
+    <![CDATA[ <p>A <codel>try</codel> utasítás <codel>finally</codel> ága <b>végrehajtásra kerülhet</b>, ha speciális feltételek teljesülnek.</p> ]]>
+</option>
+
+<option>
+    <![CDATA[ <p>Nem definiálhatunk <b>új kivételeket</b> alosztályként, az előre definiált kivételekből származtatva.</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE2_Q3_ITEM_10">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+    <p><span class="label">Q:</span>&nbsp;&nbsp; Milyen kimenete van az alábbi kódnak?</p>
+
+<codep>import math
+
+try:
+    print(math.pow(2))
+except TypeError:
+    print("A")
+else:
+    print("B")
+
+</codep>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p><codel>A</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>B</codel></p> ]]>
+</option>
+
+<option>
+    <![CDATA[ <p>a program a <codel>ValueError</codel> kivételt fogja okozni</p>     ]]>
+</option>
+
+</options>
+
+</question>
+
+<!-- ######################################################################################################################## -->
+
+
+</questionPool>

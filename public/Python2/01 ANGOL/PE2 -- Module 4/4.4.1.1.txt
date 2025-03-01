@@ -1,0 +1,74 @@
+<problem chapter='4' section='4' slide='1' problem='1' title='The os module'>
+
+<!--
+Update history:
+2020-03-30 Sebastian (first version)
+2020-10-08 Grzegorz (review, PEP-8 compliance check)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h1>Introduction to the <i>os</i> module</h1>
+
+
+<p>In this section, you'll learn about a module called <i>os</i>, which lets you <b>interact with the operating system using Python</b>.</p>
+
+<p>It provides functions that are available on Unix and/or Windows systems. If you're familiar with the command console, you'll see that some functions give the same results as the commands available on the operating systems.</p>
+
+<p>A good example of this is the <codel>mkdir</codel> function, which allows you to create a directory just like the <i>mkdir</i> command in Unix and Windows. If you don't know this command, don't worry.</p>
+
+<p>You'll soon have the opportunity to learn the functions of the <i>os</i> module, to perform operations on files and directories along with the corresponding commands.</p>
+
+<p>In addition to file and directory operations, the <i>os</i> module enables you to:</p>
+
+<ul>
+<li>get information about the operating system;</i>
+<li>manage processes;</li>
+<li>operate on I/O streams using file descriptors.</i>
+</ul>
+
+
+<br> 
+<br>
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+<center><img src="/uploads/media/default/0001/02/acff888e657173efaea1bc8feacc5a61c1190038.png" alt="A penguin, a snake, and a window" width="70%"></center>
+
+<br><br>
+
+
+
+<p>In a moment, you'll see how to get basic information about your operating system, although process management and working with file descriptors won't be discussed here, because these are more advanced topics that require knowledge of operating system mechanisms.</p>
+
+<p>Ready?</p>
+
+
+<br>
+<br>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

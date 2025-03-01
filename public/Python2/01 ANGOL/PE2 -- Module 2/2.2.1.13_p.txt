@@ -1,0 +1,41 @@
+<problem chapter='2' section='2' slide='1' problem='13' title='The nature of strings in Python'>
+
+<!--
+Update history:
+2020-09-22	Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>
+# Demonstrating the index() method:
+print("aAbByYzZaA".index("b"))
+print("aAbByYzZaA".index("Z"))
+print("aAbByYzZaA".index("A"))
+
+</code>
+
+
+
+<h1>Operations on strings: the <font face="Courier New">index()</font> method</h1>
+
+<p>The <codel>index()</codel> method (it's a method, not a function) <strong>searches the sequence from the beginning, in order to find the first element of the value specified in its argument</strong>.</p>
+
+<p>Note: the element searched for must occur in the sequence – <strong>its absence will cause a <font face="Courier New">ValueError</font> exception</strong>.</p>
+
+<p>The method returns the <strong>index of the first occurrence of the argument</strong> (which means that the lowest possible result is <font face="Courier New">0</font>, while the highest is the length of the argument decremented by <font face="Courier New">1</font>).
+
+<p>Therefore, the example in the editor outputs:</p>
+
+<codep>2
+7
+1</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+<br>
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

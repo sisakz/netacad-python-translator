@@ -1,0 +1,87 @@
+<problem chapter='2' section='1' slide='1' problem='1' title='Characters and Strings vs. Computers'>
+
+<!--
+Update history:
+2020-09-21	Grzegorz (review, PEP-8 compliance check, update)
+2021-06-30	Grzegorz (corrections)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h1>How computers understand single characters</h1>
+
+<p>You've written some interesting programs since you've started this course, but all of them have processed only one kind of data – numbers. As you know (you can see this everywhere around you) lots of computer data are not numbers: first names, last names, addresses, titles, poems, scientific papers, emails, court judgements, declarations of love, and much, much more.</p>
+
+<center><img src="/uploads/media/default/0001/01/bf689d4def31ce2625b58365731c84fbb9506712.png" width="80%" alt="The concept of characters and strings"></center>
+<br><br>
+
+<p>All these data must be stored, input, output, searched, and transformed by contemporary computers just like any other data, no matter if they are single characters or multi-volume encyclopedias.</p>
+
+<p>How is it possible?</p>
+
+<p>How can you do it in Python? This is what we'll discuss now. Let's start with how computers understand single characters.</p>
+
+<br>
+
+<p><strong>Computers store characters as numbers</strong>. Every character used by a computer corresponds to a unique number, and vice versa. This assignment must include more characters than you might expect. Many of them are invisible to humans, but essential to computers.</p>
+
+
+<p>Some of these characters are called <strong>whitespaces</strong>, while others are named <strong>control characters</strong>, because their purpose is to control input/output devices.</p>
+
+<p>An example of a whitespace that is completely invisible to the naked eye is a special code, or a pair of codes (different operating systems may treat this issue differently), which are used to mark the ends of the lines inside text files.</p>
+
+<p>People do not see this sign (or these signs), but are able to observe the effect of their application where the lines are broken.</p>
+
+<p>We can create virtually any number of character-number assignments, but life in a world in which every type of computer used a different character encoding would not be very convenient. This system has led to a need to introduce a universal and widely accepted standard implemented by (almost) all computers and operating systems all over the world.</p>
+
+
+<br><br>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+
+
+<p>The one named <strong>ASCII</strong> (short for <strong>American Standard Code for Information Interchange</strong>) is the most widely used, and you can assume that nearly all modern devices (like computers, printers, mobile phones, tablets, etc.) use that code.</p>
+
+<p>The code provides space for <strong>256 different characters</strong>, but we are interested only in the first 128. If you want to see how the code is constructed, look at the table below. Click the table to enlarge it. Look at it carefully – there are some interesting facts. Look at the code of the most common character – the <i>space</i>. This is <i>32</i>.</p>
+
+<img class="lightbox" src="/uploads/media/default/0001/01/cb7c521e42b4b7b6e86b4c65ebcec1dfd7f72863.png" width="90%" alt="The ASCII Table">
+<br><br>
+
+ 
+<p>Now check the code of the lower-case letter <i>a</i>. This is <i>97</i>. And now find the upper-case <i>A</i>. Its code is <i>65</i>. Now work out the difference between the code of <i>a</i> and <i>A</i>. It is equal to <i>32</i>. That's the code of a <i>space</i>. Interesting, isn't it?</p>
+
+<p>Also note that the letters are arranged in the same order as in the Latin alphabet.</i>
+
+
+
+<br>
+<br>
+
+</div>
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

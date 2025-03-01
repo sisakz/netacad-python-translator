@@ -1,0 +1,169 @@
+<problem chapter='1' section='3' slide='1' problem='3' title='Modulok és csomagok'>
+
+<!--
+Update history:
+2020-09-08 Grzegorz (review, PEP-8 compliance check, update)
+2021-06-29 Grzegorz (corrections)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h1>Az első modulod: 3. lépés</h1>
+
+<p>Most egy kis apróságot tettünk a modul fájlba:</p>
+
+<img src="/uploads/media/default/0001/01/ecacec1f22317cb2841b45724660f8b343fa8cca.png" width="45%" alt="Updating the module.py file">
+
+<br><br>
+
+<codep class="syntax-color line-numbers">print("I like to be a module.")
+</codep>
+<p style="text-align: right;">module.py</p>
+
+
+
+<p>Észreveszel különbséget egy modul és egy közönséges szkript között? Eddig nem nagyon.</p>
+
+<p>Ez a fájl ugyanúgy futtatható, mint bármely más szkript. Próbáld ki magad.</p>
+
+<p>Mi történik? A konzolon belül a következő sort kell látnod:</p>
+
+<codep>I like to be a module.</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+
+
+<h2>Az első modulod: 4. lépés</h2>
+
+
+<p>Térjünk vissza a <font face="Courier New">main.py</font> fájlhoz:</p>
+
+<img src="/uploads/media/default/0001/01/fa6a636418f12f30c33a419be1f2482ba3c07793.png" width="45%" alt="The main.py file containing the import module instruction">
+
+<br><br>
+
+
+<codep class="syntax-color line-numbers">import module
+</codep>
+<p style="text-align: right;">main.py</p>
+
+
+<p>Futtasd le. Mit látsz? Remélhetőleg valami ilyesmit:</p>
+
+<codep>I like to be a module.</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+ 
+
+<p>Mit jelent ez valójában?</p>
+
+<p>Amikor egy modult importálunk, a <strong>Python implicit módon végrehajtja</strong> a tartalmát. Ez lehetőséget ad a modulnak, hogy beállítsa az indításkori állapotát (például hasznos értékeket rendelhet néhány változóhoz).</p>
+
+<p>Megjegyzés: az<strong> inicializálás csak egyszer történik meg</strong>, az első importáláskor, így a modul által végzett értékadások nem ismétlődnek meg feleslegesen.</p>
+
+<p>Képzeljük el a következő helyzetet:
+
+<ul>
+<li>van egy <font face="Courier New">mod1</font> nevű modul;</li>
+<li>van egy <font face="Courier New">mod2</font> nevű modul, amely tartalmazza az <codel>import mod1</codel> utasítást;</li>
+<li>van egy fő fájl, amely tartalmazza az <codel>import mod1</codel> és <codel>import mod2</codel> utasításokat.</li>
+</ul>
+ 
+
+<p>Első pillantásra azt gondolhatod, hogy a <font face="Courier New">mod1</font> kétszer lesz importálva, de szerencsére <strong>csak az első importálás történik meg</strong>. A Python ugyanis megjegyzi az importált modulokat, és minden további importálásukat elhagyja.</p>
+
+
+<br><br>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<h2>Az első modulod: 5. lépés</h2>
+
+<p>A Python sokkal többre is képes. Létrehoz egy <codel>__name__</codel> nevű változót is.</p>
+
+<p>Ráadásul minden egyes forrásfájl a változója saját, különálló példányát használja - a modulok nem osztják meg a változóikat.</p>
+
+<p>Megmutatjuk, hogyan kell használni. Módosítsuk egy kicsit a modult:</p>
+
+<img src="/uploads/media/default/0001/01/b07fcde32efd540ff0877284ed2018fd31e2ddc1.png" width="45%" alt="Updating the module.py file">
+
+<br><br>
+
+
+<codep class="syntax-color copy line-numbers">print("I like to be a module.")
+print(__name__)
+</codep>
+<p style="text-align: right;">module.py</p>
+
+
+
+<p>Most futtasd a <font face="Courier New">module.py</font> fájlt. A következő sorokat kell látnod:</p>
+
+<codep>I like to be a module
+__main__</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+ 
+
+<p>Most futtasd a <font face="Courier New">main.py</font> fájlt. És? Ugyanazt látod, mint mi?</p>
+
+<codep>I like to be a module
+module</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+ 
+
+<p>Ezek után kijelenthetjük, hogy:</p>
+
+<ul>
+<li>amikor egy fájlt közvetlenül futtatsz, a <codel>__name__</codel> változója <codel>__main__</codel>-re áll be;</li>
+<li>amikor egy fájlt modulként importálunk, a <codel>__name__</codel> változóba a fájl neve kerül (a <font face="Courier New">.py</font> nélkül)</li>
+</ul>
+
+<br>
+
+<h2>Az első modulod: 6. lépés</h2>
+
+<p>Így használhatod a <codel>__main__</codel> változót annak érdekében, hogy felismerd, milyen kontextusban aktiváltad a kódodat:</p>
+
+<img src="/uploads/media/default/0001/01/069d9878c504a8ed9b216a41ec30ff3af582a305.png" width="45%" alt="Updating the module.py file">
+
+<br><br>
+
+<codep class="syntax-color copy line-numbers">if __name__ == "__main__":
+    print("I prefer to be a module.")
+else:
+    print("I like to be a module.")
+</codep>
+<p style="text-align: right;">module.py</p>
+
+
+<p>Van azonban egy okosabb módja is a változó felhasználásának. Ha írsz egy modult, amely tele van számos összetett függvénnyel, akkor használhatod arra, hogy elhelyezz benne egy sor tesztet, amelyekkel ellenőrizheted, hogy a függvények megfelelően működnek-e.</p>
+
+<p>Minden alkalommal, amikor módosítod valamelyik függvényt, egyszerűen csak futtasd a modult, hogy megbizonyosodj arról, a módosítások nem rontották el a kódot. Ezek a tesztek a kód modulként történő importálásakor elmaradnak.</p>
+
+<br>
+<br>
+
+</div>
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

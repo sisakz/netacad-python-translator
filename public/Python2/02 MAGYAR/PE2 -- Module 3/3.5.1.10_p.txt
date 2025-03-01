@@ -1,0 +1,52 @@
+<problem chapter='3' section='5' slide='1' problem='10' title='OOP alapok: Öröklés'>
+
+<!--
+Update history:
+2020-10-01 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>
+# Testing properties: instance variables.
+class Super:
+    def __init__(self):
+        self.supVar = 11
+
+
+class Sub(Super):
+    def __init__(self):
+        super().__init__()
+        self.subVar = 12
+
+
+obj = Sub()
+
+print(obj.subVar)
+print(obj.supVar)
+
+</code>
+
+
+
+<h1>Hogyan találja meg a Python a tulajdonságokat és metódusokat (folytatás)</h1>
+
+
+<p>Ugyanez a hatás figyelhető meg a <strong>példányváltozókkal is</strong> – nézzük meg a második példát a szerkesztőben!</p>
+
+<p>A <codel>Sub</codel> osztály konstruktora egy <codel>subVar</codel> nevű példányváltozót hoz létre, míg a <codel>Super</codel> konstruktora ugyanezt teszi egy <codel>supVar</codel> nevű változóval. Mint korábban, mindkét változó elérhető a <codel>Sub</codel> osztály objektumán belül.</p>
+
+<p>A program kimenete a következő:</p>
+
+<codep>12
+11</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+<p>Megjegyzés: a <codel>supVar</codel> változó létezése nyilvánvalóan a <codel>Super</codel> osztály konstruktorának meghívásától függ. Ennek elhagyása a változó hiányát eredményezné a létrehozott objektumban (próbáld ki te magad is).</p>
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

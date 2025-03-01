@@ -1,0 +1,33 @@
+<problem chapter='2' section='3' slide='1' problem='12' title='Karakterlánc tagfüggvények'>
+
+<!--
+Update history:
+2020-09-23 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>
+# Demonstrating the rfind() method:
+print("tau tau tau".rfind("ta"))
+print("tau tau tau".rfind("ta", 9))
+print("tau tau tau".rfind("ta", 3, 9))
+
+</code>
+
+
+
+<h1>Az <font face="Courier New">rfind()</font> tagfüggvény</h1>
+
+<p>Az <codel>rfind()</codel> nevû egy-, két- és háromparaméteres tagfüggvények majdnem ugyanazt teszik, mint társaik (az <i>r</i> elõtag nélküliek), de <strong>a keresést a karakterlánc végérõl kezdik</strong>, nem pedig az elejérõl (ezért az <i>r</i> elõtag, mint <i>right</i>).</p>
+
+<p>Nézd meg a példakódot a szerkesztõben, és próbáld meg megjósolni a kimenetét. Futtasd le a kódot, hogy ellenõrizd, igazad volt-e.</p>
+
+
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

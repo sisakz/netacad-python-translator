@@ -1,0 +1,87 @@
+<problem chapter='4' section='3' slide='1' problem='16' title='LAB: Sorted character frequency histogram'>
+
+<!--
+Update history:
+2020-10-07 Grzegorz (review, PEP-8 compliance check)
+2021-07-07 Grzegorz (code corrections - important!)
+-->
+
+<code>
+</code>
+
+<span class="label" style="background-color:rgb(205, 168, 105);"><b>LAB</b></span>
+
+<br><br>
+
+
+<h2>Estimated time</h2>
+<p>15-30 minutes</p>
+
+
+<h2>Level of difficulty</h2>
+<p>Medium</p>
+
+
+<h2>Prerequisites</h2>
+<p>4.3.1.15</p>
+
+
+<h2>Objectives</h2>
+<ul>
+<li>improve the student's skills in operating with files (reading/writing)</li>
+<li>using lambdas to change the sort order.</li>
+</ul>
+
+
+<h2>Scenario</h2>
+<p>The previous code needs to be improved. It's okay, but it has to be better.</p>
+
+<p>Your task is to make some amendments, which generate the following results:</p>
+
+
+<ul>
+<li>the output histogram will be sorted based on the characters' frequency (the bigger counter should be presented first)</li>
+<li>the histogram should be sent to a file with the same name as the input one, but with the suffix '.hist' (it should be concatenated to the original name)</li>
+</ul>
+
+<p>Assuming that the input file contains just one line filled with:</p>
+<codep>cBabAa</codep>
+<p style="text-align: right;"><font size="-2"><b>samplefile.txt</b></font></p>
+
+<p>the expected output should look as follows:</p>
+
+<codep>a -> 3
+b -> 2
+c -> 1</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+<p><strong>Tip</strong>: Use a <codel>lambda</codel> to change the sort order.</p>
+
+
+<sampleSolution>from os import strerror
+
+counters = {chr(ch): 0 for ch in range(ord('a'), ord('z') + 1)}
+file_name = input("Enter the name of the file to analyze: ")
+try:
+    file = open(file_name, "rt")
+    for line in file:
+        for char in line:
+            if char.isalpha():
+                counters[char.lower()] += 1
+    file.close()
+    file = open(file_name + '.hist', 'wt')
+    # Note: we've used a lambda to access the directory's elements and set reverse to get a valid order.
+    for char in sorted(counters.keys(), key=lambda x: counters[x], reverse=True):
+        c = counters[char]
+        if c > 0:
+            file.write(char + ' -> ' + str(c) + '\n')
+    file.close()
+except IOError as e:
+    print("I/O error occurred: ", strerror(e.errno))
+
+</sampleSolution>
+
+<studyMode>false</studyMode>
+<labMode>true</labMode>
+
+</problem>

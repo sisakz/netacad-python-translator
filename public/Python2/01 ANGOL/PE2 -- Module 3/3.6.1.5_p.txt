@@ -1,0 +1,71 @@
+<problem chapter='3' section='6' slide='1' problem='5' title='Exceptions once again'>
+
+<!--
+Update history:
+2020-10-01 Grzegorz (reviewed, PEP-8 compliance check)
+-->
+
+<code>
+def print_args(args):
+    lng = len(args)
+    if lng == 0:
+        print("")
+    elif lng == 1:
+        print(args[0])
+    else:
+        print(str(args))
+
+
+try:
+    raise Exception
+except Exception as e:
+    print(e, e.__str__(), sep=' : ' ,end=' : ')
+    print_args(e.args)
+
+try:
+    raise Exception("my exception")
+except Exception as e:
+    print(e, e.__str__(), sep=' : ', end=' : ')
+    print_args(e.args)
+
+try:
+    raise Exception("my", "exception")
+except Exception as e:
+    print(e, e.__str__(), sep=' : ', end=' : ')
+    print_args(e.args)
+	
+</code>
+
+
+
+<h1>Detailed anatomy of exceptions</h1>
+
+
+<p>Let's take a closer look at the exception's object, as there are some really interesting elements here (we'll return to the issue soon when we consider Python's input/output base techniques, as their exception subsystem extends these objects a bit).</p>
+
+<p>The <codel>BaseException</codel> class introduces a property named <codel>args</codel>. It's a <strong>tuple designed to gather all arguments passed to the class constructor</strong>. It is empty if the construct has been invoked without any arguments, or contains just one element when the constructor gets one argument (we don't count the <codel>self</codel> argument here), and so on.</p>
+
+<p>We've prepared a simple function to print the <codel>args</codel> property in an elegant way. You can see the function in the editor.</p>
+
+<br>
+
+<p>We've used the function to print the contents of the <codel>args</codel> property in three different cases, where the exception of the <codel>Exception</codel> class is raised in three different ways. To make it more spectacular, we've also printed the object itself, along with the result of the <codel>__str__()</codel> invocation.</p>
+
+<p>The first case looks routine – there is just the name <font face="Courier New">Exception</font> after the <codel>raise</codel> keyword. This means that the object of this class has been created in a most routine way.</p>
+
+<p>The second and third cases may look a bit weird at first glance, but there's nothing odd here – these are just the constructor invocations. In the second <codel>raise</codel> statement, the constructor is invoked with one argument, and in the third, with two.</p>
+
+<p>As you can see, the program output reflects this, showing the appropriate contents of the <codel>args</codel> property:</p>
+
+<codep> :  :
+my exception : my exception : my exception
+('my', 'exception') : ('my', 'exception') : ('my', 'exception')</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

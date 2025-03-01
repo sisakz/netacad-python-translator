@@ -1,0 +1,119 @@
+<problem chapter='2' section='5' slide='1' problem='6' title="LAB: A Caesar-kód továbbfejlesztése cipher">
+
+<!--
+Update history:
+2020-09-23	Grzegorz (review, PEP-8 compliance check, update)
+2021-06-30	Grzegorz (corrections)
+-->
+
+<span class="label" style="background-color:rgb(205, 168, 105);"><strong>LABORGYAKORLAT</strong></span>
+
+<br><br>
+
+
+<h2>Becsült idő</h2>
+<p>30-90 perc</p>
+
+<h2>Nehézségi szint</h2>
+<p>Nehéz</p>
+
+<h2>Előfeltétel</h2>
+<p>Alábbi szakaszok: 2.5.1.1, 2.5.1.2</p>
+
+
+<h2>Célok</h2>
+<ul>
+    <li>a karakterlánc-kezelési készségek fejlesztése;</li>
+    <li>a karakterek ASCII-kóddá alakítása és visszaalakítása.</li>
+</ul>
+
+
+<h2>Forgatókönyv</h2>
+<p>A Caesar-kódot már ismered, és ezért szeretnénk, ha továbbfejlesztenéd azt a kódot, amelyet nemrég mutattunk neked.</p>
+
+<p>Az eredeti Caesar-kód minden karaktert eggyel eltol: <i>a</i>-ból <i>b</i> lesz, <i>z</i>-ből <i>a</i> lesz, és így tovább. Nehezítsük meg egy kicsit a dolgunkat, és engedjük meg, hogy az eltolás nagyságát jelző érték az 1...25 tartományból származzon.</p>
+
+<p>Ezenkívül a kód őrizze meg a betűk nagyságát (a kisbetűs betűk maradjanak kisbetűsek), és minden nem betű karakter maradjon érintetlenül.</p>
+
+<p>Az a feladatod, hogy írj egy programot, amely:</p>
+<ul>
+    <li>egy sor szöveget kér be a felhasználótól a titkosításhoz;</li>
+    <li>megkérdezi a felhasználótól az eltolás értékét (egy egész számot az 1...25 tartományból) – megjegyzés: kényszerítenie kell a felhasználót, hogy érvényes eltolás értéket adjon meg (ne add fel, és ne hagyd, hogy a rossz adatok félrevezessenek!);</li>
+    <li>kiírja a kódolt szöveget.</li>
+</ul>
+
+<p>Teszteld a kódot az általunk megadott adatokkal!</p>
+
+<h2>Tesztadatok</h2>
+
+<p>Minta bemenet:</p>
+<codep>abcxyzABCxyz 123
+2</codep>
+<br>
+
+<p>Kimeneti minta:</p>
+<codep>cdezabCDEzab 123</codep>
+<br>
+
+
+<p>Bemeneti minta:</p>
+<codep>The die is cast
+25</codep>
+<br>
+
+<p>Kimeneti minta:</p>
+<codep>Sgd chd hr bzrs</codep>
+<br>
+
+
+<br>
+
+<studyMode>false</studyMode>
+<labMode>true</labMode>
+
+
+
+<sampleSolution>
+# Input the text you want to encrypt.
+text = input("Enter message: ")
+
+# Enter a valid shift value (repeat until it succeeds).
+shift = 0
+
+while shift == 0:
+    try:    
+        shift = int(input("Enter the cipher shift value (1..25): "))
+        if shift not in range(1,26):
+        	raise ValueError
+    except ValueError:
+        shift = 0
+    if shift == 0:
+        print("Incorrect shift value!")
+
+cipher = ''
+
+for char in text:
+    # Is it a letter?
+    if char.isalpha():
+        # Shift its code.
+        code = ord(char) + shift
+        # Find the code of the first letter (upper- or lower-case)
+        if char.isupper():
+            first = ord('A')
+        else:
+            first = ord('a')
+        # Make correction.
+        code -= first
+        code %= 26
+        # Append the encoded character to the message.
+        cipher += chr(first + code)
+    else:
+        # Append the original character to the message.
+        cipher += char
+
+print(cipher)
+
+</sampleSolution>
+
+
+</problem>

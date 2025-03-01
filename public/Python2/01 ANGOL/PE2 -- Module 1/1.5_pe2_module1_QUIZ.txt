@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+PE2 – Module 1 Quiz
+Python Essentials 2.0
+
+Update history:
+2019-02-08	Grzegorz (reviewed)
+2020-06-08	Sysio (first version of pip items)
+2020-09-29	Grzegorz (reformatting, PEP-8 compliance, dividing content into Quiz 1 and Quiz 2, adding items 4-10)
+2021-06-29	Grzegorz (corrections)
+-->
+
+<questionPool>
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE2_Q1_ITEM_1"> <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; A namespace is:</p>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>a space in which names exist</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>a name with a space</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>a space with a name</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE2_Q1_ITEM_2"> <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; If you want to import <codel>pi</codel> from <codel>math</codel>, which line will you use?</p>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p><codel>from math import pi</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>import pi from math</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>from pi import math</codel></p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE2_Q1_ITEM_3">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; Which one of the following is <u>true</u>?</p>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>packages can contain modules</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>modules can contain modules</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>modules can contain packages</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="2" scoringType="1" points="1" customId="PE2_Q1_ITEM_4">  <!-- Multiple-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; What can you do to indicate that a module entity should be treated as <b>private</b>? (Select <u>two</u> answers)</p> 
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>you can mark the entity name with the <codel>_</codel> (single underscore) prefix</p> ]]>
+</option>
+
+<option isCorrect="true">
+<![CDATA[ <p>you can mark the entity name with the <codel>__</codel> (double underscore) prefix</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>you can mark the entity name with the <codel>#</codel> prefix</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>nothing – all module entities are private by default</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE2_Q1_ITEM_5">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+<p><span class="label">Q:</span>&nbsp;&nbsp; A <b>PWG-lead repository</b>, collecting open-source Python code, is called:</p>  
+]]>
+</instructions>
+<options>
+<option isCorrect="true" id="A">
+<![CDATA[ <p>PyPI</p> ]]>
+</option>
+<option id="B">
+<![CDATA[ <p>PyCR</p> ]]>
+</option>
+<option id="C">
+<![CDATA[ <p>PWGR</p> ]]>
+</option>
+<option id="D">
+<![CDATA[ <p>PyRep</p> ]]>
+</option>
+</options>
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE2_Q1_ITEM_6">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+<p><span class="label">Q:</span>&nbsp;&nbsp; <b>PyPI</b> is often referred to as:</p>  
+]]>
+</instructions>
+<options>
+<option isCorrect="true" id="A">
+<![CDATA[ <p>The Cheese Shop</p> ]]>
+</option>
+<option id="B">
+<![CDATA[ <p>The Py Software Store</p> ]]>
+</option>
+<option id="C">
+<![CDATA[ <p>Python Play</p> ]]>
+</option>
+<option id="D">
+<![CDATA[ <p>pyΠ</p> ]]>
+</option>
+</options>
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE2_Q1_ITEM_7">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+<p><span class="label">Q:</span>&nbsp;&nbsp; The name <i>pip</i> comes from:</p>  
+]]>
+</instructions>
+<options>
+<option isCorrect="true" id="A">
+<![CDATA[ <p><i>pip installs packages</i></p> ]]>
+</option>
+<option id="B">
+<![CDATA[ <p><i>peripheral interchange program</i></p> ]]>
+</option>
+<option id="C">
+<![CDATA[ <p><i>python internal packager</i></p> ]]>
+</option>
+<option id="D">
+<![CDATA[ <p><i>package inside package</i></p> ]]>
+</option>
+</options>
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="2" scoringType="1" points="1" customId="PE2_Q1_ITEM_8">  <!-- Multiple-choice question, graded -->
+
+<instructions>
+<![CDATA[
+<p><span class="label">Q:</span>&nbsp;&nbsp; What is <u>true</u> about <codel>pip</codel>? (Select <u>two</u> answers)</p>  
+]]>
+</instructions>
+<options>
+<option id="A">
+<![CDATA[ <p>it's always available because it's installed along with Python</p> ]]>
+</option>
+<option id="B" isCorrect="true">
+<![CDATA[ <p>there are two different <i>pip</i> implementations, one for Python 2 and the other for Python 3</p> ]]>
+</option>
+<option id="C">
+<![CDATA[ <p>it's a GUI tool</p> ]]>
+</option>
+<option  isCorrect="true" id="D">
+<![CDATA[ <p>it's a command-line tool</p> ]]>
+</option>
+</options>
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE2_Q1_ITEM_9">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+<p><span class="label">Q:</span>&nbsp;&nbsp; When you use <codel>pip</codel> to install a package that requires one or more dependencies, then:</p>  
+]]>
+</instructions>
+<options>
+<option id="A" isCorrect="true">
+<![CDATA[ <p>pip will take care of everything by itself</p> ]]>
+</option>
+<option id="B">
+<![CDATA[ <p>you'll have to install all the dependencies by yourself <b>before</b> you install the desired package</p> ]]>
+</option>
+<option id="C">
+<![CDATA[ <p>you'll have to install all the dependencies by yourself <b>after</b> you install the desired package</p> ]]>
+</option>
+<option id="D">
+<![CDATA[ <p>the package will install all the dependencies during its first run</p> ]]>
+</option>
+</options>
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="2" scoringType="1" points="1" customId="PE2_Q1_ITEM_10">  <!-- Multiple-choice question, graded -->
+
+<instructions>
+<![CDATA[
+<p><span class="label">Q:</span>&nbsp;&nbsp; Which of the following commands will you use to determine your <codel>pip</codel> version? (Select <u>three</u> answers)</p>  
+]]>
+</instructions>
+<options>
+<option isCorrect="true" id="A">
+<![CDATA[ <p><codel>pip --version</codel></p> ]]>
+</option>
+<option isCorrect="true" id="B">
+<![CDATA[ <p><codel>pip version</codel></p> ]]>
+</option>
+<option isCorrect="true" id="C">
+<![CDATA[ <p><codel>pip -version</codel></p> ]]>
+</option>
+<option id="D">
+<![CDATA[ <p><codel>pip ---version</codel></p> ]]>
+</option>
+</options>
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+</questionPool>

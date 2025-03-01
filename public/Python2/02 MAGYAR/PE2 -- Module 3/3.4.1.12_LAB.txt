@@ -1,0 +1,142 @@
+<problem chapter='3' section='4' slide='1' problem='12' title='LAB: A Timer osztály'>
+
+<!--
+Update history:
+2020-01-01 Syslaw (file created)
+2020-11-16 Grzegorz (review, PEP-8 compliance check)
+2021-07-05 Grzegorz (corrections)
+-->
+
+<code>class Timer:
+    def __init__( ??? ):
+        #
+        # Write code here.
+        #
+
+    def __str__(self):
+        #
+        # Write code here.
+        #
+
+    def next_second(self):
+        #
+        # Write code here.
+        #
+
+    def prev_second(self):
+        #
+        # Write code here.
+        #
+
+
+timer = Timer(23, 59, 59)
+print(timer)
+timer.next_second()
+print(timer)
+timer.prev_second()
+print(timer)
+
+</code>
+
+<span class="label" style="background-color:rgb(205, 168, 105);"><b>LABORGYAKORLAT</b></span>
+
+<br><br>
+
+<h2>Becsült idő</h2>
+<p>30-60 perc</p>
+
+<h2>Nehézségi szint</h2>
+<p>Könnyű/Közepes</p>
+
+<h2>Célok</h2>
+<ul>
+    <li>fejleszteni a tanuló készségeit az osztályok létrehozásában;</li>
+    <li>példányváltozók definiálása és használata;</li>
+    <li>metódusok meghatározása és használata.</li>
+</ul>
+
+<h2>Forgatókönyv</h2>
+<p>Szükségünk van egy osztályra, amelyik képes másodperceket számolni. Könnyűnek tűnik? Nem annyira, mint gondolnád, lesz azért néhány konkrét elvárásunk.</p>
+
+<p>Olvasd el őket figyelmesen, mivel az osztály, amelyet most írsz majd, az indító rakétákat vezérli a Marsra tartó nemzetközi küldetésekben. Ez nagy felelősség. Számítunk rád!</p>
+
+<p>Az osztályod neve <codel>Timer</codel> lesz. A konstruktora három argumentumot kezel, ezek az <b>órákat</b> (egy érték a [0...23] tartományból - a katonai időt fogjuk használni), a <b>perceket</b> (a [0..59] tartományból) és a <b>másodperceket</b> (a [0..59] tartományból) jelentik.</p>
+
+<p>Az összes fenti paraméter alapértelmezett értéke nulla. Nincs szükség érvényességi ellenőrzésre.</p>
+
+<p>Magának az osztálynak a következő lehetőségeket kell biztosítania:</p>
+<ul>
+    <li>az osztály objektumainak "kiírhatónak" kell lenniük, azaz képesnek kell lenniük arra, hogy implicit módon a következő formájú karakterláncokká alakítsák magukat: "óó:pp:mm", vezető nullákkal kiegészítve, ha bármelyik érték 10-nél kisebb;</li>
+    <li>az osztálynak rendelkeznie kell a <codel>next_second()</codel> és <codel>previous_second()</codel> nevű paraméter nélküli metódusokkal, amelyek +1/-1 másodperccel növelik az objektumokban tárolt időt.</li>
+</ul>
+
+
+<p>Néhány tipp a megvalósításhoz:</p>
+<ul>
+    <li>az objektum minden tulajdonságának privátnak kell lennie;</li>
+    <li>fontold meg egy külön függvény (nem metódus!) írását az idősztring formázására.</li>
+</ul>
+
+<p>Egészítsd ki az általunk megadott sablont a szerkesztőben! Futtasd le a kódját, és ellenőrizd, hogy a kimeneted ugyanúgy néz-e ki, mint a miénk!</p>
+
+<h2>Várató kimenet</h2>
+
+<p><codep>23:59:59
+00:00:00
+23:59:59</codep></p>
+
+
+<sampleSolution>def two_digits(val):
+    s = str(val)
+    if len(s) == 1:
+        s = '0' + s
+    return s
+
+
+class Timer:
+    def __init__(self, hours=0, minutes=0, seconds=0):
+        self.__hours = hours
+        self.__minutes = minutes
+        self.__seconds = seconds
+
+    def __str__(self):
+        return two_digits(self.__hours) + ":" + \
+               two_digits(self.__minutes) + ":" + \
+               two_digits(self.__seconds)
+
+    def next_second(self):
+        self.__seconds += 1
+        if self.__seconds > 59:
+            self.__seconds = 0
+            self.__minutes += 1
+            if self.__minutes > 59:
+                self.__minutes = 0
+                self.__hours += 1
+                if self.__hours > 23:
+                    self.__hours = 0
+
+    def prev_second(self):
+        self.__seconds -= 1
+        if self.__seconds < 0:
+            self.__seconds = 59
+            self.__minutes -= 1
+            if self.__minutes < 0:
+                self.__minutes = 59
+                self.__hours -= 1
+                if self.__hours < 0:
+                    self.__hours = 23
+
+
+timer = Timer(23, 59, 59)
+print(timer)
+timer.next_second()
+print(timer)
+timer.prev_second()
+print(timer)
+
+</sampleSolution>
+
+<br><br>
+
+<labMode>true</labMode>
+</problem>

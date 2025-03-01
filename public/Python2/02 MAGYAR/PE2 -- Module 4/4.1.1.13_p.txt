@@ -1,0 +1,81 @@
+<problem chapter='4' section='1' slide='1' problem='13' title='Generátor és closure'>
+
+<!--
+Update history:
+2020-10-05 Grzegorz (review, PEP-8 compliance check)
+-->
+
+<code>def outer(par):
+    loc = par
+
+    def inner():
+        return loc
+    return inner
+
+
+var = 1
+fun = outer(var)
+print(fun())
+
+</code>
+
+
+
+<h1>A closure-ök rövid áttekintése</h1>
+
+
+<p>Kezdjük a definícióval: a <strong>closure egy olyan technika, amely lehetővé teszi az értékek tárolását annak ellenére, hogy az a kontextus, amelyben létrehozták azokat, már nem létezik</strong>. Bonyolult? Egy kicsit.</p>
+
+<p>Elemezzünk egy egyszerű példát:</p>
+
+<codep><font color="red">def outer(par):
+    loc = par
+
+
+var = 1
+outer(var)
+
+print(var)
+print(loc)</font>
+
+</codep>
+
+<br>
+
+<p>A példa nyilvánvalóan hibás.</p>
+
+<p>Az utolsó két sor <font face="Courier New">NameError</font> kivételt eredményez - sem a <codel>par</codel>, sem a <codel>loc</codel> nem érhető el a függvényen kívül. Mindkét változó akkor és csak akkor létezik, amikor az <codel>outer()</codel> függvényt végrehajtjuk.</p>
+
+<br>
+
+
+<p>Nézd meg a példát a szerkesztőben. Jelentősen módosítottuk a kódot.</p>
+
+<p>Van benne egy teljesen új elem - egy függvény (<codel>inner</codel>) egy másik függvényen belül (<codel>outer</codel>).</p>
+
+<p>Hogyan működik? Ugyanúgy, mint bármely más függvény, kivéve azt a tényt, hogy az <codel>inner()</codel> csak az <codel>outer()</codel>függvényen belülről hívható meg. Mondhatjuk, hogy az <codel>inner()</codel> az <codel>outer()</codel> privát eszköze - a kód más része nem férhet hozzá.</p>
+
+<p>Nézd meg alaposan:</p>
+
+<ul>
+    <li>az <codel>inner()</codel> függvény a hatókörén belül elérhető változó értékét adja vissza, mivel az <codel>inner()</codel> bármelyik, az <codel>outer()</codel> rendelkezésére álló entitást használhatja.</li>
+    <li>az <codel>outer()</codel> függvény visszaadja magát az <codel>inner()</codel> függvényt; pontosabban, visszaadja az <codel>inner()</codel>függvény egy másolatát, azt, amelyik az <codel>outer()</codel> meghívásának pillanatában be volt fagyasztva; a befagyasztott függvény tartalmazza a teljes környezetét, beleértve az összes helyi változó állapotát, ami azt is jelenti, hogy a <codel>loc</codel> értéke sikeresen megmarad, bár az <codel>outer()</codel> már megszűnt létezni.</li>
+
+</ul>
+
+
+<p>Valójában a kód teljes mértékben érvényes, és a kimenete:</p>
+
+<codep>1</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+<p>Az <codel>outer()</codel> meghívása során visszaadott függvény egy <strong>closure</strong>.</p>
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

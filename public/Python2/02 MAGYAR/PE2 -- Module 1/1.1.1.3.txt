@@ -1,0 +1,100 @@
+<problem chapter='1' section='1' slide='1' problem='3' title='A modulok használata'>
+
+<!--
+Update history:
+2020-08-31 Grzegorz (review, PEP-8 compliance check, update; added two ways of importing modules with examples)
+2021-06-14 Grzegorz (review)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h1>Modul importálása</h1>
+
+<p>Ahhoz, hogy egy modult használhass, <strong>importálnod kell</strong> (gondolj erre úgy, mintha egy könyvet vennél le a polcról). A modul importálása az <codel>import</codel> nevű utasítással történik. Megjegyzés: az <codel>import</codel> egyben kulcsszó is (ennek minden következményével együtt).</p>
+
+<center><img src="/uploads/media/default/0001/01/e111763370df8f83660725b2f878816ffc59fdd4.png" width="80%" alt="The import keyword"></center>
+
+<br>
+<br>
+
+<p>Tegyük fel, hogy a <codel>math</codel> modul által biztosított két entitást szeretnénk használni:</p>
+
+<ul>
+    <li>egy szimbólum (konstans), amely a &pi; pontos (a kettős lebegőpontos aritmetika segítségével elérhető legpontosabb) értékét jelöli (bár egy változó elnevezésére a görög betűk is használhatók Pythonban, a szimbólum neve <strong>pi</strong> - ez egy kényelmesebb megoldás, különösen a világ azon része számára, ahol nincs és nem is lesz görög billentyűzet).</li>
+
+<li>egy <codel>sin()</codel> nevű függvényt (a matematikai <i>szinusz</i> függvény számítógépes megfelelőjét).</li>
+</ul>
+ 
+<p>Mindkét entitás elérhető a <codel>math</codel> modulon keresztül, de az, hogy milyen módon használhatod őket, erősen függ attól, hogy az importálás hogyan történt.</p>
+
+<br>
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+<p>Egy adott modul importálásának legegyszerűbb módja az import utasítás használata az alábbiak szerint:</p>
+
+<codep class="syntax-color">import math
+</codep>
+<br>
+
+<p>A kódsor tartalmazza:</p>
+
+<ul>
+<li>az <codel>import</codel> kulcsszót;</li>
+<li>az importálandó <strong>modul nevét</strong>.</li>
+</ul>
+
+<p>Az utasítás a kódban bárhol elhelyezhető, de a <strong>modul bármelyik entitásának első használata előtt</strong> kell elhelyezni.</p>
+
+<br>
+
+<p>Ha egynél több modult akarsz (vagy kell) importálnod, akkor vagy az <codel>import</codel> műveletet kell ismételgetned (ez az ajánlott):</p>
+
+<codep class="syntax-color">import math
+import sys
+</codep>
+
+<br>
+
+<p>vagy a modulok felsorolásával az <codel>import</codel> kulcsszó után, mint itt:</p>
+
+<codep class="syntax-color">import math, sys
+</codep>
+<br>
+
+ 
+<p>Az utasítás két modult importál, először a <codel>math</codel> nevű modult, majd a <codel>sys</codel> nevű modult.</p>
+
+<p>A modulok listája tetszőlegesen hosszú lehet.</p>
+
+<br>
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

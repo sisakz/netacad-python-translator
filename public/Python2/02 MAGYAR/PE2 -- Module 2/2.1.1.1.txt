@@ -1,0 +1,87 @@
+<problem chapter='2' section='1' slide='1' problem='1' title='Karakterek és karakterláncok vs. számítógépek'>
+
+<!--
+Update history:
+2020-09-21	Grzegorz (review, PEP-8 compliance check, update)
+2021-06-30	Grzegorz (corrections)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+    <h1>Hogyan értik meg a számítógépek az egyes karaktereket</h1>
+
+    <p>Megírtál már néhány érdekes programot, mióta elkezdted ezt a tanfolyamot, de ezek mindegyike csak egyféle adatot dolgozott fel – számokat. Mint tudod (ezt mindenhol láthatod magad körül), a számítógépes adatok nagy része nem szám: keresztnevek, vezetéknevek, címek, versek, tudományos dolgozatok, e-mailek, bírósági ítéletek, szerelmi vallomások és még sok-sok minden más.</p>
+
+<center><img src="/uploads/media/default/0001/01/bf689d4def31ce2625b58365731c84fbb9506712.png" width="80%" alt="The concept of characters and strings"></center>
+<br><br>
+
+    <p>Mindezeket az adatokat a mai számítógépeknek ugyanúgy kell tárolniuk, be- és kiadniuk, keresniük és átalakítaniuk, mint bármely más adatot, függetlenül attól, hogy egyetlen karakterről vagy többkötetes enciklopédiáról van szó.</p>
+
+<p>Hogyan lehetséges ez?</p>
+
+<p>Hogyan lehet ezt Pythonban megvalósítani? Ezt fogjuk most megbeszélni. Kezdjük azzal, hogy a számítógépek hogyan értelmezik az egyes karaktereket.</p>
+
+<br>
+
+<p>A <strong>számítógépek a karaktereket számokként tárolják</strong>. A számítógép által használt minden egyes karakter egy egyedi számnak felel meg, és fordítva. Ennek a hozzárendelésnek több karaktert kell tartalmaznia, mint amennyire számítanál. Sok közülük az ember számára láthatatlan, de a számítógépek számára nélkülözhetetlen.</p>
+
+
+<p>E karakterek némelyike <strong>nem látható (whitespaces) karakter</strong>, míg mások <strong>vezérlő karakterek</strong>, mivel céljuk a bemeneti/kimeneti eszközök vezérlése.</p>
+
+<p>A szabad szemmel teljesen láthatatlan karakterre kiváló példa az a speciális kód vagy kódpár (a különböző operációs rendszerek eltérően kezelhetik ezt a kérdést), amelyet a szövegfájlok sorvégének jelölésére használnak.</p>
+
+<p>Az emberek nem látják ezt a jelet (vagy ezeket a jeleket), de képesek megfigyelni alkalmazásuk hatását ott, ahol a sorok megtörnek.</p>
+
+<p>Gyakorlatilag bármilyen karakter-szám hozzárendelést létrehozhatunk, de az élet nem lenne túl kényelmes egy olyan világban, ahol minden számítógép-típus más-más karakterkódolást használ. Ez a rendszer vezetett ahhoz, hogy szükségessé vált egy univerzális és széles körben elfogadott szabvány bevezetése, amelyet a világ (majdnem) minden számítógépe és operációs rendszere megvalósít.</p>
+
+
+<br><br>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+
+
+<p>Az <strong>ASCII</strong> (az <strong>American Standard Code for Information Interchange [Amerikai szabványos információcsere kódja] </strong> rövidítése)) a legelterjedtebb, és feltételezhető, hogy szinte minden modern eszköz (például számítógépek, nyomtatók, mobiltelefonok, táblagépek stb.) használják ezt a kódot.</p>
+
+<p>A kód <strong>256 különböző karakter</strong> számára biztosít helyet, de minket csak az első 128 érdekel. Ha látni szeretnéd, hogyan épül fel a kód, nézd meg az alábbi táblázatot. Kattints a táblázatra a nagyításhoz. Nézd meg figyelmesen – van benne néhány érdekes tény. Nézd meg a leggyakoribb karakter – a <i>szóköz</i> - kódját. Ez a <i>32</i>-es.</p>
+
+<img class="lightbox" src="/uploads/media/default/0001/01/cb7c521e42b4b7b6e86b4c65ebcec1dfd7f72863.png" width="90%" alt="The ASCII Table">
+<br><br>
+
+ 
+    <p>Most ellenőrizd a kisbetűs <i>a</i> betű kódját. Ez a <i>97</i>. Most pedig keressük meg a nagybetűs <i>A</i>-t. A kódja <i>65</i>. Most számold ki az <i>a</i> és az <i>A</i> kódjának különbségét. Ez <i>32</i>. Ez a <i>szóköz</i> kódja. Érdekes, nem?</p>
+
+    <p>Vegyük észre azt is, hogy a betűk ugyanabban a sorrendben vannak elrendezve, mint a latin ábécében.</p>
+
+
+
+        <br>
+        <br>
+
+</div>
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

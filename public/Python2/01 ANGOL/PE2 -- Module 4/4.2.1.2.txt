@@ -1,0 +1,75 @@
+<problem chapter='4' section='2' slide='1' problem='2' title='Processing files'>
+
+<!--
+Update history:
+2020-10-07 Grzegorz (review, PEP-8 compliance check)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h2>File names</h2>
+
+<p>Different operating systems can treat the files in different ways. For example, Windows uses a different naming convention than the one adopted in Unix/Linux systems.</p>
+
+<p>If we use the notion of a canonical file name (a name which uniquely defines the location of the file regardless of its level in the directory tree) we can realize that these names look different in Windows and in Unix/Linux:</p>
+
+<br>
+
+<center><img src="/uploads/media/default/0001/01/8dd129d92508b1867df5d26866d66f79bde3af1a.png" alt="The concept of file paths" width="70%"></center>
+<br><br>
+<br>
+ 
+
+<p>As you can see, systems derived from Unix/Linux don't use the disk drive letter (e.g., <codel>C:</codel>) and all the directories grow from one root directory called <codel>/</codel>, while Windows systems recognize the root directory as <codel>\</codel>.</p>
+
+
+
+
+<br> 
+<br>
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+
+<p>In addition, Unix/Linux system file names are case-sensitive. Windows systems store the case of letters used in the file name, but don't distinguish between their cases at all.</p>
+
+ 
+
+<p>This means that these two strings: <codel>ThisIsTheNameOfTheFile</codel> and <codel>thisisthenameofthefile</codel> describe two different files in Unix/Linux systems, but are the same name for just one file in Windows systems.</p>
+
+ 
+<p>The main and most striking difference is that you have to use <strong>two different separators for the directory names</strong>: <codel>\</codel> in Windows, and <codel>/</codel> in Unix/Linux.</p>
+
+<p>This difference is not very important to the normal user, but is <strong>very important when writing programs in Python</strong>.</p>
+
+ 
+
+<p>To understand why, try to recall the very specific role played by the <codel>\</codel> inside Python strings. </p>
+
+
+<br>
+<br>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

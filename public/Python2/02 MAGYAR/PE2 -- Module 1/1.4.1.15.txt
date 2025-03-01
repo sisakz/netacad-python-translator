@@ -1,0 +1,91 @@
+<problem chapter='1' section='4' slide='1' problem='15' title='A pip használata'>
+
+<!--
+Update history:
+2020-09-25 Grzegorz (created)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<h1>A <i>pip</i> használata (folytatás)</h1>
+
+
+<p>Ezt várjuk el a lenyűgöző kódunktól:</p>
+
+
+<center><img class="lightbox" src="/uploads/media/default/0001/02/929c92b98466fcce4d0da90b879b105661b4b96a.png" width="95%" alt="Command prompt - python testpg.py"></center>
+<br>
+
+
+<br>
+<br> 
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+<p>A <codel>pip install</codel> két fontos kiegészítő képességgel rendelkezik:</p>
+
+<ul>
+    <li>
+        képes <b>frissíteni</b> egy helyileg telepített csomagot - ha például meg akarsz győződni arról, hogy egy adott csomag legújabb verzióját használod, futtasd a következő parancsot:
+
+        <br><br>
+
+        <codep class="syntax-color">
+            pip install -U package_name
+        </codep>
+        <br>
+
+        ahol az <codel>-U</codel> azt jelenti, hogy update. Megjegyzés: a parancsnak ez a formája a <codel>--user</codel> opciót ugyanarra a célra használja, mint amit korábban bemutattunk;
+    </li>
+
+<br>
+
+<li>képes <b>telepíteni</b> egy csomag <b>felhasználó által kiválasztott verzióját</b> (a <i>pip</i> alapértelmezés szerint a <b>legújabb</b> elérhető verziót telepíti); a cél eléréséhez a következő szintaktikát kell használni:</li>
+
+<br><br>
+
+<codep class="syntax-color">pip install package_name==package_version
+</codep>
+<br>
+
+(vedd figyelembe a dupla egyenlőségjelet) pl.
+
+<br><br>
+
+<codep class="syntax-color">pip install pygame==1.9.2
+</codep>
+<br>
+
+
+
+
+
+
+
+<br>
+<br>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

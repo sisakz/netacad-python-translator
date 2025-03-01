@@ -1,0 +1,115 @@
+<problem chapter='1' section='3' slide='1' problem='10' title='Modulok és csomagok'>
+
+<!--
+Update history:
+2020-09-08 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h1>Az elcső csomagod: 8. lépés</h1>
+
+<p>Most érjünk el egészen a fa aljáig - így juthatunk hozzá a <font face="Courier New">sigma</font> és <font face="Courier New">tau</font> modulokhoz:</p>
+
+<img src="/uploads/media/default/0001/01/d2ae5ea44070d051fffa709cfbf79746f3cfbb13.png" width="45%" alt="A main2.py fájl">
+
+<br><br>
+
+<codep class="syntax-color copy line-numbers">from sys import path
+
+path.append('..\\packages')
+
+import extra.good.best.sigma
+from extra.good.best.tau import funT
+
+print(extra.good.best.sigma.funS())
+print(funT())
+</codep>
+<p style="text-align: right;">main2.py</p>
+ 
+
+<p>Megkönnyítheted az életedet álnevek használatával:</p>
+
+<img src="/uploads/media/default/0001/01/2ce24012593b9bd095dcd131fba504c4b3960e1c.png" width="45%" alt="A main2.py fájl">
+
+<br><br>
+
+<codep class="syntax-color copy line-numbers">from sys import path
+
+path.append('..\\packages')
+
+import extra.good.best.sigma as sig
+import extra.good.alpha as alp
+
+print(sig.funS())
+print(alp.funA())
+</codep>
+<p style="text-align: right;">main2.py</p>
+
+
+
+<br><br>
+
+
+
+</div>
+
+
+
+<div class="small-12 large-6 columns">
+
+<h2>Az első csomagod: 9. lépés</h2>
+
+
+
+<p>Tegyük fel, hogy az <font face="Courier New">extra</font> mappától kezdve az egész alkönyvtárat (beleértve azt is) összecsomagoltuk, és kapunk egy <font face="Courier New">extrapack.zip</font> nevű fájlt. Ezután tegyük a fájlt a <font face="Courier New">packages</font> mappába.</p>
+
+<p>Most már tudjuk használni a zip fájlt a csomagok szerepében:</p>
+
+
+<codep class="syntax-color copy line-numbers">from sys import path
+
+path.append('..\\packages\\extrapack.zip')
+
+import extra.good.best.sigma as sig
+import extra.good.alpha as alp
+from extra.iota import funI
+from extra.good.beta import funB
+
+print(sig.funS())
+print(alp.funA())
+print(funI())
+print(funB())
+</codep>
+<p style="text-align: right;">main2.py</p>
+
+
+<p>Ha saját kísérleteket szeretnél végezni az általunk készített csomaggal, alább letöltheted. Erre bátorítunk is.</p>
+
+<p><a href="/uploads/media/default/0001/01/d9df38daa0410952c4cbf85b47892954c45b9215.zip" target="_blank" download="Extrapack ZIP file">Extrapack ZIP fájl </a><span class="label" style="background-color:orange;"><b>letöltése</b></span></p>
+
+
+
+<p>Mostantól létrehozhatsz modulokat, és csomagokba teheted őket. Itt az ideje, hogy egy teljesen másfajta témát kezdjünk - a hibákról, sikertelenségekről és összeomlásokról.</p>
+
+
+
+
+
+<br>
+<br>
+
+</div>
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

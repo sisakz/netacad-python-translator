@@ -1,0 +1,127 @@
+<problem chapter='1' section='4' slide='1' problem='18' title='SECTION SUMMARY'>
+
+<!--
+Update history:
+2020-09-11	Sysio (first version)
+2020-09-28	Grzegorz (review)
+2021-06-29	Grzegorz (corrections)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<h1>Key takeaways</h1>
+
+<br/>
+
+
+<p>1. A <b>repository</b> (or <b>repo</b> for short) designed to collect and share free Python code exists and works under the name <b>Python Package Index</b> (<b>PyPI</b>) although it's also likely that you come across the very niche name <b>The Cheese Shop</b>. The Shop's website is available at <a href="https://pypi.org/" target="_blank">https://pypi.org/</a>.</p>
+<br/>
+
+<p>2. To make use of The Cheese Shop, a specialized tool has been created and its name is <b>pip</b> (<i><b>p</b>ip <b>i</b>nstalls <b>p</b>ackages</i> while <i>pip</i> stands for... ok, never mind). As pip may not be deployed as a part of the standard Python installation, it is possible that you will need to install it manually. Pip is a console tool.</p>
+<br/>
+
+<p>3. To check pip's version one the following commands should be issued:</p>
+<codep>pip --version
+
+</codep> 
+<br/>
+<p>or</p>
+<codep>pip3 --version
+
+</codep>
+<br/>
+<p>Check yourself which of these works for you in your OS's environment.</p>
+<br/>
+
+<p>4. The list of the main <b>pip</b> activities looks as follows:</p>
+<ul>
+<li><codel>pip help <i>operation</i></codel> – shows a brief description of <i>pip</i>;</li>
+<li><codel>pip list</codel> – shows a list of the currently installed packages;</li>
+<li><codel>pip show <i>package_name</i></codel> – shows <i>package_name</i> info including the package's dependencies;</li>
+<li><codel>pip search <i>anystring</i></codel> – searches through PyPI directories in order to find packages whose names contain <i>anystring</i>;</li>
+<li><codel>pip install <i>name</i></codel> – installs <i>name</i> system-wide (expect problems when you don't have administrative rights);</li>
+<li><codel>pip install --user <i>name</i></codel> – installs <i>name</i> for you only; no other platform user will be able to use it;</li>
+<li><codel>pip install -U <i>name</i></codel> – updates a previously installed package;</li>
+<li><codel>pip uninstall <i>name</i></codel> – uninstalls a previously installed package.</li>
+</ul>
+<br/>
+
+</div>
+<div class="small-12 large-6 columns">
+
+<p><strong>Exercise 1</strong></p>
+<p>Where does the name <i>The Cheese Shop</i> come from?</p>
+
+<button class="button tiny" onclick="solution('sol')">Check</button>
+
+<p id="sol" style="display: none;">
+It's a reference to an old <i>Monty Python</i> sketch of the same name.</p>
+
+<script>
+function solution (id) {
+    var element = document.getElementById(id);
+    
+if (element.style.display === "none") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
+    }
+}
+</script>
+
+<br/><br/>
+
+
+
+<p><strong>Exercise 2</strong></p>
+<p>Why should you ensure which one of <i>pip</i> and <i>pip3</i> works for you?</p>
+
+<button class="button tiny" onclick="solution('sol2')">Check</button>
+
+<p id="sol2" style="display: none;">
+When Python 2 and Python 3 coexist in your OS, it's likely that <i>pip</i> identifies the instance of pip working with Python 2 packages only.</p>
+
+
+<br/><br/>
+
+
+
+
+<p><strong>Exercise 3</strong></p>
+<p>How can you determine if your <i>pip</i> works with either Python 2 or Python 3?</p>
+
+<button class="button tiny" onclick="solution('sol3')">Check</button>
+
+<p id="sol3" style="display: none;">
+<codel>pip --version</codel> will tell you that.</p>
+
+
+<br/><br/>
+
+
+<p><strong>Exercise 4</strong></p>
+<p>Unfortunately, you don't have administrative rights. What should you do to install a package system-wide?</p>
+
+<button class="button tiny" onclick="solution('sol4')">Check</button>
+
+<p id="sol4" style="display: none;">
+You have to ask your <i>sysadmin</i> – don't try to hack your OS!</p>
+
+
+
+<br/>
+
+
+</div>
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

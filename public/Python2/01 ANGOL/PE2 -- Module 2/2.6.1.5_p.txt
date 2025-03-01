@@ -1,0 +1,54 @@
+<problem chapter='2' section='6' slide='1' problem='5' title="Errors – the programmer's daily bread">
+
+<!--
+Update history:
+2020-09-21 Grzegorz (review, PEP-8 compliance check, update, title correction)
+2021-06-30	Grzegorz (corrections)
+-->
+
+<code>
+first_number = int(input("Enter the first number: "))
+second_number = int(input("Enter the second number: "))
+
+if second_number != 0:
+    print(first_number / second_number)
+else:
+    print("This operation cannot be done.")
+
+print("THE END.")
+
+</code>
+
+
+
+<h1>Exceptions: continued</h1>
+
+<p>How do you <strong>handle</strong> exceptions? The word <i>try</i> is the key to the solution.</p>
+
+<p>What's more, it's a keyword, too.</p>
+
+<p>The recipe for success is as follows:</p>
+
+<ul>
+<li>first, you have to <strong><i>try</i> to do something</strong>;</li>
+<li>next, you have to <strong>check whether everything went well</strong>.</li>
+</ul>
+ 
+
+<p>But wouldn't it be better to check all circumstances first and then do something only if it's safe?</p>
+
+<p>Just like the example in the editor.</p>
+
+<p>Admittedly, this way may seem to be the most natural and understandable, but in reality, this method doesn't make programming any easier. All these checks can make <strong>your code bloated and illegible</strong>.</p>
+
+<p>Python prefers a completely different approach.</p>
+
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

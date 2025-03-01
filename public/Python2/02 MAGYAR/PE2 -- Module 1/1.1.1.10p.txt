@@ -1,0 +1,65 @@
+<problem chapter='1' section='1' slide='1' problem='10' title='Importing a module | aliasing'>
+
+<!--
+Update history:
+2020-08-28 Grzegorz (review, PEP-8 compliance check, update)
+2021-06-16 Grzegorz (review)
+-->
+
+<code>import math as m
+
+print(m.sin(m.pi/2))
+
+</code>
+
+<h1>Modul importálása (folytatás)</h1>
+
+<p>Ha meg kell változtatnod a <codel>math</codel> szót, akkor a saját elnevezésedet is használhatod, ahogy ebben a példában is:</p>
+
+<codep class="syntax-color">import math as m
+
+print(m.sin(m.pi/2))
+</codep>
+
+<br>
+
+<p>Megjegyzés: az alias import sikeres végrehajtása után az <strong>eredeti modul neve elérhetetlenné válik</strong> és nem szabad használni.</p>
+
+<br>
+
+<p>Ha viszont a <codel>from module import name</codel> változatot használod, és meg kell változtatnod az entitás nevét, akkor hozz létre egy aliast az entitáshoz. Ennek hatására a név helyébe az általad választott alias lép.</p>
+
+<p>Így lehet ezt megtenni:</p>
+
+<codep class="syntax-color">from module import name as alias
+</codep>
+
+<br>
+
+<p>Mint korábban, az eredeti (átnevezett) név elérhetetlenné válik.</p>
+
+<p>Az <codel>alias</codel> kifejezés <codel>name</codel> eleme megismételhető - vesszővel válaszd el a többszörözött kifejezéseket, például így:</p>
+
+<codep class="syntax-color">from module import n as a, m as b, o as c
+</codep>
+
+<br>
+
+<p>A példa talán kicsit furcsán néz ki, de működik:</p>
+
+<codep class="syntax-color">from math import pi as PI, sin as szinusz
+
+print(szinusz(PI/2))
+</codep>
+
+<br>
+
+<p>Most már ismered a modulok használatának alapjait. Mutatunk pár modult és azok néhány hasznos entitását.</p>
+
+
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

@@ -1,0 +1,69 @@
+<problem chapter='4' section='1' slide='1' problem='11' title='Generátor és closure'>
+
+<!--
+Update history:
+2020-10-05 Grzegorz (review, PEP-8 compliance check)
+-->
+
+<code>list_1 = [x for x in range(5)]
+list_2 = list(map(lambda x: 2 ** x, list_1))
+print(list_2)
+
+for x in map(lambda x: x * x, list_2):
+    print(x, end=' ')
+print()
+
+</code>
+
+
+
+<h1>Lambdák és a <font face="Courier New">map()</font> függvény</h1>
+
+
+<p>A legegyszerűbb esetben a <codel>map()</codel> függvény:</p>
+
+<p><codep class="syntax-color">map(function, list)
+</codep></p>
+
+<p>két argumentumot vár:</p>
+
+<ul>
+<li>egy függvényt;</li>
+<li>egy listát.</li>
+</ul>
+
+
+
+<p>A fenti leírás rendkívül leegyszerűsített, mivel:</p>
+
+<ul>
+    <li>a második <codel>map()</codel> argumentum lehet bármilyen iterálható entitás (pl.: egy tuple , vagy akár egy generátor).</li>
+    <li>A <codel>map()</codel> több mint két argumentumot is kaphat.</li>
+</ul>
+
+<p>A <strong><codel>map()</codel> függvény az első argumentumként átadott függvényt alkalmazza a második argumentum összes elemére, és egy iterátort ad vissza, amely a rákövetkező függvényértékeket szolgáltatja</strong>.</p>
+
+<p>Az így kapott iterátort használhatod egy ciklusban, vagy listává alakíthatod a <codel>list()</codel> függvény segítségével.</p>
+
+<p>Látsz itt bármilyen szerepet egy lambdának?</p>
+
+<p>Nézd meg a kódot a szerkesztőben - két lambdát használtunk benne.</p>
+
+<p>Egészen pontosan ez történik:</p>
+
+<ul>
+    <li>a <codel>list_1</codel> listába beírjuk a számokat <codel>0</codel>-tól <codel>4</codel>-ig;</li>
+    <li>ezután használjuk a <codel>map</codel>-et az első <codel>lambda</codel> függvénnyel együtt egy új lista létrehozásához, amelynek minden eleme <codel>2</codel>-nek a <codel>list_1</codel> megfelelő elemével vett hatványából áll;</li>
+<li>ezt követően a <codel>list_2</codel> kiírásra kerül;</li>
+<li>majd ismét meghívjuk a <codel>map()</codel> függvényt, hogy felhasználjuk az így létrejövő generátort, és közvetlenül írjuk ki az általa szolgáltatott értékeket; amint látható, itt egy a második <codel>lambda</codel> függvényt is használtunk - ami a <codel>list_2</codel> elemeit négyzetre emeli.</li>
+</ul>
+
+<p>Próbáld meg elképzelni ugyanezt a kódot lambdák nélkül. Jobb lenne? Nem valószínű.</p>
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

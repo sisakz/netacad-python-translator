@@ -1,0 +1,109 @@
+<problem chapter='4' section='5' slide='1' problem='12' title='A datetime és time modul (folytatás)'>
+
+<!--
+Update history:
+2020-03-30 Sebastian (first version)
+2020-10-12 Grzegorz (file creation, review, PEP-8 compliance check)
+-->
+
+<code>from datetime import datetime
+
+dt = datetime(2019, 11, 4, 14, 53)
+
+print("Datetime:", dt)
+print("Date:", dt.date())
+print("Time:", dt.time())
+
+</code>
+
+
+
+<h1>A <font face="Courier New">datetime</font> objektumok létrehozása</h1>
+
+
+<p>A <codel>datetime</codel> modulban a dátum és az idõ különálló objektumként vagy egyként is megjeleníthetõ. A dátumot és az idõt egyesítõ osztály neve <codel>datetime</codel>.</p>
+
+<p><codep>datetime(year, month, day, hour, minute, second, microsecond, <i>tzinfo, fold</i>)
+
+</codep></p>
+
+<p>A konstruktora a következõ paramétereket fogadja el:</p>
+
+
+
+<table>
+<tr>
+<th>Paraméter</th>
+<th>Korlátozások</th>
+</tr>
+
+<tr>
+<td><codel>year</codel></td>
+<td><p>A <i>year</i> (év) paraméternek 1-nél (MINYEAR konstans) nagyobb vagy egyenlõnek és 9999-nél (MAXYEAR konstans) kisebb vagy egyenlõnek kell lennie.</p></td>
+</tr>
+
+<tr>
+<td><codel>month</codel></td>
+<td><p>A <i>month</i> (hónap) paraméternek 1-nél nagyobb vagy egyenlõnek és 12-nél kisebb vagy egyenlõnek kell lennie.</p></td>
+</tr>
+
+<tr>
+<td><codel>day</codel></td>
+<td><p>A <i>day</i> (nap) paraméternek nagyobb vagy egyenlõnek kell lennie 1-nél, és kisebb vagy egyenlõnek kell lennie az év adott hónapjának utolsó napjánál.</p></td>
+</tr>
+
+<tr>
+<td><codel>hour</codel></td>
+<td><p>Az <i>hour</i> (óra) paraméternek 0-nál nagyobb vagy egyenlõnek és 23-nál kisebb vagy egyenlõnek kell lennie</p></td>
+</tr>
+
+<tr>
+<td><codel>minute</codel></td>
+<td><p>A <i>minute</i> (perc) paraméternek 0-nál nagyobb vagy egyenlõnek és 59-nél kisebb vagy egyenlõnek kell lennie.</p></td>
+</tr>
+
+<tr>
+<td><codel>second</codel></td>
+<td><p>A <i>second</i> (másodperc) paraméternek 0-nál nagyobb vagy egyenlõnek és 59-nél kisebb vagy egyenlõnek kell lennie.</p></td>
+</tr>
+
+<tr>
+<td><codel>microsecond</codel></td>
+<td><p>A <i>microsecond</i> (mikroszekundum) paraméter értéke 0-nál nagyobb vagy azzal egyenlõ, de 1000000-nál kisebb kell, hogy legyen.</p></td>
+</tr>
+
+<tr>
+<td><codel>tzinfo</codel></td>
+<td><p>A <i>tzinfo</i> paraméternek egy <codel>tzinfo</codel> alosztály objektumnak vagy <codel>None</codel>-nak (alapértelmezett) kell lennie.</p></td>
+</tr>
+
+<tr>
+<td><codel>fold</codel></td>
+<td><p>A <i>fold</i> paraméter értéke 0 vagy 1 (alapértelmezett 0).</p></td>
+</tr>
+</table>
+
+<p>Nézd meg a kódot a szerkesztõablakban, hogyan hozunk létre egy datetime objektumot.</p>
+
+<p>Eredmény:</p>
+
+<codep>Datetime: 2019-11-04 14:53:00
+Date: 2019-11-04
+Time: 14:53:00</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+
+<p>A példa egy <codel>datetime</codel> objektumot hoz létre, amely 2019. november 4-én 14:53:00-t jelöli. A konstruktornak átadott összes paraméter csak olvasható osztályattribútumokba kerül. Ezek a <i>year</i>, <i>month</i>, <i>day</i>, <i>hour</i>, <i>minute</i>, <i>second</i>, <i>microsecond</i>, <i>tzinfo</i>, and <i>fold</i>.</p>
+
+<p>A példa két olyan metódust mutat, amelyek két különbözõ objektumot adnak vissza. A <codel>date</codel> nevû metódus a <i>date</i> objektumot adja vissza a megadott év, hónap és nap értékével, míg a <codel>time</codel> metódus a <i>time</i> objektumot adja vissza a megadott órával és perccel.</p>
+
+
+
+<br>
+<br>
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

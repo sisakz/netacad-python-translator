@@ -1,0 +1,151 @@
+<problem chapter='2' section='4' slide='1' problem='6' title="LAB: A LED Display">
+
+<!--
+Update history:
+2020-09-23 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+
+<span class="label" style="background-color:rgb(205, 168, 105);"><b>LAB</b></span>
+
+<br><br>
+
+
+<h2>Estimated time</h2>
+<p>30 minutes</p>
+
+<h2>Level of difficulty</h2>
+<p>Medium</p>
+
+
+<h2>Objectives</h2>
+<ul>
+<li>improving the student's skills in operating with strings;</li>
+<li>using strings to represent non-text data.</li>
+</ul>
+
+
+<h2>Scenario</h2>
+
+<p>You've surely seen a <i>seven-segment display</i>.</p>
+
+<p>It's a device (sometimes electronic, sometimes mechanical) designed to present one decimal digit using a subset of seven segments. If you still don't know what it is, refer to the following Wikipedia <a href="https://en.wikipedia.org/wiki/Seven-segment_display" target="_blank">article</a>.</p>
+
+<p>Your task is to write <strong>a program which is able to simulate the work of a seven-display device</strong>, although you're going to use single LEDs instead of segments.</p>
+
+<p>Each digit is constructed from 13 LEDs (some lit, some dark, of course) – that's how we imagine it:</p>
+
+<codep>  # ### ### # # ### ### ### ### ### ### 
+  #   #   # # # #   #     # # # # # # # 
+  # ### ### ### ### ###   # ### ### # # 
+  # #     #   #   # # #   # # #   # # # 
+  # ### ###   # ### ###   # ### ### ###</codep>
+<br>
+
+<p>Note: the number 8 shows all the LED lights on.</p>
+
+<p>Your code has to <i>display</i> any non-negative integer number entered by the user.</p>
+
+<p>Tip: using a list containing patterns of all ten digits may be very helpful.</p>
+
+
+<h2>Test data</h2>
+
+<p>Sample input:</p>
+<codep>123</codep>
+<br>
+<p>Sample output:</p>
+<codep>  # ### ### 
+  #   #   # 
+  # ### ### 
+  # #     # 
+  # ### ### </codep>
+<br>
+
+
+
+<p>Sample input:</p>
+<codep>9081726354</codep>
+<br>
+<p>Sample output:</p>
+<codep>### ### ###   # ### ### ### ### ### # # 
+# # # # # #   #   #   # #     # #   # # 
+### # # ###   #   # ### ### ### ### ### 
+  # # # # #   #   # #   # #   #   #   # 
+### ### ###   #   # ### ### ### ###   # </codep>
+<br>
+
+<br>
+
+<studyMode>false</studyMode>
+<labMode>true</labMode>
+
+<hint>
+digits = [ '1111110',  	# 0
+	   '0110000',	# 1
+	   '1101101',	# 2
+	   '1111001',	# 3
+	   '0110011',	# 4
+	   '1011011',	# 5
+	   '1011111',	# 6
+	   '1110000',	# 7
+	   '1111111',	# 8
+	   '1111011',	# 9
+	   ]
+
+
+def print_number(num):
+    # Write the function here.
+
+
+print_number(int(input("Enter the number you wish to display: ")))
+
+</hint>
+
+
+<sampleSolution>
+digits = [ '1111110',  	# 0
+	   '0110000',	# 1
+	   '1101101',	# 2
+	   '1111001',	# 3
+	   '0110011',	# 4
+	   '1011011',	# 5
+	   '1011111',	# 6
+	   '1110000',	# 7
+	   '1111111',	# 8
+	   '1111011',	# 9
+	   ]
+
+
+def print_number(num):
+	global digits
+	digs = str(num)
+	lines = [ '' for lin in range(5) ]
+	for d in digs:
+		segs = [ [' ',' ',' '] for lin in range(5) ]
+		ptrn = digits[ord(d) - ord('0')]
+		if ptrn[0] == '1':
+			segs[0][0] = segs[0][1] = segs[0][2] = '#'
+		if ptrn[1] == '1':
+			segs[0][2] = segs[1][2] = segs[2][2] = '#'
+		if ptrn[2] == '1':
+			segs[2][2] = segs[3][2] = segs[4][2] = '#'
+		if ptrn[3] == '1':
+			segs[4][0] = segs[4][1] = segs[4][2] = '#'
+		if ptrn[4] == '1':
+			segs[2][0] = segs[3][0] = segs[4][0] = '#'
+		if ptrn[5] == '1':
+			segs[0][0] = segs[1][0] = segs[2][0] = '#'
+		if ptrn[6] == '1':
+			segs[2][0] = segs[2][1] = segs[2][2] = '#'
+		for lin in range(5):
+			lines[lin] += ''.join(segs[lin]) + ' '
+	for lin in lines:
+		print(lin)
+
+
+print_number(int(input("Enter the number you wish to display: ")))
+
+</sampleSolution>
+
+</problem>

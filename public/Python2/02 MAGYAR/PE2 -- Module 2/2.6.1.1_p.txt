@@ -1,0 +1,75 @@
+<problem chapter='2' section='6' slide='1' problem='1' title="Hibák – a programozók mindennapi kenyere">
+
+<!--
+Update history:
+2020-09-21 Grzegorz (review, PEP-8 compliance check, update, title correction)
+-->
+
+<code>import math
+
+x = float(input("Enter x: "))
+y = math.sqrt(x)
+
+print("The square root of", x, "equals to", y)
+
+</code>
+
+
+
+<h1>Hibák, kudarcok és egyéb csapások</h1>
+
+<p><strong>Ami elromolhat, az el is romlik</strong>.</p>
+
+<p>Ez Murphy törvénye, és ez mindig és mindenhol működik. A kódod végrehajtása is elromolhat. Ha megtörténhet, akkor meg is fog történni.</p>
+
+<p>Nézd meg a kódot a szerkesztőprogramban. Legalább kétféleképpen el lehet „rontani”. Látod?</p>
+
+<ul>
+
+    <li>Mivel a felhasználó teljesen tetszőleges karakterláncot adhat meg, <strong>nincs garancia arra, hogy a karakterláncot lebegőpontos értékké lehet alakítani</strong> – ez a kód első sebezhetősége;</li>
+    <li>a második, hogy az <strong><codel>sqrt()</codel> függvény sikertelen, ha negatív argumentumot kap</strong>.</li>
+</ul>
+ 
+
+<p>A következő hibaüzenetek valamelyikét kaphatod.</p>
+
+<p>Valami ilyesmit:</p>
+
+<codep>Enter x: Abracadabra
+
+Traceback (most recent call last):
+
+  File "sqrt.py", line 3, in &lt;module&gt;
+
+    x = float(input("Enter x: "))
+
+ValueError: could not convert string to float: 'Abracadabra'</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+
+<p>Vagy valami ilyesmit:</p>
+
+<codep>Enter x: -1
+
+Traceback (most recent call last):
+
+  File "sqrt.py", line 4, in &lt;module&gt;
+
+    y = math.sqrt(x)
+
+ValueError: math domain error</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+ 
+
+<p>Meg tudod védeni magadat az ilyen meglepetésektől? Természetesen igen. Sőt, meg is kell tenned ahhoz, hogy jó programozónak tekintsenek.</p>
+
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

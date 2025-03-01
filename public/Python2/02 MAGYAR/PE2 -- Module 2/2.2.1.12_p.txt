@@ -1,0 +1,57 @@
+<problem chapter='2' section='2' slide='1' problem='12' title='Karakterláncok'>
+
+<!--
+Update history:
+2020-09-22 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>
+# Demonstrating max() - Example 1:
+print(max("aAbByYzZ"))
+
+
+# Demonstrating max() - Examples 2 & 3:
+t = 'The Knights Who Say "Ni!"'
+print('[' + max(t) + ']')
+
+t = [0, 1, 2]
+print(max(t))
+
+</code>
+
+
+
+<h1>Műveletek karakterláncokon: <font face="Courier New">max()</font></h1>
+
+<p>Hasonlóképpen, a <codel>max()</codel> függvény <strong>megtalálja a sorozat maximális elemét</strong>.</p>
+
+ 
+
+<p>Nézd meg az <strong>1. példát</strong> a szerkesztőben. A példaprogram kimenete:</p>
+
+<codep>z</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+ 
+<p>Megjegyzés: ez egy kisbetűs <i>z</i>.</p>
+
+
+<p>Most nézzük meg a <codel>max()</codel> függvényt, amelyet ugyanarra az adatra alkalmazunk, mint korábban. Nézzük meg a <strong>2. és 3. példát</strong> a szerkesztőben.</p>
+
+<p>A várható kimenet:</p>
+
+<codep>[y]
+2</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+
+<p>Végezd el saját kísérleteidet!</p>
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

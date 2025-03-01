@@ -1,0 +1,119 @@
+﻿<problem chapter='2' section='5' slide='1' problem='6' title="LAB: Improving the Caesar cipher">
+
+<!--
+Update history:
+2020-09-23	Grzegorz (review, PEP-8 compliance check, update)
+2021-06-30	Grzegorz (corrections)
+-->
+
+<span class="label" style="background-color:rgb(205, 168, 105);"><strong>LAB</strong></span>
+
+<br><br>
+
+
+<h2>Estimated time</h2>
+<p>30-90 minutes</p>
+
+<h2>Level of difficulty</h2>
+<p>Hard</p>
+
+<h2>Pre-requisites</h2>
+<p>Sections 2.5.1.1, 2.5.1.2</p>
+
+
+<h2>Objectives</h2>
+<ul>
+<li>improving the student's skills in operating with strings;</li>
+<li>converting characters into ASCII code, and vice versa.</li>
+</ul>
+
+
+<h2>Scenario</h2>
+<p>You are already familiar with the Caesar cipher, and this is why we want you to improve the code we showed you recently.</p>
+
+<p>The original Caesar cipher shifts each character by one: <i>a</i> becomes <i>b</i>, <i>z</i> becomes <i>a</i>, and so on. Let's make it a bit harder, and allow the shifted value to come from the range 1..25 inclusive.</p>
+
+<p>Moreover, let the code preserve the letters' case (lower-case letters will remain lower-case) and all non-alphabetical characters should remain untouched.</p>
+
+<p>Your task is to write a program which:</p>
+<ul>
+<li>asks the user for one line of text to encrypt;</li>
+<li>asks the user for a shift value (an integer number from the range 1..25 - note: you should force the user to enter a valid shift value (don't give up and don't let bad data fool you!)</li>
+<li>prints out the encoded text.
+</ul>
+
+<p>Test your code using the data we've provided.</p>
+
+<h2>Test data</h2>
+
+<p>Sample input:</p>
+<codep>abcxyzABCxyz 123
+2</codep>
+<br>
+
+<p>Sample output:</p>
+<codep>cdezabCDEzab 123</codep>
+<br>
+
+
+<p>Sample input:</p>
+<codep>The die is cast
+25</codep>
+<br>
+
+<p>Sample output:</p>
+<codep>Sgd chd hr bzrs</codep>
+<br>
+
+
+<br>
+
+<studyMode>false</studyMode>
+<labMode>true</labMode>
+
+
+
+<sampleSolution>
+# Input the text you want to encrypt.
+text = input("Enter message: ")
+
+# Enter a valid shift value (repeat until it succeeds).
+shift = 0
+
+while shift == 0:
+    try:    
+        shift = int(input("Enter the cipher shift value (1..25): "))
+        if shift not in range(1,26):
+        	raise ValueError
+    except ValueError:
+        shift = 0
+    if shift == 0:
+        print("Incorrect shift value!")
+
+cipher = ''
+
+for char in text:
+    # Is it a letter?
+    if char.isalpha():
+        # Shift its code.
+        code = ord(char) + shift
+        # Find the code of the first letter (upper- or lower-case)
+        if char.isupper():
+            first = ord('A')
+        else:
+            first = ord('a')
+        # Make correction.
+        code -= first
+        code %= 26
+        # Append the encoded character to the message.
+        cipher += chr(first + code)
+    else:
+        # Append the original character to the message.
+        cipher += char
+
+print(cipher)
+
+</sampleSolution>
+
+
+</problem>

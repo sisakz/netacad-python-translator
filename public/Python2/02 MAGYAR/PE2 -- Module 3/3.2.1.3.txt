@@ -1,0 +1,90 @@
+<problem chapter='3' section='2' slide='1' problem='3' title='A procedurálistól az objektumorientált megközelítésig'>
+
+<!--
+Update history:
+2020-09-30 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+    <h1>A verem - a procedurális megközelítés vs. az objektumorientált megközelítés</h1>
+
+    <p>A procedurális verem elkészült. Természetesen vannak gyengeségei, és a megvalósításon belül sok mindenben lehetne javítani (a kivételek alkalmazása jó ötlet), de általánosságban elmondható, hogy a verem teljesen implementálva van, és ha kell, használhatjuk.</p>
+
+    <p>Azonban minél gyakrabban használjuk, annál több hátrányát fedezzük fel. Íme néhány ezek közül:</p>
+
+<ul>
+    <li>
+        az alapvető változó (a veremlista) rendkívül <strong>sérülékeny</strong>; bárki ellenőrizhetetlen módon módosíthatja, és ezzel gyakorlatilag tönkreteheti a vermet; ez nem jelenti azt, hogy rosszindulatúan történt - éppen ellenkezőleg, előfordulhat figyelmetlenségből, például amikor valaki összekeveri a változók neveit; képzeljük el, hogy véletlenül valami ilyesmit írtunk:
+        <br><br>
+        <codep class="syntax-color">
+            stack[0] = 0
+        </codep>
+        <br>
+
+        A verem működése teljesen rendezetlen lesz;
+    </li>
+<br>
+
+<li>az is előfordulhat, hogy később egynél több veremre lesz szükségünk; létre kell hoznunk egy másik listát a verem tárolására, és valószínűleg más <codel>push</codel> és <codel>pop</codel> függvényeket is;</li>
+<br>
+<li>az is előfordulhat, hogy nem csak <codel>push</codel> és <codel>pop</codel>függvényekre van szükségünk, hanem néhány más kényelmi funkcióra is; ezeket biztosan meg tudjuk valósítani, de próbáljuk meg elképzelni, mi történne, ha több tucat külön-külön megvalósított vermünk lenne.</li>
+</ul>
+
+
+
+
+
+
+<br> 
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+<p>Az objektumorientált megközelítés a fenti problémák mindegyikére megoldást kínál. Először is nevezzük meg őket:</p>
+
+<ul>
+    <li>a kiválasztott értékek elrejtésének (védelmének) lehetőségét az illetéktelen hozzáférés ellen nevezzük <strong>egységbezárásnak (encapsulation); az egységbezárt értékekhez közvetlenül nem lehet hozzáférni, és nem is lehet módosítani azokat</strong>;</li><br>
+
+ <li>ha van egy osztályunk, amely az összes szükséges verem viselkedést megvalósítja, akkor annyi vermet készíthetünk, amennyit csak akarunk; nem kell a kód egyetlen részét sem másolnunk vagy megismételnünk;</li><br>
+
+<li>a verem új funkciókkal való gazdagításának képessége az öröklésből ered; létrehozhatunk egy új osztályt (alosztályt), amely az ősosztály (szuperosztály) összes meglévő tulajdonságát örökli, és néhány újjal kiegészíthetjük.</li>
+</ul>
+
+<center><img class="lightbox" src="/uploads/media/default/0001/01/00f7cd2f53aecda61072500eac63095453d5fb08.png" alt="The stack – procedural vs. object approach" width="80%"></center>
+<br><br>
+ 
+
+    <p>Írjunk most egy vadonatúj verem implementációt legelölről. Ezúttal az objektumos megközelítést fogjuk használni, lépésről lépésre mélyedve el az objektumorientált-programozás világában.</p>
+
+
+
+
+
+<br>
+<br>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

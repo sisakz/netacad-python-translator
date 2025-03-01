@@ -1,0 +1,49 @@
+<problem chapter='1' section='2' slide='1' problem='3' title='Fontos modulok | math'>
+
+<!--
+Update history:
+2020-08-31 Grzegorz (review, PEP-8 compliance check, update)
+2021-06-29 Grzegorz (corrections)
+-->
+
+<code>from math import e, exp, log
+
+print(pow(e, 1) == exp(log(e)))
+print(pow(2, 2) == exp(2 * log(2)))
+print(log(e, e) == exp(0))
+
+</code>
+
+<h1>A <font face="Courier New">math</font> modul fontosabb függvényei (folytatás)</h1>
+
+<p>A <codel>math</codel> függvények egy másik csoportját azok a függvények alkotják, amelyek a <strong>hatványozással</strong> kapcsolatosak:</p>
+
+<ul>
+<li><codel>e</codel> &rarr; egy konstans, amelynek értéke az Euler-szám (e) közelítő értéke;</li>
+<li><codel>exp(x)</codel> &rarr; e<sup>x</sup> értékének meghatározása;</li>
+<li><codel>log(x)</codel> &rarr; x természetes logaritmusa;</li>
+<li><codel>log(x, b)</codel> &rarr; x b alapú logaritmusa;</li>
+<li><codel>log10(x)</codel> &rarr; x tizes alapú logaritmusa (pontosabb, mint a <codel>log(x, 10)</codel>);</li>
+<li><codel>log2(x)</codel> &rarr; x kettes alapú logaritmusa (pontosabb, mint a <codel>log(x, 2)</codel>).</li>
+</ul>
+ 
+
+<p>Megjegyzés: a <codel>pow()</codel> függvény:</p>
+
+<ul>
+<li><codel>pow(x, y)</codel> &rarr; x<sup>y</sup> értékének meghatározása (a tartományok figyelembevételével)</li>
+</ul>
+ 
+
+<p>Ez egy beépített függvény, és nem kell importálni.</p>
+
+<p>Nézd meg a kódot a szerkesztőben! Sejted a kimenetét?</p>
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

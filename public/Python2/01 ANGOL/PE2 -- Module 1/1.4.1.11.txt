@@ -1,0 +1,100 @@
+<problem chapter='1' section='4' slide='1' problem='11' title='How to use pip'>
+
+<!--
+Update history:
+2020-09-24 Grzegorz (created)
+2021-06-29	Grzegorz (corrections)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<h1>How to use <i>pip</i></h1>
+
+
+<p>Now we’re ready to ask <i>pip</i> what it can do for us. Let's do it – issue the following command:</p>
+
+<p><codep class="syntax-color">pip help
+</codep></p>
+
+<p>and wait for <i>pip</i>'s response. This is what it looks like:</p>
+
+<center><img class="lightbox" src="/uploads/media/default/0001/02/9d43d3088d1eccdb23831e9c76da72e355b49f48.png" width="90%" alt="pip help"></center>
+<br>
+
+
+<P>Don't forget that you may be obliged to replace <i>pip</i> with <i>pip3</i> if your environment requires this. </p>
+
+<p>The list produced by <i>pip</i> summarizes all the available operations, and the last of them is <codel>help</codel>, which we've just used already. </p>
+
+
+<p>If you want to know more about any of the listed operations, you can use the following form of <i>pip</i> invocation:</p>
+
+<p><codep class="syntax-color">pip help operation
+</codep></p>
+
+
+
+
+
+
+<br>
+<br> 
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+<p>For example, the line:</p>
+
+<p><codep class="syntax-color">pip help install
+</codep></p>
+
+<p>will show you detailed information about using and parameterizing the <codel>install</codel> command.</p>
+
+
+<p>If you want to know what Python packages have been installed so far, you can use the <codel>list</codel> operation – just like this:</p>
+
+<p><codep class="syntax-color">pip list
+</codep></p>
+
+<p>The output you’ll see is rather unpredictable. Don't be surprised if the contents of your screen ends up being completely different. Ours look as follows:</p>
+
+
+<center><img class="lightbox" src="/uploads/media/default/0001/02/a22f95ec6fca2405320d76f4093186b4a927e950.png" width="90%" alt="pip list"></center>
+<br>
+
+ 
+<p>As you can see, there are two columns in the list, one showing the name of the installed package, and the other showing the version of the package. We can’t predict the state of your Python installation.</p>
+
+<p>The only thing we know for sure is that your list contains the two lines we see on our list: <i>pip</i> and <i>setuptools</i>. This happens because the OS is convinced that a user wanting pip will very likely need the <i>setuptools</i> soon. It’s not wrong.</p>
+
+
+
+
+
+
+<br>
+<br>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

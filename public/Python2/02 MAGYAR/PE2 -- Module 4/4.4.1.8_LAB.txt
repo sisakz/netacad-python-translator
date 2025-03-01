@@ -1,0 +1,86 @@
+<problem chapter='4' section='4' slide='1' problem='8' title='LAB: Az os modul'>
+
+<!--
+Update history:
+2020-03-30 Sebastian (first version)
+2020-10-08 Grzegorz (review, PEP-8 compliance check)
+-->
+
+<code>
+</code>
+
+<span class="label" style="background-color:rgb(205, 168, 105);"><b>LABORGYAKORLAT</b></span>
+
+<br><br>
+
+<h2>Becsült idõ</h2>
+<p>15-30 perc</p>
+
+<h2>Nehézségi szint</h2>
+<p>Könnyû</p>
+
+<h2>Célok</h2>
+<ul>
+    <li>a tanuló készségeinek fejlesztése az operációs rendszerrel való interakciók során;</li>
+    <li>az <i>os</i> modul által biztosított függvények gyakorlati használata.</li>
+</ul>
+
+<h2>Forgatókönyv</h2>
+
+<p>Magától értetõdik, hogy az operációs rendszerek lehetõvé teszik a fájlok és könyvtárak keresését. A kurzus ezen részének tanulmányozása során megismerkedtél az <i>os</i> modul függvényeivel, amelyekben minden megtalálható, amire szükséged van ahhoz, hogy olyan programot írj, amely egy adott helyen könyvtárakat keres.</p>
+
+<p>Azért, hogy megkönnyítsük a feladatodat, elkészítettünk Neked egy teszt könyvtárszerkezetet:</p>
+
+<br>
+
+<center><img class="lightbox" src="/uploads/media/default/0001/02/be753bf656f7fc78964037c6f0ab149e2b89b7ef.png" alt="Directory structure" width="90%"></center>
+
+<br><br>
+
+    <p>A program meg kell, hogy feleljen az alábbi követelményeknek:</p>
+<ol>
+    <li>Írj egy <i>find</i> nevû függvényt vagy metódust, amely két argumentumot vár, <i>path</i> és <i>dir</i> néven. A <i>path</i> argumentum egy relatív vagy abszolút elérési út ahhoz a könyvtárhoz, ahol a keresést el kell kezdeni, míg a <i>dir</i> argumentum annak a könyvtárnak a neve, amelyet a megadott elérési útvonalon belül meg akarunk találni. A programnak az abszolút elérési utat kell megjelenítenie, ha a megadott nevû könyvtárat megtalálja.</li>
+    <li>A könyvtárkeresést rekurzív módon kell elvégezni. Ez azt jelenti, hogy a keresésnek a megadott útvonal összes alkönyvtárára is ki kell terjednie.</li>
+</ol>
+
+
+<p><b>Példa bemenet:</b></p>
+<codep>path="./tree", dir="python"</codep>
+<br>
+
+<p><b>Példa kimenet:</b></p>
+<codep>.../tree/python
+.../tree/cpp/other_courses/python
+.../tree/c/other_courses/python</codep>
+
+
+<br>
+<br>
+
+<sampleSolution>import os
+
+class DirectorySearcher:
+    def find(self, path, dir):
+        try:
+            os.chdir(path)
+        except OSError:
+            # Doesn't process a file that isn't a directory.
+            return
+
+        current_dir = os.getcwd()
+        for entry in os.listdir("."):
+            if entry == dir:
+                print(os.getcwd() + "/" + dir)
+            self.find(current_dir + "/" + entry, dir)
+
+
+directory_searcher = DirectorySearcher()
+directory_searcher.find("./tree", "python")
+
+</sampleSolution>
+
+<studyMode>false</studyMode>
+<labMode>true</labMode>
+<hideConsole>true</hideConsole>
+
+</problem>

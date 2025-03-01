@@ -1,0 +1,49 @@
+<problem chapter='4' section='5' slide='1' problem='3' title='The datetime module'>
+
+<!--
+Update history:
+2020-03-30 Sebastian (first version)
+2020-10-11 Grzegorz (review, PEP-8 compliance check)
+-->
+
+<code>from datetime import date
+import time
+
+timestamp = time.time()
+print("Timestamp:", timestamp)
+
+d = date.fromtimestamp(timestamp)
+print("Date:", d)
+
+</code>
+
+
+
+<h1>Creating a date object from a timestamp</h1>
+
+
+<p>The <codel>date</codel> class gives us the ability to create a <i>date</i> object from a <i>timestamp</i>.</p>
+
+<p>In Unix, the timestamp expresses the number of seconds since January 1, 1970, 00:00:00 (UTC). This date is called the <b>Unix epoch</b>, because this is when the counting of time began on Unix systems.</p>
+
+<p>The timestamp is actually the difference between a particular date (including time) and January 1, 1970, 00:00:00 (UTC), expressed in seconds.</p>
+
+<p>To create a date object from a timestamp, we must pass a Unix timestamp to the <codel>fromtimestamp</codel> method.</p>
+
+<p>For this purpose, we can use the <codel>time</codel> module, which provides time-related functions. One of them is a function called <codel>time()</codel>, which returns the number of seconds from January 1, 1970 to the current moment in the form of a float number. Take a look at the example in the editor.</p>
+
+<p>Run the code to see the output.</p>
+
+<p>If you run the sample code several times, you'll be able to see how the timestamp increments itself. It's worth adding that the result of the <codel>time</codel> function depends on the platform, because <b>in Unix and Windows systems, leap seconds aren't counted</b>.</p>
+
+<p><b>Note:</b> In this part of the course we'll also talk about the <i>time</i> module.</p>
+
+
+<br>
+<br>
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

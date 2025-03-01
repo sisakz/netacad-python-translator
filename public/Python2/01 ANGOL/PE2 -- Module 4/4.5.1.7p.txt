@@ -1,0 +1,98 @@
+<problem chapter='4' section='5' slide='1' problem='7' title='The datetime module'>
+
+<!--
+Update history:
+2020-03-30 Sebastian (first version)
+2020-10-11 Grzegorz (review, PEP-8 compliance check)
+-->
+
+<code>from datetime import time
+
+t = time(14, 53, 20, 1)
+
+print("Time:", t)
+print("Hour:", t.hour)
+print("Minute:", t.minute)
+print("Second:", t.second)
+print("Microsecond:", t.microsecond)
+
+</code>
+
+
+
+<h1>Creating <font face="Courier New">time</font> objects</h1>
+
+
+<p>You already know how to present a date using the <codel>date</codel> object. The <codel>datetime</codel> module also has a class that allows you to present time. Can you guess its name? Yes, it's called <codel>time</codel>:</p>
+
+<p><codep>time(hour, minute, second, microsecond, <i>tzinfo, fold</i>)
+
+</codep></p>
+
+<p>The <codel>time</codel> class constructor accepts the following optional parameters:</p>
+
+
+<table>
+<tr>
+<th>Parameter</th>
+<th>Restrictions</th>
+</tr>
+
+<tr>
+<td><codel>hour</codel></td>
+<td><p>The <i>hour</i> parameter must be greater than or equal to 0 and less than 23.</p></td>
+</tr>
+
+<tr>
+<td><codel>minute</codel></td>
+<td><p>The <i>minute</i> parameter must be greater than or equal to 0 and less than 59.</p></td>
+</tr>
+
+<tr>
+<td><codel>second</codel></td>
+<td><p>The <i>second</i> parameter must be greater than or equal to 0 and less than 59.</p></td>
+</tr>
+
+<tr>
+<td><codel>microsecond</codel></td>
+<td><p>The <i>microsecond</i> parameter must be greater than or equal to 0 and less than 1000000.</p></td>
+</tr>
+
+<tr>
+<td><codel>tzinfo</codel></td>
+<td><p>The <i>tzinfo</i> parameter must be a <codel>tzinfo</codel> subclass object or <codel>None</codel> (default).</p></td>
+</tr>
+
+<tr>
+<td><codel>fold</codel></td>
+<td><p>The <i>fold</i> parameter must be 0 or 1 (default 0).</p></td>
+</tr>
+</table>
+
+<p>The <i>tzinfo</i> parameter is associated with time zones, while <i>fold</i> is associated with wall times. We won't use them during this course, but we encourage you to familiarize yourself with them.</p>
+
+<p>Let's look at how to create a time object in practice. Run the code in the editor.</p>
+
+<p>Result:</p>
+
+<codep>Time: 14:53:20.000001
+Hour: 14
+Minute: 53
+Second: 20
+Microsecond: 1</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+<p>In the example, we passed four parameters to the class constructor: <i>hour</i>, <i>minute</i>, <i>second</i>, and <i>microsecond</i>. Each of them can be accessed using the class attributes.</p>
+
+<p><b>Note:</b> Soon we'll tell you how you can change the default time formatting.</p>
+
+
+
+<br>
+<br>
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

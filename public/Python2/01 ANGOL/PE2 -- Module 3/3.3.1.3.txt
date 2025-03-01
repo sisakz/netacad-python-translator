@@ -1,0 +1,93 @@
+<problem chapter='3' section='3' slide='1' problem='3' title='OOP: Properties'>
+
+<!--
+Update history:
+2020-09-30 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h1>Class variables</h1>
+
+<p>A class variable is <strong>a property which exists in just one copy and is stored outside any object</strong>.</p>
+
+<p>Note: no instance variable exists if there is no object in the class; a class variable exists in one copy even if there are no objects in the class.</p>
+
+<p>Class variables are created differently to their instance siblings. The example will tell you more:</p>
+
+<codep class="syntax-color copy line-numbers">class ExampleClass:
+    counter = 0
+    def __init__(self, val = 1):
+        self.__first = val
+        ExampleClass.counter += 1
+
+
+example_object_1 = ExampleClass()
+example_object_2 = ExampleClass(2)
+example_object_3 = ExampleClass(4)
+
+print(example_object_1.__dict__, example_object_1.counter)
+print(example_object_2.__dict__, example_object_2.counter)
+print(example_object_3.__dict__, example_object_3.counter)
+</codep>
+
+<br> 
+<br>
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+
+
+<p>Look:</p>
+
+<ul>
+<li>there is an assignment in the first list of the class definition – it sets the variable named <codel>counter</codel> to <font face="Courier New">0</font>; initializing the variable inside the class but outside any of its methods makes the variable a class variable;</li>
+
+<li>accessing such a variable looks the same as accessing any instance attribute – you can see it in the constructor body; as you can see, the constructor increments the variable by one; in effect, the variable counts all the created objects.</li>
+</ul>
+ 
+
+<p>Running the code will cause the following output:</p>
+
+<codep>{'_ExampleClass__first': 1} 3
+{'_ExampleClass__first': 2} 3
+{'_ExampleClass__first': 4} 3</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+<p>Two important conclusions come from the example:</p>
+
+<ul>
+<li>class variables <strong>aren't shown in an object's <codel>__dict__</codel></strong> (this is natural as class variables aren't parts of an object) but you can always try to look into the variable of the same name, but at the class level – we'll show you this very soon;</li>
+
+<li>a class variable <strong>always presents the same value</strong> in all class instances (objects)</li>
+</ul>
+
+
+<br>
+<br>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

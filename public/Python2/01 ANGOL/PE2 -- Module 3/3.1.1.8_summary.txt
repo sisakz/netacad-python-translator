@@ -1,0 +1,132 @@
+<problem chapter='3' section='1' slide='1' problem='8' title='SECTION SUMMARY'>
+
+<!--
+Update history:
+2020-09-04 Slawek (first version)
+2020-09-30 Grzegorz (reviewed)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<h1>Key takeaways</h1>
+
+<br>
+
+
+<p>1. A <b>class</b> is an idea (more or less abstract) which can be used to create a number of incarnations – such an incarnation is called an <b>object</b>.</p>
+<br>
+
+<p>2. When a class is derived from another class, their relation is named <b>inheritance</b>. The class which derives from the other class is named a <b>subclass</b>. The second side of this relation is named <b>superclass</b>. A way to present such a relation is an <b>inheritance diagram</b>, where:</p>
+<ul>
+<li>superclasses are always presented <b>above</b> their subclasses;</li>
+<li>relations between classes are shown as arrows directed <b>from the subclass toward its superclass</b>.</li>
+</ul>
+<br>
+
+<p>3. Objects are equipped with:</p>
+<ul>
+<li>a <b>name</b> which identifies them and allows us to distinguish between them;</li>
+<li>a set of <b>properties</b> (the set can be empty)</li>
+<li>a set of <b>methods</b> (can be empty, too)</li>
+</ul>
+<br>
+
+<p>4. To define a Python class, you need to use the <codel>class</codel> keyword. For example:</p>
+
+<codep class="syntax-color copy">class This_Is_A_Class:
+     pass
+</codep>
+<br>
+
+<p>5. To create an object of the previously defined class, you need to use the class as if it were a function. For example:</p>
+
+<codep class="syntax-color copy">this_is_an_object = This_Is_A_Class()
+</codep>
+<br>
+
+
+</div>
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+
+<p><strong>Exercise 1</strong></p>
+<p>If we assume that pythons, vipers, and cobras are subclasses of the same superclass, what would you call it?</p>
+
+
+
+<button class="button tiny" onclick="solution('sol')">Check</button>
+<br>
+
+<p id="sol" style="display: none;">
+Snake, reptile, vertebrate, animal – all these answers are acceptable.</p>
+
+<script>
+function solution (id) {
+    var element = document.getElementById(id);
+    
+if (element.style.display === "none") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
+    }
+}
+</script>
+
+<br>
+
+
+
+<p><strong>Exercise 2</strong></p>
+<p>Try to name a few python class subclasses.</p>
+
+<button class="button tiny" onclick="solution('sol2')">Check</button>
+
+<br>
+
+<p id="sol2" style="display: none;">
+Indian python, African rock python, ball python, Burmese python – the list is long.
+</p>
+
+
+<br>
+
+
+
+
+<p><strong>Exercise 3</strong></p>
+<p>Can you name one of your classes just "class"?</p>
+
+
+
+<button class="button tiny" onclick="solution('sol3')">Check</button>
+
+<br>
+
+<p id="sol3" style="display: none;">
+No, you can't – <codel>class</codel> is a keyword!
+</p>
+
+
+
+<br>
+
+
+</div>
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

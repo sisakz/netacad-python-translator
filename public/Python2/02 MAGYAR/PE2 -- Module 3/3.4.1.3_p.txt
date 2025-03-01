@@ -1,0 +1,63 @@
+<problem chapter='3' section='4' slide='1' problem='3' title='OOP: Metódusok'>
+
+<!--
+Update history:
+2020-09-30 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>class Classy:
+    def __init__(self, value):
+        self.var = value
+
+
+obj_1 = Classy("object")
+
+print(obj_1.var)
+
+</code>
+
+
+
+<h1>Metódusok részletesen (folytatás)</h1>
+
+<p>Ha egy metódust: <codel>__init__</codel>-ként nevezel el, az nem egy hagyományos metódus lesz - hanem egy <strong>konstruktor</strong>.</p>
+
+<p>Ha egy osztálynak van konstruktora, akkor az az osztály objektumának példányosításakor automatikusan és implicit módon meghívásra kerül.</p>
+
+ 
+<p>A konstruktor:</p>
+
+<ul>
+    <li><strong>kötelezően rendelkezik a <codel>self</codel> paraméterrel</strong> (ami a szokásos módon automatikusan beállításra kerül);</li>
+
+    <li><strong>több paramétere is lehet (de nem muszáj)</strong>, mint a <codel>self</codel>. Ha ez a helyzet, akkor az objektum létrehozásához használt osztálynévnek tükröznie kell az <codel>__init__</codel> definíciót;</li>
+
+    <li>az <strong>objektum beállítására használható</strong>, például az egyik tulajdonság belső állapotának megfelelő inicializálására, a példányváltozók létrehozására, más objektumok példányosítására, ha azok létezésére szükség van stb.</li>
+</ul>
+
+ 
+
+<p>Nézzük meg a kódot a szerkesztőben! A példa egy nagyon egyszerű konstruktort mutat be.</p>
+
+ 
+<p>Futtasd le. A kód kimenete:</p>
+
+<codep>object</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+<p>Vegyük észre, hogy a konstruktor:</p>
+
+<ul>
+    <li><strong>nem adhat vissza értéket, mivel</strong> úgy tervezték, hogy egy újonnan létrehozott objektumot adjon vissza, semmi mást;</li>
+
+    <li><strong>nem hívható meg közvetlenül sem az objektumból, sem az osztályon belülről</strong> (az objektum bármelyik alosztályából ugyan meghívható a konstruktor, de ezt a kérdést később tárgyaljuk).</li>
+</ul>
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

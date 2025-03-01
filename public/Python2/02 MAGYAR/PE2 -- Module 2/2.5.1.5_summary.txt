@@ -1,0 +1,52 @@
+<problem chapter='2' section='5' slide='1' problem='5' title='SZAKASZ ÖSSZEFOGLALÁS'>
+
+<!--
+Update history:
+2020-09-03 Sysio (first version)
+2020-09-28 Grzegorz (review)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<h1>Hasznos tudnivalók</h1>
+
+<br>
+
+<p>1. A karakterláncok a modern adatfeldolgozás kulcsfontosságú eszközei, mivel a legtöbb hasznos adat valójában karakterlánc. Például egy internetes keresőmotor használata (ami manapság elég triviálisnak tűnik) rendkívül összetett és bonyolult karakterlánc-feldolgozást igényel, ami elképzelhetetlen mennyiségű adatot érint.</p>
+
+
+<p>2. A karakterláncok szigorú módon történő összehasonlítása (ahogyan a Python teszi) nem kielégítő, ha fejlett keresésekről van szó (pl. kiterjedt adatbázis-lekérdezések során). Erre az igényre reagálva számos <i>fuzzy</i> karakterlánc-összehasonlító algoritmust hoztak létre és implementáltak. Ezek az algoritmusok képesek megtalálni azokat a karakterláncokat, amelyek a Python értelmében nem egyenlőek, de <b>hasonlóak</b>.</p>
+
+<p>Az egyik ilyen fogalom a <b>Hamming distance</b>, amelyet két karakterlánc hasonlóságának meghatározására használnak. Ha ez a probléma érdekel, itt találsz róla bővebb információt: <a href="https://en.wikipedia.org/wiki/Hamming_distance">https://en.wikipedia.org/wiki/Hamming_distance</a>. Egy másik hasonló jellegű, de más feltételezésen alapuló megoldás a <b>Levenshtein distance</b>, amelyet itt ismertetünk: <a href="https://en.wikipedia.org/wiki/Levenshtein_distance">https://en.wikipedia.org/wiki/Levenshtein_distance</a>.</p>
+<br>
+
+<br>
+
+</div>
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+<p>3. A karakterláncok összehasonlításának másik módja az <i>akusztikai</i> hasonlóságuk megállapítása, ami egy eljárás annak meghatározásához, hogy két karakterlánc hasonlóan hangzik-e (mint például a „szép” és a „széf”). Az ilyen hasonlóságot minden nyelvre (vagy akár nyelvjárásra) külön-külön kell megállapítani.</p>
+
+<p>Az angol nyelv ilyen összehasonlítására használt algoritmust <b>Soundex</b>-nek hívják, és – nem fogod elhinni – 1918-ban találták fel. Többet megtudhatsz róla itt: <a href="https://en.wikipedia.org/wiki/Soundex">https://en.wikipedia.org/wiki/Soundex</a>.</p>
+<br>
+
+<p>4. A natív lebegő- és egészértékű adatok korlátozott pontossága miatt néha célszerű a nagy numerikus értékeket karakterláncokként tárolni és feldolgozni. Ezt a technikát használja a Python, amikor arra kényszerítjük, hogy egy nagyon sok számjegyből álló egész számmal operáljon.</p>
+<br>
+
+<br>
+
+</div>
+</div>
+</div>
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>
+

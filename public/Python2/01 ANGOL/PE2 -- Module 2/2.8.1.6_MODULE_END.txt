@@ -1,0 +1,71 @@
+<problem chapter='2' section='8' slide='1' problem='6' title='Module Completion'>
+
+<!--
+Update history:
+2020-10-18 Grzegorz (file creation)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<h1>Congratulations! You have completed <i>PE2: Module 2</i>.</h1>
+
+<br>
+
+
+<p>Well done! You've reached the end of Module 2 and completed a major milestone in your Python programming education. Here's a short summary of the objectives you've covered and become familiar with in Module 2:</p>
+
+<ul>
+<li>characters, strings, and coding standards;</li>
+
+<li>the nature of strings in Python; strings vs. lists – similarities and differences;</li>
+
+<li>list and string methods;</li>
+
+<li>handling errors in Python;</li>
+
+<li>controlling the flow of errors using <i>try</i> and <i>except</i>;</li>
+
+<li>the hierarchy of exceptions; review of the most useful exceptions.</li>
+
+</ul>
+
+<br>
+
+<p>You are now ready to take the module quiz and attempt the final challenge: Module 2 Test, which will help you gauge what you've learned so far.</p>
+
+
+<br>
+<br>
+
+</div>
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+
+
+<center><img src="/uploads/media/default/0001/01/29ed2aa31a1a26221e4eac3b69d973a33cbf562e.png" width="65%" alt="Module completion – congratulations"></center>
+<br>
+
+
+
+
+<br>
+
+</div>
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

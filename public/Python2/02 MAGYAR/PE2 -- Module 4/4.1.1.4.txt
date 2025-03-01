@@ -1,0 +1,145 @@
+<problem chapter='4' section='1' slide='1' problem='4' title='Generátor és closure'>
+
+<!--
+Update history:
+2020-10-06 Grzegorz (review, PEP-8 compliance check)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h1>A <font face="Courier New">yield</font> kifejezés</h1>
+
+
+<p>Az iterátor protokollt nem különösebben nehéz megérteni és használni, de az is vitathatatlan, hogy a <strong>protokoll meglehetősen kényelmetlen</strong>.</p>
+
+<p>A fő kellemetlenséget az okozza, hogy az <strong>egymást követő <codel>__iter__</codel> hívások között el kell menteni az iteráció állapotát</strong>.</p>
+
+<p>A <codel>Fib</codel> iterátor például kénytelen pontosan eltárolni azt a helyet, ahol az utolsó hívás történt (azaz a kiértékelt számot és a két előző elem értékét). Ezáltal a kód nagyobb és kevésbé áttekinthető lesz.</p>
+
+ 
+<p>Éppen ezért a Python sokkal hatékonyabb, kényelmesebb és elegánsabb módját kínálja az iterátorok írásának.</p>
+
+<p>A koncepció alapvetően a <codel>yield</codel> kulcsszó által biztosított nagyon speciális és hatékony mechanizmuson alapul.</p>
+
+<p>A <codel>yield</codel> kulcsszóra úgy is gondolhatsz, mint a <codel>return</codel> utasítás okosabb testvérére, egy lényeges különbséggel.</p>
+
+
+<p>Nézd meg ezt a függvényt:</p>
+
+<codep class="syntax-color">def fun(n):
+    for i in range(n):
+        return i
+</codep>
+
+<br> 
+
+<p>Furcsán néz ki, nem igaz? Egyértelmű, hogy a <codel>for</codel> ciklusnak esélye sincs befejezni az első végrehajtását, mivel a <codel>return</codel> visszavonhatatlanul megszakítja azt.</p>
+
+<p>Ráadásul a függvény újbóli meghívása nem változtat semmit - a <codel>for</codel> ciklus a nulláról indul, és azonnal megszakad.</p>
+
+<p>Azt mondhatjuk, hogy egy ilyen függvény nem képes elmenteni és visszaállítani az állapotát a későbbi meghívások között, 
+ami azt is jelenti, hogy <strong>nem használható generátorként</strong>.</p>
+
+
+
+<br> 
+<br>
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+
+
+<p>Pontosan egy szót cseréltünk ki a kódban - látod?</p>
+
+
+<codep class="syntax-color">def fun(n):
+    for i in range(n):
+        <mark class="mark-background">yield i</mark>
+</codep>
+ 
+<br>
+
+<p>Kicseréltük a <codel>return</codel> kulcsszót a <codel>yield</codel>-re. Ez a kis módosítás <strong>a függvényt generátorrá alakítja</strong>, és a <codel>yield</codel> utasítás végrehajtása nagyon érdekes hatásokkal jár.</p>
+
+<p>Először a <codel>yield</codel> a kulcsszó után megadott kifejezés értékét adja vissza, akárcsak a <codel>return</codel>, de nem veszíti el a függvény állapotát.</p>
+
+<p>A változók értékei be vannak fagyasztva, és várják a következő hívást, amikor a végrehajtás folytatódik (nem a nulláról indul, mint a <codel>return</codel> után).</p>
+
+<p>Van egy fontos korlátozás: egy ilyen <strong>ilyen függvényt nem lehet explicit módon meghívni</strong>, mivel - valójában - ez már nem függvény, hanem <strong>egy generátor objektum</strong>.</p>
+
+<p>A hívás az <strong>objektum azonosítóját adja vissza</strong>, nem pedig a generátortól várt sorozatot.</p>
+
+ 
+
+<p>De ugyanezen okok miatt az előző függvény (a <codel>return</codel> utasítással rendelkező) csak explicit módon hívható meg, és nem használható generátorként.</p>
+
+<h2>Hogyan készítsünk generátort?</h2>
+
+<p>Hadd mutassuk meg az új generátort működés közben.</p>
+
+<p>Így használhatjuk:</p>
+
+<codep class="syntax-color copy">def fun(n):
+    for i in range(n):
+        yield i
+
+
+for v in fun(5):
+    print(v)
+</codep>
+
+<br>
+
+<p>Kitalálod a kimenetet?</p>
+
+<button class="button tiny" onclick="solution('sol')">Ellenőrzés</button>
+
+<p id="sol" style="display: none;">
+<codep>0
+1
+2
+3
+4</codep>
+</p>
+
+
+<script>
+function solution (id) {
+    var element = document.getElementById(id);
+    
+if (element.style.display === "none") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
+    }
+}
+</script>
+
+<br>
+<br>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

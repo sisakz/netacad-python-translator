@@ -1,0 +1,75 @@
+<problem chapter='3' section='5' slide='1' problem='14' title='OOP Fundamentals: Inheritance'>
+
+<!--
+Update history:
+2020-10-01 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>
+class Left:
+    var = "L"
+    var_left = "LL"
+    def fun(self):
+        return "Left"
+
+
+class Right:
+    var = "R"
+    var_right = "RR"
+    def fun(self):
+        return "Right"
+
+
+class Sub(Left, Right):
+    pass
+
+
+obj = Sub()
+
+print(obj.var, obj.var_left, obj.var_right, obj.fun())
+
+</code>
+
+
+
+<h1>How Python finds properties and methods: continued</h1>
+
+
+<p>Let's take a look at the example in the editor.</p>
+
+
+<p>The <codel>Sub</codel> class inherits goods from two superclasses, <codel>Left</codel> and <codel>Right</codel> (these names are intended to be meaningful).</p>
+
+<p>There is no doubt that the class variable <codel>var_right</codel> comes from the <codel>Right</codel> class, and <codel>var_left</codel> comes from <codel>Left</codel> respectively.</p>
+
+<p>This is clear. But where does <codel>var</codel> come from? Is it possible to guess it? The same problem is encountered with the <codel>fun()</codel> method – will it be invoked from <codel>Left</codel> or from <codel>Right</codel>? Let's run the program – its output is:</p>
+
+<codep>L LL RR Left</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+<p>This proves that both unclear cases have a solution inside the <codel>Left</codel> class. Is this a sufficient premise to formulate a general rule? Yes, it is.</p>
+
+<p>We can say that <strong>Python looks for object components</strong> in the following order:</p>
+
+<ul>
+<li><strong>inside the object</strong> itself;</li>
+<li><strong>in its superclasses</strong>, from bottom to top;</li>
+<li>if there is more than one class on a particular inheritance path, Python scans them from left to right.</li>
+</ul>
+
+<p>Do you need anything more? Just make a small amendment in the code – replace: <codel>class Sub(Left, Right):</codel> with: <codel>class Sub(Right, Left):</codel>, then run the program again, and see what happens.</p>
+
+<p>What do you see now? We see:</p>
+
+<codep>R LL RR Right</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+<p>Do you see the same, or something different?</p>
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

@@ -1,0 +1,46 @@
+<problem chapter='3' section='3' slide='1' problem='4' title='OOP: Properties'>
+
+<!--
+Update history:
+2020-09-30 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>
+class ExampleClass:
+    __counter = 0
+    def __init__(self, val = 1):
+        self.__first = val
+        ExampleClass.__counter += 1
+
+
+example_object_1 = ExampleClass()
+example_object_2 = ExampleClass(2)
+example_object_3 = ExampleClass(4)
+
+print(example_object_1.__dict__, example_object_1._ExampleClass__counter)
+print(example_object_2.__dict__, example_object_2._ExampleClass__counter)
+print(example_object_3.__dict__, example_object_3._ExampleClass__counter)
+
+</code>
+
+
+
+<h1>Class variables: continued</h1>
+
+<p>Mangling a class variable's name has the same effects as those you're already familiar with.</p>
+
+<p>Look at the example in the editor. Can you guess its output?</p>
+
+<p>Run the program and check if your predictions are correct. Everything works as expected, doesn't it? </p>
+
+<br>
+
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

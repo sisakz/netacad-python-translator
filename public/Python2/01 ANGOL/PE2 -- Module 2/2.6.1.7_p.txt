@@ -1,0 +1,43 @@
+<problem chapter='2' section='6' slide='1' problem='7' title="Errors - the programmer's daily bread | try-except">
+
+<!--
+Update history:
+2020-09-21 Grzegorz (review, PEP-8 compliance check, update, title correction)
+-->
+
+<code>
+try:
+    print("1")
+    x = 1 / 0
+    print("2")
+except:
+    print("Oh dear, something went wrong...")
+
+print("3")
+
+</code>
+
+
+
+<h1>Exceptions: continued</h1>
+
+<p>Look at the code in the editor. It will help you understand this mechanism.</p>
+
+<p>This is the output it produces:</p>
+
+<codep>1
+Oh dear, something went wrong...
+3</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+
+<p>Note: the <codel>print("2")</codel> instruction was lost in the process.</p>
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

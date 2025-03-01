@@ -1,0 +1,66 @@
+<problem chapter='1' section='4' slide='1' problem='9' title='pip installation on Linux'>
+
+<!--
+Update history:
+2020-09-23 Grzegorz (created)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h1><i>pip</i> on Linux: continued</h1>
+
+<p>When <i>apt</i> finishes its job, we are finally able to utilize <i>pip3</i>:</p>
+
+
+<center><img class="lightbox" src="/uploads/media/default/0001/02/999e1c82e1535715369bf26228473de36e8fe9b3.png" width="95%" alt="Terminal screenshot 5"></center>
+
+<br>
+
+<p>If you're a Mac user and you've installed Python 3 using the <i>brew</i> installer, <i>pip</i> is already present in your system and ready to work. Check it by issuing the previously mentioned command:</p>
+
+<p><codep class="syntax-color">pip3 --version
+</codep></p>
+
+<p>and wait for the response.</p>
+
+<br>
+<br> 
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+
+
+<p>This is what we saw:</p>
+
+<center><img class="lightbox" src="/uploads/media/default/0001/02/090bc01a4b1ee96b72670bd4e32a2850fe3cc1ba.png" width="95%" alt="Terminal screenshot 6"></center>
+
+
+
+<br>
+<br>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

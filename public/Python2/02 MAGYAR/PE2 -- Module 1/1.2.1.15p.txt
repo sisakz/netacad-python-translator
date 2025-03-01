@@ -1,0 +1,53 @@
+<problem chapter='1' section='2' slide='1' problem='15' title='Fontos modulok | platform'>
+
+<!--
+Update history:
+2020-08-31 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>from platform import python_implementation, python_version_tuple
+
+print(python_implementation())
+
+for atr in python_version_tuple():
+    print(atr)
+
+</code>
+
+<h1>A <font face="Courier New">platform</font> modul fontosabb függvényei (folytatás)</h1>
+
+<p><b>A <font face="Courier New">python_implementation</font> és a <font face="Courier New">python_version_tuple</font> függvények</b></p>
+
+<p>Ha tudnod kell, hogy a Python melyik verziója futtatja a kódodat, számos erre a célra szolgáló függvény segítségével ellenőrizheted - itt van kettő közülük:</p>
+
+<ul>
+<li><codel>python_implementation()</codel> &rarr; a Python implementációt jelölő karakterláncot adja vissza (itt <codel>CPython</codel>-ra számítunk, hacsak nem döntesz úgy, hogy valamelyik nem-kanonikus Python-ágat használod).</li>
+<br>
+<li><codel>python_version_tuple()</codel> &rarr; egy három elemű tuple-t ad vissza, amely a következő elemekkel van feltöltve:
+    <ul><li>a Python <strong>főverzió</strong> száma;</li>
+    <li>az <strong>alverzió</strong> rész;</li>
+    <li>a <strong>javítási</strong> szint száma.</li></ul></li>
+</ul>
+ 
+
+<p>A példaprogramunk a következő kimenetet produkálta:</p>
+
+<codep>CPython
+3
+7
+7</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+ 
+
+<p>Nagyon valószínű, hogy a Python verziód más lesz.</p>
+
+
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

@@ -1,0 +1,55 @@
+<problem chapter='1' section='4' slide='1' problem='14' title='A pip használata'>
+
+<!--
+Update history:
+2020-09-25 Grzegorz (created)
+-->
+
+<code>import pygame
+
+run = True
+width = 400
+height = 100
+pygame.init()
+screen = pygame.display.set_mode((width, height))
+font = pygame.font.SysFont(None, 48)
+text = font.render("Welcome to pygame", True, (255, 255, 255))
+screen.blit(text, ((width - text.get_width()) // 2, (height - text.get_height()) // 2))
+pygame.display.flip()
+while run:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT\
+        or event.type == pygame.MOUSEBUTTONUP\
+        or event.type == pygame.KEYUP:
+            run = False
+
+</code>
+
+<h1>A pip használata: egy egyszerű tesztprogram</h1>
+
+<p>Most, hogy a <i>pygame</i> végre elérhető, megpróbálhatjuk használni egy nagyon egyszerű tesztprogramban.</p>
+
+<ul>
+<li>1. sor: importáljuk a <i>pygame</i>-et, hogy rendelkezésünkre álljon;</li>
+<li>3. sor: a program addig fut, amíg a <codel>run</codel> változó <codel>True</codel>;</li>
+<li>4. és 5. sor: az ablak méretének meghatározása;</li>
+<li>6. sor: a <i>pygame</i> környezet inicializálása;</li>
+<li>7. sor: az alkalmazás ablakának előkészítése és méretének beállítása;</li>
+<li>8. sor: készít egy objektumot, amely az alapértelmezett 48 pontos betűtípust használja;</li>
+<li>9. sor: készít egy objektumot, amely egy adott szöveget ábrázol - a szöveg élsimításmentes (<codel>True</codel>) és fehér (<codel>255,255,255</codel>) lesz.</li>
+<li>10. sor: a szöveg beillesztése a (jelenleg láthatatlan) képernyőpufferbe;</li>
+<li>11. sor: átkapcsolja a képernyőpuffereket, hogy a szöveg láthatóvá váljon;</li>
+<li>12. sor: itt kezdődik a <i>pygame</i> fő ciklusa;</li>
+<li>13. sor: az összes függőben lévő <i>pygame</i> esemény listájának lekérdezése;</li>
+<li>14-16. sor: annak ellenőrzése, hogy a felhasználó bezárta-e az ablakot, vagy kattintott-e valahol az ablakon belül, esetleg megnyomott-e valamilyen billentyűt;</li>
+<li>15. sor: ha igen, leállítja a kód végrehajtását.</li>
+</ul>
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+<hideConsole>true</hideConsole>
+
+</problem>

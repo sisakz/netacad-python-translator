@@ -1,0 +1,82 @@
+<problem chapter='2' section='1' slide='1' problem='4' title='SZAKASZ ÖSSZEFOGLALÁS'>
+
+<!--
+Update history:
+2020-09-01	Sysio (first version)
+2020-09-28	Grzegorz (review)
+2021-06-30	Grzegorz (corrections)
+
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<h1>Legfontosabb tudnivalók</h1>
+
+<br>
+
+<p>1. A számítógépek a karaktereket számokként tárolják. A karakterek kódolásának több lehetséges módja is létezik, de közülük csak néhány vált világszerte népszerűvé és terjedt el az informatikában: ezek az <b>ASCII</b> (elsősorban a latin ábécé és néhány származékának kódolására) és az <b>UNICODE</b> (az emberek által használt gyakorlatilag valamennyi ábécé kódolására).</p>
+<br>
+
+<p>2. Egy adott karakterhez tartozó számot <b>kódpontnak</b> nevezzük.</p>
+<br>
+
+<p>3. Az UNICODE különböző kódolási módokat használ, amikor a karakterek fájlokban vagy a számítógép memóriájában történő tárolására kerül sor: ezek közül kettő az <b>UCS-4</b> és az <b>UTF-8</b> (ez utóbbi a legelterjedtebb, mivel kevesebb memóriaterületet pazarol).</p>
+<br>
+
+</div>
+<div class="small-12 large-6 columns">
+
+<br>
+
+<script>
+function solution (id) {
+    var element = document.getElementById(id);
+    
+if (element.style.display === "none") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
+    }
+}
+</script>
+
+
+<p><strong>1. gyakorlat</strong></p>
+<p>Mi az a BOM?</p>
+
+<button class="button tiny" onclick="solution('sol1')">Ellenőrzés</button>
+
+<br>
+
+<p id="sol1" style="display: none;">
+    <b>BOM</b> (Byte Order Mark) egy speciális bitkombináció, amely a fájl tartalmának jellegét adja meg (pl.: UCS-4 vagy UTF-8)
+</p>
+                             
+
+<br>
+
+<p><strong>2. gyakorlat</strong></p>
+<p>A Python 3 <i>I18N</i>-esített?</p>
+
+<button class="button tiny" onclick="solution('sol2')">Ellenőrzés</button>
+
+<p id="sol2" style="display: none;">
+    Igen, teljes mértékben nemzetköziesített - használhatunk UNICODE karaktereket a programunkban a beolvasáshoz és kiíráshoz.
+
+</p>
+
+
+<br>
+
+</div>
+
+</div>
+</div>
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

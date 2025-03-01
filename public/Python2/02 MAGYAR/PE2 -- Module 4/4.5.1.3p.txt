@@ -1,0 +1,49 @@
+<problem chapter='4' section='5' slide='1' problem='3' title='A datetime modul'>
+
+<!--
+Update history:
+2020-03-30 Sebastian (first version)
+2020-10-11 Grzegorz (review, PEP-8 compliance check)
+-->
+
+<code>from datetime import date
+import time
+
+timestamp = time.time()
+print("Timestamp:", timestamp)
+
+d = date.fromtimestamp(timestamp)
+print("Date:", d)
+
+</code>
+
+
+
+<h1>Dátum objektum létrehozása időbélyegből</h1>
+
+
+<p>A <codel>date</codel> osztály lehetővé teszi számunkra, hogy <i>dátum</i> objektumot hozzunk létre egy <i>időbélyegből</i>.</p>
+
+<p>Unix alatt az időbélyeg az 1970. január 1. 00:00:00 (UTC) óta eltelt másodpercek száma. Ezt a dátumot <b>Unix epoch</b>-nak, magyarul <b>Unix-idő</b>-nek nevezik, mivel a Unix rendszerekben ekkor kezdődött az időszámítás.</p>
+
+<p>Az időbélyeg valójában egy adott dátum (beleértve az időt is) és az 1970. január 1. 00:00:00 (UTC) közötti különbség, másodpercekben kifejezve.</p>
+
+<p>Ahhoz, hogy dátum objektumot hozzunk létre egy időbélyegből, át kell adnunk egy Unix időbélyeget a <codel>fromtimestamp</codel> metódusnak.</p>
+
+<p>Erre a célra használhatjuk a <codel>time</codel> modult, amely idővel kapcsolatos függvényeket biztosít. Ezek egyike a <codel>time()</codel>függvény, amely egy lebegőpontos valósszám formájában adja vissza az 1970. január 1-től az aktuális pillanatig eltelt másodpercek számát. Nézzük meg a példát a szerkesztőben.</p>
+
+<p>Futtasd a kódot, hogy lásd a kimenetet.</p>
+
+<p>Ha a mintakódot többször futtatod, láthatod, hogy az időbélyeg miként növekszik. Érdemes hozzátenni, hogy a <codel>time</codel> függvény eredménye függ a platformtól, mert a <b>Unix és Windows rendszerekben a szökőmásodpercek nem számítanak</b>.</p>
+
+<p><b>Megjegyzés:</b> A tanfolyamnak ebben a részében a <i>time</i>, vagyis az időmodulról is beszélni fogunk.</p>
+
+
+<br>
+<br>
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

@@ -1,0 +1,54 @@
+<problem chapter='2' section='6' slide='1' problem='11' title="Errors – the programmer's daily bread | try-except">
+
+<!--
+Update history:
+2020-09-21 Grzegorz (review, PEP-8 compliance check, update, title correction)
+-->
+
+<code>
+try:
+    x = int(input("Enter a number: "))
+    y = 1 / x
+    print(y)
+except ValueError:
+    print("You must enter an integer value.")
+
+print("THE END.")
+
+</code>
+
+
+
+<h1>Exceptions: continued</h1>
+
+<p>Let's spoil the code once again.</p>
+
+<p>Look at the program in the editor. This time, we've removed the unnamed branch.</p>
+
+
+<p>The user enters <codel>0</codel> once again and:</p>
+
+<ul>
+<li>the exception raised won't be handled by <codel>ValueError</codel> – it has nothing to do with it;</li>
+
+<li>as there's no other branch, you should to see this message:
+<br><br>
+
+<codep>Traceback (most recent call last):
+File "exc.py", line 3, in <module>
+y = 1 / x
+ZeroDivisionError: division by zero</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p></li>
+</ul>
+
+<br>
+
+<p>You've learned a lot about exception handling in Python. In the next section, we will focus on built-in Python exceptions and their hierarchies.</p>
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

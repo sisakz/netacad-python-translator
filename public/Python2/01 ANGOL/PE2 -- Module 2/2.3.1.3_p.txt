@@ -1,0 +1,50 @@
+<problem chapter='2' section='3' slide='1' problem='3' title='String methods'>
+
+<!--
+Update history:
+2020-09-22 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>
+# Demonstrating the endswith() method:
+if "epsilon".endswith("on"):
+    print("yes")
+else:
+    print("no")
+	
+</code>
+
+
+
+<h1>The <font face="Courier New">endswith()</font> method</h1>
+
+<p>The <codel>endswith()</codel> method <strong>checks if the given string ends with the specified argument and returns <codel>True</codel> or <codel>False</codel></strong>, depending on the check result.</p>
+
+<p>Note: the substring must adhere to the string's last character – it cannot just be located somewhere near the end of the string.</p>
+
+<p>Look at our example in the editor, analyze it, and run it. It outputs:</p>
+
+<codep>yes</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+<p>You should now be able to predict the output of the snippet below:</p>
+
+<codep class="syntax-color copy">t = "zeta"
+print(t.endswith("a"))
+print(t.endswith("A"))
+print(t.endswith("et"))
+print(t.endswith("eta"))
+</codep>
+
+<br>
+
+<p>Run the code to check your predictions.</p>
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

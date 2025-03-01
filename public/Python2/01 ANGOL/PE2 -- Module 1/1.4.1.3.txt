@@ -1,0 +1,66 @@
+<problem chapter='1' section='4' slide='1' problem='3' title='Python Package Installer (PIP)'>
+
+<!--
+Update history:
+2020-09-23 Grzegorz (created)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h1>The PyPI repo: the Cheese Shop</h1>
+
+<p>The PyPI repo is sometimes referred to as the <strong>Cheese Shop</strong>. Really.</p>
+ 
+<p>Does that sound a little strange to you? Don't worry, it’s all perfectly innocent. </p>
+
+<p>We refer to the repo as a shop, because you go there for the same reasons you go to other shops: to fulfill your needs. If you want some cheese, you go to the cheese shop. If you want a piece of software, you go to the software shop. Fortunately, the analogy ends here – you don't need any money to take some software out of the repo shop.</p>
+
+<p>PyPI is completely free, and you can just pick a code and use it – you’ll encounter neither cashier nor security guard. Of course, it doesn't absolve you from being polite and honest. You have to obey all the licensing terms, so don't forget to read them.</p>
+
+<p>“OK”, you say, “the shop is clear now, but what does cheese have to do with Python?”</p>
+
+<p>The Cheese Shop is one of the most famous Monty Python sketches. It depicts the surrealist adventure of an Englishman trying to buy some cheese. Unfortunately, the shop he visits (immodestly named Ye National Cheese Emporium) has no cheese in stock at all.</p>
+
+<p>Of course, it's meant to be ironic. As you already know, PyPI has lots of software in stock and it's available 24/7. It's fully entitled to identify itself as <i>Ye International Python Software Emporium</i>.</p>
+
+
+
+
+
+<br>
+<br> 
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br><br>
+
+
+
+<center><img src="/uploads/media/default/0001/02/fca6aedc353c773b3fb78bdf34c896a78e9c8e62.png" width="70%" alt="The Cheese Shop – different kinds of cheese"></center>
+
+<br>
+<br>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

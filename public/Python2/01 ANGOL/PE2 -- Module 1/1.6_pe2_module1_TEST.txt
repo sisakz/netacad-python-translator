@@ -1,0 +1,654 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+PE2 – Module 1 Test
+Python Essentials 2.0
+
+Update history:
+2019-02-08	Grzegorz (reviewed)
+2020-06-08	Sysio (first version of pip items)
+2020-09-29	Grzegorz (reformatting, PEP-8 compliance, dividing content into Quiz 1 and Quiz 2, creating items 8-12)
+2021-06-29	Grzegorz (corrections)
+-->
+
+<questionPool>
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE2_T1_ITEM_1">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; Knowing that a function named <codel>fun()</codel> resides in a module named <codel>mod</codel>, choose the correct way to import it.</p>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p><codel>from mod import fun</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>import fun</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>from fun import mod</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>import fun from mod</codel></p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE2_T1_ITEM_2">   <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; Knowing that a function named <codel>fun()</codel> resides in a module named <codel>mod</codel>, and it has been imported using the following line:</p>
+
+<codep>import mod
+
+</codep>
+<br>
+
+<p>Choose the way it can be invoked in your code.</p>
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p><codel>mod.fun()</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>fun()</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>mod‑>fun()</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>mod::fun()</codel></p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE2_T1_ITEM_3">     <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; A function which returns a list of all entities available in a module is called:</p>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p><codel>dir()</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>content()</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>listmodule()</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>entities()</codel></p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE2_T1_ITEM_4">     <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; A <i>pyc</i> file contains:</p>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>compiled Python code</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>Python source code</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>a Python interpreter</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>a Python compiler</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE2_T1_ITEM_5">     <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; When a module is imported, its contents:</p>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>are executed once (implicitly)</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>are executed as many times as they are imported</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>are ignored</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>may be executed (explicitly)</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE2_T1_ITEM_6">     <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; A predefined Python variable that stores the current module name is called:</p>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p><codel>__name__</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>__module__</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>__modname__</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>__mod__</codel></p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE2_T1_ITEM_7">     <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; The following statement:</p>
+
+<codep>from a.b import c</codep>
+<br>
+
+<p>causes the import of:</p>
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>entity <codel>c</codel> from module <codel>b</codel> from package <codel>a</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>entity <codel>c</codel> from module <codel>a</codel> from package <codel>b</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>entity <codel>a</codel> from module <codel>b</codel> from package <codel>c</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>entity <codel>b</codel> from module <codel>a</codel> from package <codel>c</codel></p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+
+<question type="1" scoringType="1" points="1" customId="PE2_T1_ITEM_8">     <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; What is the expected value assigned to the <codel>result</codel> variable after the following code is executed?</p>
+
+<codep>import math
+
+result = math.e != math.pow(2, 4)
+print(int(result))
+
+</codep>
+<br>
+
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p><codel>1</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>0</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>True</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>False</codel></p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE2_T1_ITEM_9">     <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; What is the expected output of the following code?</p>
+
+<codep>from random import randint
+
+for i in range(2):
+    print(randint(1, 2), end='')
+
+</codep>
+<br>
+
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p><codel>11</codel>, <codel>12</codel>, <codel>21</codel>, or <codel>22</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>12</codel>, or <codel>21</codel><p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>There are millions of possible combinations, and the exact output cannot be predicted.</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>12</codel></p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="2" scoringType="1" points="1" customId="PE2_T1_ITEM_10">     <!-- Multiple-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; Choose the <u>true</u> statements. (Select <u>two</u> answers)</p>
+
+
+<br>
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>The <codel>system</codel> function from the <codel>platform</codel> module returns a string with your OS name.</p> ]]>
+</option>
+
+<option isCorrect="true">
+<![CDATA[ <p>The <codel>version</codel> function from the <codel>platform</codel> module returns a string with your OS version.</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>The <codel>version</codel> function from the <codel>platform</codel> module returns a string with your Python version.</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>The <codel>processor</codel> function from the <codel>platform</codel> module returns an integer with the number of processes currently running in your OS.</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+<question type="1" scoringType="1" points="1" customId="PE2_T1_ITEM_11">     <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; During the first import of a module, Python deploys the <i>pyc</i> files in the directory called:</p>
+
+<br>
+
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p><codel>__pycache__</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>__init__</codel><p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>hashbang</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>mymodules</codel></p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE2_T1_ITEM_12">     <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; The digraph written as <codel>#!</codel> is used to:</p>
+
+<br>
+
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>tell a Unix or Unix-like OS how to execute the contents of a Python file</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>tell an MS Windows OS how to execute the contents of a Python file</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>make a particular module entity private</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>create a docstring</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+<question type="1" scoringType="1" points="1" customId="PE2_T1_ITEM_13">     <!-- Single-choice question, graded -->
+<instructions>
+<![CDATA[
+<p><span class="label">Q:</span>&nbsp;&nbsp;A list of package dependencies can be obtained from <codel>pip</codel> using a command named:</p>  
+]]>
+</instructions>
+<options>
+<option isCorrect="true" id="A">
+<![CDATA[ <p><codel>show</codel></p> ]]>
+</option>
+<option id="B">
+<![CDATA[ <p><codel>deps</codel></p> ]]>
+</option>
+<option id="C">
+<![CDATA[ <p><codel>list</codel></p> ]]>
+</option>
+<option id="D">
+<![CDATA[ <p><codel>dir</codel></p> ]]>
+</option>
+</options>
+</question>
+
+<!-- ######################################################################################################################## -->
+
+<question type="1" scoringType="1" points="1" customId="PE2_T1_ITEM_14">      <!-- Single-choice question, graded -->
+<instructions>
+<![CDATA[
+<p><span class="label">Q:</span>&nbsp;&nbsp; The <codel>pip list</codel> command presents a list of:</p>  
+]]>
+</instructions>
+<options>
+<option isCorrect="true" id="A">
+<![CDATA[ <p>locally installed packages</p> ]]>
+</option>
+<option id="B">
+<![CDATA[ <p>all packages available at PyPI</p> ]]>
+</option>
+<option id="C">
+<![CDATA[ <p>available pip commands</p> ]]>
+</option>
+<option id="D">
+<![CDATA[ <p>outdated local packages</p> ]]>
+</option>
+</options>
+</question>
+
+<!-- ######################################################################################################################## -->
+
+<question type="2" scoringType="1" points="1" customId="PE2_T1_ITEM_15">      <!-- Multiple-choice question, graded -->
+<instructions>
+<![CDATA[
+<p><span class="label">Q:</span>&nbsp;&nbsp; What is <u>true</u> about the <codel>pip search</codel> command? (Select <u>three</u> answers)</p>  
+]]>
+</instructions>
+<options>
+<option id="A" isCorrect="true">
+<![CDATA[ <p>It needs a working Internet connection to work.</p> ]]>
+</option>
+<option id="B" isCorrect="true">
+<![CDATA[ <p>It searches through all PyPI packages.</p> ]]>
+</option>
+<option id="C">
+<![CDATA[ <p>It searches through package names only.</p> ]]>
+</option>
+<option  isCorrect="true" id="D">
+<![CDATA[ <p>All its searches are limited to locally installed packages.</p> ]]>
+</option>
+</options>
+</question>
+
+<!-- ######################################################################################################################## -->
+
+<question type="2" scoringType="1" points="1" customId="PE2_T1_ITEM_16">      <!-- Multiple-choice question, graded -->
+<instructions>
+<![CDATA[
+<p><span class="label">Q:</span>&nbsp;&nbsp; What is <u>true</u> about the <codel>pip install</codel> command? (Select <u>two</u> answers)</p>  
+]]>
+</instructions>
+<options>
+<option id="A">
+<![CDATA[ <p>It installs a package system-wide only when the <codel>--system</codel> option is specified.</p> ]]>
+</option>
+<option id="B" isCorrect="true">
+<![CDATA[ <p>It installs a package per user only when the <codel>--user</codel> option is specified.</p> ]]>
+</option>
+<option id="C">
+<![CDATA[ <p>It always installs the newest package version and it cannot be changed.</p> ]]>
+</option>
+<option id="D" isCorrect="true">
+<![CDATA[ <p>It allows the user to install a specific version of the package.</p> ]]>
+</option>
+</options>
+</question>
+
+<!-- ######################################################################################################################## -->
+
+<question type="1" scoringType="1" points="1" customId="PE2_T1_ITEM_17">      <!-- Single-choice question, graded -->
+<instructions>
+<![CDATA[
+<p><span class="label">Q:</span>&nbsp;&nbsp; What is <u>true</u> about updating already installed Python packages?</p>  
+]]>
+</instructions>
+<options>
+<option id="A">
+<![CDATA[ <p>It's an automatic process which doesn't require any user attention.</p> ]]>
+</option>
+<option id="B">
+<![CDATA[ <p>It can be done only by uninstalling and installing the packages once again.</p> ]]>
+</option>
+<option id="C">
+<![CDATA[ <p>It can be done by reinstalling the package using the <codel>reinstall</codel> command.</p> ]]>
+</option>
+<option id="D" isCorrect="true">
+<![CDATA[ <p>It's performed by the <codel>install</codel> command accompanied by the <codel>-U</codel> option.</p> ]]>
+</option>
+</options>
+</question>
+
+<!-- ######################################################################################################################## -->
+
+<question type="1" scoringType="1" points="1" customId="PE2_T1_ITEM_18">
+<instructions>
+<![CDATA[
+<p><span class="label">Q:</span>&nbsp;&nbsp; Which command can you use <codel>pip</codel> to remove an installed package?</p>  
+]]>
+</instructions>
+<options>
+<option id="A" isCorrect="true">
+<![CDATA[ <p><codel>pip uninstall package</codel></p> ]]>
+</option>
+<option id="B">
+<![CDATA[ <p><codel>pip remove package</codel></p> ]]>
+</option>
+<option id="C">
+<![CDATA[ <p><codel>pip install --uninstall package</codel></p> ]]>
+</option>
+<option id="D">
+<![CDATA[ <p><codel>pip --uninstall package</codel></p> ]]>
+</option>
+</options>
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+</questionPool>

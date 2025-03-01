@@ -1,0 +1,123 @@
+<problem chapter='3' section='2' slide='1' problem='15' title="LAB: Sor, más néven FIFO">
+
+<!--
+Update history:
+2020-01-01 Syslaw (file created)
+2020-11-16 Grzegorz (review, PEP-8 compliance check)
+-->
+
+<code>class QueueError(???):  # Choose base class for the new exception.
+    #
+    #  Write code here
+    #
+
+
+class Queue:
+    def __init__(self):
+        #
+        # Write code here
+        #
+
+    def put(self, elem):
+        #
+        # Write code here
+        #
+
+    def get(self):
+        #
+        # Write code here
+        #
+
+
+que = Queue()
+que.put(1)
+que.put("dog")
+que.put(False)
+try:
+    for i in range(4):
+        print(que.get())
+except:
+    print("Queue error")
+
+</code>
+
+<span class="label" style="background-color:rgb(205, 168, 105);"><b>LABORGYAKORLAT</b></span>
+
+<br><br>
+
+<h2>Becsült idő</h2>
+<p>20-45 perc</p>
+
+<h2>Nehézségi szint</h2>
+<p>Könnyű/Közepes</p>
+
+<h2>Célok</h2>
+<ul>
+    <li>javítani a tanuló készségeit az osztályok létrehozásában;</li>
+    <li>szabványos adatszerkezetek osztályokként történő megvalósítása.</li>
+</ul>
+
+<h2>Forgatókönyv</h2>
+<p>Most már tudod, a <i>verem</i> egy olyan adatszerkezet, amely a LIFO (Last In - First Out) modellt valósítja meg. Ezt az előzőekben már megismerted.</p>
+
+<p>Most próbáljunk meg valami újat. A <i>sor</i> egy olyan adatmodell, amelyet a <b>FIFO</b> kifejezéssel jellemzünk:  <b>First In – First Out</b>. (Elsőként be – elsőként ki)  Megjegyzés: az üzletekből vagy postahivatalokból ismert hagyományos sor pontosan ugyanígy működik - az elsőként érkező ügyfelet, elsőként is szolgálják ki.</p>
+
+<p>A feladatod a <codel>Queue</codel> osztály implementálása két alapvető művelettel:</p>
+<ul>
+    <li><codel>put(element)</codel>, amely egy elemet helyez a sor végére;
+    <li><codel>get()</codel>, amely egy elemet vesz a sor elejéről, és azt adja vissza eredményként (a sor nem lehet üres ennek a műveletnek a sikeres végrehajtásához).
+</ul>
+
+<p>Néhány tippet adunk:</p>
+<ul>
+    <li>használj listát tárolóként (ahogy a veremben is tettük)</li>
+    <li><codel>put()</codel> a lista elejére illeszt elemeket, míg a <codel>get()</codel> a lista végéről távolítja el az elemeket;</li>
+    <li>definiáljunk egy új kivételt <codel>QueueError</codel> néven (válasszunk egy kivételt, amelyből levezethetjük), és indítsuk el, amikor a <codel>get()</codel> üres listán próbál dolgozni.</li>
+</ul>
+
+<p>Egészítsd ki az általunk megadott kódot a szerkesztőben! Futtasd le, majd ellenőrizd, hogy a megoldásod kimenete hasonló-e a miénkhez!</p>
+
+<h2>Várható kimenet</h2>
+
+<p><codep>1
+dog
+False
+Queue error</codep></p>
+
+
+<sampleSolution>class QueueError(IndexError):
+    pass
+
+
+class Queue:
+    def __init__(self):
+        self.queue = []
+
+    def put(self, elem):
+        self.queue.insert(0, elem)
+
+    def get(self):
+        if len(self.queue) > 0:
+            elem = self.queue[-1]
+            del self.queue[-1]
+            return elem
+        else:
+            raise QueueError
+
+
+que = Queue()
+que.put(1)
+que.put("dog")
+que.put(False)
+try:
+    for i in range(4):
+        print(que.get())
+except:
+    print("Queue error")
+
+</sampleSolution>
+
+<br><br>
+
+<labMode>true</labMode>
+</problem>

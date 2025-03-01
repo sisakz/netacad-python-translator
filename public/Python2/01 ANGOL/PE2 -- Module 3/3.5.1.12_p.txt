@@ -1,0 +1,80 @@
+<problem chapter='3' section='5' slide='1' problem='12' title='OOP Fundamentals: Inheritance'>
+
+<!--
+Update history:
+2020-10-01 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>class SuperA:
+    var_a = 10
+    def fun_a(self):
+        return 11
+
+
+class SuperB:
+    var_b = 20
+    def fun_b(self):
+        return 21
+
+
+class Sub(SuperA, SuperB):
+    pass
+
+
+obj = Sub()
+
+print(obj.var_a, obj.fun_a())
+print(obj.var_b, obj.fun_b())
+
+</code>
+
+
+
+<h1>How Python finds properties and methods: continued</h1>
+
+
+<p><strong>Multiple inheritance occurs when a class has more than one superclass</strong>. Syntactically, such inheritance is presented as a comma-separated list of superclasses put inside parentheses after the new class name – just like here:</p>
+
+<codep>class SuperA:
+    var_a = 10
+    def fun_a(self):
+        return 11
+
+
+class SuperB:
+    var_b = 20
+    def fun_b(self):
+        return 21
+
+
+<mark class="mark-background">class Sub(SuperA, SuperB):</mark>
+    pass
+
+obj = Sub()
+
+print(obj.var_a, obj.fun_a())
+print(obj.var_b, obj.fun_b())
+
+</codep>
+<br>
+
+
+<p>The <codel>Sub</codel> class has two superclasses: <codel>SuperA</codel> and <codel>SuperB</codel>. This means that the <codel>Sub</codel> class <strong>inherits all the goods offered by both <codel>SuperA</codel> and <codel>SuperB</codel></strong>.</p>
+
+<p>The code prints:</p>
+
+<codep>10 11
+20 21</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+<p>Now it's time to introduce a brand new term – <strong>overriding</strong>.</p>
+
+<p>What do you think will happen if more than one of the superclasses defines an entity of a particular name?</p>
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

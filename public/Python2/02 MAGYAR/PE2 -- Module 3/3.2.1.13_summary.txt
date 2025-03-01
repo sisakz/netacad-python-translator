@@ -1,0 +1,137 @@
+<problem chapter='3' section='2' slide='1' problem='13' title='SZAKASZ ÖSSZEFOGLALÁS'>
+
+<!--
+Update history:
+2020-09-30 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<!--
+Update history:
+2020-09-04 Sławek (first version)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<h1>A legfontosabb tudnivalók</h1>
+
+<br>
+
+
+<p>1. A <b>verem</b> egy olyan objektum, amelyet az adatok <b>LIFO</b>-modell szerinti tárolására terveztek. A verem általában legalább két műveletet hajt végre, amelyeket <b>push()</b> és <b>pop()</b> néven nevezünk.</p>
+<br>
+
+<p>2. A verem procedurális modellben történő megvalósítása számos problémát vet fel, amelyek az <b>OOP</b> (<b>O</b>bjektum<b>O</b>rientált <b>P</b>rogramozás) által kínált technikákkal megoldhatók.</p>
+<br>
+
+<p>3. Az osztály <b>metódusa</b> tulajdonképpen egy, az osztályon belül deklarált függvény, amely az osztály összes komponenséhez hozzáférhet.</p>
+<br>
+
+<p>4. A Python-osztály új objektumok létrehozásáért felelős részét <b>konstruktornak</b> nevezik, és egy <codel>__init__</codel> nevű metódusként valósul meg.</p>
+<br>
+
+<p>5. Minden osztály metódusdeklarációjának tartalmaznia kell legalább egy paramétert (mindig az elsőt), amelyet általában <codel>self</codel>-nek neveznek, és amelyet az objektumok önmaguk azonosítására használnak.</p>
+<br>
+
+<p>6. Ha egy osztály bármelyik komponensét el akarjuk rejteni a külvilág elől, akkor a nevét <codel>__</codel>-vel kell kezdenünk. Az ilyen komponenseket <b>privát</b>-nak (private) nevezzük.</p>
+
+<br>
+
+
+</div>
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+<script>
+function solution (id) {
+    var element = document.getElementById(id);
+    
+if (element.style.display === "none") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
+    }
+}
+</script>
+
+
+<p><strong>1. gyakorlat</strong></p>
+<p>Feltételezve, hogy létezik egy <codel>Snakes</codel> nevű osztály, írjuk meg a <codel>Python</codel>-osztály deklarációjának legelső sorát, kifejezve azt a tényt, hogy az új osztály valójában a Snakes alosztálya.</p>
+
+<button class="button tiny" onclick="solution('sol')">Ellenőrzés</button>
+
+<p id="sol" style="display: none;">
+<codep class="syntax-color copy">class Python(Snakes):
+</codep>
+</p>
+
+<br><br>
+
+
+
+
+
+<p><strong>2. gyakorlat</strong></p>
+<p>Valami hiányzik a következő deklarációból . Mi az?</p>
+<codep>class Snakes:
+    def __init__():
+        self.sound = 'Sssssss'
+
+</codep>
+<br>
+
+
+<button class="button tiny" onclick="solution('sol2')">Ellenőrzés</button>
+<p id="sol2" style="display: none;">Az <codel>__init__()</codel> konstruktorból hiányzik a kötelező paraméter (ezt <codel>self</codel>-nek kell neveznünk, hogy megfeleljünk a konvencióknak).</p>
+
+
+
+<br><br>
+
+
+
+
+<p><strong>3. gyakorlat</strong></p>
+<p>Módosítsd a kódot, hogy a <codel>venomous</codel> tulajdonság privát legyen.</p>
+<codep>class Snakes:
+    def __init__(self):
+        self.venomous = True
+		
+</codep>
+<br>
+
+<button class="button tiny" onclick="solution('sol3')">Ellenőrzés</button>
+
+<p id="sol3" style="display: none;">
+A kódnak így kellene kinéznie:<br><br>
+<codep>class Snakes
+    def __init__(self):
+        self.__venomous = True
+
+</codep>
+</p>
+
+
+
+<br>
+<br>
+
+
+</div>
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>
+

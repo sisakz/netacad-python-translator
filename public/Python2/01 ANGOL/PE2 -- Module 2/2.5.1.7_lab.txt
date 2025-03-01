@@ -1,0 +1,93 @@
+<problem chapter='2' section='5' slide='1' problem='7' title="LAB: Palindromes">
+
+<!--
+Update history:
+2020-09-23 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<span class="label" style="background-color:rgb(205, 168, 105);"><strong>LAB</strong></span>
+
+<br><br>
+
+
+<h2>Estimated time</h2>
+<p>15-30 minutes</p>
+
+<h2>Level of difficulty</h2>
+<p>Easy</p>
+
+<h2>Objectives</h2>
+<ul>
+<li>improving the student's skills in operating with strings;</li>
+<li>encouraging the student to look for non-obvious solutions.</li>
+</ul>
+
+
+<h2>Scenario</h2>
+<p>Do you know what a palindrome is?</p>
+
+<p>It's a word which look the same when read forward and backward. For example, "kayak" is a palindrome, while "loyal" is not.</p>
+
+<p>Your task is to write a program which:</p>
+<ul>
+<li>asks the user for some text;</li>
+<li>checks whether the entered text is a palindrome, and prints the result.</li>
+</ul>
+
+
+<p>Note:</p>
+<ul>
+<li>assume that an empty string isn't a palindrome;</li>
+<li>treat upper- and lower-case letters as equal;</li>
+<li>spaces are not taken into account during the check – treat them as non-existent;</li>
+<li>there are more than a few correct solutions – try to find more than one.</li>
+</ul>
+
+<p>Test your code using the data we've provided.</p>
+
+
+<h2>Test data</h2>
+
+
+<p>Sample input:</p>
+<codep>Ten animals I slam in a net</codep>
+<br>
+
+<p>Sample output:</p>
+<codep>It's a palindrome</codep>
+<br>
+
+<br>
+
+<p>Sample input:</p>
+<codep>Eleven animals I slam in a net</codep>
+<br>
+
+<p>Sample output:</p>
+<codep>It's not a palindrome</codep>
+<br>
+
+
+
+<br>
+
+<studyMode>false</studyMode>
+<labMode>true</labMode>
+
+
+
+<sampleSolution>
+text = input("Enter text: ")
+
+# Remove all spaces...
+text = text.replace(' ','')
+
+# ... and check if the word is equal to reversed itself
+if len(text) > 1 and text.upper() == text[::-1].upper():
+	print("It's a palindrome")
+else:
+	print("It's not a palindrome")
+	
+</sampleSolution>
+
+</problem>

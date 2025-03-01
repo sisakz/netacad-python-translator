@@ -1,0 +1,52 @@
+<problem chapter='2' section='2' slide='1' problem='7' title='The nature of strings in Python'>
+
+<!--
+Update history:
+2020-09-22 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code># Slices
+
+alpha = "abdefg"
+
+print(alpha[1:3])
+print(alpha[3:])
+print(alpha[:3])
+print(alpha[3:-2])
+print(alpha[-3:4])
+print(alpha[::2])
+print(alpha[1::2])
+
+</code>
+
+
+
+<h1>Slices</h1>
+
+<p>Moreover, everything you know about <strong>slices</strong> is still usable.</p>
+
+<p>We've gathered some examples showing how slices work in the string world. Look at the code in the editor, analyze it, and run it.</p>
+
+<p>You won't see anything new in the example, but we want you to be sure that you can explain all the lines of the code.<p>
+
+<p>The code's output is:</p>
+
+<codep>bd
+efg
+abd
+e
+e
+adf
+beg</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+<p>Now do your own experiments.</p>
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

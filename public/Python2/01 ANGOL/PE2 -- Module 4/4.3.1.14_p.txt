@@ -1,0 +1,85 @@
+<problem chapter='4' section='3' slide='1' problem='14' title='Working with real files'>
+
+<!--
+Update history:
+2020-10-07 Grzegorz (review, PEP-8 compliance check)
+2020-10-29 Grzegorz (code fix: strrerror instead of strerr)
+2021-07-07 Grzegorz (code corrections - important!)
+-->
+
+<code>from os import strerror
+
+source_file_name = input("Enter the source file name: ")
+try:
+    source_file = open(source_file_name, 'rb')
+except IOError as e:
+    print("Cannot open the source file: ", strerror(e.errno))
+    exit(e.errno)	
+
+destination_file_name = input("Enter the destination file name: ")
+try:
+    destination_file = open(destination_file_name, 'wb')
+except Exception as e:
+    print("Cannot create the destination file: ", strerror(e.errno))
+    source_file.close()
+    exit(e.errno)	
+
+buffer = bytearray(65536)
+total  = 0
+try:
+    readin = source_file.readinto(buffer)
+    while readin > 0:
+        written = destination_file.write(buffer[:readin])
+        total += written
+        readin = source_file.readinto(buffer)
+except IOError as e:
+    print("Cannot create the destination file: ", strerror(e.errno))
+    exit(e.errno)	
+    
+print(total,'byte(s) succesfully written')
+source_file.close()
+destination_file.close()
+
+</code>
+
+
+
+<h1>Copying files – a simple and functional tool</h1>
+
+
+<p>Now you're going to amalgamate all this new knowledge, add some fresh elements to it, and use it to write a real code which is able to actually copy a file's contents.</p>
+
+<p>Of course, the purpose is not to make a better replacement for commands like <i>copy</i> (MS Windows) or <i>cp</i> (Unix/Linux) but to see one possible way of creating a working tool, even if nobody wants to use it.</p>
+
+<p>Look at the code in the editor. Let's analyze it:</p>
+
+<ul>
+<li>lines 3 through 8: ask the user for the name of the file to copy, and try to open it to read; terminate the program execution if the open fails; note: use the <codel>exit()</codel> function to stop program execution and to pass the completion code to the OS; any completion code other than <codel>0</codel> says that the program has encountered some problems; use the <codel>errno</codel> value to specify the nature of the issue;</li>
+
+<li>lines 10 through 16: repeat nearly the same action, but this time for the output file;</li>
+
+<li>line 18: prepare a piece of memory for transferring data from the source file to the target one; such a transfer area is often called a buffer, hence the name of the variable; the size of the buffer is arbitrary – in this case, we've decided to use 64 kilobytes; technically, a larger buffer is faster at copying items, as a larger buffer means fewer I/O operations; actually, there is always a limit, the crossing of which renders no further improvements; test it yourself if you want.</li>
+
+<li>line 19: count the bytes copied – this is the counter and its initial value;</li>
+
+<li>line 21: try to fill the buffer for the very first time;</li>
+
+<li>line 22: as long as you get a non-zero number of bytes, repeat the same actions;</li>
+
+<li>line 23: write the buffer's contents to the output file (note: we've used a slice to limit the number of bytes being written, as <codel>write()</codel> always prefers to write the whole buffer)</li>
+
+<li>line 24: update the counter;</li>
+
+<li>line 25: read the next file chunk;</li>
+
+<li>lines 30 through 32: some final cleaning – the job is done.</li>
+</ul>
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

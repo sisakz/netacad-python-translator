@@ -1,0 +1,54 @@
+<problem chapter='4' section='1' slide='1' problem='6' title='Generátor és closure'>
+
+<!--
+Update history:
+2020-10-05 Grzegorz (review, PEP-8 compliance check)
+-->
+
+<code>
+list_1 = []
+
+for ex in range(6):
+    list_1.append(10 ** ex)
+
+list_2 = [10 ** ex for ex in range(6)]
+
+print(list_1)
+print(list_2)
+
+</code>
+
+
+
+<h1>Bővebben a listaképzésről</h1>
+
+
+<p>Talán emlékszel a <strong>listaképzés</strong> nevű egészen különleges Python tüneményre (valamint a létrehozására és használatára vonatkozó szabályokra), ami <strong>a listák tartalmukkal együtt való létrehozásának egyszerű és nagyon látványos eszköze</strong>.</p>
+
+<p>Amennyiben szükséged lenne rá, a szerkesztőablakban egy gyors emlékeztetőt találsz.</p>
+
+ 
+<p>Két részre bontható a kód. Mindkettő egy listát hoz létre, amely a tíz első néhány (természetes) hatványát tartalmazza.</p>
+
+<p>Az első a <codel>for</codel> ciklus egyszerű használatával operál, míg az utóbbi a listaképzést használja, és a listát helyben készíti el, anélkül, hogy ciklusra vagy más további kódra lenne szüksége.</p>
+
+<p>Úgy tűnik, mintha a lista önmagában jönne létre - ez persze nem igaz, hiszen a Pythonnak majdnem ugyanazokat a műveleteket kell elvégeznie, mint az első kódrészletben, de vitathatatlan, hogy a második formalizmus egyszerűen elegánsabb, és megkíméli az olvasót a felesleges részletektől.</p>
+
+ 
+<p>Mindkét példa ugyanazt a sort adja eredményül, amely a következő szöveget tartalmazza:</p>
+
+<codep>[1, 10, 100, 1000, 10000, 100000]
+[1, 10, 100, 1000, 10000, 100000]</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+<br>
+
+<p>Futtasd le a kódot, hogy ellenőrizd, igazunk van-e.</p>
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

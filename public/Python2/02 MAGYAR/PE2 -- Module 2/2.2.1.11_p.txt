@@ -1,0 +1,60 @@
+<problem chapter='2' section='2' slide='1' problem='11' title='Karakterláncok'>
+
+<!--
+Update history:
+2020-09-22 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>
+# Demonstrating min() - Example 1:
+print(min("aAbByYzZ"))
+
+
+# Demonstrating min() - Examples 2 & 3:
+t = 'The Knights Who Say "Ni!"'
+print('[' + min(t) + ']')
+
+t = [0, 1, 2]
+print(min(t))
+
+</code>
+
+
+
+<h1>Műveletek karakterláncokon: <font face="Courier New">min()</font></h1>
+
+<p>Most, hogy megértetted, hogy a karakterláncok szekvenciák, megmutatunk néhány kevésbé nyilvánvaló szekvencia képességet. Ezeket karakterláncok segítségével mutatjuk be, de ne feledd, hogy a listákon is alkalmazhatod ugyanezeket a trükköket.</p>
+
+<p>Kezdjük a <codel>min()</codel> függvénnyel.</p>
+
+<p>A függvény <strong>megtalálja az argumentumként kapott szekvencia minimális elemét</strong>. Van egy feltétel – a szekvencia (karakterlánc, lista...) <strong>nem lehet üres</strong>, különben <font face="Courier New">ValueError</font> kivételt kapunk.</p>
+
+ 
+<p>A <strong>Példa 1</strong> program kimenetei:</p>
+
+<codep>A</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+<br>
+
+<p>Megjegyzés: ez egy nagy <i>A</i>. Miért? Emlékezzünk vissza az ASCII táblázatra – mely betűk foglalják el az első helyeket – a nagy vagy a kisbetűk?</p>
+
+
+<p>Két további példát készítettünk elemzésre: <strong>2. és 3. példa</strong>.</p>
+
+<p>Amint láthatod, nem csak karakterláncokat mutatnak. A várható kimenet a következő:</p>
+
+<codep>[ ]
+0</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+ 
+
+<p>Megjegyzés: azért használtunk szögletes zárójeleket, hogy ne kerülje el a figyelmedet a szóköz a képernyőn.</p>
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

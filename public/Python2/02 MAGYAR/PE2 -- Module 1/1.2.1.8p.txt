@@ -1,0 +1,79 @@
+<problem chapter='1' section='2' slide='1' problem='8' title='Fontos modulok | random'>
+
+<!--
+Update history:
+2020-08-31 Grzegorz (review, PEP-8 compliance check, update)
+2020-10-20 Grzegorz (elements_to_choose sentence changed, defaults to 1 removed)
+2021-06-29 Grzegorz (corrections)
+-->
+
+<code>
+</code>
+
+<h1>A <font face="Courier New">random</font> modul fontosabb függvényei (folytatás)</h1>
+
+
+
+<p>Az előző függvényeknek van egy fontos hátrányuk - ismétlődő értékeket adhatnak akkor is, ha a következő függvényhívások száma nem nagyobb, mint a megadott intervallum szélessége.</p>
+
+<p>Nézd meg az alábbi kódot - a program nagy valószínűséggel olyan számhalmazt ad ki, amelynek néhány eleme nem egyedi:</p>
+
+<p><codep class="syntax-color copy line-numbers">from random import randint
+
+for i in range(10):
+    print(randint(1, 10), end=',')
+</codep></p>
+
+<p>Ezt kaptuk az egyik indításkor:</p>
+
+<codep>9,4,5,4,5,8,9,4,8,4,</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+
+<p><b>A <font face="Courier New">choice</font> és a <font face="Courier New">sample</font> függvények</b></p>
+ 
+<p>Mint látható, ez nem jó eszköz a lottószámok generálására. Szerencsére van jobb megoldás is, mint saját kódot írni a "kisorsolt" számok egyediségének ellenőrzésére.</p>
+
+<br>
+
+<p>Ez a függvény - nevében a működésére utaló módon - a <codel>choice</codel>:</p>
+
+<ul>
+<li><codel>choice(sequence)</codel></li>
+<li><codel>sample(sequence, elements_to_choose)</codel></li>
+</ul>
+ 
+
+<p>Az első változat kiválaszt egy "véletlenszerű" elemet a bemeneti sorozatból, és visszaadja azt.</p>
+
+<p>A második egy listát (mintát) készít, amely a bemeneti sorozatból származó<codel>elements_to_choose</codel> darab elemből áll.</p>
+
+<p>Más szóval, a függvény kiválaszt a bemeneti elemek közül néhányat, és egy listát ad vissza a választottakkal. A minta elemei véletlenszerű sorrendben kerülnek a listába. Megjegyzés: az <codel>elements_to_choose</codel> nem lehet nagyobb, mint a bemeneti sorozat hossza.</p>
+
+<p>Nézd meg az alábbi kódot:</p>
+
+<codep class="syntax-color copy">from random import choice, sample
+
+my_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+print(choice(my_list))
+print(sample(my_list, 5))
+print(sample(my_list, 10))
+</codep> 
+
+<br>
+
+<p>Ismétlem, a program kimenete nem kiszámítható. A mi eredményeink így néztek ki:</p>
+
+<codep>4
+[3, 1, 8, 9, 10]
+[10, 8, 5, 1, 6, 4, 3, 9, 7, 2]</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

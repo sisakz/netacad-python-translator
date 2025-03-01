@@ -1,0 +1,121 @@
+<problem chapter='2' section='3' slide='1' problem='4' title='Karakterlánc tagfüggvények'>
+
+<!--
+Update history:
+2020-09-22 Grzegorz (review, PEP-8 compliance check, update)
+2020-10-22 Grzegorz (Note corrected, '[SPACE]' added to code)
+2021-06-30	Grzegorz (corrections)
+-->
+
+
+<code># Demonstrating the find() method:
+print("Eta".find("ta"))
+print("Eta".find("mma"))
+
+</code>
+
+
+
+<h1>A <font face="Courier New">find()</font> tagfüggvény</h1>
+
+<p>A <codel>find()</codel> tagfüggvény hasonló az <codel>index()</codel> tagfüggvényhez, amit már ismerünk – <strong>egy rész-karakterláncot keres, és visszaadja a részlánc első előfordulásának indexét</strong>, de:</p>
+
+<ul>
+<li>biztonságosabb <strong>, nem dob hibát egy nem létező részláncot tartalmazó argumentum esetén</strong> (ekkor <codel>-1</codel>-et ad vissza)</li>
+
+<li><strong>csak karakterláncokkal működik</strong> – ne próbáld meg más szekvenciákra alkalmazni.</li>
+</ul>
+
+<p>Nézd meg a kódot a szerkesztőben. Így használhatod.</p>
+
+<p>A példa kiírja:</p>
+
+<codep>1
+-1</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+<p>Megjegyzés: ne használd a <codel>find()</codel>-ot, ha csak azt akarod ellenőrizni, hogy egy karakter előfordul-e egy karakterláncban – az <codel>in</codel> operátor lényegesen gyorsabb lesz.</p>
+
+<p>Íme egy másik példa:</p>
+
+<codep class="syntax-color copy">t = 'theta'
+print(t.find('eta'))
+print(t.find('et'))
+print(t.find('the'))
+print(t.find('ha'))
+</codep>
+
+<br>
+
+<p>Meg tudod jósolni a kimenetet? Futtasd le, és ellenőrizd a feltevéseidet.</p>
+
+<br>
+
+<p>Ha a keresést nem a karakterlánc elejétől, hanem <strong>tetszőleges pozíciótól</strong> szeretnéd elvégezni, akkor a <codel>find()</codel> tagfüggvény <strong>kétparaméteres változatát</strong> használhatod. Nézd meg a példát:</p>
+
+<codep class="syntax-color copy">print('kappa'.find<mark class="mark-background">('a','[SPACE]'2)</mark>)
+</codep>
+<br>
+
+<p>A második argumentum <strong>azt az indexet adja meg, amelyen a keresés elindul</strong> (nem kell, hogy legyen ilyen a karakterláncban).</p>
+
+<p>A két <i>a</i> betű közül a másodikat találja meg a függvény. Futtasd le a kódrészletet és ellenőrizd.</p>
+
+<br>
+
+<p>A <codel>find()</codel> tagfüggvénnyel megkeresheted a rész-karakterlánc összes előfordulását, mint itt:</p>
+
+<codep class="syntax-color copy">the_text = """A variation of the ordinary lorem ipsum
+text has been used in typesetting since the 1960s 
+or earlier, when it was popularized by advertisements 
+for Letraset transfer sheets. It was introduced to 
+the Information Age in the mid-1980s by the Aldus Corporation, 
+which employed it in graphics and word-processing templates
+for its desktop publishing program PageMaker (from Wikipedia)"""
+
+fnd = the_text.find('the')
+while fnd != -1:
+    print(fnd)
+    fnd = the_text.find('the', fnd + 1)
+</codep>
+<br>
+
+
+<p>A kód kiírja a <i>the</i> szó összes előfordulásának indexét. A kimenet így néz ki:</p>
+
+<codep>15
+80
+198
+221
+238</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+
+<p><strong>A <codel>find()</codel> tagfüggvénynek van </strong> egy <strong>háromparaméteres változata</strong> is - a harmadik argumentum <strong>arra az indexre mutat, amelyet már nem veszünk figyelembe a keresés során</strong> (ez valójában a keresés felső határa).</p>
+
+<p>Nézd meg az alábbi példát:</p>
+
+<codep class="syntax-color copy">print('kappa'.find('a', 1, 4))
+print('kappa'.find('a', 2, 4))
+</codep>
+<br>
+
+
+<p>A második argumentum azt az indexet adja meg, amelyen a keresés elindul (nem kell, hogy létezzen ilyen a karakterláncban).</p>
+
+<p>Ezért a módosított példa kimenetei:</p>
+
+<codep>1
+-1</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+<p>(<i>a</i> nem található a megadott keresési határokon belül a második <codel>print()</codel>-ben.</p>
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

@@ -1,0 +1,54 @@
+<problem chapter='4' section='3' slide='1' problem='4' title='Working with real files'>
+
+<!--
+Update history:
+2020-10-07 Grzegorz (review, PEP-8 compliance check)
+2020-10-29 Grzegorz (code fix: strrerror instead of strerr)
+2021-07-07 Grzegorz (code corrections - important!)
+-->
+
+<code>from os import strerror
+
+try:
+    character_counter = line_counter = 0
+    stream = open('text.txt', 'rt')
+    line = stream.readline()
+    while line != '':
+        line_counter += 1
+        for char in line:
+            print(char, end='')
+            character_counter += 1
+        line = stream.readline()
+    stream.close()
+    print("\n\nCharacters in file:", character_counter)
+    print("Lines in file:     ", line_counter)
+except IOError as e:
+    print("I/O error occurred:", strerror(e.errno))
+
+</code>
+
+
+
+<h1>Processing text files: <font face="Courier New">readline()</font></h1>
+
+
+<p>If you want to treat the file's contents <strong>as a set of lines</strong>, not a bunch of characters, the <codel>readline()</codel> method will help you with that.</p>
+
+<p>The method tries to <strong>read a complete line of text from the file</strong>, and returns it as a string in the case of success. Otherwise, it returns an empty string.</p>
+
+<p>This opens up new opportunities – now you can also count lines easily, not only characters.</p>
+
+<p>Let's make use of it. Look at the code in the editor.</p>
+
+<p>As you can see, the general idea is exactly the same as in both previous examples.</p>
+
+
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

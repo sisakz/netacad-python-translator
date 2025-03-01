@@ -1,0 +1,93 @@
+<problem chapter='1' section='3' slide='1' problem='9' title='Modulok és csomagok'>
+
+<!--
+Update history:
+2020-09-08 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h1>Az első csomagod: 7. lépés</h1>
+
+<p>A <codel>funI()</codel> függvényt az <font face="Courier New">extra</font> csomag tetején lévő <font face="Courier New">iota</font> package modulból fogjuk elérni. Ez arra kényszerít minket, hogy minősített csomagneveket használjunk (társítsuk ezt a mappák és almappák elnevezéséhez - a konvenciók nagyon hasonlóak).</p>
+
+<p>Ezt így tehetjük meg:</p>
+
+<img src="/uploads/media/default/0001/01/6da8f46237f7f00576bc32f1c1c76292de88e991.png" width="45%" alt="A main2.py fájl">
+
+<br><br>
+
+<codep class="syntax-color copy line-numbers">from sys import path
+path.append('..\\packages')
+
+import extra.iota
+print(extra.iota.funI())
+</codep>
+<p style="text-align: right;">main2.py</p>
+ 
+
+<p>Megjegyzés:</p>
+
+<ul>
+    <li>módosítottuk a <codel>path</codel> változót, hogy a Python számára elérhetővé tegyük;</li>
+    <li>az <codel>import</codel> nem közvetlenül a modulra mutat, hanem a csomag tetejéről a teljes minősített elérési utat adja meg;</li>
+</ul>
+
+<p>az <codel>import extra.iota</codel> helyettesítése <codel>import iota</codel>-val hibát okoz.</p>
+
+<br><br>
+
+
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+
+
+<p>A következő változat is helyes:</p>
+
+<img src="/uploads/media/default/0001/01/3912ca43306d65f9cb90766865cf5add190789e0.png" width="45%" alt="A main2.py fájl alternatív verziója">
+
+<br><br>
+
+
+<codep class="syntax-color copy line-numbers">from sys import path
+path.append('..\\packages')
+
+from extra.iota import funI
+print(funI())
+</codep>
+<p style="text-align: right;">main2.py</p>
+
+
+<p>Figyeld meg az <font face="Courier New">iota</font> modul minősített nevét.</p>
+
+
+
+
+
+<br>
+<br>
+
+</div>
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

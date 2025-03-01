@@ -1,0 +1,61 @@
+<problem chapter='3' section='5' slide='1' problem='7' title='OOP alapok: Öröklés'>
+
+<!--
+Update history:
+2020-10-01 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>class Super:
+    def __init__(self, name):
+        self.name = name
+
+    def __str__(self):
+        return "My name is " + self.name + "."
+
+
+class Sub(Super):
+    def __init__(self, name):
+        Super.__init__(self, name)
+
+
+obj = Sub("Andy")
+
+print(obj)
+
+</code>
+
+
+
+<h1>Hogyan találja meg a Python a tulajdonságokat és metódusokat</h1>
+
+<p>Most megnézzük, hogyan kezeli a Python az öröklõdõ metódusokat.</p>
+
+<p>Nézzük meg a példát a szerkesztõben! Elemezzük ki:</p>
+
+<ul>
+    <li>van egy <codel>Super</codel> nevû osztály, amely definiálja a saját konstruktorát, amelyet az objektum <codel>name</codel> nevû tulajdonságának hozzárendelésére használ.</li>
+
+    <li>az osztály definiálja az <codel>__str__()</codel> metódust is, amely lehetõvé teszi, hogy az osztály képes legyen egyértelmû szöveges formában bemutatni az identitását.</li>
+
+    <li>az osztály ezután alapként szolgál egy <codel>Sub</codel> nevû alosztály létrehozásához. A <codel>Sub</codel> osztály definiálja saját konstruktorát, amely a szuperosztály konstruktorát hívja meg. Figyeljük meg, hogyan tettük ezt: <codel>Super.__init__(self, name)</codel>.</li>
+
+    <li>explicit módon megneveztük a szuperosztályt, és az <codel>__init__()</codel> metódusra mutattunk, megadva az összes szükséges argumentumot.</li>
+
+    <li>létrehoztunk egy <codel>Sub</codel> osztályú objektumot, és kiírattuk azt.</li>
+</ul>
+
+<p>A kód kimenete:</p>
+
+<codep>My name is Andy.</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+<p>Megjegyzés: Mivel a <codel>Sub</codel> osztályban nincs <codel>__str__()</codel> metódus, a kiírt karakterláncot a <codel>Super</codel> osztályban kellett elõállítani. Ez azt jelenti, hogy az <codel>__str__()</codel> metódust a <codel>Sub</codel> osztály örökölte.</p>
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

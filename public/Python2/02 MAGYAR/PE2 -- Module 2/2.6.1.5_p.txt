@@ -1,0 +1,54 @@
+<problem chapter='2' section='6' slide='1' problem='5' title="Hibák – a programozók mindennapi kenyere">
+
+<!--
+Update history:
+2020-09-21 Grzegorz (review, PEP-8 compliance check, update, title correction)
+2021-06-30	Grzegorz (corrections)
+-->
+
+<code>
+first_number = int(input("Enter the first number: "))
+second_number = int(input("Enter the second number: "))
+
+if second_number != 0:
+    print(first_number / second_number)
+else:
+    print("This operation cannot be done.")
+
+print("THE END.")
+
+</code>
+
+
+
+<h1>Kivételek (folytatás)</h1>
+
+<p>Hogyan <strong>kezeled</strong> a kivételeket? A <i>try</i> szó a megoldás kulcsa.</p>
+
+<p>Ráadásul ez egy kulcsszó is.</p>
+
+<p>A siker receptje a következő:</p>
+
+<ul>
+<li>Először is, <strong><i>meg</i></strong> kell<strong><i>próbálnod (try)</i> tenni valamit</strong>;</li>
+<li>Ezután <strong>ellenőrizned kell, hogy minden rendben ment-e</strong>.</li>
+</ul>
+ 
+
+<p>De nem lenne jobb, ha először minden körülményt megvizsgálnánk, és csak akkor tennénk valamit, ha az biztonságos?</p>
+
+<p>Pontosan úgy, mint a szerkesztőben lévő példánál.</p>
+
+<p>Igaz, ez az út tűnik a legtermészetesebbnek és legérthetőbbnek, de a valóságban ez a módszer nem teszi könnyebbé a programozást. A sok ellenőrzés a <strong>kódodat felduzzasztaná és olvashatatlanná</strong> tenné.</p>
+
+<p>A Python teljesen más megközelítést részesít előnyben.</p>
+
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

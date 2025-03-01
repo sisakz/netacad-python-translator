@@ -1,0 +1,90 @@
+<problem chapter='4' section='3' slide='1' problem='15' title='LAB: Krakter gyakorisági hisztogram'>
+
+<!--
+Update history:
+2020-10-07 Grzegorz (review, PEP-8 compliance check)
+2021-07-07 Grzegorz (code corrections - important!)
+-->
+
+<code>
+</code>
+
+<span class="label" style="background-color:rgb(205, 168, 105);"><b>LABORGYAKORLAT</b></span>
+
+<br><br>
+
+<h2>Becsült idõ</h2>
+<p>60 perc</p>
+
+
+<h2>Nehézségi szint</h2>
+<p>Közepes</p>
+
+
+<h2>Célok</h2>
+<ul>
+    <li>a tanuló fájlmûveletekkel (olvasás) kapcsolatos készségeinek fejlesztése</li>
+    <li>adatszerkezetek használata megszámlálási feladatokhoz.</li>
+</ul>
+
+
+
+<h2>Forgatókönyv</h2>
+<p>Egy szöveges fájlt kell feldolgoznunk. Minket az érdekel, hogy az egyes betûk milyen gyakran (vagy éppen ritkán) fordulnak elõ a szövegben. Egy ilyen elemzés hasznos lehet a kriptográfiában. Az egyszerûség kedvéért csak a latin ábécé betûit vizsgáljuk.</p>
+
+<p>A Te feladatod egy olyan program írása, amely:</p>
+<ul>
+    <li>megkérdezi a felhasználótól a bemeneti fájl nevét;</li>
+    <li>beolvassa a fájlt (ha lehetséges), és megszámolja az összes latin betût (a kis- és nagybetûk között nem tesz különbséget).</li>
+    <li>egy egyszerû hisztogramot nyomtat ki ábécé sorrendben (csak a nem nulla értékeket kell megjeleníteni).</li>
+</ul>
+
+
+<p>Hozz létre egy tesztfájlt a kódhoz, és ellenõrizd, hogy a hisztogram érvényes eredményeket tartalmaz-e.</p>
+
+<p>Feltéve, hogy a tesztfájl csak ezt az egy sort tartalmazza:</p>
+<codep>aBc</codep>
+<p style="text-align: right;"><font size="-2"><b>samplefile.txt</b></font></p>
+
+<p>a várható kimenetnek a következõképpen kell kinéznie:</p>
+
+
+<codep>a -> 1
+b -> 1
+c -> 1</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+<p><strong>Tipp</strong>: Úgy gondoljuk, hogy a szótár tökéletes eszköz ehhez a megszámláláshoz. A betûk lehetnek a kulcsok, míg a számlálók lehetnek értékek.</p>
+
+
+
+<sampleSolution>from os import strerror
+
+# Initialize 26 counters for each Latin letter.
+# Note: we've used a comprehension to do that.
+counters = {chr(ch): 0 for ch in range(ord('a'), ord('z') + 1)}
+file_name = input("Enter the name of the file to analyze: ")
+try:
+    file = open(file_name, "rt")
+    for line in file:
+        for char in line:
+            # If it is a letter...
+            if char.isalpha():
+                # ... we'll treat it as lower-case and update the appropriate counter.
+                counters[char.lower()] += 1
+    file.close()
+    # Let's output the counters.
+    for char in counters.keys():
+        c = counters[char]
+        if c > 0:
+            print(char, '->', c)
+except IOError as e:
+    print("I/O error occurred: ", strerror(e.errno))
+
+</sampleSolution>
+
+
+<studyMode>false</studyMode>
+<labMode>true</labMode>
+
+</problem>

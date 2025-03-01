@@ -1,0 +1,78 @@
+<problem chapter='2' section='4' slide='1' problem='1' title='String in action'>
+
+<!--
+Update history:
+2020-09-23 Grzegorz (review, PEP-8 compliance check, update)
+2021-06-30	Grzegorz (corrections)
+-->
+
+<code>
+# Test examples here.
+
+</code>
+
+
+
+<h1>Comparing strings</h1>
+
+<p>Python strings <strong>can be compared using the same set of operators</strong> which are in use in relation to numbers.</p>
+
+<p>Take a look at these operators – they can all compare strings, too:</p>
+
+<ul>
+<li><codel>==</codel></li>
+<li><codel>!=</codel></li>
+<li><codel>&gt;</codel></li>
+<li><codel>&gt;=</codel></li>
+<li><codel>&lt;</codel></li>
+<li><codel>&lt;=</codel></li>
+</ul>
+
+<p>There is one "but" – the results of such comparisons may sometimes be a bit surprising. Don't forget that Python doesn't understand the subtle linguistic issues – it just <strong>compares code point values</strong>, character by character.</p>
+
+<p>The results you get from such an operation are sometimes astonishing. Let's start with the simplest cases.</p>
+
+
+<br>
+
+<p>Two strings are equal when they consist of the same characters in the same order. By the same fashion, two strings are not equal when they don't consist of the same characters in the same order.</p>
+
+<p>Both comparisons give <codel>True</codel> as a result:</p>
+
+<codep class="syntax-color">'alpha' == 'alpha'
+'alpha' != 'Alpha'
+</codep>
+<br>
+
+<br>
+
+<p>The final relation between strings is determined by <strong>comparing the first different character in both strings</strong> (keep ASCII/UNICODE code points in mind at all times.)</p>
+
+<p>When you compare two strings of different lengths and the shorter one is identical to the beginning of the longer one, the <strong>longer string is considered greater</strong>.</p>
+
+<p>Just like here:</p>
+
+<codep class="syntax-color">'alpha' < 'alphabet'
+</codep>
+
+<br>
+
+<p>The relation is <codel>True</codel>.</p>
+
+
+<p>String comparison is always case-sensitive (<strong>upper-case letters are taken as lesser than lower-case ones</strong>).
+
+<p>The expression is <codel>True</codel>:</p>
+
+<codep class="syntax-color">'beta' > 'Beta'
+</codep>
+
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

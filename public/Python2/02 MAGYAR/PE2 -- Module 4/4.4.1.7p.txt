@@ -1,0 +1,47 @@
+<problem chapter='4' section='4' slide='1' problem='7' title='Az os modul'>
+
+<!--
+Update history:
+2020-03-30 Sebastian (first version)
+2020-10-08 Grzegorz (review, PEP-8 compliance check)
+-->
+
+<code>import os
+
+returned_value = os.system("mkdir my_first_directory")
+print(returned_value)
+
+</code>
+
+
+
+<h1>A system() függvény</h1>
+
+
+<p>A kurzus ezen részében bemutatott összes függvényt helyettesíthetjük egy <i>system</i> nevű függvénnyel, amely végrehajtja a karakterláncként kapott parancsot.</p>
+
+<p>Ez a <codel>system</codel> elérhető Windows és Unix alatt is, de az operációs rendszertől függően más-más eredményt ad vissza.</p>
+
+<p>Windows alatt a parancsértelmező által a megadott parancs futtatása után kapott értéket adja vissza, míg Unix alatt a folyamat kilépési állapotát.</p>
+
+<p>Nézd meg a kódot a szerkesztőben, és ellenőrizd, hogyan működik a gyakorlatban.</p>
+
+<p>Eredmény:</p>
+<codep>0</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+
+<p>A fenti példa Windows és Unix alatt is működik. A mi esetünkben a 0 kilépési kódot kaptuk, ami Unix rendszereken a sikeres végrehajtást jelzi.</p>
+
+<p>Ez azt jelenti, hogy a <i>my_first_directory</i> könyvtár létrejött. A gyakorlat részeként próbáld meg felsorolni annak a könyvtárnak a tartalmát, ahol létrehoztad a <i>my_first_directory</i> könyvtárat.</p>
+
+
+
+<br>
+<br>
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

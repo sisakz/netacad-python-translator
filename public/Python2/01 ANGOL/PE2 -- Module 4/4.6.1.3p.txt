@@ -1,0 +1,36 @@
+<problem chapter='4' section='6' slide='1' problem='3' title='The calendar module'>
+
+<!--
+Update history:
+2020-03-30 Sebastian (first version)
+2020-10-12 Grzegorz (file creation, review, PEP-8 compliance check)
+-->
+
+<code>import calendar
+print(calendar.month(2020, 11))
+
+</code>
+
+<h1>Calendar for a specific month</h1>
+
+<p>The <codel>calendar</codel> module has a function called <codel>month</codel>, which allows you to display a calendar for a specific month. Its use is really simple, you just need to specify the year and month - check out the code in the editor.</p>
+
+<p>The example displays the calendar for November 2020. As in the <codel>calendar</codel> function, you can change the default formatting using the following parameters:</p>
+
+<ul>
+<li><codel>w</codel> – date column width (default 2)</li>
+<li><codel>l</codel> – number of lines per week (default 1)</li>
+</ul>
+
+<p><b>Note:</b> You can also use the <codel>prmonth</codel> function, which has the same parameters as the <codel>month</codel> function, but doesn't require you to use the <codel>print</codel> function to display the calendar.</p>
+
+
+
+<br>
+<br>
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

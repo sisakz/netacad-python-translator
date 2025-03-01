@@ -1,0 +1,67 @@
+<problem chapter='4' section='3' slide='1' problem='12' title='Valós fájlok kezelése'>
+
+<!--
+Update history:
+2020-10-07 Grzegorz (review, PEP-8 compliance check)
+2020-10-29 Grzegorz (code fix: strrerror instead of strerr)
+2021-07-07 Grzegorz (code corrections - important!)
+-->
+
+<code>from os import strerror
+
+data = bytearray(10)
+
+for i in range(len(data)):
+    data[i] = 10 + i
+
+try:
+    binary_file = open('file.bin', 'wb')
+    binary_file.write(data)
+    binary_file.close()
+except IOError as e:
+    print("I/O error occurred:", strerror(e.errno))
+
+# Your code that reads bytes from the stream should go here.
+
+</code>
+
+
+
+<h1>Hogyan olvassunk be bájtokat egy fájlobjektumból</h1>
+
+
+<p>A bináris fájl tartalmának olvasására alternatív módot kínál a <codel>read()</codel> metódus.</p>
+
+<p>Argumentumok nélkül meghívva megpróbálja <strong>beolvasni a fájl teljes tartalmát a memóriába</strong>, és egy újonnan létrehozott bytes osztályú objektum részévé teszi azokat.</p>
+
+<p>Ez az osztály hasonlít a <codel>bytearray</codel>-hez, egy jelentős különbséggel - <strong>megváltoztathatatlan</strong>.</p>
+
+<p>Szerencsére nincs akadálya annak, hogy egy bájttömböt úgy hozzunk létre, hogy annak kezdeti értékét közvetlenül a bytes objektumból vesszük, ahogy itt is:</p>
+
+<codep class="syntax-color copy line-numbers">from os import strerror
+
+try:
+    binary_file = open('file.bin', 'rb')
+    data = bytearray(binary_file.read())
+    binary_file.close()
+
+    for b in data:
+        print(hex(b), end=' ')
+
+except IOError as e:
+    print("I/O error occurred:", strerror(e.errno))
+</codep>
+<br>
+
+ 
+
+<p>Légy óvatos – <strong>ne használd ezt a fajta <i>beolvasást</i> ha nem vagy biztos benne, hogy a fájl tartalma elfér a rendelkezésre álló memóriában</strong>.</p>
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

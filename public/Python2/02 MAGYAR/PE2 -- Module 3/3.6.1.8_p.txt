@@ -1,0 +1,102 @@
+<problem chapter='3' section='6' slide='1' problem='8' title='Bővebben a kivételekről'>
+
+<!--
+Update history:
+2020-10-01 Grzegorz (reviewed, PEP-8 compliance check)
+-->
+
+<code>class PizzaError(Exception):
+    def __init__(self, pizza, message):
+        Exception.__init__(self, message)
+        self.pizza = pizza
+
+
+class TooMuchCheeseError(PizzaError):
+    def __init__(self, pizza, cheese, message):
+        PizzaError.__init__(self, pizza, message)
+        self.cheese = cheese
+
+
+def make_pizza(pizza, cheese):
+    if pizza not in ['margherita', 'capricciosa', 'calzone']:
+        raise PizzaError(pizza, "no such pizza on the menu")
+    if cheese > 100:
+        raise TooMuchCheeseError(pizza, cheese, "too much cheese")
+    print("Pizza ready!")
+
+for (pz, ch) in [('calzone', 0), ('margherita', 110), ('mafia', 20)]:
+    try:
+        make_pizza(pz, ch)
+    except TooMuchCheeseError as tmce:
+        print(tmce, ':', tmce.cheese)
+    except PizzaError as pe:
+        print(pe, ':', pe.pizza)
+
+</code>
+
+
+
+<h1>Hogyan hozzunk létre saját kivételt (folytatás)</h1>
+
+
+<p>Nézd meg a kódot a szerkesztőben! Összekapcsoltuk a két korábban definiált kivételt, és az eredményt egy kis kódrészletben hasznosítjuk.</p>
+
+
+<p>Ezek egyike a <codel>make_pizza()</codel> függvényen belül kerül elő, amikor a két hibás helyzet valamelyikét észleljük: rossz pizza kérés, vagy túl sok sajt kérése.</p>
+
+<p>Megjegyzés:</p>
+
+<ul>
+    <li>az <codel>except TooMuchCheeseError</codel>-ral kezdődő ág eltávolítása az összes megjelenő kivételt <codel>PizzaError</codel>-ként fogja besorolni;</li>
+    <li>az <codel>except PizzaError</codel>-ral kezdődő ág eltávolításával a <codel>TooMuchCheeseError</codel> kivételek kezeletlenül maradnak, és a program befejeződik.</li>
+</ul>
+
+<br>
+
+<p>Az előző megoldásnak, bár elegáns és hatékony, van egy gyenge pontja. A konstruktorok deklarálásának kissé laza módja miatt az új kivételek nem használhatók úgy, ahogy vannak, szükséges az argumentumok teljes megadása.</p>
+
+<p>Ezt a gyengeséget úgy fogjuk kiküszöbölni, hogy <strong>minden konstruktor paraméter alapértelmezett értékét beállítjuk</strong>. Nézd:</p>
+
+<codep class="syntax-color copy line-numbers">class PizzaError(Exception):
+    <mark class="mark-background">def __init__(self, pizza='uknown', message=''):</mark>
+        Exception.__init__(self, message)
+        self.pizza = pizza
+
+
+class TooMuchCheeseError(PizzaError):
+    <mark class="mark-background">def __init__(self, pizza='uknown', cheese='>100', message=''):</mark>
+        PizzaError.__init__(self, pizza, message)
+        self.cheese = cheese
+
+
+def make_pizza(pizza, cheese):
+    if pizza not in ['margherita', 'capricciosa', 'calzone']:
+        <mark class="mark-background">raise PizzaError</mark>
+	if cheese > 100:
+        <mark class="mark-background">raise TooMuchCheeseError</mark>
+    print("Pizza ready!")
+
+
+for (pz, ch) in [('calzone', 0), ('margherita', 110), ('mafia', 20)]:
+    try:
+        make_pizza(pz, ch)
+    except TooMuchCheeseError as tmce:
+        print(tmce, ':', tmce.cheese)
+    except PizzaError as pe:
+        print(pe, ':', pe.pizza)
+</codep>
+
+<br>
+
+<p>Most, ha a körülmények megengedik, lehetőség van arra, hogy csak az osztályneveket használjuk.</p>
+
+
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

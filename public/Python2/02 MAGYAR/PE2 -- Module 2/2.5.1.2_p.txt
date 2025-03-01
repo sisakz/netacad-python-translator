@@ -1,0 +1,40 @@
+<problem chapter='2' section='5' slide='1' problem='2' title='Egyszerű programok'>
+
+<!--
+Update history:
+2020-09-23 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>
+# Caesar cipher - decrypting a message.
+cipher = input('Enter your cryptogram: ')
+text = ''
+for char in cipher:
+    if not char.isalpha():
+        continue
+    char = char.upper()
+    code = ord(char) - 1
+    if code < ord('A'):
+        code = ord('Z')
+    text += chr(code)
+
+print(text)
+
+</code>
+
+
+
+<h1>A Caesar-kód: egy üzenet visszafejtése</h1>
+
+<p>A fordított átalakításnak így már érthetőnek kell lennie számodra – nézzük meg a kódot úgy, ahogy van, minden magyarázat nélkül.</p>
+
+<p>Nézd meg a kódot a szerkesztőben. Alaposan ellenőrizd, hogy működik-e. Használd az előző programból származó kriptogramot.</p>
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

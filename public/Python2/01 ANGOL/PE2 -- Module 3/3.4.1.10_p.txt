@@ -1,0 +1,84 @@
+<problem chapter='3' section='4' slide='1' problem='10' title='OOP: Methods'>
+
+<!--
+Update history:
+2020-09-30 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>class MyClass:
+    pass
+
+
+obj = MyClass()
+obj.a = 1
+obj.b = 2
+obj.i = 3
+obj.ireal = 3.5
+obj.integer = 4
+obj.z = 5
+
+
+def incIntsI(obj):
+    for name in obj.__dict__.keys():
+        if name.startswith('i'):
+            val = getattr(obj, name)
+            if isinstance(val, int):
+                setattr(obj, name, val + 1)
+
+
+print(obj.__dict__)
+incIntsI(obj)
+print(obj.__dict__)
+
+</code>
+
+
+
+<h1>Investigating classes</h1>
+
+<p>What can you find out about classes in Python? The answer is simple – everything.</p>
+
+<p>Both reflection and introspection enable a programmer to do anything with any object, no matter where it comes from.</p>
+
+<p>Analyze the the code in the editor.</p>
+
+<p>The function named <codel>incIntsI()</codel> gets an object of any class, scans its contents in order to find all integer attributes with names starting with <font face="Courier New">i</font>, and increments them by one.</p>
+
+<p>Impossible? Not at all!</p>
+
+<p>This is how it works:</p>
+
+<ul>
+<li>line 1: define a very simple class...</li>
+
+<li>lines 3 through 10: ... and fill it with some attributes;</li>
+
+<li>line 12: this is our function!</li>
+
+<li>line 13: scan the <codel>__dict__</codel> attribute, looking for all attribute names;</li>
+
+<li>line 14: if a name starts with <font face="Courier New">i</font>...</li>
+
+<li>line 15: ... use the <codel>getattr()</codel> function to get its current value; note: <codel>getattr()</codel> takes two arguments: an object, and its property name (as a string), and returns the current attribute's value;</li>
+
+<li>line 16: check if the value is of type integer, and use the function <codel>isinstance()</codel> for this purpose (we'll discuss this later);</li>
+
+<li>line 17: if the check goes well, increment the property's value by making use of the <codel>setattr()</codel> function; the function takes three arguments: an object, the property name (as a string), and the property's new value.</li>
+</ul>
+
+
+<p>The code outputs:</p>
+
+<codep>{'a': 1, 'integer': 4, 'b': 2, 'i': 3, 'z': 5, 'ireal': 3.5}
+{'a': 1, 'integer': 5, 'b': 2, 'i': 4, 'z': 5, 'ireal': 3.5}</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+<p>That's all!</p>
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

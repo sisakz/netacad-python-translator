@@ -1,0 +1,205 @@
+<problem chapter='4' section='5' slide='1' problem='23' title='SZAKASZ ÖSSZEFOGLALÁS'>
+
+<!--
+Update history:
+2020-03-30 Sebastian (first version)
+2020-10-12 Grzegorz (file creation, review, PEP-8 compliance check)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+    <h1>A legfontosabb tudnivalók</h1>
+
+
+    <p>1. Egy <codel>date</codel> (dátum) objektum létrehozásához az év, a hónap és a nap argumentumokat a következőképpen kell megadni:</p>
+
+<p><codep class="syntax-color copy">from datetime import date
+
+my_date = date(2020, 9, 29)
+print("Year:", my_date.year) # Year: 2020
+print("Month:", my_date.month) # Month: 9
+print("Day:", my_date.day) # Day: 29
+</codep></p>
+
+<p>A <codel>date</codel> objektum három (csak olvasható) attribútummal rendelkezik: év, hónap és nap.</p>
+
+<br>
+
+<p>2. A <codel>today</codel> metódus egy dátum objektumot ad vissza, amely az aktuális helyi dátumot tartalmazza:</p>
+
+<p><codep class="syntax-color copy">from datetime import date
+print("Today:", date.today()) # Displays: Today: 2020-09-29
+</codep></p>
+
+<br>
+
+<p>3. Unix alatt az időbélyeg az 1970. január 1. 00:00:00 (UTC) óta eltelt másodpercek számát fejezi ki. Ezt a dátumot "Unix epoch"-nak vagy magyarul Unix-időnek nevezik, mivel ekkor kezdődött az időszámítás a Unix rendszerekben. Az időbélyeg valójában egy adott dátum (beleértve az időt is) és az 1970. január 1. 00:00:00 (UTC) közötti különbség, másodpercekben kifejezve. Ahhoz, hogy dátum objektumot hozzunk létre egy időbélyegből, át kell adnunk egy Unix időbélyeget a <codel>fromtimestamp</codel> metódusnak:</p>
+
+<p><codep class="syntax-color copy">from datetime import date
+import time
+
+timestamp = time.time()
+d = date.fromtimestamp(timestamp)
+</codep></p>
+
+<p>Megjegyzés: A <codel>time</codel> függvény az 1970. január 1-től az aktuális pillanatig eltelt másodpercek számát adja vissza lebegőpontos valós szám (float) formájában.</p>
+
+<br>
+
+
+<p>4. A <codel>time</codel> osztály konstruktora hat argumentumot fogad el (<i>hour</i>, <i>minute</i>, <i>second</i>, <i>microsecond</i>, <i>tzinfo</i>, és <i>fold</i>). Ezen argumentumok mindegyike opcionális.</p>
+
+<p><codep class="syntax-color copy">from datetime import time
+
+t = time(13, 22, 20)
+
+print("Hour:", t.hour) # Hour: 13
+print("Minute:", t.minute) # Minute: 22
+print("Second:", t.second) # Second: 20
+</codep></p>
+
+<br>
+
+<p>5. A <codel>time</codel> tartalmaz egy <codel>sleep</codel> függvényt, amely a program végrehajtását adott számú másodpercre felfüggeszti, pl.:</p>
+
+<p><codep class="syntax-color copy">import time
+
+time.sleep(10)
+print("Hello world!") # This text will be displayed after 10 seconds.
+</codep></p>
+
+<br>
+
+<p>6. A <codel>datetime</codel> modulban a dátum és az idő különálló objektumként vagy egy objektumként is megjeleníthető. A dátumot és az időt egyesítő osztály neve <i>datetime</i>. A konstruktornak átadott összes argumentum a csak olvasható osztályattribútumokba kerül. Ezek a <i>year</i>, <i>month</i>, <i>day</i>, <i>hour</i>, <i>minute</i>, <i>second</i>, <i>microsecond</i>, <i>tzinfo</i>, és <i>fold</i>:</p>
+
+<p><codep class="syntax-color copy">from datetime import datetime
+
+dt = datetime(2020, 9, 29, 13, 51)
+print("Datetime:", dt) # Displays: Datetime: 2020-09-29 13:51:00
+</codep></p>
+
+<br>
+
+
+<p>7. Az <codel>strftime</codel> metódus egyetlen argumentumot vár, egy direktíva karakterlánc formájában. A direktíva egy karakterlánc, amely a <codel>%</codel> (százalék) karakterből és egy kis- vagy egy nagybetűből áll. Az alábbiakban néhány hasznos direktívát mutatunk be:</p>
+
+<ul>
+    <li><codel>%Y</codel> – az évszámot adja vissza az évszázaddal együtt négy számjegyen;</li>
+    <li><codel>%m</codel> – a hónapot vezető nullával kiegészített kétszámjegyű számként adja vissza;</li>
+    <li><codel>%d</codel> – a napot két számjegyen adja vissza;</li>
+    <li><codel>%H</codel> – az órát két számjegyen adja vissza;</li>
+    <li><codel>%M</codel> – a percet két számjegyen adja vissza;</li>
+    <li><codel>%S</codel> – a másodpercet két számjegyen adja vissza.</li>
+</ul>
+
+<p>Példa:</p>
+
+<p><codep class="syntax-color copy">from datetime import date
+
+d = date(2020, 9, 29)
+print(d.strftime('%Y/%m/%d')) # Displays: 2020/09/29
+</codep></p>
+
+<br>
+
+<p>8. Műveleteket végezhetünk a <codel>date</codel> és <codel>datetime</codel> objektumokon, pl.:</p>
+
+<p><codep class="syntax-color copy">from datetime import date
+
+d1 = date(2020, 11, 4)
+d2 = date(2019, 11, 4)
+
+d = d1 - d2
+print(d) # Displays: 366 days, 0:00:00.
+print(d * 2) # Displays: 732 days, 0:00:00.
+</codep></p>
+
+
+<p>A kivonás eredménye egy <codel>timedelta</codel> objektum, amely a fenti példában a két dátum közötti különbséget fejezi ki napokban számolva.</p>
+
+<p>Vegyük figyelembe, hogy a különbség órákban, percekben és másodpercekben is megjelenik. A <codel>timedelta</codel> objektum további számításokhoz használható (például megszorozhatjuk 2-vel).</p>
+
+
+
+<br> 
+<br>
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+<script>
+function solution (id) {
+    var element = document.getElementById(id);
+    
+if (element.style.display === "none") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
+    }
+}
+</script>
+
+<p><strong>1. gyakorlat</strong></p>
+<p>Mi a kimenete a következő kódrészletnek?</p>
+
+<p><codep>from datetime import time
+
+t = time(14, 39)
+print(t.strftime("%H:%M:%S"))
+
+</codep></p>
+
+<button class="button tiny" onclick="solution('sol')">Ellenőrzés</button>
+
+<p id="sol" style="display: none;"><codep>14:53:00</codep>
+</p>
+
+
+<br><br>
+
+<p><strong>2. gyakorlat</strong></p>
+<p>Mi a kimenete a következő kódrészletnek?</p>
+
+<p><codep>from datetime import datetime
+
+dt1 = datetime(2020, 9, 29, 14, 41, 0)
+dt2 = datetime(2020, 9, 28, 14, 41, 0)
+
+print(dt1 - dt2)
+
+</codep></p>
+
+<button class="button tiny" onclick="solution('sol2')">Ellenőrzés</button>
+
+<p id="sol2" style="display: none;"><codep>1 day, 0:00:00</codep>
+</p>
+
+
+
+<br>
+<br>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

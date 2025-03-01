@@ -1,0 +1,64 @@
+<problem chapter='2' section='3' slide='1' problem='16' title='String methods'>
+
+<!--
+Update history:
+2020-09-23 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>
+# Demonstrating the swapcase() method:
+print("I know that I know nothing.".swapcase())
+
+print()
+
+# Demonstrating the title() method:
+print("I know that I know nothing. Part 1.".title())
+
+print()
+
+# Demonstrating the upper() method:
+print("I know that I know nothing. Part 2.".upper())
+
+</code>
+
+
+
+<h1>The <font face="Courier New">swapcase()</font> method</h1>
+
+<p>The <codel>swapcase()</codel> method <strong>makes a new string by swapping the cases of all letters within the source string</strong>: lower-case characters become upper-case, and vice versa.</p>
+
+<p>All other characters remain untouched.</p>
+
+<p>Look at the first example in the editor. Can you guess the output? It won't look good, but you must see it:</p>
+
+<codep>i KNOW THAT i KNOW NOTHING.</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+<h2>The <font face="Courier New">title()</font> method</h2>
+
+<p>The <codel>title()</codel> method performs a somewhat similar function – it <strong>changes every word's first letter to upper-case, turning all other ones to lower-case</strong>.</p>
+
+<p>Look at the second example in the editor. Can you guess its output? This is the result:</p>
+
+<codep>I Know That I Know Nothing. Part 1.</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+<h2>The <font face="Courier New">upper()</font> method</h2>
+
+<p>Last but not least, the <codel>upper()</codel> method <strong>makes a copy of the source string, replaces all lower-case letters with their upper-case counterparts</strong>, and returns the string as the result.</p>
+
+<p>Look at the third example in the editor. It outputs:</p>
+
+<codep>I KNOW THAT I KNOW NOTHING. PART 2.</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+<p>Hoooray! We've made it to the end of this section. Are you surprised with any of the string methods we've discussed so far? Take a couple of minutes to review them, and let's move on to the next part of the course where we'll show you what great things we can do with strings.</p>
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

@@ -1,0 +1,46 @@
+<problem chapter='4' section='5' slide='1' problem='9' title='A time modul'>
+
+<!--
+Update history:
+2020-03-30 Sebastian (first version)
+2020-10-11 Grzegorz (review, PEP-8 compliance check)
+-->
+
+<code>import time
+
+timestamp = 1572879180
+print(time.ctime(timestamp))
+
+</code>
+
+
+
+<h1>A <font face="Courier New">ctime()</font> függvény</h1>
+
+
+<p>A <codel>time</codel> modul biztosít egy <codel>ctime</codel> függvényt, amely az <b>1970. január 1. óta (Unix-idõ) másodpercben kifejezett idõt átalakítja egy karakterlánccá</b>.</p>
+
+<p>Emlékszel a <codel>time</codel> függvény eredményére? Ezt kell átadni a <codel>ctime</codel>-nak. Nézd meg a példát a szerkesztõablakban.</p>
+
+<p>Eredmény:</p>
+
+<codep>Mon Nov  4 14:53:00 2019</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+<p>A <codel>ctime</codel> függvény a kapott idõbélyeghez tartozó karakterláncot adja vissza. Példánkban az idõbélyeg 2019. november 4. 14:53:00.</p>
+
+<p>A <codel>ctime</codel> függvényt paraméter nélkül is meg lehet hívni. Ebben az esetben az aktuális idõt kapjuk vissza:</p>
+
+<p><codep class="syntax-color copy">import time
+print(time.ctime())
+</codep></p>
+
+
+<br>
+<br>
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

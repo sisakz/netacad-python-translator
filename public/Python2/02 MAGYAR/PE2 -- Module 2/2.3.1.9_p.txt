@@ -1,0 +1,39 @@
+<problem chapter='2' section='3' slide='1' problem='9' title='Karakterlánc tagfüggvények'>
+
+<!--
+Update history:
+2020-09-22 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>
+# Demonstrating the lower() method:
+print("SiGmA=60".lower())
+
+</code>
+
+
+
+<h1>A <font face="Courier New">lower()</font> tagfüggvény</h1>
+
+<p>A <codel>lower()</codel> tagfüggvény <strong>másolatot készít a forrás karakterláncról, kicseréli az összes nagybetűt a kisbetűs megfelelőjükre.</strong> Eredményként ezt a karakterláncot adja vissza. A forrás karakterlánc itt is érintetlen marad.</p>
+
+<p>Ha a karakterlánc nem tartalmaz nagybetűs karaktereket, a tagfüggvény az eredeti karakterláncot adja vissza.</p>
+
+<p>Megjegyzés: a <codel>lower()</codel> tagfüggvény nem fogad el paramétereket.</p>
+
+<p>A szerkesztőben lévő példa kimenetei:</p>
+
+<codep>sigma=60</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+
+<p>Mint mindig, végezd el saját kísérleteidet.</p>
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

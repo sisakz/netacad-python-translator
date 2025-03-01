@@ -1,0 +1,87 @@
+<problem chapter='4' section='3' slide='1' problem='16' title='LAB: Rendezett karakter gyakorisági hisztogram'>
+
+<!--
+Update history:
+2020-10-07 Grzegorz (review, PEP-8 compliance check)
+2021-07-07 Grzegorz (code corrections - important!)
+-->
+
+<code>
+</code>
+
+<span class="label" style="background-color:rgb(205, 168, 105);"><b>LABORGYAKORLAT</b></span>
+
+<br><br>
+
+
+<h2>Becsült idõ</h2>
+<p>15-30 perc</p>
+
+
+<h2>Nehézségi szint</h2>
+<p>Közepes</p>
+
+
+<h2>Elõfeltételek</h2>
+<p>4.3.1.15</p>
+
+
+<h2>Célok</h2>
+<ul>
+    <li>a tanuló fájlmûveletekkel (olvasás/írás) kapcsolatos készségeinek fejlesztése</li>
+    <li>rendezettség megváltoztatása a lambdák használatával</li>
+</ul>
+
+
+<h2>Forgatókönyv</h2>
+<p>Javítsunk a korábbi kódon. Nem rossz, de jobb is lehetne.</p>
+
+<p>A Te feladatod, hogy néhány apró módosítás segítségével a következõ eredményt érd el:</p>
+
+
+<ul>
+    <li>a kimeneti hisztogram a karakterek gyakorisága alapján legyen rendezve (a nagyobb értékû számlálót kell elõbb megjeleníteni)</li>
+    <li>a hisztogramot egy olyan fájlba kell küldeni, amelynek neve megegyezik a bemeneti fájl nevével, de a ".hist" utótaggal (amit az eredeti névhez kell hozzáfûzni).</li>
+</ul>
+
+<p>Feltételezve, hogy a bemeneti fájl ezt az egy sort tartalmazza:</p>
+<codep>cBabAa</codep>
+<p style="text-align: right;"><font size="-2"><b>samplefile.txt</b></font></p>
+
+<p>a várható kimenetnek a következõképpen kell kinéznie:</p>
+
+<codep>a -> 3
+b -> 2
+c -> 1</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+<p><strong>Tipp</strong>: Használd a <codel>lambda</codel> függvényt a rendezettség megváltoztatásához.</p>
+
+
+<sampleSolution>from os import strerror
+
+counters = {chr(ch): 0 for ch in range(ord('a'), ord('z') + 1)}
+file_name = input("Enter the name of the file to analyze: ")
+try:
+    file = open(file_name, "rt")
+    for line in file:
+        for char in line:
+            if char.isalpha():
+                counters[char.lower()] += 1
+    file.close()
+    file = open(file_name + '.hist', 'wt')
+    # Note: we've used a lambda to access the directory's elements and set reverse to get a valid order.
+    for char in sorted(counters.keys(), key=lambda x: counters[x], reverse=True):
+        c = counters[char]
+        if c > 0:
+            file.write(char + ' -> ' + str(c) + '\n')
+    file.close()
+except IOError as e:
+    print("I/O error occurred: ", strerror(e.errno))
+
+</sampleSolution>
+
+<studyMode>false</studyMode>
+<labMode>true</labMode>
+
+</problem>

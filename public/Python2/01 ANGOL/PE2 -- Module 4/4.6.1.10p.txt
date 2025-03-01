@@ -1,0 +1,38 @@
+<problem chapter='4' section='6' slide='1' problem='10' title='The calendar module'>
+
+<!--
+Update history:
+2020-03-30 Sebastian (first version)
+2020-10-13 Grzegorz (file creation, review, PEP-8 compliance check)
+-->
+
+<code>import calendar  
+
+c = calendar.Calendar()
+
+for date in c.itermonthdates(2019, 11):
+    print(date, end=" ")
+
+</code>
+
+<h1>The <font face="Courier New">itermonthdates()</font> method</h1>
+
+<p>The <codel>Calendar</codel> class has several methods that return an iterator. One of them is the <codel>itermonthdates</codel> method, which requires specifying the year and month.</p>
+
+<p>As a result, all days in the specified month and year are returned, as well as all days before the beginning of the month or the end of the month that are necessary to get a complete week.</p>
+
+<p>Each day is represented by a <codel>datetime.date</codel> object. Take a look at the example in the editor.</p>
+
+<p>The code displays all days in November 2019. Because the first day of November 2019 was a Friday, the following days are also returned to get the complete week: 10/28/2019 (Monday) 10/29/2019 (Tuesday) 10/30/2019 (Wednesday) 10/31/2019 (Thursday).</p>
+
+<p>The last day of November 2019 was a Saturday, so in order to keep the complete week, one more day is returned 12/01/2019 (Friday).</p>
+
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

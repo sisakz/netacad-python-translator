@@ -1,0 +1,56 @@
+<problem chapter='1' section='1' slide='1' problem='0' title='Python alapok 2 - 1. modul'>
+
+<!--
+Update history:
+2020-08-28 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-4 columns">
+
+<br>
+
+<h1>Python Alapok 2:
+<br>1. modul</h1>
+
+<p><strong>Modulok, csomagok és PIP</strong></p>
+
+<p>Ebben a modulban a következő témakörökkel foglalkozunk:</p>
+
+<ul>
+<li>Python modulok importálása és használata;</li>
+
+<li>a Python szabványos könyvtármoduljai közül néhánynak a használata;</li>
+
+<li>Python csomagok összeállítása és használata;</li>
+
+<li>pip (pip installs packages) és alkalmazása a PyPI-ből származó, használatra kész csomagok telepítésére és eltávolítására.</li>
+</ul>
+
+<br>
+
+
+</div>
+
+
+
+<div class="small-12 large-8 columns">
+
+<br>
+
+<center><img src="/uploads/media/default/0001/02/bd837cbf9566319713e43ba5abe449373a5c7f2b.png" alt="Part 2 Module 1 Title Page" width="70%"></center>
+
+<br>
+
+
+</div>
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

@@ -1,0 +1,230 @@
+<problem chapter='4' section='1' slide='1' problem='15' title='SZAKASZ ÖSSZEFOGLALÁS'>
+
+<!--
+Update history:
+2020-09-08 Slawek (first version)
+2020-10-07 Grzegorz (review, lambda note added)
+2021-07-07 Grzegorz (corrections)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+    <h1>A legfontosabb tudnivalók</h1>
+
+<br>
+
+
+<p>1. Az <b>iterator</b> egy olyan osztály objektuma, amely legalább <b>két</b> metódust biztosít (a konstruktoron kívül):</p>
+<ul>
+    <li>Az <codel>__iter__()</codel> egyszer kerül meghívásra az iterátor létrehozásakor, és <b>magát</b> az iterátor objektumát adja vissza;</li>
+    <li>Amikor a <codel>__next__()</codel> meghívásra kerül, visszaadja <b>az iteráció következő értékét</b>, illetve a <codel>StopIteration</codel> kivételt, amikor az iteráció <b>véget ér</b>.</li>
+</ul>
+<br>
+
+<p>2. A <codel>yield</codel> utasítás csak függvényeken belül használható. A <codel>yield</codel> utasítás felfüggeszti a függvény végrehajtását, és a függvény a yield argumentumát adja vissza eredményként. Egy ilyen függvényt nem lehet szabályos módon meghívni - az egyetlen célja, hogy <b>generátorként</b> használják (azaz olyan kontextusban, amely értékek sorozatát igényli, mint például egy <codel>for</codel> ciklus.)</p> 
+<br>
+
+<p>3. A <b>feltételes kifejezés</b> az <codel>if-else</codel> operátor segítségével felépített kifejezés. Például:</p>
+<codep class="syntax-color copy">print(True if 0 >= 0 else False)
+</codep>
+<br>
+<p>kimenete <codel>True</codel>.</p>
+<br>
+
+<p>4. A <b>listaképzés generátorrá</b> válik, ha <b>zárójelben</b> használjuk (szögletes zárójelben használva szabályos listát eredményez). Például:</p>
+<codep class="syntax-color copy">for x in (el * 2 for el in range(5)):
+	print(x)</codep>
+<br>
+<p>kimenete <codel>02468</codel>.</p>
+<br>
+
+<p>4. A <b>lambda függvény</b> egy eszköz <b>névtelen függvények</b> létrehozására. Például:</p>
+<codep class="syntax-color copy">def foo(x, f):
+    return f(x)
+
+print(foo(9, lambda x: x ** 0.5))
+</codep>
+<br><p>kimenete <codel>3.0</codel>.</p>
+<br>
+
+<p>5. A <codel>map(fun, list)</codel> ) függvény létrehozza a saját <codel>list</codel> argumentumának <b>másolatát</b>, és a <codel>fun</codel>függvényt alkalmazza annak minden elemére, visszaadva egy <b>generátort</b>, amely elemenként adja meg az új lista tartalmát. Például:</p>
+<codep class="syntax-color copy">short_list = ['mython', 'python', 'fell', 'on', 'the', 'floor']
+new_list = list(map(lambda s: s.title(), short_list))
+print(new_list)
+</codep>
+<br>
+<p>kimenete <codel>['Mython', 'Python', 'Fell', 'On', 'The', 'Floor']</codel>.</p>
+<br>
+
+<p>6. A <codel>filter(fun, list)</codel> függvény létrehoz egy <b>másolatot</b> azokról a listaelemekről, amelyek hatására a <codel>fun</codel> függvény <codel>True</codel> értéket ad vissza. A függvény eredménye egy <b>generátor</b>, amely elemenként adja vissza az új lista tartalmát. Például:</p>
+<codep class="syntax-color copy">short_list = [1, "Python", -1, "Monty"]
+new_list = list(filter(lambda s: isinstance(s, str), short_list))
+print(new_list)
+</codep>
+<br>
+<p>kimenete <codel>['Python', 'Monty']</codel>.</p>
+<br>
+
+<p>7. A closure olyan technika, amely lehetővé teszi az <b>értékek tárolását </b> annak ellenére, hogy az a <b>kontextus</b>, amelyben létrehozták őket, <b>már nem létezik</b>. Például:</p>
+<codep class="syntax-color copy">def tag(tg):
+    tg2 = tg
+    tg2 = tg[0] + '/' + tg[1:]
+
+    def inner(str):
+        return tg + str + tg2
+    return inner
+
+
+b_tag = tag('&lt;b&gt;')
+print(b_tag('Monty Python'))
+</codep>
+<br>
+<p>kimenete <codel>&lt;b&gt;Monty Python&lt;/b&gt;</codel></p>
+
+<br>
+
+</div>
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+<script>
+function solution (id) {
+    var element = document.getElementById(id);
+    
+if (element.style.display === "none") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
+    }
+}
+</script>
+
+<p><strong>1. gyakorlat</strong></p>
+
+<p>Mi a kimenete a következő kódnak?</p>
+<codep>class Vowels:
+    def __init__(self):
+        self.vow = "aeiouy "  # Yes, we know that y is not always considered a vowel.
+        self.pos = 0
+
+    def __iter__(self):
+        return self
+
+    def __next__(self):
+        if self.pos == len(self.vow):
+            raise StopIteration
+        self.pos += 1
+        return self.vow[self.pos - 1]
+
+
+vowels = Vowels()
+for v in vowels:
+    print(v, end=' ')
+
+</codep>
+<br>
+
+<button class="button tiny" onclick="solution('sol')">Ellenőrzés</button>
+
+<p id="sol" style="display: none;">
+<codep>a e i o u y</codep></p>
+
+
+
+<br><br>
+
+
+
+<p><strong>2. gyakorlat</strong></p>
+<p>Írj egy <b>lambda</b> függvényt, amely a paraméterül kapott egész szám legalacsonyabb helyiértékű bitjét egyre állítja, és alkalmazd a <codel>map()</codel> függvény segítségével, hogy a konzolon megjelenjen az <codel>1 3 3 5</codel> karakterlánc.</p>
+<codep>any_list = [1, 2, 3, 4]
+even_list = # Complete the line here.
+print(even_list)
+
+</codep>
+<br>
+
+
+<button class="button tiny" onclick="solution('sol2')">Ellenőrzés</button>
+<p id="sol2" style="display: none;"><codep>list(map(lambda n: n | 1, any_list))
+
+</codep>
+</p>
+
+
+<br><br>
+
+
+
+
+<p><strong>3. gyakorlat</strong></p>
+<p>
+    Mi a következő kód várható kimenete?</p>
+
+    <codep>
+        def replace_spaces(replacement='*'):
+        def new_replacement(text):
+        return text.replace(' ', replacement)
+        return new_replacement
+
+
+        stars = replace_spaces()
+        print(stars("And Now for Something Completely Different"))
+
+    </codep>
+    <br>
+
+    <button class="button tiny" onclick="solution('sol3')">Ellenőrzés</button>
+
+<p id="sol3" style="display: none;">
+<codep>And*Now*for*Something*Completely*Different</codep>
+</p>
+
+
+
+
+<br>
+<hr>
+
+
+
+<p><span class="label" style="background-color:rgb(205, 168, 105);"><b>Megjegyzés</b></span></p>
+
+<p>A <a href="https://www.python.org/dev/peps/pep-0008/#programming-recommendations" target="_blank">PEP 8</a>, a Python kód stílus útmutatója azt javasolja, hogy a <b>lambdákat ne rendeljük változókhoz, hanem inkább függvényként definiáljuk őket</b>.</p>
+
+<p>Ez azt jelenti, hogy jobb, ha <codel>def</codel> utasítást használunk, és elkerüljük az olyan értékadási utasítást, amely egy lambda-kifejezést egy azonosítóhoz köt. Például:</p>
+
+<p><codep class="syntax-color"># Recommended:
+def f(x): return 3*x
+
+
+# Not recommended:
+f = lambda x: 3*x
+</codep></p>
+
+<p>A lambda azonosítóhoz kötésével tulajdonképpen ugyanazt az eredményt lehet elérni, mint a <codel>def</codel> utasítással. A <codel>def</codel> utasítások használata ugyanakkor több kódsort eredményez.</p>
+
+<p>Fontos tudnod, hogy a valóság gyakran szereti megírni a saját forgatókönyveit, amelyek nem feltétlenül tartják be a konvenciókat vagy a hivatalos ajánlásokat. Az, hogy követed ezeket vagy sem, sok mindentől függ: a preferenciáidtól, más elfogadott konvencióktól, a vállalat belső irányelveitől, a meglévő kóddal való kompatibilitástól, stb. Ezt hasznos észben tartani.</p>
+
+<br>
+
+
+</div>
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

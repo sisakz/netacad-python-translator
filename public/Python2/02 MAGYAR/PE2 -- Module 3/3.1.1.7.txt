@@ -1,0 +1,113 @@
+<problem chapter='3' section='1' slide='1' problem='7' title='Objektumorientált programozás'>
+
+<!--
+Update history:
+2020-09-30 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h1>Az első osztályod</h1>
+
+
+<p>Az objektumprogramozás az <strong>osztályok definiálásának és bővítésének művészete</strong>. Az osztály a valóság egy nagyon speciális részének modellje, amely a való világban található tulajdonságokat és tevékenységeket tükrözi.</p>
+
+<p>Az elején meghatározott osztályok túl általánosak és pontatlanok ahhoz, hogy a lehető legtöbb valós esetet lefedjék.</p>
+
+<p>Nincs akadálya annak, hogy új, pontosabb alosztályokat definiáljunk. Ezek mindent az ősosztályuktól örökölnek, így az azok létrehozásába fektetett munka nem vész kárba.</p>
+
+<p>Az új osztály új tulajdonságokkal és új tevékenységekkel bővülhet, ezért hasznosabb lehet bizonyos alkalmazásokban. Nyilvánvalóan ősosztályként használható tetszőleges számú újonnan létrehozott alosztály számára is.</p>
+
+<p>A folyamatnak nem kell, hogy vége legyen. Annyi osztályt hozhatunk létre, amennyire csak szükségünk van.</p>
+
+ 
+
+<p>A definiált osztályhoz nem feltétlenül tartozik objektum: <strong>egy osztály létezése nem jelenti azt, hogy automatikusan létrejön bármelyik neki megfelelő objektum</strong>. Maga az osztály nem képes objektumot létrehozni - azt nekünk kell létrehoznunk, szerencsére a Python ezt lehetővé teszi.</p>
+
+<p>Itt az ideje definiálni a legegyszerűbb osztályt és létrehozni egy objektumot. Nézzük meg az alábbi példát:</p>
+
+<codep class="syntax-color">class TheSimplestClass:
+    pass
+</codep>
+<br>
+
+<p>Itt definiáltunk egy osztályt. Az osztály meglehetősen szegényes: sem tulajdonságai, sem tevékenységei nincsenek. Valójában <strong>üres</strong>, de ez most nem számít. Minél egyszerűbb az osztály, annál jobban megfelel a céljainknak.</p>
+
+<p><strong>A definíció a <codel>class</codel> kulcsszóval kezdődik</strong>. A kulcsszót egy <strong>azonosító</strong> követi, <strong>amely az osztály nevét adja </strong> (megjegyzés: ne keverjük össze az objektum nevével - ez két különböző dolog).</p>
+
+<p>Ezután egy <strong>kettőspontot</strong> (<codel>:</codel>), adunk hozzá, mivel az osztályok, akárcsak a függvények, saját, egymásba ágyazott blokkot alkotnak. A blokkban lévő tartalom határozza meg az osztály összes tulajdonságát és tevékenységét.</p>
+
+<p>A <codel>pass</codel> kulcsszó az osztályt semmivel tölti ki. Nem tartalmaz semmilyen metódust vagy tulajdonságot.</p>
+ 
+
+
+
+<br>
+<br> 
+
+
+
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+
+<h2>Az első objektumod</h2>
+
+
+<p>Az újonnan definiált osztály olyan eszközzé válik, amely képes új objektumok létrehozására. Az eszközt explicit módon, igény szerint kell használni.</p>
+
+<p>Képzeljük el, hogy egy (pontosan egy) objektumot szeretnénk létrehozni a <codel>TheSimplestClass</codel> osztályból.</p>
+
+<p>Ehhez egy változót kell hozzárendelnünk az adott osztály újonnan létrehozott objektumának tárolására, és ezzel egyidejűleg egy objektumot is létrehozunk.</p>
+
+<p>Ezt a következő módon tehetjük meg:</p>
+
+<codep class="syntax-color">my_first_object = TheSimplestClass()
+</codep>
+<br>
+
+ 
+
+<p>Megjegyzés:</p>
+
+<ul>
+    <li>az osztály neve úgy viselkedik, mintha egy függvény lenne - látod ezt? Hamarosan visszatérünk rá;</li>
+    <li>az újonnan létrehozott objektum rendelkezik mindennel, amit az osztály tartalmaz. Mivel ez az osztály teljesen üres, az objektum is üres.</li>
+</ul>
+ 
+
+<p>A kiválasztott osztály objektumának létrehozását <strong>példányosításnak</strong> is nevezik (mivel az objektum az <strong>osztály példányává (instance)</strong> válik).</p>
+
+<p>Egy rövid időre hagyjuk az osztályokat, mert most a <i>vermekről</i> fogunk néhány szót említeni. Tudjuk, hogy az osztályok és objektumok fogalma még nem teljesen világos. Ne aggódjatok, hamarosan mindent elmagyarázunk.</p>
+
+
+<br>
+<br> 
+
+
+
+
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

@@ -1,0 +1,134 @@
+<problem chapter='4' section='1' slide='1' problem='2' title='Generators and closures'>
+
+<!--
+Update history:
+2020-10-05 Grzegorz (review, PEP-8 compliance check)
+-->
+
+<code>class Fib:
+    def __init__(self, nn):
+        print("__init__")
+        self.__n = nn
+        self.__i = 0
+        self.__p1 = self.__p2 = 1
+
+    def __iter__(self):
+        print("__iter__")
+        return self
+
+    def __next__(self):
+        print("__next__")		
+        self.__i += 1
+        if self.__i > self.__n:
+            raise StopIteration
+        if self.__i in [1, 2]:
+            return 1
+        ret = self.__p1 + self.__p2
+        self.__p1, self.__p2 = self.__p2, ret
+        return ret
+
+
+for i in Fib(10):
+    print(i)
+
+</code>
+
+
+
+<h1>Generators – where to find them: continued</h1>
+
+
+<p>The <strong>iterator protocol is a way in which an object should behave to conform to the rules imposed by the context of the <codel>for</codel> and <codel>in</codel> statements</strong>. An object conforming to the iterator protocol is called an <strong>iterator</strong>.</p>
+
+<p>An iterator must provide two methods:</p>
+
+<ul>
+<li><codel>__iter__()</codel> which should <strong>return the object itself</strong> and which is invoked once (it's needed for Python to successfully start the iteration)</li>
+
+<li><codel>__next__()</codel> which is intended to <strong>return the next value</strong> (first, second, and so on) of the desired series – it will be invoked by the <codel>for</codel>/<codel>in</codel> statements in order to pass through the next iteration; if there are no more values to provide, the method should <strong>raise the <codel>StopIteration</codel> exception</strong>.</li>
+</ul>
+
+ 
+<p>Does it sound strange? Not at all. Look at the example in the editor.</p> 
+
+ 
+<p>We've built a class able to iterate through the first <codel>n</codel> values (where <codel>n</codel> is a constructor parameter) of the Fibonacci numbers.</p>
+
+<p>Let us remind you – the Fibonacci numbers (Fib<sub>i</sub>) are defined as follows:
+
+<p>Fib<sub>1</sub> = 1
+<br>Fib<sub>2</sub> = 1
+<br>Fib<sub>i</sub> = Fib<sub>i-1</sub> + Fib<sub>i-2</sub></p>
+
+ 
+<p>In other words:</p>
+
+<ul>
+<li>the first two Fibonacci numbers are equal to 1;</li>
+<li>any other Fibonacci number is the sum of the two previous ones (e.g., Fib<sub>3</sub> = 2, Fib<sub>4</sub> = 3, Fib<sub>5</sub> = 5, and so on)</li>
+</ul>
+
+
+
+<p>Let's dive into the code:</p>
+
+<ul>
+<li>lines 2 through 6: the class constructor prints a message (we'll use this to trace the class's behavior), prepares some variables (<codel>__n</codel> to store the series limit, <codel>__i</codel> to track the current Fibonacci number to provide, and <codel>__p1</codel> along with <codel>__p2</codel> to save the two previous numbers);</li>
+<br>
+
+<li>lines 8 through 10: the <codel>__iter__</codel> method is obliged to return the iterator object itself; its purpose may be a bit ambiguous here, but there's no mystery; try to imagine an object which is not an iterator (e.g., it's a collection of some entities), but one of its components is an iterator able to scan the collection; the <codel>__iter__</codel> method should <strong>extract the iterator and entrust it with the execution of the iteration protocol</strong>; as you can see, the method starts its action by printing a message;</li>
+<br>
+
+<li>lines 12 through 21: the <codel>__next__</codel> method is responsible for creating the sequence; it's somewhat wordy, but this should make it more readable; first, it prints a message, then it updates the number of desired values, and if it reaches the end of the sequence, the method breaks the iteration by raising the StopIteration exception; the rest of the code is simple, and it precisely reflects the definition we showed you earlier;</li>
+<br>
+
+<li>lines 24 and 25 make use of the iterator.</li>
+<br>
+</ul>
+
+ 
+<p>The code produces the following output:</p>
+
+<codep>__init__
+__iter__
+__next__
+1
+__next__
+1
+__next__
+2
+__next__
+3
+__next__
+5
+__next__
+8
+__next__
+13
+__next__
+21
+__next__
+34
+__next__
+55
+__next__</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+
+<p>Look:</p>
+
+<ul>
+<li>the iterator object is instantiated first;</li>
+<li>next, Python invokes the <codel>__iter__</codel> method to get access to the actual iterator;</li>
+<li>the <codel>__next__</codel> method is invoked eleven times – the first ten times produce useful values, while the eleventh terminates the iteration.</li>
+</ul>
+
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

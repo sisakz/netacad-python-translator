@@ -1,0 +1,65 @@
+<problem chapter='2' section='2' slide='1' problem='9' title='The nature of strings in Python'>
+
+<!--
+Update history:
+2020-09-22 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>
+alphabet = "abcdefghijklmnopqrstuvwxyz"
+
+# Write test code here.
+
+</code>
+
+
+
+<h1>Python strings are immutable</h1>
+
+<p>We've also told you that Python's <strong>strings are immutable</strong>. This is a very important feature. What does it mean?</p>
+
+<p>This primarily means that the similarity of strings and lists is limited. Not everything you can do with a list may be done with a string.</p>
+
+<p>The first important difference <strong>doesn't allow you to use the <codel>del</codel> instruction to remove anything from a string</strong>.</p>
+
+<p>The example here won't work:</p>
+
+<codep><font style="color:red;">alphabet = "abcdefghijklmnopqrstuvwxyz"
+del alphabet[0]</font>
+
+</codep>
+<br>
+ 
+
+<p>The only thing you can do with <codel>del</codel> and a string is to <strong>remove the string as a whole</strong>. Try to do it.</p> 
+
+<br>
+
+<p>Python strings <strong>don't have the <codel>append()</codel> method</strong> – you cannot expand them in any way.</p>
+
+<p>The example below is erroneous:</p>
+
+<codep><font style="color:red;">alphabet = "abcdefghijklmnopqrstuvwxyz"
+alphabet.append("A")</font>
+
+</codep>
+<br>
+
+<p> with the absence of the <codel>append()</codel> method, <strong>the <codel>insert()</codel> method is illegal</strong>, too:</p>
+
+
+<codep><font style="color:red;">alphabet = "abcdefghijklmnopqrstuvwxyz"
+alphabet.insert(0, "A")</font>
+
+</codep>
+<br>
+
+
+
+
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

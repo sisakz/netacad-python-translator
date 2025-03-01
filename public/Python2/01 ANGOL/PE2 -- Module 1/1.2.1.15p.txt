@@ -1,0 +1,53 @@
+<problem chapter='1' section='2' slide='1' problem='15' title='Useful modules | platform'>
+
+<!--
+Update history:
+2020-08-31 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>from platform import python_implementation, python_version_tuple
+
+print(python_implementation())
+
+for atr in python_version_tuple():
+    print(atr)
+
+</code>
+
+<h1>Selected functions from the <font face="Courier New">platform</font> module: continued</h1>
+
+<p><b>The <font face="Courier New">python_implementation</font> and the <font face="Courier New">python_version_tuple</font> functions</b></p>
+
+<p>If you need to know what version of Python is running your code, you can check it using a number of dedicated functions – here are two of them:</p>
+
+<ul>
+<li><codel>python_implementation()</codel> &rarr; returns a string denoting the Python implementation (expect <codel>CPython</codel> here, unless you decide to use any non-canonical Python branch)</li>
+<br>
+<li><codel>python_version_tuple()</codel> &rarr; returns a three-element tuple filled with:
+    <ul><li>the <strong>major</strong> part of Python's version;</li>
+    <li>the <strong>minor</strong> part;</li>
+    <li>the <strong>patch</strong> level number.</li></ul></li>
+</ul>
+ 
+
+<p>Our example program produced the following output:</p>
+
+<codep>CPython
+3
+7
+7</codep>
+<p style="text-align: right;"><font size="-2"><b>sample output</b></font></p>
+ 
+
+<p>It's very likely that your version of Python will be different.</p>
+
+
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

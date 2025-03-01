@@ -1,0 +1,47 @@
+<problem chapter='1' section='2' slide='1' problem='13' title='Useful modules | platform'>
+
+<!--
+Update history:
+2020-08-31 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>from platform import system
+
+print(system())
+
+</code>
+
+<h1>Selected functions from the <font face="Courier New">platform</font> module: continued</h1>
+
+<p><b>The <font face="Courier New">system</font> function</b></p>
+
+<p>A function named <codel>system()</codel> returns the generic OS name as a string.</p>
+
+<p>Our example platforms presented themselves like this:</p>
+
+<p><strong>Intel x86 + Windows &reg; Vista (32 bit)</strong>:</p>
+
+<codep>Windows</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+
+<p><strong>Intel x86 + Gentoo Linux (64 bit)</strong>:</p>
+
+<codep>Linux</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+
+<p><strong>Raspberry PI2 + Raspbian Linux (32 bit)</strong>:</p>
+
+<codep>Linux</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

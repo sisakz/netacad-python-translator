@@ -1,0 +1,81 @@
+<problem chapter='3' section='1' slide='1' problem='4' title='Objektumorientált programozás'>
+
+<!--
+Update history:
+2020-09-30 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h1>Osztályhierarchiák (folytatás)</h1>
+
+<p>Egy másik példa erre az állatok rendszertani hierarchiája.</p>
+
+<p>Azt mondhatjuk, hogy minden <i>állat</i> (a legfelső szintű osztályunk) öt alosztályra osztható:</p>
+
+<ul>
+<li>emlősök;</li>
+<li>hüllők;</li>
+<li>madarak;</li>
+<li>halak;</li>
+<li>kétéltűek.</li>
+</ul>
+
+
+<p>Az elsőt vesszük további elemzésre.</p> 
+
+<p>A következő alosztályokat gondoltuk:</p>
+
+<ul>
+<li>vadon élő emlősök;</li>
+<li>háziasított emlősök.</li>
+</ul>
+
+
+
+
+
+
+
+
+<br> 
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+
+
+<img class="lightbox" src="/uploads/media/default/0001/01/ba793dabd8d611439ef7e513755c5f090bb8f222.png" alt="The concept of class hierarchies: animals" width="90%">
+
+<br><br>
+
+    <p>Próbáld meg a hierarchiát tetszés szerint bővíteni, és találd meg a megfelelő helyet az emberek számára!</p>
+
+
+<br>
+<br>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

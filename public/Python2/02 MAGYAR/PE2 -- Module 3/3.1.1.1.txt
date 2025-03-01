@@ -1,0 +1,66 @@
+<problem chapter='3' section='1' slide='1' problem='1' title='Objektumorientált programozás'>
+
+<!--
+Update history:
+2020-09-30	Grzegorz (review, PEP-8 compliance check, update)
+2021-07-05	Grzegorz (corrections)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+    <h1>Az objektumorientált megközelítés alapfogalmai</h1>
+
+    <p>Lépjünk ki egy kicsit a számítógépes programozás és általában a számítógépek világából, beszéljünk az objektumprogramozás kérdéseirõl!</p>
+
+    <p>Az eddig használt programok és technikák szinte mindegyike a procedurális programozási stílushoz tartozott. Igaz, használtunk korábban néhány beépített objektumot, de amikor ezekre hivatkoztunk, csak az abszolút minimumot említettük meg az objektumokkal kapcsolatban.</p>
+
+    <p>Az informatikában uralkodó szoftverfejlesztési megközelítés évtizedekig a procedurális programozási stílus volt, és még ma is elõszeretettel alkalmazzák. Sõt, a jövõben sem fog eltûnni, mivel nagyon jól mûködik bizonyos típusú projekteknél (általában nem nagyon összetett és nem nagy projekteknél, de ez alól azért rengeteg kivétel van).</p>
+
+    <p>Az objektumos megközelítés meglehetõsen fiatal (sokkal fiatalabb, mint a procedurális megközelítés), különösen akkor hasznos, ha nagy és összetett projekteknél alkalmazzák, amelyeket viszonylag nagy, több fejlesztõbõl álló csapatok végeznek.</p>
+
+    <p>A projekt struktúrájának ilyen jellegû megértése számos fontos feladatot megkönnyít, például a projekt kis, független részekre való felosztását és a különbözõ projektelemek független fejlesztését.</p>
+
+    <p><strong>A Python egy univerzális eszköz mind az objektum-, mind a procedurális programozáshoz</strong>. Mindkét megközelítéssel sikeresen használható.</p>
+
+
+
+<br> 
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+<p>Rengeteg hasznos alkalmazást készíthetünk akkor is, ha semmit sem tudunk az osztályokról és objektumokról, de szem elõtt kell tartanunk, hogy egyes problémák (ilyen pl. a grafikus felhasználói felület kezelése) megkövetelik az objektumorientált megközelítést.</p>
+
+<p>Szerencsére az objektumprogramozás viszonylag egyszerû.</p>
+<br>
+
+<center><img src="/uploads/media/default/0001/01/a5f01e4d5011f349a3d53504b67d450a2e42f548.jpeg" alt="The concept of object-oriented programming" width="65%"></center>
+
+
+<br>
+<br>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

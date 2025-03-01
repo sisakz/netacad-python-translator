@@ -1,0 +1,72 @@
+<problem chapter='2' section='3' slide='1' problem='2' title='Karakterlánc tagfüggvények'>
+
+<!--
+Update history:
+2020-09-22 Grzegorz (review, PEP-8 compliance check, update)
+2020-10-23 Grzegorz (mark line added to code: '[SPACE]')
+
+-->
+
+<code># Demonstrating the center() method:
+print('[' + 'alpha'.center(10) + ']')
+
+</code>
+
+
+
+<h1>A <font face="Courier New">center()</font> tagfüggvény</h1>
+
+<p>A <codel>center()</codel> tagfüggvény egyparaméteres változata <strong>másolatot készít az eredeti karakterláncról, és megpróbálja azt egy megadott szélességű mezőben középre helyezni</strong>.</p>
+
+<p>A központozás valójában úgy történik, hogy a <strong>karakterlánc előtt és után szóközöket ad hozzá</strong>.</p>
+
+<p>Ne várj ettől a módszertől nagyon kifinomult képességeket, meglehetősen egyszerű.</p>
+
+
+<p>A szerkesztőben lévő példa zárójeleket használ, hogy egyértelműen megmutassa, hol kezdődik és hol végződik a központosított karakterlánc.</p>
+
+<p>A kimenet a következőképpen néz ki:</p>
+
+<codep>[  alpha   ]</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+
+
+<p>Ha a célmező hossza túl kicsi ahhoz, hogy a karakterlánc beleférjen, az eredeti karakterláncot kapod vissza.</p>
+
+<p>A <codel>center()</codel> tagfüggvényt több példában is láthatod itt:</p>
+
+<codep class="syntax-color copy">print('[' + 'Beta'.center(2) + ']')
+print('[' + 'Beta'.center(4) + ']')
+print('[' + 'Beta'.center(6) + ']')
+</codep>
+
+<br>
+
+<p>Futtasd le a fenti kódrészleteket, és ellenőrizd, milyen kimenetet eredményeznek.</p>
+
+<br>
+
+<p><strong>A <codel>center()</codel> kétparaméteres változata a második argumentum karakterét használja szóköz helyett</strong>. Elemezd az alábbi példát:</p>
+
+<codep class="syntax-color copy">print('[' + 'gamma'.center<mark class="mark-background">(20,'[SPACE]''*')</mark> + ']')
+</codep>
+<br>
+
+<p>Így a kimenet most ilyen:</p>
+
+<codep>[*******gamma********]</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+<p>Végezz további kísérleteket.</p>
+
+
+<br>
+<br>
+
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

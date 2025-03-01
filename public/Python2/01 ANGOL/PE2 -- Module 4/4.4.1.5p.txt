@@ -1,0 +1,53 @@
+<problem chapter='4' section='4' slide='1' problem='5' title='The os module'>
+
+<!--
+Update history:
+2020-03-30 Sebastian (first version)
+2020-10-08 Grzegorz (review, PEP-8 compliance check)
+-->
+
+<code>import os
+
+os.makedirs("my_first_directory/my_second_directory")
+os.chdir("my_first_directory")
+print(os.getcwd())
+os.chdir("my_second_directory")
+print(os.getcwd())
+
+</code>
+
+
+
+<h1>Where am I now?</h1>
+
+
+<p>You already know how to create directories and how to move between them. Sometimes, when you have a really large directory structure that you navigate, you may not know which directory you're currently working in.</p>
+
+<br>
+<center><img src="/uploads/media/default/0001/02/83ab8d8cfb449367a7bb349a63730cb219770c2e.png" alt="Lost programmer" width="70%"></center>
+<br><br>
+
+<p>As you’ve probably guessed, the <i>os</i> module provides a function that returns information about the current working directory. It's called <codel>getcwd</codel>. Look at the code in the editor to see how to use it in practice.</p>
+
+<p>Result:</p>
+
+<codep>.../my_first_directory
+.../my_first_directory/my_second_directory</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+
+<p>In the example, we create the <i>my_first_directory</i> directory, and the <i>my_second_directory</i> directory inside it. In the next step, we change the current working directory to the <i>my_first_directory</i> directory, and then display the current working directory (first line of the result).</p>
+
+<p>Next, we go to the <i>my_second_directory</i> directory and again display the current working directory (second line of the result). As you can see, the <i>getcwd</i> function returns the absolute path to the directories.</p>
+
+<p><b>NOTE:</b> On Unix-like systems, the equivalent of the <i>getcwd</i> function is the <i>pwd</i> command, which prints the name of the current working directory.</p>
+
+
+<br>
+<br>
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

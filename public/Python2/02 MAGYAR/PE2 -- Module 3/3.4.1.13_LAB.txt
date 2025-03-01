@@ -1,0 +1,135 @@
+<problem chapter='3' section='4' slide='1' problem='13' title='LAB: A hét napjai'>
+
+<!--
+Update history:
+2020-01-01 Syslaw (file created)
+2020-11-16 Grzegorz (review, PEP-8 compliance check)
+2021-03-30 Grzegorz (Correction: day Thu changed to Tue: <p><font face="courier">Mon Tue Wed Thu Fri Sat Sun</font></p>)
+-->
+
+<code>class WeekDayError(Exception):
+    pass
+	
+
+class Weeker:
+    #
+    # Write code here.
+    #
+
+    def __init__(self, day):
+        #
+        # Write code here.
+        #
+
+    def __str__(self):
+        #
+        # Write code here.
+        #
+
+    def add_days(self, n):
+        #
+        # Write code here.
+        #
+
+    def subtract_days(self, n):
+        #
+        # Write code here.
+        #
+
+
+try:
+    weekday = Weeker('Mon')
+    print(weekday)
+    weekday.add_days(15)
+    print(weekday)
+    weekday.subtract_days(23)
+    print(weekday)
+    weekday = Weeker('Monday')
+except WeekDayError:
+    print("Sorry, I can't serve your request.")
+
+</code>
+
+<span class="label" style="background-color:rgb(205, 168, 105);"><b>LABORGYAKORLAT</b></span>
+
+<br><br>
+
+<h2>Becsült idő</h2>
+<p>30-60 perc</p>
+
+<h2>Nehézségi szint</h2>
+<p>Könnyű/Közepes</p>
+
+<h2>Célok</h2>
+<ul>
+    <li>javítani a tanuló készségeit az osztályok létrehozásában;</li>
+    <li>példányváltozók definiálása és használata;</li>
+    <li>metódusok meghatározása és használata.</li>
+</ul>
+
+<h2>Forgatókönyv</h2>
+<p>A feladatod egy <font face="courier">Weeker</font> nevű osztály implementálása. Igen, a szemed nem csal - ez a név onnan ered, hogy az osztály objektumai képesek lesznek a hét napjait tárolni és módosítani.</p>
+
+<p>Az osztály konstruktora egy argumentumot kezel - egy karakterláncot. A karakterlánc a hét napjának nevét jelöli, és csak a következő értékek közül kerülhet ki:</p>
+<p><font face="courier">Mon Tue Wed Thu Fri Sat Sun</font></p>
+
+<p>Ha a konstruktort egy olyan argumentummal hívjuk meg, amely nem ebbe a halmazba tartozik, akkor a <font face="courier">WeekDayError</font> kivételt kell kiváltania (definiáld magad; ne aggódj, hamarosan beszélni fogunk a kivételek természetéről). Az osztálynak a következő lehetőségeket kell biztosítania:</p>
+<ul>
+    <li>az osztály objektumainak "kiírhatónak" kell lenniük, azaz képesnek kell lenniük arra, hogy implicit módon a konstruktor argumentumaival megegyező formájú karakterláncokká alakítsák magukat;</li>
+    <li>az osztálynak rendelkeznie kell az <codel>add_days(n)</codel> és <codel>subtract_days(n)</codel> nevű egyparaméteres metódusokkal, ahol <b>n</b> egy egész szám, és az objektumban tárolt hét napját a dátumnak a megadott számú nappal történő előre vagy hátrafelé történő változását tükröző módon frissíti.</li>
+    <li>az objektum minden tulajdonságának privátnak kell lennie;</li>
+</ul>
+
+<p>Egészítsd ki a szerkesztőben az általunk megadott sablont, futtasd le a kódodat, és ellenőrizd, hogy a kimeneted ugyanúgy néz-e ki, mint a miénk!</p>
+
+
+<h2>Várható kimenet</h2>
+
+<p><codep>Mon
+Thu
+Sun
+Sorry, I can't serve your request.</codep></p>
+
+
+
+<sampleSolution>
+class WeekDayError(Exception):
+    pass
+
+
+class Weeker:
+    __names = ['Mon', 'Thu', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+
+    def __init__(self, day):
+        try:
+            self.__current = Weeker.__names.index(day)
+        except ValueError:
+            raise WeekDayError
+
+    def __str__(self):
+        return Weeker.__names[self.__current]
+
+    def add_days(self, n):
+        self.__current = (self.__current + n) % 7
+
+    def subtract_days(self, n):
+        self.__current = (self.__current - n) % 7
+
+
+try:
+    weekday = Weeker('Mon')
+    print(weekday)
+    weekday.add_days(15)
+    print(weekday)
+    weekday.subtract_days(23)
+    print(weekday)
+    weekday = Weeker('Monday')
+except WeekDayError:
+    print("Sorry, I can't serve your request.")
+	
+</sampleSolution>
+
+<br><br>
+
+<labMode>true</labMode>
+</problem>

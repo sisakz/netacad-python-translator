@@ -1,0 +1,84 @@
+<problem chapter='1' section='3' slide='1' problem='8' title='Modules and Packages'>
+
+<!--
+Update history:
+2020-09-08 Grzegorz (review, PEP-8 compliance check, update)
+2021-06-29 Grzegorz (corrections)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h1>Your first package: step 5</h1>
+
+<p>Remember: <strong>the presence of the <font face="Courier New">__init.py__</font> file finally makes up the package</strong>.</p>
+
+<img class="lightbox" src="/uploads/media/default/0001/01/169d8c4c52b36259b17549f6be28d48f3768dfc6.png" width="75%" alt="The relationship between modules and the presence of the __init__.py file - tree structure">
+<br><br> 
+
+<p>Note: it's not only the <i>root</i> folder that can contain the <font face="Courier New">__init.py__</font> file – you can put it inside any of its subfolders (subpackages) too. It may be useful to do this if some of the subpackages require individual treatment and special kinds of initialization.</p>
+
+ 
+
+<p>Now it's time to answer the second question – where do you put the subtree to make it accessible to Python? The answer is simple: <strong>anywhere</strong>. You only have to ensure that Python is aware of the package's location, you already know how to do that.</p>
+
+<p>You're ready to make use of your first package.</p>
+
+
+
+
+
+
+
+
+<br><br>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<h2>Your first package: step 6</h2>
+
+
+
+<p>Let's assume that the working environment looks as follows:</p>
+
+<img class="lightbox" src="/uploads/media/default/0001/01/e9a8f3fa3dcebbdcc10a46ee4746d0ab66294052.png" width="75%" alt="The relationship between modules, the presence of the __init__.py file, and the access path - the working environment">
+<br><br> 
+
+<p>We've prepared a zip file containing all the files from the packages branch. You can download it and use it for your own experiments, but <b>remember to unpack it in the folder presented in the scheme</b>, otherwise, it won't be accessible to the code from the main file.</p>
+
+
+<p><span class="label" style="background-color:orange;"><b>DOWNLOAD</b></span>&nbsp;&nbsp;&nbsp;<a href="/uploads/media/default/0001/01/39a03067f85a9b39c0c94ca50b5d445b7df18a04.zip" target="_blank" download="Modules and Packages ZIP file">Modules and Packages ZIP file</a></p>
+
+<p>You'll be continuing your experiments using the <font face="Courier New">main2.py</font> file.</p>
+
+
+
+
+
+<br>
+<br>
+
+</div>
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

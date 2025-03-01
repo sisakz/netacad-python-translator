@@ -1,0 +1,163 @@
+<problem chapter='2' section='6' slide='1' problem='12' title="SECTION SUMMARY">
+
+<!--
+Update history:
+2020-09-01 Sysio (first version)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<h1>Key takeaways</h1>
+
+<br>
+
+<p>1. An exception is an event during program execution caused by an abnormal situation. The exception should he handled to avoid the termination of the program. The part of your code that is suspected of being the source of the exception should be put inside the <codel>try</codel> branch.</p>
+
+<p>When the exception happens, the execution of the code is not terminated, but instead jumps into the <codel>except</codel> branch. This is the place where the handling of the exception should take place. The general scheme for such a construction looks as follows:</p>
+<codep class="syntax-color">:
+# The code that always runs smoothly.
+:
+try:
+    :
+    # Risky code.
+    :
+except:
+    :
+    # Crisis management takes place here.
+    : 
+:
+# Back to normal.
+:
+</codep>
+<br>
+
+
+<p>2. If you need to handle more than one exception coming from the same <codel>try</codel> branch, you can add more than one <codel>except</codel> branch, but you have to label them with different exception names, like this:</p>
+<codep class="syntax-color">:
+# The code that always runs smoothly.
+:
+try:
+    :
+    # Risky code.
+    :
+except Except_1:
+    # Crisis management takes place here.
+except Except_2:
+    # We save the world here.
+:
+# Back to normal.
+:
+</codep>
+<br>
+
+<p>At most, one of the <codel>except</codel> branches is executed – none of the branches is performed when the raised exception doesn't match any of the specified exceptions.</p> 
+<br>
+
+
+<p>3. You cannot add more than one anonymous (unnamed) <codel>except</codel> branch after the named ones.</p>
+<codep class="syntax-color">:
+# The code that always runs smoothly.
+:
+try:
+    :
+    # Risky code.
+    :
+except Except_1:
+    # Crisis management takes place here.
+except Except_2:
+    # We save the world here.
+except:
+    # All other issues fall here.
+:
+# Back to normal.
+:
+</codep>
+<br>
+
+</div>
+<div class="small-12 large-6 columns">
+
+<script>
+function solution (id) {
+    var element = document.getElementById(id);
+    
+if (element.style.display === "none") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
+    }
+}
+</script>
+
+<br>
+
+
+<p><strong>Exercise 1</strong></p>
+<p>What is the expected output of the following code?</p
+>
+<codep>try:
+    print("Let's try to do this")
+    print("#"[2])
+    print("We succeeded!")
+except:
+    print("We failed")
+print("We're done")
+
+</codep>
+<br>
+
+<button class="button tiny" onclick="solution('sol1')">Check</button>
+
+<p id="sol1" style="display: none;">
+<codep>Let's try to do this
+We failed
+We're done</codep>
+</p>
+
+
+
+<br><br>
+
+
+
+<p><strong>Exercise 2</strong></p>
+<p>What is the expected output of the following code?</p
+>
+<codep>try:
+    print("alpha"[1/0])
+except ZeroDivisionError:
+    print("zero")
+except IndexingError:
+    print("index")
+except:
+    print("some")
+
+</codep>
+<br>
+
+
+<button class="button tiny" onclick="solution('sol2')">Check</button>
+
+<p id="sol2" style="display: none;">
+<codep>zero</codep></p>
+
+
+
+<br>
+
+<br>
+
+</div>
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>
+

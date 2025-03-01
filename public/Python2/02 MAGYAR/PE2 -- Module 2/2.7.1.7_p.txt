@@ -1,0 +1,71 @@
+<problem chapter='2' section='7' slide='1' problem='7' title='Kivételek | assert'>
+
+<!--
+Update history:
+2020-09-21 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>
+import math
+
+x = float(input("Enter a number: "))
+assert x >= 0.0
+
+x = math.sqrt(x)
+
+print(x)
+
+</code>
+
+
+
+<h1>Kivételek (folytatás)</h1>
+
+<p>Ez egy jó alkalom arra, hogy bemutassunk egy másik Python utasítást, az <codel>assert</codel>-et (állítást). Ez egy kulcsszó.</p>
+
+<codep class="syntax-color">assert expression
+</codep>
+<br>
+
+<p>Hogyan működik?</p>
+
+<ul>
+<li>Kiértékeli a kifejezést;</li>
+<li>ha a kifejezés értéke <codel>True</codel>, vagy egy nem nulla numerikus érték, vagy egy nem üres karakterlánc, vagy bármely más, a <codel>None</codel>-tól eltérő érték, akkor semmit nem tesz;</li>
+<li>ellenkező esetben automatikusan és azonnal egy <font face="Courier New">AssertionError</font> nevű kivételt vált ki (ebben az esetben azt mondjuk, hogy az állítás sikertelen).</li>
+</ul>
+ 
+
+<p>Hogyan használható?</p>
+
+<ul>
+    <li>egy olyan kódban, ahol <strong>teljes bizonyossággal</strong> el akarod kerülni <strong>a nyilvánvalóan rossz adatokat</strong>, és ahol nem vagy teljesen biztos abban, hogy az adatokat korábban alaposan megvizsgálták (pl. egy mástól származó függvényen belül).</li>
+    <li>egy <font face="Courier New">AssertionError</font> kivétel kiváltása megóvja a kódodat az érvénytelen eredmények előállításától, és világosan megmutatja a hiba természetét;</li>
+<li><strong>az állítások nem validálják az adatokat, és nem helyettesítik a kivételeket, hanem</strong> kiegészítik azokat.</li>
+</ul>
+
+ 
+
+<p>Ha a kivételek és az adatok validálása olyanok, mint az óvatos vezetés, az állítás a légzsák szerepét töltheti be.</p>
+
+<br>
+
+<p>Lássuk az <codel>assert</codel> utasítást működés közben. Nézd meg a kódot a szerkesztőben! Futtasd leR</p>
+
+<p>A program hibátlanul fut, ha nullánál nagyobb vagy azzal egyenlő érvényes számértéket adsz meg; ellenkező esetben leáll, és a következő üzenetet adja ki:</p>
+
+<codep>Traceback (most recent call last):
+  File ".main.py", line 4, in <module>
+    assert x >= 0.0
+AssertionError</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

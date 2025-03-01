@@ -1,0 +1,54 @@
+<problem chapter='3' section='6' slide='1' problem='2' title='Bővebben a kivételekről'>
+
+<!--
+Update history:
+2020-10-01 Grzegorz (reviewed, PEP-8 compliance check)
+-->
+
+<code>
+def reciprocal(n):
+    try:
+        n = 1 / n
+    except ZeroDivisionError:
+        print("Division failed")
+        n = None
+    else:
+        print("Everything went fine")
+    finally:
+        print("It's time to say goodbye")
+        return n
+
+
+print(reciprocal(2))
+print(reciprocal(0))
+
+</code>
+
+
+
+<h1>Bővebben a kivételekről</h1>
+
+
+<p>A try-except blokk még egy módon kibővíthető - egy <i>finally</i> kulcsszóval ellátott rész hozzáadásával (ez kell, hogy legyen a kivételek kezelésére szolgáló kód utolsó ága).</p>
+
+<p>Megjegyzés: ez a két változat (<codel>else</codel> és <codel>finally</codel>) semmilyen módon nem függ egymástól, és egymás mellett vagy egymástól függetlenül is előfordulhatnak.</p>
+
+<p>A <codel>finally</codel> blokk mindig végrehajtásra kerül (véglegesíti a <i>try-except</i> blokk végrehajtását, innen a neve), függetlenül attól, hogy mi történt korábban, még akkor is, ha kivételt vált ki, függetlenül attól, hogy azt kezelték-e vagy sem.</p>
+
+<p>Nézzük meg a kódot a szerkesztőben! A kimeneti eredmény:</p>
+
+<codep>Everything went fine
+It's time to say goodbye
+0.5
+Division failed
+It's time to say goodbye
+None</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

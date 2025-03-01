@@ -1,0 +1,143 @@
+<problem chapter='3' section='4' slide='1' problem='11' title='SECTION SUMMARY'>
+
+<!--
+Update history:
+2020-09-04 Slawek (first version)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<h1>Key takeaways</h1>
+
+<br>
+
+
+<p>1. A method is a function embedded inside a class. The first (or only) parameter of each method is usually named <codel>self</codel>, which is designed to identify the object for which the method is invoked in order to access the object's properties or invoke its methods.</p>
+<br>
+
+<p>2. If a class contains a <b>constructor</b> (a method named <codel>__init__</codel>) it cannot return any value and cannot be invoked directly.</p> 
+<br>
+
+<p>3. All classes (but not objects) contain a property named <codel>__name__</codel>, which stores the name of the class. Additionally, a property named <codel>__module__</codel> stores the name of the module in which the class has been declared, while the property named <codel>__bases__</codel> is a tuple containing a class's superclasses.</p>
+<p>For example:</p>
+
+<codep class="syntax-color copy line-numbers">class Sample:
+    def __init__(self):
+        self.name = Sample.__name__
+    def myself(self):
+        print("My name is " + self.name + " living in a " + Sample.__module__)
+
+
+obj = Sample()
+obj.myself()
+</codep>
+<br>
+<p>The code outputs:</p>
+
+<codep>My name is Sample living in a __main__</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+<br>
+
+</div>
+<div class="small-12 large-6 columns">
+<br>
+
+<script>
+function solution (id) {
+    var element = document.getElementById(id);
+    
+if (element.style.display === "none") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
+    }
+}
+</script>
+
+<p><strong>Exercise 1</strong></p>
+<p>The declaration of the <codel>Snake</codel> class is given below. Enrich the class with a method named <codel>increment()</codel>, adding <codel>1</codel> to the <codel>__victims</codel> property.<br><br>
+<codep>class Snake:
+    def __init__(self):
+        self.victims = 0
+
+</codep>
+</p>
+
+<button class="button tiny" onclick="solution('sol')">Check</button>
+
+<p id="sol" style="display: none;">
+<codep>class Snake:
+    def __init__(self):
+        self.victims = 0
+
+    <b>def increment(self):
+        self.victims += 1</b>
+
+</codep></p>
+
+
+
+<br><br>
+
+
+
+<p><strong>Exercise 2</strong></p>
+<p>Redefine the <codel>Snake</codel> class constructor so that is has a parameter to initialize the <codel>victims</codel> field with a value passed to the object during construction.</p>
+<br>
+
+
+<button class="button tiny" onclick="solution('sol2')">Check</button>
+<p id="sol2" style="display: none;"><codep>class Snake:
+    <b>def __init__(self, victims):
+        self.victims = victims</b>	
+</codep></p>
+
+
+<br><br>
+
+
+
+
+<p><strong>Exercise 3</strong></p>
+<p>Can you predict the output of the following code?</p>
+<codep>class Snake:
+    pass
+
+
+class Python(Snake):
+    pass
+
+
+print(Python.__name__, 'is a', Snake.__name__)
+print(Python.__bases__[0].__name__, 'can be a', Python.__name__)
+
+</codep>
+<br>
+
+<button class="button tiny" onclick="solution('sol3')">Check</button>
+
+<p id="sol3" style="display: none;">
+<codep>Python is a Snake
+Snake can be a Python
+</codep>
+</p>
+
+
+<br>
+
+
+</div>
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>
+

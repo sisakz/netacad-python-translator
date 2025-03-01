@@ -1,0 +1,78 @@
+<problem chapter='3' section='1' slide='1' problem='2' title='The foundations of OOP'>
+
+<!--
+Update history:
+2020-09-30 Grzegorz (review, PEP-8 compliance check, update)
+2021-07-05	Grzegorz (corrections)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h1>Procedural vs. the object-oriented approach</h1>
+
+<p>In the <strong>procedural approach</strong>, it's possible to distinguish two different and completely separate worlds: <strong>the world of data, and the world of code</strong>. The world of data is populated with variables of different kinds, while the world of code is inhabited by code grouped into modules and functions.</p>
+
+<p>Functions are able to use data, but not vice versa. Furthermore, functions are able to abuse data, in other words, to use the value in an unauthorized manner (e.g., when the sine function gets a bank account balance as a parameter).</p>
+
+<p>We said in the past that data cannot use functions. But is this entirely true? Are there some special kinds of data that can use functions?</p>
+
+<p>Yes, there are – the ones named methods. These are functions which are invoked from within the data, not beside them. If you can see this distinction, you've taken the first step into object programming.</p>
+
+<p>The <strong>object approach</strong> suggests a completely different way of thinking. The data and the code are enclosed together in the same world, divided into classes.</p>
+
+<p>Every <strong>class is like a recipe which can be used when you want to create a useful object</strong> (this is where the name of the approach comes from). You may produce as many objects as you need to solve your problem.</p>
+
+<p>Every object has a set of traits (they are called properties or attributes – we'll use both words synonymously) and is able to perform a set of activities (which are called methods).</p>
+
+<p>The recipes may be modified if they are inadequate for specific purposes and, in effect, new classes may be created. These new classes inherit properties and methods from the originals, and usually add some new ones, creating new, more specific tools.</p>
+ 
+
+
+
+
+
+<br> 
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+<p><strong>Objects are incarnations</strong> of ideas expressed in classes, like a cheesecake on your plate is an incarnation of the idea expressed in a recipe printed in an old cookbook.</p>
+
+<p>The objects interact with each other, exchanging data or activating their methods. A properly constructed class (and thus, its objects) are able to protect the sensible data and hide it from unauthorized modifications.</p>
+
+<p>There is no clear border between data and code: they live as one in objects.</p>
+
+<p>All these concepts are not as abstract as you may at first suspect. On the contrary, they all are taken from real-life experiences, and therefore are extremely useful in computer programming: they don't create artificial life – <strong>they reflect real facts, relationships, and circumstances</strong>.</p>
+
+<br>
+
+<center><img src="/uploads/media/default/0001/01/2746184e3dea52e1a39df3b1ae510e9dd99e34bc.png" width="70%" alt="The concept of class hierarchies"></center>
+
+
+<br>
+<br>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

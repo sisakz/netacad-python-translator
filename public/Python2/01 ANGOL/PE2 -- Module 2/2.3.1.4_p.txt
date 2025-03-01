@@ -1,0 +1,121 @@
+<problem chapter='2' section='3' slide='1' problem='4' title='String methods'>
+
+<!--
+Update history:
+2020-09-22 Grzegorz (review, PEP-8 compliance check, update)
+2020-10-22 Grzegorz (Note corrected, '[SPACE]' added to code)
+2021-06-30	Grzegorz (corrections)
+-->
+
+
+<code># Demonstrating the find() method:
+print("Eta".find("ta"))
+print("Eta".find("mma"))
+
+</code>
+
+
+
+<h1>The <font face="Courier New">find()</font> method</h1>
+
+<p>The <codel>find()</codel> method is similar to <codel>index()</codel>, which you already know – <strong>it looks for a substring and returns the index of the first occurrence of this substring</strong>, but:</p>
+
+<ul>
+<li>it's safer – it <strong>doesn't generate an error for an argument containing a non-existent substring</strong> (it returns <codel>-1</codel> then)</li>
+
+<li>it <strong>works with strings only</strong> – don't try to apply it to any other sequence.</li>
+</ul>
+
+<p>Look at the code in the editor. This is how you can use it.</p>
+
+<p>The example prints:</p>
+
+<codep>1
+-1</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+<p>Note: don't use <codel>find()</codel> if you only want to check if a single character occurs within a string - the <codel>in</codel> operator will be significantly faster.</p>
+
+<p>Here is another example:</p>
+
+<codep class="syntax-color copy">t = 'theta'
+print(t.find('eta'))
+print(t.find('et'))
+print(t.find('the'))
+print(t.find('ha'))
+</codep>
+
+<br>
+
+<p>Can you predict the output? Run it and check your predictions.</p>
+
+<br>
+
+<p>If you want to perform the find, not from the string's beginning, but <strong>from any position</strong>, you can use a <strong>two-parameter variant</strong> of the <codel>find()</codel> method. Look at the example:</p>
+
+<codep class="syntax-color copy">print('kappa'.find<mark class="mark-background">('a','[SPACE]'2)</mark>)
+</codep>
+<br>
+
+<p>The second argument <strong>specifies the index at which the search will be started</strong> (it doesn't have to fit inside the string).</p>
+
+<p>Among the two <i>a</i> letters, only the second will be found. Run the snippet and check.</p>
+
+<br>
+
+<p>You can use the <codel>find()</codel> method to search for all the substring's occurrences, like here:</p>
+
+<codep class="syntax-color copy">the_text = """A variation of the ordinary lorem ipsum
+text has been used in typesetting since the 1960s 
+or earlier, when it was popularized by advertisements 
+for Letraset transfer sheets. It was introduced to 
+the Information Age in the mid-1980s by the Aldus Corporation, 
+which employed it in graphics and word-processing templates
+for its desktop publishing program PageMaker (from Wikipedia)"""
+
+fnd = the_text.find('the')
+while fnd != -1:
+    print(fnd)
+    fnd = the_text.find('the', fnd + 1)
+</codep>
+<br>
+
+
+<p>The code prints the indices of all occurrences of the article <i>the</i>, and its output looks like this:</p>
+
+<codep>15
+80
+198
+221
+238</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+
+<p>There is also a <strong>three-parameter mutation of the <codel>find()</codel> method</strong> – the third argument <strong>points to the first index which won't be taken into consideration during the search</strong> (it's actually the upper limit of the search).</p>
+
+<p>Look at our example below:</p>
+
+<codep class="syntax-color copy">print('kappa'.find('a', 1, 4))
+print('kappa'.find('a', 2, 4))
+</codep>
+<br>
+
+
+<p>The second argument specifies the index at which the search will be started (it doesn't have to fit inside the string).</p>
+
+<p>Therefore, the modified example outputs:</p>
+
+<codep>1
+-1</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+<p>(<i>a</i> cannot be found within the given search boundaries in the second <codel>print()</codel>.</p>
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

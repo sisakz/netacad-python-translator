@@ -1,0 +1,124 @@
+<problem chapter='4' section='2' slide='1' problem='3' title='Fájlkezelés'>
+
+<!--
+Update history:
+2020-10-07 Grzegorz (review, PEP-8 compliance check)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+    <h2>Fájlnevek (folytatás)</h2>
+
+    <p>Tegyük fel, hogy egy adott fájl érdekel, amely a <font face="Courier New">dir</font> könyvtárban található <font face="Courier New">file</font> néven.</p>
+
+    <p>Tegyük fel, hogy létre akarsz hozni egy karakterláncot, ami a fájl nevét tartalmazza.</p>
+
+    <p>Unix/Linux rendszerekben ez a következőképpen nézhet ki:</p>
+
+<codep>name = "/dir/file"
+
+</codep>
+<br>
+
+
+
+
+<p>De ha megpróbálod Windows rendszeren kódolni:</p>
+
+<codep>name = "\dir\file"
+
+</codep>
+<br>
+
+<p>akkor kellemetlen meglepetésben lesz részed: a Python vagy hibát fog dobni, vagy a program végrehajtása során furcsán fog viselkedni, mintha a fájl neve valamilyen módon eltorzult volna.</p>
+
+<p>Valójában ez egyáltalán nem furcsa, hanem teljesen nyilvánvaló és természetes. A Python a <codel>\</codel>-t escape karakterként használja (mint a <codel>\n</codel> esetében).</p>
+
+<p>Ez azt jelenti, hogy a Windows fájlneveket a következőképpen kell írni:</p>
+
+<codep>name = "\\dir\\file"
+
+</codep>
+<br>
+
+ 
+<p>Szerencsére van még egy megoldás. A Python elég okos ahhoz, hogy a slash-eket (/) backslash-ekké (\) alakítsa át minden alkalommal, amikor felfedezi, hogy az operációs rendszer ezt megköveteli.</p>
+
+<p>Ez azt jelenti, hogy a következő értékadások bármelyike:</p>
+
+
+<codep>name = "/dir/file"
+name = "c:/dir/file"
+
+</codep>
+<br>
+ 
+<p>Windows alatt is működik.</p>
+
+<p>Minden Pythonban írt program (és nem csak Pythonban, mert ez a konvenció gyakorlatilag minden programozási nyelvre érvényes) nem közvetlenül kommunikál a fájlokkal, hanem valamilyen absztrakt entitásokon keresztül, amelyeket különböző nyelvekben vagy környezetekben másképp neveznek - a leggyakrabban használt kifejezések a <strong>handle</strong> (magyarul <strong>(fájl)kezelő</strong>), a <strong>stream</strong> (magyarul <strong>adatfolyam</strong> vagy <strong>fájlobjektum</strong>)  (mi ezeket a kifejezéseket mind szinonimaként használjuk majd).</p>
+
+<p>A programozó - aki rendelkezik több-kevesebb függvénnyel, illetve metódussal -, az operációs rendszer kernelében található mechanizmusok segítségével képes bizonyos műveleteket végrehajtani az adatfolyamon, amelyek hatással vannak a valós fájlokra.</p>
+
+<p>Ily módon bármelyik fájl elérését implementálhatod a kódban, még akkor is, ha a fájl neve a program megírásának időpontjában ismeretlen.</p>
+
+<br> 
+<br>
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+
+<br>
+
+<p>Az absztrakt adatfolyammal (fájlobjektummal) végzett műveletek a fizikai fájlhoz kapcsolódó tevékenységeket tükrözik.</p>
+
+<br>
+
+<center><img class="lightbox" src="/uploads/media/default/0001/01/278d1abf2ed4c9cfd0bce451c387aad365ed4a72.png" alt="Accessing files – a tree structure concept" width="65%"></center>
+<br><br>
+
+
+    <p>A fájlobjektum és a fájl összekapcsolásához (kötéséhez) explicit műveletet kell végrehajtani.</p>
+
+ 
+
+    <p>A fájlobjektum és a fájl összekapcsolásának műveletét <strong>fájlmegnyitásnak</strong>, míg a kapcsolat megszakítását <strong>fájllezárásnak nevezzük</strong>.</p>
+
+    <p>Ebből az a következtetés vonható le, hogy az adatfolyam legelső művelete mindig az <codel>open</codel> az utolsó pedig a <codel>close</codel>. A program valójában szabadon manipulálhatja az adatfolyamot e két esemény között, és kezelheti a hozzá tartozó fájlt.</p>
+
+    <p>Ezt a szabadságot természetesen korlátozzák a fájl fizikai jellemzői és a fájl megnyitásának módja.</p>
+
+ 
+
+    <p>Hadd ismételjük meg: az adatfolyam megnyitása meghiúsulhat, és ennek több oka is lehet. A leggyakoribb, hogy a megadott nevű fájl nem létezik.</p>
+
+    <p>Az is előfordulhat, hogy a fizikai fájl létezik, de a programnak nincs jogosultsága, hogy megnyissa. Az is előfordulhat, hogy a program túl sok fájlobjektumot nyitott meg, és az adott operációs rendszer esetleg nem engedi meg <font face="Courier New">n</font>-nél több (pl.: 200) fájl egyidejű megnyitását.</p>
+
+    <p>Egy jól megírt programnak észlelnie kell ezeket a sikertelen megnyitásokat, és ennek megfelelően kell reagálnia.</p>
+
+
+<br>
+<br>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

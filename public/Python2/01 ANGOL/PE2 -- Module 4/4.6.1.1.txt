@@ -1,0 +1,116 @@
+<problem chapter='4' section='6' slide='1' problem='1' title='The calendar module'>
+
+<!--
+Update history:
+2020-03-30 Sebastian (first version)
+2020-10-12 Grzegorz (file creation, review, PEP-8 compliance check)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h1>Introduction to the <i>calendar</i> module</h1>
+
+
+<p>In addition to the <codel>datetime</codel> and <codel>time</codel> modules, the Python standard library provides a module called <codel>calendar</codel> which, as the name suggests, offers <b>calendar-related functions</b>.</p>
+
+<p>One of them is of course displaying the calendar. It's important that the days of the week are displayed from Monday to Sunday, and each day of the week has its representation in the form of an integer:</p>
+
+<table>
+
+<tr>
+<th>Day of the week</th>
+<th>Integer value</th>
+<th>Constant</th>
+</tr>
+
+<tr>
+<td>Monday</td>
+<td>0</td>
+<td><codel>calendar.MONDAY</codel></td>
+</tr>
+
+<tr>
+<td>Tuesday</td>
+<td>1</td>
+<td><codel>calendar.TUESDAY</codel></td>
+</tr>
+
+<tr>
+<td>Wednesday</td>
+<td>2</td>
+<td><codel>calendar.WEDNESDAY</codel></td>
+</tr>
+
+<tr>
+<td>Thursday</td>
+<td>3</td>
+<td><codel>calendar.THURSDAY</codel></td>
+</tr>
+
+<tr>
+<td>Friday</td>
+<td>4</td>
+<td><codel>calendar.FRIDAY</codel></td>
+</tr>
+
+<tr>
+<td>Saturday</td>
+<td>5</td>
+<td><codel>calendar.SATURDAY</codel></td>
+</tr>
+
+<tr>
+<td>Sunday</td>
+<td>6</td>
+<td><codel>calendar.SUNDAY</codel></td>
+</tr>
+
+</table>
+
+<p>The table above shows the representation of the days of the week in the <codel>calendar</codel> module. The first day of the week (Monday) is represented by the value <i>0</i> and the <i>calendar.MONDAY</i> constant, while the last day of the week (Sunday) is represented by the value <i>6</i> and the <i>calendar.SUNDAY</i> constant.</p>
+
+
+
+
+<br> 
+<br>
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+<center><img src="/uploads/media/default/0001/02/b7803b762467a1a3d5910cb93726710f60f5756a.png" alt="A snake and a calendar" width="70%"></center>
+
+<br><br>
+
+<p>For months, integer values are indexed from 1, i.e., January is represented by 1, and December by 12. Unfortunately, there aren't constants that express the months.</p>
+
+<p>The above information will be useful to you when working with the <codel>calendar</codel> module in this part of the course, but first let's start with some simple calendar examples.</p>
+
+
+<br>
+<br>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

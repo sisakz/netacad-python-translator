@@ -1,0 +1,77 @@
+<problem chapter='4' section='3' slide='1' problem='9' title='Valós fájlok kezelése'>
+
+<!--
+Update history:
+2020-10-07 Grzegorz (review, PEP-8 compliance check)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+
+    <h2>Mi az a bájttömb?</h2>
+
+    <p>Mielőtt elkezdenénk a bináris fájlokról tanulni, meg kell ismerkednünk egy <strong>speciális osztállyal, amelyet a Python az amorf adatok tárolására használ</strong>.</p>
+
+    <p><strong>Az amorf adatok olyan adatok, amelyeknek nincs konkrét alakjuk vagy formájuk</strong> – ezek csak bájtok sorozata.</p>
+
+    <p>Ez nem jelenti azt, hogy ezeknek a bájtoknak ne lehetne saját jelentésük, vagy ne reprezentálhatnának bármilyen hasznos objektumot, pl.: bitmap grafikát.</p>
+
+    <p>A legfontosabb szempont az, hogy ott, ahol kapcsolatba kerülünk az adatokkal, nem tudunk vagy egyszerűen nem akarunk tudni róluk semmit.</p>
+
+ 
+
+    <p>Az amorf adatok nem tárolhatók a korábban bemutatott eszközök egyikével sem - ezek nem karakterláncok és nem listák.</p>
+
+    <p>Léteznie kell egy speciális tárolónak, amely képes kezelni az ilyen adatokat.</p>
+
+<br> 
+<br>
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+
+<br>
+
+
+
+<p>A Pythonban több ilyen tároló is van - ezek egyike <strong>egy speciális osztály, a bájttömb (bytearray)</strong> - ahogy a neve is mutatja, ez <strong>egy (amorf) bájtokat tartalmazó tömb</strong>.</p>
+
+<p>Ha ilyen konténerre van szükséged, például egy bitmap kép beolvasásához és bármilyen módon történő feldolgozásához, akkor azt explicit módon kell létrehoznod, a rendelkezésre álló konstruktorok egyikének segítségével.</p>
+
+<p>Nézd:</p>
+
+<codep class="syntax-color">data = bytearray(10)
+</codep>
+<br>
+
+<p>Egy ilyen parancs egy tíz bájt tárolására alkalmas bájttömb objektumot hoz létre.</p>
+
+<p>Megjegyzés: egy ilyen konstruktor az <strong>egész tömböt nullákkal tölti fel</strong>.</p>
+
+
+<br>
+<br>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

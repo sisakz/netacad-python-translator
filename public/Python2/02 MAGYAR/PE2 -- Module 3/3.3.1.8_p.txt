@@ -1,0 +1,58 @@
+<problem chapter='3' section='3' slide='1' problem='8' title='OOP: Tulajdonságok'>
+
+<!--
+Update history:
+2020-09-30 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>
+class ExampleClass:
+    attr = 1
+
+
+print(hasattr(ExampleClass, 'attr'))
+print(hasattr(ExampleClass, 'prop'))
+
+</code>
+
+
+
+<h1>Egy attribútum létezésének ellenőrzése (folytatás)</h1>
+
+<p>Ne felejtsd el, hogy a <codel>hasattr()</codel> függvény osztályokkal is működik. Használhatod arra, hogy megtudd, <strong>hogy egy osztályváltozó elérhető-e</strong>, mint itt a szerkesztőben lévő példában is látható.</p>
+
+<p>A függvény <font face="Courier New">True</font> értéket ad vissza, ha a megadott osztály tartalmazza az adott attribútumot, ellenkező esetben <font face="Courier New">False</font> értéket.</p>
+
+<p>Ki tudod találni a kód kimenetét? Futtasd le, majd ellenőrizd a tippedet!</p>
+
+<br>
+
+<p>Még egy példa - nézd meg az alábbi kódot, és próbáld megjósolni a kimenetét:</p>
+
+<codep class="syntax-color copy line-numbers">class ExampleClass:
+    a = 1
+    def __init__(self):
+        self.b = 2
+
+
+example_object = ExampleClass()
+
+print(hasattr(example_object, 'b'))
+print(hasattr(example_object, 'a'))
+print(hasattr(ExampleClass, 'b'))
+print(hasattr(ExampleClass, 'a'))
+</codep>
+
+<br>
+
+<p>Sikeres volt? Futtasd a kódot, majd ellenőrizd a megérzésed!</p>
+
+<p>Nos, elérkeztünk a szakasz végére. A következő részben a metódusokról fogunk beszélni, mivel a metódusok irányítják az objektumokat, és teszik őket aktívvá.</p>
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

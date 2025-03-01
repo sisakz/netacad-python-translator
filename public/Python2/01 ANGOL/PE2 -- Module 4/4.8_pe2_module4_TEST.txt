@@ -1,0 +1,771 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+PE2 - Module 4 Test
+
+Last updated:
+2020-02-28 - Grzegorz (item 19 formatting, response change)
+2020-07-02 - Grzegorz (CH_5_QU_3_03 (code correction), CH_5_QU_1_01 (response formatting))
+2020-10-18 - Grzegorz (file creation, reformatting, PEP-8 compliance, dividing content into Test 3 and Test 4, adding new items)
+-->
+
+<questionPool>
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE2_T4_ITEM_1">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; What keyword would you use to define an anonymous function?</p>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p><codel>lambda</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>def</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>afun</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>yield</codel></p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+<question type="2" scoringType="1" points="1" customId="PE2_T4_ITEM_2">  <!-- Multiple-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; Select the <u>true</u> statements. (Select <u>two</u> answers)</p>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>The <codel>lambda</codel> function can accept <b>any number</b> of arguments</p> ]]>
+</option>
+
+<option isCorrect="true">
+<![CDATA[ <p>The <codel>lambda</codel> function can evaluate <b>only one</b> expression</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>The <codel>lambda</codel> function can accept <b>a maximum of two</b> arguments</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>The <codel>lambda</codel> function can evaluate <b>multiple</b> expressions</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+<question type="1" scoringType="1" points="1" customId="PE2_T4_ITEM_3">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; Look at the code below:</p>
+
+<p><codep>my_list = [1, 2, 3]
+# Insert line of code here.
+print(foo)
+
+</codep></p>
+
+<p>Which snippet would you insert in order for the program to output the following result (tuple):</p>
+
+<codep>(1, 4, 27)</codep>
+<p style="text-align: right;"><font size="-2"><b>expected output</b></font></p>
+
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p><codep>foo = tuple(map(lambda x: x**x, my_list))
+
+</codep></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codep>foo = list(map(lambda x: x**x, my_list))
+
+</codep></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codep>foo = tuple(map(lambda x: x*x, my_list))
+
+</codep></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codep>foo = list(map(lambda x: x*x, my_list))
+
+</codep></p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+<question type="1" scoringType="1" points="1" customId="PE2_T4_ITEM_4">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; Look at the code below:</p>
+
+<p><codep>my_tuple = (0, 1, 2, 3, 4, 5, 6)
+# Insert line of code here.
+print(foo)
+
+</codep></p>
+
+<p>Which snippet would you insert in order for the program to output the following result (list):</p>
+
+<codep>[2, 3, 4, 5, 6]</codep>
+<p style="text-align: right;"><font size="-2"><b>expected output</b></font></p>
+
+
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p><codep>foo = list(filter(lambda x: x-0 and x-1, my_tuple))
+
+</codep></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codep>foo = tuple(filter(lambda x: x-0 and x-1, my_tuple))
+
+</codep></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codep>foo = tuple(filter(lambda x: x>1, my_tuple))
+
+</codep></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codep>foo = list(filter(lambda x: x==0 and x==1, my_tuple))
+
+</codep></p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE2_T4_ITEM_5">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; What is the expected result of executing the following code?</p>
+
+<p><codep>def I():
+    s = 'abcdef'
+    for c in s[::2]:
+        yield c
+
+
+for x in I():
+    print(x, end='')
+
+</codep></p>
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>It will print <codel>ace</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>It will print <codel>bdf</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>It will print <codel>abcdef</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>It will print an empty line</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE2_T4_ITEM_6">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; What is the expected result of executing the following code?</p>
+
+<p><codep>def fun(n):
+    s = '+'
+    for i in range(n):
+        s += s
+        yield s
+
+
+for x in fun(2):
+    print(x, end='')
+
+</codep></p>
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>It will print <codel>++++++</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>It will print <codel>+</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>It will print <codel>++</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>It will print <codel>+++</codel></p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE2_T4_ITEM_7">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; What is the expected result of executing the following code?</p>
+
+<p><codep>def o(p):
+    def q():
+        return '*' * p
+    return q
+
+
+r = o(1)
+s = o(2)
+print(r() + s())
+
+</codep></p>
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>It will print <codel>***</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>It will print <codel>**</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>It will print <codel>*</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>It will print <codel>****</codel></p> ]]>
+</option>
+
+</options>
+
+</question>
+
+<!-- ######################################################################################################################## -->
+
+<question type="2" scoringType="1" points="1" customId="PE2_T4_ITEM_8">  <!-- Multiple-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; Which of the following open modes allow you to perform <b>read</b> operations? (Select <u>two</u> answers)</p>
+
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p><codel>r</codel></p> ]]>
+</option>
+
+<option isCorrect="true">
+<![CDATA[ <p><codel>r+</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>w</codel></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codel>a</codel></p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+<question type="1" scoringType="1" points="1" customId="PE2_T4_ITEM_9">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; What is the meaning of the value represented by <codel>errno.EEXIST</codel>?</p>
+
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>File exists</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>File doesn't exist</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>Bad file number</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>Permission denied</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+
+<!-- ######################################################################################################################## -->
+
+<question type="1" scoringType="1" points="1" customId="PE2_T4_ITEM_10">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; What is the expected result of the following code?</p>
+
+<p><codep>b = bytearray(3)
+print(b)
+
+</codep></p>
+
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p><codep>bytearray(b'\x00\x00\x00')</codep></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codep>bytearray(0, 0, 0)</codep></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codep>bytearray(b'3')</codep></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codep>3</codep></p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+
+<!-- ######################################################################################################################## -->
+
+<question type="1" scoringType="1" points="1" customId="PE2_T4_ITEM_11">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; What is the expected output of the following code?</p>
+
+<p><codep>import os
+
+os.mkdir('pictures')
+os.chdir('pictures')
+os.mkdir('thumbnails')
+os.chdir('thumbnails')
+os.mkdir('tmp')
+os.chdir('../')
+
+print(os.getcwd())
+
+</codep></p>
+
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p>The path to the <codel>pictures</codel> directory</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>The path to the <codel>thumbnails</codel> directory</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>The path to the <codel>tmp</codel> directory</p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p>The path to the <i>root</i> directory</p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+
+<!-- ######################################################################################################################## -->
+
+<question type="1" scoringType="1" points="1" customId="PE2_T4_ITEM_12">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; What is the expected output of the following code?</p>
+
+<p><codep>import os
+
+os.mkdir('thumbnails')
+os.chdir('thumbnails')
+
+sizes = ['small', 'medium', 'large']
+
+for size in sizes:
+    os.mkdir(size)
+
+print(os.listdir())
+
+</codep></p>
+
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p><codep>['large', 'small', 'medium']</codep></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codep>['.', 'large', 'small', 'medium']</codep></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codep>['.', '..', 'large', 'small', 'medium']</codep></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codep>[]</codep></p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+
+<!-- ######################################################################################################################## -->
+
+<question type="1" scoringType="1" points="1" customId="PE2_T4_ITEM_13">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; What is the expected output of the following code?</p>
+
+<p><codep>from datetime import date
+
+date_1 = date(1992, 1, 16)
+date_2 = date(1991, 2, 5)
+
+print(date_1 - date_2)
+
+</codep></p>
+
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p><codep>345 days, 0:00:00</codep></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codep>345 days</codep></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codep>345</codep></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codep>345, 0:00:00</codep></p> ]]>
+</option>
+
+</options>
+
+</question>
+
+<!-- ######################################################################################################################## -->
+
+<question type="1" scoringType="1" points="1" customId="PE2_T4_ITEM_14">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; What is the expected output of the following code?</p>
+
+<p><codep>from datetime import datetime
+
+datetime = datetime(2019, 11, 27, 11, 27, 22)
+print(datetime.strftime('%y/%B/%d %H:%M:%S'))
+
+</codep></p>
+
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p><codep>19/November/27 11:27:22</codep></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codep>2019/Nov/27 11:27:22</codep></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codep>2019/11/27 11:27:22</codep></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codep>19/11/27 11:27:22</codep></p> ]]>
+</option>
+
+</options>
+
+</question>
+
+<!-- ######################################################################################################################## -->
+
+<question type="1" scoringType="1" points="1" customId="PE2_T4_ITEM_15">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; Which program will produce the following output:</p>
+
+<codep>Mo Tu We Th Fr Sa Su</codep>
+<p style="text-align: right;"><font size="-2"><b>expected output</b></font></p>
+
+
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p><codep>import calendar  
+print(calendar.weekheader(2))
+
+</codep></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codep>import calendar  
+print(calendar.weekheader())
+
+</codep></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codep>import calendar  
+print(calendar.weekheader(3))
+
+</codep></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codep>import calendar  
+print(calendar.week)
+
+</codep></p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+<question type="1" scoringType="1" points="1" customId="PE2_T4_ITEM_16">  <!-- Single-choice question, graded -->
+
+<instructions>
+<![CDATA[
+
+<p><span class="label">Q:</span>&nbsp;&nbsp; What is the expected result of the following code?</p>
+
+<p><codep>import calendar  
+
+c = calendar.Calendar()
+
+for weekday in c.iterweekdays():
+    print(weekday, end=" ")
+
+</codep></p>
+
+<br>
+
+]]>
+</instructions>
+
+
+<options>
+
+<option isCorrect="true">
+<![CDATA[ <p><codep>0 1 2 3 4 5 6</codep></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codep>1 2 3 4 5 6 7</codep></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codep>Mo Tu We Th Fr Sa Su</codep></p> ]]>
+</option>
+
+<option>
+<![CDATA[ <p><codep>Su Mo Tu We Th Fr Sa</codep></p> ]]>
+</option>
+
+</options>
+
+</question>
+
+
+<!-- ######################################################################################################################## -->
+
+
+</questionPool>

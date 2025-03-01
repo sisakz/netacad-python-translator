@@ -1,0 +1,124 @@
+<problem chapter='3' section='5' slide='1' problem='20' title='OOP alapok: MRO'>
+
+<!--
+Update history:
+2020-10-01 Slawek (content created)
+2020-11-16 Grzegorz (file created, proofed by Will)
+2020-11-17 Grzegorz (proofed by Will, updated)
+-->
+
+<code>class Top:
+    def m_top(self):
+        print("top")
+
+
+class Middle(Top):
+    def m_middle(self):
+        print("middle")
+
+
+class Bottom(Middle):
+    def m_bottom(self):
+        print("bottom")
+
+
+object = Bottom()
+object.m_bottom()
+object.m_middle()
+object.m_top()
+
+</code>
+
+<h1>Mi az a Metódus Meghatározó Sorrend (Method Resolution Order - MRO), és miért nem minden öröklésnek van értelme?</h1>
+
+<p>Az MRO általánosságban egy olyan módszer (nevezhetjük <strong>stratégiának</strong> is), amellyel egy adott programozási nyelv egy osztály hierarchiájának felső részét végigpásztázza, hogy megtalálja az éppen szükséges metódust. Érdemes hangsúlyozni, hogy a különböző nyelvek kissé (vagy akár teljesen) eltérő MRO-kat használnak. A Python azonban ebből a szempontból különleges „teremtmény”, és a szokásai kissé sajátosak.</p>
+
+<p>Megmutatjuk, hogyan működik a Python MRO két sajátos esetben, amelyek egyértelmű példái azoknak a problémáknak, amelyek akkor jelentkezhetnek, ha túlságosan meggondolatlanul használjuk a többszörös öröklést. Kezdjük egy olyan kódrészlettel, amely kezdetben egyszerűnek tűnhet. Nézd meg, mit készítettünk neked a szerkesztőben!</p>
+
+<p>Biztosak vagyunk benne, hogy ha elemzed a részletet, nem fogsz benne semmilyen rendellenességet felfedezni. Igen, tökéletesen igazad van - világosnak és egyszerűnek tűnik, és nem ad okot aggodalomra. Ha lefuttatod a kódot, a következő, várható kimenetet fogja produkálni:</p>
+
+<codep>bottom
+middle
+top</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+<br>
+
+
+<p>Eddig semmi meglepetés. Változtassuk meg egy kicsit a kódot! Nézzük meg:</p>
+
+<p><codep class="syntax-color copy line-numbers">class Top:
+    def m_top(self):
+        print("top")
+
+
+class Middle(Top):
+    def m_middle(self):
+        print("middle")
+
+
+class Bottom(Middle, Top):
+    def m_bottom(self):
+        print("bottom")
+
+
+object = Bottom()
+object.m_bottom()
+object.m_middle()
+object.m_top()
+</codep></p>
+
+
+<p>Látod a különbséget? Ebben a sorban van elrejtve:</p>
+
+<p><codep class="syntax-color">class Bottom(Middle, Top):
+</codep>
+
+<p>Ezen az egzotikus módon egy nagyon egyszerű, egyértelmű öröklődési útvonallal rendelkező kódot egy rejtélyes többszörös öröklődési rejtéllyé változtattunk. "Érvényes ez?" - kérdezheted. Igen, érvényes. "Hogyan lehetséges ez?" - kérdezheted most, és reméljük, hogy valóban szükségét érzed, hogy feltedd ezt a kérdést.</p>
+
+<p>Amint látható, a két szuperosztály zárójelek közötti sorrendje megfelel a kód szerkezetének: a <codel>Middle</codel> osztály megelőzi a <codel>Top</codel> osztályt, ahogyan a valódi öröklési útvonalban is.</p>
+
+<p>Furcsasága ellenére a minta helyes és az elvárásoknak megfelelően működik, de le kell szögezni, hogy ez nem hoz semmilyen új funkciót vagy többletjelentést.</p>
+
+
+
+<p>Módosítsuk a kódot még egyszer - most felcseréljük mindkét szuperosztály nevét a <codel>Bottom</codel> osztály definíciójában. Így néz ki most a kódunk:</p>
+
+<codep class="syntax-color line-numbers copy">class Top:
+    def m_top(self):
+        print("top")
+
+
+class Middle(Top):
+    def m_middle(self):
+        print("middle")
+
+
+class Bottom(Top, Middle):
+    def m_bottom(self):
+        print("bottom")
+
+
+object = Bottom()
+object.m_bottom()
+object.m_middle()
+object.m_top()
+</codep></p>
+
+
+<p>A kérdésednek elébe menve azt mondjuk, hogy ez a módosítás bizony elrontotta a kódot, és az nem fog többé lefutni. Milyen kár. A sorrend, amit megpróbáltunk kikényszeríteni (Top, Middle), nem kompatibilis az öröklési útvonallal, ami a kód szerkezetéből adódik. A Python nem fogja szeretni. Ezt fogjuk látni:</p>
+
+<codep>TypeError: Cannot create a consistent method resolution order (MRO) for bases Top, Middle</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+<br>
+
+<p>Úgy gondoljuk, hogy az üzenet önmagáért beszél. A Python MRO-ját nem lehet átalakítani vagy megszegni, nem csak azért, mert a Python így működik, hanem azért is, mert ez egy olyan szabály, amelyet be kell tartani.</p>
+
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

@@ -1,0 +1,161 @@
+<problem chapter='2' section='6' slide='1' problem='12' title="SZAKASZ ÖSSZEFOGLALÁS">
+
+<!--
+Update history:
+2020-09-01 Sysio (first version)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<h1>A legfontosabb tudnivalók</h1>
+
+<br>
+
+<p>1. A kivétel a programvégrehajtás életében bekövetkező olyan esemény, amelyet egy rendellenes helyzet okoz. A kivételt a program befejezésének elkerülése érdekében kezelned kell. A kódnak azt a részét, amelyről feltételezhető, hogy a kivétel forrása, a <codel>try</codel> ágon belülre kell helyezni.</p>
+
+<p>Amikor a kivétel bekövetkezik, a kód végrehajtása nem szakad meg, hanem az <codel>except</codel> ágba ugrik. Ez az a hely, ahol a kivétel kezelésének meg kell történnie. Egy ilyen konstrukció általános sémája a következőképpen néz ki:</p>
+<codep class="syntax-color">:
+# The code that always runs smoothly.
+:
+try:
+    :
+    # Risky code.
+    :
+except:
+    :
+    # Crisis management takes place here.
+    : 
+:
+# Back to normal.
+:
+</codep>
+<br>
+
+
+<p>2. Ha egynél több, ugyanabból a <codel>try</codel> ágból származó kivételt kell kezelnünk, akkor több <codel>except</codel> ágat is hozzáadhatunk, de ezeket különböző kivételnevekkel kell ellátnunk, például így:</p>
+<codep class="syntax-color">:
+# The code that always runs smoothly.
+:
+try:
+    :
+    # Risky code.
+    :
+except Except_1:
+    # Crisis management takes place here.
+except Except_2:
+    # We save the world here.
+:
+# Back to normal.
+:
+</codep>
+<br>
+
+<p>Csak az egyik <codel>except</codel> ág kerül végrehajtásra – egyik ág sem kerül végrehajtásra, ha a kiváltott kivétel nem felel meg a megadott kivételeknek.</p> 
+<br>
+
+
+<p>3. A nevesített kivételek után csak egy névtelen <codel>except</codel> ágat szabad felvenni.</p>
+<codep class="syntax-color">:
+# The code that always runs smoothly.
+:
+try:
+    :
+    # Risky code.
+    :
+except Except_1:
+    # Crisis management takes place here.
+except Except_2:
+    # We save the world here.
+except:
+    # All other issues fall here.
+:
+# Back to normal.
+:
+</codep>
+<br>
+
+</div>
+<div class="small-12 large-6 columns">
+
+<script>
+function solution (id) {
+    var element = document.getElementById(id);
+    
+if (element.style.display === "none") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
+    }
+}
+</script>
+
+<br>
+
+
+<p><strong>1. gyakorlat</strong></p>
+<p>Mi a következő kód várható kimenete?</p>
+<codep>try:
+    print("Let's try to do this")
+    print("#"[2])
+    print("We succeeded!")
+except:
+    print("We failed")
+print("We're done")
+
+</codep>
+<br>
+
+<button class="button tiny" onclick="solution('sol1')">Ellenőrzés</button>
+
+<p id="sol1" style="display: none;">
+<codep>Let's try to do this
+We failed
+We're done</codep>
+</p>
+
+
+
+<br><br>
+
+
+
+<p><strong>2. gyakorlat</strong></p>
+<p>Mi a következő kód várható kimenete?</p>
+<codep>try:
+    print("alpha"[1/0])
+except ZeroDivisionError:
+    print("zero")
+except IndexingError:
+    print("index")
+except:
+    print("some")
+
+</codep>
+<br>
+
+
+<button class="button tiny" onclick="solution('sol2')">Ellenőrzés</button>
+
+<p id="sol2" style="display: none;">
+<codep>zero</codep></p>
+
+
+
+<br>
+
+<br>
+
+</div>
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>
+

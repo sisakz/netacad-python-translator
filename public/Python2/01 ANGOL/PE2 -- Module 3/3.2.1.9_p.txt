@@ -1,0 +1,66 @@
+<problem chapter='3' section='2' slide='1' problem='9' title='A short journey from procedural to object approach'>
+
+<!--
+Update history:
+2020-09-30 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>class Stack:
+    def __init__(self):
+        self.__stack_list = []
+
+    def push(self, val):
+        self.__stack_list.append(val)
+
+    def pop(self):
+        val = self.__stack_list[-1]
+        del self.__stack_list[-1]
+        return val
+
+
+# Enter code here.
+
+</code>
+
+
+
+<h1>The object approach: a stack from scratch (continued)</h1>
+
+<p>Analyze the snippet below – we've created three objects of the class <codel>Stack</codel>. Next, we've juggled them up. Try to predict the value outputted to the screen.</p>
+
+
+<codep class="syntax-color copy line-numbers">class Stack:
+    def __init__(self):
+        self.__stack_list = []
+
+    def push(self, val):
+        self.__stack_list.append(val)
+
+    def pop(self):
+        val = self.__stack_list[-1]
+        del self.__stack_list[-1]
+        return val
+
+
+little_stack = Stack()
+another_stack = Stack()
+funny_stack = Stack()
+
+little_stack.push(1)
+another_stack.push(little_stack.pop() + 1)
+funny_stack.push(another_stack.pop() - 2)
+
+print(funny_stack.pop())
+</codep>
+<br>
+
+<p>So, what's the result? Run the program and check if you're right.</p>
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

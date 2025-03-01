@@ -1,0 +1,55 @@
+<problem chapter='3' section='2' slide='1' problem='6' title='A short journey from procedural to object approach'>
+
+<!--
+Update history:
+2020-09-30 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>class Stack:
+    def __init__(self):
+        self.__stack_list = []
+
+
+stack_object = Stack()
+print(len(stack_object.__stack_list))
+
+</code>
+
+
+
+<h1>The stack – the object approach: continued</h1>
+
+<p>Take a look – we've added two underscores before the <codel>stack_list</codel> name – nothing more:</p>
+
+<codep>class Stack:
+    def __init__(self):
+        self.<mark class="mark-background">__</mark>stack_list = []
+
+stack_object = Stack()
+print(len(stack_object.<mark class="mark-background">__</mark>stack_list))
+
+</codep>
+<br>
+
+ 
+
+<p>The change invalidates the program.</p>
+
+<p>Why?</p>
+
+ 
+<p>When any class component has a <strong>name starting with two underscores (<codel>__</codel>), it becomes private</strong> – this means that it can be accessed only from within the class.</p>
+
+<p>You cannot see it from the outside world. This is how Python implements the <strong>encapsulation</strong> concept.</p>
+
+<p>Run the program to test our assumptions – an <font face="courier new">AttributeError</font> exception should be raised.</p>
+
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

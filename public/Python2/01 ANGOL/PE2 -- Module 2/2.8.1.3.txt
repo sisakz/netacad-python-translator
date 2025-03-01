@@ -1,0 +1,110 @@
+<problem chapter='2' section='8' slide='1' problem='3' title='Useful exceptions'>
+
+<!--
+Update history:
+2020-09-21 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+
+<h2><font face="Courier New">ImportError</font></h2>
+
+
+<p><strong>Location:</strong> <font face="Courier New">BaseException &larr; Exception &larr; StandardError &larr; ImportError</font></p>
+
+ 
+
+<p><strong>Description:</strong> a concrete exception raised when an import operation fails</p>
+
+
+<p><strong>Code:</strong></p>
+
+<codep class="syntax-color copy line-numbers"># One of these imports will fail – which one?
+
+try:
+    import math
+    import time
+    import abracadabra
+
+except:
+    print('One of your imports has failed.')
+</codep>
+
+<br>
+
+
+
+<br>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+
+<h2><font face="Courier New">KeyError</font></h2>
+
+
+<p><strong>Location:</strong> <font face="Courier New">BaseException &larr; Exception &larr; LookupError &larr; KeyError</font></p>
+
+ 
+
+<p><strong>Description:</strong> a concrete exception raised when you try to access a non-existent element in a collection (e.g., a dictionary's element)</p>
+
+<p><strong>Code:</strong></p>
+
+<codep class="syntax-color copy line-numbers"># How to abuse the dictionary
+# and how to deal with it?
+
+dictionary = {'a': 'b', 'b': 'c', 'c': 'd'}
+ch = 'a'
+
+try:
+    while True:
+        ch = dictionary[ch]
+        print(ch)
+except KeyError:
+    print('No such key:', ch)
+</codep>
+
+<br>
+
+
+
+
+<p>We are done with exceptions for now, but they'll return when we discuss object-oriented programming in Python. You can use them to protect your code from bad accidents, but you also have to learn how to dive into them, exploring the information they carry.</p>
+
+<p>Exceptions are in fact objects – however, we can tell you nothing about this aspect until we present you with classes, objects, and the like.</p>
+
+<p>For the time being, if you'd like to learn more about exceptions on your own, look into the Standard Python Library at <a href="https://docs.python.org/3.6/library/exceptions.html" target="_blank">https://docs.python.org/3.6/library/exceptions.html</a>.</p>
+
+
+
+
+
+<br>
+<br>
+
+</div>
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

@@ -1,0 +1,56 @@
+<problem chapter='3' section='6' slide='1' problem='1' title='Exceptions once again'>
+
+<!--
+Update history:
+2020-10-01 Grzegorz (reviewed, PEP-8 compliance check)
+-->
+
+<code>
+def reciprocal(n):
+    try:
+        n = 1 / n
+    except ZeroDivisionError:
+        print("Division failed")
+        return None
+    else:
+        print("Everything went fine")
+        return n
+
+
+print(reciprocal(2))
+print(reciprocal(0))
+
+</code>
+
+
+
+<h1>More about exceptions</h1>
+
+
+<p>Discussing object programming offers a very good opportunity to return to exceptions. The object-oriented nature of Python's exceptions makes them a very flexible tool, able to fit to specific needs, even those you don't yet know about.</p>
+
+<p>Before we dive into the <strong>objective face of exceptions</strong>, we want to show you some syntactical and semantic aspects of how Python treats the <i>try-except</i> block, as it offers a little more than what we have presented so far.</p>
+
+<p>The first feature we want to discuss here is an additional, possible branch that can be placed inside (or rather, directly behind) the <i>try-except</i> block – it's the part of the code starting with <codel>else</codel> – just like in the example in the editor.</p>
+<br>
+
+<p>A code labelled in this way is executed when (and only when) no exception has been raised inside the <codel>try:</codel> part. We can say that exactly one branch can be executed after <codel>try:</codel> – either the one beginning with <codel>except</codel> (don't forget that there can be more than one branch of this kind) or the one starting with <codel>else</codel>.</p>
+
+<p>Note: the <codel>else:</codel> branch has to be located after the last <codel>except</codel> branch.</p>
+
+<p>The example code produces the following output:</p>
+
+<codep>Everything went fine
+0.5
+Division failed
+None</codep>
+
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

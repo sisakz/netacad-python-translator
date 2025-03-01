@@ -1,0 +1,158 @@
+<problem chapter='2' section='3' slide='1' problem='17' title='SECTION SUMMARY'>
+
+<!--
+Update history:
+2020-09-03 Sysio (first version)
+2020-09-28 Grzegorz (review, file creation)
+
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<h1>Key takeaways</h1>
+
+<br>
+
+<p>1. Some of the methods offered by strings are:</p>
+<ul>
+<li><codel>capitalize()</codel> – changes all string letters to capitals;</li>		
+<li><codel>center()</codel> – centers the string inside the field of a known length;</li>
+<li><codel>count()</codel> – counts the occurrences of a given character;</li>	
+<li><codel>join()</codel> – joins all items of a tuple/list into one string;</li>
+<li><codel>lower()</codel> – converts all the string's letters into lower-case letters;</li>
+<li><codel>lstrip()</codel> – removes the white characters from the beginning of the string;</li>
+<li><codel>replace()</codel> – replaces a given substring with another;</li>
+<li><codel>rfind()</codel> – finds a substring starting from the end of the string;</li>
+<li><codel>rstrip()</codel> – removes the trailing white spaces from the end of the string;</li>
+<li><codel>split()</codel> – splits the string into a substring using a given delimiter;</li>
+<li><codel>strip()</codel> – removes the leading and trailing white spaces;</li>
+<li><codel>swapcase()</codel> – swaps the letters' cases (lower to upper and vice versa)</li>
+<li><codel>title()</codel> – makes the first letter in each word upper-case;</li>
+<li><codel>upper()</codel> – converts all the string's letter into upper-case letters.</li>
+</ul>
+
+<br>
+
+<p>2. String content can be determined using the following methods (all of them return Boolean values):</p>
+<ul>
+<li><codel>endswith()</codel> – does the string end with a given substring?</li>		
+<li><codel>isalnum()</codel> – does the string consist only of letters and digits?</li>	
+<li><codel>isalpha()</codel> – does the string consist only of letters?</li>
+<li><codel>islower()</codel> – does the string consists only of lower-case letters?</li>
+<li><codel>isspace()</codel> – does the string consists only of white spaces?</li>
+<li><codel>isupper()</codel> – does the string consists only of upper-case letters?</li>
+<li><codel>startswith()</codel> – does the string begin with a given substring?</li>
+
+</ul>
+
+<br>
+
+
+<br>
+
+</div>
+<div class="small-12 large-6 columns">
+
+<br>
+
+<script>
+function solution (id) {
+    var element = document.getElementById(id);
+    
+if (element.style.display === "none") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
+    }
+}
+</script>
+
+
+<p><strong>Exercise 1</strong></p>
+<p>What is the expected output of the following code?</p>
+<codep>for ch in "abc123XYX":
+    if ch.isupper():
+        print(ch.lower(), end='')
+    elif ch.islower():
+        print(ch.upper(), end='')
+    else:
+        print(ch, end='')
+
+</codep>
+<br>
+
+<button class="button tiny" onclick="solution('sol1')">Check</button>
+
+<p id="sol1" style="display: none;"><codep>ABC123xyz</codep>
+</p>
+
+
+
+<br><br>
+
+<p><strong>Exercise 2</strong></p>
+<p>What is the expected output of the following code?</p>
+<codep>s1 = 'Where are the snows of yesteryear?'
+s2 = s1.split()
+print(s2[-2])
+
+</codep>
+<br>
+
+<button class="button tiny" onclick="solution('sol2')">Check</button>
+
+<p id="sol2" style="display: none;"><codep>of</codep>
+</p>
+
+
+<br><br>
+
+<p><strong>Exercise 3</strong></p>
+<p>What is the expected output of the following code?</p
+>
+<codep>the_list = ['Where', 'are', 'the', 'snows?']
+s = '*'.join(the_list)
+print(s)
+
+</codep>
+<br>
+
+<button class="button tiny" onclick="solution('sol3')">Check</button>
+
+<p id="sol3" style="display: none;"><codep>Where*are*the*snows?</codep>
+</p>
+
+
+<br><br>
+
+<p><strong>Exercise 4</strong></p>
+<p>What is the expected output of the following code?</p>
+<codep>s = 'It is either easy or impossible'
+s = s.replace('easy', 'hard').replace('im', '')
+print(s)
+
+</codep>
+<br>
+
+<button class="button tiny" onclick="solution('sol4')">Check</button>
+
+<p id="sol4" style="display: none;"><codep>It is either hard or possible
+</codep>
+</p>
+
+
+<br>
+
+</div>
+
+</div>
+</div>
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>
+

@@ -1,0 +1,103 @@
+<problem chapter='3' section='5' slide='1' problem='3' title='OOP Fundamentals: Inheritance'>
+
+<!--
+Update history:
+2020-10-01 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h1>Inheritance - why and how?</h1>
+
+<p>The term inheritance is older than computer programming, and it describes the common practice of passing different goods from one person to another upon that person's death. The term, when related to computer programming, has an entirely different meaning.</p>
+
+<br>
+
+<center><img src="/uploads/media/default/0001/01/5afc4a6dfa008a552c43c806c647923e22ad25fd.png" alt="The concept of inheritance" width="55%"></center>
+
+<br><br>
+
+<p>Let's define the term for our purposes:</p>
+
+<p>Inheritance is a common practice (in object programming) of <strong>passing attributes and methods from the superclass (defined and existing) to a newly created class, called the subclass</strong>.</p>
+
+<p>In other words, inheritance is <strong>a way of building a new class, not from scratch, but by using an already defined repertoire of traits</strong>. The new class inherits (and this is the key) all the already existing equipment, but is able to add some new ones if needed.</p>
+
+<p>Thanks to that, it's possible to <strong>build more specialized (more concrete) classes</strong> using some sets of predefined general rules and behaviors.</p>
+
+
+
+
+
+<br> 
+<br>
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+<p>The most important factor of the process is the relation between the superclass and all of its subclasses (note: if <i>B</i> is a subclass of <i>A</i> and <i>C</i> is a subclass of <i>B</i>, this also means than <i>C</i> is a subclass of <i>A</i>, as the relationship is fully transitive).</p>
+
+
+<p>A very simple example of <strong>two-level inheritance</strong> is presented here:</p>
+
+<codep class="syntax-color">class Vehicle:
+    pass
+
+
+class LandVehicle(Vehicle):
+    pass
+
+
+class TrackedVehicle(LandVehicle):
+    pass
+</codep>
+
+<br>
+
+
+<p>All the presented classes are empty for now, as we're going to show you how the mutual relations between the super- and subclasses work. We'll fill them with contents soon.</p>
+
+<p>We can say that:</p>
+
+<ul>
+<li>The <codel>Vehicle</codel> class is the superclass for both the <codel>LandVehicle</codel> and <codel>TrackedVehicle</codel> classes;</li>
+<li>The <codel>LandVehicle</codel> class is a subclass of <codel>Vehicle</codel> and a superclass of <codel>TrackedVehicle</codel> at the same time;</li>
+<li>The <codel>TrackedVehicle</codel> class is a subclass of both the <codel>Vehicle</codel> and <codel>LandVehicle</codel> classes.</li>
+</ul>
+
+<p>We understand this just by reading the code (in other words, we know it because we can see it).</p>
+
+<p>Does Python know the same? Is it possible to ask Python about it? Yes, it is.</p>
+
+
+
+
+
+
+<br>
+<br>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

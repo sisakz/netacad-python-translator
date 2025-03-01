@@ -1,0 +1,52 @@
+<problem chapter='1' section='2' slide='1' problem='7' title='Useful modules | random'>
+
+<!--
+Update history:
+2020-08-31 Grzegorz (review, PEP-8 compliance check, update)
+2021-06-29 Grzegorz (corrections)
+-->
+
+<code>from random import randrange, randint
+
+print(randrange(1), end=' ')
+print(randrange(0, 1), end=' ')
+print(randrange(0, 1, 1), end=' ')
+print(randint(0, 1))
+
+</code>
+
+<h1>Selected functions from the <font face="Courier New">random</font> module: continued</h1>
+
+<p><b>The <font face="Courier New">randrange</font> and <font face="Courier New">randint</font> functions</b></p>
+
+<p>If you want integer random values, one of the following functions would fit better:</p>
+
+<ul>
+<li><codel>randrange(end)</codel></li>
+<li><codel>randrange(beg, end)</codel></li>
+<li><codel>randrange(beg, end, step)</codel></li>
+<li><codel>randint(left, right)</codel></li>
+</ul>
+ 
+
+<p>The first three invocations will generate an integer taken (pseudorandomly) from the range (respectively):</p>
+
+<ul>
+<li><codel>range(end)</codel></li>
+<li><codel>range(beg, end)</codel></li>
+<li><codel>range(beg, end, step)</codel></li>
+</ul>
+ 
+
+<p>Note the implicit <strong>right-sided exclusion</strong>!</p>
+
+<p>The last function is an equivalent of <codel>randrange(left, right+1)</codel> – it generates the integer value <codel>i</codel>, which falls in the range [left, right] (no exclusion on the right side).</p>
+
+<p>Look at the code in the editor. This sample program will consequently output a line consisting of three zeros and either a zero or one at the fourth place.</p>
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

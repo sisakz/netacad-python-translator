@@ -1,0 +1,82 @@
+<problem chapter='4' section='3' slide='1' problem='5' title='Working with real files'>
+
+<!--
+Update history:
+2020-10-07 Grzegorz (review, PEP-8 compliance check)
+2020-10-29 Grzegorz (code fix: strrerror instead of strerr)
+2021-07-07 Grzegorz (code corrections - important!)
+-->
+
+<code>
+from os import strerror
+
+try:
+    character_counter = line_counter = 0
+    stream = open('text.txt', 'rt')
+    lines = stream.readlines(20)
+    while len(lines) != 0:
+        for line in lines:
+            line_counter += 1
+            for char in line:
+                print(char, end='')
+                character_counter += 1
+        lines = stream.readlines(10)
+    stream.close()
+    print("\n\nCharacters in file:", character_counter)
+    print("Lines in file:     ", line_counter)
+except IOError as e:
+    print("I/O error occurred:", strerror(e.errno))
+
+</code>
+
+
+
+<h1>Processing text files: <font face="Courier New">readlines()</font></h1>
+
+
+<p>Another method, which treats text file as a set of lines, not characters, is <codel>readlines()</codel>.</p>
+
+<p>The <codel>readlines()</codel> method, when invoked without arguments, tries to <strong>read all the file contents, and returns a list of strings, one element per file line</strong>.</p>
+
+<p>If you're not sure if the file size is small enough and don't want to test the OS, you can convince the <codel>readlines()</codel> method to read not more than a specified number of bytes at once (the returning value remains the same – it's a list of a string).</p>
+
+<p>Feel free to experiment with the following example code to understand how the <codel>readlines()</codel> method works:</p>
+
+<p><codep class="syntax-color copy">stream = open("text.txt")
+print(stream.readlines(20))
+print(stream.readlines(20))
+print(stream.readlines(20))
+print(stream.readlines(20))
+stream.close()
+</codep></p>
+
+<p><strong>The maximum accepted input buffer size is passed to the method as its argument</strong>.</p>
+
+<p>You may expect that <codel>readlines()</codel> can process a file's contents more effectively than <codel>readline()</codel>, as it may need to be invoked fewer times.</codel>
+
+<p>Note: when there is nothing to read from the file, the method returns an empty list. Use it to detect the end of the file.</p>
+
+<p>To the extent of the buffer's size, you can expect that increasing it may improve input performance, but there is no golden rule for it – try to find the optimal values yourself.</p>
+
+<br>
+
+<p>Look at the code in the editor. We've modified it to show you how to use <codel>readlines()</codel>.</p>
+
+<p>We've decided to use a 15-byte-long buffer. Don't think it's a recommendation.</p>
+
+<p>We've used such a value to avoid the situation in which the first <codel>readlines()</codel> invocation consumes the whole file.</p>
+
+<p>We want the method to be forced to work harder, and to demonstrate its capabilities.</p>
+
+<p>There are <strong>two nested loops in the code</strong>: the outer one uses <codel>readlines()</codel>'s result to iterate through it, while the inner one prints the lines character by character.</p>
+
+
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

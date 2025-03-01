@@ -1,0 +1,73 @@
+<problem chapter='2' section='4' slide='1' problem='3' title='String in action'>
+
+<!--
+Update history:
+2020-09-23 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>
+# Demonstrating the sorted() function:
+first_greek = ['omega', 'alpha', 'pi', 'gamma']
+first_greek_2 = sorted(first_greek)
+
+print(first_greek)
+print(first_greek_2)
+
+print()
+
+# Demonstrating the sort() method:
+second_greek = ['omega', 'alpha', 'pi', 'gamma']
+print(second_greek)
+
+second_greek.sort()
+print(second_greek)
+
+</code>
+
+
+
+<h1>Sorting</h1>
+
+<p>Comparing is closely related to sorting (or rather, sorting is in fact a very sophisticated case of comparing).</p>
+
+<p>This is a good opportunity to show you two possible ways to <strong>sort lists containing strings</strong>. Such an operation is very common in the real world – any time you see a list of names, goods, titles, or cities, you expect them to be sorted.</p>
+
+<p>Let's assume that you want to sort the following list:</p>
+
+<codep class="syntax-color"> greek = ['omega', 'alpha', 'pi', 'gamma']
+</codep>
+<br>
+
+<p>In general, Python offers two different ways to sort lists.</p>
+
+<p>The first is implemented as <strong>a function named <codel>sorted()</codel></strong>.
+
+<p>The function takes one argument (a list) and <strong>returns a new list</strong>, filled with the sorted argument's elements. (Note: this description is a bit simplified compared to the actual implementation – we'll discuss it later.)</p>
+
+<p>The original list remains untouched.</p>
+
+<p>Look at the code in the editor, and run it. The snippet produces the following output:</p>
+
+<codep>['omega', 'alpha', 'pi', 'gamma']
+['alpha', 'gamma', 'omega', 'pi']</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+
+<p>The second method affects the list itself – <strong>no new list is created</strong>. Ordering is performed in situ by the method named <codel>sort()</codel>.</p>
+
+<p>The output hasn't changed:</p>
+
+<codep>['omega', 'alpha', 'pi', 'gamma']
+['alpha', 'gamma', 'omega', 'pi']</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+<p>If you need an order other than non-descending, you have to convince the function/method to change its default behaviors. We'll discuss it soon.</p>
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

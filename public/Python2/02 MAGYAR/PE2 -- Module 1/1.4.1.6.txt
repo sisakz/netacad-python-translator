@@ -1,0 +1,87 @@
+<problem chapter='1' section='4' slide='1' problem='6' title='pip telepítése MS Windows alatt'>
+
+<!--
+Update history:
+2020-09-23 Grzegorz (created)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h1><i>pip</i> MS Windows alatt</h1>
+
+<p>Az MS Windows Python telepítője már tartalmazza a <i>pip</i>-et, így nem kell további lépéseket tenni a telepítéshez. Sajnos, ha a PATH változó rosszul van beállítva, a <i>pip</i> nem érhető el.</p>
+
+<p>Azért, hogy megbizonyosodj arról, hogy nem vezettünk félre, próbáld meg a következőt:</p>
+
+<ul>
+<li>nyisd meg a Windows konzolt (<i>CMD</i> vagy <i>PowerShell</i>, ahogy tetszik)</li>
+<li>hajtsd végre a következő parancsot:
+<br><br>
+<codep class="syntax-color">pip --version
+</codep>
+<br>
+
+<li>a legoptimistább forgatókönyv szerint (és nagyon szeretnénk, ha ez történne) valami ilyesmit fogsz látni:</li>
+
+<ul>
+
+<br><br>
+
+
+<center><img class="lightbox" src="/uploads/media/default/0001/02/c2124d5b40be0a6f86a6cb9b5381291a8a025fc8.png" width="95%" alt="pip --version, python 3.8"></center>
+
+<br>
+
+
+
+
+
+<br>
+<br> 
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+<ul>
+
+    <li>
+        ennek az üzenetnek a hiánya azt jelentheti, hogy a PATH változó vagy helytelenül mutat a Python binárisok tárhelyére, vagy egyáltalán nem mutat oda; például a PATH változó a következő szövegrészletet tartalmazza:
+        <br><br>
+
+        <codep>
+            C:\Program Files\Python3\Scripts\;C:\Program Files\Python3\;
+
+        </codep>
+        <br>
+
+    <li>a legegyszerűbb módja a PATH változó újrakonfigurálásának, ha <b>újra telepítjük a Python</b>-t és utasítjuk a telepítőt, hogy állítsa be helyettünk.</li>
+</ul>
+
+
+<br>
+<br>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

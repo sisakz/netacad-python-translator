@@ -1,0 +1,59 @@
+<problem chapter='1' section='4' slide='1' problem='5' title='PIP'>
+
+<!--
+Update history:
+2020-09-23 Grzegorz (created)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h1>A <i>pip</i> telepítése</h1>
+
+<p>A kérdés, amit most fel kell tenni: hogyan lehet megfelelő sajtkést szerezni? Más szóval, hogyan lehet biztosítani, hogy a <i>pip</i> telepítve legyen, és készen álljon a működésre?</p>
+
+<p>A legpontosabb válasz az "attól függ". Tényleg.</p>
+
+<p>Néhány Python telepítéshez jár a <i>pip</i>, néhányhoz nem. Ráadásul ez nem csak attól függ, hogy milyen operációs rendszert használsz, bár ez nagyon fontos tényező.</p>
+
+<p>Kezdjük az MS Windows rendszerrel.</p>
+
+
+
+
+<br>
+<br> 
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+
+
+<center><img src="/uploads/media/default/0001/02/c2c84a0d3cbba2ae67644a7ac3949c1fbf479e2f.png" width="70%" alt="The console concept with pip and the prompt symbol"></center>
+
+<br>
+<br>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

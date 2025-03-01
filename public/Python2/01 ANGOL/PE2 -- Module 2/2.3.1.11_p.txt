@@ -1,0 +1,56 @@
+<problem chapter='2' section='3' slide='1' problem='11' title='String methods'>
+
+<!--
+Update history:
+2020-09-23 Grzegorz (review, PEP-8 compliance check, update)
+2020-10-22 Grzegorz (Correcting the third paragraph sentence)
+2021-06-30	Grzegorz (corrections)
+-->
+
+<code>
+# Demonstrating the replace() method:
+print("www.netacad.com".replace("netacad.com", "pythoninstitute.org"))
+print("This is it!".replace("is", "are"))
+print("Apple juice".replace("juice", ""))
+
+</code>
+
+
+
+<h1>The <font face="Courier New">replace()</font> method</h1>
+
+<p>The <strong>two-parameter</strong> <codel>replace()</codel> method <strong>returns a copy of the original string in which all occurrences of the first argument have been replaced by the second argument</strong>.</p>
+
+<p>Look at the example code in the editor. Run it.</p>
+
+<p>The example outputs:</p>
+
+<codep>www.pythoninstitute.org
+Thare are it!
+Apple</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+<p>If the second argument is an empty string, <b>replacing means actually removing</b> the first argument's string. What kind of magic happens if the first argument is an empty string?</p>
+
+
+<br>
+
+<p>The <strong>three-parameter</strong> <codel>replace()</codel> variant uses the third argument (a number) to <strong>limit the number of replacements</strong>.</p>
+
+<p>Look at the modified example code below:</p>
+
+<codep class="syntax-color copy">print("This is it!".replace("is", "are", 1))
+print("This is it!".replace("is", "are", 2))
+</codep>
+
+<br>
+
+<p>Can you guess its output? Run the code and check your guesses.</p>
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

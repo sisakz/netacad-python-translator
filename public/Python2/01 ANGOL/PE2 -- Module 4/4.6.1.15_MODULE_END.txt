@@ -1,0 +1,73 @@
+<problem chapter='4' section='6' slide='1' problem='15' title='Module Completion'>
+
+<!--
+Update history:
+2020-10-18 Grzegorz (file creation)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<h1>Congratulations! You have completed <i>PE2: Module 4</i>.</h1>
+
+<br>
+
+
+<p>Well done! You've reached the end of Module 4 and completed a major milestone in your Python programming education. Here's a short summary of the objectives you've covered and become familiar with in Module 4:</p>
+
+<ul>
+<li>generators and iterators;</li>
+
+<li>list comprehensions;</li>
+
+<li>the <i>lambda</i>, <i>map</i>, and <i>filter</i> functions;</li>
+
+<li>closures;</li>
+
+<li>working with files (file streams, file processing, diagnosing stream problems)</li>
+
+<li>processing text and binary files;</li>
+
+<li>selected Python STL modules: <i>os</i>, <i>datetime</i>, <i>time</i>, and <i>calendar</i>.</li>
+
+</ul>
+
+<br>
+
+<p>You are now ready to take the module quiz and attempt the final challenge: Module 4 Test, which will help you gauge what you've learned so far.</p>
+
+
+<br>
+<br>
+
+</div>
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+
+
+<center><img src="/uploads/media/default/0001/01/29ed2aa31a1a26221e4eac3b69d973a33cbf562e.png" width="65%" alt="Module completion – congratulations"></center>
+<br>
+
+
+
+
+<br>
+
+</div>
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

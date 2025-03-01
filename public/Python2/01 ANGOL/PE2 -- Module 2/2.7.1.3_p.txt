@@ -1,0 +1,73 @@
+<problem chapter='2' section='7' slide='1' problem='3' title='The anatomy of exceptions'>
+
+<!--
+Update history:
+2020-09-21 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>try:
+    y = 1 / 0
+except ZeroDivisionError:
+    print("Zero Division!")
+except ArithmeticError:
+    print("Arithmetic problem!")
+
+print("THE END.")
+
+</code>
+
+
+
+<h1>Exceptions: continued</h1>
+
+<p>Look at the code in the editor. What will happen here?</p>
+
+<p>The first matching branch is the one containing <codel>ZeroDivisionError</codel>. It means that the console will show:</p>
+
+<codep>Zero division!
+THE END.</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+
+<p>Will it change anything if we swap the two <codel>except</codel> branches around? Just like here below:</p>
+
+<codep class="syntax-color copy line-numbers">try:
+    y = 1 / 0
+except ArithmeticError:
+    print("Arithmetic problem!")
+except ZeroDivisionError:
+    print("Zero Division!")
+
+print("THE END.")
+</codep>
+
+<br>
+
+<p>The change is radical – the code's output is now:</p>
+
+<codep>Arithmetic problem!
+THE END.</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+<p>Why, if the exception raised is the same as previously?</p>
+
+<p>The exception is the same, but the more general exception is now listed first – it will catch all zero divisions too. It also means that there's no chance that any exception hits the <font face="Courier New">ZeroDivisionError</font> branch. This branch is now completely unreachable.</p>
+
+ 
+<p>Remember:</p>
+
+<ul>
+<li>the order of the branches matters!</li>
+<li>don't put more general exceptions before more concrete ones;</li>
+<li>this will make the latter one unreachable and useless;</li>
+<li>moreover, it will make your code messy and inconsistent;</li>
+<li>Python won't generate any error messages regarding this issue.</li>
+</ul>
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

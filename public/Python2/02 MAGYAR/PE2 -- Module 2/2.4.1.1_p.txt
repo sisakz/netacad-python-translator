@@ -1,0 +1,78 @@
+<problem chapter='2' section='4' slide='1' problem='1' title='A karakterláncok működése'>
+
+<!--
+Update history:
+2020-09-23 Grzegorz (review, PEP-8 compliance check, update)
+2021-06-30	Grzegorz (corrections)
+-->
+
+<code>
+# Test examples here.
+
+</code>
+
+
+
+<h1>Karakterláncok összehasonlítása</h1>
+
+<p>A Python karakterláncokat <strong>ugyanazokkal az operátorokkal lehet összehasonlítani</strong> mint amiket a számokkal kapcsolatban használtál.</p>
+
+<p>Vess egy pillantást ezekre az operátorokra – ezek is mind képesek karakterláncok összehasonlítására:</p>
+
+<ul>
+<li><codel>==</codel></li>
+<li><codel>!=</codel></li>
+<li><codel>&gt;</codel></li>
+<li><codel>&gt;=</codel></li>
+<li><codel>&lt;</codel></li>
+<li><codel>&lt;=</codel></li>
+</ul>
+
+<p>Van egy „de” – az ilyen összehasonlítások eredményei néha kissé meglepőek lehetnek. Ne felejtsük el, hogy a Python nincs tisztában (nem is lehet semmilyen módon) a finom nyelvi kérdésekkel – csak a <strong>kódpontértékeket hasonlítja össze</strong>, karakterről karakterre.</p>
+
+<p>Az ilyen műveletek eredménye néha meghökkentő. Kezdjük a legegyszerűbb esetekkel.</p>
+
+
+<br>
+
+<p>Két karakterlánc akkor egyenlő, ha ugyanazokból a karakterekből állnak, ugyanabban a sorrendben. Ugyanígy két karakterlánc nem egyenlő, ha nem azonos karakterekből állnak azonos sorrendben.</p>
+
+<p>Mindkét összehasonlítás eredménye <codel>True</codel>:</p>
+
+<codep class="syntax-color">'alpha' == 'alpha'
+'alpha' != 'Alpha'
+</codep>
+<br>
+
+<br>
+
+<p>A karakterláncok közötti végső kapcsolatot a <strong>két karakterlánc első különböző karakterének összehasonlításával </strong> határozzuk meg (mindig tartsuk szem előtt az ASCII/UNICODE kódpontokat).</p>
+
+<p>Ha két különböző hosszúságú karakterláncot hasonlítunk össze, és a rövidebbik azonos a hosszabbik elejével, akkor a <strong>hosszabbik karakterláncot tekintjük nagyobbnak</strong>.</p>
+
+<p>Pont mint itt:</p>
+
+<codep class="syntax-color">'alpha' < 'alphabet'
+</codep>
+
+<br>
+
+<p>A kapcsolat <codel>True</codel>.</p>
+
+
+<p>A karakterlánc-összehasonlítás mindig nagy- és kisbetű-érzékeny (a <strong>nagybetűket kisebbnek vesszük, mint a kisbetűket</strong>).
+
+<p>A kifejezés <codel>True</codel>:</p>
+
+<codep class="syntax-color">'béta' > 'Béta'
+</codep>
+
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

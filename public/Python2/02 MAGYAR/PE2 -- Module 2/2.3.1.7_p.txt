@@ -1,0 +1,68 @@
+<problem chapter='2' section='3' slide='1' problem='7' title='Karakterlánc tagfüggvények'>
+
+<!--
+Update history:
+2020-09-22 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>
+# Example 1: Demonstrating the islower() method:
+print("Moooo".islower())
+print('moooo'.islower())
+
+# Example 2: Demonstrating the isspace() method:
+print(' \n '.isspace())
+print(" ".isspace())
+print("mooo mooo mooo".isspace())
+
+# Example 3: Demonstrating the isupper() method:
+print("Moooo".isupper())
+print('moooo'.isupper())
+print('MOOOO'.isupper())
+
+</code>
+
+
+
+<h1>Az <font face="Courier New">islower()</font> tagfüggvény</h1>
+
+<p>Az <codel>islower()</codel> tagfüggvény az <codel>isalpha()</codel> egy kényes változata - <strong>csak kisbetűket</strong> fogad el.</p>
+
+<p>Nézd meg az 1. példát a szerkesztőben – a kimenet:</p>
+
+<codep>False
+True</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+<br>
+<h2>Az <font face="Courier New">isspace()</font> tagfüggvény</h2>
+
+<p>Az <codel>isspace()</codel> tagfüggvény <strong>a whitespace karaktereket azonosítja</strong> – minden más karaktert figyelmen kívül hagy (ekkor az eredmény <codel>False</codel> lesz).</p>
+
+<p>Nézd meg a 2. példát a szerkesztőben – a kimenet a következő:</p>
+
+<codep>True
+True
+False</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+<br>
+
+<h2>Az <font face="Courier New">isupper()</font> tagfüggvény</h2>
+
+<p>Az <codel>isupper()</codel> tagfüggvény az <codel>islower()</codel> nagybetűs változata  – <strong>csak a nagybetűs karakterekre</strong> koncentrál.</p>
+
+<p>Ismét nézd meg a kódot a szerkesztőben – a 3. példa a következő kimenetet eredményezi:</p>
+
+<codep>False
+False
+True</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

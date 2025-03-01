@@ -1,0 +1,104 @@
+<problem chapter='1' section='4' slide='1' problem='13' title='How to use pip'>
+
+<!--
+Update history:
+2020-09-25	Grzegorz (created)
+2021-06-29	Grzegorz (corrections)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<h1>How to use <i>pip</i>: continued</h1>
+
+
+<p>Assuming that your search is successful (or you’re determined to install a specific package of an already known name) you can use pip to install the package onto your computer.</p>
+
+<p>Two possible scenarios may be put into action now:</p>
+
+<ul>
+<li>you want to install a new package for you only – it won't be available for any other user (account) existing on your computer; this procedure is the only one available if you can’t elevate your permissions and act as a system administrator;</li>
+
+<li>you’ve decided to install a new package system-wide – you have administrative rights and you're not afraid to use them.</li>
+</ul>
+
+
+<p>To distinguish between these two actions, pip uses a dedicated option named <codel>--user</codel> (note the double dash). The presence of this option instructs pip to act locally on behalf of your (non-administrative) user.</p>
+
+<p>If you don’t add this, pip assumes that you’re a system administrator and it’ll do nothing to correct you if you’re not.</p>
+
+<p>In our case, we’re going to install a package named pygame – it's an extended and complex library allowing programmers to develop computer games using Python.</p>
+
+<p>The project has been in development since the year 2000, so it's a mature and reliable piece of code. If you want to know more about the project and about the community which leads it, visit <a href="https://www.pygame.org" target="_blank">https://www.pygame.org</a>.</p>
+
+<p>If you’re a system administrator, you can install pygame using the following command:</p>
+
+<p><codep class="syntax-color">pip install pygame
+</codep></p>
+
+
+
+
+<br>
+<br> 
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+<p>If you're not an admin, or you don't want to fatten up your OS by installing pygame system-wide, you can install it for you only:</p>
+
+<p><codep class="syntax-color">pip install --user pygame
+</codep></p>
+
+<p>It's up to you which of the above procedures you want to take place.</p>
+
+<center><img class="lightbox" src="/uploads/media/default/0001/02/81e227dd62808e8800ca2258b00d8a97fc89c4eb.png" width="95%" alt="pip install --user pygame"></center>
+<br>
+
+<p>Pip has a habit of displaying fancy textual animation indicating the installation progress, so watch the screen carefully – don't miss the show! If the process is successful, you’ll see something like this:</p>
+
+
+
+<p>We encourage you to use:</p>
+
+<p><codep class="syntax-color">pip show pygame
+</codep></p>
+
+<p>and</p>
+
+<p><codep class="syntax-color">pip list
+</codep></p>
+
+<p>to get more information about what actually happened.</p>
+
+
+
+
+
+
+
+<br>
+<br>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

@@ -1,0 +1,50 @@
+<problem chapter='3' section='5' slide='1' problem='8' title='OOP alapok: Öröklés'>
+
+<!--
+Update history:
+2020-10-01 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>class Super:
+    def __init__(self, name):
+        self.name = name
+
+    def __str__(self):
+        return "My name is " + self.name + "."
+
+
+class Sub(Super):
+    def __init__(self, name):
+        super().__init__(name)
+
+
+obj = Sub("Andy")
+
+print(obj)
+
+</code>
+
+
+
+<h1>Hogyan találja meg a Python a tulajdonságokat és metódusokat (folytatás)</h1>
+
+<p>Nézzük meg a kódot a szerkesztőben! Módosítottuk, hogy egy másik módszert mutassunk a szuperosztályon belül definiált bármely entitás elérésére.</p>
+
+<p>Az utolsó példában explicit megneveztük a szuperosztályt. Ebben a példában a <codel>super()</codel> függvényt használjuk, amely <strong>anélkül éri el a szuperosztályt, hogy ismernünk kellene a nevét</strong>:</p>
+
+<codep class="syntax-color">super().__init__(name)
+</codep>
+<br>
+
+<p>A <codel>super()</codel> függvény olyan környezetet hoz létre, amelyben nem kell (sőt, nem is szabad) átadni a self argumentumot a meghívott metódusnak - ezért lehetséges a szuperosztály konstruktorának aktiválása egyetlen argumentummal.</p>
+
+<p>Megjegyzés: ezt a mechanizmust nem csak a <strong>szuperosztály konstruktorának meghívására</strong> használhatjuk, hanem a <strong>szuperosztályon belül elérhető erőforrásokhoz való hozzáférésre is</strong>.</p>
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

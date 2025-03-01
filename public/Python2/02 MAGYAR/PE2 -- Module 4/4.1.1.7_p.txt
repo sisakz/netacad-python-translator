@@ -1,0 +1,53 @@
+<problem chapter='4' section='1' slide='1' problem='7' title='Generátor és closure'>
+
+<!--
+Update history:
+2020-10-05 Grzegorz (review, PEP-8 compliance check)
+-->
+
+<code>
+the_list = []
+
+for x in range(10):
+    the_list.append(1 if x % 2 == 0 else 0)
+
+print(the_list)
+
+</code>
+
+
+
+<h1>Bővebben a listaképzésről (folytatás)</h1>
+
+
+<p>Van egy nagyon érdekes szintaxis, amit mindenképp látnod kell. Használhatósága nem korlátozódik a listaképzésekre, de el kell ismernünk, hogy a listaképzések ideális környezetet jelentenek számára.</p>
+
+<P>Ez a <strong>feltételes kifejezés - ahol egy logikai összefüggés eredménye alapján két különböző érték közül az egyik kerül kiválasztásra</strong>.</p>
+
+<p>Nézd:</p>
+
+<p><font size="+1">kifejezés_egy if feltétel else kifejezés_kettő</font></p>
+ 
+
+<p>Első pillantásra talán kicsit meglepőnek tűnik, de nem szabad elfelejteni, hogy ez <strong>nem egy feltételes utasítás</strong>. Sőt, egyáltalán nem is utasítás. Ez egy operátor.</p>
+
+<P>A teljes kifejezés értéke megegyezik az <font face="Courier New">expression_one</font> értékével, ha a feltétel igaz, azaz <codel>True</codel>, és az <font face="Courier New">expression_two</font> értékével, ha nem.</P>
+
+<p>Egy jó példa többet ér minden szónál. Nézd meg a kódot a szerkesztőablakban.</p>
+
+<p>A kód egy listát tölt fel <codel>1</codel>-es és <codel>0</codel>-ás értékekkel - ha egy adott elem indexe páratlan, akkor a lista eleme <codel>0</codel> lesz, egyébként pedig <codel>1</codel>.</p>
+
+<p>Egyszerű? Első pillantásra talán nem. Elegáns? Vitathatatlanul.</p>
+
+ 
+<p>Használhatod ugyanezt a trükköt egy listaképzésen belül is? Igen, használhatod.</p>
+
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

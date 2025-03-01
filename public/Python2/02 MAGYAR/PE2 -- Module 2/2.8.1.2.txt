@@ -1,0 +1,151 @@
+<problem chapter='2' section='8' slide='1' problem='2' title='Hasznos kivételek'>
+
+<!--
+Update history:
+2020-09-21 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+
+<h2><font face="Courier New">KeyboardInterrupt</font></h2>
+
+
+<p><strong>Helyszín:</strong> <font face="Courier New">BaseException &larr; KeyboardInterrupt</font></p>
+
+ 
+
+<p><strong>Leírás:</strong> Konkrét kivétel, amely akkor keletkezik, ha a felhasználó a program végrehajtásának befejezésére szolgáló billentyűparancsot használja (<i>Ctrl-C</i>) a legtöbb operációs rendszerben); ha a kivétel kezelése nem vezet a program befejezéséhez, a program folytatja a végrehajtást.</p>
+
+<p>Megjegyzés: ez a kivétel nem az <font face="Courier New">Exception</font> osztályból származik. Futtassuk le a programot IDLE-ben.</p>
+
+
+<p><strong>Kód:</strong></p>
+
+<codep class="syntax-color copy line-numbers"># Ez a kód nem áll meg
+# a Ctrl-C hatására.
+
+from time import sleep
+
+seconds = 0
+
+while True:
+    try:
+        print(seconds)
+        seconds += 1
+        sleep(1)
+    except KeyboardInterrupt:
+        print("Don't do that!")
+</codep>
+
+<br>
+
+
+
+
+<h2><font face="Courier New">LookupError</font></h2>
+
+
+<p><strong>Helyszín:</strong> <font face="Courier New">BaseException &larr; Exception &larr; LookupError</font></p>
+
+ 
+
+<p><strong>Leírás:</strong> absztrakt kivétel, amely magában foglalja a különböző gyűjteményekre (listákra, szótárakra, tuplekra stb.) való érvénytelen hivatkozásokból eredő hibák által okozott összes kivételt.</p>
+
+
+
+<br><br>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<h2><font face="Courier New">MemoryError</font></h2>
+
+
+<p><strong>Helyszín:</strong> <font face="Courier New">BaseException &larr; Exception &larr; MemoryError</font></p>
+
+ 
+
+<p><strong>Leírás:</strong> Konkrét kivétel, amely akkor lép fel, ha egy művelet nem fejezhető be a szabad memória hiánya miatt. </p>
+
+
+<p><strong>Kód:</strong></p>
+
+<codep class="syntax-color copy line-numbers"># Ez a kód MemoryError kivételt okoz.
+# Figyelem: a kód végrehajtása hatással lehet az operációs rendszer futására.
+# Ne futtasd éles rendszeren!
+
+string = 'x'
+try:
+    while True:
+        string = string + string
+        print(len(string))
+except MemoryError:
+    print('This is not funny!')
+</codep>
+
+<br>
+
+
+
+
+
+
+
+
+<h2><font face="Courier New">OverflowError</font></h2>
+
+
+<p><strong>Helyszín:</strong> <font face="Courier New">BaseException &larr; Exception &larr; ArithmeticError &larr; OverflowError</font></p>
+
+ 
+
+<p><strong>Leírás:</strong> konkrét kivétel, amely akkor lép fel, ha egy művelet olyan nagy számot eredményez amit nem sikerül eltárolni.</p>
+
+<p><strong>Kód:</strong></p>
+
+<codep class="syntax-color copy line-numbers"># A kód kiírja az e k-adik hatványainak értékét
+# k = 1, 2, 4, 8, 16, ... értékekre
+
+from math import exp
+
+ex = 1
+
+try:
+    while True:
+        print(exp(ex))
+        ex *= 2
+except OverflowError:
+    print('The number is too big.')
+</codep>
+
+
+
+
+<br>
+<br>
+
+</div>
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

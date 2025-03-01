@@ -1,0 +1,92 @@
+<problem chapter='4' section='1' slide='1' problem='8' title='Generátor és closure'>
+
+<!--
+Update history:
+2020-10-05 Grzegorz (review, PEP-8 compliance check)
+-->
+
+<code>the_list = [1 if x % 2 == 0 else 0 for x in range(10)]
+
+print(the_list)
+
+</code>
+
+
+
+<h1>Bővebben a listaképzésről (folytatás)</h1>
+
+
+<p>Nézd meg a példát a szerkesztőablakban.</p>
+
+<p>Tömörség és elegancia - e két szó jut az ember eszébe, amikor ránéz a kódra.</p>
+
+<p>Mi a közös a generátorokban és a listaképzésekben? Van köztük valamilyen kapcsolat? Igen. Elég laza kapcsolat, de egyértelmű.</p>
+
+<p>Egyetlen változtatással <strong>bármelyik listaképzés generátorrá alakítható</strong>.</p>
+<br>
+
+<p><b>Listaképzés vs. generátorok</b></p>
+
+<p>Most nézd meg az alábbi kódot. Lássuk, megtalálod-e azt a részletet, amely a listaképzést generátorrá alakítja:</p>
+
+<codep class="syntax-color copy line-numbers">the_list = [1 if x % 2 == 0 else 0 for x in range(10)]
+the_generator = (1 if x % 2 == 0 else 0 for x in range(10))
+
+for v in the_list:
+    print(v, end=" ")
+print()
+
+for v in the_generator:
+    print(v, end=" ")
+print()
+</codep>
+
+<br>
+ 
+
+<p>A <strong>zárójelek</strong>. A szögletes zárójelek listaképzést, a kerek zárójelek generátort hoznak létre.</p>
+
+<P>Viszont futtatáskor a kódok ugyanazt a sort hozzák létre:</P>
+
+<codep>1 0 1 0 1 0 1 0 1 0
+1 0 1 0 1 0 1 0 1 0</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+ 
+
+<p>Honnan tudhatod, hogy a második értékadás generátort hozott létre, nem pedig listát?</p>
+
+<p>Van néhány bizonyíték, amit meg tudunk mutatni. Alkalmazzuk a <codel>len()</codel> függvényt mindkét entitásra.</p>
+
+<p>A <codel>len(the_list)</codel> értéke <codel>10</codel>. Világos és előrelátható. A <codel>len(the_generator)</codel> ezzel szemben kivételt fog eredményezni, és a következő üzenet jelenik meg:</p>
+
+<codep>TypeError: object of type 'generator' has no len()</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+
+<p>Természetesen sem a listát, sem a generátort nem szükséges elmenteni - pontosan ott hozhatod létre őket, ahol szükséged van rájuk - ahogy itt is:</p>
+
+<codep class="syntax-color copy line-numbers">for v in [1 if x % 2 == 0 else 0 for x in range(10)]:
+    print(v, end=" ")
+print()
+
+for v in (1 if x % 2 == 0 else 0 for x in range(10)):
+    print(v, end=" ")
+print()
+</codep>
+
+<br>
+
+<p>Megjegyzés: a kimenet azonos megjelenése nem jelenti azt, hogy mindkét ciklus ugyanúgy működik. Az első ciklusban a lista egészként jön létre (és iterálódik végig) - a ciklus végrehajtásakor ténylegesen létezik.</p>
+
+<p>A második ciklusban egyáltalán nincs lista - csak a generátor által egyesével előállított értékek szerepelnek.</p>
+
+<p>Kísérletezz!</p>
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

@@ -1,0 +1,49 @@
+<problem chapter='1' section='2' slide='1' problem='4' title='Useful modules | math'>
+
+<!--
+Update history:
+2020-08-31 Grzegorz (review, PEP-8 compliance check, update)
+2021-06-29 Grzegorz (corrections)
+-->
+
+<code>from math import ceil, floor, trunc
+
+x = 1.4
+y = 2.6
+
+print(floor(x), floor(y))
+print(floor(-x), floor(-y))
+print(ceil(x), ceil(y))
+print(ceil(-x), ceil(-y))
+print(trunc(x), trunc(y))
+print(trunc(-x), trunc(-y))
+
+</code>
+
+<h1>Selected functions from the <font face="Courier New">math</font> module: continued</h1>
+
+<p>The last group consists of some general-purpose functions like:</p>
+
+<ul>
+<li><codel>ceil(x)</codel> &rarr; the ceiling of x (the smallest integer greater than or equal to x)</li>
+<li><codel>floor(x)</codel> &rarr; the floor of x (the largest integer less than or equal to x)</li>
+<li><codel>trunc(x)</codel> &rarr; the value of x truncated to an integer (be careful – it's not an equivalent either of ceil or floor)</li>
+<li><codel>factorial(x)</codel> &rarr; returns x! (x has to be both an integer and positive)</li>
+<li><codel>hypot(x, y)</codel> &rarr; returns the length of the hypotenuse of a right-angle triangle with the leg lengths equal to x and y (the same as <codel>sqrt(pow(x, 2) + pow(y, 2))</codel> but more precise)</li>
+</ul>
+ 
+
+<p>Look at the code in the editor. Analyze the program carefully.</p>
+
+<p>It demonstrates the fundamental differences between <codel>ceil()</codel>, <codel>floor()</codel> and <codel>trunc()</codel>.</p>
+
+<p>Run the program and check its output.</p>
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

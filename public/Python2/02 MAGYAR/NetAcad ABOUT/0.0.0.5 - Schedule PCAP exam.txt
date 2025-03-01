@@ -1,0 +1,75 @@
+<problem chapter='0' section='0' slide='0' problem='5' title='PCAP-31-03 vizsga'>
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h1>Gratulálunk!</h1>
+
+<p>A teljes Python alapok, két tanfolyamból álló sorozat elvégzése után felkészültél a <a href="https://pythoninstitute.org/pcap-certification-associate/" target="_blank">PCAP - Certified Associate in Python Programming</a> minősítő vizsga letételére.</p>
+
+<p>A minősítő vizsga lehetővé teszi, hogy naprakészen tartsd készségeidet és hogy ezeket a készségeket mások előtt is bizonyítsd. Lehetőséget ad arra, hogy ellenőrizd, bizonyítsd és kihasználd a Python programozási tudásodat. Ami a legfontosabb, hogy ez megnyithatja az utat egy jobb állás és egy jobb fizetés felé, és nagyszerű motiváció az önképzésre és önfejlesztésre.</p>
+
+<p>Turbózd fel karrieredet a <i>PCAP - Certified Associate in Python Programming</i> tanúsítvánnyal - ez egy értékes és elismert bizonyítvány, amely segít a következő szintre emelni karrieredet.</p>
+
+<h2>Mit tegyél most? Szerezd meg a tanúsítványt!</h2>
+
+<p>Használd a kedvezménykódot a vizsgadíj csökkentéséhez, és vásárold meg a PCAP-31-03 vizsgautalványt 50% kedvezménnyel:</p>
+
+<ul>
+<li>Menj az <a href="https://ums.edube.org/store" target="_blank">OpenEDG Voucher Store</a>-ba;</li>
+<li>Adj hozzá egy PCAP-31-03 utalványt a kosárhoz (kattints a <i>+Add to Order (Hozzáadás a megrendeléshez)</i> gombra);</li>
+<li>Kattints az <i>Add Promo Code (Promóciós kód hozzáadása)</i> gombra, és add meg a kedvezménykódot;</li>
+<li>Kattints a <i>Next Step (Következő lépés)</i> gombra, add meg a számlázási és szállítási adatokat, és add le a megrendelést;</li>
+<li>Fizesd ki a díjat. Az utalványt elküldjük a Shipping Information (Szállítási információk) mezőben megadott e-mail címre. A számlát a Billing Information (Számlázási információk) mezőben megadott e-mail címre küldjük.</li>
+</ul>
+
+<p>A PCAP-31-03 vizsgautalványt minden nagyobb hitelkártyával (pl. Visa, MasterCard, American Express), bankkártyával vagy PayPal-fiókon keresztül fizetheted ki. Kérhetsz pro forma számlát, és átutalással is fizethetsz.</p>
+
+<br>
+
+</div>
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<h2>Regisztrálj a vizsgára!</h2>
+
+<p>A PCAP-31-03 vizsgát leteheted otthonról (OnVue Online Proctoring) vagy egy hivatalos vizsgahelyszínen (Pearson VUE Testing Center).</p>
+
+<p>Regisztrálni és időpontot egyeztetni a következőképpen tudsz:</p>
+
+<ul>
+<li>Az <a href="https://home.pearsonvue.com/pythoninstitute" target="_blank">OpenEDG Python Institute Candidate weboldal</a> meglátogatásával (Vizsgaszervező: Pearson VUE vizsgaközpontok / OnVUE Online Proctoring);</li>
+<li>A <a href="https://home.pearsonvue.com/python/contact" target="_blank">Pearson VUE Contact Center ügyfélszolgálatának</a> felhívásával (Vizsgaszervező: Pearson VUE Vizsgaközpontok / OnVUE Online Proctoring);</li>
+<li>Kapcsolatfelvétel az általad választott Pearson VUE Authorized Test Center-rel (Vizsgaszervező: Pearson VUE Testing Centers) - <a href="https://wsr.pearsonvue.com/testtaker/find/testcenter/CPPINSTITUTE?locale=en_US" target=_"blank">Tesztközpont keresése.</a>.</li>
+</ul>
+
+<p>Az OnVUE Online Proctoring szolgáltatás a nap 24 órájában, a hét minden napján, egész évben elérhető.</p>
+
+<p><b>PCAP-31-03 vizsga - hasznos linkek</b>:</p>
+
+<ul>
+<li>További információ a PCAP-31-03 vizsgáról: <a href="https://pythoninstitute.org/pcap-31-03-testing-policies/" target="_blank">Vizsgaszabályzat</a>.</li>
+<li>Ismerkedj meg a PCAP-31-03 <a href="https://pythoninstitute.org/certification/pcap-certification-associate/pcap-exam-syllabus/" target="_blank">vizsga tantervével és célkitűzéseivel</a>.</li>
+<li>Nézd meg az <a href="https://pythoninstitute.org/support/" target="_blank">általunk készített oktatóanyagokat és referenciafüze</a> (görgess az oldal aljára), hogy a vizsgáztatás élménye pozitív és sikeres legyen.</li>
+</ul>
+
+
+<br>
+</div>
+
+</div>
+</div>
+
+
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

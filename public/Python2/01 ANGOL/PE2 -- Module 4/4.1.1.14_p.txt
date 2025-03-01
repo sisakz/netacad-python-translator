@@ -1,0 +1,79 @@
+<problem chapter='4' section='1' slide='1' problem='14' title='Generators and closures'>
+
+<!--
+Update history:
+2020-10-05 Grzegorz (review, PEP-8 compliance check)
+-->
+
+<code>def make_closure(par):
+    loc = par
+
+    def power(p):
+        return p ** loc
+    return power
+
+
+fsqr = make_closure(2)
+fcub = make_closure(3)
+
+for i in range(5):
+    print(i, fsqr(i), fcub(i))
+
+</code>
+
+
+
+<h1>A brief look at closures: continued</h1>
+
+
+<p><strong>A closure has to be invoked in exactly the same way in which it has been declared</strong>.</p>
+
+<p>In the example below:</p>
+
+<codep class="syntax-color copy line-numbers">def outer(par):
+    loc = par
+
+    def inner():
+        return loc
+    return inner
+
+
+var = 1
+fun = outer(var)
+print(fun())
+</codep>
+
+<br>
+
+<p>the <codel>inner()</codel> function is parameterless, so we have to invoke it without arguments.</p>
+
+<p>Now look at the code in the editor. It is fully possible to <strong>declare a closure equipped with an arbitrary number of parameters</strong>, e.g., one, just like the <codel>power()</codel> function.</p>
+
+<p>This means that the closure not only makes use of the frozen environment, but it can also <strong>modify its behavior by using values taken from the outside</strong>.</p>
+
+<p>This example shows one more interesting circumstance – you can <strong>create as many closures as you want using one and the same piece of code</strong>. This is done with a function named <codel>make_closure()</codel>. Note:</p>
+
+<ul>
+<li>the first closure obtained from <codel>make_closure()</codel> defines a tool squaring its argument;</li>
+<li>the second one is designed to cube the argument.</li>
+</ul>
+
+<p>This is why the code produces the following output:</p>
+
+<codep>0 0 0
+1 1 1
+2 4 8
+3 9 27
+4 16 64</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+
+<p>Carry out your own tests.</p>
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

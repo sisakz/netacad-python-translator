@@ -1,0 +1,58 @@
+﻿<problem chapter='2' section='1' slide='1' problem='0' title='Python Essentials 2 - Module 2'>
+
+<!--
+Update history:
+2020-09-28	Grzegorz (first version)
+2021-06-30	Grzegorz (corrections)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-4 columns">
+
+<br>
+
+<h1>Python Essentials 2:
+<br>Module 2</h1>
+
+<p><strong>Strings, String and List Methods, Exceptions</strong></p>
+
+<p>In this module, you will learn about:</p>
+
+<ul>
+<li>Characters, strings and coding standards;</li>
+<li>Strings vs. lists – similarities and differences;</li>
+<li>List methods;</li>
+<li>String methods;</li>
+<li>How Python handles runtime errors;</li>
+<li>Controlling the flow of errors using <codel>try</codel> and <codel>except</codel>;</li>
+<li>The hierarchy of exceptions.</li>
+
+</ul>
+
+<br>
+
+
+</div>
+
+
+
+<div class="small-12 large-8 columns">
+
+<br>
+
+<center><img src="/uploads/media/default/0001/02/17a22cb94c4a45456dcdbc98116527c183548e85.png" alt="Part 2 Module 2 Title Page" width="70%"></center>
+
+<br>
+
+
+</div>
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

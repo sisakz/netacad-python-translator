@@ -1,0 +1,87 @@
+<problem chapter='2' section='1' slide='1' problem='2' title='Karakterek és karakterláncok vs. számítógépek'>
+
+<!--
+Update history:
+2020-09-21 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h1>I18N</h1>
+
+<p>Természetesen a latin ábécé nem elegendő az egész emberiség számára. Ennek az ábécének a használói kisebbségben vannak. Szükség volt valami olyanra, ami rugalmasabb és tágasabb az ASCII-nél, valami olyasmire, ami a világ összes szoftverét alkalmassá teszi a <strong>nemzetköziesítésre</strong>, mert a különböző nyelvek teljesen más ábécét használnak, és ezek az ábécék néha nem olyan egyszerűek, mint a latin.</p>
+
+<p>A <i>nemzetköziesítés (internationalization)</i> szót általában <strong>I18N</strong>-re rövidítik.</p>
+
+<img src="/uploads/media/default/0001/01/a3ba6886fb07ff7ec64c8d24ab55d3c7e39d740e.png" width="80%" alt="I18N Internationalization">
+<br><br>
+ 
+
+<p>Miért? Nézd meg figyelmesen - az angol szó elején egy <i>I</i> betű van, utána <i>18</i> különböző betű, és a végén egy <i>N</i>.</p>
+
+<p>A kissé humoros eredet ellenére a kifejezést számos dokumentumban és szabványban hivatalosan is használják.</p>
+
+<p>Az <strong>I18N szoftver</strong> a jelen korban szabványosnak számít. Minden programot úgy kell megírni, hogy az a világ minden táján, a különböző kultúrák, nyelvek és ábécék között használható legyen.</p>
+
+ 
+<p> Az <strong>ASCII-kód klasszikus formája nyolc bitet használ minden egyes jelre. </strong>Nyolc bit 256 különböző karaktert jelent. Az első 128 a szabványos latin ábécé (kis és nagybetűs karakterei) számára használatos. Lehetséges-e az összes többi, világszerte használt nemzeti karaktert a fennmaradó 128 helyre betuszkolni?</p>
+
+<p>Nem. Nem lehetséges.</p>
+
+
+<br><br>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+    <h2>Kódpontok és kódlapok</h2>
+
+    <p>Most egy új kifejezésre van szükségünk: <strong>kódpont</strong>.</p>
+
+    <p>A kódpont (code point) egy <strong>szám, amely egy karaktert jelöl</strong>. Például a <i>32</i> egy kódpont, amely az ASCII-kódolásban egy <i>szóközt</i> jelent. Azt mondhatjuk, hogy a szabványos ASCII-kód 128 kódpontból áll.</p>
+
+    <p>Mivel a szabványos ASCII a 256 lehetséges kódpontból 128-at foglal el, csak a fennmaradó 128-at használhatod ki.</p>
+
+    <p>Ez nem elegendő az összes lehetséges nyelvre, de egy nyelvre, vagy hasonló nyelvek egy kis csoportjára elegendő lehet.</p>
+
+    <p><strong>Beállíthatod a kódpontok felső tartományát a különböző nyelvek esetében eltérően</strong>? Igen, beállíthatod. Az ilyen koncepciót <strong>kódlapnak</strong> nevezik.</p>
+
+
+    <p>A kódlap egy <strong>szabvány, amely a felső 128 kódpontot használja bizonyos nemzeti karakterek tárolására</strong>. Különböző kódlapok léteznek például Nyugat-Európa és Kelet-Európa, a cirill és a görög ábécé, az arab és a héber nyelvek stb. számára.</p>
+
+    <p>Ez azt jelenti, hogy egy és ugyanazon kódpont különböző karaktereket jelölhet, ha különböző kódlapokon használják.</p>
+
+    <p>Például a <i>200</i>-as kódpont az ISO/IEC 8859-2 kódlapon a &Ccaron (néhány szláv nyelv által használt betű), az ISO/IEC 8859-5 kódlapon pedig a &#x428; (cirill betű).</p>
+
+    <p>Következésképpen egy adott kódpont jelentésének meghatározásához ismerned kell a megcélzott kódlapot.</p>
+
+    <p>Más szóval, a kódlap fogalmából levezetett kódpontok nem egyértelműek.</p>
+
+
+<br>
+<br>
+
+</div>
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

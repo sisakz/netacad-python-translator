@@ -1,0 +1,72 @@
+<problem chapter='1' section='4' slide='1' problem='16' title='How to use pip'>
+
+<!--
+Update history:
+2020-09-25 Grzegorz (created)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<h1>How to use <i>pip</i>: continued</h1>
+
+
+<p>If any of the currently installed packages are <b>no longer needed</b> and you want to get rid of them, <i>pip</i> will be useful, too. Its <codel>uninstall</codel> command will execute all the needed steps. </p>
+
+<p>The required syntax is clear and simple:</p>
+
+<p><codep class="syntax-color">pip uninstall package_name
+</codep></p>
+
+<p>so if you don't want <i>pygame</i> anymore, you can execute the following command:</p>
+
+<p><codep class="syntax-color">pip uninstall pygame
+</codep></p>
+
+<p><i>Pip</i> will want to know if you’re sure about the choice you're making – be prepared to give the right answer.</p>
+
+
+
+<br>
+<br> 
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+<p>The process looks like this:</p>
+
+
+<center><img class="lightbox" src="/uploads/media/default/0001/02/895c8f2e96c33b773751373aaea83ff649508cc8.png" width="95%" alt="Command prompt - pip uninstall pygame"></center>
+<br>
+
+
+
+
+
+
+
+<br>
+<br>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

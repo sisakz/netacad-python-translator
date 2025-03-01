@@ -1,0 +1,49 @@
+<problem chapter='2' section='3' slide='1' problem='6' title='Karakterlánc tagfüggvények'>
+
+<!--
+Update history:
+2020-09-22 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>
+# Example 1: Demonstrating the isapha() method:
+print("Moooo".isalpha())
+print('Mu40'.isalpha())
+
+# Example 2: Demonstrating the isdigit() method:
+print('2018'.isdigit())
+print("Year2019".isdigit())
+
+</code>
+
+
+
+<h1>Az <font face="Courier New">isalpha()</font> tagfüggvény</h1>
+
+<p>Az <codel>isalpha()</codel> tagfüggvény speciálisabb – <strong>csak a betűk</strong> érdeklik.</p>
+
+<p>Nézd meg az 1. példát – a kimenete a következő:</p>
+
+<codep>True
+False</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+<h2>Az <font face="Courier New">isdigit()</font> tagfüggvény</h2>
+
+<p>Az <codel>isdigit()</codel> tagfüggvény viszont <strong>csak számjegyeket</strong> vizsgál – minden más eredmény <codel>False</codel> lesz.</p>
+
+<p>Nézd meg a 2. példát – a kimenete a következő:</p>
+
+<codep>True
+False</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+<p>Végezz további kísérleteket.</p>
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

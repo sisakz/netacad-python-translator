@@ -1,0 +1,78 @@
+<problem chapter='2' section='5' slide='1' problem='1' title='Egyszerű programok'>
+
+<!--
+Update history:
+2020-09-23 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>
+# Caesar cipher.
+text = input("Enter your message: ")
+cipher = ''
+for char in text:
+    if not char.isalpha():
+        continue
+    char = char.upper()
+    code = ord(char) + 1
+    if code > ord('Z'):
+        code = ord('A')
+    cipher += chr(code)
+
+print(cipher)
+
+</code>
+
+
+
+<h1>A Caesar-kód: egy üzenet titkosítása</h1>
+
+<p>Négy egyszerű programot mutatunk neked, hogy bemutassuk a karakterlánc-feldolgozás néhány tulajdonságát Pythonban. Szándékosan egyszerűek, de a laborgyakorlat-problémák ennél lényegesen bonyolultabbak lesznek.</p>
+
+<p>Az első probléma, amit meg akarunk mutatni, a <strong>Caesar-féle rejtjelezés</strong> – további részletek itt: <a href="https://en.wikipedia.org/wiki/Caesar_cipher" target="_blank">https://en.wikipedia.org/wiki/Caesar_cipher</a>.</p>
+
+<p>Ezt a rejtjelet (valószínűleg) Gaius Julius Caesar és csapatai találták ki és használták a gall háborúk idején. Az ötlet meglehetősen egyszerű – az üzenet minden egyes betűjét a rákövetkezővel helyettesítik (<i>A</i>-ból <i>B</i> lesz, <i>B</i>-ből <i>C</i>, és így tovább). Az egyetlen kivétel a <i>Z</i>, amelyből <i>A</i> lesz.</p>
+
+<p>A szerkesztőben található program az algoritmus egy nagyon egyszerű (de működő) implementációja.</p>
+
+<p>A következő feltételezések alapján írtuk meg:</p>
+
+<ul>
+    <li>csak latin betűket fogad el (megjegyzés: a rómaiak nem használtak sem whitespace-eket, sem számjegyeket).</li>
+    <li>az üzenet minden betűje nagybetűs (megjegyzés: a rómaiak csak nagybetűket ismertek).</li>
+</ul>
+
+<p>Kövessük nyomon a kódot:</p>
+
+<ul>
+    <li>02. sor: kéri a felhasználót, hogy adja meg a nyílt (nem titkosított), egysoros üzenetet;</li>
+    <li>03. sor: előkészít egy karakterláncot egy titkosított üzenethez (egyelőre üres)</li>
+    <li>04. sor: az üzenet iterációjának megkezdése;</li>
+<li>05. sor: ha az aktuális karakter nem alfabetikus...</li>
+<li>06. sor: ...hagyja figyelmen kívül;</li>
+<li>07. sor: a betűt nagybetűssé alakítja (jobb, ha vakon csináljuk, mintha ellenőriznénk, hogy szükséges-e vagy sem).</li>
+<li>08. sor: a betű kódjának lekérdezése és eggyel való növelése;</li>
+<li>09. sor: ha az eredményül kapott kód „elhagyta” a latin ábécét (ha nagyobb, mint a <i>Z</i> kódja)...</li>
+<li>10. sor: ...változtassa meg az <i>A</i> kódjára;</li>
+<li>11. sor: a kapott karaktert a titkosított üzenet végéhez csatolja;</li>
+<li>13. sor: kiírja a rejtjelezett üzenetet.</li>
+</ul>
+
+<p>A kódot ezzel az üzenettel táplálták:</p>
+
+<codep>AVE CAESAR</codep>
+<br>
+
+<p>kimenete:</p>
+
+<codep>BWFDBFTBS</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+<p>Végezd el a saját tesztjeidet.</p>
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

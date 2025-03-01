@@ -1,0 +1,77 @@
+<problem chapter='2' section='6' slide='1' problem='8' title="Errors - the programmer's daily bread | try-except">
+
+<!--
+Update history:
+2020-09-21 Grzegorz (review, PEP-8 compliance check, update, title correction)
+-->
+
+<code>
+try:
+    x = int(input("Enter a number: "))
+    y = 1 / x
+except:
+    print("Oh dear, something went wrong...")
+
+print("THE END.")
+
+</code>
+
+
+
+<h1>Exceptions: continued</h1>
+
+<p>This approach has one important disadvantage – if there is a possibility that more than one exception may skip into an <codel>except:</codel> branch, you may have <strong>trouble figuring out what actually happened</strong>.</p>
+
+<p>Just like in our code in the editor. Run it and see what happens.</p>
+
+<p>The message: <codel>Oh dear, something went wrong...</codel> appearing in the console says nothing about the reason, while there are two possible causes of the exception:</p>
+
+<ul>
+<li>non-integer data entered by the user;</li>
+<li>an integer value equal to <codel>0</codel> assigned to the <codel>x</codel> variable.</li>
+</ul>
+
+
+<br>
+
+<p>Technically, there are two ways to solve the issue:</p>
+
+<ul>
+<li>build two consecutive <font face="Courier New">try-except</font> blocks, one for each possible exception reason (easy, but will cause unfavorable code growth)</li>
+<li>use a more advanced variant of the instruction.</li>
+</ul>
+ 
+
+<p>It looks like this:</p>
+
+<codep class="syntax-color">try:
+    :
+except exc1:
+    :
+except exc2:
+    :
+except:
+    :
+</codep>
+
+<br>
+
+
+<p>This is how it works:</p>
+
+<ul>
+<li>if the <codel>try</codel> branch raises the <codel>exc1</codel> exception, it will be handled by the <codel>except exc1:</codel> block;</li>
+<li>similarly, if the <codel>try</codel> branch raises the <codel>exc2</codel> exception, it will be handled by the <codel>except exc2:</codel> block;</li>
+<li>if the <codel>try</codel> branch raises any other exception, it will be handled by the unnamed <codel>except</codel> block.</li>
+</ul>
+ 
+
+<p>Let's move on to the next part of the course and see it in action.</p>
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

@@ -1,0 +1,96 @@
+<problem chapter='3' section='2' slide='1' problem='4' title='A procedurálistól az objektumorientált megközelítésig'>
+
+<!--
+Update history:
+2020-09-30 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>class Stack:  # Defining the Stack class.
+    def __init__(self):  # Defining the constructor function.
+        print("Hi!")
+
+
+stack_object = Stack()  # Instantiating the object.
+
+</code>
+
+
+
+<h1>A verem - az objektumorientált megközelítés</h1>
+
+<p>Természetesen a fő gondolat ugyanaz marad. Egy listát fogunk használni a verem tárolására. Nekünk csak azt kell tudnunk, hogyan kell a listát az osztályba helyezni.</p>
+
+<p>Kezdjük a legelejéről - így kezdődik az objektumos verem megvalósítása:</p>
+
+<codep class="syntax-color">class Stack:
+</codep>
+<br>
+
+
+<p>Két dolgot várunk tőle:</p>
+
+<ul>
+    <li>azt akarjuk, hogy az osztálynak <strong>egy tulajdonsága</strong> legyen a <strong>verem tárolójaként - egy listát kell "telepítenünk" az osztály minden egyes objektumába</strong> (megjegyzés: minden objektumnak saját listával kell rendelkeznie - a lista nem osztható meg a különböző vermek között).</li>
+
+    <li>azt is szeretnénk, ha <strong>a lista el lenne rejtve</strong> az osztály felhasználói elől.</li>
+</ul>
+
+ 
+<p>Hogyan történik ez?</p>
+
+<p>Más programozási nyelvekkel ellentétben a Python nem rendelkezik olyan eszközzel, amely lehetővé tenné, hogy egy ilyen tulajdonságot csak úgy deklaráljunk.</p>
+
+<p>Ehelyett egy konkrét kijelentést vagy utasítást kell hozzáadni. A tulajdonságokat kézzel kell hozzáadni az osztályhoz.</p>
+
+ 
+<p>Hogyan garantáljuk, hogy egy ilyen tevékenység minden alkalommal megtörténik, amikor az új verem létrehozásra kerül?</p>
+
+<p>Ennek egyszerű módja van - <strong>az osztályt fel kell szerelni egy speciális függvénnyel</strong> – aminek a sajátossága kettős:</p>
+
+<ul>
+    <li>pontosan kell megnevezni;</li>
+    <li>implicit módon hívódik meg, amikor egy új objektum létrehozásra kerül.</li>
+</ul>
+ 
+
+<p>Az ilyen függvényt <strong>konstruktornak</strong> nevezzük, mivel általános célja <strong>egy új objektum létrehozása</strong>. A konstruktornak mindent tudnia kell az objektum szerkezetéről, és el kell végeznie minden szükséges inicializálást.</p>
+
+<p>Adjunk hozzá egy nagyon egyszerű konstruktort az új osztályhoz. Nézzük meg az alábbi kódrészletet:</p>
+
+<codep class="syntax-color">class Stack:
+    def <mark class="mark-background">__init__</mark>(self):
+        print("Hi!")
+
+
+stack_object = Stack()
+</codep>
+<br>
+
+<p>Tehát:</p>
+
+<ul>
+    <li>a konstruktor neve mindig <codel>__init__</codel>;</li>
+    <li><strong>legalább egy paraméterrel </strong> kell rendelkeznie (ezt később tárgyaljuk); ez a paraméter az újonnan létrehozott objektumot reprezentálja - a paramétert az objektum manipulálására és a szükséges tulajdonságokkal való bővítésére használhatjuk; ezt hamarosan használni fogjuk;</li>
+    <li>megjegyzés: a kötelező paraméter neve általában <codel>self</codel> – ez csak <strong>egy konvenció, de érdemes követni</strong> – leegyszerűsíti a kód olvasását és megértését.</li>
+</ul>
+ 
+
+<p>A kód a szerkesztőben van. Futtassuk le most!</p>
+
+<p>Itt van a kód kimenete:</p>
+
+<codep>Hi!</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+ 
+
+<p>Megjegyzés - a kódban nincs nyoma a konstruktorhívásnak. Implicit módon, automatikusan került meghívásra. Használjuk ki ezt most.</p>
+
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

@@ -1,0 +1,47 @@
+<problem chapter='4' section='4' slide='1' problem='7' title='The os module'>
+
+<!--
+Update history:
+2020-03-30 Sebastian (first version)
+2020-10-08 Grzegorz (review, PEP-8 compliance check)
+-->
+
+<code>import os
+
+returned_value = os.system("mkdir my_first_directory")
+print(returned_value)
+
+</code>
+
+
+
+<h1>The system() function</h1>
+
+
+<p>All functions presented in this part of the course can be replaced by a function called <i>system</i>, which executes a command passed to it as a string.</p>
+
+<p>The <codel>system</codel> function is available in both Windows and Unix. Depending on the system, it returns a different result.</p>
+
+<p>In Windows, it returns the value returned by the shell after running the command given, while in Unix, it returns the exit status of the process.</p>
+
+<p>Let's look at the code in the editor and see how it is in practice.</p>
+
+<p>Result:</p>
+<codep>0</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+
+<p>The above example will work in both Windows and Unix. In our case, we receive exit status 0, which indicates success on Unix systems.</p>
+
+<p>This means that the <i>my_first_directory</i> directory has been created. As part of the exercise, try to list the contents of the directory where you created the <i>my_first_directory</i> directory.</p>
+
+
+
+<br>
+<br>
+
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

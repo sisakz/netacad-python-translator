@@ -1,0 +1,39 @@
+<problem chapter='2' section='6' slide='1' problem='4' title="Hibák – a programozók mindennapi kenyere">
+
+<!--
+Update history:
+2020-09-21 Grzegorz (review, PEP-8 compliance check, update, title correction)
+-->
+
+<code>my_list = []
+x = my_list[0]
+
+</code>
+
+
+
+<h1>Kivételek (folytatás)</h1>
+
+<p>Nézd meg a kódot a szerkesztőben. Mi fog történni, amikor futtatod? Ellenőrizd.</p>
+
+ 
+<p>A válaszban a következő üzenet jelenik meg:</p>
+
+<codep>Traceback (most recent call last):
+File "lst.py", line 2, in <module>
+x = list[0]
+<mark style="background-color:#e6f2ff;">IndexError:</mark> list index out of range</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+ 
+
+<p>Ez az <b><font face="Courier New">IndexError</font></b>.</p>
+
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

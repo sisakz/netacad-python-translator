@@ -1,0 +1,69 @@
+<problem chapter='2' section='7' slide='1' problem='6' title='Kivételek | raise'>
+
+<!--
+Update history:
+2020-09-21 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>
+def bad_fun(n):
+    try:
+        return n / 0
+    except:
+        print("I did it again!")
+        raise
+
+
+try:
+    bad_fun(0)
+except ArithmeticError:
+    print("I see!")
+
+print("THE END.")
+
+</code>
+
+
+
+<h1>Kivételek (folytatás)</h1>
+
+<p>A <codel>raise</codel> utasítás a következő módon is használható (figyeljük meg, hogy a kivétel neve nem szerepel):</p>
+
+<codep class="syntax-color">raise
+</codep>
+<br>
+
+<p>Van egy komoly korlátozás: ez a fajta <codel>raise</codel> utasítás csak az <strong><codel>except</codel> elágazáson belül </strong> használható; bármilyen más kontextusban történő használata hibát okoz.</p>
+
+ 
+<p>Az utasítás újra kiváltja ugyanazt a kivételt, amelyet éppen kezel.</p>
+
+<br>
+
+<p>Ennek köszönhetően a kivételek kezelését a kód különböző részei között oszthatod el.</p>
+
+<p>Nézd meg a kódot a szerkesztőben. Futtasd le – látni fogod működés közben.</p>
+
+<p>A <font face="Courier New">ZeroDivisionError</font> kétszer is felbukkan:</p>
+
+<ul>
+    <li>először a kód <codel>try</codel> részében (ezt a tényleges nulla osztás okozza)</li>
+    <li>másodszor az <codel>except</codel> részen belül a <codel>raise</codel> utasítással.</li>
+</ul>
+ 
+
+<p>A kód valójában a következőket adja ki:</p>
+
+<codep>I did it again!
+I see!
+THE END.</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

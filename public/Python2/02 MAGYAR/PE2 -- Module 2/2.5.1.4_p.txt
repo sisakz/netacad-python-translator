@@ -1,0 +1,104 @@
+<problem chapter='2' section='5' slide='1' problem='4' title='Egyszerű programok'>
+
+<!--
+Update history:
+2020-09-23 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>
+# IBAN Validator.
+
+iban = input("Enter IBAN, please: ")
+iban = iban.replace(' ','')
+
+if not iban.isalnum():
+    print("You have entered invalid characters.")
+elif len(iban) < 15:
+    print("IBAN entered is too short.")
+elif len(iban) > 31:
+    print("IBAN entered is too long.")
+else:
+    iban = (iban[4:] + iban[0:4]).upper()
+    iban2 = ''
+    for ch in iban:
+        if ch.isdigit():
+            iban2 += ch
+        else:
+            iban2 += str(10 + ord(ch) - ord('A'))
+    iban = int(iban2)
+    if iban % 97 == 1:
+        print("IBAN entered is valid.")
+    else:
+        print("IBAN entered is invalid.")
+
+</code>
+
+
+
+<h1>Az IBAN Validátor</h1>
+
+<p>A negyedik program (kissé leegyszerűsített formában) egy olyan algoritmust valósít meg, amelyet az európai bankok használnak a számlaszámok megadására. Az <strong>IBAN</strong> (International Bank Account Number) szabvány egy egyszerű és meglehetősen megbízható módszert kínál a számlaszámok ellenőrzésére, azaz az egyszerű elírások kivédésére. Ilyen elírások a számok papíralapú dokumentumokból, például számlákból a számítógépbe történő átírása során fordulhatnak elő.</p>
+
+<p>További részletek itt találhatók: <a href="https://en.wikipedia.org/wiki/International_Bank_Account_Number" target="_blank">https://en.wikipedia.org/wiki/International_Bank_Account_Number</a>.</p>
+
+<p>Az IBAN-nak megfelelő számlaszám a következőkből áll:</p>
+
+<ul>
+    <li>kétbetűs országkód az ISO 3166-1 szabvány szerint (pl. <i>FR</i> Franciaország, <i>GB</i> Nagy-Britannia, <i>DE</i> Németország stb.)</li>
+    <li>két ellenőrző számjegy, amelyekkel az érvényességi ellenőrzéseket végzik – gyors és egyszerű, de nem teljesen megbízható tesztek, amelyek megmutatják, hogy egy szám (elírás miatt torzított)  érvénytelen vagy jónak tűnő;</li>
+    <li>a tényleges számlaszám (legfeljebb 30 alfanumerikus karakter – ennek a résznek a hossza országtól függ)</li>
+</ul>
+
+<p>A szabvány szerint a validálás a következő lépéseket követeli meg (a Wikipedia szerint):</p>
+
+<ul>
+    <li>(1. lépés) Ellenőrzi, hogy az IBAN teljes hossza megfelel-e az adott országnak (ez a program ezt nem teszi meg, de ha szeretnéd, módosíthatod a kódot, hogy megfeleljen ennek a követelménynek; megjegyzés: meg kell tanítania a kódot az Európában használt összes hosszra).</li>
+    <li>(2. lépés) A négy kezdeti karaktert (azaz az országkódot és az ellenőrző számjegyeket) a karakterlánc végére helyezi.</li>
+    <li>(3. lépés) A karakterlánc minden egyes betűjét két számjegyre cseréljük, így bővítve a karakterláncot, ahol <i>A = 10</i>, <i>B = 11</i> ... <i>Z = 35</i>;</li>
+    <li>(4. lépés) A karakterláncot tizes számrendszerbeli egész számként értelmezi, és kiszámítja a 97-tel való osztási maradékát; ha a maradék <font face="Courier New">1</font>, a számlaszám ellenőrző tesztje sikeres, és az IBAN érvényes lehet.</li>
+</ul>
+
+<p>Nézd meg a kódot a szerkesztőben. Elemezzük ki:</p>
+
+<ul>
+    <li>03. sor: kéri a felhasználót az IBAN megadására (a szám tartalmazhat szóközöket, mivel azok jelentősen javítják a szám olvashatóságát...</li>
+    <li>04. sor: ...de azonnal eltávolítja őket)</li>
+    <li>05. sor: a megadott IBAN-nak csak számjegyekből és betűkből kell állnia – ha nem...</li>
+    <li>06. sor: ...kiírja az üzenetet;</li>
+    <li>07. sor: az IBAN nem lehet rövidebb 15 karakternél (ez a Norvégiában használt legrövidebb változat).</li>
+    <li>08. sor: ha rövidebb, a felhasználó értesül róla;</li>
+    <li>09. sor: továbbá az IBAN nem lehet hosszabb 31 karakternél (ez a Máltán használt leghosszabb változat).</li>
+    <li>10. sor: ha hosszabb, ezt jelenti be;</li>
+    <li>11. sor: a tényleges feldolgozás megkezdése;</li>
+    <li>12. sor: a négy kezdőbetűt áthelyezi a szám végére, és az összes betűt nagybetűvé alakítja (az algoritmus 2. lépése).</li>
+    <li>13. sor: ez a szám kiegészítésére használt változó, amely a betűk számjegyekkel való helyettesítésével jön létre (az algoritmus 3. lépésének megfelelően).</li>
+    <li>14. sor: végigiterál az IBAN számon;</li>
+    <li>15. sor: ha a karakter egy számjegy...</li>
+    <li>16. sor: csak lemásolja;</li>
+    <li>17. sor: egyébként...</li>
+    <li>18. sor: ...átalakítja két számjegyűvé (figyeljük meg, hogy itt hogyan történik).</li>
+    <li>19. sor: az IBAN átalakított formája készen áll – készít belőle egész számot;</li>
+    <li>20. sor: az <codel>iban2</codel> <codel>97</codel>-tel való osztásának maradéka egyenlő <codel>1</codel>-gyel?</li>
+    <li>21. sor: Ha igen, akkor siker;</li>
+<li>22. sor: Egyébként...</li>
+<li>23. sor: ...a szám érvénytelen.</li>
+</ul>
+
+<p>Adjunk hozzá néhány tesztadatot (ezek a számok érvényesek – bármelyik karakter megváltoztatásával érvényteleníthetjük őket).</p>
+
+<ul>
+<li>Brit: <codel>GB72 HBZU 7006 7212 1253 00</codel></li>
+<li>Francia: <codel>FR76 30003 03620 00020216907 50</codel></li>
+<li>Német: <codel>DE02100100100152517108</codel></li>
+</ul>
+
+<p>Ha uniós állampolgár vagy, a tesztekhez saját számlaszámodat is használhatod.</p>
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

@@ -1,0 +1,147 @@
+<problem chapter='3' section='3' slide='1' problem='9' title='SZAKASZ ÖSSZEFOGLALÁS'>
+
+<!--
+Update history:
+2020-09-04 Slawek (first version)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<h1>A legfontosabb tudnivalók</h1>
+
+<br>
+
+
+<p>1. A <b>példányváltozó</b> olyan tulajdonság, amelynek létezése egy objektum létrehozásától függ. Minden objektumnak más-más példányváltozói lehetnek.</p>
+
+<p>Ráadásul az objektumokhoz szabadon hozzáadhatók és eltávolíthatók azok élettartama alatt. Az összes objektum példányváltozót egy <codel>__dict__</codel> nevű dedikált szótárban tároljuk, amelyet minden objektum külön-külön tartalmaz.</p>
+
+<br>
+
+<p>2. Egy példányváltozó lehet privát, ha a neve <codel>__</codel>-vel kezdődik, de ne felejtsük el, hogy egy ilyen tulajdonság még mindig elérhető az osztályon kívülről egy <codel>_ClassName__PrivatePropertyName</codel> alakú <b>névvel</b>.</p> 
+<br>
+
+<p>3. Az <b>osztályváltozó</b> olyan tulajdonság, amely pontosan egy példányban létezik, és nincs szüksége semmilyen létrehozott objektumra ahhoz, hogy elérhető legyen. Az ilyen változók nem jelennek meg <codel>__dict__</codel> tartalomként.</p>
+
+<p>Egy osztály összes osztályváltozója egy <codel>__dict__</codel> nevű dedikált szótárban tárolódik, amelyet minden osztály külön-külön tartalmaz.</p>
+<br>
+
+<p>4. A <codel>hasattr()</codel> nevű függvény segítségével meghatározható, hogy valamely objektum/osztály tartalmaz-e egy adott tulajdonságot.</p>
+
+<p>Például:</p>
+<codep class="syntax-color copy line-numbers">class Sample:
+    gamma = 0 # Class variable.
+    def __init__(self):
+        self.alpha = 1 # Instance variable.
+        self.__delta = 3 # Private instance variable.
+
+
+obj = Sample()
+obj.beta = 2  # Another instance variable (existing only inside the "obj" instance.)
+print(obj.__dict__)
+</codep>
+<br>
+<p>A kód kimenete:</p>
+
+<codep>{'alpha': 1, '_Sample__delta': 3, 'beta': 2}</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+<br>
+
+</div>
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+<script>
+function solution (id) {
+    var element = document.getElementById(id);
+    
+if (element.style.display === "none") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
+    }
+}
+</script>
+
+
+<p><strong>1. gyakorlat</strong></p>
+<p>
+    Melyik a <codel>Python</codel> osztályok tulajdonságai közül a példányváltozók és melyek az osztályváltozók? Melyek közülük privátak?
+    <br><br>
+    <codep>
+        class Python:
+            population = 1
+            victims = 0
+                def __init__(self):
+                    self.length_ft = 3
+                    self.__venomous = False
+
+    </codep>
+</p>
+
+<button class="button tiny" onclick="solution('sol')">Ellenőrzés</button>
+
+<p id="sol" style="display: none;">
+    A <codel>population</codel> és a <codel>victims</codel> <b>osztályváltozók</b>, míg a <codel>length</codel> és a <codel>__venomous</codel> <b>példányváltozók</b> (az utóbbi ráadásul  <b>privát</b>).
+</p>
+
+
+
+<br><br>
+
+
+
+<p><strong>2. gyakorlat</strong></p>
+<p>A <codel>version_2</codel> objektum a <codel>__venomous</codel> tulajdonságát fogja negálni, figyelmen kívül hagyva azt a tényt, hogy a tulajdonság privát. Hogyan tehetjük ezt meg?</p>
+<codep>version_2 = Python()
+
+</codep>
+<br>
+
+
+<button class="button tiny" onclick="solution('sol2')">Ellenőrzés</button>
+<p id="sol2" style="display: none;"><codep>version_2._Python__venomous = not version_2._Python__venomous</codep></p>
+
+
+
+<br><br>
+
+
+
+
+<p><strong>3. gyakorlat</strong></p>
+<p>Írjunk egy kifejezést, amely ellenőrzi, hogy a <codel>version_2</codel> objektum tartalmaz-e egy <codel>constrictor</codel> (igen, constr<b>i</b>ctor!) nevű példánytulajdonságot.</p>
+
+<button class="button tiny" onclick="solution('sol3')">Ellenőrzés</button>
+
+<p id="sol3" style="display: none;">
+<codep>hasattr(version_2, 'constrictor')
+
+</codep>
+</p>
+
+
+
+
+<br>
+
+
+</div>
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>
+

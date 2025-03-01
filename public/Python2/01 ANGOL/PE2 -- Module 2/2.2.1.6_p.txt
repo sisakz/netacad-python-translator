@@ -1,0 +1,67 @@
+<problem chapter='2' section='2' slide='1' problem='6' title='The nature of strings in Python'>
+
+<!--
+Update history:
+2020-09-22 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>
+</code>
+
+
+
+<h1>Strings as sequences: indexing</h1>
+
+<p>We told you before that <strong>Python strings are sequences</strong>. It's time to show you what that actually means.</p>
+
+<p>Strings aren't lists, but <strong>you can treat them like lists in many particular cases</strong>.</p>
+
+<p>For example, if you want to access any of a string's characters, you can do it using <strong>indexing</strong>, just like in the example below. Run the program:</p>
+
+<p><codep class="syntax-color copy line-numbers"># Indexing strings.
+
+the_string = 'silly walks'
+
+for ix in range(len(the_string)):
+    print(the_string[ix], end=' ')
+
+print()
+</codep></p>
+
+<p>Be careful – don't try to pass a string's boundaries – it will cause an exception.</p>
+
+<p>The example output is:</p>
+
+<codep>s i l l y   w a l k s</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+ 
+
+<p>By the way, negative indices behave as expected, too. Check this yourself.</p>
+
+<br>
+
+<h2>Strings as sequences: iterating</h2>
+
+<p><strong>Iterating through the strings</strong> works, too. Look at the example below:</p>
+
+<codep class="syntax-color copy line-numbers"># Iterating through a string.
+
+the_string = 'silly walks'
+
+for character in the_string:
+    print(character, end=' ')
+
+print()
+</codep>
+<br>
+
+<p>The output is the same as previously. Check.</p>
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

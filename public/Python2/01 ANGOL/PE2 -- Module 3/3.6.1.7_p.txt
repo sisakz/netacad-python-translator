@@ -1,0 +1,70 @@
+<problem chapter='3' section='6' slide='1' problem='7' title='Exceptions once again'>
+
+<!--
+Update history:
+2020-10-01 Grzegorz (reviewed, PEP-8 compliance check, code changed: self parameter added to examples)
+-->
+
+<code>class PizzaError(Exception):
+    def __init__(self, pizza, message):
+        Exception.__init__(self, message)
+        self.pizza = pizza
+
+
+class TooMuchCheeseError(PizzaError):
+    def __init__(self, pizza, cheese, message):
+        PizzaError._init__(self, pizza, message)
+        self.cheese = cheese
+
+</code>
+
+
+
+<h1>How to create your own exception: continued</h1>
+
+
+<p>When you're going to build a completely new universe filled with completely new creatures that have nothing in common with all the familiar things, you may want to <strong>build your own exception structure</strong>.</p>
+
+<p>For example, if you work on a large simulation system which is intended to model the activities of a pizza restaurant, it can be desirable to form a separate hierarchy of exceptions.</p>
+
+<p>You can start building it by <strong>defining a general exception as a new base class</strong> for any other specialized exception. We've done in in the following way:</p>
+
+<codep class="syntax-color copy line-numbers">class PizzaError(Exception):
+    def __init__(self, pizza, message):
+        Exception.__init__(self, message)
+        self.pizza = pizza
+</codep>
+
+<br>
+
+<p>Note: we're going to collect more specific information here than a regular <font face="Courier New">Exception</font> does, so our constructor will take two arguments:</p>
+
+<ul>
+<li>one specifying a pizza as a subject of the process,</li>
+<li>and one containing a more or less precise description of the problem.</li>
+</ul>
+
+<p>As you can see, we pass the second parameter to the superclass constructor, and save the first inside our own property.</p>
+
+
+<p>A more specific problem (like an excess of cheese) can require a more specific exception. It's possible to derive the new class from the already defined <codel>PizzaError</codel> class, like we've done here:</p>
+
+<codep class="syntax-color copy line-numbers">class TooMuchCheeseError(PizzaError):
+    def __init__(self, pizza, cheese, message):
+        PizzaError._init__(self, pizza, message)
+        self.cheese = cheese
+</codep>
+
+<br>
+
+<p>The <codel>TooMuchCheeseError</codel> exception needs more information than the regular <codel>PizzaError</codel> exception, so we add it to the constructor – the name <codel>cheese</codel> is then stored for further processing.</p>
+
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

@@ -1,0 +1,79 @@
+<problem chapter='4' section='2' slide='1' problem='6' title='Processing files'>
+
+<!--
+Update history:
+2020-10-07 Grzegorz (review, PEP-8 compliance check)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+<h2>File handles: continued</h2>
+
+<p>Due to the type of the stream's contents, <strong>all the streams are divided into text and binary streams</strong>.</p>
+
+<p>The text streams are structured in lines; that is, they contain typographical characters (letters, digits, punctuation, etc.) arranged in rows (lines), as seen with the naked eye when you look at the contents of the file in the editor.</p>
+
+<p>This file is written (or read) mostly character by character, or line by line.</p>
+
+ 
+
+<p>The binary streams don't contain text but a sequence of bytes of any value. This sequence can be, for example, an executable program, an image, an audio or a video clip, a database file, etc.</p>
+
+<p>Because these files don't contain lines, the reads and writes relate to portions of data of any size. Hence the data is read/written byte by byte, or block by block, where the size of the block usually ranges from one to an arbitrarily chosen value.</p>
+
+ 
+
+<p>Then comes a subtle problem. In Unix/Linux systems, the line ends are marked by a single character named <codel>LF</codel> (ASCII code 10) designated in Python programs as <codel>\n</codel>.</p>
+
+<p>Other operating systems, especially these derived from the prehistoric CP/M system (which applies to Windows family systems, too) use a different convention: the end of line is marked by a pair of characters, <codel>CR</codel> and <codel>LF</codel> (ASCII codes 13 and 10) which can be encoded as <codel>\r\n</codel>.</p>
+
+
+<br> 
+<br>
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+
+<br>
+
+
+
+<center><img src="/uploads/media/default/0001/01/4947f81ce6cd3f37d08c0b1f3657983360d22395.png" alt="Text vs. binary streams concept" width="70%"></center>
+<br><br>
+
+ 
+<p>This ambiguity can cause various unpleasant consequences.</p>
+
+<p>If you create a program responsible for processing a text file, and it is written for Windows, you can recognize the ends of the lines by finding the <codel>\r\n</codel> characters, but the same program running in a Unix/Linux environment can be completely useless, and vice versa: the program written for Unix/Linux systems may be useless in Windows.</p>
+
+<p>Such undesirable features of the program, which prevent or hinder the use of the program in different environments, are called <strong>non-portability</strong>.</p>
+
+<p>Similarly, the trait of the program allowing execution in different environments is called <strong>portability</strong>. A program endowed with such a trait is called a <strong>portable program</strong>.</p>
+
+
+<br>
+<br>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

@@ -1,0 +1,75 @@
+<problem chapter='3' section='6' slide='1' problem='6' title='Bővebben a kivételekről'>
+
+<!--
+Update history:
+2020-10-01 Grzegorz (reviewed, PEP-8 compliance check)
+-->
+
+<code>
+class MyZeroDivisionError(ZeroDivisionError):	
+    pass
+
+
+def do_the_division(mine):
+    if mine:
+        raise MyZeroDivisionError("some worse news")
+    else:		
+        raise ZeroDivisionError("some bad news")
+
+
+for mode in [False, True]:
+    try:
+        do_the_division(mode)
+    except ZeroDivisionError:
+        print('Division by zero')
+
+for mode in [False, True]:
+    try:
+        do_the_division(mode)
+    except MyZeroDivisionError:
+        print('My division by zero')
+    except ZeroDivisionError:
+        print('Original division by zero')
+
+</code>
+
+
+
+<h1>Hogyan hozzunk létre saját kivételt</h1>
+
+
+<p>A kivételek hierarchiája sem nem zárt, sem nem befejezett, és bármikor bővíthetjük, ha saját világot kell vagy szeretnénk létrehozni, amely saját kivételekkel van tele.</p>
+
+<p>Hasznos lehet, ha egy összetett modult hozunk létre, amely hibákat észlel és kivételeket generál, és azt akarjuk, hogy a kivételek könnyen megkülönböztethetők legyenek a Python által biztosított többi kivételtől.</p>
+
+<p>Ezt úgy kell megtenni, hogy <strong>saját, új kivételeket definiálunk az előre definiált kivételekből származtatott alosztályokként</strong>.</p>
+
+<p>Megjegyzés: ha olyan kivételt akarunk létrehozni, amely bármely beépített kivétel speciális eseteként használható, akkor csak ebből a kivételből származtassuk le. Ha saját hierarchiát szeretnénk létrehozni, és nem akarjuk, hogy szorosan kapcsolódjon a Python kivételfájához, akkor származtassuk le bármelyik felső kivételosztályból, mint például az <font class="monospace">Exception</font>.</p>
+
+<p>Képzeld el, hogy létrehoztál egy teljesen új aritmetikát, amelyet a saját törvényeid és tételeid irányítanak. Nyilvánvaló, hogy az osztás is újradefiniálásra került, és másképp kell viselkednie, mint a szokásos osztásnak. Az is világos, hogy ennek az új osztásnak saját kivételt kell kiváltania, amely különbözik a beépített <font face="Courier New">ZeroDivisionError</font>-tól, de ésszerű feltételezni, hogy bizonyos körülmények között Te (vagy az aritmetikád felhasználója) minden nulla osztást ugyanúgy akar kezelni.</p>
+
+<p>Az ilyen igények a kódszerkesztő által bemutatott módon teljesíthetők. Nézzük meg a kódot, és elemezzük ki:</p>
+
+<ul>
+    <li>
+        Meghatároztuk a saját kivételünket <codel>MyZeroDivisionError</codel> néven, amely a beépített <codel>ZeroDivisionError</codel>-ból származik. Mint látható, úgy döntöttünk, hogy nem adunk hozzá új komponenseket az osztályhoz.
+
+        <br><br>Valójában egy ilyen osztályú kivételt - a kívánt szemponttól függően - úgy lehet kezelni, mint egy sima <font face="Courier New">ZeroDivisionError</font>-t, vagy különállónak lehet tekinteni.
+    </li>
+
+<br>
+
+<li>
+    A <codel>do_the_division()</codel> függvény az argumentum értékétől függően <codel>MyZeroDivisionError</codel> vagy <codel>ZeroDivisionError</codel> kivételt vált ki.
+
+    <br><br>A függvényt összesen négyszer hívjuk meg, az első két meghívást egyetlen <codel>except</codel> ággal kezeljük (ez az általánosabb), az utolsó kettőt pedig két különböző ággal, amelyek képesek megkülönböztetni a kivételeket (ne feledjük: az ágak sorrendje alapvető különbséget jelent!).
+</li>
+</ul>
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

@@ -1,0 +1,56 @@
+﻿<problem chapter='3' section='1' slide='1' problem='0' title='Python Essentials 2 – Module 3'>
+
+<!--
+Update history:
+2020-09-30 Grzegorz (first version)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-4 columns">
+
+<br>
+
+<h1>Python Essentials 2:
+<br>Module 3</h1>
+
+<p><strong>Object-Oriented Programming</strong></p>
+
+<p>In this module, you will learn about:</p>
+
+<ul>
+<li>Basic concepts of object-oriented programming (OOP)</li>
+<li>The differences between the procedural and object approaches (motivations and profits)</li>
+<li>Classes, objects, properties, and methods;</li>
+<li>Designing reusable classes and creating objects;
+<li>Inheritance and polymorphism;</li>
+<li>Exceptions as objects.</li>
+
+</ul>
+
+<br>
+
+
+</div>
+
+
+
+<div class="small-12 large-8 columns">
+
+<br>
+
+<center><img src="/uploads/media/default/0001/02/bd062efa4af6d527040f7fb2734329448053c70d.png" alt="Part 2 Module 3 Title Page" width="70%"></center>
+
+<br>
+
+
+</div>
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

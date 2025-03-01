@@ -1,0 +1,100 @@
+<problem chapter='1' section='4' slide='1' problem='11' title='A pip használata'>
+
+<!--
+Update history:
+2020-09-24 Grzegorz (created)
+2021-06-29	Grzegorz (corrections)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<h1>A <i>pip</i> használata</h1>
+
+
+<p>Most már készen állunk arra, hogy megkérdezzük a <i>pip</i>-et, hogy mit tehet értünk. Tegyük meg - adjuk ki a következő parancsot:</p>
+
+<p><codep class="syntax-color">pip help
+</codep></p>
+
+<p>és várjuk a <i>pip</i> válaszát. Ez így néz ki:</p>
+
+<center><img class="lightbox" src="/uploads/media/default/0001/02/9d43d3088d1eccdb23831e9c76da72e355b49f48.png" width="90%" alt="pip help"></center>
+<br>
+
+
+<P>Ne felejtsd el, hogy a <i>pip</i>-et <i>pip3</i>-ra kell cserélned, ha a környezeted ezt megköveteli. </P>
+
+<p>A <i>pip</i> által készített lista összefoglalja az összes elérhető műveletet, és az utolsó ezek közül a <codel>help</codel>, amit már használtunk. </p>
+
+
+<p>Ha többet szeretnél megtudni a felsorolt műveletek bármelyikéről, használhatod a <i>pip</i> következő formáját:</p>
+
+<p><codep class="syntax-color">pip help művelet
+</codep></p>
+
+
+
+
+
+
+<br>
+<br> 
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+<p>Például az alábbi sorral:</p>
+
+<p><codep class="syntax-color">pip help install
+</codep></p>
+
+<p>részletes információkat kaphatsz az <codel>install</codel> parancs használatáról és paraméterezéséről.</p>
+
+
+<p>Ha tudni akarod, hogy eddig milyen Python csomagokat telepítettél, használhatod a <codel>list</codel> műveletet - így:</p>
+
+<p><codep class="syntax-color">pip list
+</codep></p>
+
+<p>A kimenet, amit látni fogsz, meglehetősen kiszámíthatatlan. Ne lepődj meg, ha a képernyődet végül teljesen más tartalom tölti ki. A miénk a következőképpen néz ki:</p>
+
+
+<center><img class="lightbox" src="/uploads/media/default/0001/02/a22f95ec6fca2405320d76f4093186b4a927e950.png" width="90%" alt="pip list"></center>
+<br>
+
+ 
+<p>Mint látható, a listában két oszlop van, az egyik a telepített csomag nevét, a másik pedig a csomag verzióját mutatja. Nem tudjuk megjósolni a Python telepítésének állapotát.</p>
+
+<p>Az egyetlen dolog, amit biztosan tudunk, hogy a listád tartalmazza a mi listánkon látható két sort: <i>pip</i> és <i>setuptools</i>. Ez azért történik, mert az operációs rendszer meg van győződve arról, hogy a pip-et futtatni akaró felhasználónak nagy valószínűséggel hamarosan szüksége lesz a <i>setuptools</i>-ra. Ez nem tévedés.</p>
+
+
+
+
+
+
+<br>
+<br>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

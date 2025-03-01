@@ -1,0 +1,86 @@
+<problem chapter='4' section='4' slide='1' problem='8' title='LAB: The os module'>
+
+<!--
+Update history:
+2020-03-30 Sebastian (first version)
+2020-10-08 Grzegorz (review, PEP-8 compliance check)
+-->
+
+<code>
+</code>
+
+<span class="label" style="background-color:rgb(205, 168, 105);"><b>LAB</b></span>
+
+<br><br>
+
+<h2>Estimated time</h2>
+<p>15-30 min<p>
+
+<h2>Level of difficulty</h2>
+<p>Easy<p>
+
+<h2>Objectives</h2>
+<ul>
+<li>improving the student's skills in interacting with the operating system;</li>
+<li>practical use of known functions provided by the <i>os</i> module.</li>
+</ul>
+
+<h2>Scenario</h2>
+
+<p>It goes without saying that operating systems allow you to search for files and directories. While studying this part of the course, you learned about the functions of the <i>os</i> module, which have everything you need to write a program that will search for directories in a given location.</p>
+
+<p>To make your task easier, we have prepared a test directory structure for you:</p>
+
+<br>
+
+<center><img class="lightbox" src="/uploads/media/default/0001/02/be753bf656f7fc78964037c6f0ab149e2b89b7ef.png" alt="Directory structure" width="90%"></center>
+
+<br><br>
+
+<p>Your program should meet the following requirements:</p>
+<ol>
+<li>Write a function or method called <i>find</i> that takes two arguments called <i>path</i> and <i>dir</i>. The <i>path</i> argument should accept a relative or absolute path to a directory where the search should start, while the <i>dir</i> argument should be the name of a directory that you want to find in the given path. Your program should display the absolute paths if it finds a directory with the given name.</li>
+<li>The directory search should be done recursively. This means that the search should also include all subdirectories in the given path.</li>
+</ol>
+
+
+<p><b>Example input:</b></p>
+<codep>path="./tree", dir="python"</codep>
+<br>
+
+<p><b>Example output:</b></p>
+<codep>.../tree/python
+.../tree/cpp/other_courses/python
+.../tree/c/other_courses/python</codep>
+
+
+<br>
+<br>
+
+<sampleSolution>import os
+
+class DirectorySearcher:
+    def find(self, path, dir):
+        try:
+            os.chdir(path)
+        except OSError:
+            # Doesn't process a file that isn't a directory.
+            return
+
+        current_dir = os.getcwd()
+        for entry in os.listdir("."):
+            if entry == dir:
+                print(os.getcwd() + "/" + dir)
+            self.find(current_dir + "/" + entry, dir)
+
+
+directory_searcher = DirectorySearcher()
+directory_searcher.find("./tree", "python")
+
+</sampleSolution>
+
+<studyMode>false</studyMode>
+<labMode>true</labMode>
+<hideConsole>true</hideConsole>
+
+</problem>

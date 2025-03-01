@@ -1,0 +1,63 @@
+<problem chapter='3' section='4' slide='1' problem='3' title='OOP: Methods'>
+
+<!--
+Update history:
+2020-09-30 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>class Classy:
+    def __init__(self, value):
+        self.var = value
+
+
+obj_1 = Classy("object")
+
+print(obj_1.var)
+
+</code>
+
+
+
+<h1>Methods in detail: continued</h1>
+
+<p>If you name a method like this: <codel>__init__</codel>, it won't be a regular method – it will be a <strong>constructor</strong>.</p>
+
+<p>If a class has a constructor, it is invoked automatically and implicitly when the object of the class is instantiated.</p>
+
+ 
+<p>The constructor:</p>
+
+<ul>
+<li>is <strong>obliged to have the <codel>self</codel> parameter</strong> (it's set automatically, as usual)</li>
+
+<li><strong>may (but doesn't need to) have more parameters</strong> than just <codel>self</codel>; if this happens, the way in which the class name is used to create the object must reflect the <codel>__init__</codel> definition;</li>
+
+<li><strong>can be used to set up the object</strong>, i.e., properly initialize its internal state, create instance variables, instantiate any other objects if their existence is needed, etc.</li>
+</ul>
+
+ 
+
+<p>Look at the code in the editor. The example shows a very simple constructor at work.</p>
+
+ 
+<p>Run it. The code outputs:</p>
+
+<codep>object</codep>
+<p style="text-align: right;"><font size="-2"><b>output</b></font></p>
+
+<p>Note that the constructor:</p>
+
+<ul>
+<li><strong>cannot return a value</strong>, as it is designed to return a newly created object and nothing else;</li>
+
+<li><strong>cannot be invoked directly either from the object or from inside the class</strong> (you can invoke a constructor from any of the object's subclasses, but we'll discuss this issue later.)</li>
+</ul>
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

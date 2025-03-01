@@ -1,0 +1,75 @@
+<problem chapter='3' section='2' slide='1' problem='8' title='A short journey from procedural to object approach'>
+
+<!--
+Update history:
+2020-09-30 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>class Stack:
+    def __init__(self):
+        self.__stack_list = []
+
+    def push(self, val):
+        self.__stack_list.append(val)
+
+    def pop(self):
+        val = self.__stack_list[-1]
+        del self.__stack_list[-1]
+        return val
+
+
+stack_object_1 = Stack()
+stack_object_2 = Stack()
+
+stack_object_1.push(3)
+stack_object_2.push(stack_object_1.pop())
+
+print(stack_object_2.pop())
+
+</code>
+
+
+
+<h1>The object approach: a stack from scratch</h1>
+
+<p>Having such a class opens up some new possibilities. For example, you can now have more than one stack behaving in the same way. Each stack will have its own copy of private data, but will utilize the same set of methods.</p>
+
+<p>This is exactly what we want for this example.</p>
+
+<p>Analyze the code:</p>
+
+<codep>class Stack:
+    def __init__(self):
+        self.__stack_list = []
+
+    def push(self, val):
+        self.__stack_list.append(val)
+
+    def pop(self):
+        val = self.__stack_list[-1]
+        del self.__stack_list[-1]
+        return val
+
+
+<mark class="mark-background">stack_object_1 = Stack()</mark>
+<mark class="mark-background">stack_object_2 = Stack()</mark>
+
+stack_object_1.push(3)
+stack_object_2.push(stack_object_1.pop())
+
+print(stack_object_2.pop())
+
+</codep>
+<br>
+
+<p>There are <strong>two stacks created from the same base class</strong>. They work <strong>independently</strong>. You can make more of them if you want to.</p>
+
+<p>Run the code in the editor and see what happens. Carry out your own experiments.</p>
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

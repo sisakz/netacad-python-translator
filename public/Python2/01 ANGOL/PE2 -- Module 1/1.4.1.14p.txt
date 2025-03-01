@@ -1,0 +1,55 @@
+<problem chapter='1' section='4' slide='1' problem='14' title='How to use pip'>
+
+<!--
+Update history:
+2020-09-25 Grzegorz (created)
+-->
+
+<code>import pygame
+
+run = True
+width = 400
+height = 100
+pygame.init()
+screen = pygame.display.set_mode((width, height))
+font = pygame.font.SysFont(None, 48)
+text = font.render("Welcome to pygame", True, (255, 255, 255))
+screen.blit(text, ((width - text.get_width()) // 2, (height - text.get_height()) // 2))
+pygame.display.flip()
+while run:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT\
+        or event.type == pygame.MOUSEBUTTONUP\
+        or event.type == pygame.KEYUP:
+            run = False
+
+</code>
+
+<h1>How to use pip: a simple test program</h1>
+
+<p>Now that <i>pygame</i> is finally accessible, we can try to use it in a very simple test program. Let’s comment on it briefly.</p>
+
+<ul>
+<li>line 1: import <i>pygame</i> and let it serve us;</li>
+<li>line 3: the program will run as long as the <codel>run</codel> variable is <codel>True</codel>;</li>
+<li>lines 4 and 5: determine the window's size;</li>
+<li>line 6: initialize the <i>pygame</i> environment;</li>
+<li>line 7: prepare the application window and set its size;</li>
+<li>line 8: make an object representing the default font of size 48 points;</li>
+<li>line 9: make an object representing a given text – the text will be anti-aliased (<codel>True</codel>) and white (<codel>255,255,255</codel>)</li>
+<li>line 10: insert the text into the (currently invisible) screen buffer;</li>
+<li>line 11: flip the screen buffers to make the text visible;</li>
+<li>line 12: the <i>pygame</i> main loop starts here;</li>
+<li>line 13: get a list of all pending <i>pygame</i> events;</li>
+<li>lines 14 through 16: check whether the user has closed the window or clicked somewhere inside it or pressed any key;</li>
+<li>line 15: if yes, stop executing the code.</li>
+</ul>
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+<hideConsole>true</hideConsole>
+
+</problem>

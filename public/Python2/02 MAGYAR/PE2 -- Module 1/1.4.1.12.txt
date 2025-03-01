@@ -1,0 +1,113 @@
+<problem chapter='1' section='4' slide='1' problem='12' title='A pip használata'>
+
+<!--
+Update history:
+2020-09-24	Grzegorz (created)
+2021-06-29	Grzegorz (corrections)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<h1>A <i>pip</i> használata (folytatás)</h1>
+
+
+<p>A <i>pip</i> listája nem túl informatív, és előfordulhat, hogy nem elégíti ki a kíváncsiságodat. Szerencsére van egy parancs, amely többet tud mondani bármelyik telepített csomagról (figyeld meg a <b>installed</b> szót). A parancs szintaktikája a következőképpen néz ki:</p>
+
+<p><codep class="syntax-color">pip show package_name
+</codep></p>
+
+
+<p>Kicsit megtévesztő módon fogjuk használni - meg akarjuk győzni a <i>pip</i>-et, hogy valljon be valamit magáról. Ezt a következőképpen tesszük:</p>
+
+<p><codep class="syntax-color">pip show pip
+</codep></p>
+
+<p>Kicsit furcsán néz ki, nem? Ennek ellenére jól működik, és a <i>pip</i> önbemutatása következetesnek és aktuálisnak tűnik:</p>
+
+
+<center><img class="lightbox" src="/uploads/media/default/0001/02/63a344427a0c881c956f33e1dfe1de6c5da22c82.png" width="95%" alt="pip show pip"></center>
+<br>
+
+
+
+<p>Megkérdezheted, honnan származnak ezek az adatok. Tényleg ennyire éleslátó a <i>pip</i>? Egyáltalán nem - a képernyőn megjelenő információk a megjelenített csomag belsejéből származnak. Más szóval a csomag készítője köteles ellátni azt az összes szükséges adattal (vagy pontosabban kifejezve - metaadatokkal).</p>
+
+<P>Nézd meg a kimenet alján lévő két sort. Ezek a következők:</p>
+
+<ul>
+    <li>mely csomagok szükségesek a csomag sikeres használatához (<codel>Requires:</codel>)</li>
+    <li>mely csomagoknak van szükségük erre a csomagra a sikeres használatukhoz (<codel>Required-by:</codel>)</li>
+</ul>
+
+<p>Mint látható, mindkét tulajdonság üres. Nyugodtan próbáld meg használni a <codel>show</codel> parancsot bármely más telepített csomaggal kapcsolatban.</p>
+
+
+
+
+
+
+
+
+<br>
+<br> 
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+<p>A <i>pip</i> ereje abból a tényből fakad, hogy tulajdonképpen egy kapu a Python szoftverek univerzumába. Ennek köszönhetően a PyPI tárolókban összegyűjtött több száz kész csomag közül bármelyiket böngészheted és telepítheted. Ne felejtsük el, hogy a <i>pip</i> nem képes az összes PyPI-tartalmat lokálisan tárolni (ez felesleges és gazdaságtalan lenne).</p>
+
+<p>A <i>pip</i> valójában az internetet használja a PyPI lekérdezésére és a szükséges adatok letöltésére. Ez azt jelenti, hogy hálózati kapcsolatra van szükséged, ha bármit kérsz a <i>pip</i>-től, ami a PyPI infrastruktúrával való közvetlen interakciót jelenthet. </p>
+
+<p>Az egyik ilyen eset az, amikor a PyPI segítségével szeretnénk megkeresni egy kívánt csomagot. Ezt a fajta keresést a következő paranccsal indíthatjuk el:</p>
+
+<p><codep class="syntax-color">pip search anystring
+</codep></p>
+
+<p>Az általad megadott <codel>anystring</codel> karakterláncot keressük:</p>
+
+<ul>
+<li>az összes csomag nevében;</li>
+<li>az összes csomag leíró szövegében.</li>
+</ul>
+
+<p>Legyél tisztában azzal, hogy egyes keresések valóságos adatlavinát generálhatnak, ezért próbálj minél pontosabban fogalmazni. Például egy ilyen ártatlannak tűnő lekérdezés, mint ez:</p>
+
+<p><codep class="syntax-color">pip search pip
+</codep></p>
+
+<p>több mint 100 sornyi eredményt ad (próbáld ki Te magad - ne higgy a szavunknak). A keresés egyébként nem érzékeny a nagy- és kisbetűkre.</p>
+
+<p>Ha nem rajongsz a konzolos olvasásért, használhatod a PyPI tartalmak böngészésének alternatív módját, amelyet egy keresőmotor kínál, amely elérhető a <a href="https://pypi.org/search" target="_blank">https://pypi.org/search</a> oldalon.</p>
+
+
+
+
+
+
+
+<br>
+<br>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

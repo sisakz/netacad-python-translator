@@ -1,0 +1,93 @@
+<problem chapter='3' section='3' slide='1' problem='3' title='OOP: Tulajdonságok'>
+
+<!--
+Update history:
+2020-09-30 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+
+    <h1>Osztályváltozók</h1>
+
+    <p>Az osztályváltozó olyan <strong>tulajdonság, amely csak egy példányban létezik, és bármely objektumon kívül tárolódik</strong>.</p>
+
+    <p>Megjegyzés: nem létezik példányváltozó, ha nincs objektum az osztályban; egy osztályváltozó akkor is létezik egy példányban, ha nincs objektum az osztályban.</p>
+
+    <p>Az osztályváltozók másképp jönnek létre, mint a példányváltozók. A példából többet is megtudhatunk:</p>
+
+<codep class="syntax-color copy line-numbers">class ExampleClass:
+    counter = 0
+    def __init__(self, val = 1):
+        self.__first = val
+        ExampleClass.counter += 1
+
+
+example_object_1 = ExampleClass()
+example_object_2 = ExampleClass(2)
+example_object_3 = ExampleClass(4)
+
+print(example_object_1.__dict__, example_object_1.counter)
+print(example_object_2.__dict__, example_object_2.counter)
+print(example_object_3.__dict__, example_object_3.counter)
+</codep>
+
+<br> 
+<br>
+
+</div>
+
+
+
+
+
+
+<div class="small-12 large-6 columns">
+
+<br>
+
+
+
+<p>Figyeljük meg:</p>
+
+<ul>
+    <li>az osztálydefiníció első sorában van egy hozzárendelés - ez a <codel>counter</codel> nevű változót <font face="Courier New">0</font>-ra állítja; a változó inicializálása az osztályon belül, de annak bármely metódusán kívül teszi a változót osztályváltozóvá;</li>
+
+    <li>egy ilyen változó elérése ugyanúgy néz ki, mint bármely példány attribútum elérése – figyeld meg a konstruktorban; mint látható, a konstruktor eggyel növeli a változót; valójában ez a változó az összes létrehozott objektumot számolja.</li>
+</ul>
+ 
+
+<p>A kód futtatása a következő kimenetet eredményezi:</p>
+
+<codep>{'_ExampleClass__first': 1} 3
+{'_ExampleClass__first': 2} 3
+{'_ExampleClass__first': 4} 3</codep>
+<p style="text-align: right;"><font size="-2"><b>kimenet</b></font></p>
+
+<p>A példából két fontos következtetés vonható le:</p>
+
+<ul>
+    <li>az osztályváltozók <strong>nem jelennek meg az objektum <codel>__dict__</codel> szótárában</strong> (ez természetes, mivel az osztályváltozók nem részei az objektumnak), de bármikor megpróbálhatjuk megnézni az azonos nevű változót az osztály szintjén - ezt hamarosan megmutatjuk;</li>
+
+    <li>az osztályváltozó <strong>mindig ugyanazt az értéket mutatja</strong> osztálypéldányban (objektumban).</li>
+</ul>
+
+
+<br>
+<br>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>

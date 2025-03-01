@@ -1,0 +1,49 @@
+<problem chapter='1' section='2' slide='1' problem='4' title='Fontos modulok | math'>
+
+<!--
+Update history:
+2020-08-31 Grzegorz (review, PEP-8 compliance check, update)
+2021-06-29 Grzegorz (corrections)
+-->
+
+<code>from math import ceil, floor, trunc
+
+x = 1.4
+y = 2.6
+
+print(floor(x), floor(y))
+print(floor(-x), floor(-y))
+print(ceil(x), ceil(y))
+print(ceil(-x), ceil(-y))
+print(trunc(x), trunc(y))
+print(trunc(-x), trunc(-y))
+
+</code>
+
+<h1>A <font face="Courier New">math</font> modul fontosabb függvényei (folytatás)</h1>
+
+<p>Az utolsó csoportot néhány általános célú függvény alkotja, mint például:</p>
+
+<ul>
+<li><codel>ceil(x)</codel> &rarr; x felfelé kerekítése (a legkisebb egész szám, amely nagyobb vagy egyenlő x-szel);</li>
+<li><codel>floor(x)</codel> &rarr; x lefelé kerekítése (a legnagyobb egész szám, amely kisebb vagy egyenlő x-szel);</li>
+<li><codel>trunc(x)</codel> &rarr; x értéke a törtrésze nélkül (vigyázz - ez nem egyenértékű sem a ceil, sem a floor értékével);</li>
+<li><codel>factorial(x)</codel> &rarr; visszaadja x! értékét (x-nek nemnegatív egésznek kell lennie)</li>
+<li><codel>hypot(x, y)</codel> &rarr; visszaadja egy derékszögű háromszög átfogójának hosszát, ha a befogók hossza x és y (ugyanaz, mint a <codel>sqrt(pow(x, 2) + pow(y, 2))</codel> de pontosabb.</li>
+</ul>
+ 
+
+<p>Nézd meg a kódot a szerkesztőben. Alaposan elemezd a programot!</p>
+
+<p>Bemutatja a <codel>ceil()</codel>, <codel>floor()</codel> és <codel>trunc()</codel> közötti alapvető különbségeket.</p>
+
+<p>Futtasd a programot, és ellenőrizd a kimenetét!</p>
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

@@ -1,0 +1,32 @@
+<problem chapter='2' section='3' slide='1' problem='13' title='String methods'>
+
+<!--
+Update history:
+2020-09-23 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>
+# Demonstrating the rstrip() method:
+print("[" + " upsilon ".rstrip() + "]")
+print("cisco.com".rstrip(".com"))
+
+</code>
+
+
+
+<h1>The <font face="Courier New">rstrip()</font> method</h1>
+
+<p>Two variants of the <codel>rstrip()</codel> method do nearly the same as <codel>lstrip</codel>s, but <strong>affect the opposite side of the string</strong>.</p>
+
+<p>Look at the code example in the editor. Can you guess its output? Run the code to check your guesses.</p>
+
+
+<p>As usual, we encourage you to experiment with your own examples.</p>
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

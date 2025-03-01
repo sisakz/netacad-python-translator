@@ -1,0 +1,58 @@
+<problem chapter='2' section='2' slide='1' problem='1' title='The nature of strings in Python'>
+
+<!--
+Update history:
+2020-09-22	Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code># Example 1
+
+word = 'by'
+print(len(word))
+
+
+# Example 2
+
+empty = ''
+print(len(empty))
+
+
+# Example 3
+
+i_am = 'I\'m'
+print(len(i_am))
+
+</code>
+
+
+
+<h1>Strings – a brief review</h1>
+
+<p>Let's do a brief review of the nature of Python's strings.</p>
+
+<p>First of all, Python's strings (or simply strings, as we're not going to discuss any other language's strings) are <strong>immutable sequences</strong>.</p>
+
+<p>It's very important to note this, because it means that you should expect some familiar behavior from them.</p>
+
+<p>Let's analyze the code in the editor to understand what we're talking about:</p>
+
+
+<ul>
+<li>Take a look at <strong>Example 1</strong>. The <codel>len()</codel> function used for strings returns a number of characters contained by the arguments. The snippet outputs <codel>2</codel>.</li>
+
+<li>Any string can be empty. Its length is <codel>0</codel> then – just like in <strong>Example 2</strong>.</li>
+
+
+<li>Don't forget that a backslash (<codel>\</codel>) used as an escape character is not included in the string's total length. The code in <strong>Example 3</strong>, therefore, outputs <codel>3</codel>.</li>
+</ul>
+
+<p>Run the three example codes and check.</p>
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

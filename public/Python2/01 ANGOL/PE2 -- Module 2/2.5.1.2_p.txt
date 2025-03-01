@@ -1,0 +1,40 @@
+<problem chapter='2' section='5' slide='1' problem='2' title='Four simple programs'>
+
+<!--
+Update history:
+2020-09-23 Grzegorz (review, PEP-8 compliance check, update)
+-->
+
+<code>
+# Caesar cipher - decrypting a message.
+cipher = input('Enter your cryptogram: ')
+text = ''
+for char in cipher:
+    if not char.isalpha():
+        continue
+    char = char.upper()
+    code = ord(char) - 1
+    if code < ord('A'):
+        code = ord('Z')
+    text += chr(code)
+
+print(text)
+
+</code>
+
+
+
+<h1>The Caesar Cipher: decrypting a message</h1>
+
+<p>The reverse transformation should now be clear to you – let's just present you with the code as-is, without any explanations.</p>
+
+<p>Look at the code in the editor. Check carefully if it works. Use the cryptogram from the previous program.</p>
+
+
+<br>
+<br>
+
+<studyMode>false</studyMode>
+<labMode>false</labMode>
+
+</problem>

@@ -1,0 +1,132 @@
+<problem chapter='1' section='3' slide='1' problem='11' title='SECTION SUMMARY'>
+
+<!--
+Update history:
+2020-08-31 Sysio (first version)
+2020-09-28 Grzegorz (review, reformat, PEP-8 compliance check)
+2021-06-29 Grzegorz (corrections)
+-->
+
+<div class="container">
+<div class="row">
+
+<div class="small-12 large-6 columns">
+
+<h1>Key takeaways</h1>
+
+<br/>
+
+<p>1. While a <b>module</b> is designed to couple together some related entities such as functions, variables, or constants, a <b>package</b> is a container which enables the coupling of several related modules under one common name. Such a container can be distributed as-is (as a batch of files deployed in a directory sub-tree) or it can be packed inside a zip file.</p>
+<br/>
+
+
+<p>2. During the very first import of the actual module, Python translates its source code into a <b>semi-compiled</b> format stored inside the <b>pyc</b> files, and deploys these files into the <codel>__pycache__</codel> directory located in the module's home directory.</p>
+<br/>
+
+
+<p>3. If you want to tell your module's user that a particular entity should be treated as <b>private</b> (i.e. not to be explicitly used outside the module) you can mark its name with either the <codel>_</codel> or <codel>__</codel> prefix. Don't forget that this is only a recommendation, not an order.</p>
+<br/>
+
+<p>4. The names <i>shabang</i>, <i>shebang</i>, <i>hasbang</i>, <i>poundbang</i>, and <i>hashpling</i> describe the digraph written as <codel>#!</codel>, used to instruct Unix-like OSs how the Python source file should be launched. This convention has no effect under MS Windows.</p>
+<br/>
+
+<p>5. If you want convince Python that it should take into account a non-standard package's directory, its name needs to be inserted/appended into/to the import directory list stored in the <codel>path</codel> variable contained in the <codel>sys</codel> module.</p>
+<br/>
+
+<p>6. A Python file named <codel>__init__.py</codel> is implicitly run when a package containing it is subject to import, and is used to initialize a package and/or its sub-packages (if any). The file may be empty, but must not be absent.</p>
+<br/>
+</div>
+
+<div class="small-12 large-6 columns">
+<br/>
+
+<script>
+function solution (id) {
+    var element = document.getElementById(id);
+    
+if (element.style.display === "none") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
+    }
+}
+</script>
+
+
+<p><strong>Exercise 1</strong></p>
+<p>You want to prevent your module's user from running your code as an ordinary script. How will you achieve such an effect?</p>
+
+
+<button class="button tiny" onclick="solution('sol1')">Check</button>
+
+<p id="sol1" style="display: none;">
+<codep>import sys
+
+if __name__ == "__main__":
+    print "Don't do that!"
+    sys.exit()
+
+</codep>
+</p>
+
+
+
+<br/><br/>
+
+
+
+<p><strong>Exercise 2</strong></p>
+<p>Some additional and necessary packages are stored inside the <codel>D:\Python\Project\Modules</codel> directory. Write a code ensuring that the directory is traversed by Python in order to find all requested modules.</p>
+
+
+<button class="button tiny" onclick="solution('sol2')">Check</button>
+
+<p id="sol2" style="display: none;">
+<codep>import sys
+
+# Note the double backslashes!
+sys.path.append("D:\\Python\\Project\\Modules")
+
+</codep></p>
+
+<br/><br/>
+
+
+
+
+<p><strong>Exercise 3</strong></p>
+<p>The directory mentioned in the previous exercise contains a sub-tree of the following structure:</p>
+<codep>abc
+ |__ def
+      |__ mymodule.py
+
+</codep>
+
+<br/>
+
+<p>Assuming that <codel>D:\Python\Project\Modules</codel> has been successfully appended to the <codel>sys.path</codel> list, write an import directive letting you use all the <codel>mymodule</codel> entities.</p>
+
+<button class="button tiny" onclick="solution('sol3')">Check</button>
+
+<p id="sol3" style="display: none;">
+<codep>import abc.def.mymodule
+
+</codep>
+</p>
+
+<br/>
+
+
+
+<br/>
+
+</div>
+
+</div>
+</div>
+
+
+<studyMode>true</studyMode>
+<labMode>false</labMode>
+
+</problem>
