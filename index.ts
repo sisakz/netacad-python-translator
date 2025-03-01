@@ -1,9 +1,10 @@
 import cors from "cors";
 import express from "express";
 import sqlite3 from "sqlite3";
+import path from "path";
 
 const sqlite3V = sqlite3.verbose();
-const db = new sqlite3V.Database("./database.sqlite");
+const db = new sqlite3V.Database(path.join(process.cwd(), "database.sqlite"));
 
 // db.serialize(() => {
 //   db.run(
@@ -93,7 +94,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.use("/", express.static("public"));
+app.use("/", express.static(path.join(process.cwd(), "public")));
 
 app.post("/api/search", (req, res) => {
   let { query } = req.body;
@@ -112,6 +113,9 @@ app.post("/api/search", (req, res) => {
   );
 });
 
-app.listen(8081, () => {
-  console.log("Server running on port 8081");
+const port = process.env.PORT || 8081;
+app.listen(port, () => {
+  console.log(`Server running on port ${port}`);
 });
+
+export default app;
